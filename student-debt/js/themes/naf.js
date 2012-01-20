@@ -24,7 +24,7 @@ Highcharts.theme = {
 	subtitle: {
 		style: {
 			color: '#AAA',
-			font: 'bold 12px Georgia,"Times New Roman",Times,serif;'
+			font: 'bold 11px Georgia,"Times New Roman",Times,serif;'
 		}
 	},
 	xAxis: {
