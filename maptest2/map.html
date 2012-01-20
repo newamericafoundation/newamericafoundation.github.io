@@ -1,0 +1,53 @@
+<html>
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> 
+  <script src='scripts/modestmaps.min.js' type='text/javascript'></script>
+  <script src='scripts/wax.mm.js' type='text/javascript'></script>
+  <script src='scripts/easey.js' type='text/javascript'></script>
+  <script src='scripts/mapInit.js' type='text/javascript'></script>
+  <script type="text/javascript" src="scripts/highcharts/highcharts.js"></script>
+  <script type="text/javascript" src="scripts/highcharts/themes/transparent.js"></script>
+  <script type="text/javascript" src="scripts/default-tooltip.js"></script>
+  <link href='styles/style.css' rel='stylesheet' type='text/css' />
+  <!-- <link href='styles/controls.css' rel='stylesheet' type='text/css' /> -->
+<title>Debt in the Eurozone</title>
+</head>
+<body>
+	<div id="main" class="layout-inner">
+		<div id="header">
+			<h1>Debt in the Eurozone</h1>
+		</div>
+		<div id="mainMap" class="map"></div>
+		<a href='#' class='share'>Share +</a>
+		<div class='wax-share' style='display:none;'>
+		    <div class='share-content'>
+		      <h3>Share this map</h3>
+		      <!-- <p>
+		      		        <a id='facebook' target='_blank'>Facebook</a>
+		      		        <a id='twitter' target='_blank'>Twitter</a>
+		      		      </p> -->
+		      <strong>Get the embed code</strong><br><small>Copy and paste this HTML into your website or blog.</small>
+		      <div id='embed-code-field'><textarea id='embed-code' rows='4' readonly></textarea>
+		      </div>
+		      <a href='#' class='close'>Close</a>
+		    </div>
+		  </div>
+		<div id="infoBox" class="infoBar">
+			<div class="mainLegend">
+            	<div class="intro" style="position:absolute;"><p>As European leaders discuss ways to contain the debt crisis and bring better economic governance for the 17 eurozone countries, this map shows just how diverse those nations' debt situations are. All data are from the International Monetary Fund's World Economic Outlook Report, <a href="http://www.imf.org/external/pubs/ft/weo/2011/02/weodata/download.aspx" target="_blank">last updated in September 2011</a></p></div>
+				<div id="chartContainer" style="width: 50%; height: 130px; margin: 10px;float:right;"></div>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-368921-3");
+pageTracker._setDomainName(".newamerica.net");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

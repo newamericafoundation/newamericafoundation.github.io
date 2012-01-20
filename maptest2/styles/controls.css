@@ -1,0 +1,148 @@
+a.wax-fullscreen {
+  /* TODO: sprite-based fullscreen button */
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 99999;
+  }
+
+a.zoomer {
+  text-decoration:none;
+  position:absolute;
+  background-color:#fff;
+  color:#444;
+  line-height:25px;
+  font-size:20px;
+  z-index:99999;
+  text-align:center;
+  width:25px;
+  height:25px;
+box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
+  -moz-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
+  -webkit-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
+  }
+
+a.zoomin {
+	background:#fff url(../images/zoom-in.png) -31px -1px no-repeat;
+/*  background-position:-31px -1px;*/
+  left:65px;
+  border-radius:0px 3px 3px 0px;
+  -moz-border-radius:0px 3px 3px 0px;
+  -webkit-border-radius:0px 3px 3px 0px;
+  }
+
+a.zoomout {
+	background:#fff url(../images/zoom-out.png) -61px -1px no-repeat;
+/*  background-position:-61px -1px;*/
+  border-radius:3px 0px 0px 3px;
+  -moz-border-radius:3px 0px 0px 3px;
+  -webkit-border-radius:3px 0px 0px 3px;
+  }
+  a.zoomdisabled {
+    background-color:#ccc;
+    }
+
+.button{
+	background: #EEE;
+	border: none;
+	width: 70px;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.active{
+	background: #ccc;
+}
+
+.wax-fullscreen-map {
+  position:fixed !important;
+  width:auto !important;
+  height:auto !important;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:999999999999;
+  }
+
+.wax-legends {
+  position:absolute;
+  right:30px;
+  bottom:10px;
+  z-index:999999;
+  }
+
+.wax-legends .wax-legend {
+  padding:5px;
+  background:#fff;
+  color:#333;
+  }
+
+.wax-tooltip {
+  z-index:999999;
+  position:absolute;
+  background:#fff;
+  color:#333;
+  padding:10px;
+  right:30px;
+  top:10px;
+  max-width:300px;
+  opacity:1;
+  -webkit-transition:opacity .5s;
+  -moz-transition:opacity .5s;
+  }
+
+.wax-tooltip.hide { opacity:0; }
+
+.wax-tooltip .close {
+  display:block;
+  position:absolute;
+  top:0px;
+  right:0px;
+	background:#fff url(../images/popup-close.png) no-repeat;
+  }
+
+.wax-mobile-body .wax-tooltip {
+  position:absolute;
+  top:50px;
+  }
+
+.zoombox-box,
+.boxselector-box {
+  margin:0;
+  padding:0;
+  border:1px dashed #888;
+  background: rgba(255,255,255,0.25);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  display: none;
+  }
+
+.zoombox-box-container,
+.boxselector-box-container,
+.pointselector-box-container {
+  margin:0;
+  padding:0;
+  position:absolute;
+  background: url(blank.gif);
+  top:0;
+  left:0;
+  }
+
+.wax-point-div {
+  width:10px;
+  height:10px;
+  margin-left:-5px;
+  margin-top:-5px;
+  background:#fff;
+  border:1px solid #333;
+  -webkit-border-radius:5px;
+  }
+
+.mainLegend .mainToolTip{
+	background:#333;
+}
+
