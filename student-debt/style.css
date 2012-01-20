@@ -1,0 +1,18 @@
+#graphCaption {
+	font-family: Helvetica,Arial,"Nimbus Sans L",sans-serif;
+	font-size:11px;
+	line-height: 14px;
+	border: 1px #909090 solid;
+	border-radius: 5px;
+	padding: 5px;
+	height: 100px;
+	display: table;
+	background:url(images/NAFlogo.png) bottom right no-repeat;
+	margin: 0 10px;
+}
+
+#graphCaption p {
+	margin: 0;
+	display:table-cell;
+	vertical-align: middle;
+}
