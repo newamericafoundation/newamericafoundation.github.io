@@ -1,1 +1,1 @@
-This is the prototype site for GSSP. This includes the entire bootstrap library. 
+This is the prototype site for the assets report. This includes the entire bootstrap library. 
