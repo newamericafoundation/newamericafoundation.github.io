@@ -1,3 +1,8 @@
+body {
+	margin: 0;
+	padding: 0;	
+}
+
 #graphCaption {
 	font-family: Helvetica,Arial,"Nimbus Sans L",sans-serif;
 	font-size:11px;
