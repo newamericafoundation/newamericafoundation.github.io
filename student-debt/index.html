@@ -59,6 +59,18 @@ $(document).ready(function() {
       legend: {
          enabled: true
       },
+	exporting: {
+		buttons: {
+			exportButton: {
+				symbolFill: '#FFF',
+				hoverSymbolFill: '#efefef',
+				symbolStroke: '#444449',
+			},
+			printButton: {
+				enabled: false,
+			}
+		}
+	},
       plotOptions: {
          area: {
             fillColor: {

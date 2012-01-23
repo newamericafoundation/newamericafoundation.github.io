@@ -136,18 +136,18 @@ Highcharts.theme = {
 			hoverSymbolStroke: '#FFFFFF'
 		}
 	},
-
 	exporting: {
 		buttons: {
 			exportButton: {
-				symbolFill: '#55BE3B'
+				symbolFill: '#FFF',
+				hoverSymbolFill: '#efefef',
+				symbolStroke: '#444449',
 			},
 			printButton: {
-				symbolFill: '#7797BE'
+				enabled: false,
 			}
 		}
 	},
-
 	// scroll charts
 	rangeSelector: {
 		buttonTheme: {
