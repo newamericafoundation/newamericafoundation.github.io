@@ -23,6 +23,7 @@
 	    $("table#programTable").tablesorter({ sortList: [[1,0]] });
 		$('#popup1').popover();
 		$('#popup').popover();
+		$('#popup2').popover();
 	  });
 	</script>
 	<script type="text/javascript" src="js/jquery.flot.js"></script>
@@ -123,7 +124,7 @@
 		          	<p>The program was started to provide food baskets, psychological counselling, and to facilitate the exemption from school fees for orphans.  It provides poverty relief for destitute persons and orphans. </p>
 	        	</div>
 				<div class="span4">
-					<h4>Key Information</h4>
+					<h4 id="popup2" rel="popover" data-placement="above" data-content="This needs a better title. Trying to just give the basic info for this product" data-original-title="Need a Title">Key Information</h4>
 					<dl>
 						<dt>Country</dt>
 						<dd><a href="country.html">Botswana</a></dd>
@@ -136,7 +137,7 @@
 			</div>
 			<div class="row">
 				<div class="span12">
-					<h4 id="popup" rel="popover" data-content="We measure impacts by....." data-original-title="Impacts Definition">Impacts</h4>
+					<h4 id="popup" rel="popover" data-placement="above" data-content="We measure impacts by....." data-original-title="Impacts Definition">Impacts</h4>
 					<dl class="label">
 						<dt>Impact category</dt>
 						<dd>Category 1</dd>
