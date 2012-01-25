@@ -16,6 +16,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script src="js/bootstrap-twipsy.js"></script>
 	<script src="js/bootstrap-popover.js"></script>
+	<script src="js/bootstrap-tabs.js"></script>
 	<script src="js/less-1.1.5.min.js"></script>
 	<script src="js/jquery/jquery.tablesorter.min.js"></script>
 	<script >
@@ -140,11 +141,38 @@
 		<div class="row">
 			<div class="span12">
 				<ul class="tabs">
-				  <li class="active"><a href="#">Impacts</a></li>
-				  <li><a href="#">Target</a></li>
-				  <li><a href="#">Delivery</a></li>
-				  <li><a href="#">Notes</a></li>
+				  <li class="active"><a href="#home">Home</a></li>
+				  <li><a href="#profile">Profile</a></li>
+				  <li><a href="#messages">Messages</a></li>
+				  <li><a href="#settings">Settings</a></li>
 				</ul>
+
+				<div class="pill-content">
+				  <div class="active" id="home">
+				  	<dl class="alert-message block-message alert">
+						<dt>Impact Category</dt>
+						<dd>Category 1</dd>
+						<dt>Impact Description</dt>
+						<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</dd>
+					</dl>
+				  </div>
+				  <div id="profile">
+				  	<dl class="alert-message block-message alert">
+						<dt>Impact Category</dt>
+						<dd>Category 1</dd>
+						<dt>Impact Description</dt>
+						<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</dd>
+					</dl>
+				  </div>
+				  <div id="messages">...</div>
+				  <div id="settings">...</div>
+				</div>
+
+				<script>
+				  $(function () {
+				    $('.tabs').tabs()
+				  })
+				</script>
 				<h4 id="popup" rel="popover" data-placement="above" data-content="We measure impacts by....." data-original-title="Impacts Definition">Impacts</h4>
 				<dl class="alert-message block-message alert">
 					<dt>Impact Category</dt>
