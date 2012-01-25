@@ -25,7 +25,7 @@
 		$('#popup1').popover();
 		$('#popup').popover();
 		$('#popup2').popover();
-		$('.pills').pills()
+		$('.tabs').tabs()
 	  });
 	</script>
 	<script type="text/javascript" src="js/jquery.flot.js"></script>
@@ -141,7 +141,7 @@
 		</div>
 		<div class="row">
 			<div class="span12">
-				<ul class="pills">
+				<ul class="tabs">
 				  <li class="active"><a href="#impacts">Impacts</a></li>
 				  <li><a href="#target">Target</a></li>
 				  <li><a href="#delivery">Delivery Method</a></li>
@@ -150,6 +150,7 @@
 
 				<div class="pill-content">
 				  <div class="active" id="impacts">
+					<h4 id="popup" rel="popover" data-placement="above" data-content="We measure impacts by....." data-original-title="Impacts Definition">Impacts</h4>
 				  	<dl>
 						<dt>Impact Category</dt>
 						<dd>Category 1</dd>
@@ -168,7 +169,6 @@
 				  <div id="delivery"><p>Here are the delivery methods</p></div>
 				  <div id="details"><p>Here are notes about this product</p></div>
 				</div>
-				<h4 id="popup" rel="popover" data-placement="above" data-content="We measure impacts by....." data-original-title="Impacts Definition">Impacts</h4>
 				<!-- <dl class="alert-message block-message alert">
 									<dt>Impact Category</dt>
 									<dd>Category 1</dd>
