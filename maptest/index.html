@@ -16,10 +16,8 @@
 			$('#top50').addClass('primary');
 			$('#top50').removeClass('default');
 			$('#bottom50').click(function(){
-				$('#mainMap').fadeOut(2000, function(){
-					newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.map-o0qysmyw.jsonp','mainMap',38, -93, 4, 6);
-				});
-				
+				$('#mainMap').empty();
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.map-o0qysmyw.jsonp','mainMap',38, -93, 4, 6);
 				$(this)
 					.addClass('primary')
 					.removeClass('default');
@@ -28,10 +26,8 @@
 					.addClass('default');
 			});
 			$('#top50').click(function(){
-				$('#mainMap').fadeOut(2000, function(){
-					newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.map-ddatm7k4.jsonp','mainMap',38, -93, 4, 6);
-				});
-				
+				$('#mainMap').empty();
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.map-ddatm7k4.jsonp','mainMap',38, -93, 4, 6);
 				$(this)
 					.addClass('primary')
 					.removeClass('default');
