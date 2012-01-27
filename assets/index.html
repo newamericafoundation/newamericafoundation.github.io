@@ -16,11 +16,18 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <link rel="stylesheet/less" href="lib/bootstrap.less" media="all" />
 	<script src="js/less-1.1.5.min.js"></script>
+	<script src="js/jquery/jquery.tablesorter.min.js"></script>
     <style type="text/css">
       body {
         padding-top: 60px;
       }
     </style>
+	<script >
+	  $(function() {
+	    $("table#programTable").tablesorter({ sortList: [[1,0]] });
+		$('#popup').popover();
+	  });
+	</script>
   </head>
 
   <body>
