@@ -30,8 +30,10 @@
 <body>
 	<div id="main" class="layout-inner">
 		<div id="header">
-			<div id="bottom50" class="switcher pull-right"><button class="btn primary">View the Lowest 50 Schools</button></div>
-			<div id="top50" class="switcher pull-right"><button class="btn primary">View the Highest 50 Schools</button></div>
+			<div class="pull-right" style="position:relative;top:120px;z-index:9999;">
+				<button id="bottom50" class="btn primary">View the Lowest 50 Schools</button>
+				<button id="top50" class="btn primary">View the Highest 50 Schools</button>
+			</div>
 		</div>
 		<div id="mainMap" class="map"></div>
 		<a href='#' class='share'>Share +</a>
