@@ -13,10 +13,8 @@
 	<script>
 		$(document).ready(function(){
 			newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.map-o0qysmyw.jsonp','mainMap',38, -93, 4, 6);
-			// buildMap('http://tiles.mapbox.com/newamerica/api/Tileset/energyTrap_2010');
 			$('#bottom50').click(function(){
 				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.map-o0qysmyw.jsonp','mainMap',38, -93, 4, 6);
-				// buildMap('http://tiles.mapbox.com/newamerica/api/Tileset/energyTrap_2010');
 				// 				$(this).addClass('active1');
 				// 				$('#switcher2011').removeClass('active1');
 			});
@@ -32,8 +30,8 @@
 <body>
 	<div id="main" class="layout-inner">
 		<div id="header">
-			<div id="bottom50" class="switcher"><span>View the Lowest 50 Schools</span></div>
-			<div id="top50" class="switcher"><span>View the Highest 50 Schools</span></div>
+			<div id="bottom50" class="switcher pull-right"><button class="btn primary">View the Lowest 50 Schools</button></div>
+			<div id="top50" class="switcher pull-right"><button class="btn primary">View the Highest 50 Schools</button></div>
 		</div>
 		<div id="mainMap" class="map"></div>
 		<a href='#' class='share'>Share +</a>
