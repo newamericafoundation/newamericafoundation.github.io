@@ -12,7 +12,7 @@
   <!-- <link href='styles/controls.css' rel='stylesheet' type='text/css' /> -->
 	<script>
 		$(document).ready(function(){
-			newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.map-o0qysmyw.jsonp','mainMap',38, -93, 4, 6);
+			newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.map-ddatm7k4.jsonp','mainMap',38, -93, 4, 6);
 			$('#top50').addClass('default');
 			$('#top50').removeClass('primary');
 			$('#bottom50').click(function(){
@@ -29,7 +29,7 @@
 				$(this)
 					.addClass('default')
 					.removeClass('primary');
-				$('#bottom')
+				$('#bottom50')
 					.removeClass('default')
 					.addClass('primary');
 			});
