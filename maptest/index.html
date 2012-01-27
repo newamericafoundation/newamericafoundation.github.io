@@ -12,7 +12,19 @@
   <!-- <link href='styles/controls.css' rel='stylesheet' type='text/css' /> -->
 	<script>
 		$(document).ready(function(){
-			newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.map-of-the-week-poverty-change.jsonp','mainMap',38, -93, 4, 6)
+			newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.map-o0qysmyw.jsonp','mainMap',38, -93, 4, 6);
+			// buildMap('http://tiles.mapbox.com/newamerica/api/Tileset/energyTrap_2010');
+			$('#bottom50').click(function(){
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.map-o0qysmyw.jsonp','mainMap',38, -93, 4, 6);
+				// buildMap('http://tiles.mapbox.com/newamerica/api/Tileset/energyTrap_2010');
+				// 				$(this).addClass('active1');
+				// 				$('#switcher2011').removeClass('active1');
+			});
+			$('#top50').click(function(){
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.map-ddatm7k4.jsonp','mainMap',38, -93, 4, 6)
+			});
+		
+		
 		});
 	</script>
 <title>Test Maps</title>
@@ -22,6 +34,8 @@
 		<div id="header">
 			<h1>Just for testing</h1>
 		</div>
+		<div id="bottom50" class="switcher"><span>View the Lowest 50 Schools</span></div>
+		<div id="top50" class="switcher"><span>View the Highest 50 Schools</span></div>
 		<div id="mainMap" class="map"></div>
 		<a href='#' class='share'>Share +</a>
 		<div class='wax-share' style='display:none;'>

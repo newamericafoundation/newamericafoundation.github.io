@@ -240,17 +240,19 @@ a.zoomout {
 }
 
 .wax-tooltip {
-  z-index:999999;
-  position:absolute;
-  background:#fff;
-  color:#333;
-  padding:10px;
-  right:30px;
-  top:10px;
-  max-width:300px;
-  opacity:1;
-  -webkit-transition:opacity .5s;
-  -moz-transition:opacity .5s;
+	z-index: 10;
+	position: absolute;
+	background: rgba(13, 37, 63, .90);
+	color: rgb(244, 244, 244);
+	padding: 10px;
+	right: 30px;
+	top: 10px;
+	width: 300px;
+	opacity: 1;
+	-webkit-transition: opacity .5s;
+	-moz-transition: opacity .5s;
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+	min-height: 200px;
   }
 
 .wax-tooltip.hide { opacity:0; }
