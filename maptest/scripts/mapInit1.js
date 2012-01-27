@@ -13,6 +13,12 @@ Last Updated 01/19/12 by Andy Hull
 */
 
 function newWaxMap(url, mapContainer, startLat, startLng, minZoom, maxZoom){
+	$('#'+mapContainer).fadeOut(2000, function(){
+		$(this).remove();
+	});	
+	$('.wax-legends').remove();
+	$('.zoomer').remove();	
+	$('.wax-popup').remove();
 	minZoom = minZoom || 2;
 	maxZoom = maxZoom || 10;
 	startLat = startLat || 0;
