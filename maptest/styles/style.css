@@ -40,7 +40,6 @@ body {
 h1,h2,h3,h4,h5,h6 {
   font-weight: normal;
   margin: 0;
-  color:#fff;
   }
 h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover{
   text-decoration: none;
@@ -255,6 +254,10 @@ a.zoomout {
 	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
 	min-height: 200px;
   }
+
+.wax-tooltip h2{
+	  color:#fff;
+}
 
 .wax-tooltip.hide { opacity:0; }
 
