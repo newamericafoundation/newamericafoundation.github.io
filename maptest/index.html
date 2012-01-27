@@ -13,13 +13,25 @@
 	<script>
 		$(document).ready(function(){
 			newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.map-o0qysmyw.jsonp','mainMap',38, -93, 4, 6);
+			$('#top50').addClass('default');
+			$('#top50').removeClass('primary');
 			$('#bottom50').click(function(){
 				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.map-o0qysmyw.jsonp','mainMap',38, -93, 4, 6);
-				// 				$(this).addClass('active1');
-				// 				$('#switcher2011').removeClass('active1');
+				$(this)
+					.addClass('default')
+					.removeClass('primary');
+				$('#top50')
+					.removeClass('default')
+					.addClass('primary');
 			});
 			$('#top50').click(function(){
-				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.map-ddatm7k4.jsonp','mainMap',38, -93, 4, 6)
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.map-ddatm7k4.jsonp','mainMap',38, -93, 4, 6);
+				$(this)
+					.addClass('default')
+					.removeClass('primary');
+				$('#bottom')
+					.removeClass('default')
+					.addClass('primary');
 			});
 		
 		
@@ -31,8 +43,8 @@
 	<div id="main" class="layout-inner">
 		<div id="header">
 			<div class="pull-right" style="position:relative;top:60px;z-index:9999;">
+				<button id="top50" class="btn">View the Highest 50 Schools</button>
 				<button id="bottom50" class="btn primary">View the Lowest 50 Schools</button>
-				<button id="top50" class="btn primary">View the Highest 50 Schools</button>
 			</div>
 		</div>
 		<div id="mainMap" class="map"></div>
