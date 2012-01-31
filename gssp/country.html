@@ -65,7 +65,7 @@
 	        },
 			bars: {
 	            show: true,
-	            lineWidth: 0.5,
+	            lineWidth: 0,
 	            fillColor: '#cccccc',
 				lineColor: '#f4f4f4'
 	        },
@@ -94,7 +94,8 @@
 		}
 		for(i=0;i<6;i++){
 			var e = $('#container'+i+'.graph');
-			$.plot(e, [ data[i] ], options);
+			var plot = $.plot(e, [ data[i] ], options);
+			plot.highlight(i, 3);
 		}
 		
 	}); //end ready
