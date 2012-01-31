@@ -1,176 +1,145 @@
-a.wax-fullscreen {
-  /* TODO: sprite-based fullscreen button */
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  z-index: 99999;
-  }
+/* --------------------------
+  This is a modified version
+  of the controls css file.
+  You probably don't really want
+  to use this.
+----------------------------- */
 
-/* Zoom Controls */
+
+/* --------------------------
+  Map Tooltip
+----------------------------- */
+
+.mainToolTip{
+	float:left;
+	color:#f4f4f4;
+	width:100%;
+}
+
+.mainToolTip img{
+	position:relative;
+	left:500px;
+}
+
+.toolName{
+	font-size: 24px;
+	font-family: Arial;
+	text-shadow: 0px 1px 1px #333;
+}
+
+.wax-tooltip .close {
+    display:block;
+    position:absolute;
+    top:0px;
+	right:0px;
+	background:transparent url(../images/close.png) no-repeat;
+}
+
+/* --------------------------
+  Map
+----------------------------- */
+.map {
+/*	position:absolute;
+	top:60px;
+	bottom:150px;*/
+	width:100%;
+	height:450px;
+}
 a.zoomer {
-  text-decoration: none;
-  position: absolute;
-  text-align: center;
-  background: #666;
-  color: white;
-  font-size: 14px;
-  z-index: 1;
-  width: 30px;
-  height: 25px;
-  line-height: 25px;
-  font-weight: bold;
-  top: 80px;
-  left: 10px;
+  text-decoration:none;
+  position:absolute;
+  background-color:#fff;
+  color:#444;
+  line-height:25px;
+  font-size:20px;
+  z-index:99999;
+  text-align:center;
+  width:28px;
+  height:28px;
+  top:10px;
+box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
+  -moz-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
+  -webkit-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
+  border:1px solid #eee;
   }
-a.zoomout {
-  top: 38px;
-  left: 10px;
-  -moz-border-radius: 0px 0px 3px 3px;
-  -webkit-border-radius: 0px 0px 3px 3px;
-  border-radius: 0px 0px 3px 3px;
-  border-top: 1px solid #111;
-  }
+
 a.zoomin {
-	top:10px;
-  -moz-border-radius: 3px 3px 0px 0px;
-  -webkit-border-radius: 3px 3px 0px 0px;
-  border-radius: 3px 3px 0px 0px;
-  }
-a.zoomer:active {
-  background-color: #333;
-  }
-a.zoomdisabled:active,
-a.zoomdisabled {
-  opacity: 0.7;
-  -moz-opacity: 0.7;
-  filter:alpha(opacity=70);
-  border: none;
-  cursor: default;
+	background:#fff url(../images/zoom-in.png) -31px -1px no-repeat;
+/*  background-position:-31px -1px;*/
+  left:45px;
+  border-radius:0px 3px 3px 0px;
+  -moz-border-radius:0px 3px 3px 0px;
+  -webkit-border-radius:0px 3px 3px 0px;
   }
 
-/*Legend*/
+a.zoomout {
+	left:13px;
+	background:#fff url(../images/zoom-out.png) -61px -1px no-repeat;
+/*  background-position:-61px -1px;*/
+  border-radius:3px 0px 0px 3px;
+  -moz-border-radius:3px 0px 0px 3px;
+  -webkit-border-radius:3px 0px 0px 3px;
+  }
+  a.zoomdisabled {
+    background-color:#ccc;
+}
+
 .wax-legends {
-  overflow: auto;
-  position: absolute;
-  left: 10px;
-  bottom: 10px;
-  z-index: 3;
-  }
-.wax-legends .wax-legend {
-  padding: 10px;
-  background: rgba(255,255,255,0.75);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;
-  border: 1px solid #ccc;
-  font-size: 11px;
-  line-height: 16px;
-  font-weight: normal;
-  width: 250px;
-  }
-.wax-legends .wax-legend small {
-  display: block;
-  line-height: 14px;
-  }
-.wax-legends .wax-legend ul {
-  margin-bottom: 10px;
-  }
-.wax-legends .wax-legend div.scale ul li{
-  display: block;
-  float: left;
-  font-size: 9px;
-  }
-.wax-legends .wax-legend ul.bar-list li span {
-  height: 20px!important;
-  width: 40px!important;
-  }
-.wax-legends .wax-legend ul li span {
-  display: block;
-  float: left;
-  margin-right: 8px;
-  }
-.wax-legends .wax-legend div.scale ul li { margin-bottom: 5px; }
-.wax-legends .wax-legend div.scale ul.bar-list li { margin-bottom: 0; }
-.wax-legends .wax-legend div.scale ul.min-max li {
-  display: block;
-  float: left;
-  width: 99px;
-  }
-.wax-legends .wax-legend div.scale ul.min-max li.max { text-align: right;}
-.wax-legends a:hover {
-  color: #63aece;
-  text-decoration: underline;
-  }
-.wax-legends .wax-legend ul.vertical-list li {
-  margin-bottom: 5px;
-  font-size: 11px;
-  line-height: 10px;
-  display: block;
-  height: 10px;
-  }
-.wax-legends .wax-legend ul.vertical-list li span {
-  -moz-box-shadow: 1px 1px 0px #989898;
-  -webkit-box-shadow: 1px 1px 0px #989898;
-  box-shadow: 1px 1px 0px #989898;
-  width: 10px!important;
-  height: 10px!important;
-  }
-.dot-legend {
-  padding-bottom: 10px;
-  line-height: 15px;
-  font-size: 12px;
-  }
-.dot-legend .dot-title {
-  margin-bottom: 5px;
-  }
-.dot-legend .dot-source {
-  font-size: 9px!important;
-  margin-top: 5px;  }
-.wax-legend .source {
-  clear: both;
-  }
-.overlay-legend .title {
-  text-transform: uppercase;
-  }
+	position:absolute;
+	right:30px;
+	bottom:10px;
+	z-index:999999;
+	box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
+	-moz-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
+	-webkit-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
+}
 
-/* Wax tooltips */
+.wax-legends .wax-legend {
+	padding:5px;
+	background:rgba(255,255,255,0.8);
+	color:#666;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+.wax-legends .wax-legend h3,
+.wax-legends .wax-legend h4 {
+	margin: 0;
+}
+
+.wax-legends .wax-legend h4 {
+	font-style:italic;
+	margin: 0 0 5px 0;	
+}
 
 .wax-tooltip {
-  z-index: 4;
-  position: absolute;
-  background: rgb(40,40,40);
-  background: rgba(40,40,40,.90);
-  color: #fff;
-  padding: 10px;
-  right: 15px;
-  top: 15px;
-  width: 200px;
-  opacity: 1;
-  -webkit-transition: opacity .3s;
-  -moz-transition: opacity .3s;
+	z-index: 10;
+	position: absolute;
+	background: rgba(175,175,175, .90);
+	color: rgb(244, 244, 244);
+	padding: 10px;
+	right: 30px;
+	top: 10px;
+	width: 300px;
+	opacity: 1;
+	-webkit-transition: opacity .5s;
+	-moz-transition: opacity .5s;
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+	min-height: 200px;
   }
-.wax-tooltip h2 {
-  font-family: Arial, Helvetica, sans-serif;
-  text-transform: capitalize;
-  font-weight: bold;
-  font-size: 18px;
-  }
-.wax-tooltip .int_chart img {
-  margin: 10px 0;
-  }
-.wax-fade {
-  opacity: 0;
-  }
-.wax-fade {
-  -webkit-animation-name: wax-fade;
-  -webkit-animation-iteration-count: 1;
-  }
+
+.wax-tooltip h2{
+	  color:#fff;
+}
+
 .wax-tooltip.hide { opacity:0; }
+
 .wax-tooltip .close {
   display:block;
   position:absolute;
   top:0px;
   right:0px;
+	background:#fff url(../images/popup-close.png) no-repeat;
   }
 
 .wax-mobile-body .wax-tooltip {
@@ -178,42 +147,4 @@ a.zoomdisabled {
   top:50px;
   }
 
-.zoombox-box,
-.boxselector-box {
-  margin:0;
-  padding:0;
-  border:1px dashed #888;
-  background: rgba(255,255,255,0.25);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  display: none;
-  }
-
-.zoombox-box-container,
-.boxselector-box-container,
-.pointselector-box-container {
-  margin:0;
-  padding:0;
-  position:absolute;
-  background: url(blank.gif);
-  top:0;
-  left:0;
-  }
-
-.wax-point-div {
-  width:10px;
-  height:10px;
-  margin-left:-5px;
-  margin-top:-5px;
-  background:#fff;
-  border:1px solid #333;
-  -webkit-border-radius:5px;
-  }
-
-.mainLegend .mainToolTip{
-	background:#333;
-}
 
