@@ -71,7 +71,7 @@
 	        },
 	        shadowSize: 0
 	    },
-	    colors: ["#333333"],
+	    colors: ["#0064CD"],
 	    grid: {
 	        show: true,
 	        borderWidth: 0,
@@ -95,7 +95,7 @@
 		for(i=0;i<6;i++){
 			var e = $('#container'+i+'.graph');
 			var plot = $.plot(e, [ data[i] ], options);
-			plot.highlight(i, 3);
+			plot.highlight(0, 3)
 		}
 		
 	}); //end ready
