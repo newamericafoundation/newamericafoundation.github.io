@@ -22,6 +22,17 @@
 	  $(function() {
 	    $("table#programTable").tablesorter({ sortList: [[1,0]] });
 		$('#popup').popover();
+		// Main navigation scrolling
+		$(".scroll").click(function(event){
+			var scrollId = $(this).text().toLowerCase().split(' ');
+			event.preventDefault();
+			if(scrollId[1] == 'home'){
+				$('html,body').animate({scrollTop:0}, 500);
+			}else{
+				$('html,body').animate({scrollTop:$('#'+scrollId[1]).offset().top-50}, 500);
+			}
+			
+		});
 	  });
 	</script>
     <style type="text/css">
@@ -59,13 +70,24 @@
         <!-- Main hero unit for a primary marketing message or call to action -->
         <div class="hero-unit">
           <h1>The Data Page!</h1>
-          <p>Check out all this awesome data. </p>
-          <p><a id="popup" href="#" class="btn primary large" rel="popover" data-content="Need to decide how to present the data. Show all programs in a table? What about countries? " data-original-title="Data">Learn more &raquo;</a></p>
+          <p>Here we will present maps, graphs, and a list of all our data.</p>
+          <p><a href="#maps" class="btn primary scroll">View Maps</a><a href="#graphs" class="btn primary scroll">View Graphs</a><a href="#data" class="btn primary scroll">View Data</a></p>
         </div>
         <!-- Example row of columns -->
-        <div class="row">
+
+		<div id="maps" class="row">
 			<div class="span16">
-				<h2>List of Programs</h2>
+				<h2>Maps</h2>
+			</div>
+		</div>
+		<div id="graphs" class="row">
+			<div class="span16">
+				<h2>Graphs</h2>
+			</div>
+		</div>
+        <div id="data" class="row">
+			<div class="span16">
+				<h2>Program Data</h2>
 			</div>
 			<div class="span16">
 				<table id="programTable" class="zebra-striped condensed"><thead><tr><th class="header">Program Name</th><th class="header headerSortDown">Country</th><th class="header">Program Type</th></tr></thead><tbody><tr><td><a href="program.html">Orphan Care Programme</a></td><td><a href="country.html">Botswana</a></td><td>Pure transfer plus</td></tr><tr><td>Orphans and Vulnerable Children</td><td>Burkina Faso</td><td>Income transfer plus</td></tr><tr><td>Pilot Conditional Cash Transfer Programme  (Ain-es-Sara)</td><td>Egypt</td><td>Income transfer plus</td></tr><tr><td>Meket Livelihoods Development Project</td><td>Ethiopia</td><td>Income transfer plus</td></tr><tr><td>Ethiopia Graduation Pilot</td><td>Ethiopia</td><td>Income transfer plus</td></tr><tr><td>Productive Safety Net Program</td><td>Ethiopia</td><td>Income transfer plus</td></tr></tbody></table>
