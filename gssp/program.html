@@ -47,7 +47,8 @@
 	        font: { "family": "Georgia" },
 	        tickColor: '#f4f4f4',
 	        tickSize: 1,
-	        tickDecimals: 0
+	        tickDecimals: 0,
+			show:false
 	    },
 	    yaxis: {
 	        tickFormatter: function() { return ''; },
@@ -69,11 +70,12 @@
 			bars: {
 	            show: true,
 	            lineWidth: 0.5,
-	            fillColor: '#000000'
+	            fillColor: '#000000',
+				lineColor: '#cccccc'
 	        },
 	        shadowSize: 0
 	    },
-	    colors: ["#f69680"],
+	    colors: ["#0064CD"],
 	    grid: {
 	        show: true,
 	        borderWidth: 0,
@@ -92,7 +94,10 @@
 		}
 		for(i=0;i<6;i++){
 			var e = $('#container'+i+'.graph');
-			$.plot(e, [ data[i] ], options);
+			var plot = $.plot(e, [ data[i] ], options);
+			//highlight botswana, here the index is 3 so change this in production
+			plot.highlight(0, 0);
+			
 		}
 		
 	}); //end ready
