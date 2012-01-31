@@ -108,24 +108,17 @@
 			        $("#x").text(pos.x.toFixed(2));
 			        $("#y").text(pos.y.toFixed(2));
 
-			        if ($("#enableTooltip:checked").length > 0) {
 			            if (item) {
 			                if (previousPoint != item.dataIndex) {
 			                    previousPoint = item.dataIndex;
 
 			                    $("#tooltip").remove();
-			                    var x = item.datapoint[0].toFixed(2),
+			                    var x = item.datapoint[0].toFixed(0),
 			                        y = item.datapoint[1].toFixed(2);
 
-			                    showTooltip(item.pageX, item.pageY,
-			                                item.series.label + " of " + x + " = " + y);
+			                    showTooltip(item.pageX, item.pageY,"ID " + x + " Value: " + y);
 			                }
 			            }
-			            else {
-			                $("#tooltip").remove();
-			                previousPoint = null;            
-			            }
-			        }
 			    });
 		}
 			
@@ -135,9 +128,9 @@
 			            display: 'none',
 			            top: y + 5,
 			            left: x + 5,
-			            border: '1px solid #fdd',
+			            border: '1px solid #ccc',
 			            padding: '2px',
-			            'background-color': '#fee',
+			            'background-color': '#eee',
 			            opacity: 0.80
 			        }).appendTo("body").fadeIn(200);
 			    }
