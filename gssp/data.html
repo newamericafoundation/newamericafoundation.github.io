@@ -26,12 +26,19 @@
 		$('#popup').popover();
 		// Main navigation scrolling
 		$(".scroll").click(function(event){
-			var scrollId = $(this).text().toLowerCase().split(' ');
+			if($(this).text().indexOf(' ')!=-1){
+				var scrollId = $(this).text().toLowerCase().split(' ');
+				scrollId = scrollId[1]
+			}else{
+				var scrollId = $(this).text().toLowerCase();
+			}
+			console.log(scrollId)
+			
 			event.preventDefault();
-			if(scrollId[1] == 'home'){
+			if(scrollId == 'top'){
 				$('html,body').animate({scrollTop:0}, 500);
 			}else{
-				$('html,body').animate({scrollTop:$('#'+scrollId[1]).offset().top-50}, 500);
+				$('html,body').animate({scrollTop:$('#'+scrollId).offset().top-50}, 500);
 			}
 			
 		});
@@ -169,7 +176,7 @@
     <div class="container">
       <div class="content">
         <!-- Main hero unit for a primary marketing message or call to action -->
-        <div id="home" class="hero-unit">
+        <div id="top" class="hero-unit">
           <h1>The Data Page!</h1>
           <p>Here we will present maps, graphs, and a list of all our data.</p>
           <p><a href="#maps" class="btn primary scroll">View Maps</a>&nbsp;<a href="#graphs" class="btn primary scroll">View Graphs</a>&nbsp;<a href="#data" class="btn primary scroll">View Data</a></p>
@@ -179,7 +186,7 @@
 		<div id="maps" class="row">
 			<div class="span16">
 				<h2>Maps</h2>
-				<a class="btn small primary pull-right" href="#home">Top</a>
+				<a class="btn small primary pull-right scroll" href="#home">Top</a>
 			</div>
 			<div class="span16">
 				<img src="images/bot.png" alt="">
@@ -188,7 +195,7 @@
 		<div id="graphs" class="row">
 			<div class="span16">
 				<h2>Graphs</h2>
-				<a class="btn small primary pull-right" href="#home">Top</a>
+				<a class="btn small primary pull-right scroll" href="#home">Top</a>
 			</div>
 			<div class="row">
 				<div class="span10">
