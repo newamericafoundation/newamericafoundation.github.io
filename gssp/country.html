@@ -21,7 +21,6 @@
 	<script >
 	  $(function() {
 	    $("table#programTable").tablesorter({ sortList: [[1,0]] });
-		$('#popup').popover();
 		$('#popup1').popover();
 	  });
 	</script>
@@ -167,9 +166,25 @@
         <!-- Main hero unit for a primary marketing message or call to action -->
         <div class="hero-unit">
           <h1>Botswana</h1>
-<a id="popup1" href="#" class="pull-right" rel="popover" data-placement="above" data-content="this will be a map" data-original-title="Map"><img class="pull-right" src="images/bot.png" alt=""></a>
-
-	          <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+<a id="popup1" href="#" class="pull-right" rel="popover" data-placement="above" data-content="this will be a map" data-original-title="Map"><img style="height:200px;" class="pull-right" src="images/bot.png" alt=""></a>
+		<div class="span4">
+			<dl>
+				<dt>Commercial Banks per (100,000 adults)</dt>
+				<dd>8.00</dd>
+				<dt>Alternative Financial Institutions (coops + SSFIs + MFI)</dt>
+				<dd>2.30</dd>
+				<dt>ATM per 100,000 adults</dt>
+				<dd>21.46</dd>
+				<dt>POS penetration (per 100,000 adults)</dt>
+				<dd>288.68</dd>
+				<dt>Deposit accounts at banks (per 1000 adults)</dt>
+				<dd>479.36</dd>
+				<dt>Deposit accounts at Other FI's (per 1000 adults)</dt>
+				<dd>433.15</dd>
+				<dt>Average account value (% of income per capita) - all types of accounts</dt>
+				<dd>122.18</dd>
+			</dl>
+		</div>
         </div>
         <!-- Example row of columns -->
         <div class="row">
@@ -195,7 +210,6 @@
 			</table>
 		</div>
 		 <div class="row">
-			<a id="popup" href="#" class="btn primary" rel="popover" data-content="can we do some ranking here? would be good to compare to other countries." data-original-title="Ideas">some ideas</a>
 			<div class="span6">
 				<h4>Corruption</h4>
 				<h2>33</h2>
