@@ -68,19 +68,6 @@ var options = {
 		
 		var countryNames =[[0,'Myanmar'],[1,'D.P.R. Korea'],[2,'Eritrea'],[3,'Solomon Islands'],[4,'Somalia'],[5,'Marshall Islands'],[6,'Ethiopia'],[7,'Cuba'],[8,'Kiribati'],[9,'Burundi'],[10,'Congo (Dem. Rep.)'],[11,'Djibouti'],[12,'Malawi'],[13,'Central African Rep.'],[14,'Comoros'],[15,'Chad'],[16,'Niger'],[17,'Micronesia'],[18,'Tuvalu'],[19,'Papua New Guinea'],[20,'Nepal'],[21,'Mozambique'],[22,'Rwanda'],[23,'Sierra Leone'],[24,'Burkina Faso'],[25,'Madagascar'],[26,'Uganda'],[27,'Cook Islands'],[28,'Guinea-Bissau'],[29,'Liberia'],[30,'Haiti'],[31,'Guinea'],[32,'Sudan'],[33,'Togo'],[34,'Afghanistan'],[35,'Zambia'],[36,'Cameroon'],[37,'Lesotho'],[38,'Yemen'],[39,'Bangladesh'],[40,'Angola'],[41,'Tanzania'],[42,'Mali'],[43,'Tonga'],[44,'Timor-Leste'],[45,'Bhutan'],[46,'Nigeria'],[47,'Equatorial Guinea'],[48,'Pakistan'],[49,'Cambodia'],[50,'Syria'],[51,'Zimbabwe'],[52,'India'],[53,'Kenya'],[54,'Swaziland'],[55,'S. Tomé & Principe'],[56,'Belize'],[57,'Turkmenistan'],[58,'China'],[59,'Lao P.D.R.'],[60,'Nicaragua'],[61,'Costa Rica'],[62,'Senegal'],[63,'Namibia'],[64,'Lebanon'],[65,'Canada'],[66,'Montserrat'],[67,'Palau'],[68,'Ghana'],[69,'Bolivia'],[70,'Guyana'],[71,'Monaco'],[72,'Cape Verde'],[73,'Iraq'],[74,'San Marino'],[75,'Côte dIvoire'],[76,'Uzbekistan'],[77,'Andorra'],[78,'Puerto Rico'],[79,'Mauritania'],[80,'French Polynesia'],[81,'Benin'],[82,'Mexico'],[83,'Fiji'],[84,'Bosnia and Herzegovina'],[85,'Sri Lanka'],[86,'Turkey'],[87,'Gambia'],[88,'Philippines'],[89,'Tajikistan'],[90,'Egypt'],[91,'New Caledonia'],[92,'Moldova'],[93,'Dominican Rep.'],[94,'United States'],[95,'Mongolia'],[96,'Iran (I.R.)'],[97,'Samoa'],[98,'Georgia'],[99,'Mauritius'],[100,'Indonesia'],[101,'Paraguay'],[102,'Algeria'],[103,'Cyprus'],[104,'Congo'],[105,'Japan'],[106,'Colombia'],[107,'Venezuela'],[108,'Liechtenstein'],[109,'Kyrgyzstan'],[110,'Azerbaijan'],[111,'Greenland'],[112,'Morocco'],[113,'Peru'],[114,'South Africa'],[115,'France'],[116,'Australia'],[117,'Ecuador'],[118,'Latvia'],[119,'Gibraltar'],[120,'Thailand'],[121,'Brazil'],[122,'TFYR Macedonia'],[123,'Slovenia'],[124,'Ireland'],[125,'Korea (Rep.)'],[126,'British Virgin Islands'],[127,'Tunisia'],[128,'Iceland'],[129,'Gabon'],[130,'Jordan'],[131,'Belarus'],[132,'Falkland (Malvinas) Is.'],[133,'Greece'],[134,'Slovak Republic'],[135,'Brunei Darussalam'],[136,'Malta'],[137,'Spain'],[138,'Belgium'],[139,'St. Lucia'],[140,'Romania'],[141,'New Zealand'],[142,'Netherlands'],[143,'Norway'],[144,'Chile'],[145,'Sweden'],[146,'Jamaica'],[147,'Grenada'],[148,'Botswana'],[149,'Ukraine'],[150,'Vanuatu'],[151,'Malaysia'],[152,'Taiwan, Province of China'],[153,'Hungary'],[154,'St. Vincent and the Grenadines'],[155,'Kazakhstan'],[156,'Faroe Islands'],[157,'Aruba'],[158,'Poland'],[159,'Estonia'],[160,'Bahrain'],[161,'Switzerland'],[162,'El Salvador'],[163,'Denmark'],[164,'Bahamas'],[165,'Armenia'],[166,'Honduras'],[167,'Guatemala'],[168,'Germany'],[169,'Barbados'],[170,'Serbia'],[171,'United Kingdom'],[172,'Uruguay'],[173,'Qatar'],[174,'Israel'],[175,'Bermuda'],[176,'Seychelles'],[177,'Bulgaria'],[178,'Czech Republic'],[179,'Trinidad & Tobago'],[180,'Argentina'],[181,'Albania'],[182,'Portugal'],[183,'Luxembourg'],[184,'Croatia'],[185,'Singapore'],[186,'United Arab Emirates'],[187,'Austria'],[188,'Lithuania'],[189,'Italy'],[190,'St. Kitts and Nevis'],[191,'Dominica'],[192,'Anguilla'],[193,'Finland'],[194,'Maldives'],[195,'Kuwait'],[196,'Oman'],[197,'Russia'],[198,'Suriname'],[199,'Libya'],[200,'Viet Nam'],[201,'Cayman Islands'],[202,'Panama'],[203,'Montenegro'],[204,'Saudi Arabia'],[205,'Antigua & Barbuda'],[206,'Hong Kong, China'],[207,'Macao, China'],[208,'Palestinian Authority (Ratio is w/ 2009 data)']]
 		
-		// function showTooltip(x, y, contents) {
-		// 		        $('<div id="tooltip">' + contents + '</div>').css( {
-		// 		            position: 'absolute',
-		// 		            display: 'none',
-		// 		            top: y +10,
-		// 		            left: x + 20,
-		// 		            border: '1px solid #ccc',
-		// 		            padding: '2px',
-		// 		            'background-color': '#eee',
-		// 		            opacity: 0.80
-		// 		        }).appendTo("body").fadeIn(200);
-		// 		    }
-		
 		function showTooltip(contents) {
 					        $('<div id="tooltip">' + contents + '</div>').css( {
 										position: 'relative',
@@ -112,7 +99,6 @@ var options = {
 			            }
 			    });
 			
-			// plot.prototype.a=showTooltip;
 			plot.toolTips = showTooltip
 			
 			newWaxMapGraph('http://a.tiles.mapbox.com/v3/newamerica.mobile_v_fixed.jsonp','mainMap',0, 0, 2, 5, plot,mobileArray, countryNames);
