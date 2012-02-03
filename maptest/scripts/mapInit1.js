@@ -8,6 +8,9 @@ startLat = latitude of the starting center point for the map
 startLng = longtitude of the starting cetner point for the map
 minZoom = minimum zoom level for the map
 maxZoom = maximum zoom level for the map
+graph = flot graph object
+graphData = main data array from flot
+graphLabels = labels for the flot data array
 
 Last Updated 01/19/12 by Andy Hull
 */
