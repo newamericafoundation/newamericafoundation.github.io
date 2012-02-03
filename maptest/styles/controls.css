@@ -235,4 +235,60 @@ a.zoomdisabled {
 .mainLegend .mainToolTip{
 	background:#333;
 }
+/* --------------------------
+    Sharing
+----------------------------- */
+
+a.share:active {
+  background: #4e92db;
+  -moz-box-shadow:inset 0 0 2px rgba(0,0,0,0.5);
+  -webkit-box-shadow:inset 0 0 2px rgba(0,0,0,0.5);
+  box-shadow:inset 0 0 2px rgba(0,0,0,0.5);
+}
+
+.wax-share {
+  background:#666;
+  background:rgba(32,32,32,0.75);
+  position:absolute;
+  top:0px; left:0px; right:0px; bottom:0px;
+  z-index:999999;
+  }
+
+.wax-share .share-content {
+  position:absolute;
+  display:block;
+  right:50%;
+  top:50%;
+  margin:-210px -180px 0px 0px;
+  padding:19px;
+  width:320px;
+  height:215px;
+  border:1px solid #ccc;
+  background:white;
+  border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
+  -moz-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
+  -webkit-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
+  overflow:hidden;
+  }
+  
+.wax-share a.close {
+  position:absolute;
+  right:10px;
+  top:10px;
+  background-color:transparent;
+  }
+
+.wax-share small { color:#999; }
+
+.wax-share textarea {
+  display:block;
+  font:normal 10px/15px Arial,sans-serif;
+  resize:none;
+  border:1px solid #ccc;
+  padding:4px;
+  width:310px;
+  }
 

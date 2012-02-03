@@ -66,5 +66,22 @@ function newWaxMapGraph(url, mapContainer, startLat, startLng, minZoom, maxZoom,
 	wax.mm.legend(m, tilejson).appendTo(m.parent);
 	wax.mm.zoomer(m, tilejson).appendTo(m.parent);	
 	m.setCenterZoom(new mm.Location(startLat, startLng), minZoom);
+	
+	// Share
+	$('a.share').click(function(e){
+		e.preventDefault();
+		$('#embed-code-field textarea').attr('value',"<iframe width='500' height='300' frameBorder='0' src='http://a.tiles.mapbox.com/v3/newamerica.mobile_v_fixed.html#2/0/0.000'></iframe>");
+		$('.wax-share').css('display', 'block');
+		$('#embed-code')[0].tabindex = 0;
+		$('#embed-code')[0].select();
+	});
+
+	$('a.close').click(function(e) {closer(e)});
+
+	function closer(e) {
+	        if (e) {e.preventDefault();}
+	        $('.wax-share').css('display', 'none');
+	}
+
 	});
 }; //end newWaxMapGraph
