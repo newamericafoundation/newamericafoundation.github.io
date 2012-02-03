@@ -45,7 +45,7 @@ function newWaxMapGraph(url, mapContainer, startLat, startLng, minZoom, maxZoom,
 							if($(jFeature).text() == graphLabels[country][1]){
 								graph.highlight(0, graphLabels[country][0]);
 								$("#tooltip").remove();
-								graph.toolTips("<h2>"+countryNames[country][1]+"</h2><p>There are " + mobileArray[country][1] + " mobile phone subscribers per 100 residents.</p>");
+								graph.toolTips("<h2>"+graphLabels[country][1]+"</h2><p>There are " + graphData[country][1] + " mobile phone subscribers per 100 residents.</p>");
 								break;
 								}
 							}
