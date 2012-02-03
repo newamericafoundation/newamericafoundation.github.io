@@ -25,7 +25,8 @@ function newWaxMap(url, mapContainer, startLat, startLng, minZoom, maxZoom){
 			font: { "family": "Georgia" },
 	        tickColor: '#f4f4f4',
 	        autoscaleMargin: 0.1,
-			show:true
+			show:true,
+			position: "right"
 	    },
 	    series: {
 	        lines: {
@@ -73,22 +74,20 @@ function newWaxMap(url, mapContainer, startLat, startLng, minZoom, maxZoom){
 				                    var x = item.datapoint[0].toFixed(0),
 				                        y = item.datapoint[1].toFixed(2);
 
-				                    showTooltip(item.pageX, item.pageY, countryNames[x][1] +" "+ y);
+				                    showTooltip(countryNames[x][1] +" "+ y);
 				                }
 				            }
 				    });
 
-				function showTooltip(x, y, contents) {
+				function showTooltip(contents) {
 				        $('<div id="tooltip">' + contents + '</div>').css( {
-				            position: 'absolute',
+							position: 'relative',
 				            display: 'none',
-				            top: y +10,
-				            left: x + 20,
 				            border: '1px solid #ccc',
 				            padding: '2px',
 				            'background-color': '#eee',
 				            opacity: 0.80
-				        }).appendTo("body").fadeIn(200);
+				        }).appendTo("#graphTooltip").fadeIn(200);
 				    }
 	
 	minZoom = minZoom || 2;
@@ -108,46 +107,20 @@ function newWaxMap(url, mapContainer, startLat, startLng, minZoom, maxZoom){
 				{	// Show a tooltip.
 					over: function(feature, context) {
 						if(feature){
-							
-				
 						var jFeature = $(feature)[0]
-						console.log($(jFeature).text())
 						for(country in countryNames){
-							console.log(countryNames[country][1]+" and "+$(jFeature).text())
 							if($(jFeature).text() == countryNames[country][1]){
-								
-								console.log(country)
 								plot.highlight(0, countryNames[country][0]);
-								showTooltip(item.pageX, item.pageY, countryNames[x][1] +" "+ y);
+								$("#tooltip").remove();
+								showTooltip(countryNames[country][1]+" "+mobileArray[country][1]);
 								break;
+								}
 							}
 						}
-					}
-						
-
-					    // if (!feature) return;
-					    // 					    context.style.cursor = 'pointer';
-					    // 
-					    // 					    if (this.isPopup(this._currentTooltip)) {
-					    // 					        return;
-					    // 					    } else {
-					    // 					        this._currentTooltip = this.getTooltip(feature, context)
-					    // 					    }
-					    // 						buildChart()
-					    // 						$('#chartContainer').show();
-					    // 					$('.debt-gdp-timeline').children('span.chart').empty();
-					return feature;
 					},
 					out: function(context) {
 						plot.unhighlight();
-					    // context.style.cursor = 'default';
-					    // 
-					    // 					    if (this.isPopup(this._currentTooltip)) {
-					    // 					        return;
-					    // 					    } else if (this._currentTooltip) {
-					    // 					        this.hideTooltip(this._currentTooltip);
-					    // 					        this._currentTooltip = undefined;
-					    // 					    }
+						$("#tooltip").remove();
 					}
 				}
 			});
@@ -156,10 +129,5 @@ function newWaxMap(url, mapContainer, startLat, startLng, minZoom, maxZoom){
 	wax.mm.legend(m, tilejson).appendTo(m.parent);
 	wax.mm.zoomer(m, tilejson).appendTo(m.parent);	
 	m.setCenterZoom(new mm.Location(startLat, startLng), minZoom);
-	
-	
-	
-
-
 	});
 }; //end newWaxMap
