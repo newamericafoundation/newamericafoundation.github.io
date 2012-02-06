@@ -59,7 +59,7 @@ function newWaxMapGraph(url, mapContainer, startLat, startLng, minZoom, maxZoom,
 						out: function(context) {
 							graph.unhighlight();
 							$("#tooltip").remove();
-							$("#graphTooltip").append("<div id='tooltip'><h2>Mobile Phone Penetration</h2><p>Rollover the countries above or the bars beneath the map to reveal the number of mobile phone subscribers per 100 residents.</p></div>");
+							$("#graphTooltip").append("<div id='tooltip'><h2>Mobile Phone Penetration</h2><p>Rolling over any country on the map will also reveal the number of mobile phone subscribers per 100 residents on the chart below.</p></div>");
 						}
 					}
 				});
