@@ -72,7 +72,7 @@ a.zoomdisabled {
   overflow: auto;
   position: absolute;
 /*  left: 10px;*/
-  right:10px;
+  right:15px;
   bottom: 10px;
   z-index: 3;
   }
@@ -87,7 +87,7 @@ a.zoomdisabled {
   line-height: 16px;
   font-weight: normal;
 /*  width: 250px;*/
-  width:100%;
+  width:450px;
   }
 .wax-legends .wax-legend small {
   display: block;
