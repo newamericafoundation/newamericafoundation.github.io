@@ -1,6 +1,7 @@
 /*
-This contains the basic functions for initializing a Wax map. 
-Data sources are tilestream urls.
+This contains the basic functions for initializing a Wax map 
+and a flot graph that is tied to the map tooltips.
+Data sources are mapbox hosting urls.
 
 url = the url of the tileset to be rendered
 mapContainer = the div that will hold the map
@@ -12,10 +13,11 @@ graph = flot graph object
 graphData = main data array from flot
 graphLabels = labels for the flot data array
 
-Last Updated 01/19/12 by Andy Hull
+Last Updated 02/06/12 by Andy Hull
 */
 
 function newWaxMapGraph(url, mapContainer, startLat, startLng, minZoom, maxZoom, graph, graphData, graphLabels){
+	//Optional variables	
 	if(!graph){
 		graph ='';
 	};
@@ -38,50 +40,51 @@ function newWaxMapGraph(url, mapContainer, startLat, startLng, minZoom, maxZoom,
 		m = new mm.Map(mapContainer,
 			new wax.mm.connector(tilejson));
 	
-	wax.mm.interaction(m, tilejson, {
-	  callbacks:
-				{	// Show a tooltip.
-					over: function(feature, context) {
-						if(feature){
-						var jFeature = $(feature)[0]
-						for(country in graphLabels){
-							if($(jFeature).text() == graphLabels[country][1]){
-								graph.highlight(0, graphLabels[country][0]);
-								$("#tooltip").remove();
-								graph.toolTips("<h2>"+graphLabels[country][1]+"</h2><p>There are " + graphData[country][1] + " mobile phone subscribers per 100 residents.</p>");
-								break;
+		wax.mm.interaction(m, tilejson, {
+		  callbacks:
+					{	// Show a tooltip.
+						over: function(feature, context) {
+							if(feature){
+							var jFeature = $(feature)[0]
+							for(country in graphLabels){
+								if($(jFeature).text() == graphLabels[country][1]){
+									graph.highlight(0, graphLabels[country][0]);
+									$("#tooltip").remove();
+									graph.toolTips("<h2>"+graphLabels[country][1]+"</h2><p>There are " + graphData[country][1] + " mobile phone subscribers per 100 residents.</p>");
+									break;
+									}
 								}
 							}
+						},
+						out: function(context) {
+							graph.unhighlight();
+							$("#tooltip").remove();
+							$("#graphTooltip").append("<div id='tooltip'><h2>Mobile Phone Penetration</h2><p>Rollover the countries above or the bars beneath the map to reveal the number of mobile phone subscribers per 100 residents.</p></div>");
 						}
-					},
-					out: function(context) {
-						graph.unhighlight();
-						$("#tooltip").remove();
-						$("#graphTooltip").append("<div id='tooltip'><h2>Mobile Phone Penetration</h2><p>Rollover the countries above or the bars beneath the map to reveal the number of mobile phone subscribers per 100 residents.</p></div>");
 					}
-				}
-			});
+				});
 			
-    wax.mm.interaction(m, tilejson);
-	wax.mm.legend(m, tilejson).appendTo(m.parent);
-	wax.mm.zoomer(m, tilejson).appendTo(m.parent);	
-	m.setCenterZoom(new mm.Location(startLat, startLng), minZoom);
+	    wax.mm.interaction(m, tilejson);
+		wax.mm.legend(m, tilejson).appendTo(m.parent);
+		wax.mm.zoomer(m, tilejson).appendTo(m.parent);	
+		m.setCenterZoom(new mm.Location(startLat, startLng), minZoom);
 	
-	// Share
-	$('a.share').click(function(e){
-		e.preventDefault();
-		$('#embed-code-field textarea').attr('value',"<iframe width='500' height='300' frameBorder='0' src='http://a.tiles.mapbox.com/v3/newamerica.mobile_v_fixed.html#2/0/0.000'></iframe>");
-		$('.wax-share').css('display', 'block');
-		$('#embed-code')[0].tabindex = 0;
-		$('#embed-code')[0].select();
-	});
+		// Share
+		$('a.share').click(function(e){
+			e.preventDefault();
+			//This iframe is hardcoded, so change if it is pointing to the wrong place
+			$('#embed-code-field textarea').attr('value',"<iframe width='500' height='300' frameBorder='0' src='http://a.tiles.mapbox.com/v3/newamerica.mobile_v_fixed.html#2/0/0.000'></iframe>");
+			$('.wax-share').css('display', 'block');
+			$('#embed-code')[0].tabindex = 0;
+			$('#embed-code')[0].select();
+		});
 
-	$('a.close').click(function(e) {closer(e)});
+		$('a.close').click(function(e) {closer(e)});
 
-	function closer(e) {
-	        if (e) {e.preventDefault();}
-	        $('.wax-share').css('display', 'none');
-	}
+		function closer(e) {
+		        if (e) {e.preventDefault();}
+		        $('.wax-share').css('display', 'none');
+		}
 
 	});
 }; //end newWaxMapGraph
