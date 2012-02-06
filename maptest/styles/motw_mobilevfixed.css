@@ -49,16 +49,17 @@
 	color: #FFF !important;
 	text-shadow: #000 0px 1px 1px !important;
 	padding: 10px !important;
-	background-color: #996680 !important;
+/*	background-color: #996680 !important;*/
+	background:rgba(40,40,40,.90);
     border: 1px solid rgba(0, 0, 0, 0.05) !important;
-    border-radius: 4px 4px 4px 4px !important;
+/*    border-radius: 4px 4px 4px 4px !important;*/
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15) inset !important;
     margin-bottom: 20px !important;
 	display: table-cell !important;
 	vertical-align: middle !important;
 	z-index: 1000;
 	margin-top:10px !important;
-	opacity: 0.35;
+/*	opacity: 0.35;*/
 	position:relative;
 }
 

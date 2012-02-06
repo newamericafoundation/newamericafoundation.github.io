@@ -74,8 +74,7 @@ var options = {
 				display: 'none',
 				border: '1px solid #ccc',
 				padding: '2px',
-				'background-color': '#eee',
-				opacity: 0.35
+				'background-color': 'rgba(40,40,40,.90)'
 				}).appendTo("#graphTooltip").fadeIn(200);
 			}
 		
@@ -87,7 +86,6 @@ var options = {
 			    $('#container1').bind("plothover", function (event, pos, item) {
 			        $("#x").text(pos.x.toFixed(2));
 			        $("#y").text(pos.y.toFixed(2));
-		
 			            if (item) {
 			                if (previousPoint != item.dataIndex) {
 			                    previousPoint = item.dataIndex;
@@ -96,7 +94,7 @@ var options = {
 			                    var x = item.datapoint[0].toFixed(0),
 			                        y = item.datapoint[1].toFixed(2);
 		
-			                    plot.toolTips("<h2>"+countryNames[x][1]+"</h2><p>There are " + y + " mobile phone subscribers per 100 residents.</p>");
+			                    plot.toolTips("<h2>"+countryNames[x][1]+" <span style='float:right;'>"+y+"</span></h2><p>mobile phone subscriptions per 100 residents.</p>");
 			                }
 			            }
 			    });
