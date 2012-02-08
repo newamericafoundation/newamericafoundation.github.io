@@ -104,7 +104,7 @@ var options = {
 			plot.toolTips = showTooltip
 			
 			//main function to build the wax map and add interactivity to the flot graph
-			newWaxMapGraph('http://a.tiles.mapbox.com/v3/newamerica.mobile_v_fixed.jsonp','mainMap',0, 0, 2, 5, plot,mobileArray, countryNames);
+			newWaxMapGraph('http://a.tiles.mapbox.com/v3/newamerica.mobile_v_fixed.json','mainMap',0, 0, 2, 5, plot,mobileArray, countryNames);
 			//Show the title when you mouse out of the graph
 			$('#mainFlotGraph').mouseleave(function() {
 					$("#tooltip").remove();
