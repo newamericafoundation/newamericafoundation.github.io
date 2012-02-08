@@ -3,7 +3,7 @@
 <head>
 <title>Slate map test</title>
 <link rel="stylesheet" type="text/css" href="slate_files/blogs.css">
-
+<link rel="stylesheet" type="text/css" href="slate_files/lib.css">
 <script type="text/javascript" src="slate_files/jquery.js"></script> 
 <script type="text/javascript" language="javascript" src="slate_files/header.js"></script>
 <script src="slate_files/cleanprint.js" name="cleanprintloader" type="text/javascript"></script>
@@ -70,11 +70,11 @@ var options = {
 		
 		function showTooltip(contents) {
 			$('<div id="tooltip">' + contents + '</div>').css( {
-				position: 'relative',
-				display: 'none',
+				position: 'absolute',
 				border: '1px solid #ccc',
-				padding: '2px',
 				'background-color': 'rgba(40,40,40,.90)',
+				left:'10px',
+				color:'#ffffff',
 				color:'#ffffff'
 				}).appendTo("#graphTooltip").fadeIn(200);
 			}
@@ -108,7 +108,7 @@ var options = {
 			//Show the title when you mouse out of the graph
 			$('#container1').mouseleave(function() {
 					$("#tooltip").remove();
-					$("#graphTooltip").append("<div id='tooltip'><p>Number of mobile phone subscribers per 100 residents</p></div>");
+					$("#graphTooltip").append("<div id='tooltip' class='no-tooltip'><p>Number of mobile phone subscribers per 100 residents</p></div>");
 			});
 	}); // end ready
 </script>
@@ -151,6 +151,27 @@ var options = {
 </header>
 
         <div class="sl-body-wrapper">
+        <div class="sl-crumbs">
+<div class="sl-crumbs-cntr" style="padding: 0 43px 0 36px;">
+<a class="sl-crumbs-link" href="http://www.slate.com/">HOME</a>
+&nbsp;/&nbsp;
+<a class="sl-crumbs-link" href="#">DATA VISUALIZATION</a>
+&nbsp;:&nbsp; SLATE/NEW AMERICA FOUNDATION
+</div>
+<div class="clearing"></div>
+</div>
+<div class="sl-art-head" style="padding: 0 43px 0 36px;">
+<h2 class="sl-art-head-hed">MOTW Hed MOTW Hed MOTW Hed MOTW Hed </h2>
+<h1 class="sl-art-head-dek">MOTW subhed MOTW subhed MOTW subhed MOTW subhed MOTW subhed MOTW subhed MOTW subhed </h1>
+<p class="sl-art-byline">
+By
+<a href="http://data.newamerica.net" rel="author">New America Foundation</a>
+<span class="sl-art-datetime">
+<span class="sl-art-head-pipe">|</span>
+Posted Thursday, Feb. 8, 2012, at 8:00 AM ET
+</span>
+</p>
+</div>
 
 		<div id="mainMap" class="map" style="height:500px;margin-top:36px;">
 		<a href='#' class='share'></a>
@@ -174,7 +195,7 @@ var options = {
             <div class="clearing"></div>
 <div class="graphContainer">
 	<div id="graphTooltip">
-    <div id="tooltip">
+    <div id="tooltip" class="no-tooltip">
       <!-- <h2>Mobile Phone Penetration</h2> -->
         <!-- <p>Rolling over any country on the map will also reveal the number of mobile phone subscribers per 100 residents on the chart below.</p> -->
 		<p>Number of mobile phone subscribers per 100 residents</p>
@@ -191,11 +212,6 @@ var options = {
 <footer>
 <div class="sl-footer ht5-footer">
   <div class="sl-footer-tsgnav">
-    The Slate Group: 
-    <a target="_blank" href="http://www.washingtonpost.com/" class="sl-footer-tsgnav-link">The Washington Post</a><span class="sl-nav-pipe"> | </span>
-    <a target="_blank" href="http://www.theroot.com/" class="sl-footer-tsgnav-link">The Root</a><span class="sl-nav-pipe"> | </span> 
-    <a target="_blank" href="http://www.slatev.com/" class="sl-footer-tsgnav-link">Slate V</a><span class="sl-nav-pipe"> | </span>
-    <a target="_blank" href="http://www.foreignpolicy.com/" class="sl-footer-tsgnav-link">Foreign Policy</a>
   </div>
 	<div class="sl-footer-links-cntr">
 	
