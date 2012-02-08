@@ -75,7 +75,7 @@ var options = {
 				border: '1px solid #ccc',
 				padding: '2px',
 				'background-color': 'rgba(40,40,40,.90)',
-				color:'#fff'
+				color:'#ffffff'
 				}).appendTo("#graphTooltip").fadeIn(200);
 			}
 		
@@ -95,7 +95,7 @@ var options = {
 			                    var x = item.datapoint[0].toFixed(0),
 			                        y = item.datapoint[1].toFixed(2);
 		
-			                    plot.toolTips("<h2>"+countryNames[x][1]+" <span style='float:right;'>"+y+"</span></h2><p>mobile phone subscriptions per 100 residents.</p>");
+			                    plot.toolTips("<h2 class='graphTooltip'>"+countryNames[x][1]+" <span style='float:right;'>"+y+"</span></h2><p class='graphTooltip'>mobile phone subscriptions per 100 residents.</p>");
 			                }
 			            }
 			    });
@@ -105,6 +105,7 @@ var options = {
 			
 			//main function to build the wax map and add interactivity to the flot graph
 			newWaxMapGraph('http://a.tiles.mapbox.com/v3/newamerica.mobile_v_fixed.jsonp','mainMap',0, 0, 2, 5, plot,mobileArray, countryNames);
+			//Show the title when you mouse out of the graph
 			$('#container1').mouseleave(function() {
 					$("#tooltip").remove();
 					$("#graphTooltip").append("<div id='tooltip'><p>Number of mobile phone subscribers per 100 residents</p></div>");

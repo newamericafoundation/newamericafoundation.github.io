@@ -70,3 +70,7 @@
 
 #tooltip p {
 }
+
+#tooltip .graphTooltip{
+	color:#fff;
+}
