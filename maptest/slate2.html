@@ -79,12 +79,12 @@ var options = {
 				}).appendTo("#graphTooltip").fadeIn(200);
 			}
 		
-			var e = $('#container1');
+			var e = $('#mainFlotGraph');
 			//main graphing function
 			var plot = $.plot(e, [mobileArray], options);
 			var previousPoint = null;
 			//hover stuff for the graph
-			    $('#container1').bind("plothover", function (event, pos, item) {
+			    $('#mainFlotGraph').bind("plothover", function (event, pos, item) {
 			        $("#x").text(pos.x.toFixed(2));
 			        $("#y").text(pos.y.toFixed(2));
 			            if (item) {
@@ -106,7 +106,7 @@ var options = {
 			//main function to build the wax map and add interactivity to the flot graph
 			newWaxMapGraph('http://a.tiles.mapbox.com/v3/newamerica.mobile_v_fixed.jsonp','mainMap',0, 0, 2, 5, plot,mobileArray, countryNames);
 			//Show the title when you mouse out of the graph
-			$('#container1').mouseleave(function() {
+			$('#mainFlotGraph').mouseleave(function() {
 					$("#tooltip").remove();
 					$("#graphTooltip").append("<div id='tooltip' class='no-tooltip'><p>Number of mobile phone subscribers per 100 residents</p></div>");
 			});
@@ -202,7 +202,7 @@ Posted Thursday, Feb. 8, 2012, at 8:00 AM ET
         <!-- <p>Rolling over any country on the map will also reveal the number of mobile phone subscribers per 100 residents on the chart below.</p> -->
 		<p>Number of mobile phone subscribers per 100 residents</p>
     </div></div>
-<div id="container1"></div>
+<div id="mainFlotGraph"></div>
 </div>
         </div>
                
