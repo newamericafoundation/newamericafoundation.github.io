@@ -74,7 +74,8 @@ var options = {
 				display: 'none',
 				border: '1px solid #ccc',
 				padding: '2px',
-				'background-color': 'rgba(40,40,40,.90)'
+				'background-color': 'rgba(40,40,40,.90)',
+				color:'#fff'
 				}).appendTo("#graphTooltip").fadeIn(200);
 			}
 		
@@ -104,6 +105,10 @@ var options = {
 			
 			//main function to build the wax map and add interactivity to the flot graph
 			newWaxMapGraph('http://a.tiles.mapbox.com/v3/newamerica.mobile_v_fixed.jsonp','mainMap',0, 0, 2, 5, plot,mobileArray, countryNames);
+			$('#container1').mouseleave(function() {
+					$("#tooltip").remove();
+					$("#graphTooltip").append("<div id='tooltip'><p>Number of mobile phone subscribers per 100 residents</p></div>");
+			)};
 	}); // end ready
 </script>
 
