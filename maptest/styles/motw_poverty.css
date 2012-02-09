@@ -1,6 +1,13 @@
 @charset "UTF-8";
 /* CSS Document */
 
+.wax-legends {
+	width: 300px;
+	left: 15px;
+	right: 0;
+	overflow: hidden;
+}
+
 .mainToolTip h2 {
 	font-size: 1.15em;
 }
