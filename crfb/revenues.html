@@ -27,7 +27,15 @@ $(document).ready(function() {
       },
       tooltip: {
          formatter: function() {
-            return '<b>'+ this.point.name +'</b>: '+ '$' + this.y + ' billion';
+			console.log(this);
+		    var s = '<b>'+ this.point.name +'</b>: '+ '$' + this.y + ' billion';
+			$('#graphCaption').empty();
+			$('#graphCaption').append('<p>'+gdpPercent[this.point.name]+'</p>');
+//            $.each(this.points, function(i, point) {
+//                s += '<br/>'+ point.name +': '+point.y +'%';
+//            });
+            return s;
+//            return '<b>'+ this.point.name +'</b>: '+ '$' + this.y + ' billion';
          }
       },
       plotOptions: {
@@ -37,7 +45,7 @@ $(document).ready(function() {
             dataLabels: {
                enabled: true,
                formatter: function() {
-                  return '<b>'+ this.point.name +'</b>: ' + gdpPercent[this.point.name];
+                  return '<b>'+ this.point.name +'</b>';
                }
             }
          }
@@ -56,7 +64,10 @@ $(document).ready(function() {
 });
 </script>
 </head>
-<body>
-<div id="container" style="width: 800px; height: 410px; margin: 0 auto"></div>
+<body class="revenue">
+<div style="width:800px;">
+<div id="container" style="width: 600px; height: 250px; margin: 0 auto"></div>
+<div id="graphCaption" style="width: 180px; margin: 0 auto"><p>Over the past 20 years, Congress has changed how interest rates for federal student loans are calculated a number of times. This year, the temporary rate cut enacted in 2007 is set to expire. In 2011-12, students who qualified for Subsidized Stafford loans will be charged 3.4 percent interest, while students who took out Unsubsidized Stafford loans (the largest federal student loan category) will be charged a fixed rate 6.8 percent. Starting in the 2012-13 school year, the rate on both Subsidized and Unsubsidized Stafford loans will be fixed at 6.8 percent. Roll over the points in the graph above for more information on the history of these changes.</p></div>
+</div>
 </body>
 </html>

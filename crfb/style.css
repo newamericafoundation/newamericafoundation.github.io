@@ -3,6 +3,14 @@ body {
 	padding: 0;	
 }
 
+body.revenue #container {
+	float:left;	
+}
+
+body.revenue #graphCaption {
+	float:right;	
+}
+
 #graphCaption {
 	font-family: Helvetica,Arial,"Nimbus Sans L",sans-serif;
 	font-size:11px;
