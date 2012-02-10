@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Debt-Deficit</title>
+<title>OECD</title>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/highcharts.js"></script>
 <script>
@@ -13,33 +13,13 @@ $(document).ready(function() {
       chart: {
          renderTo: 'container',
          defaultSeriesType: 'column',
-         margin: [ 50, 50, 100, 80]
       },
       title: {
-         text: 'World\'s largest cities per 2008'
+         text: 'OECD'
       },
       xAxis: {
          categories: [
-            'Tokyo', 
-            'Jakarta', 
-            'New York', 
-            'Seoul', 
-            'Manila',
-            'Mumbai',
-            'Sao Paulo',
-            'Mexico City',
-            'Dehli',
-            'Osaka',
-            'Cairo',
-            'Kolkata',
-            'Los Angeles',
-            'Shanghai',
-            'Moscow',
-            'Beijing',
-            'Buenos Aires',
-            'Guangzhou',
-            'Shenzhen',
-            'Istanbul'
+            'Australia','Austria','Belgium','Canada','Czech Republic','Denmark','Estonia','Finland','France','Germany','Greece','Hungary','Iceland','Ireland','Israel','Italy','Japan','Korea','Luxembourg','Netherlands','New Zealand','Norway','Poland','Portugal','Slovak Republic','Slovenia','Spain','Sweden','Switzerland','United Kingdom','United States'
          ],
          labels: {
             rotation: -45,
@@ -50,9 +30,8 @@ $(document).ready(function() {
          }
       },
       yAxis: {
-         min: 0,
          title: {
-            text: 'Population (millions)'
+            text: 'Percent of GDP'
          }
       },
       legend: {
@@ -61,29 +40,13 @@ $(document).ready(function() {
       tooltip: {
          formatter: function() {
             return '<b>'+ this.x +'</b><br/>'+
-                'Population in 2008: '+ Highcharts.numberFormat(this.y, 1) +
-                ' millions';
+                Highcharts.numberFormat(this.y, 1) +
+                '%';
          }
       },
            series: [{
          name: 'Population',
-         data: [34.4, 21.8, 20.1, 20, 19.6, 19.5, 19.1, 18.4, 18, 
-            17.3, 16.8, 15, 14.7, 14.5, 13.3, 12.8, 12.4, 11.8, 
-            11.7, 11.2],
-         dataLabels: {
-            enabled: true,
-            rotation: -90,
-            color: '#FFFFFF',
-            align: 'right',
-            x: -3,
-            y: 10,
-            formatter: function() {
-               return this.y;
-            },
-            style: {
-               font: 'normal 13px Verdana, sans-serif'
-            }
-         }         
+         data: [3.263843057,3.351407848,3.547463906,5.015535528,3.745026494,3.66852844,-0.079143598,2.012774844,5.676298619,1.214087611,9.026108744,-3.969438849,5.41807355,10.32698268,4.002124719,3.553319663,8.926048196,-0.785985662,1.168413071,4.202110664,7.956977256,-12.47742938,5.422716818,5.904217046,5.904126834,5.261111107,6.168898998,-0.091727753,-0.780555918,9.393040014,9.958682539],
       }]
    });
    
