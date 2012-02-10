@@ -28,7 +28,7 @@ $(document).ready(function() {
       tooltip: {
          formatter: function() {
 			console.log(this);
-		    var s = '<b>'+ this.point.name +'</b>: '+ '$' + this.y + ' billion';
+		    var s = '<b>'+ this.point.name +'</b>: '+ '$' + Highcharts.numberFormat(this.y, 0, ',') + ' billion';
 			$('#graphCaption').empty();
 			$('#graphCaption').append('<p>'+gdpPercent[this.point.name]+'</p>');
 //            $.each(this.points, function(i, point) {
