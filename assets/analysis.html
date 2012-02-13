@@ -12,19 +12,27 @@
     <![endif]-->
 
     <!-- Le styles -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <link rel="stylesheet/less" href="lib/bootstrap.less" media="all" />
-	<script src="js/bootstrap-twipsy.js"></script>
-	<script src="js/bootstrap-popover.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script src="js/less-1.1.5.min.js"></script>
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-      }
-    </style>
+	<script src="js/jquery/jquery.tablesorter.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/bootstrap-alert.js"></script>
+	<script src="js/bootstrap-button.js"></script>
+	<script src="js/bootstrap-carousel.js"></script>
+	<script src="js/bootstrap-collapse.js"></script>
+	<script src="js/bootstrap-dropdown.js"></script>
+	<script src="js/bootstrap-modal.js"></script>
+	<script src="js/bootstrap-popover.js"></script>
+	<script src="js/bootstrap-scrollspy.js"></script>
+	<script src="js/bootstrap-tab.js"></script>
+	<script src="js/bootstrap-tooltip.js"></script>
+	<script src="js/bootstrap-transition.js"></script>
+	<script src="js/bootstrap-typehead.js"></script>
 	<script>
 	 $(function() {
-		$('#popup').popover();
+		$('#popup').popover({
+			content:'What analysis tools do we show here?',title:'Tools',placement:'top'});
 	  });
 	</script>
 
@@ -37,8 +45,8 @@
 
   <body>
 
-    <div class="topbar">
-      <div class="fill">
+    <div class="navbar">
+      <div class="navbar-inner">
         <div class="container">
           <a class="brand" href="index.html">GSSP</a>
           <ul class="nav">
@@ -57,23 +65,23 @@
         <div class="hero-unit">
           <h1>The Analysis Page!</h1>
           <p>We will showcase our papers, briefs, and data analysis tools on this page.</p>
-          <p><a class="btn primary large">Learn more &raquo;</a></p>
+          <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
         </div>
         <!-- Example row of columns -->
         <div class="row">
-          <div class="span6">
+          <div class="span4">
             <h2>Paper 1</h2>
 			      <img class="pull-right" src="http://placehold.it/90x90" alt="">
             <p>This is a summary of this awesome paper that we wrote.</p>
             <p><a class="btn" href="#">View details &raquo;</a></p>
           </div>
-          <div class="span5">
+          <div class="span4">
             <h2>Paper 2</h2>
 			<img class="pull-right" src="http://placehold.it/90x90" alt="">
              <p>This is a summary of this awesome paper that we wrote.</p>
             <p><a class="btn" href="#">View details &raquo;</a></p>
          </div>
-          <div class="span5">
+          <div class="span4">
             <h2>Paper 3</h2>
 			<img class="pull-right" src="http://placehold.it/90x90" alt="">
              <p>This is a summary of this awesome paper that we wrote.</p>
@@ -84,7 +92,7 @@
         <!-- Example row of columns -->
         <div class="row">
 			<div class="hero-unit">
-				<a id="popup" href="#" class="btn info" rel="popover" data-placement="above" data-content="What analysis tools do we show here?" data-original-title="Tools"><h2>Analysis Tools</h2></a>			
+				<a id="popup" href="#" class="btn btn-info" rel="popover"><h2>Analysis Tools</h2></a>			
 			</div>
           
         </div>

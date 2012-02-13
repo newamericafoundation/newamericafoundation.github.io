@@ -12,23 +12,29 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link rel="stylesheet/less" href="lib/bootstrap.less" media="all" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script src="js/bootstrap-twipsy.js"></script>
-	<script src="js/bootstrap-popover.js"></script>
+    <link rel="stylesheet/less" href="lib/bootstrap.less" media="all" />
 	<script src="js/less-1.1.5.min.js"></script>
 	<script src="js/jquery/jquery.tablesorter.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/bootstrap-alert.js"></script>
+	<script src="js/bootstrap-button.js"></script>
+	<script src="js/bootstrap-carousel.js"></script>
+	<script src="js/bootstrap-collapse.js"></script>
+	<script src="js/bootstrap-dropdown.js"></script>
+	<script src="js/bootstrap-modal.js"></script>
+	<script src="js/bootstrap-popover.js"></script>
+	<script src="js/bootstrap-scrollspy.js"></script>
+	<script src="js/bootstrap-tab.js"></script>
+	<script src="js/bootstrap-tooltip.js"></script>
+	<script src="js/bootstrap-transition.js"></script>
+	<script src="js/bootstrap-typehead.js"></script>
 	<script >
 	  $(function() {
 	    $("table#programTable").tablesorter({ sortList: [[1,0]] });
 		$('#popup').popover();
 	  });
 	</script>
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-      }
-    </style>
 
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -39,8 +45,8 @@
 
   <body>
 
-    <div class="topbar">
-      <div class="fill">
+    <div class="navbar">
+      <div class="navbar-inner">
         <div class="container">
           	<a class="brand" href="index.html">GSSP</a>
 	          <ul class="nav">
@@ -64,11 +70,11 @@
         </div>
         <!-- Example row of columns -->
         <div class="row">
-			<div class="span16">
+			<div class="span12">
 				<h2>List of Programs</h2>
 			</div>
-			<div class="span16">
-				<table id="programTable" class="zebra-striped condensed">
+			<div class="span12">
+				<table id="programTable" class="table table-striped table-condensed">
 					<thead>
 						<tr>
 							<th>Program Name</th>

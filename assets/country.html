@@ -12,31 +12,34 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link rel="stylesheet/less" href="lib/bootstrap.less" media="all" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link rel="stylesheet/less" href="lib/bootstrap.less" media="all" />
 	<script src="js/less-1.1.5.min.js"></script>
-	<script src="js/bootstrap-twipsy.js"></script>
-	<script src="js/bootstrap-popover.js"></script>
 	<script src="js/jquery/jquery.tablesorter.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/bootstrap-alert.js"></script>
+	<script src="js/bootstrap-button.js"></script>
+	<script src="js/bootstrap-carousel.js"></script>
+	<script src="js/bootstrap-collapse.js"></script>
+	<script src="js/bootstrap-dropdown.js"></script>
+	<script src="js/bootstrap-modal.js"></script>
+	<script src="js/bootstrap-popover.js"></script>
+	<script src="js/bootstrap-scrollspy.js"></script>
+	<script src="js/bootstrap-tab.js"></script>
+	<script src="js/bootstrap-tooltip.js"></script>
+	<script src="js/bootstrap-transition.js"></script>
+	<script src="js/bootstrap-typehead.js"></script>
 	<script >
 	  $(function() {
 	    $("table#programTable").tablesorter({ sortList: [[1,0]] });
-		$('#popup').popover();
-		$('#popup1').popover();
+		$('#popup').popover({content:"can we do some ranking here? would be good to compare to other countries.",title:"Ideas"});
+		$('#popup1').popover({placement:"top",content:"this will be a map",title:"Map"});
 	  });
 	</script>
 	<script type="text/javascript" src="js/jquery.flot.js"></script>
 	
 	<!-- 1a) Optional: add a theme file -->
 	
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-      }
-	.fill{
-		background:#eee;
-	}
-    </style>
 	<!-- 2. Add the JavaScript to initialize the chart on document ready -->
 	<script type="text/javascript">
 	var options = {
@@ -98,8 +101,8 @@
 
   <body>
 
-    <div class="topbar">
-      <div class="fill">
+    <div class="navbar">
+      <div class="navbar-inner">
         <div class="container">
           	<a class="brand" href="index.html">GSSP</a>
 	          <ul class="nav">
@@ -118,19 +121,19 @@
         <!-- Main hero unit for a primary marketing message or call to action -->
         <div class="hero-unit">
           <h1>A country page</h1>
-<a id="popup1" href="#" class="pull-right" rel="popover" data-placement="above" data-content="this will be a map" data-original-title="Map"><img class="pull-right" src="http://placehold.it/400x200" alt=""></a>
+<a id="popup1" href="#" class="pull-right" rel="popover"><img class="pull-right" src="http://placehold.it/400x200" alt=""></a>
 
 	          <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
         </div>
         <!-- Example row of columns -->
         <div class="row">
-			<div class="span16">
+			<div class="span12">
 				<h2>Country Data</h2>
 				
 			</div>
 		</div>
-		<div class="span10">
-			<table id="programTable" class="zebra-striped condensed">
+		<div class="span8">
+			<table id="programTable" class="table table-striped table-condensed">
 				<thead>
 					<tr>
 						<th>Program Name</th>
@@ -158,57 +161,57 @@
 			</table>
 		</div>
 		 <div class="row">
-			<a id="popup" href="#" class="btn primary" rel="popover" data-content="can we do some ranking here? would be good to compare to other countries." data-original-title="Ideas">some ideas</a>
-			<div class="span6">
+			<a id="popup" href="#" class="btn btn-primary" rel="popover">some ideas</a>
+			<div class="span4">
 				<h4>Number of Households</h4>
 				<span>1,000,000</span>
 			</div>
-			<div class="span10">
+			<div class="span8">
 				<div id="container0" class="graph" style="width:500px; height: 100px; margin: 0 auto;"></div>
 			</div>
 		</div>
-		<div class="row fill">
-			<div class="span6">
+		<div class="row">
+			<div class="span4">
 				<h4>Number of Households</h4>
 				<span>1,000,000</span>
 			</div>
-			<div class="span10">
+			<div class="span8">
 				<div id="container1" class="graph" style="width: 500px; height: 100px; margin: 0 auto"></div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="span6">
+			<div class="span4">
 				<h4>Number of Households</h4>
 				<span>1,000,000</span>
 			</div>
-			<div class="span10">
+			<div class="span8">
 				<div id="container2" class="graph" style="width:500px; height: 100px; margin: 0 auto;"></div>
 			</div>
 		</div>
-		<div class="row fill">
-			<div class="span6">
+		<div class="row">
+			<div class="span4">
 				<h4>Number of Households</h4>
 				<span>1,000,000</span>
 			</div>
-			<div class="span10">
+			<div class="span8">
 				<div id="container3" class="graph" style="width:500px; height: 100px; margin: 0 auto;"></div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="span6">
+			<div class="span4">
 				<h4>Number of Households</h4>
 				<span>1,000,000</span>
 			</div>
-			<div class="span10">
+			<div class="span8">
 				<div id="container4" class="graph" style="width:500px; height: 100px; margin: 0 auto;"></div>
 			</div>
 		</div>
-		<div class="row fill">
-			<div class="span6">
+		<div class="row">
+			<div class="span4">
 				<h4>Number of Households</h4>
 				<span>1,000,000</span>
 			</div>
-			<div class="span10">
+			<div class="span8">
 				<div id="container5" class="graph" style="width:500px; height: 100px; margin: 0 auto;"></div>
 			</div>
 		</div>
