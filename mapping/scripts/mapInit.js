@@ -9,7 +9,6 @@ startLng = longtitude of the starting cetner point for the map
 minZoom = minimum zoom level for the map
 maxZoom = maximum zoom level for the map
 
-Last Updated 01/19/12 by Andy Hull
 */
 
 function newWaxMap(url, mapContainer, startLat, startLng, minZoom, maxZoom){
