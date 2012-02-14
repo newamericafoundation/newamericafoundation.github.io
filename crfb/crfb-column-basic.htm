@@ -29,20 +29,20 @@
 						defaultSeriesType: 'column'
 					},
 					title: {
-						text: 'CRFB Sample Chart',
+						text: 'Annual Deficits',
 						x: -20 //center
 					},
 					subtitle: {
-						text: 'GOP Candidates\' Budget Implications',
+						text: 'Intermediate-Cost Estimates',
 						x: -20
 					},
 					xAxis: {
-						categories: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021']
+						categories: ['2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021']
 					},
 					yAxis: {
 						min: 0,
 						title: {
-							text: 'Percentage of GDFP'
+							text: 'Percentage of GDP'
 						}
 					},
 					legend: {
@@ -65,27 +65,24 @@
 						column: {
 							pointPadding: 0.2,
 							borderWidth: 0,
-							pointWidth: 5,
+							pointWidth: 10,
 						}
 					},
 					series: [{
-						name: 'CRFB',
-						data: [8.6, 6.5, 5.2, 3.9, 3.6, 4.0, 3.8, 3.8, 4.1, 4.4, 4.5]
-					}, {
-						name: 'Obama',
-						data: [0,0, 5.1, 2.9, 2.4, 2.7, 2.4, 2.4, 2.7, 2.9, 2.9]
-					}, {
-						name: 'Paul',
-						data: [0,0, 4.5, 3.2, 2.5, 2.7, 2.6, 2.6, 2.7, 2.7, 2.7]
+						name: 'CRFB Realistic',
+						data: [5.6, 4.5, 4.1, 4.2, 3.9, 3.9, 4.3, 4.5, 4.7]
 					}, {
 						name: 'Romney',
-						data: [0,0, 4.8, 3.6, 3.4, 3.9, 3.8, 3.7, 4.1, 4.3, 4.6]
+						data: [5.2, 4.2, 3.9, 4.2, 3.9, 3.8, 4.2, 4.5, 4.7]
 					}, {
 						name: 'Gingrich',
-						data: [0,0, 7.0, 6.4, 7.0, 7.7, 8.0, 8.3, 8.8, 9.2, 9.6]
+						data: [7.8, 7.4, 8.1, 8.4, 8.2, 8.6, 9.3, 9.8, 10.2]
+					}, {
+						name: 'Paul',
+						data: [4.7, 3.6, 2.7, 2.6, 2.2, 2.2, 2.4, 2.4, 2.4]
 					}, {
 						name: 'Santorum',
-						data: [0,0, 8.3, 7.9, 7.4, 7.9, 8.1, 8.3, 8.7, 9.0, 9.4]
+						data: [9.0, 8.8, 8.2, 8.1, 7.8, 7.9, 8.5, 8.9, 9.1]
 					}]
 				});
 				
