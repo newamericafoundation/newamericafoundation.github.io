@@ -1,6 +1,24 @@
 @charset "UTF-8";
 /* CSS Document */
 
+.section-header {
+	width: 100%;
+	height:auto;
+	clear:both;
+	margin: 0 0 50px 0;
+}
+
+h2.section-title {
+	float:left;	
+}
+
 .staple {
-	
+	float: right;
+	width: 33%;
+	height: 40px;
+	border: 1px #000 solid;
+}
+
+.span16 p {
+	clear:both;	
 }
