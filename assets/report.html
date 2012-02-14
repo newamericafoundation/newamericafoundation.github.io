@@ -79,20 +79,66 @@
 					   renderTo: 'graph',
 					   plotBackgroundColor: null,
 					   plotBorderWidth: null,
-					   plotShadow: false
+					   marginLeft: 100
+					},
+					title: {
+					   text: null
+					},
+					credits: {
+						enabled: false	
+					},
+					exporting: {
+						enabled: false	
+					},
+					legend: {
+						enabled: false	
+					},
+					yAxis: {
+						labels: {
+						},
+						title: {
+							text: null
+						},
+						max:220
+					},
+					xAxis: {
+						labels: {
+							enabled: false	
+						},
+						endOnTick: true,
+						startOnTick: true
 					},
 					plotOptions: {
 					   pie: {
 						  cursor: 'pointer',
-					   }
+						  dataLabels: {
+							enabled: false,  
+						  }
+					   },
 					},
-					 series: [{
+					tooltip: {
+					   formatter: function() {
+						  return '<b>'+ this.point.name +'</b>: '+ this.point.y;
+					   }
+					},					 
+					series: [{
 					   type: 'pie',
+					   borderColor: '#000000',
+					   center: [-60, 20],
+					   size: 50,
 					   data: [
 						  ['Other',       394.595],
 						  ['Retirement',  146.8],
 					 ]
-					}]
+					},{
+					   type: 'column',
+					   name: 'Tax spending',
+					   data: [146.8]
+					}, {
+					   type: 'column',
+					   name: 'Direct spending',
+					   data: [100]
+					},]
 				 });
 			  });
 			</script>
