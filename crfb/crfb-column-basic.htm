@@ -33,7 +33,7 @@
 						text: 'Annual Deficits',
 					},
 					subtitle: {
-						text: 'Intermediate-Cost Estimates (Percentage of GDP)',
+						text: 'Intermediate-Debt Estimates (Percentage of GDP)',
 					},
 					xAxis: {
 						categories: ['2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021']
@@ -46,7 +46,7 @@
 						},
 						labels: {
 						  formatter: function() {
-							return this.value +' %';
+							return this.value +'%';
 						  }
 						}
 					},
@@ -77,7 +77,7 @@
 						}
 					},
 					series: [{
-						name: 'CRFB Realistic',
+						name: 'CRFB Realistic Baseline',
 						color: '#333333',
 //						type: 'line',
 //						dashStyle: 'shortdot',
@@ -87,15 +87,19 @@
 						data: [5.6, 4.5, 4.1, 4.2, 3.9, 3.9, 4.3, 4.5, 4.7]
 					}, {
 						name: 'Gingrich',
+						color: '#00AA68',
 						data: [7.8, 7.4, 8.1, 8.4, 8.2, 8.6, 9.3, 9.8, 10.2]
 					}, {
 						name: 'Paul',
+						color: '#0085CC',
 						data: [4.7, 3.6, 2.7, 2.6, 2.2, 2.2, 2.4, 2.4, 2.4]
 					}, {
 						name: 'Romney',
+						color: '#8448B0',
 						data: [5.2, 4.2, 3.9, 4.2, 3.9, 3.8, 4.2, 4.5, 4.7]
 					}, {
 						name: 'Santorum',
+						color: '#EB8104',
 						data: [9.0, 8.8, 8.2, 8.1, 7.8, 7.9, 8.5, 8.9, 9.1]
 					}]
 				});

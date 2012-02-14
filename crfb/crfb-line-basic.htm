@@ -30,10 +30,10 @@
 						marginBottom: 35
 					},
 					title: {
-						text: 'Debt by Candidate under Intermediate Assumptions',
+						text: 'Debt by Candidate',
 					},
 					subtitle: {
-						text: '(Percentage of GDP)',
+						text: 'Intermediate-Debt Estimates (Percentage of GDP)',
 					},
 					xAxis: {
 						categories: ['2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021']
@@ -44,7 +44,7 @@
 						},
 						labels: {
 						  formatter: function() {
-							return this.value +' %';
+							return this.value +'%';
 						  }
 						},
 						plotLines: [{
@@ -74,8 +74,13 @@
 					  text: 'Committee for a Responsible Federal Budget',
 					  href: 'http://crfb.org'
 					},
+					plotOptions: {
+						line: {
+							shadow: false
+						}
+					},
 					series: [{
-						name: 'CRFB Realistic',
+						name: 'CRFB Realistic Baseline',
 						color: '#333333',
 						dashStyle: 'shortdot',
 						lineWidth: 4,
@@ -85,15 +90,19 @@
 						  }
 					}, {
 						name: 'Gingrich',
+						color: '#00AA68',
 						data: [73, 79.3, 84.3, 88.0, 91.8, 95.9, 100.5, 105.7, 111.3, 117]
 					}, {
 						name: 'Paul',
+						color: '#0085CC',
 						data: [73, 76.2, 77.4, 76.2, 74.9, 73.8, 73.0, 72.6, 72.2, 72]
 					}, {
 						name: 'Romney',
+						color: '#8448B0',
 						data: [73, 77.5, 79.9, 80.1, 80.3, 80.5, 81.2, 82.4, 83.7, 85]
 					}, {
 						name: 'Santorum',
+						color: '#EB8104',
 						data: [73, 80.5, 86.7, 90.4, 93.8, 97.4, 101.2, 105.7, 110.3, 115]
 					}]
 				});
