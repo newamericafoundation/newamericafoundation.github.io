@@ -31,6 +31,8 @@
 	<script src="js/bootstrap-tooltip.js"></script>
 	<script src="js/bootstrap-transition.js"></script>
 	<script src="js/bootstrap-typehead.js"></script>
+	<script src="js/highcharts/highcharts.js"></script>
+    <script src="js/highcharts/modules/exporting.js"></script>
 	<script >
 	  $(function() {
 	    $("table#programTable").tablesorter({ sortList: [[1,0]] });
@@ -68,7 +70,34 @@
         <div class="span16">
           <div class="section-header">
             <h2 class="section-title">Savings and Retirement</h2>
-            <div class="staple"></div>
+            <div class="staple">
+            <script>
+			var chart;
+			  $(document).ready(function() {
+				 chart = new Highcharts.Chart({
+					chart: {
+					   renderTo: 'graph',
+					   plotBackgroundColor: null,
+					   plotBorderWidth: null,
+					   plotShadow: false
+					},
+					plotOptions: {
+					   pie: {
+						  cursor: 'pointer',
+					   }
+					},
+					 series: [{
+					   type: 'pie',
+					   data: [
+						  ['Other',       394.595],
+						  ['Retirement',  146.8],
+					 ]
+					}]
+				 });
+			  });
+			</script>
+            <div id="graph"></div>
+            </div>
           </div>
           <p>Savings allow families to be more resilient in the event of a financial emergency and better able to make longer-term investments that improve their economic security over time. 43% of households, however, lack the savings to live for 3 months at the federal poverty line.</p>
         </div>
