@@ -169,6 +169,7 @@
 	
 	$(document).ready(function() {
 		//Main fake data object. Use this to build the individual graphs
+		var dataLabels = [0,'Argentina'],[1,'Bangladesh'],[2,'Bolivia'],[3,'Botswana'],[4,'Brazil'],[5,'Brunei'],[6,'Burkina Faso'],[7,'Cambodia'],[8,'Chile'],[9,'China'],[10,'Colombia'],[11,'Costa Rica'],[12,'Dominican Republic'],[13,'Ecuador'],[14,'Egypt'],[15,'El Salvador'],[16,'Ethiopia'],[17,'Ghana'],[18,'Guatemala'],[19,'Honduras'],[20,'India'],[21,'Indonesia'],[22,'Jamaica'],[23,'Kenya'],[24,'Lesotho'],[25,'Liberia'],[26,'Malawi'],[27,'Maldives'],[28,'Mali'],[29,'Maurituis'],[30,'Mexico'],[31,'Mongolia'],[32,'Mozambique'],[33,'Namibia'],[34,'Nepal'],[35,'Nicaragua'],[36,'Pakistan'],[37,'Panama'],[38,'Paraguay'],[39,'Peru'],[40,'Phillipines'],[41,'Rwanda'],[42,'Sierra Leone'],[43,'South Africa'],[44,'Swaziland'],[45,'Tanzania'],[46,'Thailand'],[47,'Trinidad and Tobago'],[48,'Uganda'],[49,'Urugauy'],[50,'Zambia']
 		var data = {
 			//corruption
 			0:[[0,105],[1,134],[2,110],[3,33],[4,69],[5,38],[6,98],[7,154],[8,21],[9,78],[10,78],[11,41],[12,101],[13,127],[14,98],[15,73],[16,116],[17,62],[18,91],[19,134],[20,87],[21,110],[22,87],[23,154],[24,78],[25,87],[26,85],[27,143],[28,116],[29,39],[30,98],[31,116],[32,116],[33,56],[34,146],[35,127],[36,143],[37,73],[38,146],[39,78],[40,134],[41,66],[42,134],[43,54],[44,91],[45,116],[46,78],[47,73],[48,127],[49,24],[50,101]],
@@ -228,7 +229,7 @@
 			                    var x = item.datapoint[0].toFixed(0),
 			                        y = item.datapoint[1].toFixed(2);
 
-			                    showTooltip(item.pageX, item.pageY,"ID " + x + " Value: " + y);
+			                    showTooltip(item.pageX, item.pageY, dataLabels[x] + " Value: " + y);
 			                }
 			            }
 			    });
