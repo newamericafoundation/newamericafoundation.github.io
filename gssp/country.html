@@ -203,7 +203,7 @@
 //POS per thousand sq km
 12:[[0,0],[1,0],[2,0],[3,6.433399],[4,375.5638],[5,0],[6,0],[7,18.72309],[8,83.56036],[9,0],[10,124.7174],[11,1105.719],[12,0],[13,0],[14,0],[15,1032.674],[16,0],[17,0],[18,302.0935],[19,0],[20,175.5465],[21,107.9075],[22,1231.948],[23,0],[24,0],[25,0.3218439],[26,3.613945],[27,0],[28,0],[29,3667.488],[30,229.8372],[31,2.396425],[32,5.936061],[33,5.429436],[34,0],[35,0],[36,66.15945],[37,0],[38,0],[39,8.421875],[40,0],[41,3.810296],[42,0.6702039],[43,24728.07],[44,33.02325],[45,4.283134],[46,0],[47,0],[48,3.708777],[49,39.99543],[50,1.195873]]
 		}
-		for(i=0;i<10;i++){
+		for(i=0;i<13;i++){
 			var e = $('#container'+i+'.graph');
 			var plot = $.plot(e, [ data[i] ], options);
 			//highlight botswana, here the index is 3 so change this in production
@@ -387,14 +387,14 @@
 								<div class="span6">
 									<div id="container5" class="graph" style="width:500px; height:100px; margin: 0 auto;"></div>
 								</div>
-								<div class="span6">
+								<div class="span12">
 									<h4>Financial Literacy</h4>
 									<span><h2>No Data</h2></span>
 								</div>
-								<div class="span6">
-									<div>&nbsp;</div>
-									<!-- <div id="container2" class="graph" style="width:500px; height:100px; margin: 0 auto;"></div> -->
-								</div>
+								<!-- <div class="span6">
+																	<div>&nbsp;</div>
+																	<!-- <div id="container2" class="graph" style="width:500px; height:100px; margin: 0 auto;"></div> -->
+																</div> -->
 								<div class="span6">
 									<h4>Commercial Banks per (100,000 adults)</h4>
 									<span><h2>8.00</h2></span>
@@ -448,9 +448,9 @@
 									<h4>Agent Density (per 100,000 adults)</h4>
 									<span><h2>No Data</h2></span>
 								</div>
-								<div class="span6">
-									<!-- <div id="container0" class="graph" style="width:500px; height: 100px; margin: 0 auto;"></div> -->
-								</div>
+								<!-- <div class="span6">
+																	<!-- <div id="container0" class="graph" style="width:500px; height: 100px; margin: 0 auto;"></div> -->
+																</div> -->
 								<div class="span6">
 									<h4>Mobile Penetration</h4>
 									<span><h2>82%</h2></span>
