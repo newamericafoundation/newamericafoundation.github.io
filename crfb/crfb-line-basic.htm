@@ -27,23 +27,25 @@
 					chart: {
 						renderTo: 'container',
 						defaultSeriesType: 'line',
-						marginRight: 130,
-						marginBottom: 25
+						marginBottom: 35
 					},
 					title: {
 						text: 'Debt by Candidate under Intermediate Assumptions',
-						x: -20 //center
 					},
 					subtitle: {
 						text: '(Percentage of GDP)',
-						x: -20
 					},
 					xAxis: {
 						categories: ['2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021']
 					},
 					yAxis: {
 						title: {
-							text: 'Percentage of GDP'
+							text: null
+						},
+						labels: {
+						  formatter: function() {
+							return this.value +' %';
+						  }
 						},
 						plotLines: [{
 							value: 0,
@@ -59,24 +61,36 @@
 					},
 					legend: {
 						layout: 'vertical',
-						align: 'right',
 						verticalAlign: 'top',
-						x: -10,
-						y: 100,
-						borderWidth: 0
+						backgroundColor: '#FFFFFF',
+						align: 'left',
+						verticalAlign: 'top',
+						x: 65,
+						y: 50,
+						floating: true,
+						shadow: true
+					},
+					credits: {
+					  text: 'Committee for a Responsible Federal Budget',
+					  href: 'http://crfb.org'
 					},
 					series: [{
 						name: 'CRFB Realistic',
-						data: [73, 77.06, 79.18, 79.21, 79.40, 79.74, 80.39, 81.54, 82.87, 84]
-					}, {
-						name: 'Romney',
-						data: [73, 77.5, 79.9, 80.1, 80.3, 80.5, 81.2, 82.4, 83.7, 85]
+						color: '#333333',
+						dashStyle: 'shortdot',
+						data: [73, 77.06, 79.18, 79.21, 79.40, 79.74, 80.39, 81.54, 82.87, 84],
+						marker: {
+						  enabled: false
+						  }
 					}, {
 						name: 'Gingrich',
 						data: [73, 79.3, 84.3, 88.0, 91.8, 95.9, 100.5, 105.7, 111.3, 117]
 					}, {
 						name: 'Paul',
 						data: [73, 76.2, 77.4, 76.2, 74.9, 73.8, 73.0, 72.6, 72.2, 72]
+					}, {
+						name: 'Romney',
+						data: [73, 77.5, 79.9, 80.1, 80.3, 80.5, 81.2, 82.4, 83.7, 85]
 					}, {
 						name: 'Santorum',
 						data: [73, 80.5, 86.7, 90.4, 93.8, 97.4, 101.2, 105.7, 110.3, 115]
