@@ -1,5 +1,5 @@
-## mapGraphInit.js is a function to load a wax map with flot interaction.
-## mapInit.js is a function to load a wax map
+mapGraphInit.js is a function to load a wax map with flot interaction.  
+mapInit.js is a function to load a wax map
 
 This contains the basic functions for initializing a Wax map 
 and a flot graph that is tied to the map tooltips.
