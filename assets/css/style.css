@@ -17,6 +17,14 @@ h2.section-title {
 	width: 33%;
 	height: 80px;
 	border: 1px #000 solid;
+	position: relative;
+}
+
+.staple a.more-data {
+	position: absolute;
+	right: 8px;
+	top: 25px;	
+	z-index: 1000;
 }
 
 #graph {
