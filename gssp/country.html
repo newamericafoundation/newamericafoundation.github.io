@@ -26,7 +26,7 @@
 	    $("table#programTable").tablesorter({ sortList: [[1,0]] });
 		$('#popup1').popover();
 		$('#navbarExample').scrollspy()
-		$('#generalTab').tab()
+		$('#generalTab').tab('show')
 	  });
 	</script>
 	<script type="text/javascript" src="js/jquery.flot.js"></script>
@@ -341,13 +341,10 @@
 				</dl>
 			  </div>
 			  <div id="health" class="tab-pane">
-				<span>
-					<!-- <p>Delivery Methods</p> -->
 					<a href="datalist.html#cash" class="btn info small">Cash</a>
 					<p class="pull-right span6">Monthly cash benefits (P61) (US$ 8.3) and monthly food rations (equal to P172 = US$ 23,5) to all destitute residents, including those unable to support themselves because of old age, disability, or a chronic health condition; needy children younger than age 18 with a terminally ill parent; or orphans or abandoned children younger than age 18 not covered by the orphan care program.</p>
-				</span>
 			  </div>
-			<div class="tab-pane" id="gender">
+			<div id="gender" class="tab-pane">
 				<dl>
 					<dt># of people</dt>
 					<dd>100</dd>
