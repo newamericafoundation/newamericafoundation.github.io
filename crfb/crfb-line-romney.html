@@ -42,7 +42,7 @@
 						title: {
 							text: null
 						},
-						max: 130,
+						max: 100,
 						min: 60,
 						labels: {
 						  formatter: function() {
@@ -76,30 +76,32 @@
 					  text: 'Committee for a Responsible Federal Budget, U.S. Budget Watch',
 					  href: 'http://crfb.org'
 					},
-					plotOptions: {
-						line: {
-							shadow: false
-						}
-					},
+    plotOptions: {
+        series: {
+            marker: {
+                enabled: false
+            }
+        }
+    },
 					series: [{
 						name: 'CRFB Realistic Baseline',
 						color: '#666666',
 						dashStyle: 'shortdot',
 						lineWidth: 4,
 						data: [73, 77.1, 79.2, 79.2, 79.4, 79.7, 80.4, 81.5, 82.9, 84],
-						marker: {
-						  enabled: false
-						  }
 					}, {
 						name: 'Romney Intermediate-Debt Scenario',
-						color: '#00AA68',
+						color: '#8448B0',
+						lineWidth: 2,
 						data: [73, 77.5, 79.9, 80.1, 80.3, 80.5, 81.2, 82.4, 83.7, 85]
 					}, {
 						name: 'Romney High-Debt Scenario',
-						color: '#0085CC',
+						dashStyle: 'shortdash',
+						color: '#8448B0',
 						data: [73, 77.5, 80.0, 80.3, 80.6, 81.0, 81.7, 83.0, 84.4, 86]
 					}, {
 						name: 'Romney Low-Debt Scenario',
+						dashStyle: 'dot',
 						color: '#8448B0',
 						data: [73, 76.7, 77.9, 76.9, 75.9, 75.3, 75.0, 74.9, 74.7, 75]
 					}]
