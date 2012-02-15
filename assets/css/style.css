@@ -3,20 +3,21 @@
 
 .section-header {
 	width: 100%;
-	height:auto;
+	height:100px;
 	clear:both;
 	margin: 0 0 50px 0;
+	border-bottom: 1px #666 solid;
 }
 
 h2.section-title {
-	float:left;	
+	float:left;
+	width: 67%;	
 }
 
 .staple {
 	float: right;
 	width: 33%;
 	height: 80px;
-	border: 1px #000 solid;
 	position: relative;
 }
 
@@ -27,11 +28,14 @@ h2.section-title {
 	z-index: 1000;
 }
 
-#graph {
+#retirementGraph,
+#savingsGraph,
+#homeownershipGraph,
+#postEdGraph,
+#entrepreneurshipGraph {
 	width: auto;
 	height: 80px;	
 }
 
 .span16 p {
-	clear:both;	
 }
