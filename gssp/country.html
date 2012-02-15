@@ -288,7 +288,6 @@
 	          <ul class="nav">
 				<li><a href="analysis.html">Research</a></li>
 				<li class="active"><a href="data.html">Data</a></li>
-	            <!-- <li><a href="index.html">Home</a></li> -->
 	            <li><a href="about.html">About</a></li>
 	          </ul>
           </ul>
@@ -301,57 +300,92 @@
         <!-- Main hero unit for a primary marketing message or call to action -->
         <div class="hero-unit">
           <h1>Botswana</h1>
-<!-- <img style="height:200px;" class="pull-right" src="images/bot.png" alt=""> -->
-
-		<div class="row">
-			<div class="span3">
-				<dl>
-					<dt>Total Population</dt>
-					<dd>8.00</dd>
-					<dt>Urban/Rural Split</dt>
-					<dd>2.30</dd>
-					<dt>Human Development Index</dt>
-					<dd>0.633</dd>
-					<dt>Life Expectancy</dt>
-					<dd>122.18</dd>
-				</dl>
+			<div class="row">
+				<div class="span3">
+					<dl>
+						<dt>Total Population</dt>
+						<dd>8.00</dd>
+						<dt>Urban/Rural Split</dt>
+						<dd>2.30</dd>
+						<dt>Human Development Index</dt>
+						<dd>0.633</dd>
+						<dt>Life Expectancy</dt>
+						<dd>122.18</dd>
+					</dl>
+				</div>
+				<div class="span2">
+					<dl>
+						<dt>Total Population</dt>
+						<dd>8.00</dd>
+						<dt>Urban/Rural Split</dt>
+						<dd>2.30</dd>
+						<dt>Human Development Index</dt>
+						<dd>0.633</dd>
+						<dt>Life Expectancy</dt>
+						<dd>122.18</dd>
+					</dl>
+				</div>
+				<span class="span5">
+				<iframe class="pull-right" width='370' height='200' frameBorder='0' src='http://a.tiles.mapbox.com/v3/newamerica.mobile_v_fixed/mm/zoompan.html#5.00/-22.521/23.841'></iframe>
+				</span>
 			</div>
-			<div class="span2">
-				<dl>
-					<dt>Total Population</dt>
-					<dd>8.00</dd>
-					<dt>Urban/Rural Split</dt>
-					<dd>2.30</dd>
-					<dt>Human Development Index</dt>
-					<dd>0.633</dd>
-					<dt>Life Expectancy</dt>
-					<dd>122.18</dd>
-				</dl>
-			</div>
-			<span class="span5">
-			<iframe class="pull-right" width='370' height='200' frameBorder='0' src='http://a.tiles.mapbox.com/v3/newamerica.mobile_v_fixed/mm/zoompan.html#5.00/-22.521/23.841'></iframe>
-			</span>
-		</div>
 		<div class="tabbable">
 		<ul class="nav nav-tabs">
-		  <li class="active"><a href="#education" data-toggle="tab">Education</a></li>
-		  <li><a href="#health" data-toggle="tab">Health</a></li>
-		  <!-- <li><a href="#gender" data-toggle="tab">Gender</a></li>
-		  <li><a href="#poverty" data-toggle="tab">Poverty</a></li>
-		  <li><a href="#general" data-toggle="tab">General</a></li> -->
+		  	<li class="active"><a href="#poverty" data-toggle="tab">Poverty</a></li>
+		  	<li><a href="#gender" data-toggle="tab">Gender</a></li>
+			<li><a href="#education" data-toggle="tab">Education</a></li>
+			<li><a href="#health" data-toggle="tab">Health</a></li>
 		</ul>
 		<div class="tab-content">
-			<div id="education" class="tab-pane active">
+			<div id="poverty" class="tab-pane active">
 			  	<dl>
-					<dt>Impact Category</dt>
-					<dd>Category 1</dd>
-					<dt>Impact Description</dt>
-					<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</dd>
+					<dt>Income Share Held by Lowest 10 Percent</dt>
+					<dd>0%</dd>
+					<dt>Proportion Below Poverty Line</dt>
+					<dd>0%</dd>
+					<dt>Poverty headcount ratio at $1.25 a day (PPP) (% of population)</dt>
+					<dd>0%</dd>
+					<dt>Total Population in Poverty</dt>
+					<dd>0</dd>
+					<dt>Unemployment</dt>
+					<dd>0%</dd>
+				</dl>
+			</div>
+			<div id="gender" class="tab-pane">
+			  	<dl>
+					<dt>Gender Equality (1 low -6 high)</dt>
+					<dd>0%</dd>
+					<dt>Teenage Motherhood/Pregnancy</dt>
+					<dd>0%</dd>
+					<dt>Youth Female Unemployment</dt>
+					<dd>0%</dd>
+					<dt>Women's access to bank loans (0-1 scale)</dt>
+					<dd>0</dd>
+					<dt>Mortality rate, female child (per 1,000 female children age one)</dt>
+					<dd>0%</dd>
+				</dl>
+			</div>
+			<div id="education" class="tab-pane">
+			  	<dl>
+					<dt>Net Total Primary School Enrollment</dt>
+					<dd>0%</dd>
+					<dt>Net Female Secondary School Enrollment</dt>
+					<dd>0%</dd>
+					<dt>Net Total Secondary School Enrollment GDP per capita (US $)</dt>
+					<dd>0%</dd>
 				</dl>
 			</div>
 			  <div id="health" class="tab-pane">
-					<a href="datalist.html#cash" class="btn info small">Cash</a>
-					<p class="pull-right span6">Monthly cash benefits (P61) (US$ 8.3) and monthly food rations (equal to P172 = US$ 23,5) to all destitute residents, including those unable to support themselves because of old age, disability, or a chronic health condition; needy children younger than age 18 with a terminally ill parent; or orphans or abandoned children younger than age 18 not covered by the orphan care program.</p>
+					<dl>
+						<dt>Prevalence of HIV, female (% ages 15-24)</dt>
+						<dd>0%</dd>
+						<dt>Prevalence of HIV, total (% of population ages 15-49)</dt>
+						<dd>0%</dd>
+						<dt>Prevalence of child malnutrition Mortality rate, under-5 (per 1,000)</dt>
+						<dd>0%</dd>
+						<dt>Mortality rate, female child (per 1,000 female children age one)</dt>
+						<dd>0%</dd>
+					</dl>
 			  </div>
 			</div> <!-- end tab-content -->
 			</div> <!-- end tabbable -->
