@@ -42,7 +42,8 @@
 						title: {
 							text: null
 						},
-						max: 130,
+				        tickInterval: 20,
+						max: 120,
 						min: 60,
 						labels: {
 						  formatter: function() {
@@ -76,11 +77,16 @@
 					  text: 'Committee for a Responsible Federal Budget, U.S. Budget Watch',
 					  href: 'http://crfb.org'
 					},
-					plotOptions: {
+				    plotOptions: {
 						line: {
 							shadow: false
-						}
-					},
+							},
+        				series: {
+            				marker: {
+                				enabled: false
+            				}
+       					 }
+    				},
 					series: [{
 						name: 'CRFB Realistic Baseline',
 						color: '#666666',
@@ -92,15 +98,18 @@
 						  }
 					}, {
 						name: 'Santorum Intermediate-Debt Scenario',
-						color: '#00AA68',
+						color: '#EB8104',
+						lineWidth: 4,
 						data: [73, 80.5, 86.7, 90.4, 93.8, 97.4, 101.2, 105.7, 110.3, 115]
 					}, {
 						name: 'Santorum High-Debt Scenario',
-						color: '#0085CC',
+						color: '#EB8104',
+						dashStyle: 'shortdash',
 						data: [73, 80.6, 87.0, 91.0, 94.7, 98.6, 103.0, 108.0, 113.2, 119]
 					}, {
 						name: 'Santorum Low-Debt Scenario',
-						color: '#8448B0',
+						color: '#EB8104',
+						dashStyle: 'shortdash',
 						data: [73, 76.8, 78.5, 78.3, 78.4, 78.6, 79.3, 80.4, 81.7, 83]
 					}]
 				});

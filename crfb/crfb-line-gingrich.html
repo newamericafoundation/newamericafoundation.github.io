@@ -42,7 +42,8 @@
 						title: {
 							text: null
 						},
-						max: 130,
+				        tickInterval: 20,
+						max: 140,
 						min: 60,
 						labels: {
 						  formatter: function() {
@@ -76,11 +77,16 @@
 					  text: 'Committee for a Responsible Federal Budget, U.S. Budget Watch',
 					  href: 'http://crfb.org'
 					},
-					plotOptions: {
+				    plotOptions: {
 						line: {
 							shadow: false
-						}
-					},
+							},
+        				series: {
+            				marker: {
+                				enabled: false
+            				}
+       					 }
+    				},
 					series: [{
 						name: 'CRFB Realistic Baseline',
 						color: '#666666',
@@ -93,14 +99,17 @@
 					}, {
 						name: 'Gingrich Intermediate-Debt Scenario',
 						color: '#00AA68',
+						lineWidth: 4,
 						data: [73, 79.3, 84.3, 88.0, 91.8, 95.9, 100.5, 105.7, 111.3, 117]
 					}, {
 						name: 'Gingrich High-Debt Scenario',
-						color: '#0085CC',
+						color: '#00AA68',
+						dashStyle: 'shortdash',
 						data: [73, 79.5, 84.7, 90.0, 95.3, 100.9, 107.0, 113.8, 120.9, 128]
 					}, {
 						name: 'Gingrich Low-Debt Scenario',
-						color: '#8448B0',
+						color: '#00AA68',
+						dashStyle: 'dot',
 						data: [73, 77.6, 80.3, 81.9, 83.5, 85.3, 87.5, 90.2, 93.2, 96]
 					}]
 				});
