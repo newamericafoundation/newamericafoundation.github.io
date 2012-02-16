@@ -29,28 +29,33 @@
 	$(document).ready(function(){
 						    	newWaxMap('http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.studentloan30,newamerica.studentloan2030,newamerica.studentloan1020,newamerica.studentloan10000.jsonp','map0',38, -93, 4, 6)	
 		
-		var maps =['studentloan30','studentloan2030','studentloan1020','studentloan10000'];
+		var maps =['studentloan30','studentloan2530','studentloan2025','studentloan1520','studentloan1015','studentloan10000'];
 		$( "#slider" ).slider({
-			value:1,
+			value:0,
 			min: 0,
-			max: 4,
+			max: 5,
 			step: 1,
 			slide: function( event, ui) {
 				var mapId = '';
 				var mapDivId='';
 				var mapLength = (maps.length - ui.value);
 				mapDivId = 'map'+ui.value
-				for(i=0;i<=mapLength;i++){
+				for(i=0;i<=mapLength-1;i++){
 					mapId = mapId + ',newamerica.'+maps[i];
-				}	
+				}
 				newWaxMap2('http://a.tiles.mapbox.com/v3/mapbox.world-light'+mapId+'.jsonp',mapDivId,38, -93, 4, 6);
 				$('.activeMap').fadeOut(500,function(){
 					$('.activeMap').css('z-index',-1).show();
 					$('.activeMap').removeClass('activeMap');
+					// if(mapDivId !='map0'){
+					// 						$('#map'+ui.value+1).css('z-index',99);
+					// 						$('#map'+ui.value-1).css('z-index',99);
+					// 					}else{
+					// 						$('#map'+ui.value+1).css('z-index',99);
+					// 					}
 					$('#'+mapDivId).addClass('activeMap');
 					$('.activeMap').css('z-index',100).show();
-										
-				})
+				});
 				
 								
 			}
@@ -128,31 +133,27 @@
 		<div id="map2" class="map" style="width:988px;height:450px;position:absolute;z-index:-1;"></div>
 		<div id="map3" class="map" style="width:988px;height:450px;position:absolute;z-index:-1;"></div>
 		<div id="map4" class="map" style="width:988px;height:450px;position:absolute;z-index:-1;"></div>
-		<div id="mainMap" class="map" style="height:450px;margin-top:36px;z-index:1;">
-
-		<a href='#' class='share'></a>
-		<div class='wax-share' style='display:none;'>
-		    <div class='share-content'>
-		      <h3>Share this map</h3>
-		      <!-- <p>
-		      		        <a id='facebook' target='_blank'>Facebook</a>
-		      		        <a id='twitter' target='_blank'>Twitter</a>
-		      		      </p> -->
-		      <strong>Get the embed code</strong><br><small>Copy and paste this HTML into your website or blog.</small>
-		      <div id='embed-code-field'><textarea id='embed-code' rows='4' readonly></textarea>
-		      </div>
-		      <a href='#' class='close'>Close</a>
-		    </div>
-		
-		  </div>
-        </div>
-
+		<div id="map5" class="map" style="width:988px;height:450px;position:absolute;z-index:-1;"></div>
+	 	<div id="mainMap" class="map" style="height:450px;margin-top:36px;z-index:1;">
+				<a href='#' class='share'></a>
+				<div class='wax-share' style='display:none;'>
+				    <div class='share-content'>
+				      <h3>Share this map</h3>
+				      <strong>Get the embed code</strong><br><small>Copy and paste this HTML into your website or blog.</small>
+				      <div id='embed-code-field'><textarea id='embed-code' rows='4' readonly></textarea>
+				      </div>
+				      <a href='#' class='close'>Close</a>
+				    </div>
+				
+				  </div>
+		        </div> 
+		 </div>
             <div class="clearing"></div>
 
 			<div id="layerControl">
 				<div id="slider" style="width:300px;"></div>
 			</div>
-        </div>
+       
                
                 
 
