@@ -18,7 +18,44 @@
 <script type="text/javascript" src="scripts/highcharts/themes/transparent.js"></script>
 <script>
 	$(document).ready(function(){
-		newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.map-t5a3ykc7.jsonp','mainMap',38, -93, 4, 6)
+	var mapId;	newWaxMap('http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.studentloan30,newamerica.studentloan2030,newamerica.studentloan1020,newamerica.studentloan10000.jsonp','mainMap',38, -93, 4, 6)
+		
+		
+		$('#top10').addClass('primary');
+		$('#top50').removeClass('default');
+		$('#bottom50').click(function(){
+			$('#mainMap').empty();
+			newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.map-o0qysmyw.jsonp','mainMap',38, -93, 4, 6);
+			$(this)
+				.addClass('primary')
+				.removeClass('default');
+			$('#top50')
+				.removeClass('primary')
+				.addClass('default');
+		});
+		$('#top50').click(function(){
+			$('#mainMap').empty();
+			newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.map-ddatm7k4.jsonp','mainMap',38, -93, 4, 6);
+			$(this)
+				.addClass('primary')
+				.removeClass('default');
+			$('#bottom50')
+				.removeClass('primary')
+				.addClass('default');
+		});
+		
+		function getChecked() {
+			mapId = ''
+		 	$('input:checked').each(function (i) {
+				// console.log($(this).attr('id'))
+				mapId = mapId + ',newamerica.'+$(this).attr('id');
+			});
+			console.log('http://a.tiles.mapbox.com/v3/mapbox.world-light'+mapId+'.jsonp')
+			newWaxMap('http://a.tiles.mapbox.com/v3/mapbox.world-light'+mapId+'.jsonp','mainMap',38, -93, 4, 6)
+		}
+		getChecked();
+		$(":checkbox").click(getChecked);
+		
 	});
 </script>
 
@@ -68,8 +105,9 @@
 
 
         <div class="sl-body-wrapper">
-
+		
 		<div id="mainMap" class="map" style="height:450px;margin-top:36px;">
+
 		<a href='#' class='share'></a>
 		<div class='wax-share' style='display:none;'>
 		    <div class='share-content'>
@@ -89,6 +127,14 @@
 
 
             <div class="clearing"></div>
+			<div id="layerControl">
+				<form id="mainControl">
+					<input id="studentloan10000" type="checkbox" value="10000" name="10000"/>10,000&nbsp;
+					<input id="studentloan1020" type="checkbox" value="10000" name="10000"/>10,000 - 20,000&nbsp;
+					<input id="studentloan2030" type="checkbox" value="10000" name="10000"/>20,000 - 30,000&nbsp;
+					<input id="studentloan30" type="checkbox" value="10000" name="10000"/>+ 30,000&nbsp;
+				</form>
+			</div>
         </div>
                
                 
