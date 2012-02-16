@@ -5,6 +5,8 @@
 <link rel="stylesheet" type="text/css" href="slate_files/blogs.css">
 
 <script type="text/javascript" src="slate_files/jquery.js"></script> 
+<script type="text/javascript" src="scripts/jquery-ui-1.8.17.custom.min.js"></script> 
+ 
 <script type="text/javascript" language="javascript" src="slate_files/header.js"></script>
 <script src="slate_files/cleanprint.js" name="cleanprintloader" type="text/javascript"></script>
 
@@ -16,34 +18,23 @@
 <script src='scripts/mapInit2.js' type='text/javascript'></script>
 <script type="text/javascript" src="scripts/highcharts/highcharts.js"></script>
 <script type="text/javascript" src="scripts/highcharts/themes/transparent.js"></script>
+
+
 <script>
 	$(document).ready(function(){
+		$("#slider").slider();
+		// $( "#slider" ).slider({
+		// 					value:100,
+		// 					min: 0,
+		// 					max: 300,
+		// 					step: 10,
+		// 					slide: function( event, ui ) {
+		// 						$( "#amount" ).val( "$" + ui.value );
+		// 					}
+		// 				});
+		// 				$( "#amount" ).val( "$" + $( "#slider" ).slider( "value" ) );
 	var mapId;	newWaxMap('http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.studentloan30,newamerica.studentloan2030,newamerica.studentloan1020,newamerica.studentloan10000.jsonp','mainMap',38, -93, 4, 6)
-		
-		
-		$('#top10').addClass('primary');
-		$('#top50').removeClass('default');
-		$('#bottom50').click(function(){
-			$('#mainMap').empty();
-			newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.map-o0qysmyw.jsonp','mainMap',38, -93, 4, 6);
-			$(this)
-				.addClass('primary')
-				.removeClass('default');
-			$('#top50')
-				.removeClass('primary')
-				.addClass('default');
-		});
-		$('#top50').click(function(){
-			$('#mainMap').empty();
-			newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.map-ddatm7k4.jsonp','mainMap',38, -93, 4, 6);
-			$(this)
-				.addClass('primary')
-				.removeClass('default');
-			$('#bottom50')
-				.removeClass('primary')
-				.addClass('default');
-		});
-		
+
 		function getChecked() {
 			mapId = ''
 		 	$('input:checked').each(function (i) {
@@ -55,6 +46,7 @@
 		}
 		getChecked();
 		$(":checkbox").click(getChecked);
+		
 		
 	});
 </script>
@@ -105,6 +97,8 @@
 
 
         <div class="sl-body-wrapper">
+			<div id="amount"></div>
+			<div id="slider"></div>
 		
 		<div id="mainMap" class="map" style="height:450px;margin-top:36px;">
 
@@ -127,13 +121,16 @@
 
 
             <div class="clearing"></div>
+
 			<div id="layerControl">
+				
 				<form id="mainControl">
 					<input id="studentloan10000" type="checkbox" value="10000" name="10000"/>10,000&nbsp;
 					<input id="studentloan1020" type="checkbox" value="10000" name="10000"/>10,000 - 20,000&nbsp;
 					<input id="studentloan2030" type="checkbox" value="10000" name="10000"/>20,000 - 30,000&nbsp;
 					<input id="studentloan30" type="checkbox" value="10000" name="10000"/>+ 30,000&nbsp;
 				</form>
+				
 			</div>
         </div>
                
