@@ -19,10 +19,15 @@
 <script src='scripts/mapInit2.js' type='text/javascript'></script>
 <script type="text/javascript" src="scripts/highcharts/highcharts.js"></script>
 <script type="text/javascript" src="scripts/highcharts/themes/transparent.js"></script>
+<style>
+	.activeMap{
+		z-index:100;
+	}
+</style>
 
 <script>
 	$(document).ready(function(){
-						    	newWaxMap('http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.studentloan30,newamerica.studentloan2030,newamerica.studentloan1020,newamerica.studentloan10000.jsonp','mainMap',38, -93, 4, 6)	
+						    	newWaxMap('http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.studentloan30,newamerica.studentloan2030,newamerica.studentloan1020,newamerica.studentloan10000.jsonp','map0',38, -93, 4, 6)	
 		
 		var maps =['studentloan30','studentloan2030','studentloan1020','studentloan10000'];
 		$( "#slider" ).slider({
@@ -30,18 +35,45 @@
 			min: 0,
 			max: 4,
 			step: 1,
-			slide: function( event, ui ) {
-				var mapId = ''
+			slide: function( event, ui) {
+				var mapId = '';
+				var mapDivId='';
 				var mapLength = (maps.length - ui.value);
-				console.log(mapLength)
+				mapDivId = 'map'+ui.value
 				for(i=0;i<=mapLength;i++){
-					console.log(maps[i])
 					mapId = mapId + ',newamerica.'+maps[i];
-				}
-				newWaxMap('http://a.tiles.mapbox.com/v3/mapbox.world-light'+mapId+'.jsonp','mainMap',38, -93, 4, 6);				
+				}	
+				newWaxMap2('http://a.tiles.mapbox.com/v3/mapbox.world-light'+mapId+'.jsonp',mapDivId,38, -93, 4, 6);
+				$('.activeMap').fadeOut(500,function(){
+					$('.activeMap').css('z-index',-1).show();
+					$('.activeMap').removeClass('activeMap');
+					$('#'+mapDivId).addClass('activeMap');
+					$('.activeMap').css('z-index',100).show();
+										
+				})
+				
+								
 			}
-		});		
-		
+		});			
+		function newWaxMap2(url, mapContainer, startLat, startLng, minZoom, maxZoom){
+		minZoom = minZoom || 2;
+		maxZoom = maxZoom || 10;
+		startLat = startLat || 0;
+		startLng = startLng || 0;
+		var m;
+		wax.tilejson(url, function(tilejson) {
+		tilejson.minzoom = minZoom;
+		tilejson.maxzoom = maxZoom;
+		var mm = com.modestmaps;
+		m = new mm.Map(mapContainer,
+		new wax.mm.connector(tilejson));
+
+		    wax.mm.interaction(m, tilejson);
+		wax.mm.legend(m, tilejson).appendTo(m.parent);
+		wax.mm.zoomer(m, tilejson).appendTo(m.parent);
+		m.setCenterZoom(new mm.Location(startLat, startLng), minZoom);
+		});
+		}; //end newWaxMap
 	});
 </script>
 
@@ -91,9 +123,12 @@
 
 
         <div class="sl-body-wrapper">
-		
-		
-		<div id="mainMap" class="map" style="height:450px;margin-top:36px;">
+		<div id="map0" class="map activeMap" style="width:988px;height:450px;position:absolute;"></div>
+		<div id="map1" class="map" style="width:988px;height:450px;position:absolute;z-index:-1;"></div>
+		<div id="map2" class="map" style="width:988px;height:450px;position:absolute;z-index:-1;"></div>
+		<div id="map3" class="map" style="width:988px;height:450px;position:absolute;z-index:-1;"></div>
+		<div id="map4" class="map" style="width:988px;height:450px;position:absolute;z-index:-1;"></div>
+		<div id="mainMap" class="map" style="height:450px;margin-top:36px;z-index:1;">
 
 		<a href='#' class='share'></a>
 		<div class='wax-share' style='display:none;'>
@@ -112,18 +147,10 @@
 		  </div>
         </div>
 
-
             <div class="clearing"></div>
 
 			<div id="layerControl">
-					<div id="slider" style="width:300px;"></div>
-				<form id="mainControl">
-					<input id="studentloan10000" type="checkbox" value="10000" name="10000"/>10,000&nbsp;
-					<input id="studentloan1020" type="checkbox" value="10000" name="10000"/>10,000 - 20,000&nbsp;
-					<input id="studentloan2030" type="checkbox" value="10000" name="10000"/>20,000 - 30,000&nbsp;
-					<input id="studentloan30" type="checkbox" value="10000" name="10000"/>+ 30,000&nbsp;
-				</form>
-				
+				<div id="slider" style="width:300px;"></div>
 			</div>
         </div>
                
