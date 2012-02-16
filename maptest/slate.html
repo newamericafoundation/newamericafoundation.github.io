@@ -5,7 +5,8 @@
 <link rel="stylesheet" type="text/css" href="slate_files/blogs.css">
 
 <script type="text/javascript" src="slate_files/jquery.js"></script> 
-<script type="text/javascript" src="scripts/jquery-ui-1.8.17.custom.min.js"></script> 
+<script type="text/javascript" src="scripts/jquery-ui-1.8.17.custom/js/jquery-ui-1.8.17.custom.min.js"></script> 
+<link rel="stylesheet" type="text/css" href="scripts/jquery-ui-1.8.17.custom/css/smoothness/jquery-ui-1.8.17.custom.css">
  
 <script type="text/javascript" language="javascript" src="slate_files/header.js"></script>
 <script src="slate_files/cleanprint.js" name="cleanprintloader" type="text/javascript"></script>
@@ -19,34 +20,27 @@
 <script type="text/javascript" src="scripts/highcharts/highcharts.js"></script>
 <script type="text/javascript" src="scripts/highcharts/themes/transparent.js"></script>
 
-
 <script>
 	$(document).ready(function(){
-		$("#slider").slider();
-		// $( "#slider" ).slider({
-		// 					value:100,
-		// 					min: 0,
-		// 					max: 300,
-		// 					step: 10,
-		// 					slide: function( event, ui ) {
-		// 						$( "#amount" ).val( "$" + ui.value );
-		// 					}
-		// 				});
-		// 				$( "#amount" ).val( "$" + $( "#slider" ).slider( "value" ) );
-	var mapId;	newWaxMap('http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.studentloan30,newamerica.studentloan2030,newamerica.studentloan1020,newamerica.studentloan10000.jsonp','mainMap',38, -93, 4, 6)
-
-		function getChecked() {
-			mapId = ''
-		 	$('input:checked').each(function (i) {
-				// console.log($(this).attr('id'))
-				mapId = mapId + ',newamerica.'+$(this).attr('id');
-			});
-			console.log('http://a.tiles.mapbox.com/v3/mapbox.world-light'+mapId+'.jsonp')
-			newWaxMap('http://a.tiles.mapbox.com/v3/mapbox.world-light'+mapId+'.jsonp','mainMap',38, -93, 4, 6)
-		}
-		getChecked();
-		$(":checkbox").click(getChecked);
+						    	newWaxMap('http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.studentloan30,newamerica.studentloan2030,newamerica.studentloan1020,newamerica.studentloan10000.jsonp','mainMap',38, -93, 4, 6)	
 		
+		var maps =['studentloan30','studentloan2030','studentloan1020','studentloan10000'];
+		$( "#slider" ).slider({
+			value:1,
+			min: 0,
+			max: 4,
+			step: 1,
+			slide: function( event, ui ) {
+				var mapId = ''
+				var mapLength = (maps.length - ui.value);
+				console.log(mapLength)
+				for(i=0;i<=mapLength;i++){
+					console.log(maps[i])
+					mapId = mapId + ',newamerica.'+maps[i];
+				}
+				newWaxMap('http://a.tiles.mapbox.com/v3/mapbox.world-light'+mapId+'.jsonp','mainMap',38, -93, 4, 6);				
+			}
+		});		
 		
 	});
 </script>
@@ -97,8 +91,7 @@
 
 
         <div class="sl-body-wrapper">
-			<div id="amount"></div>
-			<div id="slider"></div>
+		
 		
 		<div id="mainMap" class="map" style="height:450px;margin-top:36px;">
 
@@ -123,7 +116,7 @@
             <div class="clearing"></div>
 
 			<div id="layerControl">
-				
+					<div id="slider" style="width:300px;"></div>
 				<form id="mainControl">
 					<input id="studentloan10000" type="checkbox" value="10000" name="10000"/>10,000&nbsp;
 					<input id="studentloan1020" type="checkbox" value="10000" name="10000"/>10,000 - 20,000&nbsp;
