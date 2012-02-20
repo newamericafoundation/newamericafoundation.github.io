@@ -26,79 +26,110 @@
 </style>
 
 <script>
+var userCenter, userZoom;	
 	$(document).ready(function(){
-						    	newWaxMap('http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.studentloan30,newamerica.studentloan2030,newamerica.studentloan1020,newamerica.studentloan10000.jsonp','map0',38, -93, 4, 6)	
-		
-		var maps =['studentloan30','studentloan2530','studentloan2025','studentloan1520','studentloan1015','studentloan10000'];
+			var tileSets ={
+				'map0':'http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.motw_studentloan.jsonp',
+				'map1':'http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.motw_studentloan_30000,newamerica.motw_studentloan_25000,newamerica.motw_studentloan_20000,newamerica.motw_studentloan_15000.jsonp',
+				'map2':'http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.motw_studentloan_30000,newamerica.motw_studentloan_25000,newamerica.motw_studentloan_20000.jsonp',
+				'map3':'http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.motw_studentloan_30000,newamerica.motw_studentloan_25000.jsonp',
+				'map4':'http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.motw_studentloan_30000.jsonp'
+			};
+			
+			newWaxMap2('http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.motw_studentloan.jsonp','mainMap',38, -93, 4, 6);
+
 		$( "#slider" ).slider({
 			value:0,
 			min: 0,
-			max: 5,
+			max: 4,
 			step: 1,
-			slide: function( event, ui) {
-				var mapId = '';
+			stop: function( event, ui) {
 				var mapDivId='';
-				var mapLength = (maps.length - ui.value);
-				mapDivId = 'map'+ui.value
-				for(i=0;i<=mapLength-1;i++){
-					mapId = mapId + ',newamerica.'+maps[i];
+				mapDivId = 'map'+ui.value;
+				// $('.wax-legends').remove();
+				// $('.zoomer').remove();	
+				// $('.wax-popup').remove();
+				// newWaxMap2(tileSets[mapDivId],'mainMap',38, -93, 4, 6);
+				// $('#mainMap').fadeIn(200)
+				
+				for(divName in tileSets){
+					$('#'+divName).empty();
+						newWaxMap2(tileSets[divName],divName,38, -93, 4, 6);
 				}
-				newWaxMap2('http://a.tiles.mapbox.com/v3/mapbox.world-light'+mapId+'.jsonp',mapDivId,38, -93, 4, 6);
-				$('.activeMap').fadeOut(500,function(){
+				
+				$('.activeMap').fadeOut(1000, function(){
 					$('.activeMap').css('z-index',-1).show();
 					$('.activeMap').removeClass('activeMap');
-					// if(mapDivId !='map0'){
-					// 						$('#map'+ui.value+1).css('z-index',99);
-					// 						$('#map'+ui.value-1).css('z-index',99);
-					// 					}else{
-					// 						$('#map'+ui.value+1).css('z-index',99);
-					// 					}
 					$('#'+mapDivId).addClass('activeMap');
-					$('.activeMap').css('z-index',100).show();
+					$('.activeMap').css('z-index',900).fadeIn(200, function(){
+						$('#mainMap').css('z-index',-1);	
+						$('#mainMap-layers').remove();
+					});			
 				});
-				
-								
+			},
+			slide: function( event, ui) {
+				var mapDivId='';
+				mapDivId = 'map'+ui.value;
+				$('.wax-legends').remove();
+				$('.zoomer').remove();	
+				$('.wax-popup').remove();
+				newWaxMap2(tileSets[mapDivId],'mainMap',38, -93, 4, 6);
+				// $('#mainMap').fadeIn(200);
 			}
-		});			
-		function newWaxMap2(url, mapContainer, startLat, startLng, minZoom, maxZoom){
+		});
+			
+	});
+	
+	function newWaxMap2(url, mapContainer, startLat, startLng, minZoom, maxZoom){
+	
 		minZoom = minZoom || 2;
 		maxZoom = maxZoom || 10;
 		startLat = startLat || 0;
 		startLng = startLng || 0;
 		var m;
 		wax.tilejson(url, function(tilejson) {
-		tilejson.minzoom = minZoom;
-		tilejson.maxzoom = maxZoom;
-		var mm = com.modestmaps;
-		m = new mm.Map(mapContainer,
-		new wax.mm.connector(tilejson));
+			tilejson.minzoom = minZoom;
+			tilejson.maxzoom = maxZoom;
+			var mm = com.modestmaps;
+			m = new mm.Map(mapContainer,
+			new wax.mm.connector(tilejson));
 
-		    wax.mm.interaction(m, tilejson);
-		wax.mm.legend(m, tilejson).appendTo(m.parent);
-		wax.mm.zoomer(m, tilejson).appendTo(m.parent);
-		m.setCenterZoom(new mm.Location(startLat, startLng), minZoom);
+			wax.mm.interaction(m, tilejson);
+			// wax.mm.legend(m, tilejson).appendTo(m.parent);
+			wax.mm.zoomer(m, tilejson).appendTo(m.parent);
+		
+			if(userCenter && userZoom){
+				m.setCenterZoom(userCenter, userZoom);			
+			}else{
+				m.setCenterZoom(new mm.Location(startLat, startLng), minZoom);
+				//add the slow zoom in using easey
+			}
+			// m.addCallback('drawn', function(m) {
+			//     // respond to new center: set vars so map will stay put as the layers change
+			// 	userCenter = m.getCenter();
+			// 	userZoom = m.getZoom();	
+			// });
+			m.addCallback('panned', function(m) {
+			    // respond to new center: set vars so map will stay put as the layers change
+				userCenter = m.getCenter();
+				userZoom = m.getZoom();	
+			});
+			
+			m.addCallback('zoomed', function(m) {
+			    // respond to new center: set vars so map will stay put as the layers change
+				userCenter = m.getCenter();
+				userZoom = m.getZoom();	
+			});
 		});
-		}; //end newWaxMap
-	});
+	}; //end newWaxMap
+	
 </script>
-
-
-
-
-
-
-        
+      
 </head>
 <body data-rendering="true">
 
 		<div id="wrapper">
 			<div class="sl-content-wrapper">
-                
-    
-
-
-
-
 <div class="clearing"></div>
 
 <header>
@@ -119,22 +150,14 @@
 </div>
 </header>
 
-
-                
-                
-
-
-
-
-
         <div class="sl-body-wrapper">
-		<div id="map0" class="map activeMap" style="width:988px;height:450px;position:absolute;"></div>
+		<div id="map0" class="map activeMap" style="width:988px;height:450px;position:absolute;z-index:-1;"></div>
 		<div id="map1" class="map" style="width:988px;height:450px;position:absolute;z-index:-1;"></div>
 		<div id="map2" class="map" style="width:988px;height:450px;position:absolute;z-index:-1;"></div>
 		<div id="map3" class="map" style="width:988px;height:450px;position:absolute;z-index:-1;"></div>
 		<div id="map4" class="map" style="width:988px;height:450px;position:absolute;z-index:-1;"></div>
-		<div id="map5" class="map" style="width:988px;height:450px;position:absolute;z-index:-1;"></div>
-	 	<div id="mainMap" class="map" style="height:450px;margin-top:36px;z-index:1;">
+		<!-- <div id="map5" class="map" style="width:988px;height:450px;position:absolute;z-index:-1;"></div> -->
+	 	<div id="mainMap" style="height:450px;margin-top:36px;">
 				<a href='#' class='share'></a>
 				<div class='wax-share' style='display:none;'>
 				    <div class='share-content'>
