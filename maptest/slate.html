@@ -53,7 +53,7 @@ var userCenter, userZoom;
 						newWaxMap2(tileSets[divName],divName,38, -93, 4, 9);
 				}
 				
-				$('.activeMap').fadeOut(1000, function(){
+				$('.activeMap').fadeOut(100, function(){
 					$('.activeMap').css('z-index',-1).show();
 					$('.activeMap').removeClass('activeMap');
 					$('#'+mapDivId).addClass('activeMap');
@@ -65,6 +65,7 @@ var userCenter, userZoom;
 			},
 			slide: function( event, ui) {
 				var mapDivId='';
+				console.log(ui.value)
 				mapDivId = 'map'+ui.value;
 				$('.wax-legends').remove();
 				$('.zoomer').remove();	
