@@ -42,11 +42,11 @@
 .wax-legends {
 	right: 0;
 	left: 15px;
-	width: 300px;
+	width: 600px;
 }
 
 .wax-legend {
-	width: 275px !important;	
+	width: 575px !important;	
 }
 
 .wax-legend #for-embed {
@@ -55,6 +55,18 @@
 
 .wax-legend #for-wax {
 	display:block !important;	
+}
+
+.wax-legend .point-legend {
+	float:left;
+}
+
+.wax-legend .point-legend ul li {
+	list-style-type:none;
+}
+
+.wax-legend .states-legend {
+	float: right;	
 }
 
 .wax-legend .scale ul {
