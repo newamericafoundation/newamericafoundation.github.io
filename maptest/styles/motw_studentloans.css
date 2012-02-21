@@ -42,11 +42,11 @@
 .wax-legends {
 	right: 0;
 	left: 15px;
-	width: 600px;
+	width: 550px;
 }
 
 .wax-legend {
-	width: 575px !important;	
+	width: 525px !important;	
 }
 
 .wax-legend #for-embed {
@@ -59,14 +59,19 @@
 
 .wax-legend .point-legend {
 	float:left;
+	line-height: 12px;
+	width: 260px;
 }
 
 .wax-legend .point-legend ul li {
 	list-style-type:none;
+	font-size: 9px;
 }
 
 .wax-legend .states-legend {
 	float: right;	
+	line-height: 12px;
+	width: 260px;
 }
 
 .wax-legend .scale ul {
@@ -79,7 +84,7 @@
 .wax-legend .scale ul li {
 	display: block !important;
 	float: left !important;
-	width: 55px;
+	width: 45px;
 	margin-bottom: 6px !important;
 	text-align: center;
 	font-size: 80% !important;
@@ -89,7 +94,7 @@
 
 .wax-legend ul.labels li span {
 	height: 10px;
-	width: 55px;
+	width: 45px;
 }
 
 .wax-legend ul li span {
