@@ -281,6 +281,7 @@ a.share:active {
   right:10px;
   top:10px;
   background-color:transparent;
+  background-image:url(images/close.png);
   }
 
 .wax-share small { color:#999; }
