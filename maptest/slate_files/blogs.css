@@ -543,6 +543,7 @@ a img{cursor:pointer}
     border-top:none;
     border-bottom:none;
 	padding-bottom: 20px;
+    padding: 0 46px 20px;
 }
 
 /* tap3-like promo in main section header */

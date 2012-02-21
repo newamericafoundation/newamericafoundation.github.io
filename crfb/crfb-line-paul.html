@@ -30,10 +30,10 @@
 						marginBottom: 35
 					},
 					title: {
-						text: 'Federal Debt Held by the Public Following Paul’s Campaign Proposals',
+						text: null,
 					},
 					subtitle: {
-						text: '(Percent of GDP)',
+						text: null
 					},
 					xAxis: {
 						categories: ['2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021']
@@ -43,7 +43,7 @@
 							text: null
 						},
 				        tickInterval: 10,
-						max: 100,
+						max: 130,
 						min: 60,
 						labels: {
 						  formatter: function() {
@@ -69,7 +69,7 @@
 						align: 'left',
 						verticalAlign: 'top',
 						x: 65,
-						y: 50,
+						y: 20,
 						floating: true,
 						shadow: true
 					},
@@ -92,7 +92,7 @@
 						color: '#666666',
 						dashStyle: 'shortdot',
 						lineWidth: 4,
-						data: [73, 77.1, 79.2, 79.2, 79.4, 79.7, 80.4, 81.5, 82.9, 84],
+						data: [73, 77.9, 80.1, 80.1, 80.1, 80.3, 80.9, 82.1, 83.4, 85],
 						marker: {
 						  enabled: false
 						  }
@@ -100,17 +100,17 @@
 						name: 'Paul Intermediate-Debt Scenario',
 						color: '#0085CC',
 						lineWidth: 4,
-						data: [73, 76.2, 77.5, 76.3, 75.2, 74.4, 74.1, 74.1, 74.46, 75]
+						data: [73, 77.0, 78.4, 77.2, 75.9, 75.1, 74.7, 74.8, 75.09, 76]
 					}, {
 						name: 'Paul High-Debt Scenario',
 						color: '#0085CC',
 						dashStyle: 'shortdash',
-						data: [73, 78.1, 81.6, 82.6, 83.4, 84.4, 85.7, 87.7, 89.9, 92]
+						data: [73, 78.9, 82.5, 83.4, 84.0, 84.9, 86.3, 88.2, 90.3, 93]
 					}, {
 						name: 'Paul Low-Debt Scenario',
 						color: '#0085CC',
 						dashStyle: 'dot',
-						data: [73, 65.7, 67.2, 66.5, 65.7, 65.1, 64.9, 65.1, 65.4, 66]
+						data: [73, 66.5, 68.1, 67.4, 66.4, 65.8, 65.6, 65.7, 66.1, 67]
 					}]
 				});
 				
