@@ -38,3 +38,53 @@
 	font-size: 10px;
 	position:absolute;
 }
+
+.wax-legends {
+	right: 0;
+	left: 15px;
+	width: 300px;
+}
+
+.wax-legend {
+	width: 275px !important;	
+}
+
+.wax-legend #for-embed {
+	display:none;	
+}
+
+.wax-legend #for-wax {
+	display:block !important;	
+}
+
+.wax-legend .scale ul {
+	margin: 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+}
+
+.wax-legend .scale ul li {
+	display: block !important;
+	float: left !important;
+	width: 55px;
+	margin-bottom: 6px !important;
+	text-align: center;
+	font-size: 80% !important;
+	list-style: none;
+	line-height: 9px !important;
+}
+
+.wax-legend ul.labels li span {
+	height: 10px;
+	width: 55px;
+}
+
+.wax-legend ul li span {
+	display: block;
+	float: left;
+}
+
+.wax-legend small {
+	clear:both;	
+}
