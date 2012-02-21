@@ -30,10 +30,11 @@ var userCenter, userZoom;
 	$(document).ready(function(){
 			var tileSets ={
 				'map0':'http://a.tiles.mapbox.com/v3/mapbox.world-blank-light,newamerica.motw_studentloan.jsonp',
-				'map1':'http://a.tiles.mapbox.com/v3/mapbox.world-blank-light,newamerica.motw_studentloan_15000.jsonp',
-				'map2':'http://a.tiles.mapbox.com/v3/mapbox.world-blank-light,newamerica.motw_studentloan_20000.jsonp',
-				'map3':'http://a.tiles.mapbox.com/v3/mapbox.world-blank-light,newamerica.motw_studentloan_25000.jsonp',
-				'map4':'http://a.tiles.mapbox.com/v3/mapbox.world-blank-light,newamerica.motw_studentloan_30000.jsonp'
+				'map1':'http://a.tiles.mapbox.com/v3/mapbox.world-blank-light,newamerica.motw_studentloan_10000.jsonp',
+				'map2':'http://a.tiles.mapbox.com/v3/mapbox.world-blank-light,newamerica.motw_studentloan_15000.jsonp',
+				'map3':'http://a.tiles.mapbox.com/v3/mapbox.world-blank-light,newamerica.motw_studentloan_20000.jsonp',
+				'map4':'http://a.tiles.mapbox.com/v3/mapbox.world-blank-light,newamerica.motw_studentloan_25000.jsonp',
+				'map5':'http://a.tiles.mapbox.com/v3/mapbox.world-blank-light,newamerica.motw_studentloan_30000.jsonp'
 			};
 			
 			newWaxMap2('http://a.tiles.mapbox.com/v3/mapbox.world-blank-light,newamerica.motw_studentloan.jsonp','mainMap',38, -93, 4, 9);
@@ -41,7 +42,7 @@ var userCenter, userZoom;
 		$( "#slider" ).slider({
 			value:0,
 			min: 0,
-			max: 4,
+			max: 5,
 			step: 1,
 			stop: function( event, ui) {
 				var mapDivId='';
@@ -160,7 +161,7 @@ var userCenter, userZoom;
 		<div id="map2" class="map" style="width:916px;height:450px;position:absolute;z-index:-1;"></div>
 		<div id="map3" class="map" style="width:916px;height:450px;position:absolute;z-index:-1;"></div>
 		<div id="map4" class="map" style="width:916px;height:450px;position:absolute;z-index:-1;"></div>
-		<!-- <div id="map5" class="map" style="width:988px;height:450px;position:absolute;z-index:-1;"></div> -->
+		<div id="map5" class="map" style="width:916px;height:450px;position:absolute;z-index:-1;"></div>
 	 	<div id="mainMap" class="map" style="width:916px;height:450px;">
 				<!-- <a href='#' class='share'></a>
 								<div class='wax-share' style='display:none;'>
