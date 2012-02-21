@@ -192,6 +192,11 @@ a.zoomdisabled {
   position:absolute;
   top:0px;
   right:0px;
+  background-image:url(images/close.png);
+  height:30px;
+  width:30px;
+  text-indent: -1999px;
+  overflow: hidden;
   }
 
 .wax-mobile-body .wax-tooltip {
