@@ -46,11 +46,6 @@ var userCenter, userZoom;
 			stop: function( event, ui) {
 				var mapDivId='';
 				mapDivId = 'map'+ui.value;
-				// $('.wax-legends').remove();
-				// $('.zoomer').remove();	
-				// $('.wax-popup').remove();
-				// newWaxMap2(tileSets[mapDivId],'mainMap',38, -93, 4, 6);
-				// $('#mainMap').fadeIn(200)
 				
 				for(divName in tileSets){
 					$('#'+divName).empty();
@@ -74,7 +69,6 @@ var userCenter, userZoom;
 				$('.zoomer').remove();	
 				$('.wax-popup').remove();
 				newWaxMap2(tileSets[mapDivId],'mainMap',38, -93, 4, 6);
-				// $('#mainMap').fadeIn(200);
 			}
 		});
 			
@@ -104,11 +98,6 @@ var userCenter, userZoom;
 				m.setCenterZoom(new mm.Location(startLat, startLng), minZoom);
 				//add the slow zoom in using easey
 			}
-			// m.addCallback('drawn', function(m) {
-			//     // respond to new center: set vars so map will stay put as the layers change
-			// 	userCenter = m.getCenter();
-			// 	userZoom = m.getZoom();	
-			// });
 			m.addCallback('panned', function(m) {
 			    // respond to new center: set vars so map will stay put as the layers change
 				userCenter = m.getCenter();
@@ -174,7 +163,14 @@ var userCenter, userZoom;
             <div class="clearing"></div>
 
 			<div id="layerControl">
-				<div id="slider" style="width:300px;"></div>
+				<div id="slider" style="width:400px;"></div>
+				<div id="sliderLabel" style="width:400px;color:#333;padding:5px 0px;">
+					<span style="position:relative;padding-top: 20px;">$10,000</span>
+					<span style="left:12%;position:relative;padding-top: 20px;">$15,000</span>
+					<span style="left:25%;position:relative;padding-top: 20px;">$20,000</span>
+					<span style="left:37%;position:relative;padding-top: 20px;">$25,000</span>
+					<span style="left:50%;position:relative;padding-top: 20px;">$30,000</span>
+				</div>
 			</div>
        
                
