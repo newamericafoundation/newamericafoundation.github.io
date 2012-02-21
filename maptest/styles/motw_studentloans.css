@@ -39,6 +39,15 @@
 	position:absolute;
 }
 
+.wax-tooltip p {
+	margin: 0 0 0.5em 0;	
+}
+
+
+.wax-tooltip .number {
+	font-size: 22px;	
+}
+
 .wax-legends {
 	right: 0;
 	left: 15px;
