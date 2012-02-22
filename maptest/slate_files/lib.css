@@ -555,7 +555,7 @@ border-left: 1px solid #E6E6E6;
 border-right: 1px solid #E6E6E6;
 border-style: none solid;
 border-width: medium 1px;
-width: 988px;
+/*width: 988px;*/
 display: block;
 }
 .sl-home-main{
@@ -4392,4 +4392,8 @@ a.slatestBox-text, a.slatestBox-text:active, a.slatestBox-text:visited{
 .slb-TheReckoning-defaultimg {
    background: url('lib/../../../../content/slate/blogs/the_reckoning/jcr:content/sprite.gif') no-repeat scroll 0 0;
    display: block;
+}
+
+div.text {
+line-height: 18px;	
 }
