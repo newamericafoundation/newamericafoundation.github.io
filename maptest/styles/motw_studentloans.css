@@ -51,11 +51,11 @@
 .wax-legends {
 	right: 0;
 	left: 15px;
-	width: 550px;
+	width: 485px;
 }
 
 .wax-legend {
-	width: 525px !important;	
+	width: 460px !important;	
 }
 
 .wax-legend #for-embed {
@@ -69,7 +69,8 @@
 .wax-legend .point-legend {
 	float:left;
 	line-height: 12px;
-	width: 260px;
+	width: 225px;
+	margin: 0 10px 0 0;
 }
 
 .wax-legend .point-legend ul li {
@@ -78,9 +79,9 @@
 }
 
 .wax-legend .states-legend {
-	float: right;	
+	float: left;	
 	line-height: 12px;
-	width: 260px;
+	width: 225px;
 }
 
 .wax-legend .scale ul {
