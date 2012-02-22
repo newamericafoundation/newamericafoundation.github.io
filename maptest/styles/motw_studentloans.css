@@ -45,6 +45,10 @@
 	border: 1px #666 solid !important;	
 }
 
+.wax-tooltip a {
+	color: #CCC;	
+}
+
 .wax-tooltip p {
 	margin: 0 0 0.5em 0;	
 }
