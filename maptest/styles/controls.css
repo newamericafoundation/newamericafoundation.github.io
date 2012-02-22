@@ -190,8 +190,8 @@ a.zoomdisabled {
 .wax-tooltip .close {
   display:block;
   position:absolute;
-  top:0px;
-  right:0px;
+  top:-10px;
+  right:-10px;
   background-image:url(images/close.png);
   height:30px;
   width:30px;
@@ -283,8 +283,8 @@ a.share:active {
   
 .wax-share a.close {
   position:absolute;
-  right:10px;
-  top:10px;
+  right:0;
+  top:0;
   background-color:transparent;
   background-image:url(images/close.png);
   height:30px;
