@@ -114,3 +114,9 @@
 .wax-legend small {
 	clear:both;	
 }
+
+.wax-legend .legend-image {
+	position:absolute;
+	bottom: 0;
+	right: 15px;	
+}
