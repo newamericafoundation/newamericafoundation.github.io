@@ -32,6 +32,9 @@
 	<script src="js/bootstrap-typeahead.js"></script>
 	<script src="js/highcharts/highcharts.js"></script>
     <script src="js/highcharts/modules/exporting.js"></script>
+    <script src="js/custom/staples.js"></script>
+    <script src="js/custom/retirement.js"></script>
+    <script src="js/custom/entrepreneurship.js"></script>
 	<script >
 	  $(function() {
 	    $("table#programTable").tablesorter({ sortList: [[1,0]] });
@@ -69,103 +72,6 @@
           <div class="section-header">
             <h2 class="section-title">Retirement</h2>
             <div class="staple">
-			  <script>
-              var chart;
-                $(document).ready(function() {
-                   chart = new Highcharts.Chart({
-                      chart: {
-                         renderTo: 'retirementGraph',
-                         plotBackgroundColor: null,
-                         plotBorderWidth: null,
-                         spacingRight:100
-                      },
-                      title: {
-                         text: null
-                      },
-                      credits: {
-                          enabled: false	
-                      },
-                      exporting: {
-                          enabled: false	
-                      },
-                      legend: {
-                          enabled: false	
-                      },
-                      yAxis: {
-                          title: {
-                              text: null
-                          },
-                          labels: {
-                            formatter: function() {
-                              return '$'+this.value +'B';
-                            }
-                          },
-                          max:220,
-                          tickInterval: 75,
-                      },
-                      xAxis: {
-                          labels: {
-                              enabled: false	
-                          },
-                          endOnTick: true,
-                          startOnTick: true,
-                      },
-                      tooltip: {
-                          style: {
-                              fontSize: '9px',	
-                          },
-                          formatter: function() {
-                            var s;
-                            if (this.point.name) { // the pie chart
-                               s = ''+
-                                  this.point.name +': $'+ this.y + ' billion';
-                            } else {
-                               s = ''+
-                                  this.series.name  +': '+ this.y;
-                            }
-                            return s;
-                         }
-                      },
-                      plotOptions: {
-                          column: {
-                              pointWidth: 25,
-                              pointPadding: .5,
-                              groupPadding: .3,
-                              minPointLength: 1,
-                          }
-                      },
-                      series: [{
-                         type: 'pie',
-                         name: 'Budget slice',
-                         data: [{
-                            name: 'Total assets spending',
-                            y: 394.595,
-                         }, {
-                            name: 'Retirement spending',
-                            y: 146.8,
-                         }],
-                         center: [20, 28],
-                         spacingLeft: 100,
-                         size: 40,
-                         showInLegend: false,
-                         dataLabels: {
-                            enabled: false
-                         },
-                         borderColor: '#000000',
-                      },{
-                         type: 'column',
-                         name: 'Tax spending',
-                         borderColor: '#000000',
-                         data: [146.8]
-                      }, {
-                         type: 'column',
-                         name: 'Direct spending',
-                         borderColor: '#000000',
-                         data: [0]
-                      },]
-                   });
-                });
-              </script>
               <div id="retirementModal" class="modal hide fade">
                 <div class="modal-header">
                   <a class="close" data-dismiss="modal">&times;</a>
@@ -236,6 +142,12 @@
             </div> <!-- end .staple -->
             <p>Too few people are saving too little to lead a financially secure retirement. The decline in employers sponsoring retirement accounts means that many workers, especially those earning the least, have few accessible options. Less than half of workers in the second lowest income quartile are offered a 401k style retirement plan. This drops to less than 30% of workers in the lowest income quartile.</p>
           </div> <!-- end .section-header -->
+          <div class="section-body">
+            <div id="retirement-graph" style="height: 300px;"></div>
+                <div class="alert alert-info">
+                  A Universal 401(k) system would establish a retirement account for all workers and offer matching incentives targeting lower- and middle- income earners.
+                </div>
+          </div><!-- end .section-body -->
         </div><!-- end .span16 -->
       </div><!-- end .row -->
       <div class="row">
@@ -243,103 +155,6 @@
           <div class="section-header">
             <h2 class="section-title">Savings and Investment</h2>
             <div class="staple">
-			  <script>
-              var chart;
-                $(document).ready(function() {
-                   chart = new Highcharts.Chart({
-                      chart: {
-                         renderTo: 'savingsGraph',
-                         plotBackgroundColor: null,
-                         plotBorderWidth: null,
-                         spacingRight:100
-                      },
-                      title: {
-                         text: null
-                      },
-                      credits: {
-                          enabled: false	
-                      },
-                      exporting: {
-                          enabled: false	
-                      },
-                      legend: {
-                          enabled: false	
-                      },
-                      yAxis: {
-                          title: {
-                              text: null
-                          },
-                          labels: {
-                            formatter: function() {
-                              return '$'+this.value +'B';
-                            }
-                          },
-                          max:220,
-                          tickInterval: 75,
-                      },
-                      xAxis: {
-                          labels: {
-                              enabled: false	
-                          },
-                          endOnTick: true,
-                          startOnTick: true,
-                      },
-                      tooltip: {
-                          style: {
-                              fontSize: '9px',	
-                          },
-                          formatter: function() {
-                            var s;
-                            if (this.point.name) { // the pie chart
-                               s = ''+
-                                  this.point.name +': $'+ this.y + ' billion';
-                            } else {
-                               s = ''+
-                                  this.series.name  +': '+ this.y;
-                            }
-                            return s;
-                         }
-                      },
-                      plotOptions: {
-                          column: {
-                              pointWidth: 25,
-                              pointPadding: .5,
-                              groupPadding: .3,
-                              minPointLength: 1,
-                          }
-                      },
-                      series: [{
-                         type: 'pie',
-                         name: 'Budget slice',
-                         data: [{
-                            name: 'Total assets spending',
-                            y: 415.322,
-                         }, {
-                            name: 'Savings spending',
-                            y: 126.073,
-                         }],
-                         center: [20, 28],
-                         spacingLeft: 100,
-                         size: 40,
-                         showInLegend: false,
-                         dataLabels: {
-                            enabled: false
-                         },
-                         borderColor: '#000000',
-                      },{
-                         type: 'column',
-                         name: 'Tax spending',
-                         borderColor: '#000000',
-                         data: [126]
-                      }, {
-                         type: 'column',
-                         name: 'Direct spending',
-                         borderColor: '#000000',
-                         data: [0.073]
-                      },]
-                   });
-                });
-              </script>
               <div id="savingsModal" class="modal hide fade">
                 <div class="modal-header">
                   <a class="close" data-dismiss="modal">&times;</a>
@@ -425,103 +240,6 @@
           <div class="section-header">
             <h2 class="section-title">Homeownership</h2>
             <div class="staple">
-			  <script>
-              var chart;
-                $(document).ready(function() {
-                   chart = new Highcharts.Chart({
-                      chart: {
-                         renderTo: 'homeownershipGraph',
-                         plotBackgroundColor: null,
-                         plotBorderWidth: null,
-                         spacingRight:100
-                      },
-                      title: {
-                         text: null
-                      },
-                      credits: {
-                          enabled: false	
-                      },
-                      exporting: {
-                          enabled: false	
-                      },
-                      legend: {
-                          enabled: false	
-                      },
-                      yAxis: {
-                          title: {
-                              text: null
-                          },
-                          labels: {
-                            formatter: function() {
-                              return '$'+this.value +'B';
-                            }
-                          },
-                          max:220,
-                          tickInterval: 75,
-                      },
-                      xAxis: {
-                          labels: {
-                              enabled: false	
-                          },
-                          endOnTick: true,
-                          startOnTick: true,
-                      },
-                      tooltip: {
-                          style: {
-                              fontSize: '9px',	
-                          },
-                          formatter: function() {
-                            var s;
-                            if (this.point.name) { // the pie chart
-                               s = ''+
-                                  this.point.name +': $'+ this.y + ' billion';
-                            } else {
-                               s = ''+
-                                  this.series.name  +': '+ this.y;
-                            }
-                            return s;
-                         }
-                      },
-                      plotOptions: {
-                          column: {
-                              pointWidth: 25,
-                              pointPadding: .5,
-                              groupPadding: .3,
-                              minPointLength: 1,
-                          }
-                      },
-                      series: [{
-                         type: 'pie',
-                         name: 'Budget slice',
-                         data: [{
-                            name: 'Total assets spending',
-                            y: 330.194,
-                         }, {
-                            name: 'Homeownership spending',
-                            y: 211.201,
-                         }],
-                         center: [20, 28],
-                         spacingLeft: 100,
-                         size: 40,
-                         showInLegend: false,
-                         dataLabels: {
-                            enabled: false
-                         },
-                         borderColor: '#000000',
-                      },{
-                         type: 'column',
-                         name: 'Tax spending',
-                         borderColor: '#000000',
-                         data: [209.3]
-                      }, {
-                         type: 'column',
-                         name: 'Direct spending',
-                         borderColor: '#000000',
-                         data: [1.901]
-                      },]
-                   });
-                });
-              </script>
               <div id="homeownershipModal" class="modal hide fade">
                 <div class="modal-header">
                   <a class="close" data-dismiss="modal">&times;</a>
@@ -611,103 +329,6 @@
           <div class="section-header">
             <h2 class="section-title">Post-secondary Education</h2>
             <div class="staple">
-			  <script>
-              var chart;
-                $(document).ready(function() {
-                   chart = new Highcharts.Chart({
-                      chart: {
-                         renderTo: 'postEdGraph',
-                         plotBackgroundColor: null,
-                         plotBorderWidth: null,
-                         spacingRight:100
-                      },
-                      title: {
-                         text: null
-                      },
-                      credits: {
-                          enabled: false	
-                      },
-                      exporting: {
-                          enabled: false	
-                      },
-                      legend: {
-                          enabled: false	
-                      },
-                      yAxis: {
-                          title: {
-                              text: null
-                          },
-                          labels: {
-                            formatter: function() {
-                              return '$'+this.value +'B';
-                            }
-                          },
-                          max:220,
-                          tickInterval: 75,
-                      },
-                      xAxis: {
-                          labels: {
-                              enabled: false	
-                          },
-                          endOnTick: true,
-                          startOnTick: true,
-                      },
-                      tooltip: {
-                          style: {
-                              fontSize: '9px',	
-                          },
-                          formatter: function() {
-                            var s;
-                            if (this.point.name) { // the pie chart
-                               s = ''+
-                                  this.point.name +': $'+ this.y + ' billion';
-                            } else {
-                               s = ''+
-                                  this.series.name  +': '+ this.y;
-                            }
-                            return s;
-                         }
-                      },
-                      plotOptions: {
-                          column: {
-                              pointWidth: 25,
-                              pointPadding: .5,
-                              groupPadding: .3,
-                              minPointLength: 1,
-                          }
-                      },
-                      series: [{
-                         type: 'pie',
-                         name: 'Budget slice',
-                         data: [{
-                            name: 'Total assets spending',
-                            y: 484.431,
-                         }, {
-                            name: 'Post-secondary education spending',
-                            y: 56.964,
-                         }],
-                         center: [20, 28],
-                         spacingLeft: 100,
-                         size: 40,
-                         showInLegend: false,
-                         dataLabels: {
-                            enabled: false
-                         },
-                         borderColor: '#000000',
-                      },{
-                         type: 'column',
-                         name: 'Tax spending',
-                         borderColor: '#000000',
-                         data: [13.58]
-                      }, {
-                         type: 'column',
-                         name: 'Direct spending',
-                         borderColor: '#000000',
-                         data: [43.384]
-                      },]
-                   });
-                });
-              </script>
               <div id="postEdModal" class="modal hide fade">
                 <div class="modal-header">
                   <a class="close" data-dismiss="modal">&times;</a>
@@ -813,103 +434,6 @@
           <div class="section-header">
             <h2 class="section-title">Entrepreneurship</h2>
             <div class="staple">
-			  <script>
-              var chart;
-                $(document).ready(function() {
-                   chart = new Highcharts.Chart({
-                      chart: {
-                         renderTo: 'entrepreneurshipGraph',
-                         plotBackgroundColor: null,
-                         plotBorderWidth: null,
-                         spacingRight:100
-                      },
-                      title: {
-                         text: null
-                      },
-                      credits: {
-                          enabled: false	
-                      },
-                      exporting: {
-                          enabled: false	
-                      },
-                      legend: {
-                          enabled: false	
-                      },
-                      yAxis: {
-                          title: {
-                              text: null
-                          },
-                          labels: {
-                            formatter: function() {
-                              return '$'+this.value +'B';
-                            }
-                          },
-                          max:220,
-                          tickInterval: 75,
-                      },
-                      xAxis: {
-                          labels: {
-                              enabled: false	
-                          },
-                          endOnTick: true,
-                          startOnTick: true,
-                      },
-                      tooltip: {
-                          style: {
-                              fontSize: '9px',	
-                          },
-                          formatter: function() {
-                            var s;
-                            if (this.point.name) { // the pie chart
-                               s = ''+
-                                  this.point.name +': $'+ this.y + ' billion';
-                            } else {
-                               s = ''+
-                                  this.series.name  +': '+ this.y;
-                            }
-                            return s;
-                         }
-                      },
-                      plotOptions: {
-                          column: {
-                              pointWidth: 25,
-                              pointPadding: .5,
-                              groupPadding: .3,
-                              minPointLength: 1,
-                          }
-                      },
-                      series: [{
-                         type: 'pie',
-                         name: 'Budget slice',
-                         data: [{
-                            name: 'Total assets spending',
-                            y: 541.038,
-                         }, {
-                            name: 'Retirement spending',
-                            y: 146.8,
-                         }],
-                         center: [20, 28],
-                         spacingLeft: 100,
-                         size: 40,
-                         showInLegend: false,
-                         dataLabels: {
-                            enabled: false
-                         },
-                         borderColor: '#000000',
-                      },{
-                         type: 'column',
-                         name: 'Tax spending',
-                         borderColor: '#000000',
-                         data: [0]
-                      }, {
-                         type: 'column',
-                         name: 'Direct spending',
-                         borderColor: '#000000',
-                         data: [0.]
-                      },]
-                   });
-                });
-              </script>
               <div id="entrepreneurshipModal" class="modal hide fade">
                 <div class="modal-header">
                   <a class="close" data-dismiss="modal">&times;</a>
@@ -953,10 +477,16 @@
             </div> <!-- end .staple -->
             <p>Since the Great Recession, credit has seized up, leaving even responsible borrowers with good credit and promising ideas without access to the capital needed to move those ideas to market.</p>
           </div> <!-- end .section-header -->
+          <div class="section-body">
+            <div id="entrepreneurship-graph" style="height: 300px;"></div>
+                <div class="alert alert-info">
+                  Attention should be given to facilitating the availability of credit for small business capitalizations, especial micro enterprises that create jobs and respond to needs in the communities where they are located.
+                </div>
+          </div><!-- end .section-body -->
         </div><!-- end .span16 -->
       </div><!-- end .row -->
 
-      <footer>
+      <footer class="footer">
         <p>&copy; Assets 2011</p>
       </footer>
 
