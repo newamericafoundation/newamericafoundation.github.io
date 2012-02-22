@@ -39,7 +39,7 @@ var embedSrc;
 				// 'map5':'http://a.tiles.mapbox.com/v3/mapbox.world-blank-light,newamerica.motw_studentloan_30000.jsonp'
 			};
 			
-			newWaxMap2('http://a.tiles.mapbox.com/v3/mapbox.world-blank-light,newamerica.motw_studentloan.jsonp','mainMap',38, -93, 4, 9);
+			newWaxMap2('http://a.tiles.mapbox.com/v3/mapbox.world-blank-light,newamerica.motw_studentloan.jsonp','mainMap',34.96198612270799, -93.43945312499, 4, 9);
 
 		$( "#slider" ).slider({
 			value:0,
@@ -51,7 +51,7 @@ var embedSrc;
 				mapDivId = 'map'+ui.value;;
 				for(divName in tileSets){
 					$('#'+divName).empty();
-					newWaxMap2(tileSets[divName],divName,38, -93, 4, 9);
+					newWaxMap2(tileSets[divName],divName,34.96198612270799, -93.43945312499, 4, 9);
 					if(divName != mapDivId){
 						$('.wax-legends').fadeOut();
 						$('.zoomer').fadeOut();	
@@ -68,8 +68,8 @@ var embedSrc;
 						// Share
 						$('a.share').click(function(e){
 							e.preventDefault();
-							var latitude = userCenter.lat ||38;
-							var longitude = userCenter.lon ||-93;
+							var latitude = userCenter.lat ||34.96198612270799;
+							var longitude = userCenter.lon ||-93.43945312499;
 							$('#embed-code-field textarea').attr('value',"<iframe width='500' height='300' frameBorder='0' src='"+embedSrc+"#"+userZoom+"/"+latitude+"/"+longitude+"'></iframe>");
 							$('.wax-share').css('display', 'block');
 							$('#embed-code')[0].tabindex = 0;
@@ -93,7 +93,7 @@ var embedSrc;
 			slide: function( event, ui) {
 				var mapDivId='';
 				mapDivId = 'map'+ui.value;				
-				newWaxMap2(tileSets[mapDivId],'mainMap',38, -93, 4, 9);
+				newWaxMap2(tileSets[mapDivId],'mainMap',34.96198612270799, -93.43945312499, 4, 9);
 			}
 		});
 		// Share
