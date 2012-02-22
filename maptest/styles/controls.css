@@ -287,6 +287,10 @@ a.share:active {
   top:10px;
   background-color:transparent;
   background-image:url(images/close.png);
+  height:30px;
+  width:30px;
+  text-indent: -1999px;
+  overflow: hidden;
   }
 
 .wax-share small { color:#999; }
