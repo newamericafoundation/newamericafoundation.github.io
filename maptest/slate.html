@@ -26,7 +26,9 @@
 </style>
 
 <script>
-var userCenter, userZoom;	
+var userCenter=0;
+var userZoom = 4;	
+var embedSrc;
 	$(document).ready(function(){
 			var tileSets ={
 				'map0':'http://a.tiles.mapbox.com/v3/mapbox.world-blank-light,newamerica.motw_studentloan.jsonp',
@@ -46,13 +48,37 @@ var userCenter, userZoom;
 			step: 1,
 			stop: function( event, ui) {
 				var mapDivId='';
-				mapDivId = 'map'+ui.value;
-				
-				
+				mapDivId = 'map'+ui.value;;
 				for(divName in tileSets){
 					$('#'+divName).empty();
-						newWaxMap2(tileSets[divName],divName,38, -93, 4, 9);
-				}
+					newWaxMap2(tileSets[divName],divName,38, -93, 4, 9);
+					if(divName != mapDivId){
+						$('.wax-legends').fadeOut();
+						$('.zoomer').fadeOut();	
+						$('.wax-popup').fadeOut();
+						$('.wax-share').fadeOut();
+					}else{
+						//attach the embed code to the current map
+						$('#'+divName).append("<a href='#' class='share'></a><div class='wax-share' style='display:none;'><div class='share-content'><h3>Share this map</h3><strong>Get the embed code</strong><br><small>Copy and paste this HTML into your website or blog.</small><div id='embed-code-field'><textarea id='embed-code' rows='4' readonly></textarea></div><a href='#' class='close'>Close</a></div></div>");
+					
+						//create the embed src dynamically. this updates the map layer, center, and zoom level
+						embedSrc = tileSets[divName];
+						embedSrc = embedSrc.replace(/jsonp/gi, 'html');
+						
+						// Share
+						$('a.share').click(function(e){
+							e.preventDefault();
+							var latitude = userCenter.lat ||38;
+							var longitude = userCenter.lon ||-93;
+							$('#embed-code-field textarea').attr('value',"<iframe width='500' height='300' frameBorder='0' src='"+embedSrc+"#"+userZoom+"/"+latitude+"/"+longitude+"'></iframe>");
+							$('.wax-share').css('display', 'block');
+							$('#embed-code')[0].tabindex = 0;
+							$('#embed-code')[0].select();
+							
+							$('a.close').click(function(e) {closer(e)});
+						});
+					};
+				};
 				
 				$('.activeMap').fadeOut(100, function(){
 					$('.activeMap').css('z-index',-1).show();
@@ -66,16 +92,31 @@ var userCenter, userZoom;
 			},
 			slide: function( event, ui) {
 				var mapDivId='';
-				console.log(ui.value)
-				mapDivId = 'map'+ui.value;
-				$('.wax-legends').remove();
-				$('.zoomer').remove();	
-				$('.wax-popup').remove();
+				mapDivId = 'map'+ui.value;				
 				newWaxMap2(tileSets[mapDivId],'mainMap',38, -93, 4, 9);
 			}
 		});
+		// Share
+		$('a.share').click(function(e){
+			e.preventDefault();
+			var latitude = userCenter.lat ||38;
+			var longitude = userCenter.lon ||-93;
+			$('#embed-code-field textarea').attr('value',"<iframe width='500' height='300' frameBorder='0' src='http://a.tiles.mapbox.com/v3/mapbox.world-blank-light,newamerica.motw_studentloan#"+userZoom+"/"+latitude+"/"+longitude+"'></iframe>");
+			$('.wax-share').css('display', 'block');
+			$('#embed-code')[0].tabindex = 0;
+			$('#embed-code')[0].select();
+
+		$('a.close').click(function(e) {closer(e)});
+	})
+
+		
 			
 	});
+	
+	function closer(e) {
+	        if (e) {e.preventDefault();}
+	        $('.wax-share').css('display', 'none');
+	}
 	
 	function newWaxMap2(url, mapContainer, startLat, startLng, minZoom, maxZoom){
 	
@@ -99,7 +140,6 @@ var userCenter, userZoom;
 				m.setCenterZoom(userCenter, userZoom);			
 			}else{
 				m.setCenterZoom(new mm.Location(startLat, startLng), minZoom);
-				//add the slow zoom in using easey
 			}
 			m.addCallback('panned', function(m) {
 			    // respond to new center: set vars so map will stay put as the layers change
@@ -164,17 +204,16 @@ var userCenter, userZoom;
 		<div id="map4" class="map" style="width:916px;height:450px;position:absolute;z-index:-1;"></div>
 		<div id="map5" class="map" style="width:916px;height:450px;position:absolute;z-index:-1;"></div>
 	 	<div id="mainMap" class="map" style="width:916px;height:450px;">
-				<!-- <a href='#' class='share'></a>
-								<div class='wax-share' style='display:none;'>
-								    <div class='share-content'>
-								      <h3>Share this map</h3>
-								      <strong>Get the embed code</strong><br><small>Copy and paste this HTML into your website or blog.</small>
-								      <div id='embed-code-field'><textarea id='embed-code' rows='4' readonly></textarea>
-								      </div>
-								      <a href='#' class='close'>Close</a>
-								    </div>
-								
-								  </div> -->
+			<a href='#' class='share'></a>
+				<div class='wax-share' style='display:none;'>
+				    <div class='share-content'>
+				      <h3>Share this map</h3>
+				      <strong>Get the embed code</strong><br><small>Copy and paste this HTML into your website or blog.</small>
+				      <div id='embed-code-field'><textarea id='embed-code' rows='4' readonly></textarea></div>
+				      <a href='#' class='close'>Close</a>
+				    </div>
+			
+				  </div>
 		        </div> 
             <div class="clearing"></div>
 
