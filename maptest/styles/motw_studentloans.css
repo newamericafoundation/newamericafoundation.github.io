@@ -62,10 +62,11 @@
 	right: 0;
 	left: 15px;
 	width: 485px;
+	overflow: hidden;
 }
 
 .wax-legend {
-	width: 460px !important;	
+	width: 463px !important;
 }
 
 .wax-legend #for-embed {
