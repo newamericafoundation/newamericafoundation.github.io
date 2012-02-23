@@ -157,7 +157,7 @@ $(document).ready(function() {
 			type: 'pie',
 			name: 'Percent Home Equity',
 			data: [
-				['Other',   17.0],
+				['',   17.0],
 				['Home Equity', 83]
 
 			]
@@ -200,7 +200,7 @@ $(document).ready(function() {
 			type: 'pie',
 			name: 'Percent Home Equity',
 			data: [
-				['Other',   4],
+				['',   4],
 				['Home Equity', 96]
 
 			]
@@ -243,7 +243,7 @@ $(document).ready(function() {
 			type: 'pie',
 			name: 'Percent Home Equity',
 			data: [
-				['Other',   10],
+				['',   10],
 				['Home Equity', 90]
 
 			]
