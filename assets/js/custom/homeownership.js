@@ -145,8 +145,8 @@ $(document).ready(function() {
 				cursor: 'pointer',
 				dataLabels: {
 					enabled: true,
-					color: '#000000',
-					connectorColor: '#000000',
+					distance: -30,
+					color: 'white',
 					formatter: function() {
 						return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %';
 					}
@@ -188,8 +188,8 @@ $(document).ready(function() {
 				cursor: 'pointer',
 				dataLabels: {
 					enabled: true,
-					color: '#000000',
-					connectorColor: '#000000',
+					distance: -30,
+					color: 'white',
 					formatter: function() {
 						return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %';
 					}
@@ -231,8 +231,8 @@ $(document).ready(function() {
 				cursor: 'pointer',
 				dataLabels: {
 					enabled: true,
-					color: '#000000',
-					connectorColor: '#000000',
+					distance: -30,
+					color: 'white',
 					formatter: function() {
 						return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %';
 					}
