@@ -132,7 +132,7 @@ $(document).ready(function() {
 			plotShadow: false
 		},
 		title: {
-			text: 'White'
+			text: ''
 		},
 		tooltip: {
 			formatter: function() {
@@ -176,7 +176,7 @@ $(document).ready(function() {
 			plotShadow: false
 		},
 		title: {
-			text: 'Hispanic'
+			text: ''
 		},
 		tooltip: {
 			formatter: function() {
@@ -220,7 +220,7 @@ $(document).ready(function() {
 			plotShadow: false
 		},
 		title: {
-			text: 'Black'
+			text: ''
 		},
 		tooltip: {
 			formatter: function() {
