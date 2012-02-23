@@ -145,8 +145,9 @@ $(document).ready(function() {
 				cursor: 'pointer',
 				dataLabels: {
 					enabled: true,
-					distance: -30,
-					color: 'white',
+					color: '#000000',
+					connectorColor: '#000000',
+					distance:20,
 					formatter: function() {
 						return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %';
 					}
@@ -157,7 +158,7 @@ $(document).ready(function() {
 			type: 'pie',
 			name: 'Percent Home Equity',
 			data: [
-				['',   17.0],
+				['Other',   17.0],
 				['Home Equity', 83]
 
 			]
@@ -188,8 +189,9 @@ $(document).ready(function() {
 				cursor: 'pointer',
 				dataLabels: {
 					enabled: true,
-					distance: -30,
-					color: 'white',
+					color: '#000000',
+					connectorColor: '#000000',
+					distance:20,
 					formatter: function() {
 						return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %';
 					}
@@ -200,7 +202,7 @@ $(document).ready(function() {
 			type: 'pie',
 			name: 'Percent Home Equity',
 			data: [
-				['',   4],
+				['Other',   4],
 				['Home Equity', 96]
 
 			]
@@ -231,8 +233,9 @@ $(document).ready(function() {
 				cursor: 'pointer',
 				dataLabels: {
 					enabled: true,
-					distance: -30,
-					color: 'white',
+					color: '#000000',
+					connectorColor: '#000000',
+					distance:20,
 					formatter: function() {
 						return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %';
 					}
@@ -243,7 +246,7 @@ $(document).ready(function() {
 			type: 'pie',
 			name: 'Percent Home Equity',
 			data: [
-				['',   10],
+				['Other',   10],
 				['Home Equity', 90]
 
 			]
