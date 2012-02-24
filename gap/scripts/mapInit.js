@@ -1,4 +1,3 @@
-$(document).ready(function() {
 	var cycleMap, userCenter, userZoom;
 	var urls = {
 		'2011':'http://a.tiles.mapbox.com/v3/newamerica.gssp.jsonp'
@@ -249,4 +248,3 @@ $(document).ready(function() {
 			}]
 		});
 	}
-});

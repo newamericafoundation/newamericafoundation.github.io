@@ -7,16 +7,18 @@
   <script src='scripts/mapInit.js' type='text/javascript'></script>
   <script type="text/javascript" src="scripts/highcharts/highcharts.js"></script>
   <script type="text/javascript" src="scripts/highcharts/themes/transparent.js"></script>
-  <script type="text/javascript" src="scripts/default-tooltip.js"></script>
+  <!-- <script type="text/javascript" src="scripts/default-tooltip.js"></script>-->
   <link href='styles/style.css' rel='stylesheet' type='text/css' />
   <!-- <link href='styles/controls.css' rel='stylesheet' type='text/css' /> -->
 <script>
-$('#layer1').click(function(){
-	console.log('click')
-	buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-country-mapping.jsonp');
-});
-$('#layer2').click(function(){
-	buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-country.jsonp');
+$(document).ready(function() {
+	$('#layer1').click(function(){
+		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp.jsonp');
+	});
+	$('#layer2').click(function(){
+		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-country-mapping.jsonp');
+	});
+
 });
 
 
@@ -28,8 +30,8 @@ $('#layer2').click(function(){
 	
 	<div id="main" class="layout-inner">
 		<div id="layerSwitcher">
-			<span id="layer1"><button>Layer 1</button></span>
-			<span id="layer2"><button>Layer 2</button></span>
+			<span id="layer1"><button>Payment Infrastructure</button></span>
+			<span id="layer2"><button>Composite Financial Access</button></span>
 		</div>
 		<div id="header">
 			<h1>Payment Infrastructure</h1>
