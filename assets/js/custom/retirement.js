@@ -55,7 +55,6 @@ var chart;
 		   renderTo: 'top-quartile',
 		   plotBackgroundColor: null,
 		   plotBorderWidth: null,
-		   spacingRight:100
 		},
 		title: {
 		   text: 'Top quartile'
@@ -80,14 +79,10 @@ var chart;
 			},
 			max:90,
 			min:30,
-//			tickInterval: 75,
+			startOnTick: false,
+			tickInterval: 30
 		},
 		xAxis: {
-//			labels: {
-//				enabled: false	
-//			},
-//			endOnTick: true,
-//			startOnTick: true,
 			categories: ["'00", "'08"]
 		},
 		tooltip: {
@@ -107,7 +102,7 @@ var chart;
 		   }
 		},
 		plotOptions: {
-			line: {
+			area: {
 				pointWidth: 25,
 				pointPadding: .5,
 				groupPadding: .3,
@@ -118,8 +113,15 @@ var chart;
 			items: [{
 				html: '2000',
 				style: {
-					left: '40px',
-					top: '8px',
+					left: '44px',
+					top: '-17px',
+					color: 'black'
+				}
+			},{
+				html: '2008',
+				style: {
+					left: '634px',
+					top: '-17px',
 					color: 'black'
 				}
 			}]
@@ -156,7 +158,7 @@ var chart;
 			  y: 31.4,
 			  color: '#EEEEEE'
 		   }],
-		   center: [550, 30],
+		   center: [650, 30],
 		   spacingLeft: 100,
 		   size: 60,
 		   showInLegend: false,
@@ -165,7 +167,7 @@ var chart;
 		   },
 		   borderColor: '#000000',
 		},{
-			type: 'line',
+			type: 'area',
 			data: [80.2, 72.9],
 			color: '#0D253F',
 		}]
@@ -179,7 +181,6 @@ var chart;
 		   renderTo: 'second-quartile',
 		   plotBackgroundColor: null,
 		   plotBorderWidth: null,
-		   spacingRight:100
 		},
 		title: {
 		   text: 'Top quartile'
@@ -204,14 +205,10 @@ var chart;
 			},
 			max:90,
 			min:30,
-//			tickInterval: 75,
+			startOnTick: false,
+			tickInterval: 30
 		},
 		xAxis: {
-//			labels: {
-//				enabled: false	
-//			},
-//			endOnTick: true,
-//			startOnTick: true,
 			categories: ["'00", "'08"]
 		},
 		tooltip: {
@@ -231,27 +228,43 @@ var chart;
 		   }
 		},
 		plotOptions: {
-			line: {
+			area: {
 				pointWidth: 25,
 				pointPadding: .5,
 				groupPadding: .3,
 				minPointLength: 1,
 			}
 		},
+		labels: {
+			items: [{
+				html: '2000',
+				style: {
+					left: '44px',
+					top: '-17px',
+					color: 'black'
+				}
+			},{
+				html: '2008',
+				style: {
+					left: '634px',
+					top: '-17px',
+					color: 'black'
+				}
+			}]
+		},
 		series: [{
 		   type: 'pie',
 		   name: 'Employee retirement plans',
 		   data: [{
 			  name: 'Employee participation',
-			  y: 75.5,
+			  y: 67.1,
 			  color: '#660033'
 		   }, {
 			  name: 'No participation',
-			  y: 24.5,
+			  y: 32.9,
 			  color: '#EEEEEE'
 		   }],
 		   center: [60, 30],
-		   spacingLeft: 100,
 		   size: 60,
 		   showInLegend: false,
 		   dataLabels: {
@@ -263,14 +276,14 @@ var chart;
 		   name: 'Employee retirement plans',
 		   data: [{
 			  name: 'Employee participation',
-			  y: 68.6,
+			  y: 60.1,
 			  color: '#660033'
 		   }, {
 			  name: 'No participation',
-			  y: 31.4,
+			  y: 39.9,
 			  color: '#EEEEEE'
 		   }],
-		   center: [550, 30],
+		   center: [650, 30],
 		   spacingLeft: 100,
 		   size: 60,
 		   showInLegend: false,
@@ -279,8 +292,8 @@ var chart;
 		   },
 		   borderColor: '#000000',
 		},{
-			type: 'line',
-			data: [80.2, 72.9],
+			type: 'area',
+			data: [74.3, 67.3],
 			color: '#0D253F',
 		}]
 	 });
@@ -293,7 +306,6 @@ var chart;
 		   renderTo: 'third-quartile',
 		   plotBackgroundColor: null,
 		   plotBorderWidth: null,
-		   spacingRight:100
 		},
 		title: {
 		   text: 'Top quartile'
@@ -318,14 +330,10 @@ var chart;
 			},
 			max:90,
 			min:30,
-//			tickInterval: 75,
+			startOnTick: false,
+			tickInterval: 30
 		},
 		xAxis: {
-//			labels: {
-//				enabled: false	
-//			},
-//			endOnTick: true,
-//			startOnTick: true,
 			categories: ["'00", "'08"]
 		},
 		tooltip: {
@@ -345,23 +353,40 @@ var chart;
 		   }
 		},
 		plotOptions: {
-			line: {
+			area: {
 				pointWidth: 25,
 				pointPadding: .5,
 				groupPadding: .3,
 				minPointLength: 1,
 			}
 		},
+		labels: {
+			items: [{
+				html: '2000',
+				style: {
+					left: '44px',
+					top: '-17px',
+					color: 'black'
+				}
+			},{
+				html: '2008',
+				style: {
+					left: '634px',
+					top: '-17px',
+					color: 'black'
+				}
+			}]
+		},
 		series: [{
 		   type: 'pie',
 		   name: 'Employee retirement plans',
 		   data: [{
 			  name: 'Employee participation',
-			  y: 75.5,
+			  y: 55.5,
 			  color: '#660033'
 		   }, {
 			  name: 'No participation',
-			  y: 24.5,
+			  y: 44.5,
 			  color: '#EEEEEE'
 		   }],
 		   center: [60, 30],
@@ -377,14 +402,14 @@ var chart;
 		   name: 'Employee retirement plans',
 		   data: [{
 			  name: 'Employee participation',
-			  y: 68.6,
+			  y: 49.7,
 			  color: '#660033'
 		   }, {
 			  name: 'No participation',
-			  y: 31.4,
+			  y: 50.3,
 			  color: '#EEEEEE'
 		   }],
-		   center: [550, 30],
+		   center: [650, 30],
 		   spacingLeft: 100,
 		   size: 60,
 		   showInLegend: false,
@@ -393,8 +418,8 @@ var chart;
 		   },
 		   borderColor: '#000000',
 		},{
-			type: 'line',
-			data: [80.2, 72.9],
+			type: 'area',
+			data: [66, 59.2],
 			color: '#0D253F',
 		}]
 	 });
@@ -407,7 +432,6 @@ var chart;
 		   renderTo: 'bottom-quartile',
 		   plotBackgroundColor: null,
 		   plotBorderWidth: null,
-		   spacingRight:100
 		},
 		title: {
 		   text: 'Top quartile'
@@ -432,14 +456,10 @@ var chart;
 			},
 			max:90,
 			min:30,
-//			tickInterval: 75,
+			startOnTick: false,
+			tickInterval: 30
 		},
 		xAxis: {
-//			labels: {
-//				enabled: false	
-//			},
-//			endOnTick: true,
-//			startOnTick: true,
 			categories: ["'00", "'08"]
 		},
 		tooltip: {
@@ -459,23 +479,40 @@ var chart;
 		   }
 		},
 		plotOptions: {
-			line: {
+			area: {
 				pointWidth: 25,
 				pointPadding: .5,
 				groupPadding: .3,
 				minPointLength: 1,
 			}
 		},
+		labels: {
+			items: [{
+				html: '2000',
+				style: {
+					left: '44px',
+					top: '-17px',
+					color: 'black'
+				}
+			},{
+				html: '2008',
+				style: {
+					left: '634px',
+					top: '-17px',
+					color: 'black'
+				}
+			}]
+		},
 		series: [{
 		   type: 'pie',
 		   name: 'Employee retirement plans',
 		   data: [{
 			  name: 'Employee participation',
-			  y: 75.5,
+			  y: 32.1,
 			  color: '#660033'
 		   }, {
 			  name: 'No participation',
-			  y: 24.5,
+			  y: 67.9,
 			  color: '#EEEEEE'
 		   }],
 		   center: [60, 30],
@@ -491,15 +528,14 @@ var chart;
 		   name: 'Employee retirement plans',
 		   data: [{
 			  name: 'Employee participation',
-			  y: 68.6,
+			  y: 27.7,
 			  color: '#660033'
 		   }, {
 			  name: 'No participation',
-			  y: 31.4,
+			  y: 72.3,
 			  color: '#EEEEEE'
 		   }],
-		   center: [550, 30],
-		   spacingLeft: 100,
+		   center: [650, 30],
 		   size: 60,
 		   showInLegend: false,
 		   dataLabels: {
@@ -507,8 +543,8 @@ var chart;
 		   },
 		   borderColor: '#000000',
 		},{
-			type: 'line',
-			data: [80.2, 72.9],
+			type: 'area',
+			data: [44.9, 38.4],
 			color: '#0D253F',
 		}]
 	 });
