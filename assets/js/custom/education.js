@@ -8,8 +8,10 @@ $(document).ready(function() {
 			type: 'area',
 		},
 		title: {
-			text: 'Percentage high school students enrolled in a 2 or 4 year college after graduation',
-			x: -20 //center
+			text: 'Students enrolled in college after graduation',
+		},
+		subtitle: {
+			text: 'Percentage',
 		},
 		xAxis: {
 			categories: ['2005', '2006', '2007', '2008', '2009']

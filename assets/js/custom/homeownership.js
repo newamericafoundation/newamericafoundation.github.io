@@ -14,13 +14,15 @@ $(document).ready(function() {
 			categories: ['Below 10', '10-20', '20-30', '30-40', '40-50', '50-75', '75-100', '100-200', '200 and over'],
 			title: {
 				text: null
-			}
+			},
+			reversed: true
 		},
 		yAxis: {
 			min: 0,
 			title: {
 				text: null,
-			}
+			},
+			reversed: true
 		},
 		tooltip: {
 			formatter: function() {
@@ -73,16 +75,17 @@ $(document).ready(function() {
 			text: 'Value of the Mortgage Interest and Real Estate Deductions by Income, FY 2006'
 		},
 		xAxis: {
-			categories: ['Below 10', '10-20', '20-30', '30-40', '40-50', '50-75', '75-100', '100-200', '200-500', '500-1,000', 'Over 1 million'],
+			categories: ['Below 10', '10-20', '20-30', '30-40', '40-50', '50-75', '75-100', '100-200', '200 and over'],
 			title: {
 				text: null
-			}
+			},
+			opposite: true
 		},
 		yAxis: {
 			min: 0,
 			title: {
-				text: 'Percentage',
-			}
+				text: null
+			},
 		},
 		tooltip: {
 			formatter: function() {
@@ -116,7 +119,7 @@ $(document).ready(function() {
 		},
 			series: [{
 			name: 'Mortgage Interest Deduction',
-			data: [2.3, 6.2, 11.8, 21.8, 31.7, 45.7, 62.9, 75.1, 76.1, 70.2, 64.1]
+			data: [2.3, 6.2, 11.8, 21.8, 31.7, 45.7, 62.9, 75.1, 70.1]
 		}]
 	});
 });
