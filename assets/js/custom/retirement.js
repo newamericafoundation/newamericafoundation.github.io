@@ -183,7 +183,7 @@ var chart;
 		   plotBorderWidth: null,
 		},
 		title: {
-		   text: 'Top quartile'
+		   text: 'Second quartile'
 		},
 		credits: {
 			enabled: false	
@@ -308,7 +308,7 @@ var chart;
 		   plotBorderWidth: null,
 		},
 		title: {
-		   text: 'Top quartile'
+		   text: 'Third quartile'
 		},
 		credits: {
 			enabled: false	
@@ -434,7 +434,7 @@ var chart;
 		   plotBorderWidth: null,
 		},
 		title: {
-		   text: 'Top quartile'
+		   text: 'Bottom quartile'
 		},
 		credits: {
 			enabled: false	
