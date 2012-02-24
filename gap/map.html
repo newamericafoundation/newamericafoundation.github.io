@@ -14,6 +14,7 @@
 	<script src="js/bootstrap.js"></script>
 	<script src="js/bootstrap-twipsy.js"></script>
 	<script src="js/bootstrap-popover.js"></script>
+	<script src="js/bootstrap-dropdown.js"></script>
 	<script src="js/bootstrap-scrollspy.js"></script>
 	<script src="js/jquery/jquery.tablesorter.min.js"></script>
   <!-- <script type="text/javascript" src="scripts/default-tooltip.js"></script>-->
@@ -22,14 +23,25 @@
 <script>
 buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp.jsonp');
 $(document).ready(function() {
+	$('.dropdown-toggle').dropdown()
 	$('#layer1').click(function(){
 		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp.jsonp');
-		$('button').removeClass('btn-primary');
+		$('a').removeClass('btn-primary');
 		$(this).toggleClass('btn-primary');
 	});
 	$('#layer2').click(function(){
 		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-country-mapping.jsonp');
-		$('button').removeClass('btn-primary');
+		$('a').removeClass('btn-primary');
+		$(this).toggleClass('btn-primary');
+	});
+	$('#layer3').click(function(){
+		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-fl.jsonp');
+		$('a').removeClass('btn-primary');
+		$(this).toggleClass('btn-primary');
+	});
+	$('#layer4').click(function(){
+		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-mobile.jsonp');
+		$('a').removeClass('btn-primary');
 		$(this).toggleClass('btn-primary');
 	});
 
@@ -57,8 +69,52 @@ $(document).ready(function() {
 	<div class="container-fluid">
 		<div id="infoBox" class="infoBar row-fluid">
 			<div id="layerSwitcher" class="span12 navbar-inner">
-				<span><button id="layer1" class="btn btn-primary">Payment Infrastructure</button></span>
-				<span><button id="layer2" class="btn">Composite Financial Access</button></span>
+				<div class="btn-toolbar">
+					<a id="layer1" class="btn btn-primary">Payment Infrastructure</a>
+					<a id="layer2" class="btn">Composite Financial Access</a>
+					<a id="layer3" class="btn">Financial Literacy</a>
+					<a id="layer4" class="btn">Mobile Penetration</a>
+					<div class="btn-group">
+					  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+					    Commercial Banks
+					    <span class="caret"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						    <li><a href="#">Sq Km</a></li>
+							<li><a href="#">1000 Adults</a></li>
+						  </ul>
+					</div>
+					<div class="btn-group">
+					  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+					    Alternative Financial Institutions
+					    <span class="caret"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						    <li><a href="#">Sq Km</a></li>
+							<li><a href="#">1000 Adults</a></li>
+						  </ul>
+					</div>
+					<div class="btn-group">
+					  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+					    ATM
+					    <span class="caret"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						    <li><a href="#">Sq Km</a></li>
+							<li><a href="#">1000 Adults</a></li>
+						  </ul>
+					</div>
+					<div class="btn-group">
+					  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+					    POS
+					    <span class="caret"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						    <li><a href="#">Sq Km</a></li>
+							<li><a href="#">1000 Adults</a></li>
+						  </ul>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div id="mainText" class="row-fluid">
