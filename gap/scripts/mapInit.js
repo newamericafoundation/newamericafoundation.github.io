@@ -1,13 +1,12 @@
 $(document).ready(function() {
 	var cycleMap, userCenter, userZoom;
 	var urls = {
-		'2011':'http://a.tiles.mapbox.com/v3/newamerica.map-of-the-week-poverty-change.jsonp'
+		'2011':'http://a.tiles.mapbox.com/v3/newamerica.gssp.jsonp'
 	};
 	buildMap(urls[2011]);
 	
 	function buildMap(url){	
 		var m;	
-		console.log(url)
 		$('#mainMap-layers').fadeOut(2000, function(){
 			$(this).remove();
 		});	
@@ -138,7 +137,7 @@ $(document).ready(function() {
 			m.setCenterZoom(userCenter, userZoom);
 		}else{
 			m.setCenterZoom(new mm.Location(38.457303314891604, -93.99900468749993), 2);
-			easey.slow(m,{location:new mm.Location(50, 20),time: 2000,zoom:4 });
+			easey.slow(m,{location:new mm.Location(0, 0),time: 2000,zoom:2 });
 		}
 			m.addCallback('drawn', function(m) {
 			    // respond to new center: set vars so map will stay put as the layers change
