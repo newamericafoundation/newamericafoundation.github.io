@@ -1,16 +1,26 @@
 <html>
 <head>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> 
-  <script src='scripts/modestmaps.min.js' type='text/javascript'></script>
-  <script src='scripts/wax.mm.js' type='text/javascript'></script>
-  <script src='scripts/easey.js' type='text/javascript'></script>
-  <script src='scripts/mapInit.js' type='text/javascript'></script>
+	 
+  <link rel="stylesheet" href="css/bootstrap.css" media="all" />
+ <link href='css/style.css' rel='stylesheet' type='text/css' />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src='js/modestmaps.min.js' type='text/javascript'></script>
+  <script src='js/wax.mm.js' type='text/javascript'></script>
+  <script src='js/easey.js' type='text/javascript'></script>
+  <script src='js/mapInit.js' type='text/javascript'></script>
   <script type="text/javascript" src="scripts/highcharts/highcharts.js"></script>
   <script type="text/javascript" src="scripts/highcharts/themes/transparent.js"></script>
+
+	<script src="js/bootstrap.js"></script>
+	<script src="js/bootstrap-twipsy.js"></script>
+	<script src="js/bootstrap-popover.js"></script>
+	<script src="js/bootstrap-scrollspy.js"></script>
+	<script src="js/jquery/jquery.tablesorter.min.js"></script>
   <!-- <script type="text/javascript" src="scripts/default-tooltip.js"></script>-->
-  <link href='styles/style.css' rel='stylesheet' type='text/css' />
+
   <!-- <link href='styles/controls.css' rel='stylesheet' type='text/css' /> -->
 <script>
+buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp.jsonp');
 $(document).ready(function() {
 	$('#layer1').click(function(){
 		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp.jsonp');
@@ -28,45 +38,35 @@ $(document).ready(function() {
 </head>
 <body>
 	
-	<div id="main" class="layout-inner">
-		<div id="layerSwitcher">
-			<span id="layer1"><button>Payment Infrastructure</button></span>
-			<span id="layer2"><button>Composite Financial Access</button></span>
+	<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+			<h1><a href="#">Payment Infrastructure</a></h1>
 		</div>
-		<div id="header">
-			<h1>Payment Infrastructure</h1>
-		</div>
-		<div id="mainMap" class="map"></div>
-		<a href='#' class='share'>Share +</a>
-		<div class='wax-share' style='display:none;'>
-		    <div class='share-content'>
-		      <h3>Share this map</h3>
-		      <!-- <p>
-		      		        <a id='facebook' target='_blank'>Facebook</a>
-		      		        <a id='twitter' target='_blank'>Twitter</a>
-		      		      </p> -->
-		      <strong>Get the embed code</strong><br><small>Copy and paste this HTML into your website or blog.</small>
-		      <div id='embed-code-field'><textarea id='embed-code' rows='4' readonly></textarea>
-		      </div>
-		      <a href='#' class='close'>Close</a>
-		    </div>
-		  </div>
-		<div id="infoBox" class="infoBar">
-			<div class="mainLegend">
-            	<div class="intro" style="position:absolute;"><p>Intro to Payment Infrastructure</p></div>
-				<div id="chartContainer" style="width: 50%; height: 130px; margin: 10px;float:right;"></div>
-			</div>
+	  </div>
+	</div>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div id="mainMap" class="map span12"></div>
 		</div>
 	</div>
-<!-- <script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-368921-3");
-pageTracker._setDomainName(".newamerica.net");
-pageTracker._trackPageview();
-} catch(err) {}</script> -->
+	<div class="container-fluid">
+		<div id="infoBox" class="infoBar row-fluid">
+			<div id="layerSwitcher" class="span12 navbar-inner">
+				<span id="layer1"><button class="btn">Payment Infrastructure</button></span>
+				<span id="layer2"><button class="btn">Composite Financial Access</button></span>
+			</div>
+			<div class="row-fluid">
+				<div class="mainLegend" class="span12">
+	            	<p>Intro to Payment Infrastructure</p>
+				</div>
+			</div>
+		</div>
+		<div id="mainText" class="row-fluid">
+			<span class="span4"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</span>
+			<span class="span8"><h1>Main Text</h1></span>
+		</div>
+	</div>
 </body>
 </html>

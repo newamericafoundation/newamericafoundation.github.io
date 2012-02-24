@@ -1,9 +1,9 @@
 body {
-  color: #333;
+/*  color: #333;
 	width:100%;
 	height:100%;
 	margin: 0px;
-	overflow: hidden;
+	overflow: hidden;*/
   }
 
 /* --------------------------
@@ -167,10 +167,12 @@ a.close:active {
   Map
 ----------------------------- */
 .map {
-	position:absolute;
+/*	position:absolute;
 	top:60px;
 	bottom:150px;
-	width:100%;
+	width:100%;*/
+	height:400px;
+	top:60px;
 }
 a.zoomer {
   text-decoration:none;
@@ -311,19 +313,23 @@ a.zoomout {
 ----------------------------- */
 
 #infoBox{
-	height:150px;
-	width:100%;	
-	color:#f4f4f4;
+padding-top:60px;
+	/*
 	position:absolute;
 	bottom:0px;
 	left:0px;
-	background:#0D253F;
-	background:-moz-linear-gradient(top, #163e69  0%, #0D253F 100%);
-	background:-webkit-gradient(linear, left top, left bottom, from(#163e69), to(#0D253F));
+	min-height:150px;
+		width:100%;	
+		color:#f4f4f4;
+		
+
+		background:#0D253F;
+		background:-moz-linear-gradient(top, #163e69  0%, #0D253F 100%);
+		background:-webkit-gradient(linear, left top, left bottom, from(#163e69), to(#0D253F));*/
 }
 
 #infoBox * {
-	overflow:hidden;
+/*	overflow:hidden;*/
 }
 
 .mainLegend{
@@ -492,3 +498,14 @@ a.share:active {
   padding:4px;
   width:310px;
   }
+
+
+/* --------------------------
+    Layer Switcher
+----------------------------- */
+
+#layerSwitcher{
+	padding:5px;
+}
+
+
