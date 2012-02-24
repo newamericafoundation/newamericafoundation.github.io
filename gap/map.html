@@ -24,9 +24,13 @@ buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp.jsonp');
 $(document).ready(function() {
 	$('#layer1').click(function(){
 		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp.jsonp');
+		$('button').removeClass('disabled');
+		$(this).toggleClass('disabled');
 	});
 	$('#layer2').click(function(){
 		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-country-mapping.jsonp');
+		$('button').removeClass('disabled');
+		$(this).toggleClass('disabled');
 	});
 
 });
@@ -53,8 +57,8 @@ $(document).ready(function() {
 	<div class="container-fluid">
 		<div id="infoBox" class="infoBar row-fluid">
 			<div id="layerSwitcher" class="span12 navbar-inner">
-				<span id="layer1"><button class="btn">Payment Infrastructure</button></span>
-				<span id="layer2"><button class="btn">Composite Financial Access</button></span>
+				<span><button id="layer1" class="btn">Payment Infrastructure</button></span>
+				<span><button id="layer2" class="btn">Composite Financial Access</button></span>
 			</div>
 			<div class="row-fluid">
 				<div class="mainLegend" class="span12">
