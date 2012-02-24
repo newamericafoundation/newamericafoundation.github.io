@@ -35,7 +35,7 @@ $(document).ready(function() {
 						    } else {
 						        this._currentTooltip = this.getTooltip(feature, context)
 						    }
-							buildChart()
+							//buildChart()
 							$('#chartContainer').show();
 						$('.debt-gdp-timeline').children('span.chart').empty();
 						},
