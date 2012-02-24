@@ -15,8 +15,8 @@ $(document).ready(function() {
 		$('.wax-tooltip .wax-tooltip-0 .wax-popup').remove();
 		
 		wax.tilejson(url, function(tilejson) {
-			tilejson.minzoom = 4;
-			tilejson.maxzoom = 6;
+			tilejson.minzoom = 2;
+			tilejson.maxzoom = 5;
 			var mm = com.modestmaps;
 			m = new mm.Map('mainMap',
 				new wax.mm.connector(tilejson));
