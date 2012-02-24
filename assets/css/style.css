@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /* CSS Document */
 
+.alert {
+padding: 8px 14px !important;	
+}
+
 .section-header {
 	width: 100%;
 	height:110px;

@@ -30,14 +30,14 @@ $(document).ready(function() {
 					this.x +': '+ this.y +'%';
 			}
 		},
-		legend: {
-			layout: 'vertical',
-			align: 'right',
-			verticalAlign: 'top',
-			x: -10,
-			y: 100,
-			borderWidth: 0
-		},
+//		legend: {
+//			layout: 'vertical',
+//			align: 'right',
+//			verticalAlign: 'top',
+//			x: -10,
+//			y: 100,
+//			borderWidth: 0
+//		},
 		series: [{
 			name: 'Value of loans ($B)',
 			data: [601.5, 634.2, 686.8, 711.5, 695.2, 652.2]
@@ -56,11 +56,13 @@ $(document).ready(function() {
 			type: 'line',
 		},
 		title: {
-			text: 'Small Business Births, Closures, and Bankruptcies, 2005-2009',
-			x: -20 //center
+			text: 'Small Business Births, Closures, and Bankruptcies',
+		},
+		subtitle: {
+			text: 'Percent change',
 		},
 		xAxis: {
-			categories: ['2005', '2006', '2006', '2007', '2008', '2009']
+			categories: ['2007', '2008', '2009']
 		},
 		yAxis: {
 			title: {
@@ -78,23 +80,23 @@ $(document).ready(function() {
 					this.x +': '+ this.y +'%';
 			}
 		},
-		legend: {
-			layout: 'vertical',
-			align: 'right',
-			verticalAlign: 'top',
-			x: -10,
-			y: 100,
-			borderWidth: 0
-		},
+//		legend: {
+//			layout: 'vertical',
+//			align: 'right',
+//			verticalAlign: 'top',
+//			x: -10,
+//			y: 100,
+//			borderWidth: 0
+//		},
 		series: [{
 			name: 'Births',
-			data: [644122, 670058, 668395, 626400, 552600]
+			data: [-0.2, -6.7, -13.4]
 		}, {
 			name: 'Closures',
-			data: [565745, 699333, 592410, 663900, 660900]
+			data: [-18.0, 10.8, -0.5]
 		}, {
 			name: 'Bankruptcies',
-			data: [39201, 19695, 28322, 43546, 60837]
+			data: [30.5, 35.0, 28.4]
 		}]
 	});
 });
