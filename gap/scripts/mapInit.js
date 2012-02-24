@@ -124,7 +124,7 @@ $(document).ready(function() {
 						    }
 
 						    this._currentTooltip = tooltip;
-						buildChart()
+						//buildChart()
 						$('.debt-gdp-timeline').children('span.chart').empty();
 						$('#chartContainer').show();
 						}
