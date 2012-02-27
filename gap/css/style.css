@@ -181,7 +181,6 @@ a.zoomer {
   color:#444;
   line-height:25px;
   font-size:20px;
-  z-index:99999;
   text-align:center;
   width:28px;
   height:28px;
@@ -242,7 +241,7 @@ a.zoomout {
 }
 
 .wax-tooltip {
-	z-index: 10;
+	z-index: 100;
 	position: absolute;
 	background: rgba(13, 37, 63, .90);
 	color: rgb(244, 244, 244);
@@ -254,7 +253,7 @@ a.zoomout {
 	-webkit-transition: opacity .5s;
 	-moz-transition: opacity .5s;
 	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
-	min-height: 200px;
+	min-height: 100px;
   }
 
 .wax-tooltip h2{
