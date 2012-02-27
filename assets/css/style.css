@@ -51,3 +51,14 @@ h2.section-title {
 	font-size: 44px;
 	line-height: 44px;
 }
+
+/* ======================================== EDUCATION ======================================== */
+
+#edPies {
+height: 100px;
+overflow: hidden;	
+}
+
+#pie2008 {
+	position: relative;
+}

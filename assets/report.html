@@ -499,12 +499,48 @@
               <!--<div id="education-graph2" style="height: 300px;"class="span6"></div>-->
               <div class="span6">
                 <h3>As tuition has risen, how has each income quintile absorbed the cost?</h3>
-                <div class="alert alert-error">
-                  <div id="pie1" style="float:left;width:20%;height:100px;"></div>
-                  <div id="pie2" style="float:left;width:20%;height:100px;"></div>
-                  <div id="pie3" style="float:left;width:20%;height:100px;"></div>
-                  <div id="pie4" style="float:left;width:20%;height:100px;"></div>
-                  <div id="pie5" style="float:left;width:20%;height:100px;"></div>
+                <div class="alert alert-error" style="position:relative;">
+                  <script>
+				    $(document).ready(function() {
+						$("#li00").click(function() {
+						  $('#pie2000').fadeIn('slow');
+						  $('#pie2008').fadeOut('slow');
+						});
+						$("#li08").click(function() {
+						  $('#pie2008').fadeIn('slow');
+						  $('#pie2000').fadeOut('slow');
+						});
+						$("li").click(function(){
+						  // If this isn't already active
+						  if (!$(this).hasClass("active")) {
+							// Remove the class from anything that is active
+							$("li.active").removeClass("active");
+							// And make this active
+							$(this).addClass("active");
+						  }
+						});
+					});
+				  </script>
+                  <ul class="nav nav-pills">
+                    <li id="li00" class="active"><a href="javascript:;">2000</a></li>
+                    <li id="li08"><a href="javascript:;">2008</a></li>
+                  </ul>
+                  <div id="edPies">
+                    <div id="pie2000">
+                      <div id="pie1" style="float:left;width:20%;height:100px;"></div>
+                      <div id="pie2" style="float:left;width:20%;height:100px;"></div>
+                      <div id="pie3" style="float:left;width:20%;height:100px;"></div>
+                      <div id="pie4" style="float:left;width:20%;height:100px;"></div>
+                      <div id="pie5" style="float:left;width:20%;height:100px;"></div>
+                    </div>
+                    <div id="pie2008">
+                      <div id="pie6" style="float:left;width:20%;height:100px;"></div>
+                      <div id="pie7" style="float:left;width:20%;height:100px;"></div>
+                      <div id="pie8" style="float:left;width:20%;height:100px;"></div>
+                      <div id="pie9" style="float:left;width:20%;height:100px;"></div>
+                      <div id="pie10" style="float:left;width:20%;height:100px;"></div>
+                    </div>
+                  </div>
                   The cost of attending college <strong>costs between a third to over half the yearly income</strong> of earners in the bottom two quintiles in the United States.
                 </div>
               </div>

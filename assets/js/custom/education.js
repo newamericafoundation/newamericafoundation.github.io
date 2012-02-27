@@ -178,6 +178,451 @@ var chart;
 		   type: 'pie',
 		   data: [{
 			  name: 'Percent of income',
+			  y: 39,
+			  color: '#660033'
+		   }, {
+			  name: 'Other income',
+			  y: 61,
+			  color: '#EEEEEE'
+		   }],
+		   size: 40,
+		   showInLegend: false,
+		   dataLabels: {
+			  enabled: false
+		   },
+		   borderColor: '#000000',
+		}]
+	 });
+  });
+
+var chart;
+  $(document).ready(function() {
+	 chart = new Highcharts.Chart({
+		chart: {
+		   renderTo: 'pie2',
+		   plotBackgroundColor: null,
+		   plotBorderWidth: null,
+		   backgroundColor: '#F2DEDE',
+		   type: 'pie'
+		},
+		title: {
+		   text: 'Second<br />quintile',
+		   style: {
+			fontSize: '10px'   
+		   }
+		},
+		credits: {
+			enabled: false	
+		},
+		exporting: {
+			enabled: false	
+		},
+		legend: {
+			enabled: false	
+		},
+		yAxis: {
+			title: {
+				text: null
+			},
+			labels: {
+			  formatter: function() {
+				return '$'+this.value +'B';
+			  }
+			},
+			max:220,
+			tickInterval: 75,
+		},
+		xAxis: {
+			labels: {
+				enabled: false	
+			},
+			endOnTick: true,
+			startOnTick: true,
+		},
+		tooltip: {
+			style: {
+				fontSize: '9px',	
+			},
+			formatter: function() {
+			  var s;
+			  if (this.point.name) { // the pie chart
+				 s = ''+
+					this.y + '%';
+			  } else {
+				 s = ''+
+					this.series.name  +': '+ this.y;
+			  }
+			  return s;
+		   }
+		},
+		plotOptions: {
+			column: {
+				pointWidth: 25,
+				pointPadding: .5,
+				groupPadding: .3,
+				minPointLength: 1,
+			}
+		},
+		series: [{
+		   type: 'pie',
+		   data: [{
+			  name: 'Percent of income',
+			  y: 23,
+			  color: '#660033'
+		   }, {
+			  name: 'Other income',
+			  y: 77,
+			  color: '#EEEEEE'
+		   }],
+		   size: 40,
+		   showInLegend: false,
+		   dataLabels: {
+			  enabled: false
+		   },
+		   borderColor: '#000000',
+		}]
+	 });
+  });
+
+var chart;
+  $(document).ready(function() {
+	 chart = new Highcharts.Chart({
+		chart: {
+		   renderTo: 'pie3',
+		   plotBackgroundColor: null,
+		   plotBorderWidth: null,
+		   backgroundColor: '#F2DEDE',
+		   type: 'pie'
+		},
+		title: {
+		   text: 'Third<br />quintile',
+		   style: {
+			fontSize: '10px'   
+		   }
+		},
+		credits: {
+			enabled: false	
+		},
+		exporting: {
+			enabled: false	
+		},
+		legend: {
+			enabled: false	
+		},
+		yAxis: {
+			title: {
+				text: null
+			},
+			labels: {
+			  formatter: function() {
+				return '$'+this.value +'B';
+			  }
+			},
+			max:220,
+			tickInterval: 75,
+		},
+		xAxis: {
+			labels: {
+				enabled: false	
+			},
+			endOnTick: true,
+			startOnTick: true,
+		},
+		tooltip: {
+			style: {
+				fontSize: '9px',	
+			},
+			formatter: function() {
+			  var s;
+			  if (this.point.name) { // the pie chart
+				 s = ''+
+					this.y + '%';
+			  } else {
+				 s = ''+
+					this.series.name  +': '+ this.y;
+			  }
+			  return s;
+		   }
+		},
+		plotOptions: {
+			column: {
+				pointWidth: 25,
+				pointPadding: .5,
+				groupPadding: .3,
+				minPointLength: 1,
+			}
+		},
+		series: [{
+		   type: 'pie',
+		   data: [{
+			  name: 'Percent of income',
+			  y: 18,
+			  color: '#660033'
+		   }, {
+			  name: 'Other income',
+			  y: 82,
+			  color: '#EEEEEE'
+		   }],
+		   size: 40,
+		   showInLegend: false,
+		   dataLabels: {
+			  enabled: false
+		   },
+		   borderColor: '#000000',
+		}]
+	 });
+  });
+
+var chart;
+  $(document).ready(function() {
+	 chart = new Highcharts.Chart({
+		chart: {
+		   renderTo: 'pie4',
+		   plotBackgroundColor: null,
+		   plotBorderWidth: null,
+		   backgroundColor: '#F2DEDE',
+		   type: 'pie'
+		},
+		title: {
+		   text: 'Fourth<br />quintile',
+		   style: {
+			fontSize: '10px'   
+		   }
+		},
+		credits: {
+			enabled: false	
+		},
+		exporting: {
+			enabled: false	
+		},
+		legend: {
+			enabled: false	
+		},
+		yAxis: {
+			title: {
+				text: null
+			},
+			labels: {
+			  formatter: function() {
+				return '$'+this.value +'B';
+			  }
+			},
+			max:220,
+			tickInterval: 75,
+		},
+		xAxis: {
+			labels: {
+				enabled: false	
+			},
+			endOnTick: true,
+			startOnTick: true,
+		},
+		tooltip: {
+			style: {
+				fontSize: '9px',	
+			},
+			formatter: function() {
+			  var s;
+			  if (this.point.name) { // the pie chart
+				 s = ''+
+					this.y + '%';
+			  } else {
+				 s = ''+
+					this.series.name  +': '+ this.y;
+			  }
+			  return s;
+		   }
+		},
+		plotOptions: {
+			column: {
+				pointWidth: 25,
+				pointPadding: .5,
+				groupPadding: .3,
+				minPointLength: 1,
+			}
+		},
+		series: [{
+		   type: 'pie',
+		   data: [{
+			  name: 'Percent of income',
+			  y: 12,
+			  color: '#660033'
+		   }, {
+			  name: 'Other income',
+			  y: 88,
+			  color: '#EEEEEE'
+		   }],
+		   size: 40,
+		   showInLegend: false,
+		   dataLabels: {
+			  enabled: false
+		   },
+		   borderColor: '#000000',
+		}]
+	 });
+  });
+
+var chart;
+  $(document).ready(function() {
+	 chart = new Highcharts.Chart({
+		chart: {
+		   renderTo: 'pie5',
+		   plotBackgroundColor: null,
+		   plotBorderWidth: null,
+		   backgroundColor: '#F2DEDE',
+		   type: 'pie'
+		},
+		title: {
+		   text: 'Highest<br />quintile',
+		   style: {
+			fontSize: '10px'   
+		   }
+		},
+		credits: {
+			enabled: false	
+		},
+		exporting: {
+			enabled: false	
+		},
+		legend: {
+			enabled: false	
+		},
+		yAxis: {
+			title: {
+				text: null
+			},
+			labels: {
+			  formatter: function() {
+				return '$'+this.value +'B';
+			  }
+			},
+			max:220,
+			tickInterval: 75,
+		},
+		xAxis: {
+			labels: {
+				enabled: false	
+			},
+			endOnTick: true,
+			startOnTick: true,
+		},
+		tooltip: {
+			style: {
+				fontSize: '9px',	
+			},
+			formatter: function() {
+			  var s;
+			  if (this.point.name) { // the pie chart
+				 s = ''+
+					this.y + '%';
+			  } else {
+				 s = ''+
+					this.series.name  +': '+ this.y;
+			  }
+			  return s;
+		   }
+		},
+		plotOptions: {
+			column: {
+				pointWidth: 25,
+				pointPadding: .5,
+				groupPadding: .3,
+				minPointLength: 1,
+			}
+		},
+		series: [{
+		   type: 'pie',
+		   data: [{
+			  name: 'Percent of income',
+			  y: 7,
+			  color: '#660033'
+		   }, {
+			  name: 'Other income',
+			  y: 93,
+			  color: '#EEEEEE'
+		   }],
+		   size: 40,
+		   showInLegend: false,
+		   dataLabels: {
+			  enabled: false
+		   },
+		   borderColor: '#000000',
+		}]
+	 });
+  });
+
+var chart;
+  $(document).ready(function() {
+	 chart = new Highcharts.Chart({
+		chart: {
+		   renderTo: 'pie6',
+		   plotBackgroundColor: null,
+		   plotBorderWidth: null,
+		   backgroundColor: '#F2DEDE',
+		   type: 'pie'
+		},
+		title: {
+		   text: 'Lowest<br />quintile',
+		   style: {
+			fontSize: '10px'   
+		   }
+		},
+		credits: {
+			enabled: false	
+		},
+		exporting: {
+			enabled: false	
+		},
+		legend: {
+			enabled: false	
+		},
+		yAxis: {
+			title: {
+				text: null
+			},
+			labels: {
+			  formatter: function() {
+				return '$'+this.value +'B';
+			  }
+			},
+			max:220,
+			tickInterval: 75,
+		},
+		xAxis: {
+			labels: {
+				enabled: false	
+			},
+			endOnTick: true,
+			startOnTick: true,
+		},
+		tooltip: {
+			style: {
+				fontSize: '9px',	
+			},
+			formatter: function() {
+			  var s;
+			  if (this.point.name) { // the pie chart
+				 s = ''+
+					this.y + '%';
+			  } else {
+				 s = ''+
+					this.series.name  +': '+ this.y;
+			  }
+			  return s;
+		   }
+		},
+		plotOptions: {
+			column: {
+				pointWidth: 25,
+				pointPadding: .5,
+				groupPadding: .3,
+				minPointLength: 1,
+			}
+		},
+		series: [{
+		   type: 'pie',
+		   data: [{
+			  name: 'Percent of income',
 			  y: 55,
 			  color: '#660033'
 		   }, {
@@ -199,7 +644,7 @@ var chart;
   $(document).ready(function() {
 	 chart = new Highcharts.Chart({
 		chart: {
-		   renderTo: 'pie2',
+		   renderTo: 'pie7',
 		   plotBackgroundColor: null,
 		   plotBorderWidth: null,
 		   backgroundColor: '#F2DEDE',
@@ -288,7 +733,7 @@ var chart;
   $(document).ready(function() {
 	 chart = new Highcharts.Chart({
 		chart: {
-		   renderTo: 'pie3',
+		   renderTo: 'pie8',
 		   plotBackgroundColor: null,
 		   plotBorderWidth: null,
 		   backgroundColor: '#F2DEDE',
@@ -377,7 +822,7 @@ var chart;
   $(document).ready(function() {
 	 chart = new Highcharts.Chart({
 		chart: {
-		   renderTo: 'pie4',
+		   renderTo: 'pie9',
 		   plotBackgroundColor: null,
 		   plotBorderWidth: null,
 		   backgroundColor: '#F2DEDE',
@@ -466,7 +911,7 @@ var chart;
   $(document).ready(function() {
 	 chart = new Highcharts.Chart({
 		chart: {
-		   renderTo: 'pie5',
+		   renderTo: 'pie10',
 		   plotBackgroundColor: null,
 		   plotBorderWidth: null,
 		   backgroundColor: '#F2DEDE',
