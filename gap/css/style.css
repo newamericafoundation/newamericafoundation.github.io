@@ -173,6 +173,11 @@ a.close:active {
 	width:100%;*/
 	height:400px;
 	top:60px;
+	display:none;
+}
+
+.activeMap{
+	display:block;
 }
 a.zoomer {
   text-decoration:none;

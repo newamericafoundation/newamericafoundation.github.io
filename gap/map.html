@@ -23,7 +23,7 @@
 
   <!-- <link href='styles/controls.css' rel='stylesheet' type='text/css' /> -->
 <script>
-buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp.jsonp');
+buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp.jsonp', 'mainMap');
 
 	var options = {
 	    xaxis: {
@@ -66,35 +66,11 @@ buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp.jsonp');
 	     }
 	};
 	
-
-$(document).ready(function() {
-	$('.dropdown-toggle').dropdown()
-	$('#layer1').click(function(){
-		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp.jsonp');
-		$('li').removeClass('active');
-		$(this).toggleClass('active');
-	});
-	$('#layer2').click(function(){
-		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-country-mapping.jsonp');
-		$('li').removeClass('active');
-		$(this).toggleClass('active');
-	});
-	$('#layer3').click(function(){
-		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-fl.jsonp');
-		$('li').removeClass('active');
-		$(this).toggleClass('active');
-	});
-	$('#layer4').click(function(){
-		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-mobile.jsonp');
-		$('li').removeClass('active');
-		$(this).toggleClass('active');
-	});
-	
 			//Main fake data object. Use this to build the individual graphs
 			var countryLabels = [[0,'Argentina'],[1,'Bangladesh'],[2,'Bolivia'],[3,'Botswana'],[4,'Brazil'],[5,'Brunei'],[6,'Burkina Faso'],[7,'Cambodia'],[8,'Chile'],[9,'China'],[10,'Colombia'],[11,'Costa Rica'],[12,'Dominican Republic'],[13,'Ecuador'],[14,'Egypt'],[15,'El Salvador'],[16,'Ethiopia'],[17,'Ghana'],[18,'Guatemala'],[19,'Honduras'],[20,'India'],[21,'Indonesia'],[22,'Jamaica'],[23,'Kenya'],[24,'Lesotho'],[25,'Liberia'],[26,'Malawi'],[27,'Maldives'],[28,'Mali'],[29,'Maurituis'],[30,'Mexico'],[31,'Mongolia'],[32,'Mozambique'],[33,'Namibia'],[34,'Nepal'],[35,'Nicaragua'],[36,'Pakistan'],[37,'Panama'],[38,'Paraguay'],[39,'Peru'],[40,'Phillipines'],[41,'Rwanda'],[42,'Sierra Leone'],[43,'South Africa'],[44,'Swaziland'],[45,'Tanzania'],[46,'Thailand'],[47,'Trinidad and Tobago'],[48,'Uganda'],[49,'Urugauy'],[50,'Zambia']]
 			
 			
-			var dataLabels = [[0,'Composite Access to Financial Services'],[1,'Financial Literacy'],[2,'Mobile Penetration'],[3,'Commerical Banks per 1,000 SQ KM'],[4,'Commerical Banks per 100,000 adults'],[5,'Alternative Financial Institutions 1,000 SQ KM'],[6,'Alternative Financial Institutions per 100,000 adults'],[7,'ATM per 1,000 SQ KM'],[8,'ATM per 100,000 adults'],[9,'POS per thousand SQ KM'],[10,'POS penetration per 100,000 adults']]
+			var dataLabels = [[0,'Composite Access to Financial Services', 'http://a.tiles.mapbox.com/v3/newamerica.gssp-comaccess.jsonp'],[1,'Financial Literacy','http://a.tiles.mapbox.com/v3/newamerica.gssp-fl.jsonp'],[2,'Mobile Penetration','http://a.tiles.mapbox.com/v3/newamerica.gssp-mobile.jsonp'],[3,'Commerical Banks per 1,000 SQ KM','http://a.tiles.mapbox.com/v3/newamerica.gssp-com-sqm.jsonp'],[4,'Commerical Banks per 100,000 adults','http://a.tiles.mapbox.com/v3/newamerica.gssp-com-adults.jsonp'],[5,'Alternative Financial Institutions 1,000 SQ KM','http://a.tiles.mapbox.com/v3/newamerica.gssp-alt-sqkm.jsonp'],[6,'Alternative Financial Institutions per 100,000 adults','http://a.tiles.mapbox.com/v3/newamerica.gssp-alt-adults.jsonp'],[7,'ATM per 1,000 SQ KM','http://a.tiles.mapbox.com/v3/newamerica.gssp-atm-sqkm.jsonp'],[8,'ATM per 100,000 adults','http://a.tiles.mapbox.com/v3/newamerica.gssp-atm-adults.jsonp'],[9,'POS per thousand SQ KM','http://a.tiles.mapbox.com/v3/newamerica.gssp-pos-sqkm.jsonp'],[10,'POS per 100,000 adults','http://a.tiles.mapbox.com/v3/newamerica.gssp-pos-adults.jsonp']]
 			
 			var data = {
 				//Composite Access to Financial Services
@@ -127,7 +103,33 @@ $(document).ready(function() {
 	9:[[0,0],[1,0],[2,0],[3,6.433399],[4,375.5638],[5,0],[6,0],[7,18.72309],[8,83.56036],[9,0],[10,124.7174],[11,1105.719],[12,0],[13,0],[14,0],[15,1032.674],[16,0],[17,0],[18,302.0935],[19,0],[20,175.5465],[21,107.9075],[22,1231.948],[23,0],[24,0],[25,0.3218439],[26,3.613945],[27,0],[28,0],[29,3667.488],[30,229.8372],[31,2.396425],[32,5.936061],[33,5.429436],[34,0],[35,0],[36,66.15945],[37,0],[38,0],[39,8.421875],[40,0],[41,3.810296],[42,0.6702039],[43,24728.07],[44,33.02325],[45,4.283134],[46,0],[47,0],[48,3.708777],[49,39.99543],[50,1.195873]],
 	//POS penetration (per 100,000 adults)
 	10:[[0,0],[1,0],[2,0],[3,288.6837],[4,2247.41],[5,0],[6,0],[7,34.13034],[8,486.0691],[9,0],[10,441.0639],[11,1695.31],[12,0],[13,0],[14,0],[15,520.8304],[16,0],[17,0],[18,414.69],[19,0],[20,67.05605],[21,117.8912],[22,708.4204],[23,0],[24,0],[25,1.432145],[26,4.444607],[27,0],[28,0],[29,763.8023],[30,592.1377],[31,194.1303],[32,38.31028],[33,337.6066],[34,0],[35,0],[36,48.97994],[37,0],[38,0],[39,53.96387],[40,0],[41,1.672972],[42,1.521526],[43,89086.84],[44,80.99767],[45,16.13818],[46,0],[47,0],[48,4.527806],[49,272.7565],[50,13.10512]]
-			}
+			};
+	
+
+$(document).ready(function() {
+	$('.dropdown-toggle').dropdown()
+	// $('#layer1').click(function(){
+	// 	buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp.jsonp');
+	// 	$('li').removeClass('active');
+	// 	$(this).toggleClass('active');
+	// });
+	// $('#layer2').click(function(){
+	// 	buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-country-mapping.jsonp');
+	// 	$('li').removeClass('active');
+	// 	$(this).toggleClass('active');
+	// });
+	// $('#layer3').click(function(){
+	// 	buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-fl.jsonp');
+	// 	$('li').removeClass('active');
+	// 	$(this).toggleClass('active');
+	// });
+	// $('#layer4').click(function(){
+	// 	buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-mobile.jsonp');
+	// 	$('li').removeClass('active');
+	// 	$(this).toggleClass('active');
+	// });
+	
+
 	//Make the graphs with labels from dataLabels	
 	for(i=0;i<11;i++){
 		$('#graphHolder').append('<h4 class="dotBorder">'+dataLabels[i][1]+'</h4><div id="container'+i+'" class="graph" style="width:400px; height:100px; margin: 0 auto;"></div>');
@@ -144,11 +146,20 @@ $(document).ready(function() {
                     $("#tooltip").remove();
                     var x = item.datapoint[0].toFixed(0),
                         y = item.datapoint[1].toFixed(2);
-
                     showTooltip(item.pageX, item.pageY, countryLabels[x][1] +': '+ y);
                 }
            	}
 	    });
+	var divId = '#layer'+i;
+	$('#mapContainer').append('<div id="map'+i+'"class="map span12"></div>');
+	var layerUrl = dataLabels[i][2];
+	var mapId = '#map'+i
+	// buildMap(layerUrl, 'map'+i);
+	
+		$(divId).click(function(e){
+			newId = $(this).attr('id').replace('layer','');
+			newMap(newId);		
+		});
 	}
 	function showTooltip(x, y, contents) {
 	        $('<div id="tooltip">' + contents + '</div>').css( {
@@ -163,6 +174,16 @@ $(document).ready(function() {
 	        }).appendTo("body").fadeIn(200);
 	    }
 });
+
+function newMap(layerId){
+	$('li').removeClass('active');
+	buildMap(dataLabels[layerId][2], 'map'+layerId);
+	$('.map').removeClass('activeMap');
+	$('#layer'+layerId).toggleClass('active');
+	$('#map'+layerId).addClass('activeMap');
+	$('#map'+layerId).fadeId();
+	$('.map').css('display','none');	
+}
 
 
 	
@@ -203,8 +224,8 @@ $(document).ready(function() {
 		</div>
 	  </div>
 	</div>
-	<div class="row-fluid">
-		<div id="mainMap" class="map span12"></div>
+	<div id="mapContainer" class="row-fluid">
+		<div id="mainMap" class="map span12 activeMap"></div>
 	</div>
 	<div class="container-fluid">
 		
@@ -213,36 +234,36 @@ $(document).ready(function() {
 		
 		<div id="layerSwitcher" class="span12 navbar-inner">
 			<ul class="nav nav-pills custom-pills">
-				<li id="layer1" class="active"><a href="#">Payment Infrastructure</a></li>
-				<li id="layer2"><a href="#">Composite Financial Access</a></li>
-				<li id="layer3"><a href="#">Financial Literacy</a></li>
-				<li id="layer4"><a href="#">Mobile Penetration</a></li>
+				<li id="layerMain" class="active"><a href="#">Payment Infrastructure</a></li>
+				<li id="layer0"><a href="#">Composite Financial Access</a></li>
+				<li id="layer1"><a href="#">Financial Literacy</a></li>
+				<li id="layer2"><a href="#">Mobile Penetration</a></li>
 			  	<li class="dropdown">
 			    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Commercial Banks<b class="caret"></b></a>
 			    	<ul class="dropdown-menu">
-			      		<li><a href="#">Sq Km</a></li>
-						<li><a href="#">1000 Adults</a></li>
+			      		<li id="layer3"><a href="#">Sq Km</a></li>
+						<li id="layer4"><a href="#">1000 Adults</a></li>
 			    	</ul>
 			  	</li>
 				<li class="dropdown">
 			    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Alternative Financial Institutions<b class="caret"></b></a>
 			    	<ul class="dropdown-menu">
-			      		<li><a href="#">Sq Km</a></li>
-						<li><a href="#">1000 Adults</a></li>
+			      		<li id="layer5"><a href="#">Sq Km</a></li>
+						<li id="layer6"><a href="#">1000 Adults</a></li>
 			    	</ul>
 			  	</li>
 				<li class="dropdown">
 			    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">ATM<b class="caret"></b></a>
 			    	<ul class="dropdown-menu">
-			      		<li><a href="#">Sq Km</a></li>
-						<li><a href="#">1000 Adults</a></li>
+			      		<li id="layer7"><a href="#">Sq Km</a></li>
+						<li id="layer8"><a href="#">1000 Adults</a></li>
 			    	</ul>
 			  	</li>
 				<li class="dropdown">
 			    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">POS<b class="caret"></b></a>
 			    	<ul class="dropdown-menu">
-			      		<li><a href="#">Sq Km</a></li>
-						<li><a href="#">1000 Adults</a></li>
+			      		<li id="layer9"><a href="#">Sq Km</a></li>
+						<li id="layer10"><a href="#">1000 Adults</a></li>
 			    	</ul>
 			  	</li>
 			</ul>
