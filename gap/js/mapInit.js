@@ -28,7 +28,7 @@
 		}else{
 			// m.setCenterZoom(new mm.Location(38.457303314891604, -93.99900468749993), 2);
 			m.setCenterZoom(new mm.Location(0, 0), 2);
-			easey.slow(m,{location:new mm.Location(0, 0),time: 2000,zoom:2 });
+			//easey.slow(m,{location:new mm.Location(0, 0),time: 2000,zoom:2 });
 		}
 			m.addCallback('drawn', function(m) {
 			    // respond to new center: set vars so map will stay put as the layers change

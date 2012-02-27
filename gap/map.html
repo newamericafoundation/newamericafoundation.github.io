@@ -70,7 +70,7 @@ buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp.jsonp', 'mainMap');
 			var countryLabels = [[0,'Argentina'],[1,'Bangladesh'],[2,'Bolivia'],[3,'Botswana'],[4,'Brazil'],[5,'Brunei'],[6,'Burkina Faso'],[7,'Cambodia'],[8,'Chile'],[9,'China'],[10,'Colombia'],[11,'Costa Rica'],[12,'Dominican Republic'],[13,'Ecuador'],[14,'Egypt'],[15,'El Salvador'],[16,'Ethiopia'],[17,'Ghana'],[18,'Guatemala'],[19,'Honduras'],[20,'India'],[21,'Indonesia'],[22,'Jamaica'],[23,'Kenya'],[24,'Lesotho'],[25,'Liberia'],[26,'Malawi'],[27,'Maldives'],[28,'Mali'],[29,'Maurituis'],[30,'Mexico'],[31,'Mongolia'],[32,'Mozambique'],[33,'Namibia'],[34,'Nepal'],[35,'Nicaragua'],[36,'Pakistan'],[37,'Panama'],[38,'Paraguay'],[39,'Peru'],[40,'Phillipines'],[41,'Rwanda'],[42,'Sierra Leone'],[43,'South Africa'],[44,'Swaziland'],[45,'Tanzania'],[46,'Thailand'],[47,'Trinidad and Tobago'],[48,'Uganda'],[49,'Urugauy'],[50,'Zambia']]
 			
 			
-			var dataLabels = [[0,'Composite Access to Financial Services', 'http://a.tiles.mapbox.com/v3/newamerica.gssp-com-access.jsonp'],[1,'Financial Literacy','http://a.tiles.mapbox.com/v3/newamerica.gssp-fl.jsonp'],[2,'Mobile Penetration','http://a.tiles.mapbox.com/v3/newamerica.gssp-mobile.jsonp'],[3,'Commerical Banks per 1,000 SQ KM','http://a.tiles.mapbox.com/v3/newamerica.gssp-com-sqm.jsonp'],[4,'Commerical Banks per 100,000 adults','http://a.tiles.mapbox.com/v3/newamerica.gssp-com-adults.jsonp'],[5,'Alternative Financial Institutions 1,000 SQ KM','http://a.tiles.mapbox.com/v3/newamerica.gssp-alt-sqkm.jsonp'],[6,'Alternative Financial Institutions per 100,000 adults','http://a.tiles.mapbox.com/v3/newamerica.gssp-alt-adults.jsonp'],[7,'ATM per 1,000 SQ KM','http://a.tiles.mapbox.com/v3/newamerica.gssp-atm-sqkm.jsonp'],[8,'ATM per 100,000 adults','http://a.tiles.mapbox.com/v3/newamerica.gssp-atm-adults.jsonp'],[9,'POS per thousand SQ KM','http://a.tiles.mapbox.com/v3/newamerica.gssp-pos-sqkm.jsonp'],[10,'POS per 100,000 adults','http://a.tiles.mapbox.com/v3/newamerica.gssp-pos-adults.jsonp']]
+			var dataLabels = [[0,'Composite Access to Financial Services', 'http://a.tiles.mapbox.com/v3/newamerica.gssp-com-access.jsonp'],[1,'Financial Literacy','http://a.tiles.mapbox.com/v3/newamerica.gssp-fl.jsonp'],[2,'Mobile Penetration','http://a.tiles.mapbox.com/v3/newamerica.gssp-mobile.jsonp'],[3,'Commerical Banks per 1,000 SQ KM','http://a.tiles.mapbox.com/v3/newamerica.gssp-com-sqkm.jsonp'],[4,'Commerical Banks per 100,000 adults','http://a.tiles.mapbox.com/v3/newamerica.gssp-com-adults.jsonp'],[5,'Alternative Financial Institutions 1,000 SQ KM','http://a.tiles.mapbox.com/v3/newamerica.gssp-alt-sqkm.jsonp'],[6,'Alternative Financial Institutions per 100,000 adults','http://a.tiles.mapbox.com/v3/newamerica.gssp-alt-adults.jsonp'],[7,'ATM per 1,000 SQ KM','http://a.tiles.mapbox.com/v3/newamerica.gssp-atm-sqkm.jsonp'],[8,'ATM per 100,000 adults','http://a.tiles.mapbox.com/v3/newamerica.gssp-atm-adults.jsonp'],[9,'POS per thousand SQ KM','http://a.tiles.mapbox.com/v3/newamerica.gssp-pos-sqkm.jsonp'],[10,'POS per 100,000 adults','http://a.tiles.mapbox.com/v3/newamerica.gssp-pos-adults.jsonp']]
 			
 			var data = {
 				//Composite Access to Financial Services
@@ -161,6 +161,16 @@ $(document).ready(function() {
 			newMap(newId);		
 		});
 	}
+	$('#layerMain').click(function(){		
+		$('li').removeClass('active');
+		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp.jsonp', 'mainMap');		
+		$('.map').removeClass('activeMap');
+		$('#layerMain').toggleClass('active');
+		$('#mainMap').addClass('activeMap');
+		$('#mainMap').fadeId();
+		$('.map').css('display','none');	
+	})
+	
 	function showTooltip(x, y, contents) {
 	        $('<div id="tooltip">' + contents + '</div>').css( {
 	            position: 'absolute',
