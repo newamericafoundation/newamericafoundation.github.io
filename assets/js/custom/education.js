@@ -5,7 +5,7 @@ $(document).ready(function() {
 	chart = new Highcharts.Chart({
 		chart: {
 			renderTo: 'education-graph',
-			type: 'area',
+			type: 'line',
 		},
 		title: {
 			text: 'Students enrolled in college after graduation',

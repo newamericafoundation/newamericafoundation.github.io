@@ -8,7 +8,7 @@ $(document).ready(function() {
 			type: 'bar'
 		},
 		title: {
-			text: 'Value of the Mortgage Interest and Real Estate Deductions by Income, FY 2006'
+			text: null
 		},
 		xAxis: {
 			categories: ['Below 10', '10-20', '20-30', '30-40', '40-50', '50-75', '75-100', '100-200', '200 and over'],
@@ -72,7 +72,7 @@ $(document).ready(function() {
 			type: 'bar'
 		},
 		title: {
-			text: 'Value of the Mortgage Interest and Real Estate Deductions by Income, FY 2006'
+			text: null
 		},
 		xAxis: {
 			categories: ['Below 10', '10-20', '20-30', '30-40', '40-50', '50-75', '75-100', '100-200', '200 and over'],
