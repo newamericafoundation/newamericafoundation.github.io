@@ -53,55 +53,500 @@ $(document).ready(function() {
 	});
 });
 
+//var chart;
+//$(document).ready(function() {
+//	chart = new Highcharts.Chart({
+//		chart: {
+//			renderTo: 'education-graph2',
+//			type: 'column'
+//		},
+//		title: {
+//			text: 'Net College Costs as a Percent of Median Family Income'
+//		},
+//		xAxis: {
+//			categories: ['Lowest income quintile', 'Second lowest income quintile', 'Middle income quintile', 'Second highest income quintile', 'Highest income quintile']
+//		},
+//		yAxis: {
+//			min: 0,
+//			title: {
+//				text: 'Percentage'
+//			}
+//		},
+////		legend: {
+////			layout: 'vertical',
+////			backgroundColor: '#FFFFFF',
+////			align: 'left',
+////			verticalAlign: 'top',
+////			x: 100,
+////			y: 70,
+////			floating: true,
+////			shadow: true
+////		},
+//		tooltip: {
+//			formatter: function() {
+//				return ''+
+//					this.x +': '+ this.y +' mm';
+//			}
+//		},
+//		plotOptions: {
+//			column: {
+//				pointPadding: 0.2,
+//				borderWidth: 0
+//			}
+//		},
+//			series: [{
+//			name: '1990-2000',
+//			data: [39, 23, 18, 12, 7]
+//
+//		},{
+//			name: '2007-2008',
+//			data: [55, 33, 25, 16, 9]
+//
+//		}]
+//	});
+//});
+
 var chart;
-$(document).ready(function() {
-	chart = new Highcharts.Chart({
+  $(document).ready(function() {
+	 chart = new Highcharts.Chart({
 		chart: {
-			renderTo: 'education-graph2',
-			type: 'column'
+		   renderTo: 'pie1',
+		   plotBackgroundColor: null,
+		   plotBorderWidth: null,
+		   backgroundColor: '#F2DEDE',
+		   type: 'pie'
 		},
 		title: {
-			text: 'Net College Costs as a Percent of Median Family Income'
+		   text: 'Lowest<br />quintile',
+		   style: {
+			fontSize: '10px'   
+		   }
 		},
-		xAxis: {
-			categories: ['Lowest income quintile', 'Second lowest income quintile', 'Middle income quintile', 'Second highest income quintile', 'Highest income quintile']
+		credits: {
+			enabled: false	
+		},
+		exporting: {
+			enabled: false	
+		},
+		legend: {
+			enabled: false	
 		},
 		yAxis: {
-			min: 0,
 			title: {
-				text: 'Percentage'
-			}
+				text: null
+			},
+			labels: {
+			  formatter: function() {
+				return '$'+this.value +'B';
+			  }
+			},
+			max:220,
+			tickInterval: 75,
 		},
-//		legend: {
-//			layout: 'vertical',
-//			backgroundColor: '#FFFFFF',
-//			align: 'left',
-//			verticalAlign: 'top',
-//			x: 100,
-//			y: 70,
-//			floating: true,
-//			shadow: true
-//		},
+		xAxis: {
+			labels: {
+				enabled: false	
+			},
+			endOnTick: true,
+			startOnTick: true,
+		},
 		tooltip: {
+			style: {
+				fontSize: '9px',	
+			},
 			formatter: function() {
-				return ''+
-					this.x +': '+ this.y +' mm';
-			}
+			  var s;
+			  if (this.point.name) { // the pie chart
+				 s = ''+
+					this.y + '%';
+			  } else {
+				 s = ''+
+					this.series.name  +': '+ this.y;
+			  }
+			  return s;
+		   }
 		},
 		plotOptions: {
 			column: {
-				pointPadding: 0.2,
-				borderWidth: 0
+				pointWidth: 25,
+				pointPadding: .5,
+				groupPadding: .3,
+				minPointLength: 1,
 			}
 		},
-			series: [{
-			name: '1990-2000',
-			data: [39, 23, 18, 12, 7]
-
-		},{
-			name: '2007-2008',
-			data: [55, 33, 25, 16, 9]
-
+		series: [{
+		   type: 'pie',
+		   data: [{
+			  name: 'Percent of income',
+			  y: 55,
+			  color: '#660033'
+		   }, {
+			  name: 'Other income',
+			  y: 45,
+			  color: '#EEEEEE'
+		   }],
+		   size: 40,
+		   showInLegend: false,
+		   dataLabels: {
+			  enabled: false
+		   },
+		   borderColor: '#000000',
 		}]
-	});
-});
+	 });
+  });
+
+var chart;
+  $(document).ready(function() {
+	 chart = new Highcharts.Chart({
+		chart: {
+		   renderTo: 'pie2',
+		   plotBackgroundColor: null,
+		   plotBorderWidth: null,
+		   backgroundColor: '#F2DEDE',
+		   type: 'pie'
+		},
+		title: {
+		   text: 'Second<br />quintile',
+		   style: {
+			fontSize: '10px'   
+		   }
+		},
+		credits: {
+			enabled: false	
+		},
+		exporting: {
+			enabled: false	
+		},
+		legend: {
+			enabled: false	
+		},
+		yAxis: {
+			title: {
+				text: null
+			},
+			labels: {
+			  formatter: function() {
+				return '$'+this.value +'B';
+			  }
+			},
+			max:220,
+			tickInterval: 75,
+		},
+		xAxis: {
+			labels: {
+				enabled: false	
+			},
+			endOnTick: true,
+			startOnTick: true,
+		},
+		tooltip: {
+			style: {
+				fontSize: '9px',	
+			},
+			formatter: function() {
+			  var s;
+			  if (this.point.name) { // the pie chart
+				 s = ''+
+					this.y + '%';
+			  } else {
+				 s = ''+
+					this.series.name  +': '+ this.y;
+			  }
+			  return s;
+		   }
+		},
+		plotOptions: {
+			column: {
+				pointWidth: 25,
+				pointPadding: .5,
+				groupPadding: .3,
+				minPointLength: 1,
+			}
+		},
+		series: [{
+		   type: 'pie',
+		   data: [{
+			  name: 'Percent of income',
+			  y: 33,
+			  color: '#660033'
+		   }, {
+			  name: 'Other income',
+			  y: 67,
+			  color: '#EEEEEE'
+		   }],
+		   size: 40,
+		   showInLegend: false,
+		   dataLabels: {
+			  enabled: false
+		   },
+		   borderColor: '#000000',
+		}]
+	 });
+  });
+
+var chart;
+  $(document).ready(function() {
+	 chart = new Highcharts.Chart({
+		chart: {
+		   renderTo: 'pie3',
+		   plotBackgroundColor: null,
+		   plotBorderWidth: null,
+		   backgroundColor: '#F2DEDE',
+		   type: 'pie'
+		},
+		title: {
+		   text: 'Third<br />quintile',
+		   style: {
+			fontSize: '10px'   
+		   }
+		},
+		credits: {
+			enabled: false	
+		},
+		exporting: {
+			enabled: false	
+		},
+		legend: {
+			enabled: false	
+		},
+		yAxis: {
+			title: {
+				text: null
+			},
+			labels: {
+			  formatter: function() {
+				return '$'+this.value +'B';
+			  }
+			},
+			max:220,
+			tickInterval: 75,
+		},
+		xAxis: {
+			labels: {
+				enabled: false	
+			},
+			endOnTick: true,
+			startOnTick: true,
+		},
+		tooltip: {
+			style: {
+				fontSize: '9px',	
+			},
+			formatter: function() {
+			  var s;
+			  if (this.point.name) { // the pie chart
+				 s = ''+
+					this.y + '%';
+			  } else {
+				 s = ''+
+					this.series.name  +': '+ this.y;
+			  }
+			  return s;
+		   }
+		},
+		plotOptions: {
+			column: {
+				pointWidth: 25,
+				pointPadding: .5,
+				groupPadding: .3,
+				minPointLength: 1,
+			}
+		},
+		series: [{
+		   type: 'pie',
+		   data: [{
+			  name: 'Percent of income',
+			  y: 25,
+			  color: '#660033'
+		   }, {
+			  name: 'Other income',
+			  y: 75,
+			  color: '#EEEEEE'
+		   }],
+		   size: 40,
+		   showInLegend: false,
+		   dataLabels: {
+			  enabled: false
+		   },
+		   borderColor: '#000000',
+		}]
+	 });
+  });
+
+var chart;
+  $(document).ready(function() {
+	 chart = new Highcharts.Chart({
+		chart: {
+		   renderTo: 'pie4',
+		   plotBackgroundColor: null,
+		   plotBorderWidth: null,
+		   backgroundColor: '#F2DEDE',
+		   type: 'pie'
+		},
+		title: {
+		   text: 'Fourth<br />quintile',
+		   style: {
+			fontSize: '10px'   
+		   }
+		},
+		credits: {
+			enabled: false	
+		},
+		exporting: {
+			enabled: false	
+		},
+		legend: {
+			enabled: false	
+		},
+		yAxis: {
+			title: {
+				text: null
+			},
+			labels: {
+			  formatter: function() {
+				return '$'+this.value +'B';
+			  }
+			},
+			max:220,
+			tickInterval: 75,
+		},
+		xAxis: {
+			labels: {
+				enabled: false	
+			},
+			endOnTick: true,
+			startOnTick: true,
+		},
+		tooltip: {
+			style: {
+				fontSize: '9px',	
+			},
+			formatter: function() {
+			  var s;
+			  if (this.point.name) { // the pie chart
+				 s = ''+
+					this.y + '%';
+			  } else {
+				 s = ''+
+					this.series.name  +': '+ this.y;
+			  }
+			  return s;
+		   }
+		},
+		plotOptions: {
+			column: {
+				pointWidth: 25,
+				pointPadding: .5,
+				groupPadding: .3,
+				minPointLength: 1,
+			}
+		},
+		series: [{
+		   type: 'pie',
+		   data: [{
+			  name: 'Percent of income',
+			  y: 16,
+			  color: '#660033'
+		   }, {
+			  name: 'Other income',
+			  y: 84,
+			  color: '#EEEEEE'
+		   }],
+		   size: 40,
+		   showInLegend: false,
+		   dataLabels: {
+			  enabled: false
+		   },
+		   borderColor: '#000000',
+		}]
+	 });
+  });
+
+var chart;
+  $(document).ready(function() {
+	 chart = new Highcharts.Chart({
+		chart: {
+		   renderTo: 'pie5',
+		   plotBackgroundColor: null,
+		   plotBorderWidth: null,
+		   backgroundColor: '#F2DEDE',
+		   type: 'pie'
+		},
+		title: {
+		   text: 'Highest<br />quintile',
+		   style: {
+			fontSize: '10px'   
+		   }
+		},
+		credits: {
+			enabled: false	
+		},
+		exporting: {
+			enabled: false	
+		},
+		legend: {
+			enabled: false	
+		},
+		yAxis: {
+			title: {
+				text: null
+			},
+			labels: {
+			  formatter: function() {
+				return '$'+this.value +'B';
+			  }
+			},
+			max:220,
+			tickInterval: 75,
+		},
+		xAxis: {
+			labels: {
+				enabled: false	
+			},
+			endOnTick: true,
+			startOnTick: true,
+		},
+		tooltip: {
+			style: {
+				fontSize: '9px',	
+			},
+			formatter: function() {
+			  var s;
+			  if (this.point.name) { // the pie chart
+				 s = ''+
+					this.y + '%';
+			  } else {
+				 s = ''+
+					this.series.name  +': '+ this.y;
+			  }
+			  return s;
+		   }
+		},
+		plotOptions: {
+			column: {
+				pointWidth: 25,
+				pointPadding: .5,
+				groupPadding: .3,
+				minPointLength: 1,
+			}
+		},
+		series: [{
+		   type: 'pie',
+		   data: [{
+			  name: 'Percent of income',
+			  y: 9,
+			  color: '#660033'
+		   }, {
+			  name: 'Other income',
+			  y: 91,
+			  color: '#EEEEEE'
+		   }],
+		   size: 40,
+		   showInLegend: false,
+		   dataLabels: {
+			  enabled: false
+		   },
+		   borderColor: '#000000',
+		}]
+	 });
+  });
