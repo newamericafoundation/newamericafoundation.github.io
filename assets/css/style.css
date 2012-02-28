@@ -62,3 +62,21 @@ overflow: hidden;
 #pie2008 {
 	position: relative;
 }
+
+.edu-anedote{
+	padding:5px;
+	margin:0px 5px;
+	text-transform:uppercase;
+	color:#0088CC;
+}
+
+.edu-big-number{
+	font-size: 56px;
+	line-height: 56px;
+	
+}
+
+.edu-number{
+	font-size: 46px;
+	line-height: 56px;
+}
