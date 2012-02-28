@@ -494,59 +494,6 @@
             <p>A college education can play a decisive role in breaking the intergenerational cycle of poverty. Low-income students, however, enroll in college at a rate 30 percentage points lower than their high-income counterparts.</p>
           </div> <!-- end .section-header -->
           <div class="section-body">
-<<<<<<< HEAD
-            <div class="row">
-              <div id="education-graph" style="height:200px;" class="span6"></div>
-              <!--<div id="education-graph2" style="height: 300px;"class="span6"></div>-->
-              <div class="span6">
-                <h3>As tuition has risen, how has each income quintile absorbed the cost?</h3>
-                <div class="alert alert-error" style="position:relative;">
-                  <script>
-				    $(document).ready(function() {
-						$("#li00").click(function() {
-						  $('#pie2000').fadeIn('slow');
-						  $('#pie2008').fadeOut('slow');
-						});
-						$("#li08").click(function() {
-						  $('#pie2008').fadeIn('slow');
-						  $('#pie2000').fadeOut('slow');
-						});
-						$("li").click(function(){
-						  // If this isn't already active
-						  if (!$(this).hasClass("active")) {
-							// Remove the class from anything that is active
-							$("li.active").removeClass("active");
-							// And make this active
-							$(this).addClass("active");
-						  }
-						});
-					});
-				  </script>
-                  <ul class="nav nav-pills">
-                    <li id="li00" class="active"><a href="javascript:;">2000</a></li>
-                    <li id="li08"><a href="javascript:;">2008</a></li>
-                  </ul>
-                  <div id="edPies">
-                    <div id="pie2000">
-                      <div id="pie1" style="float:left;width:20%;height:100px;"></div>
-                      <div id="pie2" style="float:left;width:20%;height:100px;"></div>
-                      <div id="pie3" style="float:left;width:20%;height:100px;"></div>
-                      <div id="pie4" style="float:left;width:20%;height:100px;"></div>
-                      <div id="pie5" style="float:left;width:20%;height:100px;"></div>
-                    </div>
-                    <div id="pie2008">
-                      <div id="pie6" style="float:left;width:20%;height:100px;"></div>
-                      <div id="pie7" style="float:left;width:20%;height:100px;"></div>
-                      <div id="pie8" style="float:left;width:20%;height:100px;"></div>
-                      <div id="pie9" style="float:left;width:20%;height:100px;"></div>
-                      <div id="pie10" style="float:left;width:20%;height:100px;"></div>
-                    </div>
-                  </div>
-                  The cost of attending college <strong>costs between a third to over half the yearly income</strong> of earners in the bottom two quintiles in the United States.
-                </div>
-              </div>
-            </div>
-=======
 			<div class="row anecdote">
 				<div class="span3"><h3>Students Enrolled in College After Graduation</h3>
 					<div class="row">
@@ -555,19 +502,54 @@
 					</div>
               <div class="span3"><div class="alert alert-success"><span class="savings-number">84%</span><br />High Income Students</div></div>
 
-				<div class="span6 pull-right">
+				<div class="span6">
 	                <h3>As tuition has risen, how has each income quintile absorbed the cost?</h3>
-	                <div class="alert alert-error">
-	                  <div id="pie1" style="float:left;width:20%;height:100px;"></div>
-	                  <div id="pie2" style="float:left;width:20%;height:100px;"></div>
-	                  <div id="pie3" style="float:left;width:20%;height:100px;"></div>
-	                  <div id="pie4" style="float:left;width:20%;height:100px;"></div>
-	                  <div id="pie5" style="float:left;width:20%;height:100px;"></div>
+	                <div class="alert alert-error" style="position:relative;">
+	                  <script>
+					    $(document).ready(function() {
+							$("#li00").click(function() {
+							  $('#pie2000').fadeIn('slow');
+							  $('#pie2008').fadeOut('slow');
+							});
+							$("#li08").click(function() {
+							  $('#pie2008').fadeIn('slow');
+							  $('#pie2000').fadeOut('slow');
+							});
+							$("li").click(function(){
+							  // If this isn't already active
+							  if (!$(this).hasClass("active")) {
+								// Remove the class from anything that is active
+								$("li.active").removeClass("active");
+								// And make this active
+								$(this).addClass("active");
+							  }
+							});
+						});
+					  </script>
+	                  <ul class="nav nav-pills">
+	                    <li id="li00" class="active"><a href="javascript:;">2000</a></li>
+	                    <li id="li08"><a href="javascript:;">2008</a></li>
+	                  </ul>
+	                  <div id="edPies">
+	                    <div id="pie2000">
+	                      <div id="pie1" style="float:left;width:20%;height:100px;"></div>
+	                      <div id="pie2" style="float:left;width:20%;height:100px;"></div>
+	                      <div id="pie3" style="float:left;width:20%;height:100px;"></div>
+	                      <div id="pie4" style="float:left;width:20%;height:100px;"></div>
+	                      <div id="pie5" style="float:left;width:20%;height:100px;"></div>
+	                    </div>
+	                    <div id="pie2008">
+	                      <div id="pie6" style="float:left;width:20%;height:100px;"></div>
+	                      <div id="pie7" style="float:left;width:20%;height:100px;"></div>
+	                      <div id="pie8" style="float:left;width:20%;height:100px;"></div>
+	                      <div id="pie9" style="float:left;width:20%;height:100px;"></div>
+	                      <div id="pie10" style="float:left;width:20%;height:100px;"></div>
+	                    </div>
+	                  </div>
 	                  The cost of attending college <strong>costs between a third to over half the yearly income</strong> of earners in the bottom two quintiles in the United States.
 	                </div>
 	              </div>
 			</div> <!-- end row anecdote -->
->>>>>>> added number to education
             <div class="alert alert-info">
               Savings build both the resources and the expectations needed to get more low-income students to college. The ASPIRE Act would establish a savings account at birth for every child and provide progressive matches to build balances among low-income children. At 18, the child can use the account for several designated purposes, including college.
             </div>
