@@ -107,6 +107,16 @@ var chart;
 				pointPadding: .5,
 				groupPadding: .3,
 				minPointLength: 1,
+				dataLabels: {
+					enabled: true,
+					formatter: function() {
+						return this.y + '%';
+					},
+					style: {
+						fontSize: '14px',
+						fontWeight: 'bold'					
+					},
+				},
 			}
 		},
 		labels: {
@@ -123,6 +133,16 @@ var chart;
 					left: '634px',
 					top: '-17px',
 					color: 'black'
+				}
+			},{
+				html: 'Employee sponsorship',
+				style: {
+					left: '295px',
+					top: '30px',
+					color: '#000',
+					zIndex: '1000',
+					fontWeight: 'bold',
+					fontSize: '16px'
 				}
 			}]
 		},

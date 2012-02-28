@@ -183,6 +183,7 @@ var chart;
 			  enabled: false
 		   },
 		   borderColor: '#000000',
+		   innerSize: '50%',
 		}]
 	 });
   });
