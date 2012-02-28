@@ -54,9 +54,21 @@ h2.section-title {
 
 /* ======================================== EDUCATION ======================================== */
 
+.ed-pills a {
+	color: #B94A48;	
+}
+
+.ed-pills li.active a {
+    background-color: #B94A48;
+}
+
 #edPies {
-height: 100px;
+height: 118px;
 overflow: hidden;	
+}
+
+#edPies h4 {
+	text-align: center;
 }
 
 #pie2008 {
