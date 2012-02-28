@@ -30,14 +30,6 @@ $(document).ready(function() {
 					this.x +': '+ this.y +'%';
 			}
 		},
-//		legend: {
-//			layout: 'vertical',
-//			align: 'right',
-//			verticalAlign: 'top',
-//			x: -10,
-//			y: 100,
-//			borderWidth: 0
-//		},
 		series: [{
 			name: 'Value of loans ($B)',
 			data: [601.5, 634.2, 686.8, 711.5, 695.2, 652.2]
@@ -80,14 +72,6 @@ $(document).ready(function() {
 					this.x +': '+ this.y +'%';
 			}
 		},
-//		legend: {
-//			layout: 'vertical',
-//			align: 'right',
-//			verticalAlign: 'top',
-//			x: -10,
-//			y: 100,
-//			borderWidth: 0
-//		},
 		series: [{
 			name: 'Births',
 			data: [-0.2, -6.7, -13.4]
