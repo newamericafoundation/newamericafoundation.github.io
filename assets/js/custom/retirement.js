@@ -48,6 +48,153 @@
 //	});
 //});
 
+//var chart;
+//  $(document).ready(function() {
+//	 chart = new Highcharts.Chart({
+//		chart: {
+//		   renderTo: 'top-quartile',
+//		   plotBackgroundColor: null,
+//		   plotBorderWidth: null,
+//		},
+//		title: {
+//		   text: 'Top quartile'
+//		},
+//		credits: {
+//			enabled: false	
+//		},
+//		exporting: {
+//			enabled: false	
+//		},
+//		legend: {
+//			enabled: false	
+//		},
+//		yAxis: {
+//			title: {
+//				text: null
+//			},
+//			labels: {
+//			  formatter: function() {
+//				return this.value +'%';
+//			  }
+//			},
+//			max:90,
+//			min:30,
+//			startOnTick: false,
+//			tickInterval: 30
+//		},
+//		xAxis: {
+//			categories: ["'00", "'08"]
+//		},
+//		tooltip: {
+//			style: {
+//				fontSize: '9px',	
+//			},
+//			formatter: function() {
+//			  var s;
+//			  if (this.point.name) { // the pie chart
+//				 s = ''+
+//					this.point.name +': '+ this.y + '%';
+//			  } else {
+//				 s = ''+
+//					this.series.name  +': '+ this.y;
+//			  }
+//			  return s;
+//		   }
+//		},
+//		plotOptions: {
+//			area: {
+//				pointWidth: 25,
+//				pointPadding: .5,
+//				groupPadding: .3,
+//				minPointLength: 1,
+//				dataLabels: {
+//					enabled: true,
+//					formatter: function() {
+//						return this.y + '%';
+//					},
+//					style: {
+//						fontSize: '14px',
+//						fontWeight: 'bold'					
+//					},
+//				},
+//			}
+//		},
+//		labels: {
+//			items: [{
+//				html: '2000',
+//				style: {
+//					left: '44px',
+//					top: '-17px',
+//					color: 'black'
+//				}
+//			},{
+//				html: '2008',
+//				style: {
+//					left: '634px',
+//					top: '-17px',
+//					color: 'black'
+//				}
+//			},{
+//				html: 'Employee sponsorship',
+//				style: {
+//					left: '275px',
+//					top: '30px',
+//					color: '#000',
+//					zIndex: '1000',
+//					fontWeight: 'bold',
+//					fontSize: '16px'
+//				}
+//			}]
+//		},
+//		series: [{
+//		   type: 'pie',
+//		   name: 'Employee retirement plans',
+//		   data: [{
+//			  name: 'Employee participation',
+//			  y: 75.5,
+//			  color: '#660033'
+//		   }, {
+//			  name: 'No participation',
+//			  y: 24.5,
+//			  color: '#EEEEEE'
+//		   }],
+//		   center: [60, 30],
+//		   spacingLeft: 100,
+//		   size: 60,
+//		   showInLegend: false,
+//		   dataLabels: {
+//			  enabled: false
+//		   },
+//		   borderColor: '#000000',
+//		},{
+//		   type: 'pie',
+//		   name: 'Employee retirement plans',
+//		   data: [{
+//			  name: 'Employee participation',
+//			  y: 68.6,
+//			  color: '#660033'
+//		   }, {
+//			  name: 'No participation',
+//			  y: 31.4,
+//			  color: '#EEEEEE'
+//		   }],
+//		   center: [650, 30],
+//		   spacingLeft: 100,
+//		   size: 60,
+//		   showInLegend: false,
+//		   dataLabels: {
+//			  enabled: false
+//		   },
+//		   borderColor: '#000000',
+//		},{
+//			type: 'area',
+//			data: [80.2, 72.9],
+//			color: '#0D253F',
+//		}]
+//	 });
+//  });
+//
+
 var chart;
   $(document).ready(function() {
 	 chart = new Highcharts.Chart({
@@ -57,7 +204,7 @@ var chart;
 		   plotBorderWidth: null,
 		},
 		title: {
-		   text: 'Top quartile'
+		   text: null
 		},
 		credits: {
 			enabled: false	
@@ -96,7 +243,7 @@ var chart;
 					this.point.name +': '+ this.y + '%';
 			  } else {
 				 s = ''+
-					this.series.name  +': '+ this.y;
+					this.y + '%';
 			  }
 			  return s;
 		   }
@@ -121,28 +268,44 @@ var chart;
 		},
 		labels: {
 			items: [{
-				html: '2000',
+				html: "'00",
 				style: {
-					left: '44px',
-					top: '-17px',
+					left: '69px',
+					top: '78px',
+					color: 'black',
+					textAlign: 'center'
+				}
+			},{
+				html: "Employee participation",
+				style: {
+					left: '19px',
+					top: '-1px',
+					color: 'black',
+					textAlign: 'center'
+				}
+			},{
+				html: "'08",
+				style: {
+					left: '639px',
+					top: '78px',
 					color: 'black'
 				}
 			},{
-				html: '2008',
+				html: "Employee participation",
 				style: {
-					left: '634px',
-					top: '-17px',
-					color: 'black'
+					left: '580px',
+					top: '-1px',
+					color: 'black',
+					textAlign: 'center'
 				}
 			},{
-				html: 'Employee sponsorship',
+				html: 'Employeer sponsorship',
 				style: {
-					left: '295px',
-					top: '30px',
+					left: '300px',
+					top: '95px',
 					color: '#000',
 					zIndex: '1000',
-					fontWeight: 'bold',
-					fontSize: '16px'
+					fontSize: '12px'
 				}
 			}]
 		},
@@ -158,7 +321,7 @@ var chart;
 			  y: 24.5,
 			  color: '#EEEEEE'
 		   }],
-		   center: [60, 30],
+		   center: [80, 45],
 		   spacingLeft: 100,
 		   size: 60,
 		   showInLegend: false,
@@ -178,8 +341,7 @@ var chart;
 			  y: 31.4,
 			  color: '#EEEEEE'
 		   }],
-		   center: [650, 30],
-		   spacingLeft: 100,
+		   center: [650, 45],
 		   size: 60,
 		   showInLegend: false,
 		   dataLabels: {
@@ -203,7 +365,7 @@ var chart;
 		   plotBorderWidth: null,
 		},
 		title: {
-		   text: 'Second quartile'
+		   text: null
 		},
 		credits: {
 			enabled: false	
@@ -242,7 +404,7 @@ var chart;
 					this.point.name +': '+ this.y + '%';
 			  } else {
 				 s = ''+
-					this.series.name  +': '+ this.y;
+					this.y + '%';
 			  }
 			  return s;
 		   }
@@ -253,22 +415,58 @@ var chart;
 				pointPadding: .5,
 				groupPadding: .3,
 				minPointLength: 1,
+				dataLabels: {
+					enabled: true,
+					formatter: function() {
+						return this.y + '%';
+					},
+					style: {
+						fontSize: '14px',
+						fontWeight: 'bold'					
+					},
+				},
 			}
 		},
 		labels: {
 			items: [{
-				html: '2000',
+				html: "'00",
 				style: {
-					left: '44px',
-					top: '-17px',
+					left: '69px',
+					top: '78px',
+					color: 'black',
+					textAlign: 'center'
+				}
+			},{
+				html: "Employee participation",
+				style: {
+					left: '19px',
+					top: '-1px',
+					color: 'black',
+					textAlign: 'center'
+				}
+			},{
+				html: "'08",
+				style: {
+					left: '639px',
+					top: '78px',
 					color: 'black'
 				}
 			},{
-				html: '2008',
+				html: "Employee participation",
 				style: {
-					left: '634px',
-					top: '-17px',
-					color: 'black'
+					left: '580px',
+					top: '-1px',
+					color: 'black',
+					textAlign: 'center'
+				}
+			},{
+				html: 'Employeer sponsorship',
+				style: {
+					left: '300px',
+					top: '95px',
+					color: '#000',
+					zIndex: '1000',
+					fontSize: '12px'
 				}
 			}]
 		},
@@ -284,7 +482,8 @@ var chart;
 			  y: 32.9,
 			  color: '#EEEEEE'
 		   }],
-		   center: [60, 30],
+		   center: [80, 45],
+		   spacingLeft: 100,
 		   size: 60,
 		   showInLegend: false,
 		   dataLabels: {
@@ -303,8 +502,7 @@ var chart;
 			  y: 39.9,
 			  color: '#EEEEEE'
 		   }],
-		   center: [650, 30],
-		   spacingLeft: 100,
+		   center: [650, 45],
 		   size: 60,
 		   showInLegend: false,
 		   dataLabels: {
@@ -328,7 +526,7 @@ var chart;
 		   plotBorderWidth: null,
 		},
 		title: {
-		   text: 'Third quartile'
+		   text: null
 		},
 		credits: {
 			enabled: false	
@@ -367,7 +565,7 @@ var chart;
 					this.point.name +': '+ this.y + '%';
 			  } else {
 				 s = ''+
-					this.series.name  +': '+ this.y;
+					this.y + '%';
 			  }
 			  return s;
 		   }
@@ -378,22 +576,58 @@ var chart;
 				pointPadding: .5,
 				groupPadding: .3,
 				minPointLength: 1,
+				dataLabels: {
+					enabled: true,
+					formatter: function() {
+						return this.y + '%';
+					},
+					style: {
+						fontSize: '14px',
+						fontWeight: 'bold'					
+					},
+				},
 			}
 		},
 		labels: {
 			items: [{
-				html: '2000',
+				html: "'00",
 				style: {
-					left: '44px',
-					top: '-17px',
+					left: '69px',
+					top: '78px',
+					color: 'black',
+					textAlign: 'center'
+				}
+			},{
+				html: "Employee participation",
+				style: {
+					left: '19px',
+					top: '-1px',
+					color: 'black',
+					textAlign: 'center'
+				}
+			},{
+				html: "'08",
+				style: {
+					left: '639px',
+					top: '78px',
 					color: 'black'
 				}
 			},{
-				html: '2008',
+				html: "Employee participation",
 				style: {
-					left: '634px',
-					top: '-17px',
-					color: 'black'
+					left: '580px',
+					top: '-1px',
+					color: 'black',
+					textAlign: 'center'
+				}
+			},{
+				html: 'Employeer sponsorship',
+				style: {
+					left: '300px',
+					top: '95px',
+					color: '#000',
+					zIndex: '1000',
+					fontSize: '12px'
 				}
 			}]
 		},
@@ -409,7 +643,7 @@ var chart;
 			  y: 44.5,
 			  color: '#EEEEEE'
 		   }],
-		   center: [60, 30],
+		   center: [80, 45],
 		   spacingLeft: 100,
 		   size: 60,
 		   showInLegend: false,
@@ -429,8 +663,7 @@ var chart;
 			  y: 50.3,
 			  color: '#EEEEEE'
 		   }],
-		   center: [650, 30],
-		   spacingLeft: 100,
+		   center: [650, 45],
 		   size: 60,
 		   showInLegend: false,
 		   dataLabels: {
@@ -445,6 +678,7 @@ var chart;
 	 });
   });
 
+
 var chart;
   $(document).ready(function() {
 	 chart = new Highcharts.Chart({
@@ -454,7 +688,7 @@ var chart;
 		   plotBorderWidth: null,
 		},
 		title: {
-		   text: 'Bottom quartile'
+		   text: null
 		},
 		credits: {
 			enabled: false	
@@ -493,7 +727,7 @@ var chart;
 					this.point.name +': '+ this.y + '%';
 			  } else {
 				 s = ''+
-					this.series.name  +': '+ this.y;
+					this.y + '%';
 			  }
 			  return s;
 		   }
@@ -504,22 +738,58 @@ var chart;
 				pointPadding: .5,
 				groupPadding: .3,
 				minPointLength: 1,
+				dataLabels: {
+					enabled: true,
+					formatter: function() {
+						return this.y + '%';
+					},
+					style: {
+						fontSize: '14px',
+						fontWeight: 'bold'					
+					},
+				},
 			}
 		},
 		labels: {
 			items: [{
-				html: '2000',
+				html: "'00",
 				style: {
-					left: '44px',
-					top: '-17px',
+					left: '69px',
+					top: '78px',
+					color: 'black',
+					textAlign: 'center'
+				}
+			},{
+				html: "Employee participation",
+				style: {
+					left: '19px',
+					top: '-1px',
+					color: 'black',
+					textAlign: 'center'
+				}
+			},{
+				html: "'08",
+				style: {
+					left: '639px',
+					top: '78px',
 					color: 'black'
 				}
 			},{
-				html: '2008',
+				html: "Employee participation",
 				style: {
-					left: '634px',
-					top: '-17px',
-					color: 'black'
+					left: '580px',
+					top: '-1px',
+					color: 'black',
+					textAlign: 'center'
+				}
+			},{
+				html: 'Employeer sponsorship',
+				style: {
+					left: '300px',
+					top: '95px',
+					color: '#000',
+					zIndex: '1000',
+					fontSize: '12px'
 				}
 			}]
 		},
@@ -535,7 +805,7 @@ var chart;
 			  y: 67.9,
 			  color: '#EEEEEE'
 		   }],
-		   center: [60, 30],
+		   center: [80, 45],
 		   spacingLeft: 100,
 		   size: 60,
 		   showInLegend: false,
@@ -555,7 +825,7 @@ var chart;
 			  y: 72.3,
 			  color: '#EEEEEE'
 		   }],
-		   center: [650, 30],
+		   center: [650, 45],
 		   size: 60,
 		   showInLegend: false,
 		   dataLabels: {

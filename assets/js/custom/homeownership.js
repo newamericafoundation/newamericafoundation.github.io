@@ -33,7 +33,11 @@ $(document).ready(function() {
 		plotOptions: {
 //			bar: {
 //				dataLabels: {
-//					enabled: true
+//					enabled: true,
+//					formatter: function() {
+//						return ''+
+//							'$' + this.y;
+//					}
 //				}
 //			},
 			series: {
@@ -83,20 +87,19 @@ $(document).ready(function() {
 		},
 		yAxis: {
 			min: 0,
+			max: 90,
 			title: {
 				text: null
 			},
 		},
-		tooltip: {
-			formatter: function() {
-				return ''+
-					this.series.name +': $'+ this.y;
-			}
-		},
 		plotOptions: {
 			bar: {
 				dataLabels: {
-					enabled: true
+					enabled: true,
+					formatter: function() {
+						return ''+
+							this.y + '%';
+					}
 				}
 			},
 //			series: {
