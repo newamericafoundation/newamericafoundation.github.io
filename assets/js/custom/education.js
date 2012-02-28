@@ -273,7 +273,7 @@ var chart;
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		}]
+		   innerSize: '50%',		}]
 	 });
   });
 
@@ -362,7 +362,7 @@ var chart;
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		}]
+		   innerSize: '50%',		}]
 	 });
   });
 
@@ -451,7 +451,7 @@ var chart;
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		}]
+		   innerSize: '50%',		}]
 	 });
   });
 
@@ -540,7 +540,7 @@ var chart;
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		}]
+		   innerSize: '50%',		}]
 	 });
   });
 
@@ -629,7 +629,7 @@ var chart;
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		}]
+		   innerSize: '50%',		}]
 	 });
   });
 
@@ -718,7 +718,7 @@ var chart;
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		}]
+		   innerSize: '50%',		}]
 	 });
   });
 
@@ -807,7 +807,7 @@ var chart;
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		}]
+		   innerSize: '50%',		}]
 	 });
   });
 
@@ -896,7 +896,7 @@ var chart;
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		}]
+		   innerSize: '50%',		}]
 	 });
   });
 
@@ -985,6 +985,6 @@ var chart;
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		}]
+		   innerSize: '50%',		}]
 	 });
   });
