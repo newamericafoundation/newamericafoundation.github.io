@@ -951,13 +951,13 @@ var chart;
 		   }
 		},
 		plotOptions: {
-			column: {
-				pointWidth: 25,
-				pointPadding: .5,
-				groupPadding: .3,
-				minPointLength: 1,
-			}
-		},
+				column: {
+					pointWidth: 25,
+					pointPadding: .5,
+					groupPadding: .3,
+					minPointLength: 1,
+				}
+			},
 		series: [{
 		   type: 'pie',
 		   data: [{

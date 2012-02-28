@@ -90,3 +90,35 @@ overflow: hidden;
 .edu-number-big{
 	font-size: 56px;
 }
+
+
+/* ======================================== Entrepreneurship ======================================== */
+
+.ent-anecdote{
+	margin:0px 5px;
+	text-align:center;
+}
+
+.ent-anecdote-box{
+	margin:20px 5px;
+}
+
+.ent-number{
+	font-weight:bold;
+	font-size: 46px;
+	line-height: 56px;
+	color:#0088CC;
+}
+
+.ent-number-big{
+	font-size: 66px;
+}
+
+.ent-number-big-red{
+	font-size: 66px;
+	color:#B94A48;
+}
+
+.ent-number-inline{
+	font-size:30px;
+}
