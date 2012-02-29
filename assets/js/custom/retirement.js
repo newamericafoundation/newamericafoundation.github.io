@@ -231,7 +231,6 @@ var chart;
 		},
 		xAxis: {
 			categories: ["'00", "'08"],
-			startOnTick: true
 		},
 		tooltip: {
 			style: {
@@ -263,8 +262,8 @@ var chart;
 				},
 			}
 		},
-		labels: {
-			items: [
+//		labels: {
+//			items: [
 //			{
 //				html: "'00",
 //				style: {
@@ -282,32 +281,32 @@ var chart;
 //					textAlign: 'center'
 //				}
 //			},
-			{
-				html: "'08",
-				style: {
-					left: '639px',
-					top: '78px',
-					color: 'black'
-				}
-			},{
-				html: "Employee participation",
-				style: {
-					left: '580px',
-					top: '-1px',
-					color: 'black',
-					textAlign: 'center'
-				}
-			},{
-				html: 'Employeer sponsorship',
-				style: {
-					left: '300px',
-					top: '95px',
-					color: '#000',
-					zIndex: '1000',
-					fontSize: '12px'
-				}
-			}]
-		},
+//			{
+//				html: "'08",
+//				style: {
+//					left: '639px',
+//					top: '78px',
+//					color: 'black'
+//				}
+//			},{
+//				html: "Employee participation",
+//				style: {
+//					left: '580px',
+//					top: '-1px',
+//					color: 'black',
+//					textAlign: 'center'
+//				}
+//			},{
+//				html: 'Employeer sponsorship',
+//				style: {
+//					left: '300px',
+//					top: '95px',
+//					color: '#000',
+//					zIndex: '1000',
+//					fontSize: '12px'
+//				}
+//			}]
+//		},
 		series: [
 //		{
 //		   type: 'pie',
@@ -330,8 +329,73 @@ var chart;
 //		   },
 //		   borderColor: '#000000',
 //		},
-		{
+//		{
+//		   type: 'pie',
+//		   name: 'Employee retirement plans',
+//		   data: [{
+//			  name: 'Employee participation',
+//			  y: 68.6,
+//			  color: '#660033'
+//		   }, {
+//			  name: 'No participation',
+//			  y: 31.4,
+//			  color: '#EEEEEE'
+//		   }],
+//		   center: [650, 45],
+//		   size: 60,
+//		   showInLegend: false,
+//		   dataLabels: {
+//			  enabled: false
+//		   },
+//		   borderColor: '#000000',
+//		},
+        {
+			type: 'area',
+			data: [80.2, 72.9],
+			color: '#0D253F',
+		}]
+	 });
+  });
+  
+var chart;
+  $(document).ready(function() {
+	 chart = new Highcharts.Chart({
+		chart: {
+		   renderTo: 'top-quartile-pie',
+		   plotBackgroundColor: null,
+		   plotBorderWidth: null,
 		   type: 'pie',
+		},
+		title: {
+		   text: null
+		},
+		credits: {
+			enabled: false	
+		},
+		exporting: {
+			enabled: false	
+		},
+		legend: {
+			enabled: false	
+		},
+		tooltip: {
+			enabled: false
+		},
+		labels: {
+			items: [{
+				html: '16%',
+				style: {
+					left: '67px',
+					top: '51px',
+					color: 'black',
+					fontWeight: 'bold',
+					fontSize: '32px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
+				}
+			}]
+		},
+		series: [
+		{
 		   name: 'Employee retirement plans',
 		   data: [{
 			  name: 'Employee participation',
@@ -342,17 +406,13 @@ var chart;
 			  y: 31.4,
 			  color: '#EEEEEE'
 		   }],
-		   center: [650, 45],
-		   size: 60,
 		   showInLegend: false,
 		   dataLabels: {
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		},{
-			type: 'area',
-			data: [80.2, 72.9],
-			color: '#0D253F',
+		   size: 105,
+		   innerSize: '70%',
 		}]
 	 });
   });
