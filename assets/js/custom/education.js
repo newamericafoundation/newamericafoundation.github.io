@@ -144,7 +144,7 @@ var chart;
 				html: '39%',
 				style: {
 					left: '29px',
-					top: '35px',
+					top: '45px',
 					color: 'black',
 					fontWeight: 'bold',
 					fontSize: '28px',
@@ -187,13 +187,13 @@ var chart;
 			  y: 61,
 			  color: '#EEEEEE'
 		   }],
-		   size: 92,
+		   size: 105,
 		   showInLegend: false,
 		   dataLabels: {
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		   innerSize: '85%',
+		   innerSize: '70%',
 		}]
 	 });
   });
@@ -243,10 +243,12 @@ var chart;
 			items: [{
 				html: '23%',
 				style: {
-					left: '45px',
-					top: '29px',
+					left: '29px',
+					top: '45px',
 					color: 'black',
-					fontWeight: 'bold'
+					fontWeight: 'bold',
+					fontSize: '28px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
 				}
 			}]
 		},
@@ -285,13 +287,13 @@ var chart;
 			  y: 77,
 			  color: '#EEEEEE'
 		   }],
-		   size: 70,
+		   size: 105,
 		   showInLegend: false,
 		   dataLabels: {
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		   innerSize: '40%',
+		   innerSize: '70%',
 		}]
 	 });
   });
@@ -341,10 +343,12 @@ var chart;
 			items: [{
 				html: '18%',
 				style: {
-					left: '45px',
-					top: '29px',
+					left: '29px',
+					top: '45px',
 					color: 'black',
-					fontWeight: 'bold'
+					fontWeight: 'bold',
+					fontSize: '28px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
 				}
 			}]
 		},
@@ -383,13 +387,13 @@ var chart;
 			  y: 82,
 			  color: '#EEEEEE'
 		   }],
-		   size: 70,
+		   size: 105,
 		   showInLegend: false,
 		   dataLabels: {
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		   innerSize: '40%',
+		   innerSize: '70%',
 		}]
 	 });
   });
@@ -439,10 +443,12 @@ var chart;
 			items: [{
 				html: '12%',
 				style: {
-					left: '45px',
-					top: '29px',
+					left: '29px',
+					top: '45px',
 					color: 'black',
-					fontWeight: 'bold'
+					fontWeight: 'bold',
+					fontSize: '28px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
 				}
 			}]
 		},
@@ -481,13 +487,13 @@ var chart;
 			  y: 88,
 			  color: '#EEEEEE'
 		   }],
-		   size: 70,
+		   size: 105,
 		   showInLegend: false,
 		   dataLabels: {
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		   innerSize: '40%',
+		   innerSize: '70%',
 		}]
 	 });
   });
@@ -537,10 +543,12 @@ var chart;
 			items: [{
 				html: '7%',
 				style: {
-					left: '49px',
-					top: '29px',
+					left: '38px',
+					top: '45px',
 					color: 'black',
-					fontWeight: 'bold'
+					fontWeight: 'bold',
+					fontSize: '28px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
 				}
 			}]
 		},
@@ -579,13 +587,13 @@ var chart;
 			  y: 93,
 			  color: '#EEEEEE'
 		   }],
-		   size: 70,
+		   size: 105,
 		   showInLegend: false,
 		   dataLabels: {
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		   innerSize: '40%',
+		   innerSize: '70%',
 		}]
 	 });
   });
@@ -635,10 +643,12 @@ var chart;
 			items: [{
 				html: '55%',
 				style: {
-					left: '45px',
-					top: '29px',
+					left: '29px',
+					top: '45px',
 					color: 'black',
-					fontWeight: 'bold'
+					fontWeight: 'bold',
+					fontSize: '28px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
 				}
 			}]
 		},
@@ -677,13 +687,13 @@ var chart;
 			  y: 45,
 			  color: '#EEEEEE'
 		   }],
-		   size: 70,
+		   size: 105,
 		   showInLegend: false,
 		   dataLabels: {
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		   innerSize: '40%',
+		   innerSize: '70%',
 		}]
 	 });
   });
@@ -733,10 +743,12 @@ var chart;
 			items: [{
 				html: '33%',
 				style: {
-					left: '45px',
-					top: '29px',
+					left: '29px',
+					top: '45px',
 					color: 'black',
-					fontWeight: 'bold'
+					fontWeight: 'bold',
+					fontSize: '28px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
 				}
 			}]
 		},
@@ -775,13 +787,13 @@ var chart;
 			  y: 67,
 			  color: '#EEEEEE'
 		   }],
-		   size: 70,
+		   size: 105,
 		   showInLegend: false,
 		   dataLabels: {
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		   innerSize: '40%',
+		   innerSize: '70%',
 		}]
 	 });
   });
@@ -831,10 +843,12 @@ var chart;
 			items: [{
 				html: '25%',
 				style: {
-					left: '45px',
-					top: '29px',
+					left: '29px',
+					top: '45px',
 					color: 'black',
-					fontWeight: 'bold'
+					fontWeight: 'bold',
+					fontSize: '28px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
 				}
 			}]
 		},
@@ -873,13 +887,13 @@ var chart;
 			  y: 75,
 			  color: '#EEEEEE'
 		   }],
-		   size: 70,
+		   size: 105,
 		   showInLegend: false,
 		   dataLabels: {
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		   innerSize: '40%',
+		   innerSize: '70%',
 		}]
 	 });
   });
@@ -929,10 +943,12 @@ var chart;
 			items: [{
 				html: '16%',
 				style: {
-					left: '45px',
-					top: '29px',
+					left: '29px',
+					top: '45px',
 					color: 'black',
-					fontWeight: 'bold'
+					fontWeight: 'bold',
+					fontSize: '28px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
 				}
 			}]
 		},
@@ -971,13 +987,13 @@ var chart;
 			  y: 84,
 			  color: '#EEEEEE'
 		   }],
-		   size: 70,
+		   size: 105,
 		   showInLegend: false,
 		   dataLabels: {
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		   innerSize: '40%',
+		   innerSize: '70%',
 		}]
 	 });
   });
@@ -1027,10 +1043,12 @@ var chart;
 			items: [{
 				html: '9%',
 				style: {
-					left: '49px',
-					top: '29px',
+					left: '38px',
+					top: '45px',
 					color: 'black',
-					fontWeight: 'bold'
+					fontWeight: 'bold',
+					fontSize: '28px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
 				}
 			}]
 		},
@@ -1069,13 +1087,13 @@ var chart;
 			  y: 91,
 			  color: '#EEEEEE'
 		   }],
-		   size: 70,
+		   size: 105,
 		   showInLegend: false,
 		   dataLabels: {
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		   innerSize: '40%',
+		   innerSize: '70%',
 		}]
 	 });
   });
