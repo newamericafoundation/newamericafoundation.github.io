@@ -226,11 +226,12 @@ var chart;
 			},
 			max:90,
 			min:30,
-			startOnTick: false,
-			tickInterval: 30
+			tickInterval: 30,
+			offset: 10
 		},
 		xAxis: {
-			categories: ["'00", "'08"]
+			categories: ["'00", "'08"],
+			startOnTick: true
 		},
 		tooltip: {
 			style: {
@@ -250,10 +251,6 @@ var chart;
 		},
 		plotOptions: {
 			area: {
-				pointWidth: 25,
-				pointPadding: .5,
-				groupPadding: .3,
-				minPointLength: 1,
 				dataLabels: {
 					enabled: true,
 					formatter: function() {
@@ -267,23 +264,25 @@ var chart;
 			}
 		},
 		labels: {
-			items: [{
-				html: "'00",
-				style: {
-					left: '69px',
-					top: '78px',
-					color: 'black',
-					textAlign: 'center'
-				}
-			},{
-				html: "Employee participation",
-				style: {
-					left: '19px',
-					top: '-1px',
-					color: 'black',
-					textAlign: 'center'
-				}
-			},{
+			items: [
+//			{
+//				html: "'00",
+//				style: {
+//					left: '69px',
+//					top: '78px',
+//					color: 'black',
+//					textAlign: 'center'
+//				}
+//			},{
+//				html: "Employee participation",
+//				style: {
+//					left: '19px',
+//					top: '-1px',
+//					color: 'black',
+//					textAlign: 'center'
+//				}
+//			},
+			{
 				html: "'08",
 				style: {
 					left: '639px',
@@ -309,27 +308,29 @@ var chart;
 				}
 			}]
 		},
-		series: [{
-		   type: 'pie',
-		   name: 'Employee retirement plans',
-		   data: [{
-			  name: 'Employee participation',
-			  y: 75.5,
-			  color: '#660033'
-		   }, {
-			  name: 'No participation',
-			  y: 24.5,
-			  color: '#EEEEEE'
-		   }],
-		   center: [80, 45],
-		   spacingLeft: 100,
-		   size: 60,
-		   showInLegend: false,
-		   dataLabels: {
-			  enabled: false
-		   },
-		   borderColor: '#000000',
-		},{
+		series: [
+//		{
+//		   type: 'pie',
+//		   name: 'Employee retirement plans',
+//		   data: [{
+//			  name: 'Employee participation',
+//			  y: 75.5,
+//			  color: '#660033'
+//		   }, {
+//			  name: 'No participation',
+//			  y: 24.5,
+//			  color: '#EEEEEE'
+//		   }],
+//		   center: [80, 45],
+//		   spacingLeft: 100,
+//		   size: 60,
+//		   showInLegend: false,
+//		   dataLabels: {
+//			  enabled: false
+//		   },
+//		   borderColor: '#000000',
+//		},
+		{
 		   type: 'pie',
 		   name: 'Employee retirement plans',
 		   data: [{
