@@ -143,10 +143,12 @@ var chart;
 			items: [{
 				html: '39%',
 				style: {
-					left: '45px',
-					top: '29px',
+					left: '29px',
+					top: '35px',
 					color: 'black',
-					fontWeight: 'bold'
+					fontWeight: 'bold',
+					fontSize: '28px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
 				}
 			}]
 		},
@@ -185,13 +187,13 @@ var chart;
 			  y: 61,
 			  color: '#EEEEEE'
 		   }],
-		   size: 70,
+		   size: 92,
 		   showInLegend: false,
 		   dataLabels: {
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		   innerSize: '40%',
+		   innerSize: '85%',
 		}]
 	 });
   });
