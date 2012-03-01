@@ -1,7 +1,11 @@
 // JavaScript Document
 
 Highcharts.theme = {
-   colors: ['#A90641', '#464646', '#5B605F', '#A1A194', '#FCFAD0'],
+  colors: ['#A90641', '#464646', '#5B605F', '#A1A194', '#FCFAD0'],
+  chart: {
+	 plotBackgroundColor: '#FEFCE5',
+	 backgroundColor: '#FEFCE5'
+  },
 };
 
 var highchartsOptions = Highcharts.setOptions(Highcharts.theme);
@@ -11,7 +15,6 @@ var chart;
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'retirementGraph',
-		   plotBackgroundColor: null,
 		   plotBorderWidth: null,
 		   spacingRight:100
 		},
@@ -107,7 +110,6 @@ var chart;
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'savingsGraph',
-		   plotBackgroundColor: null,
 		   plotBorderWidth: null,
 		   spacingRight:100
 		},
@@ -203,7 +205,6 @@ var chart;
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'homeownershipGraph',
-		   plotBackgroundColor: null,
 		   plotBorderWidth: null,
 		   spacingRight:100
 		},
@@ -299,7 +300,6 @@ var chart;
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'postEdGraph',
-		   plotBackgroundColor: null,
 		   plotBorderWidth: null,
 		   spacingRight:100
 		},
@@ -395,7 +395,6 @@ var chart;
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'entrepreneurshipGraph',
-		   plotBackgroundColor: null,
 		   plotBorderWidth: null,
 		   spacingRight:100
 		},

@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /* CSS Document */
 
+body {
+	background-color: #FEFCE5 !important;	
+}
+
 .alert {
 padding: 8px 14px !important;	
 }

@@ -103,9 +103,9 @@ var chart;
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie1',
-		   plotBackgroundColor: null,
+		   plotBackgroundColor: '#D0D0C3',
 		   plotBorderWidth: null,
-		   backgroundColor: '#F2DEDE',
+		   backgroundColor: '#D0D0C3',
 		   type: 'pie'
 		},
 		title: {
@@ -201,9 +201,9 @@ var chart;
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie2',
-		   plotBackgroundColor: null,
+		   plotBackgroundColor: '#D0D0C3',
 		   plotBorderWidth: null,
-		   backgroundColor: '#F2DEDE',
+		   backgroundColor: '#D0D0C3',
 		   type: 'pie'
 		},
 		title: {
@@ -299,9 +299,9 @@ var chart;
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie3',
-		   plotBackgroundColor: null,
+		   plotBackgroundColor: '#D0D0C3',
 		   plotBorderWidth: null,
-		   backgroundColor: '#F2DEDE',
+		   backgroundColor: '#D0D0C3',
 		   type: 'pie'
 		},
 		title: {
@@ -397,9 +397,9 @@ var chart;
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie4',
-		   plotBackgroundColor: null,
+		   plotBackgroundColor: '#D0D0C3',
 		   plotBorderWidth: null,
-		   backgroundColor: '#F2DEDE',
+		   backgroundColor: '#D0D0C3',
 		   type: 'pie'
 		},
 		title: {
@@ -495,9 +495,9 @@ var chart;
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie5',
-		   plotBackgroundColor: null,
+		   plotBackgroundColor: '#D0D0C3',
 		   plotBorderWidth: null,
-		   backgroundColor: '#F2DEDE',
+		   backgroundColor: '#D0D0C3',
 		   type: 'pie'
 		},
 		title: {
@@ -593,9 +593,9 @@ var chart;
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie6',
-		   plotBackgroundColor: null,
+		   plotBackgroundColor: '#D0D0C3',
 		   plotBorderWidth: null,
-		   backgroundColor: '#F2DEDE',
+		   backgroundColor: '#D0D0C3',
 		   type: 'pie'
 		},
 		title: {
@@ -691,9 +691,9 @@ var chart;
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie7',
-		   plotBackgroundColor: null,
+		   plotBackgroundColor: '#D0D0C3',
 		   plotBorderWidth: null,
-		   backgroundColor: '#F2DEDE',
+		   backgroundColor: '#D0D0C3',
 		   type: 'pie'
 		},
 		title: {
@@ -789,9 +789,9 @@ var chart;
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie8',
-		   plotBackgroundColor: null,
+		   plotBackgroundColor: '#D0D0C3',
 		   plotBorderWidth: null,
-		   backgroundColor: '#F2DEDE',
+		   backgroundColor: '#D0D0C3',
 		   type: 'pie'
 		},
 		title: {
@@ -887,9 +887,9 @@ var chart;
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie9',
-		   plotBackgroundColor: null,
+		   plotBackgroundColor: '#D0D0C3',
 		   plotBorderWidth: null,
-		   backgroundColor: '#F2DEDE',
+		   backgroundColor: '#D0D0C3',
 		   type: 'pie'
 		},
 		title: {
@@ -985,9 +985,9 @@ var chart;
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie10',
-		   plotBackgroundColor: null,
+		   plotBackgroundColor: '#D0D0C3',
 		   plotBorderWidth: null,
-		   backgroundColor: '#F2DEDE',
+		   backgroundColor: '#D0D0C3',
 		   type: 'pie'
 		},
 		title: {
