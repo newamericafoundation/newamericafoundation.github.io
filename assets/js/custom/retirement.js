@@ -220,21 +220,16 @@ var chart;
 				text: null
 			},
 			labels: {
-				enabled:false
-			  // formatter: function() {
-			  // 				return this.value +'%';
-			  // 			  }
+			  formatter: function() {
+				return this.value +'%';
+			  }
 			},
 			max:90,
 			min:30,
 			tickInterval: 30,
 			offset: 10,
-<<<<<<< HEAD
-			gridLineWidth:0
-=======
 			minorGridLineWidth: 0,
 			gridLineWidth: 0,
->>>>>>> Adding color scheme
 		},
 		xAxis: {
 			categories: ["'00", "'08"],
