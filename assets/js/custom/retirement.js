@@ -220,14 +220,16 @@ var chart;
 				text: null
 			},
 			labels: {
-			  formatter: function() {
-				return this.value +'%';
-			  }
+				enabled:false
+			  // formatter: function() {
+			  // 				return this.value +'%';
+			  // 			  }
 			},
 			max:90,
 			min:30,
 			tickInterval: 30,
-			offset: 10
+			offset: 10,
+			gridLineWidth:0
 		},
 		xAxis: {
 			categories: ["'00", "'08"],
