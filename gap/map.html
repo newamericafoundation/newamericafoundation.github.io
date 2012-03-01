@@ -23,7 +23,7 @@
 
   <!-- <link href='styles/controls.css' rel='stylesheet' type='text/css' /> -->
 <script>
-buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp.jsonp', 'mainMap');
+buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp4.jsonp', 'mainMap');
 
 	var options = {
 	    xaxis: {
@@ -144,7 +144,7 @@ $(document).ready(function() {
 	}
 	$('#layerMain').click(function(){		
 		$('li').removeClass('active');
-		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp.jsonp', 'mainMap');		
+		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp4.jsonp', 'mainMap');		
 		$('.map').removeClass('activeMap');
 		$('#layerMain').toggleClass('active');
 		$('#mainMap').addClass('activeMap');
@@ -262,7 +262,7 @@ function newMap(layerId){
 	<div class="container-fluid">
 		<div id="toolTipContainer" class="row-fluid"></div>
 	</div>
-	<div class="container-fluid">
+	<!-- <div class="container-fluid">
 				<div id="mainText" class="row-fluid">
 			<span class="span4 pull-left">
 				<h3>About the Project</h3>
@@ -272,7 +272,7 @@ function newMap(layerId){
 				<h2>Payment Infrastructure</h2>
 				<p>In order to truly enable asset building among participants in social safety net programs, we must provide easy and convenient access to electronic alternatives. To get an idea of the state of the financial infrastructure in countries around the world with social protection programs that include asset transfers, NAF's Global Asset Project has taken a helicopter view of their payment infrastructures - including Commercial Banks, Microfinance Institutions, ATMs, Point of Service terminals - in addition to the human infrastructure in place and the potential for banking via innovating mediums such as mobiles.  The composite analysis of these variables determined whether these countries' had low, medium, or highly developed infrastructure. This composite variable, in addition to three others (Payment Infrastructure Utilization, Enabling Political Environment and Governance), will inform NAF's final conclusions about where the greatest potential exists to change government to person asset transfers into electronic payments, thus enabling and encouraging savings and asset building.</p>
 			</span>
-		</div>
+		</div> -->
 		<div class="container-fluid" id="graphHolder"></div>
 	</div>
 </body>

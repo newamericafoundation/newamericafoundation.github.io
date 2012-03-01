@@ -258,7 +258,7 @@ a.zoomout {
 	-webkit-transition: opacity .5s;
 	-moz-transition: opacity .5s;
 	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
-	min-height: 100px;
+	min-height: 200px;
   }
 
 .wax-tooltip h2{
