@@ -3,8 +3,8 @@
 Highcharts.theme = {
   colors: ['#A90641', '#464646', '#5B605F', '#A1A194', '#FCFAD0'],
   chart: {
-	 plotBackgroundColor: '#FEFCE5',
-	 backgroundColor: '#FEFCE5'
+	 plotBackgroundColor: null,
+	 backgroundColor: null
   },
 };
 

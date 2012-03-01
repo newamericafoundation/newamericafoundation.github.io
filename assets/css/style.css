@@ -2,7 +2,16 @@
 /* CSS Document */
 
 body {
-	background-color: #FEFCE5 !important;	
+	background-color: #333 !important;	
+}
+
+header {
+	padding-top: 18px;
+	background-color: #FEFCE5;	
+}
+
+section.main-content {
+	background-color: #FFF;	
 }
 
 .alert {
@@ -131,4 +140,11 @@ overflow: hidden;
 
 .ent-number-inline{
 	font-size:30px;
+}
+
+/* ======================================== FOOTER ======================================== */
+
+footer {
+	color: #FFF;
+	padding: 33px;	
 }
