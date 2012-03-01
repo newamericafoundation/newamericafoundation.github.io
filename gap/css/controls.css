@@ -74,7 +74,7 @@ a.zoomdisabled {
 /*  left: 10px;*/
   right:15px;
   bottom: 10px;
-  z-index: 3;
+  z-index: 1;
   }
 .wax-legends .wax-legend {
   padding: 10px;
@@ -158,13 +158,13 @@ a.zoomdisabled {
 
 .wax-tooltip {
   z-index: 4;
-  position: absolute;
+/*  position: absolute;*/
   background: rgb(40,40,40);
   background: rgba(40,40,40,.90);
   color: #fff;
   padding: 10px;
-  right: 15px;
-  top: 15px;
+/*  right: 15px;*/
+/*  top: 15px;*/
   width: 200px;
   opacity: 1;
   -webkit-transition: opacity .3s;
