@@ -181,11 +181,9 @@ var chart;
 		   data: [{
 			  name: 'Percent of income',
 			  y: 39,
-			  color: '#660033'
 		   }, {
 			  name: 'Other income',
 			  y: 61,
-			  color: '#EEEEEE'
 		   }],
 		   size: 105,
 		   showInLegend: false,
@@ -281,11 +279,9 @@ var chart;
 		   data: [{
 			  name: 'Percent of income',
 			  y: 23,
-			  color: '#660033'
 		   }, {
 			  name: 'Other income',
 			  y: 77,
-			  color: '#EEEEEE'
 		   }],
 		   size: 105,
 		   showInLegend: false,
@@ -381,11 +377,9 @@ var chart;
 		   data: [{
 			  name: 'Percent of income',
 			  y: 18,
-			  color: '#660033'
 		   }, {
 			  name: 'Other income',
 			  y: 82,
-			  color: '#EEEEEE'
 		   }],
 		   size: 105,
 		   showInLegend: false,
@@ -481,11 +475,9 @@ var chart;
 		   data: [{
 			  name: 'Percent of income',
 			  y: 12,
-			  color: '#660033'
 		   }, {
 			  name: 'Other income',
 			  y: 88,
-			  color: '#EEEEEE'
 		   }],
 		   size: 105,
 		   showInLegend: false,
@@ -581,11 +573,9 @@ var chart;
 		   data: [{
 			  name: 'Percent of income',
 			  y: 7,
-			  color: '#660033'
 		   }, {
 			  name: 'Other income',
 			  y: 93,
-			  color: '#EEEEEE'
 		   }],
 		   size: 105,
 		   showInLegend: false,
@@ -681,11 +671,9 @@ var chart;
 		   data: [{
 			  name: 'Percent of income',
 			  y: 55,
-			  color: '#660033'
 		   }, {
 			  name: 'Other income',
 			  y: 45,
-			  color: '#EEEEEE'
 		   }],
 		   size: 105,
 		   showInLegend: false,
@@ -781,11 +769,9 @@ var chart;
 		   data: [{
 			  name: 'Percent of income',
 			  y: 33,
-			  color: '#660033'
 		   }, {
 			  name: 'Other income',
 			  y: 67,
-			  color: '#EEEEEE'
 		   }],
 		   size: 105,
 		   showInLegend: false,
@@ -881,11 +867,9 @@ var chart;
 		   data: [{
 			  name: 'Percent of income',
 			  y: 25,
-			  color: '#660033'
 		   }, {
 			  name: 'Other income',
 			  y: 75,
-			  color: '#EEEEEE'
 		   }],
 		   size: 105,
 		   showInLegend: false,
@@ -981,11 +965,9 @@ var chart;
 		   data: [{
 			  name: 'Percent of income',
 			  y: 16,
-			  color: '#660033'
 		   }, {
 			  name: 'Other income',
 			  y: 84,
-			  color: '#EEEEEE'
 		   }],
 		   size: 105,
 		   showInLegend: false,
@@ -1081,11 +1063,9 @@ var chart;
 		   data: [{
 			  name: 'Percent of income',
 			  y: 9,
-			  color: '#660033'
 		   }, {
 			  name: 'Other income',
 			  y: 91,
-			  color: '#EEEEEE'
 		   }],
 		   size: 105,
 		   showInLegend: false,

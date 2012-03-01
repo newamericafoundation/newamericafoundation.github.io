@@ -1,5 +1,11 @@
 // JavaScript Document
 
+Highcharts.theme = {
+   colors: ['#A90641', '#464646', '#5B605F', '#A1A194', '#FCFAD0'],
+};
+
+var highchartsOptions = Highcharts.setOptions(Highcharts.theme);
+
 var chart;
   $(document).ready(function() {
 	 chart = new Highcharts.Chart({

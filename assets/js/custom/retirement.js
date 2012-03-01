@@ -229,7 +229,12 @@ var chart;
 			min:30,
 			tickInterval: 30,
 			offset: 10,
+<<<<<<< HEAD
 			gridLineWidth:0
+=======
+			minorGridLineWidth: 0,
+			gridLineWidth: 0,
+>>>>>>> Adding color scheme
 		},
 		xAxis: {
 			categories: ["'00", "'08"],
@@ -354,7 +359,6 @@ var chart;
         {
 			type: 'area',
 			data: [80.2, 72.9],
-			color: '#0D253F',
 		}]
 	 });
   });
@@ -402,11 +406,9 @@ var chart;
 		   data: [{
 			  name: 'Employee participation',
 			  y: 68.6,
-			  color: '#660033'
 		   }, {
 			  name: 'No participation',
 			  y: 31.4,
-			  color: '#EEEEEE'
 		   }],
 		   showInLegend: false,
 		   dataLabels: {
@@ -539,11 +541,9 @@ var chart;
 		   data: [{
 			  name: 'Employee participation',
 			  y: 67.1,
-			  color: '#660033'
 		   }, {
 			  name: 'No participation',
 			  y: 32.9,
-			  color: '#EEEEEE'
 		   }],
 		   center: [80, 45],
 		   spacingLeft: 100,
@@ -559,11 +559,9 @@ var chart;
 		   data: [{
 			  name: 'Employee participation',
 			  y: 60.1,
-			  color: '#660033'
 		   }, {
 			  name: 'No participation',
 			  y: 39.9,
-			  color: '#EEEEEE'
 		   }],
 		   center: [650, 45],
 		   size: 60,
@@ -575,7 +573,6 @@ var chart;
 		},{
 			type: 'area',
 			data: [74.3, 67.3],
-			color: '#0D253F',
 		}]
 	 });
   });
@@ -700,11 +697,9 @@ var chart;
 		   data: [{
 			  name: 'Employee participation',
 			  y: 55.5,
-			  color: '#660033'
 		   }, {
 			  name: 'No participation',
 			  y: 44.5,
-			  color: '#EEEEEE'
 		   }],
 		   center: [80, 45],
 		   spacingLeft: 100,
@@ -720,11 +715,9 @@ var chart;
 		   data: [{
 			  name: 'Employee participation',
 			  y: 49.7,
-			  color: '#660033'
 		   }, {
 			  name: 'No participation',
 			  y: 50.3,
-			  color: '#EEEEEE'
 		   }],
 		   center: [650, 45],
 		   size: 60,
@@ -736,7 +729,6 @@ var chart;
 		},{
 			type: 'area',
 			data: [66, 59.2],
-			color: '#0D253F',
 		}]
 	 });
   });
@@ -862,11 +854,9 @@ var chart;
 		   data: [{
 			  name: 'Employee participation',
 			  y: 32.1,
-			  color: '#660033'
 		   }, {
 			  name: 'No participation',
 			  y: 67.9,
-			  color: '#EEEEEE'
 		   }],
 		   center: [80, 45],
 		   spacingLeft: 100,
@@ -882,11 +872,9 @@ var chart;
 		   data: [{
 			  name: 'Employee participation',
 			  y: 27.7,
-			  color: '#660033'
 		   }, {
 			  name: 'No participation',
 			  y: 72.3,
-			  color: '#EEEEEE'
 		   }],
 		   center: [650, 45],
 		   size: 60,
@@ -898,7 +886,6 @@ var chart;
 		},{
 			type: 'area',
 			data: [44.9, 38.4],
-			color: '#0D253F',
 		}]
 	 });
   });
