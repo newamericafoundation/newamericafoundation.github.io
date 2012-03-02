@@ -23,7 +23,7 @@
 
   <!-- <link href='styles/controls.css' rel='stylesheet' type='text/css' /> -->
 <script>
-buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp6.jsonp', 'mainMap');
+buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp8.jsonp', 'mainMap');
 
 	var options = {
 	    xaxis: {
@@ -126,7 +126,7 @@ $(document).ready(function() {
 	}
 	$('#layerMain').click(function(){		
 		$('li').removeClass('active');
-		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp6.jsonp', 'mainMap');		
+		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp8.jsonp', 'mainMap');		
 		$('.map').removeClass('activeMap');
 		$('#layerMain').toggleClass('active');
 		$('#mainMap').addClass('activeMap');

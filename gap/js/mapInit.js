@@ -35,10 +35,22 @@
 								        this._currentTooltip = this.getTooltip(feature, context)
 								    }
 									var newWidth=100;
+									var piText =$('#piCat', this._currentTooltip).html()
+									switch(piText){
+										case 'High': 
+											$('#piCat', this._currentTooltip).addClass('numberAlert numberAlert-high');
+											break;
+										case 'Medium': 
+											$('#piCat', this._currentTooltip).addClass('numberAlert numberAlert-medium');
+											break;
+										case 'Low': 
+											$('#piCat', this._currentTooltip).addClass('numberAlert numberAlert-low');
+											break;
+									}
 									
 									$('.catNumber', this._currentTooltip).each(function(k){
 										var theNumber = Math.round($(this).html()).toFixed(2);
-										$(this).parent('.numberWrapper').css('width','150px')
+										$(this).parent('.numberWrapper').css('width','150px');
 										var newWidth = Math.round(($(this).html()*3)*10);
 										newWidth += 'px'
 										$(this).addClass('span1')
@@ -139,6 +151,18 @@
 
 								    this._currentTooltip = tooltip;
 									var newWidth=100;
+									var piText =$('#piCat', this._currentTooltip).html()
+									switch(piText){
+										case 'High': 
+											$('#piCat', this._currentTooltip).addClass('numberAlert numberAlert-high');
+											break;
+										case 'Medium': 
+											$('#piCat', this._currentTooltip).addClass('numberAlert numberAlert-medium');
+											break;
+										case 'Low': 
+											$('#piCat', this._currentTooltip).addClass('numberAlert numberAlert-low');
+											break;
+									}
 									
 									$('.catNumber', this._currentTooltip).each(function(k){
 										var theNumber = Math.round($(this).html()).toFixed(2);
