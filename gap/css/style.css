@@ -153,7 +153,7 @@ text-shadow: 3px 3px 2px #000000;
 
 a.close {
   display: block;
-  text-indent: -999em;
+/*  text-indent: -999em;*/
   width: 30px;
   height: 30px;
   display: block;
