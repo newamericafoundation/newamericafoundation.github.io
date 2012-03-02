@@ -58,9 +58,12 @@
 								    var tooltip = document.createElement('div');
 								    tooltip.className = 'wax-tooltip wax-tooltip-0';
 								    tooltip.innerHTML = feature;
+								
+								// console.log($('.catNumber', tooltip.innerHTML))
 									// $('.intro').css('display','none');
 
 								// $(tooltip.innerHTML).children('.debt-gdp-timeline').children('span.chart').empty();
+								// console.log(tooltip)
 								$('#toolTipContainer').append(tooltip);
 								    // context.appendChild(tooltip);
 								    return tooltip;
@@ -99,6 +102,14 @@
 								    var tooltip = this.getTooltip(feature, context);
 								    tooltip.className += ' wax-popup';
 								    tooltip.innerHTML = feature;
+								
+									$('.catNumber', tooltip.innerHTML).each(function(k){
+										$(this).css({
+											'width':'200',
+											'font-weight':'bold'
+										});
+									});
+									console.log(tooltip)
 
 								    var close = document.createElement('a');
 								    close.href = '#close';

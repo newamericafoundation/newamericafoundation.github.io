@@ -13,7 +13,7 @@
 <script src='scripts/modestmaps.min.js' type='text/javascript'></script>
 <script src='scripts/wax.mm.js' type='text/javascript'></script>
 <script src='scripts/easey.js' type='text/javascript'></script>
-<script src='scripts/mapInit1.js' type='text/javascript'></script>
+<script src='scripts/mapInit2.js' type='text/javascript'></script>
 <script type="text/javascript" src="scripts/jquery.flot.min.js"></script>
 
 <script>
@@ -80,30 +80,31 @@ var options = {
 		
 			var e = $('#mainFlotGraph');
 			//main graphing function
-			var plot = $.plot(e, [mobileArray], options);
+			// var plot = $.plot(e, [mobileArray], options);
 			var previousPoint = null;
 			//hover stuff for the graph
-			    $('#mainFlotGraph').bind("plothover", function (event, pos, item) {
-			        $("#x").text(pos.x.toFixed(2));
-			        $("#y").text(pos.y.toFixed(2));
-			            if (item) {
-			                if (previousPoint != item.dataIndex) {
-			                    previousPoint = item.dataIndex;
-		
-			                    $("#tooltip").remove();
-			                    var x = item.datapoint[0].toFixed(0),
-			                        y = item.datapoint[1].toFixed(2);
-		
-			                    plot.toolTips("<h2 class='graphTooltip'>"+countryNames[x][1]+" <span style='float:right;'>"+y+"</span></h2><p class='graphTooltip'>mobile phone subscriptions per 100 residents.</p>");
-			                }
-			            }
-			    });
+			    // $('#mainFlotGraph').bind("plothover", function (event, pos, item) {
+			    // 			        $("#x").text(pos.x.toFixed(2));
+			    // 			        $("#y").text(pos.y.toFixed(2));
+			    // 			            if (item) {
+			    // 			                if (previousPoint != item.dataIndex) {
+			    // 			                    previousPoint = item.dataIndex;
+			    // 		
+			    // 			                    $("#tooltip").remove();
+			    // 			                    var x = item.datapoint[0].toFixed(0),
+			    // 			                        y = item.datapoint[1].toFixed(2);
+			    // 		
+			    // 			                    plot.toolTips("<h2 class='graphTooltip'>"+countryNames[x][1]+" <span style='float:right;'>"+y+"</span></h2><p class='graphTooltip'>mobile phone subscriptions per 100 residents.</p>");
+			    // 			                }
+			    // 			            }
+			    // 			    });
 			
 			//create the tooltip method to use with the map hover event
-			plot.toolTips = showTooltip
+			// plot.toolTips = showTooltip
 			
 			//main function to build the wax map and add interactivity to the flot graph
-			newWaxMapGraph('http://a.tiles.mapbox.com/v3/newamerica.mobile_v_fixed.jsonp','mainMap',0, 20, 2, 5, plot,mobileArray, countryNames);
+			// newWaxMapGraph('http://a.tiles.mapbox.com/v3/newamerica.mobile_v_fixed.jsonp','mainMap',0, 20, 2, 5, plot,mobileArray, countryNames);
+			newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.motw_poverty.jsonp','mainMap',34.938, -84.290, 4, 6);
 			//Show the title when you mouse out of the graph
 			$('#mainFlotGraph').mouseleave(function() {
 					$("#tooltip").remove();
