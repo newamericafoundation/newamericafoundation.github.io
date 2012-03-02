@@ -524,9 +524,20 @@ a.share:active {
 
 .catNumber{
 	font-size:18px;
-	background:#0d253f;
 	text-align:right;
 	margin-left:0px;
+	background:#0d253f;
+	background-image: -moz-linear-gradient(top, #1e5793, #0d253f);
+	background-image: -ms-linear-gradient(top, #1e5793, #0d253f);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1e5793), to(#0d253f));
+	background-image: -webkit-linear-gradient(top, #1e5793, #0d253f);
+	background-image: -o-linear-gradient(top, #1e5793, #0d253f);
+	background-image: linear-gradient(top, #1e5793, #0d253f);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e5793', endColorstr='#0d253f', GradientType=0);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 }
 
 .numberWrapper{
