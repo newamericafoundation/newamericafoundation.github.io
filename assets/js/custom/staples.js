@@ -1,7 +1,7 @@
 // JavaScript Document
 
 Highcharts.theme = {
-  colors: ['#A90641', '#464646', '#5B605F', '#A1A194', '#FCFAD0'],
+  colors: ['#6E022A', '#464646', '#5B605F', '#A1A194', '#FCFAD0'],
   chart: {
 	 plotBackgroundColor: null,
 	 backgroundColor: null
@@ -17,9 +17,6 @@ Highcharts.theme = {
   },
   legend: {
 	  enabled: false	
-  },
-  tooltip: {
-	  enabled: false
   },
 };
 
@@ -63,6 +60,7 @@ var chart;
 			},
 			endOnTick: true,
 			startOnTick: true,
+			tickLength: 0,
 		},
 		tooltip: {
 			style: {
@@ -80,6 +78,27 @@ var chart;
 			  return s;
 		   }
 		},
+		labels: {
+			items: [{
+				html: 'Tax spending',
+				style: {
+					left: '5px',
+					top: '55px',
+					color: '#777777',
+					fontSize: '11px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
+				}
+			},{
+				html: 'Direct spending',
+				style: {
+					left: '74px',
+					top: '55px',
+					color: '#777777',
+					fontSize: '11px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
+				}
+			}]
+		},
 		plotOptions: {
 			column: {
 				pointWidth: 25,
@@ -92,7 +111,7 @@ var chart;
 		   type: 'pie',
 		   name: 'Budget slice',
 		   data: [{
-			  name: 'Total assets spending',
+			  name: 'Other assets spending',
 			  y: 394.595,
 		   }, {
 			  name: 'Retirement spending',
@@ -175,6 +194,27 @@ var chart;
 			  return s;
 		   }
 		},
+		labels: {
+			items: [{
+				html: 'Tax spending',
+				style: {
+					left: '5px',
+					top: '55px',
+					color: '#777777',
+					fontSize: '11px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
+				}
+			},{
+				html: 'Direct spending',
+				style: {
+					left: '74px',
+					top: '55px',
+					color: '#777777',
+					fontSize: '11px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
+				}
+			}]
+		},
 		plotOptions: {
 			column: {
 				pointWidth: 25,
@@ -187,7 +227,7 @@ var chart;
 		   type: 'pie',
 		   name: 'Budget slice',
 		   data: [{
-			  name: 'Total assets spending',
+			  name: 'Other assets spending',
 			  y: 415.322,
 		   }, {
 			  name: 'Savings spending',
@@ -270,6 +310,27 @@ var chart;
 			  return s;
 		   }
 		},
+		labels: {
+			items: [{
+				html: 'Tax spending',
+				style: {
+					left: '5px',
+					top: '55px',
+					color: '#777777',
+					fontSize: '11px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
+				}
+			},{
+				html: 'Direct spending',
+				style: {
+					left: '74px',
+					top: '55px',
+					color: '#777777',
+					fontSize: '11px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
+				}
+			}]
+		},
 		plotOptions: {
 			column: {
 				pointWidth: 25,
@@ -282,7 +343,7 @@ var chart;
 		   type: 'pie',
 		   name: 'Budget slice',
 		   data: [{
-			  name: 'Total assets spending',
+			  name: 'Other assets spending',
 			  y: 330.194,
 		   }, {
 			  name: 'Homeownership spending',
@@ -365,6 +426,27 @@ var chart;
 			  return s;
 		   }
 		},
+		labels: {
+			items: [{
+				html: 'Tax spending',
+				style: {
+					left: '5px',
+					top: '55px',
+					color: '#777777',
+					fontSize: '11px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
+				}
+			},{
+				html: 'Direct spending',
+				style: {
+					left: '74px',
+					top: '55px',
+					color: '#777777',
+					fontSize: '11px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
+				}
+			}]
+		},
 		plotOptions: {
 			column: {
 				pointWidth: 25,
@@ -377,7 +459,7 @@ var chart;
 		   type: 'pie',
 		   name: 'Budget slice',
 		   data: [{
-			  name: 'Total assets spending',
+			  name: 'Other assets spending',
 			  y: 484.431,
 		   }, {
 			  name: 'Post-secondary education spending',
@@ -460,6 +542,27 @@ var chart;
 			  return s;
 		   }
 		},
+		labels: {
+			items: [{
+				html: 'Tax spending',
+				style: {
+					left: '5px',
+					top: '55px',
+					color: '#777777',
+					fontSize: '11px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
+				}
+			},{
+				html: 'Direct spending',
+				style: {
+					left: '74px',
+					top: '55px',
+					color: '#777777',
+					fontSize: '11px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
+				}
+			}]
+		},
 		plotOptions: {
 			column: {
 				pointWidth: 25,
@@ -472,7 +575,7 @@ var chart;
 		   type: 'pie',
 		   name: 'Budget slice',
 		   data: [{
-			  name: 'Total assets spending',
+			  name: 'Other assets spending',
 			  y: 541.038,
 		   }, {
 			  name: 'Retirement spending',

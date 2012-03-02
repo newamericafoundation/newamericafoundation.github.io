@@ -7,7 +7,6 @@ body {
 
 header {
 	padding-top: 18px;
-	background-color: #FEFCE5;	
 }
 
 section.main-content {
@@ -23,17 +22,19 @@ padding: 8px 14px !important;
 	height:110px;
 	clear:both;
 	margin: 40px 0 20px 0;
-	border-top: 1px #666 solid;
+	/*border-top: 1px #666 solid;*/
 }
 
-h2.section-title {
-	float:left;
-	width: 67%;
+.header-body {
+	float: left;
+	width: 600px;
+	margin-left: 10px;
+	position: relative;
 }
 
 .staple {
 	float: right;
-	width: 33%;
+	width: 330px;
 	height: 80px;
 	position: relative;
 }
@@ -62,13 +63,30 @@ h2.section-title {
 
 /* ======================================== SAVINGS ======================================== */
 
-.savings .anecdote {
+.row-savings .anecdote {
 	text-align:center;	
 }
 
 .savings-number {
 	font-size: 44px;
 	line-height: 44px;
+}
+
+/* ======================================== HOMEOWNERSHIP ======================================== */
+
+.row-homeownership .well {
+	overflow: auto;
+	width: 100%	
+}
+
+.homeownership-number {
+	font-size: 44px;
+	line-height: 44px;
+	margin-right: 10px;
+	font-weight: bold;
+	float: left;
+	width: 140px;
+	margin-bottom: 0 !important;
 }
 
 /* ======================================== EDUCATION ======================================== */
