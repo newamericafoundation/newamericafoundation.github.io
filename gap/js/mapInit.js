@@ -34,6 +34,13 @@
 								    } else {
 								        this._currentTooltip = this.getTooltip(feature, context)
 								    }
+									$('.catNumber', this._currentTooltip).each(function(k){
+										// $(this).parent().css('width','200px');
+										$(this).addClass('span1')
+										$(this).css({
+											'width':'100px'
+										})
+									})
 									// buildChart()
 									// $('#chartContainer').show();
 								// $('.debt-gdp-timeline').children('span.chart').empty();
@@ -58,7 +65,6 @@
 								    var tooltip = document.createElement('div');
 								    tooltip.className = 'wax-tooltip wax-tooltip-0';
 								    tooltip.innerHTML = feature;
-								
 								// console.log($('.catNumber', tooltip.innerHTML))
 									// $('.intro').css('display','none');
 
@@ -103,13 +109,8 @@
 								    tooltip.className += ' wax-popup';
 								    tooltip.innerHTML = feature;
 								
-									$('.catNumber', tooltip.innerHTML).each(function(k){
-										$(this).css({
-											'width':'200',
-											'font-weight':'bold'
-										});
-									});
-									console.log(tooltip)
+									
+									
 
 								    var close = document.createElement('a');
 								    close.href = '#close';
@@ -134,6 +135,13 @@
 								    }
 
 								    this._currentTooltip = tooltip;
+									$('.catNumber', this._currentTooltip).each(function(k){
+										// $(this).parent().css('width','200px');
+										$(this).addClass('span1')
+										$(this).css({
+											'width':'100px'
+										});
+									});
 								// buildChart()
 								// $('.debt-gdp-timeline').children('span.chart').empty();
 								// $('#chartContainer').show();
