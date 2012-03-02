@@ -49,7 +49,7 @@
 									}
 									
 									$('.catNumber', this._currentTooltip).each(function(k){
-										var theNumber = Math.round($(this).html()).toFixed(2);
+										var theNumber = Math.round($(this).html()).toFixed(0);
 										$(this).parent('.numberWrapper').css('width','150px');
 										var newWidth = Math.round(($(this).html()*3)*10);
 										newWidth += 'px'
@@ -165,7 +165,7 @@
 									}
 									
 									$('.catNumber', this._currentTooltip).each(function(k){
-										var theNumber = Math.round($(this).html()).toFixed(2);
+										var theNumber = Math.round($(this).html()).toFixed(0);
 										$(this).parent('.numberWrapper').css('width','150px')
 										var newWidth = Math.round(($(this).html()*3)*10);
 										newWidth += 'px'
@@ -174,6 +174,16 @@
 											'width':newWidth
 										});
 										$(this).html(theNumber);
+									});
+									$(".scroll").click(function(event){
+										var scrollId = $(this).attr('rel');
+										event.preventDefault();
+										if(scrollId == 'home'){
+											$('html,body').animate({scrollTop:0}, 500);
+										}else{
+											$('html,body').animate({scrollTop:$('#'+scrollId).offset().top-50}, 500);
+										}
+
 									});
 								}
 							}

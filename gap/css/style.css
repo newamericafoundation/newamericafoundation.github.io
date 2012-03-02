@@ -585,3 +585,26 @@ a.share:active {
 	background:#cde0f5;
 }
 
+.light{
+	color:#a4a4a4;
+}
+.light h3{
+	color:#a4a4a4;
+}
+
+/* --------------------------
+    Scrolling
+----------------------------- */
+
+#definitions{
+	color:#a4a4a4;
+}
+#definitions h3{
+	color:#d4d4d4;
+	margin-top:50px;
+}
+
+
+.scroll{
+	cursor:pointer;
+}
