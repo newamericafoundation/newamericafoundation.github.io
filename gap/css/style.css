@@ -248,7 +248,7 @@ a.zoomout {
 .wax-tooltip {
 	z-index: 100;
 /*	position: absolute;*/
-	background: rgba(13, 37, 63, .90);
+/*	background: rgba(13, 37, 63, .90);*/
 	color: rgb(244, 244, 244);
 	padding: 10px;
 /*	right: 30px;
@@ -279,6 +279,10 @@ a.zoomout {
   position:absolute;
   top:50px;
   }
+
+.wax-tooltip .row{
+	min-height:70px;
+}
 
 
 
@@ -510,6 +514,7 @@ a.share:active {
 
 #layerSwitcher{
 	padding:5px;
+	min-height:300px;
 }
 
 

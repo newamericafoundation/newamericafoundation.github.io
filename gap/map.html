@@ -113,24 +113,24 @@ $(document).ready(function() {
 	$('.dropdown-toggle').dropdown()
 	//Make the graphs with labels from dataLabels	
 	for(i=0;i<11;i++){
-		$('#graphHolder').append('<div class="row-fluid"><div class="span12"><h3 class="dotBorder">'+dataLabels[i][1]+'</h3></div><span class="span6"><p>'+dataLabels[i][3]+'</p></span><span class="span5"><div id="container'+i+'" class="graph" style="width:400px; height:150px; margin: 0 auto;"></div></span></div>');
-		var e = $('#container'+i+'.graph');
-		var plot = $.plot(e, [ data[i] ], options);
-		var previousPoint = null;
-	    $('#container'+i+'.graph').bind("plothover", function (event, pos, item) {
-	        $("#x").text(pos.x.toFixed(2));
-	        $("#y").text(pos.y.toFixed(2));
-	       	if (item) {
-               	if (previousPoint != item.dataIndex) {
-                    previousPoint = item.dataIndex;
-
-                    $("#tooltip").remove();
-                    var x = item.datapoint[0].toFixed(0),
-                        y = item.datapoint[1].toFixed(2);
-                    showTooltip(item.pageX, item.pageY, countryLabels[x][1] +': '+ y);
-                }
-           	}
-	    });
+		// $('#graphHolder').append('<div class="row-fluid"><div class="span12"><h3 class="dotBorder">'+dataLabels[i][1]+'</h3></div><span class="span6"><p>'+dataLabels[i][3]+'</p></span><span class="span5"><div id="container'+i+'" class="graph" style="width:400px; height:150px; margin: 0 auto;"></div></span></div>');
+		// 		var e = $('#container'+i+'.graph');
+		// 		var plot = $.plot(e, [ data[i] ], options);
+		// 		var previousPoint = null;
+		// 	    $('#container'+i+'.graph').bind("plothover", function (event, pos, item) {
+		// 	        $("#x").text(pos.x.toFixed(2));
+		// 	        $("#y").text(pos.y.toFixed(2));
+		// 	       	if (item) {
+		//                	if (previousPoint != item.dataIndex) {
+		//                     previousPoint = item.dataIndex;
+		// 
+		//                     $("#tooltip").remove();
+		//                     var x = item.datapoint[0].toFixed(0),
+		//                         y = item.datapoint[1].toFixed(2);
+		//                     showTooltip(item.pageX, item.pageY, countryLabels[x][1] +': '+ y);
+		//                 }
+		//            	}
+		// 	    });
 	var divId = '#layer'+i;
 	$('#mapContainer').append('<div id="map'+i+'"class="map span12"></div>');
 	var layerUrl = dataLabels[i][2];
@@ -256,12 +256,14 @@ function newMap(layerId){
 				<li id="layer9"><a href="#">Financial Literacy</a></li>
 				<li id="layer10"><a href="#">Composite Financial Access</a></li>
 			</ul>
+			<!-- Where all the tooltip stuff is built -->
+			<div class="container-fluid">
+				<div id="toolTipContainer" class="row-fluid"></div>
+			</div>
 		</div>
+		
 	</div>
-	<!-- Where all the tooltip stuff is built -->
-	<div class="container-fluid">
-		<div id="toolTipContainer" class="row-fluid"></div>
-	</div>
+
 	<!-- <div class="container-fluid">
 				<div id="mainText" class="row-fluid">
 			<span class="span4 pull-left">
@@ -273,7 +275,7 @@ function newMap(layerId){
 				<p>In order to truly enable asset building among participants in social safety net programs, we must provide easy and convenient access to electronic alternatives. To get an idea of the state of the financial infrastructure in countries around the world with social protection programs that include asset transfers, NAF's Global Asset Project has taken a helicopter view of their payment infrastructures - including Commercial Banks, Microfinance Institutions, ATMs, Point of Service terminals - in addition to the human infrastructure in place and the potential for banking via innovating mediums such as mobiles.  The composite analysis of these variables determined whether these countries' had low, medium, or highly developed infrastructure. This composite variable, in addition to three others (Payment Infrastructure Utilization, Enabling Political Environment and Governance), will inform NAF's final conclusions about where the greatest potential exists to change government to person asset transfers into electronic payments, thus enabling and encouraging savings and asset building.</p>
 			</span>
 		</div> -->
-		<div class="container-fluid" id="graphHolder"></div>
+		<!-- <div class="container-fluid" id="graphHolder"></div> -->
 	</div>
 </body>
 </html>
