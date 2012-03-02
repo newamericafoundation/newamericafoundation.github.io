@@ -31,7 +31,7 @@
 
   <!-- <link href='styles/controls.css' rel='stylesheet' type='text/css' /> -->
 <script>
-buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp17.jsonp', 'mainMap');
+buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp19.jsonp', 'mainMap');
 
 	var options = {
 	    xaxis: {
@@ -147,7 +147,7 @@ $(document).ready(function() {
 	}
 	$('#layerMain').click(function(){		
 		$('li').removeClass('active');
-		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp17.jsonp', 'mainMap');		
+		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp19.jsonp', 'mainMap');		
 		$('.map').removeClass('activeMap');
 		$('#layerMain').toggleClass('active');
 		$('#mainMap').addClass('activeMap');
@@ -279,8 +279,10 @@ function newMap(layerId){
 				<div id="toolTipContainer" class="row-fluid"></div>
 			</div>
 			<div class="container-fluid light">
-				<h3>About the Project</h3>
-				<p>This year, with the generous support of CGAP (Consultative Group to Assist the Poor), the CitiFoundation, the FordFoundation, and the NikeFoundation, New America Foundation's Global Savings and Social Protection initiative is developing a multi-faceted, multi-stakeholder body of work to enable the global creation and advancement of sound, effective and efficient savings-linked social protection models. To that end, we have collected and analyzed information on countries with social protection programs that include cash transfers to identify opportunities to encourage opportunities for recipients to build their asset base and increase their resiliency.</p>
+				<div class="row-fluid">
+					<h3>About the Project</h3>
+					<p>This year, with the generous support of CGAP (Consultative Group to Assist the Poor), the CitiFoundation, the FordFoundation, and the NikeFoundation, New America Foundation's Global Savings and Social Protection initiative is developing a multi-faceted, multi-stakeholder body of work to enable the global creation and advancement of sound, effective and efficient savings-linked social protection models. To that end, we have collected and analyzed information on countries with social protection programs that include cash transfers to identify opportunities to encourage opportunities for recipients to build their asset base and increase their resiliency.</p>
+				</div>
 			</div>
 			<div id="definitions" class="container-fluid">
 				
