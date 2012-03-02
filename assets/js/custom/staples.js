@@ -6,6 +6,21 @@ Highcharts.theme = {
 	 plotBackgroundColor: null,
 	 backgroundColor: null
   },
+  title: {
+	 text: null
+  },
+  credits: {
+	  enabled: false	
+  },
+  exporting: {
+	  enabled: false	
+  },
+  legend: {
+	  enabled: false	
+  },
+  tooltip: {
+	  enabled: false
+  },
 };
 
 var highchartsOptions = Highcharts.setOptions(Highcharts.theme);
