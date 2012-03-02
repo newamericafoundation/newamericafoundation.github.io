@@ -104,7 +104,7 @@ var options = {
 			
 			//main function to build the wax map and add interactivity to the flot graph
 			// newWaxMapGraph('http://a.tiles.mapbox.com/v3/newamerica.mobile_v_fixed.jsonp','mainMap',0, 20, 2, 5, plot,mobileArray, countryNames);
-			newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.motw_poverty.jsonp','mainMap',34.938, -84.290, 4, 6);
+			newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.motw_poverty.jsonp','mainMap',34.938, -95, 4, 6);
 			//Show the title when you mouse out of the graph
 			$('#mainFlotGraph').mouseleave(function() {
 					$("#tooltip").remove();
@@ -155,12 +155,13 @@ var options = {
 <div class="sl-crumbs-cntr" style="padding: 0 43px 0 36px;">
 <a class="sl-crumbs-link" href="http://www.slate.com/">HOME</a>
 &nbsp;/&nbsp;
-<a class="sl-crumbs-link" href="#">DATA VISUALIZATION</a>
+<a class="sl-crumbs-link" href="#">MAP OF THE WEEK</a>
 &nbsp;:&nbsp; SLATE/NEW AMERICA FOUNDATION
 </div>
 <div class="clearing"></div>
 </div>
 
+<p>Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. </p>
 
 		<div id="mainMap" class="map" style="height:450px;margin-top:36px;">
 		<a href='#' class='share'></a>
@@ -182,15 +183,6 @@ var options = {
 
 
             <div class="clearing"></div>
-<div class="graphContainer">
-	<div id="graphTooltip">
-    <div id="tooltip" class="no-tooltip">
-      <!-- <h2>Mobile Phone Penetration</h2> -->
-        <!-- <p>Rolling over any country on the map will also reveal the number of mobile phone subscribers per 100 residents on the chart below.</p> -->
-		<p>Number of mobile phone subscribers per 100 residents</p>
-    </div></div>
-<div id="mainFlotGraph"></div>
-</div>
         </div>
                
                 
