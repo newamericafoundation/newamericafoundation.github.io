@@ -35,15 +35,14 @@
 								        this._currentTooltip = this.getTooltip(feature, context)
 								    }
 									$('.catNumber', this._currentTooltip).each(function(k){
-										// $(this).parent().css('width','200px');
+										$(this).parent('.numberWrapper').css('width','150px')
+										var newWidth = Math.round(($(this).html()*3)*10);
+										newWidth += 'px'
 										$(this).addClass('span1')
 										$(this).css({
-											'width':'100px'
-										})
-									})
-									// buildChart()
-									// $('#chartContainer').show();
-								// $('.debt-gdp-timeline').children('span.chart').empty();
+											'width':newWidth
+										});
+									});
 								},
 								out: function(context) {
 								    context.style.cursor = 'default';
@@ -135,16 +134,17 @@
 								    }
 
 								    this._currentTooltip = tooltip;
+									var newWidth=100;
+									
 									$('.catNumber', this._currentTooltip).each(function(k){
-										// $(this).parent().css('width','200px');
+										$(this).parent('.numberWrapper').css('width','150px')
+										var newWidth = Math.round(($(this).html()*3)*10);
+										newWidth += 'px'
 										$(this).addClass('span1')
 										$(this).css({
-											'width':'100px'
+											'width':newWidth
 										});
 									});
-								// buildChart()
-								// $('.debt-gdp-timeline').children('span.chart').empty();
-								// $('#chartContainer').show();
 								}
 							}
 				});
