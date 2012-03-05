@@ -181,29 +181,9 @@ function newMap(layerId){
 	
 </script>
 <style>
-.custom-pills{
-	margin-bottom:5px;
-}
-.custom-pills li a{
-	color:#08C;
-	background:#000;
-}
 
-.dotBorder{
-	border-bottom:1px dotted #d4d4d4;
-}
 
-#layerSwitcher{
-	border-bottom:2px solid #333;
-	border-top:2px solid #333;
-	box-shadow:-10px 0px 5px #fff, 10px 0px 5px #fff,-1px -1px 4px #666;
-	position:relative;
-	padding-left:20px;
-}
 
-.dropdown-menu li a{
-	background:#fff;
-}
 </style>
 <title>Payment Infrastructure</title>
 </head>
@@ -220,6 +200,7 @@ function newMap(layerId){
 			    <h3>About the Map</h3>
 			  </div>
 			  <div class="modal-body">
+				<p>This year, with the generous support of CGAP (Consultative Group to Assist the Poor), the CitiFoundation, the FordFoundation, and the NikeFoundation, New America Foundation's Global Savings and Social Protection initiative is developing a multi-faceted, multi-stakeholder body of work to enable the global creation and advancement of sound, effective and efficient savings-linked social protection models. To that end, we have collected and analyzed information on countries with social protection programs that include cash transfers to identify opportunities to encourage opportunities for recipients to build their asset base and increase their resiliency.</p> 
 			    <p>In order to truly enable asset building among participants in social safety net programs, we must provide easy and convenient access to electronic alternatives. To get an idea of the state of the financial infrastructure in countries around the world with social protection programs that include asset transfers, NAF's Global Asset Project has taken a helicopter view of their payment infrastructures - including Commercial Banks, Microfinance Institutions, ATMs, Point of Service terminals - in addition to the human infrastructure in place and the potential for banking via innovating mediums such as mobiles.  This is our first 'heat-mapping' of this composite analysis which illustrates whether these countries have low, medium, or highly developed infrastructure, in addition to the descriptions/definitions of each variable used. A country's score of 1-5 corresponds to its relative quintile; that is to say, India's score on ATM's per 100,000 adults is a '2' because it's data falls between the 20th and 40th percentile.</p>
 			  </div>
 			  <div class="modal-footer">
@@ -234,61 +215,57 @@ function newMap(layerId){
 	<div id="mapContainer" class="row-fluid">
 		<div id="mainMap" class="map span12 activeMap"></div>
 	</div>
-	<div class="container-fluid">
-		
-	</div>
-	<div id="infoBox" class="infoBar row-fluid">
-		
-		<div id="layerSwitcher" class="span12 navbar-inner">
-			<ul class="nav nav-pills custom-pills">
-				<li id="layerMain" class="active"><a href="#">Payment Infrastructure</a></li>
-			  	<li class="dropdown">
-			    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Commercial Banks<b class="caret"></b></a>
-			    	<ul class="dropdown-menu">
-						<li id="layer0"><a href="#">Adults</a></li>
-			      		<li id="layer1"><a href="#">Sq Km</a></li>
-			    	</ul>
-			  	</li>
-				<li class="dropdown">
-			    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Alternative Financial Institutions<b class="caret"></b></a>
-			    	<ul class="dropdown-menu">
-						<li id="layer2"><a href="#">Adults</a></li>
-			      		<li id="layer3"><a href="#">Sq Km</a></li>	
-			    	</ul>
-			  	</li>
-				<li class="dropdown">
-			    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">ATM<b class="caret"></b></a>
-			    	<ul class="dropdown-menu">
-						<li id="layer4"><a href="#">Adults</a></li>
-			      		<li id="layer5"><a href="#">Sq Km</a></li>
-			    	</ul>
-			  	</li>
-				<li class="dropdown">
-			    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">POS<b class="caret"></b></a>
-			    	<ul class="dropdown-menu">
-						<li id="layer6"><a href="#">Adults</a></li>
-			      		<li id="layer7"><a href="#">Sq Km</a></li>
-			    	</ul>
-			  	</li>
-				<li id="layer8"><a href="#">Mobile Penetration</a></li>
-				<li id="layer9"><a href="#">Financial Literacy</a></li>
-				<li id="layer10"><a href="#">Composite Financial Access</a></li>
-			</ul>
-			<!-- Where all the tooltip stuff is built -->
-			<div class="container-fluid">
-				<div id="toolTipContainer" class="row-fluid"></div>
-			</div>
-			<div class="container-fluid light">
-				<div class="row-fluid">
-					<h3>About the Project</h3>
-					<p>This year, with the generous support of CGAP (Consultative Group to Assist the Poor), the CitiFoundation, the FordFoundation, and the NikeFoundation, New America Foundation's Global Savings and Social Protection initiative is developing a multi-faceted, multi-stakeholder body of work to enable the global creation and advancement of sound, effective and efficient savings-linked social protection models. To that end, we have collected and analyzed information on countries with social protection programs that include cash transfers to identify opportunities to encourage opportunities for recipients to build their asset base and increase their resiliency.</p>
+	<div class="container-fluid" style="padding-left:0px;">
+		<div id="infoBox" class="infoBar row-fluid">
+			<div id="layerSwitcher" class="row span12 navbar-inner">
+				<ul class="nav nav-pills custom-pills">
+					<li id="layerMain" class="active"><a href="#">Payment Infrastructure</a></li>
+				  	<li class="dropdown">
+				    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Commercial Banks<b class="caret"></b></a>
+				    	<ul class="dropdown-menu">
+							<li id="layer0"><a href="#">Adults</a></li>
+				      		<li id="layer1"><a href="#">Sq Km</a></li>
+				    	</ul>
+				  	</li>
+					<li class="dropdown">
+				    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Alternative Financial Institutions<b class="caret"></b></a>
+				    	<ul class="dropdown-menu">
+							<li id="layer2"><a href="#">Adults</a></li>
+				      		<li id="layer3"><a href="#">Sq Km</a></li>	
+				    	</ul>
+				  	</li>
+					<li class="dropdown">
+				    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">ATM<b class="caret"></b></a>
+				    	<ul class="dropdown-menu">
+							<li id="layer4"><a href="#">Adults</a></li>
+				      		<li id="layer5"><a href="#">Sq Km</a></li>
+				    	</ul>
+				  	</li>
+					<li class="dropdown">
+				    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">POS<b class="caret"></b></a>
+				    	<ul class="dropdown-menu">
+							<li id="layer6"><a href="#">Adults</a></li>
+				      		<li id="layer7"><a href="#">Sq Km</a></li>
+				    	</ul>
+				  	</li>
+					<li id="layer8"><a href="#">Mobile Penetration</a></li>
+					<li id="layer9"><a href="#">Financial Literacy</a></li>
+					<li id="layer10"><a href="#">Composite Financial Access</a></li>
+				</ul>
+				<!-- Where all the tooltip stuff is built -->
+				<div class="container-fluid light">
+					<div id="toolTipContainer" class="row span12">
+						<h3>About the Map</h3>
+						<p><strong>Roll over or click a country. Use the buttons above to change the map layers.</strong></p>
+						 <p>In order to truly enable asset building among participants in social safety net programs, we must provide easy and convenient access to electronic alternatives. To get an idea of the state of the financial infrastructure in countries around the world with social protection programs that include asset transfers, NAF's Global Asset Project has taken a helicopter view of their payment infrastructures - including Commercial Banks, Microfinance Institutions, ATMs, Point of Service terminals - in addition to the human infrastructure in place and the potential for banking via innovating mediums such as mobiles.  This is our first 'heat-mapping' of this composite analysis which illustrates whether these countries have low, medium, or highly developed infrastructure, in addition to the descriptions/definitions of each variable used. A country's score of 1-5 corresponds to its relative quintile; that is to say, India's score on ATM's per 100,000 adults is a '2' because it's data falls between the 20th and 40th percentile.</p>
+					</div>
 				</div>
+			
+			<div id="definitions" class="container light">
+				<h3>Definitions</h3>
 			</div>
-			<div id="definitions" class="container-fluid">
-				
 			</div>
 		</div>
-		
 	</div>
 	</div>
 </body>
