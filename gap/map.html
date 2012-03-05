@@ -108,9 +108,13 @@ $(document).ready(function() {
 		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp19.jsonp', 'mainMap');		
 		$('.map').removeClass('activeMap');
 		$('#layerMain').toggleClass('active');
+		
+		$('#mainMap').show();
+		$('.map').css('display','none');
 		$('#mainMap').addClass('activeMap');
-		$('#mainMap').fadeId();
-		$('.map').css('display','none');	
+		$('#mainMap').css('display','block')
+		$('#mapTitle').empty();
+		$('#mapTitle').append("<h3>Payment Infrastructure</h3>");	
 	})
 	
 	function showTooltip(x, y, contents) {
@@ -128,13 +132,18 @@ $(document).ready(function() {
 });
 
 function newMap(layerId){
+	console.log(layerId)
 	$('li').removeClass('active');
 	buildMap(dataLabels[layerId][2], 'map'+layerId);
 	$('.map').removeClass('activeMap');
 	$('#layer'+layerId).toggleClass('active');
-	$('#map'+layerId).addClass('activeMap');
-	$('#map'+layerId).fadeId();
-	$('.map').css('display','none');	
+	
+	$('#map'+layerId).show();
+	$('.map').css('display','none');
+	$('#map'+layerId).css('display','block');	
+	$('#map'+layerId).addClass('activeMap');	
+	$('#mapTitle').empty();
+	$('#map'+layerId).append("<span id='mapTitle'><h3>"+dataLabels[layerId][1]+"</h3></span>");
 }
 	
 </script>
@@ -171,7 +180,7 @@ function newMap(layerId){
 	  </div>
 	</div>
 	<div id="mapContainer" class="row-fluid">
-		<div id="mainMap" class="map span12 activeMap"></div>
+		<div id="mainMap" class="map span12 activeMap"><span id="mapTitle"><h3>Payment Infrastructure</h3></span></div>
 	</div>
 	<div class="container-fluid" style="padding-left:0px;padding-right:25px;">
 		<div id="infoBox" class="infoBar row-fluid">
