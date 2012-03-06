@@ -94,7 +94,8 @@ section.main-content {
 }
 
 .section-body {
-	margin: 60px 0;	
+/*	margin: 60px 0;	*/
+		margin: 20px 0;	
 }
 
 .section-body h2 {
@@ -102,9 +103,10 @@ section.main-content {
 }
 
 .section-body h2.head {
-	margin-bottom: 60px;
+/*	margin-bottom: 60px;*/
 	line-height: 38px;
 	font-size: 34px;
+	letter-spacing:-2px;
 }
 
 /* ======================================== RETIREMENT ======================================== */

@@ -76,7 +76,7 @@ var chart;
 			items: [{
 				html: '69%',
 				style: {
-					left: '67px',
+					left: '28px',
 					top: '51px',
 					color: 'black',
 					fontWeight: 'bold',
@@ -182,7 +182,7 @@ var chart;
 			items: [{
 				html: '60%',
 				style: {
-					left: '67px',
+					left: '28px',
 					top: '51px',
 					color: 'black',
 					fontWeight: 'bold',
@@ -288,7 +288,7 @@ var chart;
 			items: [{
 				html: '50%',
 				style: {
-					left: '67px',
+					left: '28px',
 					top: '51px',
 					color: 'black',
 					fontWeight: 'bold',
@@ -394,7 +394,7 @@ var chart;
 			items: [{
 				html: '28%',
 				style: {
-					left: '67px',
+					left: '28px',
 					top: '51px',
 					color: 'black',
 					fontWeight: 'bold',
