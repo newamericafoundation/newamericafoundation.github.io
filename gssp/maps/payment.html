@@ -31,13 +31,13 @@
 
   <!-- <link href='styles/controls.css' rel='stylesheet' type='text/css' /> -->
 <script>
-buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp19.jsonp', 'mainMap');
+buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp.jsonp', 'mainMap');
 	
 			//Main fake data object. Use this to build the individual graphs
 			var countryLabels = [[0,'Argentina'],[1,'Bangladesh'],[2,'Bolivia'],[3,'Botswana'],[4,'Brazil'],[5,'Brunei'],[6,'Burkina Faso'],[7,'Cambodia'],[8,'Chile'],[9,'China'],[10,'Colombia'],[11,'Costa Rica'],[12,'Dominican Republic'],[13,'Ecuador'],[14,'Egypt'],[15,'El Salvador'],[16,'Ethiopia'],[17,'Ghana'],[18,'Guatemala'],[19,'Honduras'],[20,'India'],[21,'Indonesia'],[22,'Jamaica'],[23,'Kenya'],[24,'Lesotho'],[25,'Liberia'],[26,'Malawi'],[27,'Maldives'],[28,'Mali'],[29,'Maurituis'],[30,'Mexico'],[31,'Mongolia'],[32,'Mozambique'],[33,'Namibia'],[34,'Nepal'],[35,'Nicaragua'],[36,'Pakistan'],[37,'Panama'],[38,'Paraguay'],[39,'Peru'],[40,'Phillipines'],[41,'Rwanda'],[42,'Sierra Leone'],[43,'South Africa'],[44,'Swaziland'],[45,'Tanzania'],[46,'Thailand'],[47,'Trinidad and Tobago'],[48,'Uganda'],[49,'Urugauy'],[50,'Zambia']]
 			
 			
-			var dataLabels = [[0,'Commerical Banks per 100,000 adults','http://a.tiles.mapbox.com/v3/newamerica.gssp-com-adults.jsonp',"Although there are a proliferation of new technologies enabling branchless banking, commercial banks are the most traditional method for providing formal financial services. At the same time, countries looking to develop access to formal financial services where few have existed in the past, such as Liberia. Lesotho, Malawi, and Burkina Faso, can often more cheaply and effectively pursue financial inclusion through other means such as mobile banking and point of service terminals, especially if the target population is the poorest of the poor.",'comAdult'],[1,'Commerical Banks per 1,000 SQ KM','http://a.tiles.mapbox.com/v3/newamerica.gssp-com-sqkm.jsonp',"The contrast between Commercial banks per 100K and per 100km2 illustrates that brank branches, because of the overhead and staff involved, are generally located in city centers and other high population densities. This is especially true in large and sparsely populated countries such as Mongolia. ",'comSqkm'],[2,'Alternative Financial Institutions per 100,000 adults','http://a.tiles.mapbox.com/v3/newamerica.gssp-alt-adults.jsonp',"Where commercial banks are not accessible or convenient, many people access financial services through alternative financial institutions such as cooperatives and microfinance institutions. Burkina Faso is an excellent example of a country in which, although access to formal financial services through commercial banks is low, the use of Alternative Financial Institutions is quite high. In general, it is likely more efficient and cost effective to pursue financial inclusion for the poorest of the poor via these types of alternative methods, in addition to mobile banking, than through brick and mortar commercial banks.",'altAdult'],[3,'Alternative Financial Institutions 1,000 SQ KM','http://a.tiles.mapbox.com/v3/newamerica.gssp-alt-sqkm.jsonp',"As is the case with commercial banks, many alternative financial institutions such as cooperatives are primarily located in city centers, and this is reflected in the difference between scores for countries such as Bolivia and Brazil. On the other hand, in smaller countries such as El Salvador, and countries in which microfinance institutions have a strong presence such as India, we see the opposite relation.",'altSqkm'],[4,'ATM per 100,000 adults','http://a.tiles.mapbox.com/v3/newamerica.gssp-atm-adults.jsonp',"Banks that have been tapped by national governments to partner on the dissemination of payments to beneficiaries of social safety nets have often tried to enable these payments via the wider dissemination of ATM machines. One great example of this is the Philippines.",'atmAdult'],[5,'ATM per 1,000 SQ KM','http://a.tiles.mapbox.com/v3/newamerica.gssp-atm-sqkm.jsonp',"Similar to commercial banks, ATMs are most commonly located in densely populated urban centers. Also worth noting is that India's extensive network of ATMs, even more impressive than its ATMs per 100,000 adults, which is another example of its aggressive efforts to promote financial inclusion.",'atmSqkm'],[6,'POS per 100,000 adults','http://a.tiles.mapbox.com/v3/newamerica.gssp-pos-adults.jsonp',"Around 2000, Brazil decided to pursue the spread of financial inclusion in its population via POS terminals. The fruits of these efforts are evident in the country's top rating both in terms of POS per 100K and POS per 100sq2.",'posAdult'],[7,'POS per thousand SQ KM','http://a.tiles.mapbox.com/v3/newamerica.gssp-pos-sqkm.jsonp',"Countries with lower commercial bank presence can cost effectively seek to increase financial inclusion, especially for those in remote populations, via point of service terminals and mobiles. For instance,  Jamaica, which is in the middle of the pack with respect to commercial bank presence, is at the top with respect to POS terminals. In addition, Tanzania has few commercial banks but more POS terminals.",'posSqkm'],[8,'Mobile Penetration','http://a.tiles.mapbox.com/v3/newamerica.gssp-mobile.jsonp',"Though arguably the recipient of the most hype among many in the financial inclusion sector, it is hard to deny that mobile banking has not achieved scale in any market other than Kenya (which itself, at 42% coverage, is not among the global leaders). Mobile banking may continue to receive a great deal of attention from development practitioners, and there certainly is reason to hope, but until it starts to bring real benefits to the poorest of the poor, there is also ground for much skepticism.",'mobilePen'],[9,'Financial Literacy','http://a.tiles.mapbox.com/v3/newamerica.gssp-fl.jsonp',"Just as important as physical financial infrastructure to a country’s ability to enable savings is the human infrastructure in place to utilize it. In other words, it doesn’t matter if there are ample banks and ATMs around if people do not have the requisite knowledge to take advantage of them. Notable examples of countries with high financial literacy are India, which has been aggressively pushing for financial inclusion for almost a decade, and China, which has a stronger culture of savings.",'finLit'],[10,'Composite Access to Financial Services', 'http://a.tiles.mapbox.com/v3/newamerica.gssp-com-access.jsonp','In order to form a holistic analysis, we have included this composite variable that was compiled by Patrick Honohan, professor of International Development and Economics and Development at Trinity College Dublin, for an the Access to Finance Conference in Washington, D.C.','']]
+			var dataLabels = [[0,'Commercial Banks per 100,000 adults','http://a.tiles.mapbox.com/v3/newamerica.gssp-com-adults.jsonp',"Although there are a proliferation of new technologies enabling branchless banking, commercial banks are the most traditional method for providing formal financial services. At the same time, countries looking to develop access to formal financial services where few have existed in the past, such as Liberia. Lesotho, Malawi, and Burkina Faso, can often more cheaply and effectively pursue financial inclusion through other means such as mobile banking and point of service terminals, especially if the target population is the poorest of the poor.",'comAdult'],[1,'Commercial Banks per 1,000 km2','http://a.tiles.mapbox.com/v3/newamerica.gssp-com-sqkm.jsonp',"In many countries, the different scores for Commercial Banks per 100,000 adults and Commercial Banks per 1000 km2 illustrates that bank branches, because of the overhead and staff involved, are generally located in city centers and other high population densities. This is especially true in large and sparsely populated countries such as Mongolia.",'comSqkm'],[2,'Alternative Financial Institutions per 100,000 adults','http://a.tiles.mapbox.com/v3/newamerica.gssp-alt-adults.jsonp',"Where commercial banks are not accessible or convenient, many people access financial services through alternative financial institutions such as cooperatives and microfinance institutions. Burkina Faso is an excellent example of a country in which, although access to formal financial services through commercial banks is low, the use of Alternative Financial Institutions is quite high. In general, it is likely more efficient and cost effective to pursue financial inclusion for the poorest of the poor via these types of alternative methods - in addition to potentially through mobile banking - than through brick and mortar commercial banks.",'altAdult'],[3,'Alternative Financial Institutions per 1,000 km2','http://a.tiles.mapbox.com/v3/newamerica.gssp-alt-sqkm.jsonp',"As is the case with commercial banks, many alternative financial institutions such as cooperatives are primarily located in city centers, and this is reflected in the difference between the relative scores for countries such as Bolivia and Brazil. On the other hand, in smaller countries such as El Salvador, and countries in which microfinance institutions have a strong presence such as India, we see the opposite relation between the two.",'altSqkm'],[4,'ATM per 100,000 adults','http://a.tiles.mapbox.com/v3/newamerica.gssp-atm-adults.jsonp',"Banks that have been tapped by national governments to partner on the dissemination of payments to beneficiaries of social safety nets have often tried to enable these payments via the wider dissemination of ATM machines. One great example of this is the Philippines.",'atmAdult'],[5,'ATM per 1,000 km2','http://a.tiles.mapbox.com/v3/newamerica.gssp-atm-sqkm.jsonp',"Similar to commercial banks, ATMs are most commonly located in densely populated urban centers. Also worth noting is that India's extensive network of ATMs, even more impressive than its ATMs per 100,000 adults, which is another example of its aggressive efforts to promote financial inclusion.",'atmSqkm'],[6,'POS per 100,000 adults','http://a.tiles.mapbox.com/v3/newamerica.gssp-pos-adults.jsonp',"Point of Sale terminals can take the form of card readers, personal computers, barcode scanners or any hardware that can identify customers and receive instructions for the transfer of value. Around the year 2000, Brazil decided to pursue the spread of financial inclusion in its population via POS terminals, and the fruits of these efforts are evident in the country's top rating both in terms of POS per 100K and POS per 1000 km2.",'posAdult'],[7,'POS per 1,000 km2','http://a.tiles.mapbox.com/v3/newamerica.gssp-pos-sqkm.jsonp',"Countries with lower commercial bank presence can cost effectively seek to increase financial inclusion, especially for those in remote populations, via point of service terminals - which can take the form of card readers, personal computers, barcode scanners or any hardware that can identify customers and receive instructions for the transfer of value. For instance, Jamaica, which is in the middle of the pack with respect to commercial bank presence, is at the top with respect to POS terminals. In addition, Tanzania has few commercial banks but a greater relative number of POS terminals.",'posSqkm'],[8,'Mobile Penetration','http://a.tiles.mapbox.com/v3/newamerica.gssp-mobile.jsonp',"Though arguably the most hyped tool for financial inclusion in international development circles, it is hard to deny that mobile banking has not achieved scale in any market other than Kenya. As the map makes clear, there certainly exists the necessary infrastructure in a variety of countries with cash transfer social protection programs, which is certainly ground for hope, but until mobile banking starts to bring real benefits to aspiring families all around the world, there is also ground for much skepticism.",'mobilePen'],[9,'Financial Literacy','http://a.tiles.mapbox.com/v3/newamerica.gssp-fl.jsonp',"Just as important as physical financial infrastructure to a country's ability to enable savings is the human infrastructure in place to utilize it. In other words, it doesn't matter if there are ample banks and ATMs around if people do not have the requisite knowledge to take advantage of them. Notable examples of countries with high financial literacy are India, which has been aggressively pushing for financial inclusion for almost a decade, and China, which has a stronger culture of savings.",'finLit'],[10,'Composite Access to Financial Services', 'http://a.tiles.mapbox.com/v3/newamerica.gssp-com-access.jsonp','In order to form a holistic analysis, we have included this composite variable that was compiled by Patrick Honohan, professor of International Development and Economics and Development at Trinity College Dublin, for an the Access to Finance Conference in Washington, D.C.','']]
 			
 			var data = {
 	//Commerical Banks per (100,000 adults) 
@@ -105,12 +105,16 @@ $(document).ready(function() {
 	}
 	$('#layerMain').click(function(){		
 		$('li').removeClass('active');
-		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp19.jsonp', 'mainMap');		
+		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp.jsonp', 'mainMap');		
 		$('.map').removeClass('activeMap');
 		$('#layerMain').toggleClass('active');
+		
+		$('#mainMap').show();
+		$('.map').css('display','none');
 		$('#mainMap').addClass('activeMap');
-		$('#mainMap').fadeId();
-		$('.map').css('display','none');	
+		$('#mainMap').css('display','block')
+		$('#mapTitle').empty();
+		$('#mapTitle').append("<h3>Payment Infrastructure</h3>");	
 	})
 	
 	function showTooltip(x, y, contents) {
@@ -128,13 +132,18 @@ $(document).ready(function() {
 });
 
 function newMap(layerId){
+	console.log(layerId)
 	$('li').removeClass('active');
 	buildMap(dataLabels[layerId][2], 'map'+layerId);
 	$('.map').removeClass('activeMap');
 	$('#layer'+layerId).toggleClass('active');
-	$('#map'+layerId).addClass('activeMap');
-	$('#map'+layerId).fadeId();
-	$('.map').css('display','none');	
+	
+	$('#map'+layerId).show();
+	$('.map').css('display','none');
+	$('#map'+layerId).css('display','block');	
+	$('#map'+layerId).addClass('activeMap');	
+	$('#mapTitle').empty();
+	$('#map'+layerId).append("<span id='mapTitle'><h3>"+dataLabels[layerId][1]+"</h3></span>");
 }
 	
 </script>
@@ -150,16 +159,16 @@ function newMap(layerId){
 	<div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
-			<h1><a href="#">Payment Infrastructure</a><a class="btn pull-right" data-toggle="modal" href="#aboutModal">About</a></h1>
+			<h1><a href="#">Payment Infrastructure for Global Savings</a><a class="btn pull-right" data-toggle="modal" href="#aboutModal">About</a></h1>
+			<h3 class="light">Mapping the Potential for Wealth Creation</h3>
 			
 			<div class="modal hide fade" id="aboutModal">
 			  <div class="modal-header">
 			    <a class="close" data-dismiss="modal">&times;</a>
-			    <h3>About the Map</h3>
+			    <h3>About the Project</h3>
 			  </div>
-			  <div class="modal-body">
-				<p>This year, with the generous support of CGAP (Consultative Group to Assist the Poor), the CitiFoundation, the FordFoundation, and the NikeFoundation, New America Foundation's Global Savings and Social Protection initiative is developing a multi-faceted, multi-stakeholder body of work to enable the global creation and advancement of sound, effective and efficient savings-linked social protection models. To that end, we have collected and analyzed information on countries with social protection programs that include cash transfers to identify opportunities to encourage opportunities for recipients to build their asset base and increase their resiliency.</p> 
-			    <p>In order to truly enable asset building among participants in social safety net programs, we must provide easy and convenient access to electronic alternatives. To get an idea of the state of the financial infrastructure in countries around the world with social protection programs that include asset transfers, NAF's Global Asset Project has taken a helicopter view of their payment infrastructures - including Commercial Banks, Microfinance Institutions, ATMs, Point of Service terminals - in addition to the human infrastructure in place and the potential for banking via innovating mediums such as mobiles.  This is our first 'heat-mapping' of this composite analysis which illustrates whether these countries have low, medium, or highly developed infrastructure, in addition to the descriptions/definitions of each variable used. A country's score of 1-5 corresponds to its relative quintile; that is to say, India's score on ATM's per 100,000 adults is a '2' because it's data falls between the 20th and 40th percentile.</p>
+			  <div class="modal-body"> 
+			    <p>The New America Foundation's Global Savings and Social Protection initiative - with the generous support of CGAP (Consultative Group to Assist the Poor), the Citi Foundation, the Ford Foundation, and the Nike Foundation - is developing a multi-faceted, multi-stakeholder body of work to enable the global creation and advancement of sound, effective and efficient savings-linked social protection models. To that end, we are gathering and analyzing information about global cash transfer programs to identify and facilitate opportunities for recipients to build their asset base and increase their resiliency.</p>
 			  </div>
 			  <div class="modal-footer">
 
@@ -171,7 +180,7 @@ function newMap(layerId){
 	  </div>
 	</div>
 	<div id="mapContainer" class="row-fluid">
-		<div id="mainMap" class="map span12 activeMap"></div>
+		<div id="mainMap" class="map span12 activeMap"><span id="mapTitle"><h3>Payment Infrastructure</h3></span></div>
 	</div>
 	<div class="container-fluid" style="padding-left:0px;padding-right:25px;">
 		<div id="infoBox" class="infoBar row-fluid">
@@ -181,29 +190,29 @@ function newMap(layerId){
 				  	<li class="dropdown">
 				    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Commercial Banks<b class="caret"></b></a>
 				    	<ul class="dropdown-menu">
-							<li id="layer0"><a href="#">Adults</a></li>
-				      		<li id="layer1"><a href="#">Sq Km</a></li>
+							<li id="layer0"><a href="#">100,000 Adults</a></li>
+				      		<li id="layer1"><a href="#">1,000 km2</a></li>
 				    	</ul>
 				  	</li>
 					<li class="dropdown">
 				    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Alternative Financial Institutions<b class="caret"></b></a>
 				    	<ul class="dropdown-menu">
-							<li id="layer2"><a href="#">Adults</a></li>
-				      		<li id="layer3"><a href="#">Sq Km</a></li>	
+							<li id="layer2"><a href="#">100,000 Adults</a></li>
+				      		<li id="layer3"><a href="#">1,000 km2</a></li>	
 				    	</ul>
 				  	</li>
 					<li class="dropdown">
 				    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">ATM<b class="caret"></b></a>
 				    	<ul class="dropdown-menu">
-							<li id="layer4"><a href="#">Adults</a></li>
-				      		<li id="layer5"><a href="#">Sq Km</a></li>
+							<li id="layer4"><a href="#">100,000 Adults</a></li>
+				      		<li id="layer5"><a href="#">1,000 km2</a></li>
 				    	</ul>
 				  	</li>
 					<li class="dropdown">
 				    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">POS<b class="caret"></b></a>
 				    	<ul class="dropdown-menu">
-							<li id="layer6"><a href="#">Adults</a></li>
-				      		<li id="layer7"><a href="#">Sq Km</a></li>
+							<li id="layer6"><a href="#">100,000 Adults</a></li>
+				      		<li id="layer7"><a href="#">1,000 km2</a></li>
 				    	</ul>
 				  	</li>
 					<li id="layer8"><a href="#">Mobile Penetration</a></li>
@@ -214,8 +223,8 @@ function newMap(layerId){
 				<div class="container-fluid light">
 					<div id="toolTipContainer" class="row span12">
 						<h3>About the Map</h3>
-						<p><strong>Roll over or click a country. Use the buttons above to change the map layers.</strong></p>
-						 <p>In order to truly enable asset building among participants in social safety net programs, we must provide easy and convenient access to electronic alternatives. To get an idea of the state of the financial infrastructure in countries around the world with social protection programs that include asset transfers, NAF's Global Asset Project has taken a helicopter view of their payment infrastructures - including Commercial Banks, Microfinance Institutions, ATMs, Point of Service terminals - in addition to the human infrastructure in place and the potential for banking via innovating mediums such as mobiles.  This is our first 'heat-mapping' of this composite analysis which illustrates whether these countries have low, medium, or highly developed infrastructure, in addition to the descriptions/definitions of each variable used. A country's score of 1-5 corresponds to its relative quintile; that is to say, India's score on ATM's per 100,000 adults is a '2' because it's data falls between the 20th and 40th percentile.</p>
+						<p>This map shows 11 different variables mapped at the country level. Each variable is used to compute a composite payment infrastructure score. <strong>Roll over or click a country to view individual indicators. Use the buttons above to switch between map layers for each indicator.</strong></p>
+						 <p>Easy and convenient access to a variety of financial services is necessary in order to truly enable asset building among participants in social safety net programs. To glean a better idea of the state of the financial infrastructure in countries with cash-transfer social protection programs, we have analyzed and mapped their physical payment infrastructures - including Commercial Banks, Microfinance Institutions, ATMs and Point of Service terminals - in addition to the human infrastructure and potential for banking via new mediums such as mobiles. This is our first 'heat-mapping' of composite variables that influence a country's potential to implement savings-linked social protection models. A country's score of 1-5 on a variable corresponds to its relative quintile; that is to say, India's score on ATM's per 100,000 adults is a '2' because its data falls in the second quintile (between the 20th and 40th percentile).</p>
 					</div>
 				</div>
 			
