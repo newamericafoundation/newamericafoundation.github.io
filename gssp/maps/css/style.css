@@ -642,6 +642,10 @@ a.share:active {
 /*	padding-left:10px;*/
 }
 
+ h1.light{
+	color:#fff;
+}
+
 /* --------------------------
     Scrolling
 ----------------------------- */
