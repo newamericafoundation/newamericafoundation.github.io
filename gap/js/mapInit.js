@@ -127,6 +127,8 @@
 								        ev.returnValue = false; // Prevents hash change.
 								        if (ev.stopPropagation) ev.stopPropagation();
 								        if (ev.preventDefault) ev.preventDefault();
+										$('#toolTipContainer').append("<h3>About the Map</h3><p>This map shows 11 different variables mapped at the country level. Each variable is used to compute a composite payment infrastructure score. <strong>Roll over or click a country to view individual indicators. Use the buttons above to switch between map layers for each indicator.</strong></p><p>Easy and convenient access to a variety of financial services is necessary in order to truly enable asset building among participants in social safety net programs. To glean a better idea of the state of the financial infrastructure in countries with cash-transfer social protection programs, we have analyzed and mapped their physical payment infrastructures - including Commercial Banks, Microfinance Institutions, ATMs and Point of Service terminals - in addition to the human infrastructure and potential for banking via new mediums such as mobiles. This is our first 'heat-mapping' of composite variables that influence a country's potential to implement savings-linked social protection models. A country's score of 1-5 on a variable corresponds to its relative quintile; that is to say, India's score on ATM's per 100,000 adults is a '2' because its data falls in the second quintile (between the 20th and 40th percentile).</p>");
+								
 								        return false;
 								    }, this);
 
