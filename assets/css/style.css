@@ -48,34 +48,39 @@ section.main-content {
 }
 
 .section-header .header-body h4 {
-	font-family: Georgia, "Times New Roman", Times, serif;
+/*	font-family: Georgia, "Times New Roman", Times, serif;*/
+	font-family: Arial, sans-serif;
 	padding: 0 40px;
 	color: #D0D0C3;
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 24px;
 	text-align: center;
-	font-style: italic;
+	font-weight:normal;
+/*	font-style: italic;*/
 }
 
 
 .header-body {
 	float: left;
-	width: 560px;
+/*	width: 560px;*/
 	margin-right: 10px;
 	position: relative;
 }
 
 .staple {
-	float: right;
-	width: 330px;
-	height: 90px;
-	position: relative;
+/*	float: right;*/
+/*	width: 330px;*/
+/*	height: 90px;*/
+/*	position: relative;*/
 }
 
 .staple a.more-data {
-	position: absolute;
+/*	position: absolute;
 	right: 8px;
-	top: 25px;	
+	top: 25px;*/
+	position:relative;
+	left:320px;
+	top:50px;	
 	z-index: 1000;
 }
 
