@@ -662,3 +662,19 @@ a.share:active {
 .scroll{
 	cursor:pointer;
 }
+
+.tweet{
+	width: 105px;
+	margin: 0 5px 0 0;
+	float: left;
+}
+.google {
+width: 75px;
+margin: 0 5px 0 0;
+float: left;
+}
+
+.facebook-like {
+width: 90px;
+float: left;
+}
