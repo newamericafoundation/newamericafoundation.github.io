@@ -25,9 +25,10 @@ section.main-content {
 }
 
 .section-header {
-	clear:both;
-	margin: 40px 0 20px 0;
-	/*border-top: 1px #666 solid;*/
+	margin: 40px 0 70px 0;
+	height: auto;
+	float:left;
+	bottom:120px;
 }
 
 .section-header .well {
@@ -35,18 +36,17 @@ section.main-content {
 	padding: 7px 19px !important;
 }
 
-.section-header h2 {
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 28px;
-	border-bottom: 1px #FCFAD0 solid;
+.section-header h1 {
+	font-size: 58px;
+	line-height: 56px;
 	padding-bottom: 4px;
 	margin-bottom: 4px;
 	margin-top: 0;
-	color: #FCFAD0;
+	font-weight:200;
 }
 
-.section-header .header-body h4 {
-/*	font-family: Georgia, "Times New Roman", Times, serif;*/
+/*.section-header .header-body h4 {
+	font-family: Georgia, "Times New Roman", Times, serif;
 	font-family: Arial, sans-serif;
 	padding: 0 40px;
 	color: #D0D0C3;
@@ -54,9 +54,8 @@ section.main-content {
 	line-height: 24px;
 	text-align: center;
 	font-weight:normal;
-/*	font-style: italic;*/
-}
-
+	font-style: italic;
+}*/
 
 .header-body {
 }
