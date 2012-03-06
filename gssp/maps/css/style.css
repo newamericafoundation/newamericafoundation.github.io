@@ -172,7 +172,7 @@ a.close:active {
 	bottom:150px;
 	width:100%;*/
 	height:400px;
-	top:60px;
+	top:80px;
 	display:none;
 	margin:0px;
 }
@@ -190,7 +190,7 @@ a.zoomer {
   text-align:center;
   width:28px;
   height:28px;
-  top:10px;
+  top:20px;
 box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
   -moz-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
   -webkit-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
@@ -221,7 +221,7 @@ a.zoomout {
 .wax-legends {
 	position:absolute;
 	right:30px;
-	bottom:10px;
+	bottom:20px;
 	z-index:999999;
 	box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
 	-moz-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
@@ -275,6 +275,22 @@ a.zoomout {
 
 .wax-tooltip .row{
 	min-height:70px;
+}
+
+#mapTitle{
+	position:absolute;
+	top:15px;
+	right:0px;
+	background:rgba(255,255,255,0.8);
+	color:#666;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	z-index:999;
+	padding:5px;
+		box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
+		-moz-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
+		-webkit-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
+	}
 }
 
 
