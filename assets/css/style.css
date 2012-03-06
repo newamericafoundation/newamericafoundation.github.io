@@ -68,19 +68,16 @@ section.main-content {
 }
 
 .staple {
-/*	float: right;*/
+	float: right;
 /*	width: 330px;*/
-/*	height: 90px;*/
-/*	position: relative;*/
+	height: 90px;
+	position: relative;
 }
 
 .staple a.more-data {
-/*	position: absolute;
+	position: absolute;
 	right: 8px;
-	top: 25px;*/
-	position:relative;
-	left:320px;
-	top:50px;	
+	top: 25px;
 	z-index: 1000;
 }
 

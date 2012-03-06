@@ -82,7 +82,7 @@ var chart;
 			items: [{
 				html: 'Tax spending',
 				style: {
-					left: '5px',
+					left: '25px',
 					top: '55px',
 					color: '#777777',
 					fontSize: '11px',
@@ -91,7 +91,7 @@ var chart;
 			},{
 				html: 'Direct spending',
 				style: {
-					left: '74px',
+					left: '104px',
 					top: '55px',
 					color: '#777777',
 					fontSize: '11px',
@@ -198,7 +198,7 @@ var chart;
 			items: [{
 				html: 'Tax spending',
 				style: {
-					left: '5px',
+					left: '25px',
 					top: '55px',
 					color: '#777777',
 					fontSize: '11px',
@@ -207,7 +207,7 @@ var chart;
 			},{
 				html: 'Direct spending',
 				style: {
-					left: '74px',
+					left: '104px',
 					top: '55px',
 					color: '#777777',
 					fontSize: '11px',
@@ -314,7 +314,7 @@ var chart;
 			items: [{
 				html: 'Tax spending',
 				style: {
-					left: '5px',
+					left: '25px',
 					top: '55px',
 					color: '#777777',
 					fontSize: '11px',
@@ -323,7 +323,7 @@ var chart;
 			},{
 				html: 'Direct spending',
 				style: {
-					left: '74px',
+					left: '104px',
 					top: '55px',
 					color: '#777777',
 					fontSize: '11px',
@@ -430,7 +430,7 @@ var chart;
 			items: [{
 				html: 'Tax spending',
 				style: {
-					left: '5px',
+					left: '25px',
 					top: '55px',
 					color: '#777777',
 					fontSize: '11px',
@@ -439,7 +439,7 @@ var chart;
 			},{
 				html: 'Direct spending',
 				style: {
-					left: '74px',
+					left: '104px',
 					top: '55px',
 					color: '#777777',
 					fontSize: '11px',
@@ -546,7 +546,7 @@ var chart;
 			items: [{
 				html: 'Tax spending',
 				style: {
-					left: '5px',
+					left: '25px',
 					top: '55px',
 					color: '#777777',
 					fontSize: '11px',
@@ -555,7 +555,7 @@ var chart;
 			},{
 				html: 'Direct spending',
 				style: {
-					left: '74px',
+					left: '104px',
 					top: '55px',
 					color: '#777777',
 					fontSize: '11px',
