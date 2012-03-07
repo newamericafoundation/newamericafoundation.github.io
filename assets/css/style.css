@@ -38,12 +38,15 @@ section.main-content {
 }
 
 .section-header h1 {
-	font-size: 58px;
+	font-size: 56px;
 	line-height: 56px;
 	padding-bottom: 4px;
 	margin-bottom: 4px;
 	margin-top: 0;
-	font-weight:200;
+/*	font-weight:200;*/
+	font-weight:300;
+	letter-spacing:-1px;
+	color:#464646;
 }
 
 .section-header h3{
@@ -68,7 +71,7 @@ section.main-content {
 .staple {
 	float: right;
 /*	width: 330px;*/
-	height: 90px;
+/*	height: 90px;*/
 	position: relative;
 }
 
@@ -99,19 +102,30 @@ section.main-content {
 
 .section-body h2.head {
 /*	margin-bottom: 60px;*/
-	line-height: 35px;
-	font-size: 27px;
+	line-height: 40px;
+	font-size: 37px;
 	letter-spacing:-1px;
+	color:#464646;
 }
 
 .graphText h6{
 	margin:20px 0px;
-	text-align:right;
+/*	text-align:right;*/
 	font-size:16px;
 /*	border-top:1px dotted #464646;*/
 	padding-top:5px;
 	line-height:21px;
-	
+}
+
+h1.sectionTagline{
+	margin-bottom:20px;
+	padding:5px 10px;
+	color:#f4f4f4;
+	background-color: #2E1717;
+    background-image: -moz-linear-gradient(center top , #333333, #222222);
+    background-repeat: repeat-x;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 -1px 0 rgba(0, 0, 0, 0.1) inset;
 }
 
 /* ======================================== RETIREMENT ======================================== */
