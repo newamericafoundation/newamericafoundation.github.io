@@ -148,6 +148,21 @@ section.main-content {
 	margin-bottom: 0 !important;
 }
 
+.row-homeownership .net-worth-race,
+.row-homeownership .mid-charts {
+	margin: 50px 0;
+	float:left;	
+}
+
+.row-homeownership .net-worth-race .span4 .btn {
+	margin-top: 10px;
+}
+
+.row-homeownership .net-worth-race .span4 .btn-primary,
+.row-homeownership .net-worth-race .span4 .btn-action {
+	font-size: 20px;	
+}
+
 /* ======================================== EDUCATION ======================================== */
 
 .ed-pills a {
