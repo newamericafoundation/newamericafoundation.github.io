@@ -51,8 +51,7 @@ var chart;
 				return '$'+this.value +'B';
 			  }
 			},
-			max:220,
-			tickInterval: 75,
+			max:485,
 		},
 		xAxis: {
 			labels: {
@@ -112,10 +111,10 @@ var chart;
 		   name: 'Budget slice',
 		   data: [{
 			  name: 'Other assets spending',
-			  y: 394.595,
+			  y: 389.448,
 		   }, {
 			  name: 'Retirement spending',
-			  y: 146.8,
+			  y: 165.430,
 		   }],
 		   center: [20, 28],
 		   spacingLeft: 100,
@@ -129,7 +128,7 @@ var chart;
 		   type: 'column',
 		   name: 'Tax spending',
 		   borderColor: '#000000',
-		   data: [146.8]
+		   data: [165.430]
 		}, {
 		   type: 'column',
 		   name: 'Direct spending',
@@ -168,8 +167,7 @@ var chart;
 				return '$'+this.value +'B';
 			  }
 			},
-			max:220,
-			tickInterval: 75,
+			max:485,
 		},
 		xAxis: {
 			labels: {
@@ -228,10 +226,10 @@ var chart;
 		   name: 'Budget slice',
 		   data: [{
 			  name: 'Other assets spending',
-			  y: 415.322,
+			  y: 439.456,
 		   }, {
 			  name: 'Savings spending',
-			  y: 126.073,
+			  y: 115.422,
 		   }],
 		   center: [20, 28],
 		   spacingLeft: 100,
@@ -245,12 +243,12 @@ var chart;
 		   type: 'column',
 		   name: 'Tax spending',
 		   borderColor: '#000000',
-		   data: [126]
+		   data: [115.370]
 		}, {
 		   type: 'column',
 		   name: 'Direct spending',
 		   borderColor: '#000000',
-		   data: [0.073]
+		   data: [0.052]
 		},]
 	 });
   });
@@ -284,8 +282,7 @@ var chart;
 				return '$'+this.value +'B';
 			  }
 			},
-			max:220,
-			tickInterval: 75,
+			max:485,
 		},
 		xAxis: {
 			labels: {
@@ -344,10 +341,10 @@ var chart;
 		   name: 'Budget slice',
 		   data: [{
 			  name: 'Other assets spending',
-			  y: 330.194,
+			  y: 198.941,
 		   }, {
 			  name: 'Homeownership spending',
-			  y: 211.201,
+			  y: 355.937,
 		   }],
 		   center: [20, 28],
 		   spacingLeft: 100,
@@ -361,12 +358,12 @@ var chart;
 		   type: 'column',
 		   name: 'Tax spending',
 		   borderColor: '#000000',
-		   data: [209.3]
+		   data: [197.750]
 		}, {
 		   type: 'column',
 		   name: 'Direct spending',
 		   borderColor: '#000000',
-		   data: [1.901]
+		   data: [1.191]
 		},]
 	 });
   });
@@ -400,8 +397,7 @@ var chart;
 				return '$'+this.value +'B';
 			  }
 			},
-			max:220,
-			tickInterval: 75,
+			max:485,
 		},
 		xAxis: {
 			labels: {
@@ -460,10 +456,10 @@ var chart;
 		   name: 'Budget slice',
 		   data: [{
 			  name: 'Other assets spending',
-			  y: 484.431,
+			  y: 480.395,
 		   }, {
 			  name: 'Post-secondary education spending',
-			  y: 56.964,
+			  y: 74.483,
 		   }],
 		   center: [20, 28],
 		   spacingLeft: 100,
@@ -477,12 +473,12 @@ var chart;
 		   type: 'column',
 		   name: 'Tax spending',
 		   borderColor: '#000000',
-		   data: [13.58]
+		   data: [28.930]
 		}, {
 		   type: 'column',
 		   name: 'Direct spending',
 		   borderColor: '#000000',
-		   data: [43.384]
+		   data: [45.553]
 		},]
 	 });
   });
@@ -516,8 +512,7 @@ var chart;
 				return '$'+this.value +'B';
 			  }
 			},
-			max:220,
-			tickInterval: 75,
+			max:485,
 		},
 		xAxis: {
 			labels: {
@@ -576,10 +571,10 @@ var chart;
 		   name: 'Budget slice',
 		   data: [{
 			  name: 'Other assets spending',
-			  y: 541.038,
+			  y: 554.276,
 		   }, {
-			  name: 'Retirement spending',
-			  y: 146.8,
+			  name: 'Entrepreneurship spending',
+			  y: .602,
 		   }],
 		   center: [20, 28],
 		   spacingLeft: 100,
@@ -598,7 +593,7 @@ var chart;
 		   type: 'column',
 		   name: 'Direct spending',
 		   borderColor: '#000000',
-		   data: [0.]
+		   data: [.602]
 		},]
 	 });
   });
