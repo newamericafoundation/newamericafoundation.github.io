@@ -45,6 +45,10 @@ section.main-content {
 	font-weight:200;
 }
 
+.section-header h3{
+	border-bottom:2px solid #333;
+}
+
 /*.section-header .header-body h4 {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-family: Arial, sans-serif;
