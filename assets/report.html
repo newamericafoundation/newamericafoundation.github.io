@@ -80,10 +80,10 @@
             <h1 class="span12">Too few people are saving for retirement and they're not saving enough.</h1>
           </div> <!-- end .section-header -->
             <div class="row">
-              <div class="span4">
+              <div class="span3">
                 <h2 class="head">The Lowest Earners Are the Least Prepared For Retirement</h2>
-              </div> <!-- /.span4 -->
-              <div class="span8">
+              </div> <!-- /.span3 -->
+              <div class="span8 offset1">
                 <div class="row">
                   <div class="span8">
                     <h3 class="pull-right">Employee Participation in Retirement Plans 2008</h3>
@@ -115,10 +115,10 @@
               </div>
           </div>
 			<div class="row" style="margin-top:30px;margin-bottom:30px;">
-            <div class="span4">
+            <div class="span3">
               <h2 class="head">The decline in employers sponsoring retirement accounts means that many workers, especially those earning the least, have few accessible options.</h2>
-            </div> <!-- /.span4 -->
-            <div class="span8">
+            </div> <!-- /.span3 -->
+            <div class="span8 offset1">
               <div class="row">
                 <div class="span8">
                   <h3 class="pull-right">Employer Sponsorship of retirement Plans</h3>
@@ -147,91 +147,92 @@
             </div> <!-- /.span8 -->
           </div> <!-- /.row -->
 		<div class="row">
-          <div class="span8 offset4" style="text-align:right;margin-bottom:20px;">
-                <h3 class="head">Over quarter of all asset-building government spending — <strong>all of it in the form of tax expenditures</strong> — is spent to promote retirement savings. However, <strong>the poorest in the U.S. benefit least from this approach.</strong></h3>
+			<div class="staple span5">
+              <div id="retirementModal" class="modal hide fade">
+                <div class="modal-header">
+                  <a class="close" data-dismiss="modal">&times;</a>
+                  <h3>Retirement Spending Programs</h3>
+                </div>
+                <div class="modal-body">
+                <h4>Direct Spending</h4>
+                  <table id="programTable" class="table table-striped table-condensed">
+                      <thead>
+                          <tr>
+                              <th>Program Name</th>
+                              <th>Amount</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>Auto IRA</td>
+                              <td>0.0</td>
+                          </tr>
+                          <tr>
+                              <td>Subtotal Retirement</td>
+                              <td>0.0</td>
+                          </tr>
+                      </tbody>
+                  </table>
+                  <h4>Tax Spending</h4>
+                  <table id="programTable" class="table table-striped table-condensed">
+                      <thead>
+                          <tr>
+                              <th>Program Name</th>
+                              <th>Amount</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>Net Exclusion of Pension Contributions: Employer Plans</td>
+                              <td>45.2 </td>
+                          </tr>
+                          <tr>
+                              <td>Net Exclusion of Pension Contributions: 401(k) Plans</td>
+                              <td>67.6 </td>
+                          </tr>
+                          <tr>
+                              <td>Net Exclusion of Pension Contributions: IRAs</td>
+                              <td>15.6 </td>
+                          </tr>
+                          <tr>
+                              <td>Net Exclusion of Pension Contributions: Saver's Credit</td>
+                              <td>1.3 </td>
+                          </tr>
+                          <tr>
+                              <td>Net Exclusion of Pension Contributions: Keough Plans</td>
+                              <td>17.1 </td>
+                          </tr>
+                          <tr>
+                              <td>Subtotal Retirement</td>
+                              <td>146.8</td>
+                          </tr>	
+                      </tbody>
+                  </table>
+                </div>
+                <div class="modal-footer">
+                  <a href="#" class="btn" data-dismiss="modal">Close</a>
+                </div>
+              </div>
+              <a class="btn btn-danger more-data" href="#retirementModal" data-toggle="modal">Data</a>
+              <div class="alert alert-success">
+                <h4>Budget share and spending levels</h4>
+                <div id="retirementGraph"></div>
+              </div>
+            </div> <!-- end .staple -->
+          <div class="span6 offset1 graphText">
+                <h6>Over quarter of all asset-building government spending — <strong>all of it in the form of tax expenditures</strong> — is spent to promote retirement savings. However, <strong>the poorest in the U.S. benefit least from this approach.</strong></h>
           </div><!-- /.span6 -->
 		</div><!-- /.row -->
   
 			<div class="row">
-              <div class="span7">
+              <div class="span7 offset5">
                 <div class="alert alert-info" style="background:#464646;">
                   <img src="img/policy-alert.png" style="float:right;margin: 0 0 5px 5px;" />
                   <h2>What can we do?</h2>
                   <p>A Universal 401(k) system would establish a retirement account for all workers and offer matching incentives targeting lower- and middle- income earners.</p>
                 </div>
               </div>
-				<div class="staple span5">
-	              <div id="retirementModal" class="modal hide fade">
-	                <div class="modal-header">
-	                  <a class="close" data-dismiss="modal">&times;</a>
-	                  <h3>Retirement Spending Programs</h3>
-	                </div>
-	                <div class="modal-body">
-	                <h4>Direct Spending</h4>
-	                  <table id="programTable" class="table table-striped table-condensed">
-	                      <thead>
-	                          <tr>
-	                              <th>Program Name</th>
-	                              <th>Amount</th>
-	                          </tr>
-	                      </thead>
-	                      <tbody>
-	                          <tr>
-	                              <td>Auto IRA</td>
-	                              <td>0.0</td>
-	                          </tr>
-	                          <tr>
-	                              <td>Subtotal Retirement</td>
-	                              <td>0.0</td>
-	                          </tr>
-	                      </tbody>
-	                  </table>
-	                  <h4>Tax Spending</h4>
-	                  <table id="programTable" class="table table-striped table-condensed">
-	                      <thead>
-	                          <tr>
-	                              <th>Program Name</th>
-	                              <th>Amount</th>
-	                          </tr>
-	                      </thead>
-	                      <tbody>
-	                          <tr>
-	                              <td>Net Exclusion of Pension Contributions: Employer Plans</td>
-	                              <td>45.2 </td>
-	                          </tr>
-	                          <tr>
-	                              <td>Net Exclusion of Pension Contributions: 401(k) Plans</td>
-	                              <td>67.6 </td>
-	                          </tr>
-	                          <tr>
-	                              <td>Net Exclusion of Pension Contributions: IRAs</td>
-	                              <td>15.6 </td>
-	                          </tr>
-	                          <tr>
-	                              <td>Net Exclusion of Pension Contributions: Saver's Credit</td>
-	                              <td>1.3 </td>
-	                          </tr>
-	                          <tr>
-	                              <td>Net Exclusion of Pension Contributions: Keough Plans</td>
-	                              <td>17.1 </td>
-	                          </tr>
-	                          <tr>
-	                              <td>Subtotal Retirement</td>
-	                              <td>146.8</td>
-	                          </tr>	
-	                      </tbody>
-	                  </table>
-	                </div>
-	                <div class="modal-footer">
-	                  <a href="#" class="btn" data-dismiss="modal">Close</a>
-	                </div>
-	              </div>
-	              <a class="btn btn-danger more-data" href="#retirementModal" data-toggle="modal">Data</a>
-	              <div class="alert alert-success">
-	                <h4>Budget share and spending levels</h4>
-	                <div id="retirementGraph"></div>
-	              </div>
-	            </div> <!-- end .staple -->
+				
             </div>
           </div><!-- end .section-body -->
         </div><!-- end .row -->
