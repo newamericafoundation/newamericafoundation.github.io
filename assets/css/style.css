@@ -49,7 +49,9 @@ section.main-content {
 	color:#464646;
 }
 
-.section-header h3{
+.section-header h3 {
+	font-size: 18px;
+	text-transform: uppercase;
 	border-bottom:2px solid #333;
 }
 
@@ -96,9 +98,9 @@ section.main-content {
 		margin: 20px 0;	
 }
 
-.section-body h2 {
+/*.section-body h2 {
 	line-height: 32px;
-}
+}*/
 
 .section-body h2.head {
 /*	margin-bottom: 60px;*/
@@ -167,7 +169,7 @@ h1.sectionTagline{
 
 .row-homeownership .net-worth-race,
 .row-homeownership .mid-charts {
-	margin: 50px 0;
+	margin: 0 0 50px 0;
 	float:left;	
 }
 
@@ -178,6 +180,10 @@ h1.sectionTagline{
 .row-homeownership .net-worth-race .span4 .btn-action {
 	font-size: 20px;
 	line-height: 22px;
+}
+
+.row-homeownership .homeownership-number-row h1.sectionTagline {
+	line-height: 32px;	
 }
 
 /* ======================================== EDUCATION ======================================== */
