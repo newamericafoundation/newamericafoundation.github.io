@@ -40,9 +40,9 @@ $(document).ready(function() {
 //					}
 //				}
 //			},
-			series: {
-				stacking: 'normal'
-			}
+//			series: {
+//				stacking: 'normal'
+//			}
 		},
 		legend: {
 			layout: 'vertical',
@@ -58,12 +58,9 @@ $(document).ready(function() {
 		credits: {
 			enabled: false
 		},
-			series: [{
+		series: [{
 			name: 'Mortgage Interest Deduction',
-			data: [83, 274, 450, 537, 674, 985, 1202, 2168, 5231]
-		}, {
-			name: 'Real Estate Tax Deduction',
-			data: [0, 36, 96, 152, 225, 357, 470, 832, 1222]
+			data: [63000000, 258000000, 654000000, 1324000000, 6855000000, 8748000000, 35609000000, 29142000000]
 		}]
 	});
 });
@@ -86,21 +83,19 @@ $(document).ready(function() {
 			opposite: true
 		},
 		yAxis: {
-			min: 0,
-			max: 90,
 			title: {
 				text: null
 			},
 		},
 		plotOptions: {
 			bar: {
-				dataLabels: {
-					enabled: true,
-					formatter: function() {
-						return ''+
-							this.y + '%';
-					}
-				}
+//				dataLabels: {
+//					enabled: true,
+//					formatter: function() {
+//						return ''+
+//							'$' + this.y;
+//					}
+//				}
 			},
 //			series: {
 //				stacking: 'normal'
@@ -122,7 +117,7 @@ $(document).ready(function() {
 		},
 			series: [{
 			name: 'Mortgage Interest Deduction',
-			data: [2.3, 6.2, 11.8, 21.8, 31.7, 45.7, 62.9, 75.1, 70.1]
+			data: [321.43, 536.38, 663.96, 736.78, 1192.17, 1466.31, 2555.91, 6369.84]
 		}]
 	});
 });
