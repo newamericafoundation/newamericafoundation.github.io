@@ -172,9 +172,9 @@ h1.sectionTagline{
 	margin-top: 10px;
 }
 
-.row-homeownership .net-worth-race .span4 .btn-primary,
 .row-homeownership .net-worth-race .span4 .btn-action {
-	font-size: 20px;	
+	font-size: 20px;
+	line-height: 22px;
 }
 
 /* ======================================== EDUCATION ======================================== */
