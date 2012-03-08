@@ -3,7 +3,7 @@
 
 body {
 	background-color: #333 !important;
-/*	background: url(../img/bg-noise2.jpg) repeat;	*/
+	background: url(../img/bg-noise2.jpg) repeat;	
 }
 
 header {
@@ -11,7 +11,7 @@ header {
 }
 
 section.main-content {
-	background-color: #FFF;	
+/*	background-color: #FFF;	*/
 }
 
 .alert {
