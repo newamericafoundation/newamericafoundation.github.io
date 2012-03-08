@@ -114,6 +114,19 @@ h1.sectionTagline{
 	font-weight:300;
 }
 
+.modal h1,
+.modal h2,
+.modal h3,
+.modal h4,
+.modal h5,
+.modal h6 {
+	text-transform: none;
+}
+
+.modal h3 {
+	font-size: 24px;	
+}
+
 /* ======================================== STAPLE ======================================== */
 
 .staple {
@@ -236,7 +249,7 @@ h1.sectionTagline{
 
 
 #edPies {
-height: 128px;
+height: 130px;
 overflow: hidden;	
 }
 
