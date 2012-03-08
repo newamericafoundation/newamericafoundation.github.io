@@ -342,9 +342,11 @@ var chart;
 		   data: [{
 			  name: 'Other assets spending',
 			  y: 198.941,
+			  color: '#d0d0c3',
 		   }, {
 			  name: 'Homeownership spending',
 			  y: 355.937,
+			  color: '#696930',
 		   }],
 		   center: [20, 28],
 		   spacingLeft: 100,
@@ -358,12 +360,14 @@ var chart;
 		   type: 'column',
 		   name: 'Tax spending',
 		   borderColor: '#000000',
-		   data: [197.750]
+		   data: [197.750],
+		   color: '#a3a3a3'
 		}, {
 		   type: 'column',
 		   name: 'Direct spending',
 		   borderColor: '#000000',
-		   data: [1.191]
+		   data: [1.191],
+		   color: '#2e1717'
 		},]
 	 });
   });

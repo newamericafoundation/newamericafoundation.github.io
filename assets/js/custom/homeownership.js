@@ -19,27 +19,37 @@ $(document).ready(function() {
 		},
 		yAxis: {
 			min: 0,
+			max: 45000,
+			tickInterval: 15000,
 			title: {
 				text: null,
 			},
-			reversed: true
+			reversed: true,
+			labels: {
+			  formatter: function() {
+				return '$' + Highcharts.numberFormat(this.value, 0) + 'b';
+			  }
+			},
 		},
 		tooltip: {
 			formatter: function() {
 				return ''+
-					this.series.name +': $'+ this.y;
+					this.series.name +': $'+ Highcharts.numberFormat(this.y, 0) + 'b';
 			}
 		},
 		plotOptions: {
-//			bar: {
-//				dataLabels: {
-//					enabled: true,
-//					formatter: function() {
-//						return ''+
-//							'$' + this.y;
-//					}
-//				}
-//			},
+			bar: {
+				dataLabels: {
+					enabled: true,
+					align: 'right',
+					x: -3,
+					y: 5,
+					formatter: function() {
+						return ''+
+							'$' + Highcharts.numberFormat(this.y, 0) + 'm';
+					}
+				}
+			},
 //			series: {
 //				stacking: 'normal'
 //			}
@@ -60,7 +70,7 @@ $(document).ready(function() {
 		},
 		series: [{
 			name: 'Mortgage Interest Deduction',
-			data: [63000000, 258000000, 654000000, 1324000000, 6855000000, 8748000000, 35609000000, 29142000000]
+			data: [063, 258, 654, 1324, 6855, 8748, 35609, 29142]
 		}]
 	});
 });
@@ -83,19 +93,28 @@ $(document).ready(function() {
 			opposite: true
 		},
 		yAxis: {
+			max: 8000,
 			title: {
 				text: null
+			},
+			labels: {
+			  formatter: function() {
+				return '$' + Highcharts.numberFormat(this.value, 0);
+			  }
 			},
 		},
 		plotOptions: {
 			bar: {
-//				dataLabels: {
-//					enabled: true,
-//					formatter: function() {
-//						return ''+
-//							'$' + this.y;
-//					}
-//				}
+				dataLabels: {
+					enabled: true,
+					align: 'left',
+					x: 3,
+					y: 5,
+					formatter: function() {
+						return ''+
+							'$' + Highcharts.numberFormat(this.y, 0);
+					}
+				}
 			},
 //			series: {
 //				stacking: 'normal'
