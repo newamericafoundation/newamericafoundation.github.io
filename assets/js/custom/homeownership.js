@@ -11,7 +11,7 @@ $(document).ready(function() {
 			text: null
 		},
 		xAxis: {
-			categories: ['Below 10', '10-20', '20-30', '30-40', '40-50', '50-75', '75-100', '100-200', '200 and over'],
+			categories: ['Below $10K', '$10-20K', '$20-30K', '$30-40K', '$40-50K', '$50-75K', '$75-100K', '$100-200K', '$200 and over'],
 			title: {
 				text: null
 			},
@@ -86,7 +86,7 @@ $(document).ready(function() {
 			text: null
 		},
 		xAxis: {
-			categories: ['Below 10', '10-20', '20-30', '30-40', '40-50', '50-75', '75-100', '100-200', '200 and over'],
+			categories: ['Below $10K', '$10-20K', '$20-30K', '$30-40K', '$40-50K', '$50-75K', '$75-100K', '$100-200K', '$200 and over'],
 			title: {
 				text: null
 			},

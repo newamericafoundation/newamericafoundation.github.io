@@ -111,9 +111,11 @@ var chart;
 		   name: 'Budget slice',
 		   data: [{
 			  name: 'Other assets spending',
+			  color: '#d0d0c3',
 			  y: 389.448,
 		   }, {
 			  name: 'Retirement spending',
+			  color: '#696930',
 			  y: 165.430,
 		   }],
 		   center: [20, 28],
@@ -127,11 +129,13 @@ var chart;
 		},{
 		   type: 'column',
 		   name: 'Tax spending',
+		   color: '#a3a3a3',
 		   borderColor: '#000000',
 		   data: [165.430]
 		}, {
 		   type: 'column',
 		   name: 'Direct spending',
+		   color: '#2e1717',
 		   borderColor: '#000000',
 		   data: [0]
 		},]
@@ -226,9 +230,11 @@ var chart;
 		   name: 'Budget slice',
 		   data: [{
 			  name: 'Other assets spending',
+			  color: '#d0d0c3',
 			  y: 439.456,
 		   }, {
 			  name: 'Savings spending',
+			  color: '#696930',
 			  y: 115.422,
 		   }],
 		   center: [20, 28],
@@ -242,11 +248,13 @@ var chart;
 		},{
 		   type: 'column',
 		   name: 'Tax spending',
+		   color: '#a3a3a3',
 		   borderColor: '#000000',
 		   data: [115.370]
 		}, {
 		   type: 'column',
 		   name: 'Direct spending',
+		   color: '#2e1717',
 		   borderColor: '#000000',
 		   data: [0.052]
 		},]
@@ -341,12 +349,12 @@ var chart;
 		   name: 'Budget slice',
 		   data: [{
 			  name: 'Other assets spending',
-			  y: 198.941,
 			  color: '#d0d0c3',
+			  y: 198.941,
 		   }, {
 			  name: 'Homeownership spending',
-			  y: 355.937,
 			  color: '#696930',
+			  y: 355.937,
 		   }],
 		   center: [20, 28],
 		   spacingLeft: 100,
@@ -359,15 +367,15 @@ var chart;
 		},{
 		   type: 'column',
 		   name: 'Tax spending',
+		   color: '#a3a3a3',
 		   borderColor: '#000000',
 		   data: [197.750],
-		   color: '#a3a3a3'
 		}, {
 		   type: 'column',
 		   name: 'Direct spending',
+		   color: '#2e1717',
 		   borderColor: '#000000',
 		   data: [1.191],
-		   color: '#2e1717'
 		},]
 	 });
   });
@@ -460,9 +468,11 @@ var chart;
 		   name: 'Budget slice',
 		   data: [{
 			  name: 'Other assets spending',
+			  color: '#d0d0c3',
 			  y: 480.395,
 		   }, {
 			  name: 'Post-secondary education spending',
+			  color: '#696930',
 			  y: 74.483,
 		   }],
 		   center: [20, 28],
@@ -476,11 +486,13 @@ var chart;
 		},{
 		   type: 'column',
 		   name: 'Tax spending',
+		   color: '#a3a3a3',
 		   borderColor: '#000000',
 		   data: [28.930]
 		}, {
 		   type: 'column',
 		   name: 'Direct spending',
+		   color: '#2e1717',
 		   borderColor: '#000000',
 		   data: [45.553]
 		},]
@@ -575,9 +587,11 @@ var chart;
 		   name: 'Budget slice',
 		   data: [{
 			  name: 'Other assets spending',
+			  color: '#d0d0c3',
 			  y: 554.276,
 		   }, {
 			  name: 'Entrepreneurship spending',
+			  color: '#696930',
 			  y: .602,
 		   }],
 		   center: [20, 28],
@@ -591,11 +605,13 @@ var chart;
 		},{
 		   type: 'column',
 		   name: 'Tax spending',
+		   color: '#a3a3a3',
 		   borderColor: '#000000',
 		   data: [0]
 		}, {
 		   type: 'column',
 		   name: 'Direct spending',
+		   color: '#2e1717',
 		   borderColor: '#000000',
 		   data: [.602]
 		},]
