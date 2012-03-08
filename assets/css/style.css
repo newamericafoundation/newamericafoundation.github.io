@@ -70,29 +70,6 @@ section.main-content {
 .header-body {
 }
 
-.staple {
-	float: right;
-/*	width: 330px;*/
-/*	height: 90px;*/
-	position: relative;
-}
-
-.staple a.more-data {
-	position: absolute;
-	right: 8px;
-	top: 25px;
-	z-index: 1000;
-}
-
-#retirementGraph,
-#savingsGraph,
-#homeownershipGraph,
-#postEdGraph,
-#entrepreneurshipGraph {
-	width: auto;
-	height: 80px;	
-}
-
 .section-body {
 /*	margin: 60px 0;	*/
 		margin: 20px 0;	
@@ -131,6 +108,37 @@ h1.sectionTagline{
 	font-size:34px;
 	text-align:center;
 	font-weight:300;
+}
+
+/* ======================================== STAPLE ======================================== */
+
+.staple {
+	float: right;
+/*	width: 330px;*/
+/*	height: 90px;*/
+	position: relative;
+}
+
+.staple a.more-data {
+	position: absolute;
+	right: 50px;
+	top: 36px;
+	z-index: 1000;
+}
+
+#retirementGraph,
+#savingsGraph,
+#homeownershipGraph,
+#postEdGraph,
+#entrepreneurshipGraph {
+	width: auto;
+	height: 80px;	
+}
+
+.staple h4, 
+.staple h5, 
+.staple h6 {
+	color: #000;
 }
 
 /* ======================================== RETIREMENT ======================================== */
