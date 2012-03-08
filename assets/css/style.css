@@ -200,16 +200,38 @@ h1.sectionTagline{
 
 /* ======================================== EDUCATION ======================================== */
 
-.ed-pills a {
+.ed-tabs {
+	margin-bottom: -2px !important;
+	position:relative;
+	border-bottom: 0;	
+}
+
+.ed-tabs a {
 	color: #D43B73;	
 }
 
-.ed-pills li.active a {
-    background-color: #D43B73;
+.ed-tabs li.active a {
+    background-color: #D0D0C3;
 }
 
-.ed-pills li.active a:hover {
-    background-color: #D4648D;
+.ed-tabs li.active a:hover {
+    background-color: #D0D0C3;
+	color: #FFF;
+}
+
+.alert-pies {
+	border: none !important;	
+}
+
+.alert-pies h4,
+.alert-pies h5,
+.alert-pies h6 {
+	color:#000;
+}
+
+.alert-pies p {
+	font-size: 24px;
+	line-height: 26px;	
 }
 
 
@@ -233,13 +255,15 @@ overflow: hidden;
 
 .edu-number{
 	font-weight:bold;
-	font-size: 46px;
-	line-height: 56px;
-	color:#A90641;
+	font-size: 56px;
+	line-height: 85px;
+	color:#6E022A;
+	top: 15px;
+	position:relative;
 }
 
 .edu-number-big{
-	font-size: 56px;
+	font-size: 85px;
 }
 
 

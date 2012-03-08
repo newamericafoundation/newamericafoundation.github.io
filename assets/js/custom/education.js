@@ -1,111 +1,9 @@
-// JavaScript Document
-// 
-// var chart;
-// $(document).ready(function() {
-// 	chart = new Highcharts.Chart({
-// 		chart: {
-// 			renderTo: 'education-graph',
-// 			type: 'line',
-// 		},
-// 		title: {
-// 			text: 'Students enrolled in college after graduation',
-// 		},
-// 		subtitle: {
-// 			text: 'Percentage',
-// 		},
-// 		xAxis: {
-// 			categories: ['2005', '2006', '2007', '2008', '2009']
-// 		},
-// 		yAxis: {
-// 			title: {
-// 				text: null
-// 			},
-// 			plotLines: [{
-// 				value: 0,
-// 				width: 1,
-// 				color: '#808080'
-// 			}]
-// 		},
-// 		tooltip: {
-// 			formatter: function() {
-// 					return '<b>'+ this.series.name +'</b><br/>'+
-// 					this.x +': '+ this.y +'%';
-// 			}
-// 		},
-// 		series: [{
-// 			name: 'High-income',
-// 			data: [81.2, 80.7, 78.2, 81.9, 84.2]
-// 		},{
-// 			name: 'Middle-income',
-// 			data: [65.1, 61.4, 63.3, 65.3, 66.8]
-// 		},{
-// 			name: 'Low-income',
-// 			data: [51, 54.5, 55.2, 56, 54]
-// 		}]
-// 	});
-// });
-
-//var chart;
-//$(document).ready(function() {
-//	chart = new Highcharts.Chart({
-//		chart: {
-//			renderTo: 'education-graph2',
-//			type: 'column'
-//		},
-//		title: {
-//			text: 'Net College Costs as a Percent of Median Family Income'
-//		},
-//		xAxis: {
-//			categories: ['Lowest income quintile', 'Second lowest income quintile', 'Middle income quintile', 'Second highest income quintile', 'Highest income quintile']
-//		},
-//		yAxis: {
-//			min: 0,
-//			title: {
-//				text: 'Percentage'
-//			}
-//		},
-////		legend: {
-////			layout: 'vertical',
-////			backgroundColor: '#FFFFFF',
-////			align: 'left',
-////			verticalAlign: 'top',
-////			x: 100,
-////			y: 70,
-////			floating: true,
-////			shadow: true
-////		},
-//		tooltip: {
-//			formatter: function() {
-//				return ''+
-//					this.x +': '+ this.y +' mm';
-//			}
-//		},
-//		plotOptions: {
-//			column: {
-//				pointPadding: 0.2,
-//				borderWidth: 0
-//			}
-//		},
-//			series: [{
-//			name: '1990-2000',
-//			data: [39, 23, 18, 12, 7]
-//
-//		},{
-//			name: '2007-2008',
-//			data: [55, 33, 25, 16, 9]
-//
-//		}]
-//	});
-//});
-
 var chart;
   $(document).ready(function() {
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie1',
-		   plotBackgroundColor: '#D0D0C3',
 		   plotBorderWidth: null,
-		   backgroundColor: '#D0D0C3',
 		   type: 'pie'
 		},
 		title: {
@@ -143,7 +41,7 @@ var chart;
 			items: [{
 				html: '39%',
 				style: {
-					left: '29px',
+					left: '37px',
 					top: '45px',
 					color: 'black',
 					fontWeight: 'bold',
@@ -183,6 +81,7 @@ var chart;
 			  y: 39,
 		   }, {
 			  name: 'Other income',
+			  color: '#d0d0c3',
 			  y: 61,
 		   }],
 		   size: 105,
@@ -201,9 +100,7 @@ var chart;
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie2',
-		   plotBackgroundColor: '#D0D0C3',
 		   plotBorderWidth: null,
-		   backgroundColor: '#D0D0C3',
 		   type: 'pie'
 		},
 		title: {
@@ -241,7 +138,7 @@ var chart;
 			items: [{
 				html: '23%',
 				style: {
-					left: '29px',
+					left: '37px',
 					top: '45px',
 					color: 'black',
 					fontWeight: 'bold',
@@ -281,6 +178,7 @@ var chart;
 			  y: 23,
 		   }, {
 			  name: 'Other income',
+			  color: '#d0d0c3',
 			  y: 77,
 		   }],
 		   size: 105,
@@ -299,9 +197,7 @@ var chart;
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie3',
-		   plotBackgroundColor: '#D0D0C3',
 		   plotBorderWidth: null,
-		   backgroundColor: '#D0D0C3',
 		   type: 'pie'
 		},
 		title: {
@@ -339,7 +235,7 @@ var chart;
 			items: [{
 				html: '18%',
 				style: {
-					left: '29px',
+					left: '37px',
 					top: '45px',
 					color: 'black',
 					fontWeight: 'bold',
@@ -379,6 +275,7 @@ var chart;
 			  y: 18,
 		   }, {
 			  name: 'Other income',
+			  color: '#d0d0c3',
 			  y: 82,
 		   }],
 		   size: 105,
@@ -397,9 +294,7 @@ var chart;
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie4',
-		   plotBackgroundColor: '#D0D0C3',
 		   plotBorderWidth: null,
-		   backgroundColor: '#D0D0C3',
 		   type: 'pie'
 		},
 		title: {
@@ -437,7 +332,7 @@ var chart;
 			items: [{
 				html: '12%',
 				style: {
-					left: '29px',
+					left: '37px',
 					top: '45px',
 					color: 'black',
 					fontWeight: 'bold',
@@ -477,6 +372,7 @@ var chart;
 			  y: 12,
 		   }, {
 			  name: 'Other income',
+			  color: '#d0d0c3',
 			  y: 88,
 		   }],
 		   size: 105,
@@ -495,9 +391,7 @@ var chart;
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie5',
-		   plotBackgroundColor: '#D0D0C3',
 		   plotBorderWidth: null,
-		   backgroundColor: '#D0D0C3',
 		   type: 'pie'
 		},
 		title: {
@@ -535,7 +429,7 @@ var chart;
 			items: [{
 				html: '7%',
 				style: {
-					left: '38px',
+					left: '43px',
 					top: '45px',
 					color: 'black',
 					fontWeight: 'bold',
@@ -575,6 +469,7 @@ var chart;
 			  y: 7,
 		   }, {
 			  name: 'Other income',
+			  color: '#d0d0c3',
 			  y: 93,
 		   }],
 		   size: 105,
@@ -593,9 +488,7 @@ var chart;
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie6',
-		   plotBackgroundColor: '#D0D0C3',
 		   plotBorderWidth: null,
-		   backgroundColor: '#D0D0C3',
 		   type: 'pie'
 		},
 		title: {
@@ -633,7 +526,7 @@ var chart;
 			items: [{
 				html: '55%',
 				style: {
-					left: '29px',
+					left: '37px',
 					top: '45px',
 					color: 'black',
 					fontWeight: 'bold',
@@ -673,6 +566,7 @@ var chart;
 			  y: 55,
 		   }, {
 			  name: 'Other income',
+			  color: '#d0d0c3',
 			  y: 45,
 		   }],
 		   size: 105,
@@ -691,9 +585,7 @@ var chart;
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie7',
-		   plotBackgroundColor: '#D0D0C3',
 		   plotBorderWidth: null,
-		   backgroundColor: '#D0D0C3',
 		   type: 'pie'
 		},
 		title: {
@@ -731,7 +623,7 @@ var chart;
 			items: [{
 				html: '33%',
 				style: {
-					left: '29px',
+					left: '37px',
 					top: '45px',
 					color: 'black',
 					fontWeight: 'bold',
@@ -771,6 +663,7 @@ var chart;
 			  y: 33,
 		   }, {
 			  name: 'Other income',
+			  color: '#d0d0c3',
 			  y: 67,
 		   }],
 		   size: 105,
@@ -789,9 +682,7 @@ var chart;
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie8',
-		   plotBackgroundColor: '#D0D0C3',
 		   plotBorderWidth: null,
-		   backgroundColor: '#D0D0C3',
 		   type: 'pie'
 		},
 		title: {
@@ -829,7 +720,7 @@ var chart;
 			items: [{
 				html: '25%',
 				style: {
-					left: '29px',
+					left: '37px',
 					top: '45px',
 					color: 'black',
 					fontWeight: 'bold',
@@ -869,6 +760,7 @@ var chart;
 			  y: 25,
 		   }, {
 			  name: 'Other income',
+			  color: '#d0d0c3',
 			  y: 75,
 		   }],
 		   size: 105,
@@ -887,9 +779,7 @@ var chart;
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie9',
-		   plotBackgroundColor: '#D0D0C3',
 		   plotBorderWidth: null,
-		   backgroundColor: '#D0D0C3',
 		   type: 'pie'
 		},
 		title: {
@@ -927,7 +817,7 @@ var chart;
 			items: [{
 				html: '16%',
 				style: {
-					left: '29px',
+					left: '37px',
 					top: '45px',
 					color: 'black',
 					fontWeight: 'bold',
@@ -967,6 +857,7 @@ var chart;
 			  y: 16,
 		   }, {
 			  name: 'Other income',
+			  color: '#d0d0c3',
 			  y: 84,
 		   }],
 		   size: 105,
@@ -985,9 +876,7 @@ var chart;
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie10',
-		   plotBackgroundColor: '#D0D0C3',
 		   plotBorderWidth: null,
-		   backgroundColor: '#D0D0C3',
 		   type: 'pie'
 		},
 		title: {
@@ -1025,7 +914,7 @@ var chart;
 			items: [{
 				html: '9%',
 				style: {
-					left: '38px',
+					left: '43px',
 					top: '45px',
 					color: 'black',
 					fontWeight: 'bold',
@@ -1065,6 +954,7 @@ var chart;
 			  y: 9,
 		   }, {
 			  name: 'Other income',
+			  color: '#d0d0c3',
 			  y: 91,
 		   }],
 		   size: 105,
