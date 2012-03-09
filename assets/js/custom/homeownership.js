@@ -1,4 +1,16 @@
 // JavaScript Document
+$(document).ready(function(){
+	$('#whiteExpand').click(function(){
+		$('.whiteGraphs').fadeIn();
+	});
+	$('#hispanicExpand').click(function(){
+		$('.hispanicGraphs').fadeIn();
+	});
+	$('#blackExpand').click(function(){
+		$('.blackGraphs').fadeIn();
+	});
+});
+
 
 var chart;
 $(document).ready(function() {
