@@ -7,7 +7,7 @@ body {
 }
 
 header {
-	padding-top: 18px;
+	padding-top: 70px;
 }
 
 section.main-content {
@@ -41,24 +41,22 @@ section.main-content {
 	padding: 7px 19px !important;
 }
 
-.section-header h1,
 h1.header {
 	font-size: 56px;
 	line-height: 56px;
 	padding-bottom: 4px;
 	margin-bottom: 4px;
 	margin-top: 0;
-/*	font-weight:200;*/
 	font-weight:300;
 	letter-spacing:-1px;
 	color:#464646;
 }
 
-.section-header h3,
 h3.header {
 	font-size: 18px;
 	text-transform: uppercase;
 	border-bottom:2px solid #333;
+	margin-top: 70px;
 }
 
 /*.section-header .header-body h4 {
@@ -320,6 +318,7 @@ footer {
 	color: #FFF;
 	padding: 33px;	
 	background-color: #464646;
+	margin-top: 70px;
 }
 
 /* ======================================== MAP TOOLTIPS ======================================== */
