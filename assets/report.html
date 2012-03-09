@@ -41,19 +41,25 @@
 	    $("table#programTable").tablesorter({ sortList: [[1,0]] });
 	  });
 	</script>
+	<script>
+	  $(function() {
+	    $(".nav").scrollSpy();
+	  });
+	</script>
   </head>
 
-  <body>
-
-    <div class="navbar">
+  <body data-spy="scroll">
+    <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           	<a class="brand" href="index.html">Assets</a>
-	          <!-- <ul class="nav">
-				<li><a href="analysis.html">Research</a></li>
-				<li><a href="data.html">Data</a></li>
-	            <li><a href="about.html">About</a></li>
-	          </ul> -->
+	           <ul class="nav">
+				<li><a href="#homeownership">Homeownership</a></li>
+				<li><a href="#entrepreneurship">Entrepreneurship</a></li>
+	            <li><a href="#retirement">Retirement</a></li>
+				<li><a href="#savings">Savings</a></li>
+	            <li><a href="#education">Education</a></li>
+	          </ul> 
         </div>
       </div>
     </div>
@@ -73,7 +79,7 @@
   <div class="container">
 
       <!-- Example row of columns -->
-      <div class="row row-homeownership">
+      <div id="homeownership" class="row row-homeownership">
         <div class="span12">
           <div class="section-header">
               <h3 class="span12">Homeownership</h3>
@@ -240,10 +246,14 @@
           </div><!-- end .section-body -->
         </div><!-- end .span12 -->
       </div><!-- end .row -->
+<<<<<<< HEAD
 
 
 
       <div class="row row-entrepreneurship">
+=======
+      <div id="entrepreneurship" class="row row-entrepreneurship">
+>>>>>>> toolbar
         <div class="span12">
           <div class="section-header">
               <h3 class="span12">Entrepreneurship</h3>
@@ -354,7 +364,7 @@
               </div>
             </div>
           </div><!-- end .section-body -->
-      <div class="row row-retirement">
+      <div id="retirement" class="row row-retirement">
         <div class="section-body">
           <div class="section-header">
             <h3 class="span12">Retirement</h3>
@@ -528,7 +538,7 @@
             </div>
           </div><!-- end .section-body -->
         </div><!-- end .row -->
-      <div class="row row-savings">
+      <div id="savings" class="row row-savings">
         <div class="span12">
           <div class="section-header">
               <h3 class="span12">Savings and Investment</h3>
@@ -665,7 +675,7 @@
 
 
 
-      <div class="row row-education">
+      <div id="education" class="row row-education">
         <div class="span12">
           <div class="section-header">
               <h3 class="span12">Post-secondary Education</h3>
