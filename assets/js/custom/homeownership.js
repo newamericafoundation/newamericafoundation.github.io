@@ -2,12 +2,15 @@
 $(document).ready(function(){
 	$('#whiteExpand').click(function(){
 		$('.whiteGraphs').fadeIn();
+		$('.whitePlace').remove();
 	});
 	$('#hispanicExpand').click(function(){
-		$('.hispanicGraphs').fadeIn();
+		$('.hisGraphs').fadeIn();
+		$('.hisPlace').remove();
 	});
 	$('#blackExpand').click(function(){
 		$('.blackGraphs').fadeIn();
+		$('.blackPlace').remove();
 	});
 });
 
