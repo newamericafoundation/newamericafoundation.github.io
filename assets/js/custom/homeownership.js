@@ -1,5 +1,8 @@
 // JavaScript Document
-$(document).ready(function(){
+function homeowernship(){
+	
+console.log('home')
+
 	$('#whiteExpand').click(function(){
 		$('.whiteGraphs').fadeIn();
 		$('.whitePlace').remove();
@@ -12,11 +15,10 @@ $(document).ready(function(){
 		$('.blackGraphs').fadeIn();
 		$('.blackPlace').remove();
 	});
-});
 
 
 var chart;
-$(document).ready(function() {
+
 	chart = new Highcharts.Chart({
 		chart: {
 			renderTo: 'homeownership-graph',
@@ -88,10 +90,9 @@ $(document).ready(function() {
 			data: [063, 258, 654, 1324, 6855, 8748, 35609, 29142]
 		}]
 	});
-});
 
 var chart;
-$(document).ready(function() {
+
 	chart = new Highcharts.Chart({
 		chart: {
 			renderTo: 'homeownership-graph2',
@@ -154,11 +155,10 @@ $(document).ready(function() {
 			data: [321.43, 536.38, 663.96, 736.78, 1192.17, 1466.31, 2555.91, 6369.84]
 		}]
 	});
-});
 
 
 var chart;
-$(document).ready(function() {
+
 	chart = new Highcharts.Chart({
 		chart: {
 			renderTo: 'homeownership-pie1',
@@ -199,10 +199,9 @@ $(document).ready(function() {
 			]
 		}]
 	});
-});
 
 var chart;
-$(document).ready(function() {
+
 	chart = new Highcharts.Chart({
 		chart: {
 			renderTo: 'homeownership-pie2',
@@ -243,10 +242,10 @@ $(document).ready(function() {
 			]
 		}]
 	});
-});
+
 
 var chart;
-$(document).ready(function() {
+
 	chart = new Highcharts.Chart({
 		chart: {
 			renderTo: 'homeownership-pie3',
@@ -287,4 +286,4 @@ $(document).ready(function() {
 			]
 		}]
 	});
-});
+}//end homeownership

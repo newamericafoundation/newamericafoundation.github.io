@@ -103,6 +103,7 @@
       if (!data) $this.data('scrollspy', (data = new ScrollSpy(this, options)))
       if (typeof option == 'string') data[option]()
     })
+
   }
 
   $.fn.scrollspy.Constructor = ScrollSpy

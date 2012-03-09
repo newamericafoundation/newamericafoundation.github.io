@@ -43,11 +43,16 @@
 	  $(function() {
 	    $("table#programTable").tablesorter({ sortList: [[1,0]] });
 		buildMap('http://a.tiles.mapbox.com/v3/newamerica.assets_scorecard.jsonp');
+		homeowernship();
+		$('ul.nav').click(function () { 
+			homeowernship();
+			});
 	  });
 	</script>
 	<script>
 	  $(function() {
 	    $(".nav").scrollSpy();
+	
 	  });
 	</script>
   </head>
