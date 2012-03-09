@@ -224,11 +224,11 @@ h1.sectionTagline{
 	color: #D43B73;	
 }
 
-.ed-tabs li.active a {
+.ed-tabs li.ed-active a {
     background-color: #D0D0C3;
 }
 
-.ed-tabs li.active a:hover {
+.ed-tabs li.ed-active a:hover {
     background-color: #D0D0C3;
 	color: #FFF;
 }

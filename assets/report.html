@@ -25,13 +25,13 @@
 	<script src="js/bootstrap-transition.js"></script>
 	<script src="js/bootstrap-typeahead.js"></script>
 	<script src="js/highcharts/highcharts.js"></script>
+	<script src='js/wax/modestmaps.min.js' type='text/javascript'></script>
+	<script src='js/wax/wax.mm.js' type='text/javascript'></script>
     <script src="js/custom/staples.js"></script>
     <script src="js/custom/retirement.js"></script>
     <!--<script src="js/custom/entrepreneurship.js"></script>-->
     <script src="js/custom/homeownership.js"></script>
     <script src="js/custom/education.js"></script>
-	<script src='js/wax/modestmaps.min.js' type='text/javascript'></script>
-	<script src='js/wax/wax.mm.js' type='text/javascript'></script>
 	<script src="js/custom/savings.js"></script>
 	<script >
 	  $(function() {
@@ -48,13 +48,10 @@
 			  $('#pie2008').fadeIn('slow');
 			  $('#pie2000').fadeOut('slow');
 			});
-			$("ul.ed-tabs li").click(function(){
-			  // If this isn't already active
-			  if (!$(this).hasClass("active")) {
-				// Remove the class from anything that is active
-				$("ul.ed-tabs li.active").removeClass("active");
-				// And make this active
-				$(this).addClass("active");
+			$("li").click(function(){
+			  if (!$(this).hasClass("ed-active")) {
+				$("li.ed-active").removeClass("ed-active");
+				$(this).addClass("ed-active");
 			  }
 			});
 		$('ul.nav').click(function () { 
@@ -759,7 +756,7 @@
                <div class="span10 offset1">
 	                  <ul class="nav nav-tabs ed-tabs">
 	                    <li id="li00"><a href="javascript:;">2000</a></li>
-	                    <li id="li08" class="active"><a href="javascript:;">2008</a></li>
+	                    <li id="li08" class="ed-active"><a href="javascript:;">2008</a></li>
 	                  </ul>
 	                <div class="alert alert-error alert-pies" style="position:relative;">
 

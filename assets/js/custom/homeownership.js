@@ -1,7 +1,6 @@
 // JavaScript Document
 function homeowernship(){
 	//make the 2008 tab active
-	$('#li08').addClass('active');
 	
 	$('#whiteExpand').click(function(){
 		$('.whiteGraphs').fadeIn();
