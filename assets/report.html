@@ -732,8 +732,8 @@
 				<div class="span10 offset1">
 	                <h2 align="center" style="margin-bottom:30px;">Tuition is rising. Absorbing these rising costs is taxing the middle class.</h2>
 	                  <ul class="nav nav-tabs ed-tabs">
-	                    <li id="li00" class="active"><a href="javascript:;">2000</a></li>
-	                    <li id="li08"><a href="javascript:;">2008</a></li>
+	                    <li id="li00"><a href="javascript:;">2000</a></li>
+	                    <li id="li08" class="active"><a href="javascript:;">2008</a></li>
 	                  </ul>
 	                <div class="alert alert-error alert-pies" style="position:relative;">
 	                  <script>
@@ -746,11 +746,11 @@
 							  $('#pie2008').fadeIn('slow');
 							  $('#pie2000').fadeOut('slow');
 							});
-							$("li").click(function(){
+							$("ul.ed-tabs li").click(function(){
 							  // If this isn't already active
 							  if (!$(this).hasClass("active")) {
 								// Remove the class from anything that is active
-								$("li.active").removeClass("active");
+								$("ul.ed-tabs li.active").removeClass("active");
 								// And make this active
 								$(this).addClass("active");
 							  }
@@ -758,28 +758,6 @@
 						});
 					  </script>
 	                  <div id="edPies">
-	                    <div id="pie2000">
-                          <div style="width:20%;float:left;">
-                            <h4>Lowest quintile</h4>
-                            <div id="pie1" style="width:100%;height:120px;"></div>
-                          </div>
-                          <div style="width:20%;float:left;">
-                            <h4>Fourth quintile</h4>
-                            <div id="pie2" style="width:100%;height:120px;"></div>
-                          </div>
-                          <div style="width:20%;float:left;">
-                            <h4>Third quintile</h4>
-                            <div id="pie3" style="width:100%;height:120px;"></div>
-                          </div>
-                          <div style="width:20%;float:left;">
-                            <h4>Second quintile</h4>
-                            <div id="pie4" style="width:100%;height:120px;"></div>
-                          </div>
-                          <div style="width:20%;float:left;">
-                            <h4>Top quintile</h4>
-                            <div id="pie5" style="width:100%;height:120px;"></div>
-                          </div>
-	                    </div>
 	                    <div id="pie2008">
                           <div style="width:20%;float:left;">
                             <h4>Lowest quintile</h4>
@@ -800,6 +778,28 @@
                           <div style="width:20%;float:left;">
                             <h4>Top quintile</h4>
                             <div id="pie10" style="width:100%;height:120px;"></div>
+                          </div>
+	                    </div>
+	                    <div id="pie2000">
+                          <div style="width:20%;float:left;">
+                            <h4>Lowest quintile</h4>
+                            <div id="pie1" style="width:100%;height:120px;"></div>
+                          </div>
+                          <div style="width:20%;float:left;">
+                            <h4>Fourth quintile</h4>
+                            <div id="pie2" style="width:100%;height:120px;"></div>
+                          </div>
+                          <div style="width:20%;float:left;">
+                            <h4>Third quintile</h4>
+                            <div id="pie3" style="width:100%;height:120px;"></div>
+                          </div>
+                          <div style="width:20%;float:left;">
+                            <h4>Second quintile</h4>
+                            <div id="pie4" style="width:100%;height:120px;"></div>
+                          </div>
+                          <div style="width:20%;float:left;">
+                            <h4>Top quintile</h4>
+                            <div id="pie5" style="width:100%;height:120px;"></div>
                           </div>
 	                    </div>
 	                  </div>
