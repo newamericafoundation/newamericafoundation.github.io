@@ -1,5 +1,7 @@
+function education(){
+	
+
 var chart;
-  $(document).ready(function() {
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie1',
@@ -93,10 +95,8 @@ var chart;
 		   innerSize: '70%',
 		}]
 	 });
-  });
 
 var chart;
-  $(document).ready(function() {
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie2',
@@ -190,10 +190,8 @@ var chart;
 		   innerSize: '70%',
 		}]
 	 });
-  });
 
 var chart;
-  $(document).ready(function() {
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie3',
@@ -287,10 +285,8 @@ var chart;
 		   innerSize: '70%',
 		}]
 	 });
-  });
 
 var chart;
-  $(document).ready(function() {
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie4',
@@ -384,10 +380,8 @@ var chart;
 		   innerSize: '70%',
 		}]
 	 });
-  });
 
 var chart;
-  $(document).ready(function() {
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie5',
@@ -481,10 +475,8 @@ var chart;
 		   innerSize: '70%',
 		}]
 	 });
-  });
 
 var chart;
-  $(document).ready(function() {
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie6',
@@ -578,10 +570,8 @@ var chart;
 		   innerSize: '70%',
 		}]
 	 });
-  });
 
 var chart;
-  $(document).ready(function() {
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie7',
@@ -675,10 +665,8 @@ var chart;
 		   innerSize: '70%',
 		}]
 	 });
-  });
 
 var chart;
-  $(document).ready(function() {
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie8',
@@ -772,10 +760,8 @@ var chart;
 		   innerSize: '70%',
 		}]
 	 });
-  });
 
 var chart;
-  $(document).ready(function() {
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie9',
@@ -869,10 +855,8 @@ var chart;
 		   innerSize: '70%',
 		}]
 	 });
-  });
 
 var chart;
-  $(document).ready(function() {
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'pie10',
@@ -966,4 +950,4 @@ var chart;
 		   innerSize: '70%',
 		}]
 	 });
-  });
+}//end education

@@ -44,8 +44,12 @@
 	    $("table#programTable").tablesorter({ sortList: [[1,0]] });
 		buildMap('http://a.tiles.mapbox.com/v3/newamerica.assets_scorecard.jsonp');
 		homeowernship();
+		education();
+		retirement();
 		$('ul.nav').click(function () { 
 			homeowernship();
+			education();
+			retirement();
 			});
 	  });
 	</script>
