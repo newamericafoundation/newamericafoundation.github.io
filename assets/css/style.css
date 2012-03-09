@@ -322,6 +322,8 @@ footer {
 #stateName {
 	font-size: 28px;
 	text-transform: uppercase;
+	line-height:22px;
+	padding:5px 0px;
 }
 
 #lapr{
@@ -342,4 +344,8 @@ footer {
 	font-size: 12px;
     color: #999;
     text-transform: uppercase;
+}
+
+.wax-legend h2{
+	font-size:24px;
 }
