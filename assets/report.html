@@ -16,6 +16,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <link rel="stylesheet/less" href="lib/bootstrap.less" media="all" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/controls.css" />
 	<script src="js/less-1.1.5.min.js"></script>
 	<script src="js/jquery/jquery.tablesorter.min.js"></script>
 	<script src="js/bootstrap-alert.js"></script>
@@ -36,9 +37,13 @@
     <!--<script src="js/custom/entrepreneurship.js"></script>-->
     <script src="js/custom/homeownership.js"></script>
     <script src="js/custom/education.js"></script>
+	<script src='js/wax/modestmaps.min.js' type='text/javascript'></script>
+	<script src='js/wax/wax.mm.js' type='text/javascript'></script>
+	<script src="js/custom/savings.js"></script>
 	<script >
 	  $(function() {
 	    $("table#programTable").tablesorter({ sortList: [[1,0]] });
+		buildMap('http://a.tiles.mapbox.com/v3/newamerica.assets_scorecard.jsonp');
 	  });
 	</script>
 	<script>
@@ -110,7 +115,8 @@
 				<span class="span4" style="text-align:center;"><h2 style="display:none;" class="btn btn-large btn-action disabled blackGraphs">Black -$6,447<br /><strong>(53.2%)</strong></h2></span>
               </div>
 			<div class="row">
-				<span class="span12"><h3 align="center" style="margin:50px 0;">How much was because of a loss in home equity?</h3></span>
+				<span class="span12"><h3 align="center" style="margin:50px 0;">How much was because of a loss in home equity?</h3>
+				</span>
 			</div>
 			<div class="row" style="min-height:150px;">
 				<div class="span4">
@@ -230,8 +236,6 @@
               </div> <!-- end .staple -->
               <div class="span6 offset1">
 			<h3>Assets spending on homeownership dwarfs all other spending, and the 2013 budget request continues to favor an approach that favors higher income brackets.</h3> 	
-			<!-- <h6><strong>100%</strong> of federal spending for retirement are in the form of regressive tax subsidies.</h6> -->
-                <!-- <h6>Over quarter of all asset-building government spending — <strong>all of it in the form of tax expenditures</strong> — is spent to promote retirement savings. However, <strong>the poorest in the U.S. benefit least from this approach.</strong></h> -->
           </div><!-- /.span6 -->
 		</div><!-- /.row -->
   
@@ -246,14 +250,8 @@
           </div><!-- end .section-body -->
         </div><!-- end .span12 -->
       </div><!-- end .row -->
-<<<<<<< HEAD
 
-
-
-      <div class="row row-entrepreneurship">
-=======
       <div id="entrepreneurship" class="row row-entrepreneurship">
->>>>>>> toolbar
         <div class="span12">
           <div class="section-header">
               <h3 class="span12">Entrepreneurship</h3>
@@ -521,8 +519,6 @@
             </div> <!-- end .staple -->
           <div class="span6 offset1">
 			<h2 class="head"><strong>100%</strong> of federal spending for retirement is in the form of regressive tax subsidies.</h2> 	
-			<!-- <h6><strong>100%</strong> of federal spending for retirement are in the form of regressive tax subsidies.</h6> -->
-                <!-- <h6>Over quarter of all asset-building government spending — <strong>all of it in the form of tax expenditures</strong> — is spent to promote retirement savings. However, <strong>the poorest in the U.S. benefit least from this approach.</strong></h> -->
           </div><!-- /.span6 -->
 		</div><!-- /.row -->
   
@@ -538,6 +534,7 @@
             </div>
           </div><!-- end .section-body -->
         </div><!-- end .row -->
+
       <div id="savings" class="row row-savings">
         <div class="span12">
           <div class="section-header">
@@ -576,9 +573,13 @@
 			
             <div class="row" style="margin-top:100px;">
               <div class="span9">
-                <!-- <h3>Percentage of households without sufficient liquid assets to subsist at the poverty level for three months in the absence of income, 2009.</h3> -->
-                <iframe width='700' height='400' frameBorder='0' src='http://a.tiles.mapbox.com/v3/newamerica.assets_scorecard.html#4/40.38/-96.152'></iframe>
+				<div id="mainMap" style="min-height:400px;"></div>
+
+                <!-- <iframe width='700' height='400' frameBorder='0' src='http://a.tiles.mapbox.com/v3/newamerica.assets_scorecard.html#4/40.38/-96.152'></iframe> -->
               </div>
+			<div class="span2 pull-right">
+				<div id="toolTipContainer"></div>
+			</div>
               <div class="row">
 				<div class="staple span5">
 	                <div id="savingsModal" class="modal hide fade">
