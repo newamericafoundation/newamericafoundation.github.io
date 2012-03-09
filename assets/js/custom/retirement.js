@@ -92,6 +92,7 @@ var chart;
 			  y: 68.6,
 		   }, {
 			  name: 'No participation',
+			  color: '#FCFAD0',
 			  y: 31.4,
 		   }],
 		   showInLegend: false,
@@ -199,6 +200,7 @@ var chart;
 			  y: 60.1,
 		   }, {
 			  name: 'No participation',
+			  color: '#FCFAD0',
 			  y: 39.9,
 		   }],
 		   size: 105,
@@ -305,6 +307,7 @@ var chart;
 			  y: 49.7,
 		   }, {
 			  name: 'No participation',
+			  color: '#FCFAD0',
 			  y: 50.3,
 		   }],
 		   size: 105,
@@ -411,6 +414,7 @@ var chart;
 			  y: 27.7,
 		   }, {
 			  name: 'No participation',
+			  color: '#FCFAD0',
 			  y: 72.3,
 		   }],
 		   size: 105,

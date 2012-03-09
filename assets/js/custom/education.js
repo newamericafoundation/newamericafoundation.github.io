@@ -81,7 +81,7 @@ var chart;
 			  y: 39,
 		   }, {
 			  name: 'Other income',
-			  color: '#d0d0c3',
+			  color: '#FCFAD0',
 			  y: 61,
 		   }],
 		   size: 105,
@@ -178,7 +178,7 @@ var chart;
 			  y: 23,
 		   }, {
 			  name: 'Other income',
-			  color: '#d0d0c3',
+			  color: '#FCFAD0',
 			  y: 77,
 		   }],
 		   size: 105,
@@ -275,7 +275,7 @@ var chart;
 			  y: 18,
 		   }, {
 			  name: 'Other income',
-			  color: '#d0d0c3',
+			  color: '#FCFAD0',
 			  y: 82,
 		   }],
 		   size: 105,
@@ -372,7 +372,7 @@ var chart;
 			  y: 12,
 		   }, {
 			  name: 'Other income',
-			  color: '#d0d0c3',
+			  color: '#FCFAD0',
 			  y: 88,
 		   }],
 		   size: 105,
@@ -469,7 +469,7 @@ var chart;
 			  y: 7,
 		   }, {
 			  name: 'Other income',
-			  color: '#d0d0c3',
+			  color: '#FCFAD0',
 			  y: 93,
 		   }],
 		   size: 105,
@@ -566,7 +566,7 @@ var chart;
 			  y: 55,
 		   }, {
 			  name: 'Other income',
-			  color: '#d0d0c3',
+			  color: '#FCFAD0',
 			  y: 45,
 		   }],
 		   size: 105,
@@ -663,7 +663,7 @@ var chart;
 			  y: 33,
 		   }, {
 			  name: 'Other income',
-			  color: '#d0d0c3',
+			  color: '#FCFAD0',
 			  y: 67,
 		   }],
 		   size: 105,
@@ -760,7 +760,7 @@ var chart;
 			  y: 25,
 		   }, {
 			  name: 'Other income',
-			  color: '#d0d0c3',
+			  color: '#FCFAD0',
 			  y: 75,
 		   }],
 		   size: 105,
@@ -857,7 +857,7 @@ var chart;
 			  y: 16,
 		   }, {
 			  name: 'Other income',
-			  color: '#d0d0c3',
+			  color: '#FCFAD0',
 			  y: 84,
 		   }],
 		   size: 105,
@@ -954,7 +954,7 @@ var chart;
 			  y: 9,
 		   }, {
 			  name: 'Other income',
-			  color: '#d0d0c3',
+			  color: '#FCFAD0',
 			  y: 91,
 		   }],
 		   size: 105,
