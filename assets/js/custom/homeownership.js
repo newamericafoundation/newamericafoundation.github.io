@@ -1,8 +1,6 @@
 // JavaScript Document
 function homeowernship(){
 	
-console.log('home')
-
 	$('#whiteExpand').click(function(){
 		$('.whiteGraphs').fadeIn();
 		$('.whitePlace').remove();
