@@ -35,20 +35,38 @@
 	<script src="js/custom/savings.js"></script>
 	<script >
 	  $(function() {
-		$('#li08').addClass('active');
+		$('#li08').addClass('ed-active');
 	    $("table#programTable").tablesorter({ sortList: [[1,0]] });
 	    $(".nav").scrollspy();
 		buildMap('http://a.tiles.mapbox.com/v3/newamerica.assets_scorecard.jsonp');
 		homeowernship();
 		education();
-		retirement();		
+		retirement();
+		$("#li00").click(function() {
+		  $('#pie2000').fadeIn('slow');
+		  $('#pie2008').fadeOut('slow');
+		});
+		$("#li08").click(function() {
+		  $('#pie2008').fadeIn('slow');
+		  $('#pie2000').fadeOut('slow');
+		});
+		$("ul.ed-tabs li").click(function(){
+		  // If this isn't already active
+		  if (!$(this).hasClass("ed-active")) {
+			// Remove the class from anything that is active
+			$("ul.ed-tabs li").removeClass("ed-active");
+			// And make this active
+			$(this).addClass("ed-active");
+		  }
+		});
+				
 			
 			
 		$('div.navbar-fixed-top ul.nav').click(function () { 
 			homeowernship();
 			education();
 			retirement();
-			$('#li08').addClass('active');
+			// $('#li08').addClass('active');
 			
 			});
 	  });
@@ -454,7 +472,7 @@
         </div> <!-- /.span8 -->
         
         <div class="span3 offset1">
-          <h2 class="head">...have a job that offers a retirement plan...</h2>
+          <h2 class="head">...or have a job that offers a retirement plan.</h2>
         <!-- <h2 class="head">The decline in employers sponsoring retirement accounts means that many workers, especially those earning the least, have few accessible options.</h2> -->
         </div> <!-- /.span3 -->
       </div> <!-- /.row -->
@@ -597,7 +615,7 @@
     </div> 
     </div> <!-- /.row -->
     
-    <div class="row" style="margin-top:100px;">
+    <div class="row">
     <div class="span9">
 	<h5>Roll over the map to see poverty numbers for each state.</h5>
     <div id="mainMap" style="min-height:400px;"></div>
@@ -757,6 +775,7 @@
                             <h4>Lowest quintile</h4>
                             <div id="pie6" style="width:100%;height:120px;"></div>
                           </div>
+							<div><p>The cost of attending college <strong>costs between a third to over half the yearly income</strong> of earners in the bottom two quintiles in the United States.</p></div>
 	                    </div>
 	                    <div id="pie2000">
                           <div style="width:20%;float:left;">
@@ -779,9 +798,11 @@
                             <h4>Lowest quintile</h4>
                             <div id="pie1" style="width:100%;height:120px;"></div>
                           </div>
+<div><p>The burden has grown across the board since 2000, but especially for the bottom quintiles.</p></div>
+						
 	                    </div>
 	                  </div>
-	                  <p>The cost of attending college <strong>costs between a third to over half the yearly income</strong> of earners in the bottom two quintiles in the United States.</p>
+	                  
 	                </div>
 	              </div>
 			</div> 
