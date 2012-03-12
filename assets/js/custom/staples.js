@@ -175,7 +175,7 @@ var chart;
   $(document).ready(function() {
 	 chart = new Highcharts.Chart({
 		chart: {
-		   renderTo: 'savingsGraph',
+		   renderTo: 'savingsGraphBar',
 		   plotBorderWidth: null,
 		   spacingRight:100
 		},
@@ -230,7 +230,7 @@ var chart;
 				html: 'Tax spending',
 				style: {
 					left: '25px',
-					top: '55px',
+					top: '75px',
 					color: '#777777',
 					fontSize: '11px',
 					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
@@ -239,7 +239,7 @@ var chart;
 				html: 'Direct spending',
 				style: {
 					left: '104px',
-					top: '55px',
+					top: '75px',
 					color: '#777777',
 					fontSize: '11px',
 					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
@@ -253,6 +253,76 @@ var chart;
 				groupPadding: .3,
 				minPointLength: 1,
 			}
+		},
+		series: [{
+		   type: 'column',
+		   name: 'Tax spending',
+		   color: '#a3a3a3',
+		   borderColor: '#000000',
+		   data: [115.370]
+		}, {
+		   type: 'column',
+		   name: 'Direct spending',
+		   color: '#2e1717',
+		   borderColor: '#000000',
+		   data: [0.052]
+		},]
+	 });
+  });
+
+var chart;
+  $(document).ready(function() {
+	 chart = new Highcharts.Chart({
+		chart: {
+		   renderTo: 'savingsGraphPie',
+		   plotBorderWidth: null,
+		   spacingRight:100
+		},
+		title: {
+		   text: null
+		},
+		credits: {
+			enabled: false	
+		},
+		exporting: {
+			enabled: false	
+		},
+		legend: {
+			enabled: false	
+		},
+		yAxis: {
+			title: {
+				text: null
+			},
+			labels: {
+			  formatter: function() {
+				return '$'+this.value +'B';
+			  }
+			},
+			max:485,
+		},
+		xAxis: {
+			labels: {
+				enabled: false	
+			},
+			endOnTick: true,
+			startOnTick: true,
+		},
+		tooltip: {
+			style: {
+				fontSize: '9px',	
+			},
+			formatter: function() {
+			  var s;
+			  if (this.point.name) { // the pie chart
+				 s = ''+
+					this.point.name +': $'+ this.y + ' billion';
+			  } else {
+				 s = ''+
+					this.series.name  +': '+ this.y;
+			  }
+			  return s;
+		   }
 		},
 		series: [{
 		   type: 'pie',
@@ -274,19 +344,7 @@ var chart;
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		},{
-		   type: 'column',
-		   name: 'Tax spending',
-		   color: '#a3a3a3',
-		   borderColor: '#000000',
-		   data: [115.370]
-		}, {
-		   type: 'column',
-		   name: 'Direct spending',
-		   color: '#2e1717',
-		   borderColor: '#000000',
-		   data: [0.052]
-		},]
+		}]
 	 });
   });
 
@@ -294,7 +352,7 @@ var chart;
   $(document).ready(function() {
 	 chart = new Highcharts.Chart({
 		chart: {
-		   renderTo: 'homeownershipGraph',
+		   renderTo: 'homeownershipGraphBar',
 		   plotBorderWidth: null,
 		   spacingRight:100
 		},
@@ -349,7 +407,7 @@ var chart;
 				html: 'Tax spending',
 				style: {
 					left: '25px',
-					top: '55px',
+					top: '75px',
 					color: '#777777',
 					fontSize: '11px',
 					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
@@ -358,7 +416,7 @@ var chart;
 				html: 'Direct spending',
 				style: {
 					left: '104px',
-					top: '55px',
+					top: '75px',
 					color: '#777777',
 					fontSize: '11px',
 					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
@@ -372,6 +430,75 @@ var chart;
 				groupPadding: .3,
 				minPointLength: 1,
 			}
+		},
+		series: [{
+		   type: 'column',
+		   name: 'Tax spending',
+		   color: '#a3a3a3',
+		   borderColor: '#000000',
+		   data: [197.750],
+		}, {
+		   type: 'column',
+		   name: 'Direct spending',
+		   color: '#2e1717',
+		   borderColor: '#000000',
+		   data: [1.191],
+		}]
+	 });
+  });
+
+var chart;
+  $(document).ready(function() {
+	 chart = new Highcharts.Chart({
+		chart: {
+		   renderTo: 'homeownershipGraphPie',
+		   plotBorderWidth: null
+		},
+		title: {
+		   text: null
+		},
+		credits: {
+			enabled: false	
+		},
+		exporting: {
+			enabled: false	
+		},
+		legend: {
+			enabled: false	
+		},
+		yAxis: {
+			title: {
+				text: null
+			},
+			labels: {
+			  formatter: function() {
+				return '$'+this.value +'B';
+			  }
+			},
+			max:485,
+		},
+		xAxis: {
+			labels: {
+				enabled: false	
+			},
+			endOnTick: true,
+			startOnTick: true,
+		},
+		tooltip: {
+			style: {
+				fontSize: '9px',	
+			},
+			formatter: function() {
+			  var s;
+			  if (this.point.name) { // the pie chart
+				 s = ''+
+					this.point.name +': $'+ this.y + ' billion';
+			  } else {
+				 s = ''+
+					this.series.name  +': '+ this.y;
+			  }
+			  return s;
+		   }
 		},
 		series: [{
 		   type: 'pie',
@@ -393,19 +520,7 @@ var chart;
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		},{
-		   type: 'column',
-		   name: 'Tax spending',
-		   color: '#a3a3a3',
-		   borderColor: '#000000',
-		   data: [197.750],
-		}, {
-		   type: 'column',
-		   name: 'Direct spending',
-		   color: '#2e1717',
-		   borderColor: '#000000',
-		   data: [1.191],
-		},]
+		}]
 	 });
   });
 
@@ -413,7 +528,7 @@ var chart;
   $(document).ready(function() {
 	 chart = new Highcharts.Chart({
 		chart: {
-		   renderTo: 'postEdGraph',
+		   renderTo: 'postEdGraphBar',
 		   plotBorderWidth: null,
 		   spacingRight:100
 		},
@@ -468,7 +583,7 @@ var chart;
 				html: 'Tax spending',
 				style: {
 					left: '25px',
-					top: '55px',
+					top: '75px',
 					color: '#777777',
 					fontSize: '11px',
 					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
@@ -477,7 +592,7 @@ var chart;
 				html: 'Direct spending',
 				style: {
 					left: '104px',
-					top: '55px',
+					top: '75px',
 					color: '#777777',
 					fontSize: '11px',
 					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
@@ -491,6 +606,76 @@ var chart;
 				groupPadding: .3,
 				minPointLength: 1,
 			}
+		},
+		series: [{
+		   type: 'column',
+		   name: 'Tax spending',
+		   color: '#a3a3a3',
+		   borderColor: '#000000',
+		   data: [28.930]
+		}, {
+		   type: 'column',
+		   name: 'Direct spending',
+		   color: '#2e1717',
+		   borderColor: '#000000',
+		   data: [45.553]
+		},]
+	 });
+  });
+
+var chart;
+  $(document).ready(function() {
+	 chart = new Highcharts.Chart({
+		chart: {
+		   renderTo: 'postEdGraphPie',
+		   plotBorderWidth: null,
+		   spacingRight:100
+		},
+		title: {
+		   text: null
+		},
+		credits: {
+			enabled: false	
+		},
+		exporting: {
+			enabled: false	
+		},
+		legend: {
+			enabled: false	
+		},
+		yAxis: {
+			title: {
+				text: null
+			},
+			labels: {
+			  formatter: function() {
+				return '$'+this.value +'B';
+			  }
+			},
+			max:485,
+		},
+		xAxis: {
+			labels: {
+				enabled: false	
+			},
+			endOnTick: true,
+			startOnTick: true,
+		},
+		tooltip: {
+			style: {
+				fontSize: '9px',	
+			},
+			formatter: function() {
+			  var s;
+			  if (this.point.name) { // the pie chart
+				 s = ''+
+					this.point.name +': $'+ this.y + ' billion';
+			  } else {
+				 s = ''+
+					this.series.name  +': '+ this.y;
+			  }
+			  return s;
+		   }
 		},
 		series: [{
 		   type: 'pie',
@@ -512,19 +697,7 @@ var chart;
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		},{
-		   type: 'column',
-		   name: 'Tax spending',
-		   color: '#a3a3a3',
-		   borderColor: '#000000',
-		   data: [28.930]
-		}, {
-		   type: 'column',
-		   name: 'Direct spending',
-		   color: '#2e1717',
-		   borderColor: '#000000',
-		   data: [45.553]
-		},]
+		}]
 	 });
   });
 
@@ -532,7 +705,7 @@ var chart;
   $(document).ready(function() {
 	 chart = new Highcharts.Chart({
 		chart: {
-		   renderTo: 'entrepreneurshipGraph',
+		   renderTo: 'entrepreneurshipGraphBar',
 		   plotBorderWidth: null,
 		   spacingRight:100
 		},
@@ -587,7 +760,7 @@ var chart;
 				html: 'Tax spending',
 				style: {
 					left: '25px',
-					top: '55px',
+					top: '75px',
 					color: '#777777',
 					fontSize: '11px',
 					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
@@ -596,7 +769,7 @@ var chart;
 				html: 'Direct spending',
 				style: {
 					left: '104px',
-					top: '55px',
+					top: '75px',
 					color: '#777777',
 					fontSize: '11px',
 					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
@@ -610,6 +783,75 @@ var chart;
 				groupPadding: .3,
 				minPointLength: 1,
 			}
+		},
+		series: [{
+		   type: 'column',
+		   name: 'Tax spending',
+		   color: '#a3a3a3',
+		   borderColor: '#000000',
+		   data: [0]
+		}, {
+		   type: 'column',
+		   name: 'Direct spending',
+		   color: '#2e1717',
+		   borderColor: '#000000',
+		   data: [.602]
+		},]
+	 });
+  });
+
+var chart;
+  $(document).ready(function() {
+	 chart = new Highcharts.Chart({
+		chart: {
+		   renderTo: 'entrepreneurshipGraphPie',
+		   plotBorderWidth: null
+		},
+		title: {
+		   text: null
+		},
+		credits: {
+			enabled: false	
+		},
+		exporting: {
+			enabled: false	
+		},
+		legend: {
+			enabled: false	
+		},
+		yAxis: {
+			title: {
+				text: null
+			},
+			labels: {
+			  formatter: function() {
+				return '$'+this.value +'B';
+			  }
+			},
+			max:485,
+		},
+		xAxis: {
+			labels: {
+				enabled: false	
+			},
+			endOnTick: true,
+			startOnTick: true,
+		},
+		tooltip: {
+			style: {
+				fontSize: '9px',	
+			},
+			formatter: function() {
+			  var s;
+			  if (this.point.name) { // the pie chart
+				 s = ''+
+					this.point.name +': $'+ this.y + ' billion';
+			  } else {
+				 s = ''+
+					this.series.name  +': '+ this.y;
+			  }
+			  return s;
+		   }
 		},
 		series: [{
 		   type: 'pie',
@@ -631,18 +873,7 @@ var chart;
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		},{
-		   type: 'column',
-		   name: 'Tax spending',
-		   color: '#a3a3a3',
-		   borderColor: '#000000',
-		   data: [0]
-		}, {
-		   type: 'column',
-		   name: 'Direct spending',
-		   color: '#2e1717',
-		   borderColor: '#000000',
-		   data: [.602]
-		},]
+		}]
 	 });
   });
+

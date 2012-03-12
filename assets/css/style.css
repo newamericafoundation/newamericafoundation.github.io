@@ -144,11 +144,14 @@ h1.sectionTagline{
 	z-index: 1000;
 }
 
-#retirementGraph,
-#savingsGraph,
-#homeownershipGraph,
-#postEdGraph,
-#entrepreneurshipGraph,
+#savingsGraphBar,
+#savingsGraphPie,
+#homeownershipGraphBar,
+#homeownershipGraphPie,
+#postEdGraphBar,
+#postEdGraphPie,
+#entrepreneurshipGraphBar,
+#entrepreneurshipGraphPie,
 #retirementGraphBar,
 #retirementGraphPie {
 	width: auto;
