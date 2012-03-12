@@ -96,7 +96,7 @@
       <div class="hero-unit">
         <h1>The Assets Report 2012</h1>
         <p>Savings and assets are the building blocks of economic mobility and buffers against financial emergencies. Current spending to support asset building, however, is primarily delivered through the tax code and favors higher-income households. This system leaves little support to the lower-income families who would most benefit. </p>
-		<p>Click on any of the links above to jump to a specific chapter.</p>
+		<p>This site will identify how people are faring across 5 key policy areas, how well current spending supports these areas, and suggest how it could do better. Click on any of the links above to jump to a specific chapter.</p>
       </div>
   </div> <!-- /.container -->
 </header>
@@ -409,8 +409,42 @@
       </div><!-- / .row -->
       
       <div class="row">
+        <div class="span8">
+          <div class="row">
+          <div class="span8">
+          <h4>Employer Sponsorship of retirement Plans</h4>
+          </div> <!-- /.span8 -->
+          </div> <!-- /.row -->
+          <div class="row">
+          <div class="span4">
+          <h6>Top quartile</h6>
+          <div id="top-quartile" style="height: 130px;"></div>
+          </div>
+          <div class="span4">
+          <h6>Second quartile</h6>
+          <div id="second-quartile" style="height: 130px;"></div>
+          </div>
+          </div>
+          <div class="row">
+          <div class="span4">
+          <h6>Third quartile</h6>
+          <div id="third-quartile" style="height: 130px;"></div>
+          </div>
+          <div class="span4">
+          <h6>Bottom quartile</h6>
+          <div id="bottom-quartile" style="height: 130px;"></div>
+          </div>
+          </div>
+        </div> <!-- /.span8 -->
+        
+        <div class="span3 offset1">
+          <h2 class="head">...have a job that offers a retirement plan...</h2>
+        </div> <!-- /.span3 -->
+      </div> <!-- /.row -->
+      
+      <div class="row" style="margin-top:30px;margin-bottom:30px;">
         <div class="span3">
-        <h2 class="head">...participate in a retirement plan...</h2>
+        <h2 class="head">...and participate in a retirement plan.</h2>
         </div> <!-- /.span3 -->
         
         <div class="span8 offset1">
@@ -446,41 +480,7 @@
       <h6 style="text-align:right;">In 2008, less than half of workers in the second lowest income quartile participated in retirement plans.This drops to <strong>less than 30%</strong> of workers in the <strong>lowest income quartile.</strong></h6>
       </div>
       </div>
-      
-      <div class="row" style="margin-top:30px;margin-bottom:30px;">
-        <div class="span8">
-          <div class="row">
-          <div class="span8">
-          <h4>Employer Sponsorship of retirement Plans</h4>
-          </div> <!-- /.span8 -->
-          </div> <!-- /.row -->
-          <div class="row">
-          <div class="span4">
-          <h6>Top quartile</h6>
-          <div id="top-quartile" style="height: 130px;"></div>
-          </div>
-          <div class="span4">
-          <h6>Second quartile</h6>
-          <div id="second-quartile" style="height: 130px;"></div>
-          </div>
-          </div>
-          <div class="row">
-          <div class="span4">
-          <h6>Third quartile</h6>
-          <div id="third-quartile" style="height: 130px;"></div>
-          </div>
-          <div class="span4">
-          <h6>Bottom quartile</h6>
-          <div id="bottom-quartile" style="height: 130px;"></div>
-          </div>
-          </div>
-        </div> <!-- /.span8 -->
-        
-        <div class="span3 offset1">
-          <h2 class="head">...or have a job that offers a retirement plan.</h2>
-        <!-- <h2 class="head">The decline in employers sponsoring retirement accounts means that many workers, especially those earning the least, have few accessible options.</h2> -->
-        </div> <!-- /.span3 -->
-      </div> <!-- /.row -->
+
       
       <div class="row" style="margin-top:40px;margin-bottom:30px;">
       <div class="staple span5">
@@ -549,10 +549,15 @@
       <a href="#" class="btn" data-dismiss="modal">Close</a>
       </div>
       </div>
-      <a class="btn btn-danger more-data" href="#retirementModal" data-toggle="modal">Data</a>
+      
       <div class="alert alert-success">
       <h4>2013 budget request spending levels</h4>
-      <div id="retirementGraph"></div>
+		<div id="retirementGraphBar"></div>
+		<div class="span2">
+      	<span id="retirementGraphPie" style="position: absolute;right:0px;top: 17px;z-index: 1000;width:80px;"></span><a class="btn btn-danger more-data" href="#retirementModal" data-toggle="modal">Data</a>
+</div>
+			
+	  
       </div>
       </div> <!-- end .staple -->
       <div class="span6 offset1">
@@ -742,7 +747,7 @@
         <div class="span12">
 
               <h3 class="header">Post-secondary Education</h3>
-              <h1 class="header">Many students can't afford to buy a ticket out of poverty — a college education.</h1>
+              <h1 class="header">Many poor children can't afford the college education that could move them out of poverty.</h1>
 
              <div class="row">
 				<div class="span10 offset1">

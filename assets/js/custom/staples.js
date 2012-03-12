@@ -26,7 +26,7 @@ var chart;
   $(document).ready(function() {
 	 chart = new Highcharts.Chart({
 		chart: {
-		   renderTo: 'retirementGraph',
+		   renderTo: 'retirementGraphBar',
 		   plotBorderWidth: null,
 		   spacingRight:100
 		},
@@ -64,25 +64,14 @@ var chart;
 		tooltip: {
 			style: {
 				fontSize: '9px',	
-			},
-			formatter: function() {
-			  var s;
-			  if (this.point.name) { // the pie chart
-				 s = ''+
-					this.point.name +': $'+ this.y + ' billion';
-			  } else {
-				 s = ''+
-					this.series.name  +': '+ this.y;
-			  }
-			  return s;
-		   }
+			}
 		},
 		labels: {
 			items: [{
 				html: 'Tax spending',
 				style: {
 					left: '25px',
-					top: '55px',
+					top: '75px',
 					color: '#777777',
 					fontSize: '11px',
 					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
@@ -91,7 +80,7 @@ var chart;
 				html: 'Direct spending',
 				style: {
 					left: '104px',
-					top: '55px',
+					top: '75px',
 					color: '#777777',
 					fontSize: '11px',
 					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
@@ -107,6 +96,58 @@ var chart;
 			}
 		},
 		series: [{
+		   type: 'column',
+		   name: 'Tax spending',
+		   color: '#a3a3a3',
+		   borderColor: '#000000',
+		   data: [165.430]
+		}, {
+		   type: 'column',
+		   name: 'Direct spending',
+		   color: '#2e1717',
+		   borderColor: '#000000',
+		   data: [0]
+		},]
+	 });
+  });
+
+var chart;
+  $(document).ready(function() {
+	 chart = new Highcharts.Chart({
+		chart: {
+		   renderTo: 'retirementGraphPie',
+		   plotBorderWidth: null,
+		   spacingRight:100
+		},
+		title: {
+		   text: null
+		},
+		credits: {
+			enabled: false	
+		},
+		exporting: {
+			enabled: false	
+		},
+		legend: {
+			enabled: false	
+		},
+		tooltip: {
+			style: {
+				fontSize: '9px',	
+			},
+			formatter: function() {
+			  var s;
+			  if (this.point.name) { // the pie chart
+				 s = ''+
+					this.point.name +': $'+ this.y + ' billion';
+			  } else {
+				 s = ''+
+					this.series.name  +': '+ this.y;
+			  }
+			  return s;
+		   }
+		},
+		series: [{
 		   type: 'pie',
 		   name: 'Budget slice',
 		   data: [{
@@ -119,25 +160,13 @@ var chart;
 			  y: 165.430,
 		   }],
 		   center: [20, 28],
-		   spacingLeft: 100,
-		   size: 40,
+		   // spacingLeft: 100,
+		   size: 50,
 		   showInLegend: false,
 		   dataLabels: {
 			  enabled: false
 		   },
 		   borderColor: '#000000',
-		},{
-		   type: 'column',
-		   name: 'Tax spending',
-		   color: '#a3a3a3',
-		   borderColor: '#000000',
-		   data: [165.430]
-		}, {
-		   type: 'column',
-		   name: 'Direct spending',
-		   color: '#2e1717',
-		   borderColor: '#000000',
-		   data: [0]
 		},]
 	 });
   });

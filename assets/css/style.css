@@ -139,8 +139,8 @@ h1.sectionTagline{
 
 .staple a.more-data {
 	position: absolute;
-	right: 50px;
-	top: 36px;
+	right: 25px;
+	top: 95px;
 	z-index: 1000;
 }
 
@@ -148,9 +148,11 @@ h1.sectionTagline{
 #savingsGraph,
 #homeownershipGraph,
 #postEdGraph,
-#entrepreneurshipGraph {
+#entrepreneurshipGraph,
+#retirementGraphBar,
+#retirementGraphPie {
 	width: auto;
-	height: 80px;	
+	height: 100px;	
 }
 
 .staple h4, 

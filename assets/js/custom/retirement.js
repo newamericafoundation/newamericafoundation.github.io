@@ -59,7 +59,7 @@ function retirement(){
 			series: [
 	        {
 				type: 'area',
-				data: [80.2, 72.9],
+				data: [80, 73],
 			}]
 		 });
   
@@ -84,15 +84,31 @@ function retirement(){
 					}
 				}]
 			},
+			tooltip: {
+				style: {
+					fontSize: '9px',	
+				},
+				formatter: function() {
+				  var s;
+				  if (this.point.name) { // the pie chart
+					 s = ''+
+						this.y + '%';
+				  } else {
+					 s = ''+
+						this.series.name  +': '+ this.y;
+				  }
+				  return s;
+			   }
+			},
 			series: [{
 			   name: 'Employee retirement plans',
 			   data: [{
 				  name: 'Employee participation',
-				  y: 68.6,
+				  y: 69,
 			   }, {
 				  name: 'No participation',
-				  color: '#FCFAD0',
-				  y: 31.4,
+				  color: '#f4f4f4',
+				  y: 31,
 			   }],
 			   showInLegend: false,
 			   dataLabels: {
@@ -163,7 +179,7 @@ function retirement(){
 			},
 			series: [{
 				type: 'area',
-				data: [74.3, 67.3],
+				data: [74, 67],
 			}]
 		 });
 
@@ -187,16 +203,32 @@ function retirement(){
 					}
 				}]
 			},
+			tooltip: {
+				style: {
+					fontSize: '9px',	
+				},
+				formatter: function() {
+				  var s;
+				  if (this.point.name) { // the pie chart
+					 s = ''+
+						this.y + '%';
+				  } else {
+					 s = ''+
+						this.series.name  +': '+ this.y;
+				  }
+				  return s;
+			   }
+			},
 			series: [{
 			   type: 'pie',
 			   name: 'Employee retirement plans',
 			   data: [{
 				  name: 'Employee participation',
-				  y: 60.1,
+				  y: 60,
 			   }, {
 				  name: 'No participation',
-				  color: '#FCFAD0',
-				  y: 39.9,
+				  color: '#f4f4f4',
+				  y: 40,
 			   }],
 			   size: 105,
 			   innerSize: '70%',
@@ -266,7 +298,7 @@ function retirement(){
 			},
 			series: [{
 				type: 'area',
-				data: [66, 59.2],
+				data: [66, 59],
 			}]
 		 });
   
@@ -290,16 +322,32 @@ function retirement(){
 					}
 				}]
 			},
+			tooltip: {
+				style: {
+					fontSize: '9px',	
+				},
+				formatter: function() {
+				  var s;
+				  if (this.point.name) { // the pie chart
+					 s = ''+
+						this.y + '%';
+				  } else {
+					 s = ''+
+						this.series.name  +': '+ this.y;
+				  }
+				  return s;
+			   }
+			},
 			series: [{
 			   type: 'pie',
 			   name: 'Employee retirement plans',
 			   data: [{
 				  name: 'Employee participation',
-				  y: 49.7,
+				  y: 50,
 			   }, {
 				  name: 'No participation',
-				  color: '#FCFAD0',
-				  y: 50.3,
+				  color: '#f4f4f4',
+				  y: 50,
 			   }],
 			   size: 105,
 			   innerSize: '70%',
@@ -369,7 +417,7 @@ function retirement(){
 			},
 			series: [{
 				type: 'area',
-				data: [44.9, 38.4],
+				data: [45, 38],
 			}]
 		 });
 
@@ -393,16 +441,32 @@ function retirement(){
 					}
 				}]
 			},
+			tooltip: {
+				style: {
+					fontSize: '9px',	
+				},
+				formatter: function() {
+				  var s;
+				  if (this.point.name) { // the pie chart
+					 s = ''+
+						this.y + '%';
+				  } else {
+					 s = ''+
+						this.series.name  +': '+ this.y;
+				  }
+				  return s;
+			   }
+			},
 			series: [{
 			   type: 'pie',
 			   name: 'Employee retirement plans',
 			   data: [{
 				  name: 'Employee participation',
-				  y: 27.7,
+				  y: 28,
 			   }, {
 				  name: 'No participation',
-				  color: '#FCFAD0',
-				  y: 72.3,
+				  color: '#f4f4f4',
+				  y: 72,
 			   }],
 			   size: 105,
 			   innerSize: '70%',
