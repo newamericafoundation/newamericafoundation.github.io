@@ -1,19 +1,18 @@
 // JavaScript Document
 function homeowernship(){
-	//make the 2008 tab active
 	
-	$('#whiteExpand').click(function(){
-		$('.whiteGraphs').fadeIn();
-		$('.whitePlace').remove();
-	});
-	$('#hispanicExpand').click(function(){
-		$('.hisGraphs').fadeIn();
-		$('.hisPlace').remove();
-	});
-	$('#blackExpand').click(function(){
-		$('.blackGraphs').fadeIn();
-		$('.blackPlace').remove();
-	});
+	// $('#whiteExpand').click(function(){
+	// 	$('.whiteGraphs').fadeIn();
+	// 	$('.whitePlace').remove();
+	// });
+	// $('#hispanicExpand').click(function(){
+	// 	$('.hisGraphs').fadeIn();
+	// 	$('.hisPlace').remove();
+	// });
+	// $('#blackExpand').click(function(){
+	// 	$('.blackGraphs').fadeIn();
+	// 	$('.blackPlace').remove();
+	// });
 
 
 var chart;

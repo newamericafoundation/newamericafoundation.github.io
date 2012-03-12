@@ -1,5 +1,22 @@
 function education(){
-	
+	$('#li08').addClass('active');
+	$("#li00").click(function() {
+	  $('#pie2000').fadeIn('slow');
+	  $('#pie2008').fadeOut('slow');
+	});
+	$("#li08").click(function() {
+	  $('#pie2008').fadeIn('slow');
+	  $('#pie2000').fadeOut('slow');
+	});
+	$("ul.ed-tabs li").click(function(){
+	  // If this isn't already active
+	  if (!$(this).hasClass("active")) {
+		// Remove the class from anything that is active
+		$("ul.ed-tabs li").removeClass("active");
+		// And make this active
+		$(this).addClass("active");
+	  }
+	});
 
 var chart;
 	 chart = new Highcharts.Chart({

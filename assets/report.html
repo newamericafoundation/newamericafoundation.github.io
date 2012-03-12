@@ -35,45 +35,26 @@
 	<script src="js/custom/savings.js"></script>
 	<script >
 	  $(function() {
+		$('#li08').addClass('active');
 	    $("table#programTable").tablesorter({ sortList: [[1,0]] });
+	    $(".nav").scrollspy();
 		buildMap('http://a.tiles.mapbox.com/v3/newamerica.assets_scorecard.jsonp');
 		homeowernship();
 		education();
-		retirement();
-			$("#li00").click(function() {
-			  $('#pie2000').fadeIn('slow');
-			  $('#pie2008').fadeOut('slow');
-			});
-			$("#li08").click(function() {
-			  $('#pie2008').fadeIn('slow');
-			  $('#pie2000').fadeOut('slow');
-			});
-			$("li").click(function(){
-			  if (!$(this).hasClass("ed-active")) {
-				$("li.ed-active").removeClass("ed-active");
-				$(this).addClass("ed-active");
-			  }
-			});
-		$('ul.nav').click(function () { 
+		retirement();		
+			
+			
+		$('div.navbar-fixed-top ul.nav').click(function () { 
 			homeowernship();
 			education();
 			retirement();
+			$('#li08').addClass('active');
+			
 			});
 	  });
 	</script>
-	<script>
-	  $(function() {
-	    $(".nav").scrollSpy();
 	
-	  });
-	</script>
   </head>
-
-
-
-
-
-
 
   <body data-spy="scroll">
     <div class="navbar navbar-fixed-top">
@@ -97,21 +78,15 @@
       <div class="hero-unit">
         <h1>The Assets Report 2012</h1>
         <p>Savings and assets are the building blocks of economic mobility and buffers against financial emergencies. Current spending to support asset building, however, is primarily delivered through the tax code and favors higher-income households. This system leaves little support to the lower-income families who would most benefit. </p>
+		<p>Click on any of the links above to jump to a specific chapter.</p>
       </div>
   </div> <!-- /.container -->
 </header>
 
 
-
-
-
-
 <section class="main-content">
 
   <div class="container">
-
-
-
 
     <div id="homeownership" class="row row-homeownership" >
     
@@ -122,7 +97,7 @@
         
         
         <div class="row">
-          <h1 class="span10 offset1 sectionTagline">Who lost more during the recession?<br /><strong>Click below to find out.</strong></h1>
+          <h1 class="span10 offset1 sectionTagline">Who lost more during the recession?</h1>
         </div><!-- / .row -->
                 
         <div class="row">
@@ -130,9 +105,9 @@
         </div>
         
         <div class="row">
-        <span id="whiteExpand" class="span4" style="text-align:center;"><h3 style="text-align:center;" class="btn btn-action btn-inverse">White $134,992</h3></span>
-        <span id="hispanicExpand" class="span4" style="text-align:center;"><h3 style="text-align:center;" class="btn btn-action btn-inverse">Hispanic $18,359</h3></span>
-        <span id="blackExpand" class="span4" style="text-align:center;"><h3 style="text-align:center;" class="btn btn-action btn-inverse">Black $12,124</h3></span>
+        <span id="whiteExpand" class="span4" style="text-align:center;"><h3 style="text-align:center;" class="btn btn-action btn-inverse btn-large">White $134,992</h3></span>
+        <span id="hispanicExpand" class="span4" style="text-align:center;"><h3 style="text-align:center;" class="btn btn-action btn-inverse btn-large">Hispanic $18,359</h3></span>
+        <span id="blackExpand" class="span4" style="text-align:center;"><h3 style="text-align:center;" class="btn btn-action btn-inverse btn-large">Black $12,124</h3></span>
         </div>
         
         <div class="row" style="margin:10px 0 0 0;">
@@ -140,27 +115,27 @@
         </div>
         
         <div class="row">
-        <span class="span4" style="text-align:center;"><h2 style="text-align:center;" class="btn btn-large btn-action disabled whitePlace">White -$??,???<br />(??.?%)</h2><h2 style="text-align:center;display:none;" class="btn btn-large btn-action whiteGraphs">White -$21,000<br />(15.5%)</h2></span>
-        <span class="span4" style="text-align:center;"><h2 style="text-align:center;" class="btn btn-large btn-action disabled hisPlace">Hispanic -$??,???<br />(??.?%)</h2><h2 style="text-align:center;display:none;" class="btn btn-large btn-action hisGraphs">Hispanic -$12,034<br /><strong>(71%)</strong></h2></span>
-        <span class="span4" style="text-align:center;"><h2 style="text-align:center;" class="btn btn-large btn-action disabled blackPlace">Black -$??,???<br />(??.?%)</h2><h2 style="text-align:center;display:none;" class="btn btn-large btn-action blackGraphs">Black -$6,447<br /><strong>(53.2%)</strong></h2></span>
+        <span class="span4" style="text-align:center;"><!-- <h2 style="text-align:center;" class="btn btn-large btn-action disabled whitePlace">White -$??,???<br />(??.?%)</h2> --><h2 style="text-align:center;" class="btn btn-large btn-action whiteGraphs">White -$21,000<br />(15.5%)</h2></span>
+        <span class="span4" style="text-align:center;"><!-- <h2 style="text-align:center;" class="btn btn-large btn-action disabled hisPlace">Hispanic -$??,???<br />(??.?%)</h2> --><h2 style="text-align:center;" class="btn btn-large btn-action hisGraphs">Hispanic -$12,034<br /><strong>(71%)</strong></h2></span>
+        <span class="span4" style="text-align:center;"><!-- <h2 style="text-align:center;" class="btn btn-large btn-action disabled blackPlace">Black -$??,???<br />(??.?%)</h2> --><h2 style="text-align:center;" class="btn btn-large btn-action blackGraphs">Black -$6,447<br /><strong>(53.2%)</strong></h2></span>
         </div>
         
         <div class="row">
-        <span class="span12"><h3 align="center" style="margin:50px 0;">How much was because of a loss in home equity?</h3></span>
+        <span class="span12"><h3 align="center" style="margin:20px 0;">How much was because of a loss in home equity?</h3></span>
         </div>
         
         <div class="row" style="min-height:150px;">
         <div class="span4">
         <div class="whitePlace">&nbsp;</div>
-        <span id="homeownership-pie1" class="whiteGraphs" style="width:300px;height:150px;display:none;"></span>
+        <span id="homeownership-pie1" class="whiteGraphs" style="width:300px;height:150px;"></span>
         </div>
         <div class="span4">
         <div class="hisPlace">&nbsp;</div>
-        <span id="homeownership-pie2" class="hisGraphs" style="width:300px;height:150px;display:none;"></span>
+        <span id="homeownership-pie2" class="hisGraphs" style="width:300px;height:150px;"></span>
         </div>
         <div class="span4">
         <div class="blackPlace">&nbsp;</div>
-        <span id="homeownership-pie3"  class="blackGraphs"style="width:300px;height:150px;display:none;"></span>
+        <span id="homeownership-pie3"  class="blackGraphs"style="width:300px;height:150px;"></span>
         </div>
         </div>
         
