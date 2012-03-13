@@ -35,9 +35,8 @@
 						        this.hideTooltip(this._currentTooltip);
 						        this._currentTooltip = undefined;
 						    }
-						// $('.mainLegend >.mainToolTip').empty();
-						// 					$('#chartContainer').hide();
-
+							$('#toolTipContainer').empty()
+							$('#toolTipContainer').append('<h5>Roll over the map to see poverty numbers for each state.</h5>');
 						},
 						isPopup: function(el) {
 						    return el && el.className.indexOf('wax-popup') !== -1;
@@ -46,11 +45,8 @@
 						    var tooltip = document.createElement('div');
 						    tooltip.className = 'wax-tooltip wax-tooltip-0';
 						    tooltip.innerHTML = feature;
-							// $('.intro').css('display','none');
-						
-						// $(tooltip.innerHTML).children('.debt-gdp-timeline').children('span.chart').empty();
+						$('#toolTipContainer').empty();
 						$('#toolTipContainer').append(tooltip);
-						    // context.appendChild(tooltip);
 						    return tooltip;
 						},
 						hideTooltip: function(el) {
@@ -111,9 +107,7 @@
 						    }
 
 						    this._currentTooltip = tooltip;
-						// buildChart()
-						// 					$('.debt-gdp-timeline').children('span.chart').empty();
-						// 					$('#chartContainer').show();
+							
 						}
 					}
 		});
@@ -146,5 +140,6 @@
 	function closer(e) {
 	        if (e) {e.preventDefault();}
 	        $('.wax-share').css('display', 'none');
+			$('#toolTipContainer').empty();
 	}
 	
