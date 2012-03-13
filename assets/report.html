@@ -35,7 +35,10 @@
 	<script >
 	  $(function() {
 		$('#li08').addClass('ed-active');
+<<<<<<< HEAD
 	    // $("table#programTable").tablesorter({ sortList: [[1,0]] });
+=======
+>>>>>>> Updating staples data/charts
 	    $(".nav").scrollspy();
 		buildMap('http://a.tiles.mapbox.com/v3/newamerica.assets_scorecard.jsonp');
 		homeowernship();
@@ -195,7 +198,7 @@
               <h3>Homeownership Spending Programs</h3>
             </div>
             <div class="modal-body">
-              <h4>Direct Spending</h4>
+              <h4>Tax Spending (in millions)</h4>
               <table id="programTable" class="table table-striped table-condensed">
               <thead>
                 <tr>
@@ -205,28 +208,28 @@
               </thead>
               <tbody>
               <tr>
-                <td>HOME   Investment Partnerships Program (HOME)</td>
-                <td>$1,000m</td>
+                <td>Deductibility of Mortgage Interest on   Owner-Occupied Housing</td>
+                <td width="100">$100,910</td>
               </tr>
               <tr>
-                <td> Housing Counseling Assistance</td>
-                <td>$45m</td>
+                <td>Deductibility of Property Tax</td>
+                <td width="100">$22,320</td>
               </tr>
               <tr>
-                <td> Family Self-Sufficiency - Consolidated   Program</td>
-                <td>$60m</td>
+                <td>Capital Gains Exclusion on Home Sales</td>
+                <td width="100">$23,440</td>
               </tr>
               <tr>
-                <td>NeighborWorks   - Foreclosure Mitigation Counseling</td>
-                <td>$86m</td>
+                <td>Exclusion of Imputed Rent for   Owner-Occupied Housing</td>
+                <td width="100">$51,080</td>
               </tr>
               <tr>
-                <td>       Subtotal Homeownership</td>
-                <td>$1,191m</td>
+                <td><strong>Subtotal Homeownership</strong></td>
+                <td width="100"><strong>$197,750</strong></td>
               </tr>
               </tbody>
               </table>
-              <h4>Tax Spending</h4>
+              <h4>Direct Spending (in millions)</h4>
               <table id="programTable" class="table table-striped table-condensed">
               <thead>
                 <tr>
@@ -236,24 +239,32 @@
               </thead>
               <tbody>
               <tr>
-                <td>  Deductibility of Mortgage Interest on   Owner-Occupied Housing</td>
-                <td>$100,910m</td>
+                <td>HOME Investment Partnerships Program (HOME)</td>
+                <td width="100">$1,000</td>
               </tr>
               <tr>
-                <td>  Deductibility of Property Tax</td>
-                <td>$22,320m</td>
+                <td>Housing Counseling Assistance</td>
+                <td width="100">$45</td>
               </tr>
               <tr>
-                <td>  Capital Gains Exclusion on Home Sales</td>
-                <td>$23,440m</td>
+                <td>Family Self-Sufficiency - Consolidated   Program</td>
+                <td width="100">$60</td>
               </tr>
               <tr>
-                <td>  Exclusion of Imputed Rent for   Owner-Occupied Housing</td>
-                <td>$51,080m</td>
+                <td>NeighborWorks   - Foreclosure Mitigation Counseling</td>
+                <td width="100">$86</td>
               </tr>
               <tr>
-                <td>       Subtotal Homeownership</td>
-                <td>$197,750m</td>
+                <td><strong>Subtotal Homeownership</strong></td>
+                <td width="100"><strong>$1,191</strong></td>
+              </tr>
+              </tbody>
+              </table>
+              <table id="programTable" class="table table-striped table-condensed">
+              <tbody>
+              <tr>
+                <td><h4><strong>Total Homeownership</strong></h4></td>
+                <td width="100"><h4><strong>$198,941</strong></h4></td>
               </tr>
               </tbody>
               </table>
@@ -344,7 +355,7 @@
         <h3>Entrepreneurship Spending Programs</h3>
         </div>
         <div class="modal-body">
-        <h4>Direct Spending</h4>
+        <h4>Direct Spending (in millions)</h4>
         <table id="programTable" class="table table-striped table-condensed">
         <thead>
         <tr>
@@ -355,19 +366,27 @@
         <tbody>
         <tr>
         <td>CDFI Fund</td>
-        <td>$.227m</td>
+        <td width="100">$.227</td>
         </tr>
         <tr>
         <td>Microloan Program</td>
-        <td>$.004m</td>
+        <td width="100">$.004</td>
         </tr>
         <tr>
         <td>Small Business Lending</td>
-        <td>$.126m</td>
+        <td width="100">$.126</td>
         </tr>
         <tr>
         <td>Subtotal Entrepreneurship </td>
-        <td>$.357m</td>
+        <td width="100">$.357</td>
+        </tr>
+        </tbody>
+        </table>
+        <table id="programTable" class="table table-striped table-condensed">
+        <tbody>
+        <tr>
+          <td><h4><strong>Total Entrepreneurship</strong></h4></td>
+          <td width="100"><h4><strong>$.357</strong></h4></td>
         </tr>
         </tbody>
         </table>
@@ -498,7 +517,7 @@
       <h3>Retirement Spending Programs</h3>
       </div>
       <div class="modal-body">
-      <h4>Direct Spending</h4>
+      <h4>Tax Spending (in millions)</h4>
       <table id="programTable" class="table table-striped table-condensed">
       <thead>
         <tr>
@@ -508,47 +527,36 @@
       </thead>
       <tbody>
       <tr>
-        <td>Auto   IRA </td>
-        <td>$0</td>
+        <td>Net Exclusion of Pension Contributions:   Employer Plans</td>
+        <td width="100">$52,330</td>
       </tr>
       <tr>
-        <td>       Subtotal Retirement</td>
-        <td>$0</td>
+        <td>Net Exclusion of Pension Contributions:   401(k) Plans</td>
+        <td width="100">$72,740</td>
       </tr>
-                          </tbody>
+      <tr>
+        <td>Net Exclusion of Pension Contributions:   IRAs</td>
+        <td width="100">$19.65</td>
+      </tr>
+      <tr>
+        <td>Net Exclusion of Pension Contributions:   Saver's Credit</td>
+        <td width="100">$1,130</td>
+      </tr>
+      <tr>
+        <td>Net Exclusion of Pension Contributions:   Self-employed Plans</td>
+        <td width="100">$19,580</td>
+      </tr>
+      <tr>
+        <td><strong>Subtotal Retirement</strong></td>
+        <td width="100"><strong>$165,430</strong></td>
+      </tr>
+      </tbody>
       </table>
-      <h4>Tax Spending</h4>
       <table id="programTable" class="table table-striped table-condensed">
-      <thead>
-        <tr>
-            <th>Program Name</th>
-            <th>Amount</th>
-        </tr>
-      </thead>
       <tbody>
       <tr>
-        <td>  Net Exclusion of Pension Contributions:   Employer Plans</td>
-        <td>$52,330m</td>
-      </tr>
-      <tr>
-        <td>  Net Exclusion of Pension Contributions:   401(k) Plans</td>
-        <td>$72,740m</td>
-      </tr>
-      <tr>
-        <td>  Net Exclusion of Pension Contributions:   IRAs</td>
-        <td>$19.65m</td>
-      </tr>
-      <tr>
-        <td>  Net Exclusion of Pension Contributions:   Saver's Credit</td>
-        <td>$1,130m</td>
-      </tr>
-      <tr>
-        <td>  Net Exclusion of Pension Contributions:   Self-employed Plans</td>
-        <td>$19,580m</td>
-      </tr>
-      <tr>
-        <td>       Subtotal Retirement</td>
-        <td>$165,430m</td>
+        <td><h4><strong>Total Retirement</strong></h4></td>
+        <td width="100"><h4><strong>$165,430</strong></h4></td>
       </tr>
       </tbody>
       </table>
@@ -652,34 +660,7 @@
         <h3>Savings Spending Programs</h3>
       </div>
       <div class="modal-body">
-                      <h4>Direct Spending</h4>
-      <table id="programTable" class="table table-striped table-condensed">
-          <thead>
-              <tr>
-                  <th>Program Name</th>
-                  <th>Amount</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td>Assets for Independence Act</td>
-                  <td>$.024m</td>
-              </tr>
-              <tr>
-                  <td>Volunteer Income Tax Assistance (VITA)</td>
-                  <td>$.008m</td>
-              </tr>
-              <tr>
-                  <td>Bank On USA Initiative</td>
-                  <td>$.041m</td>
-              </tr>
-              <tr>
-                  <td><em>Subtotal Savings and Investment</em></td>
-                  <td>$.073m</td>
-              </tr>
-          </tbody>
-      </table>
-      <h4>Tax Spending</h4>
+      <h4>Tax Spending (in millions)</h4>
       <table id="programTable" class="table table-striped table-condensed">
           <thead>
               <tr>
@@ -690,29 +671,64 @@
           <tbody>
               <tr>
                   <td>Capital Gains</td>
-                  <td>$38.5m</td>
+                  <td width="100">$38.5</td>
               </tr>
               <tr>
                   <td>Step-Up Basis of Capital Gains at Death</td>
-                  <td>$61.5m</td>
+                  <td width="100">$61.5</td>
               </tr>
               <tr>
                   <td>Carryover Basis of Capital Gains on Gifts</td>
-                  <td>$2.0m</td>
+                  <td width="100">$2.0</td>
               </tr>
               <tr>
                   <td>Exclusion of Interest on Life Insurance Savings</td>
-                  <td>$22.7m</td>
+                  <td width="100">$22.7</td>
               </tr>
               <tr>
                   <td>Deferral of Interest on U.S. Savings Bonds</td>
-                  <td>$1.3m</td>
+                  <td width="100">$1.3</td>
               </tr>
               <tr>
-                  <td>Subtotal Savings and Investment</td>
-                  <td>$106.0m</td>
+                  <td><strong>Subtotal Savings and Investment</strong></td>
+                  <td width="100"><strong>$106.0</strong></td>
               </tr>	
           </tbody>
+      </table>
+                      <h4>Direct Spending (in millions)</h4>
+      <table id="programTable" class="table table-striped table-condensed">
+          <thead>
+              <tr>
+                  <th>Program Name</th>
+                  <th>Amount</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Assets for Independence Act</td>
+                  <td width="100">$.024</td>
+              </tr>
+              <tr>
+                  <td>Volunteer Income Tax Assistance (VITA)</td>
+                  <td width="100">$.008</td>
+              </tr>
+              <tr>
+                  <td>Bank On USA Initiative</td>
+                  <td width="100">$.041</td>
+              </tr>
+              <tr>
+                  <td><strong>Subtotal Savings and Investment</strong></td>
+                  <td width="100"><strong>$.073</strong></td>
+              </tr>
+          </tbody>
+      </table>
+      <table id="programTable" class="table table-striped table-condensed">
+      <tbody>
+      <tr>
+        <td><h4><strong>Total Savings and Investment</strong></h4></td>
+        <td width="100"><h4><strong>$106.073</strong></h4></td>
+      </tr>
+      </tbody>
       </table>
       </div>
       <div class="modal-footer">
@@ -846,7 +862,50 @@
                     <h3>Post-Secondary Education Spending Programs</h3>
                   </div>
                   <div class="modal-body">
-                  <h4>Direct Spending</h4>
+                  <h4>Tax Spending (in millions)</h4>
+                  <table id="programTable" class="table table-striped table-condensed">
+                      <thead>
+                          <tr>
+                              <th>Program Name</th>
+                              <th>Amount</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>HOPE Tax Credit</td>
+                          <td width="100">$580</td>
+                        </tr>
+                        <tr>
+                          <td>Lifetime Learning Credit</td>
+                          <td width="100">$3,920</td>
+                        </tr>
+                        <tr>
+                          <td>American Opportunity Tax Credit*</td>
+                          <td width="100">$21,560</td>
+                        </tr>
+                        <tr>
+                          <td>Education IRA</td>
+                          <td width="100">$80</td>
+                        </tr>
+                        <tr>
+                          <td>Deductibility of Student Loan Interest</td>
+                          <td width="100">$900</td>
+                        </tr>
+                        <tr>
+                          <td>Deductibility of Higher Education Expenses</td>
+                          <td width="100">$0</td>
+                        </tr>
+                        <tr>
+                          <td>Qualified Tuition Plans (529 College   Savings Plans)</td>
+                          <td width="100">$1,890</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Subtotal Education</strong></td>
+                          <td width="100"><strong>$28,930</strong></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                  <h4>Direct Spending (in millions)</h4>
                   <table id="programTable" class="table table-striped table-condensed">
                       <thead>
                           <tr>
@@ -857,72 +916,37 @@
                       <tbody>
                         <tr>
                           <td>Pell   Grants </td>
-                          <td>$36,118m</td>
+                          <td width="100">$36,118</td>
                         </tr>
                         <tr>
                           <td>TRIO   Program </td>
-                          <td>$839.9m</td>
+                          <td width="100">$839.9</td>
                         </tr>
                         <tr>
                           <td>Adult   Basic Literacy Education State Grants </td>
-                          <td>$595m</td>
+                          <td width="100">$595</td>
                         </tr>
                         <tr>
                           <td>College   Access Challenge Grant Program </td>
-                          <td>$150m</td>
+                          <td width="100">$150</td>
                         </tr>
                         <tr>
                           <td>American   Opportunity Tax Credit (current outlays from refundable credit) </td>
-                          <td>$7,850m</td>
+                          <td width="100">$7,850</td>
                         </tr>
                         <tr>
-                          <td>       Subtotal Education</td>
-                          <td>$45,553m</td>
+                          <td><strong>Subtotal Education</strong></td>
+                          <td width="100"><strong>$45,553</strong></td>
                         </tr>
                       </tbody>
                   </table>
-                  <h4>Tax Spending</h4>
                   <table id="programTable" class="table table-striped table-condensed">
-                      <thead>
-                          <tr>
-                              <th>Program Name</th>
-                              <th>Amount</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>  HOPE Tax Credit</td>
-                          <td>$580m</td>
-                        </tr>
-                        <tr>
-                          <td>  Lifetime Learning Credit</td>
-                          <td>$3,920m</td>
-                        </tr>
-                        <tr>
-                          <td>  American Opportunity Tax Credit*</td>
-                          <td>$21,560m</td>
-                        </tr>
-                        <tr>
-                          <td>  Education IRA</td>
-                          <td>$80m</td>
-                        </tr>
-                        <tr>
-                          <td>  Deductibility of Student Loan Interest</td>
-                          <td>$900m</td>
-                        </tr>
-                        <tr>
-                          <td>  Deductibility of Higher Education Expenses</td>
-                          <td>$0</td>
-                        </tr>
-                        <tr>
-                          <td>  Qualified Tuition Plans (529 College   Savings Plans)</td>
-                          <td>$1,890m</td>
-                        </tr>
-                        <tr>
-                          <td>       Subtotal Education</td>
-                          <td>$28,930m</td>
-                        </tr>
-                      </tbody>
+                  <tbody>
+                  <tr>
+                    <td><h4><strong>Total Education</strong></h4></td>
+                    <td width="100"><h4><strong>$74,483</strong></h4></td>
+                  </tr>
+                  </tbody>
                   </table>
                   </div>
                   <div class="modal-footer">

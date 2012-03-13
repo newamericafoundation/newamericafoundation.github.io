@@ -48,7 +48,7 @@ var chart;
 			},
 			labels: {
 			  formatter: function() {
-				return '$'+this.value +'B';
+				return '$'+this.value +'M';
 			  }
 			},
 			max:485,
@@ -64,7 +64,18 @@ var chart;
 		tooltip: {
 			style: {
 				fontSize: '9px',	
-			}
+			},
+			formatter: function() {
+			  var s;
+			  if (this.point.name) { // the pie chart
+				 s = ''+
+					this.point.name +': $'+ this.y + ' billion';
+			  } else {
+				 s = ''+
+					this.series.name  +': $'+ this.y + ' billion';
+			  }
+			  return s;
+		   }
 		},
 		labels: {
 			items: [{
@@ -132,9 +143,7 @@ var chart;
 			enabled: false	
 		},
 		tooltip: {
-			style: {
-				fontSize: '9px',	
-			},
+			enabled: false
 		},
 		series: [{
 		   type: 'pie',
@@ -186,7 +195,7 @@ var chart;
 			},
 			labels: {
 			  formatter: function() {
-				return '$'+this.value +'B';
+				return '$'+this.value +'M';
 			  }
 			},
 			max:485,
@@ -209,7 +218,7 @@ var chart;
 					this.point.name +': $'+ this.y + ' billion';
 			  } else {
 				 s = ''+
-					this.series.name  +': '+ this.y;
+					this.series.name  +': $'+ this.y + ' billion';
 			  }
 			  return s;
 		   }
@@ -285,7 +294,7 @@ var chart;
 			},
 			labels: {
 			  formatter: function() {
-				return '$'+this.value +'B';
+				return '$'+this.value +'M';
 			  }
 			},
 			max:485,
@@ -298,20 +307,7 @@ var chart;
 			startOnTick: true,
 		},
 		tooltip: {
-			style: {
-				fontSize: '9px',	
-			},
-			formatter: function() {
-			  var s;
-			  if (this.point.name) { // the pie chart
-				 s = ''+
-					this.point.name +': $'+ this.y + ' billion';
-			  } else {
-				 s = ''+
-					this.series.name  +': '+ this.y;
-			  }
-			  return s;
-		   }
+			enabled: false
 		},
 		series: [{
 		   type: 'pie',
@@ -363,7 +359,7 @@ var chart;
 			},
 			labels: {
 			  formatter: function() {
-				return '$'+this.value +'B';
+				return '$'+this.value +'M';
 			  }
 			},
 			max:485,
@@ -386,7 +382,7 @@ var chart;
 					this.point.name +': $'+ this.y + ' billion';
 			  } else {
 				 s = ''+
-					this.series.name  +': '+ this.y;
+					this.series.name  +': $'+ this.y + ' billion';
 			  }
 			  return s;
 		   }
@@ -461,7 +457,7 @@ var chart;
 			},
 			labels: {
 			  formatter: function() {
-				return '$'+this.value +'B';
+				return '$'+this.value +'M';
 			  }
 			},
 			max:485,
@@ -474,20 +470,7 @@ var chart;
 			startOnTick: true,
 		},
 		tooltip: {
-			style: {
-				fontSize: '9px',	
-			},
-			formatter: function() {
-			  var s;
-			  if (this.point.name) { // the pie chart
-				 s = ''+
-					this.point.name +': $'+ this.y + ' billion';
-			  } else {
-				 s = ''+
-					this.series.name  +': '+ this.y;
-			  }
-			  return s;
-		   }
+			enabled: false
 		},
 		series: [{
 		   type: 'pie',
@@ -539,7 +522,7 @@ var chart;
 			},
 			labels: {
 			  formatter: function() {
-				return '$'+this.value +'B';
+				return '$'+this.value +'M';
 			  }
 			},
 			max:485,
@@ -562,7 +545,7 @@ var chart;
 					this.point.name +': $'+ this.y + ' billion';
 			  } else {
 				 s = ''+
-					this.series.name  +': '+ this.y;
+					this.series.name  +': $'+ this.y + ' billion';
 			  }
 			  return s;
 		   }
@@ -638,7 +621,7 @@ var chart;
 			},
 			labels: {
 			  formatter: function() {
-				return '$'+this.value +'B';
+				return '$'+this.value +'M';
 			  }
 			},
 			max:485,
@@ -651,20 +634,7 @@ var chart;
 			startOnTick: true,
 		},
 		tooltip: {
-			style: {
-				fontSize: '9px',	
-			},
-			formatter: function() {
-			  var s;
-			  if (this.point.name) { // the pie chart
-				 s = ''+
-					this.point.name +': $'+ this.y + ' billion';
-			  } else {
-				 s = ''+
-					this.series.name  +': '+ this.y;
-			  }
-			  return s;
-		   }
+			enabled: false
 		},
 		series: [{
 		   type: 'pie',
@@ -716,7 +686,7 @@ var chart;
 			},
 			labels: {
 			  formatter: function() {
-				return '$'+this.value +'B';
+				return '$'+this.value +'M';
 			  }
 			},
 			max:485,
@@ -739,7 +709,7 @@ var chart;
 					this.point.name +': $'+ this.y + ' billion';
 			  } else {
 				 s = ''+
-					this.series.name  +': '+ this.y;
+					this.series.name  +': $'+ this.y + ' billion';
 			  }
 			  return s;
 		   }
@@ -814,7 +784,7 @@ var chart;
 			},
 			labels: {
 			  formatter: function() {
-				return '$'+this.value +'B';
+				return '$'+this.value +'M';
 			  }
 			},
 			max:485,
@@ -827,20 +797,7 @@ var chart;
 			startOnTick: true,
 		},
 		tooltip: {
-			style: {
-				fontSize: '9px',	
-			},
-			formatter: function() {
-			  var s;
-			  if (this.point.name) { // the pie chart
-				 s = ''+
-					this.point.name +': $'+ this.y + ' billion';
-			  } else {
-				 s = ''+
-					this.series.name  +': '+ this.y;
-			  }
-			  return s;
-		   }
+			enabled: false
 		},
 		series: [{
 		   type: 'pie',
