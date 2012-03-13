@@ -135,17 +135,6 @@ var chart;
 			style: {
 				fontSize: '9px',	
 			},
-			formatter: function() {
-			  var s;
-			  if (this.point.name) { // the pie chart
-				 s = ''+
-					this.point.name +': $'+ this.y + ' billion';
-			  } else {
-				 s = ''+
-					this.series.name  +': '+ this.y;
-			  }
-			  return s;
-		   }
 		},
 		series: [{
 		   type: 'pie',
