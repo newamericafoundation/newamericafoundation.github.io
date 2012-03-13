@@ -1,11 +1,5 @@
 	var cycleMap, userCenter, userZoom;
 
-	function savings(){
-		$('.hiddenSavings').hide();
-		$('.hiddenSavings').slideDown(2000);
-	}//end Savings	
-
-
 	function buildMap(url){	
 		var m;		
 		wax.tilejson(url, function(tilejson) {
