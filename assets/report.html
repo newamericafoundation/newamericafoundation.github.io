@@ -42,6 +42,7 @@
 		homeowernship();
 		education();
 		retirement();
+		savings();
 		$("#li00").click(function() {
 		  $('#pie2000').fadeIn('slow');
 		  $('#pie2008').fadeOut('slow');
@@ -66,8 +67,7 @@
 			homeowernship();
 			education();
 			retirement();
-			// $('#li08').addClass('active');
-			
+			savings();
 			});
 	  });
 	</script>
@@ -603,20 +603,20 @@
     </div> <!-- /.span5 -->
     </div>
     
-    <div class="row">
-    <div class="span4 offset1">
+    <div class="row" style="min-height:70px;">
+    <div class="span4 offset1 hiddenSavings" style="display:none;">
     <h1 style="margin-bottom:10px;font-size:600%;font-weight:500;text-align:center;">43%</h1>
     </div> <!-- /.span5 -->
-    <div class="span4 offset2">
+    <div class="span4 offset2 hiddenSavings" style="display:none;">
     <h1 style="margin-bottom:10px;font-size:600%;font-weight:500;text-align:center;">$4,632</h1>
     </div> <!-- /.span5 -->
     </div> <!-- /.row -->
     
-    <div class="row">
-    <div class="span6" style="text-align:center;">
+    <div class="row" style="min-height:90px;">
+    <div class="span6 hiddenSavings" style="text-align:center;display:none;">
     <h2 class="head">of U.S. households lack sufficient savings</h2>
     </div> <!-- / .span3 -->
-    <div class="span6" style="text-align:center;">
+    <div class="span6 hiddenSavings" style="text-align:center;display:none;">
     <h2 class="head">amount of savings a family of three needs</h2>
     </div> <!-- /.span5 -->
     </div><!-- /.row -->
@@ -724,10 +724,10 @@
     		<span id="savingsGraphPie" style="position: absolute;right:0px;top: 17px;z-index: 1000;width:80px;"></span> <a class="btn btn-danger more-data" href="#savingsModal" data-toggle="modal">Data</a>
 		</div>
     </div>
+    </div> <!-- end .staple -->
 	<div class="span6 offset1">
       <h3>No portion of the federal budget supports families saving for emergencies.</h3> 	
     </div><!-- /.span6 -->
-    </div> <!-- end .staple -->
     </div><!-- end .row -->
     <div class="row">
     <div class="span12">

@@ -181,6 +181,10 @@ h1.sectionTagline{
 	line-height: 44px;
 }
 
+.hiddenSavings{
+	display:none;
+}
+
 /* ======================================== HOMEOWNERSHIP ======================================== */
 
 .row-homeownership .homeownership-well .well {
