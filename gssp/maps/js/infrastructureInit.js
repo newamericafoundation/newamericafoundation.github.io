@@ -31,16 +31,22 @@ function buildMap(url, container){
 							        this._currentTooltip = this.getTooltip(feature, context)
 							    }
 								var newWidth=100;
-								var piText =$('#piCat', this._currentTooltip).html()
+								var piText =$('#iu', this._currentTooltip).html()
 								switch(piText){
+									case '5': 
+										$('#iu', this._currentTooltip).addClass('numberAlert numberAlert-high');
+										break;
 									case '4': 
-										$('#piCat', this._currentTooltip).addClass('numberAlert numberAlert-high');
+										$('#iu', this._currentTooltip).addClass('numberAlert numberAlert-high');
 										break;
 									case '3': 
-										$('#piCat', this._currentTooltip).addClass('numberAlert numberAlert-medium');
+										$('#iu', this._currentTooltip).addClass('numberAlert numberAlert-medium');
 										break;
 									case '2': 
-										$('#piCat', this._currentTooltip).addClass('numberAlert numberAlert-low');
+										$('#iu', this._currentTooltip).addClass('numberAlert numberAlert-low');
+										break;
+									case '1': 
+										$('#iu', this._currentTooltip).addClass('numberAlert numberAlert-low');
 										break;
 								}
 								
