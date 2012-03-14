@@ -31,22 +31,22 @@ function buildMap(url, container){
 							        this._currentTooltip = this.getTooltip(feature, context)
 							    }
 								var newWidth=100;
-								var piText =$('#iu', this._currentTooltip).html()
-								switch(piText){
+								var iuText =$('#iu', this._currentTooltip).html()
+								switch(iuText){
 									case '5': 
-										$('#iu', this._currentTooltip).addClass('numberAlert numberAlert-high');
+										$('#iu', this._currentTooltip).addClass('numberAlert numberAlert-5');
 										break;
 									case '4': 
-										$('#iu', this._currentTooltip).addClass('numberAlert numberAlert-high');
+										$('#iu', this._currentTooltip).addClass('numberAlert numberAlert-4');
 										break;
 									case '3': 
-										$('#iu', this._currentTooltip).addClass('numberAlert numberAlert-medium');
+										$('#iu', this._currentTooltip).addClass('numberAlert numberAlert-3');
 										break;
 									case '2': 
-										$('#iu', this._currentTooltip).addClass('numberAlert numberAlert-low');
+										$('#iu', this._currentTooltip).addClass('numberAlert numberAlert-2');
 										break;
 									case '1': 
-										$('#iu', this._currentTooltip).addClass('numberAlert numberAlert-low');
+										$('#iu', this._currentTooltip).addClass('numberAlert numberAlert-1');
 										break;
 								}
 								
@@ -149,15 +149,22 @@ function buildMap(url, container){
 							
 								var newWidth=100;
 								var piText =$('#piCat', this._currentTooltip).html()
-								switch(piText){
-									case 'High': 
-										$('#piCat', this._currentTooltip).addClass('numberAlert numberAlert-high');
+								var iuText =$('#iu', this._currentTooltip).html()
+								switch(iuText){
+									case '5': 
+										$('#iu', this._currentTooltip).addClass('numberAlert numberAlert-5');
 										break;
-									case 'Medium': 
-										$('#piCat', this._currentTooltip).addClass('numberAlert numberAlert-medium');
-										break;2
-									case 'Low': 
-										$('#piCat', this._currentTooltip).addClass('numberAlert numberAlert-low');
+									case '4': 
+										$('#iu', this._currentTooltip).addClass('numberAlert numberAlert-4');
+										break;
+									case '3': 
+										$('#iu', this._currentTooltip).addClass('numberAlert numberAlert-3');
+										break;
+									case '2': 
+										$('#iu', this._currentTooltip).addClass('numberAlert numberAlert-2');
+										break;
+									case '1': 
+										$('#iu', this._currentTooltip).addClass('numberAlert numberAlert-1');
 										break;
 								}
 								

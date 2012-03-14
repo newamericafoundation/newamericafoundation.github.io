@@ -31,7 +31,7 @@
 
   <!-- <link href='styles/controls.css' rel='stylesheet' type='text/css' /> -->
 <script>
-buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-iu-1.jsonp', 'mainMap');
+buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-iu-4.jsonp', 'mainMap');
 			
 			var dataLabels = [[0,'Deposit accounts at banks (per 1000 adults)','http://a.tiles.mapbox.com/v3/newamerica.gssp-com-adults.jsonp',"Although simply having a bank account does not mean that one will make use of it, it is an important first step to having the opportunity to save money, access credit and access financial services. An excellent illustration of a country with a large number of bank accounts but relatively minimal use is Argentina, with a Deposit accounts per 1000 adults score of 4, but value as % of GDP and per capital income at 1.",'comAdult'],[1,'Value as % of GDP','http://a.tiles.mapbox.com/v3/newamerica.gssp-com-sqkm.jsonp',"The relationship of the Value of accounts as percentage of GDP and Average account value as percentage of income per capita can be seen as an illustration of the difference between the net amount of national savings vs its average amount of individual savings rate. For instance, in Thailand, the value of deposit accounts as a percentage of GDP nets a score of 5, which reflects a high value of net national savings while the average account value as a percentage of income per capita is only in the second quintile.",'comSqkm'],[2,'Average account value as % of income per capita','http://a.tiles.mapbox.com/v3/newamerica.gssp-alt-adults.jsonp',"The relationship of the Value of accounts as percentage of GDP and Average account value as percentage of income per capita can be seen as an illustration of the difference between the net amount of national savings vs its average amount of individual savings rate.  For instance, in Ehtiopia, the net value of all savings accounts is in the lowermost quintile as a share of GDP, but its average account value as a percentage of per capita income is in the uppermost, which reflects a high rate of individual savings.",'altAdult'],[3,"Deposit accounts at Other FI's (per 1000 adults)",'http://a.tiles.mapbox.com/v3/newamerica.gssp-alt-sqkm.jsonp',"Where commercial banks are not accessible or convenient, many people access financial services through alternative financial institutions such as cooperatives and microfinance institutions.Burkina Faso is an excellent example of a country in which, although access to formal financial services through commercial banks is low, the use of Alternative Financial Institutions is quite high. In general, it is likely more efficient and cost effective to pursue financial inclusion for the poorest of the poor via these types of alternative methods - in addition to potentially through mobile banking - than through brick and mortar commercial banks.",'altSqkm'],[4,'Average account value as % of GDP - Other FIs','http://a.tiles.mapbox.com/v3/newamerica.gssp-atm-adults.jsonp',"The relationship of the Value of accounts as percentage of GDP and Average account value as percentage of income per capita can be seen as an illustration of the difference between the net amount of national savings vs its average amount of individual savings rate. For instance, in Jamaica, the net value of all savings accounts is in the uppermost quintile as a share of GDP, but its average account value as a percentage of per capita income is in the lowermost.",'atmAdult'],[5,'Average account value (% of income per capita) - Other FIs','http://a.tiles.mapbox.com/v3/newamerica.gssp-atm-sqkm.jsonp',"The relationship of the Value of accounts as percentage of GDP and Average account value as percentage of income per capita can be seen as an illustration of the difference between the net amount of national savings vs its average amount of individual savings rate. For instance, in Argentina, the net value of all savings accounts is in the lowermost quintile as a share of GDP, but its average account value as a percentage of per capita income is in the 4th quintile.",'atmSqkm'],[6,'Basic Account provision','http://a.tiles.mapbox.com/v3/newamerica.gssp-pos-adults.jsonp',"this variable assess whether the government or regulator requires financial institutions to offer a basic, low-cost and no-frills acount that caters to the needs of low-income people. This information was compiled from both the World Economic Forum’s Financial Services Development Report and CGAP.",'posAdult'],[7,'Inbound remittances (millions US$)','http://a.tiles.mapbox.com/v3/newamerica.gssp-pos-sqkm.jsonp',"Remittances, though not always processed through formal financial institutions such as banks, offer an important window into the extent to which money is flowing easily into and out of a country. As a result, poor and middle income countries with significant remittance inflows, such as Bangladesh, Mexico and the Philippines, offer unique opportunities to governments, banks, MFIs and funders pursuing a social protection and financial inclusion agenda.",'posSqkm'],[8,'Inbound remittances (% of GDP)','http://a.tiles.mapbox.com/v3/newamerica.gssp-mobile.jsonp',"Remittances, though not always processed through formal financial institutions such as banks, offer an important window into the extent to which money is flowing easily into and out of a country. An interesting contrast can be drawn between countries with high amount of remittances in millions vs the percentage that remittances are as a fraction of GDP. For instance, Brazil has one of the highest amount of remittances, but this pales in comparison to the country’s GDP, whereas the opposite relation is seen in Lesotho and Nicaragua.",'mobilePen'],[9,'Mobile financial services adoption','http://a.tiles.mapbox.com/v3/newamerica.gssp-fl.jsonp',"This is a composite variable contained in the Mobile Financial Services Development Report 2011. In short, the variable reflects the following seven ‘pillars’: Regulatory proportionality, Consumer protection, Market competitiveness, Market catalysts, End-user empowerment and access, Distribution and agent network and Adoption and availability. ",'finLit'],[10,"Women's access to bank loans (0-1 scale)", 'http://a.tiles.mapbox.com/v3/newamerica.gssp-com-access.jsonp',"No analysis of the usage of payment infrastructure could be complete without taking into account the different accessibility of financial services to women and girls. This variable, from the OECD/'s Gender, Institutions and Development Database (2009), is described as follows: /'women/'s access to credit measures women/'s right and de facto access to bank loans; even though women generally have the legal right to obtain credit, they frequently face restrictions as banks may ask the written permission of a woman/'s husband or require land a collateral which women are frequently deprived of./'",'']]
 	
@@ -66,7 +66,7 @@ $(document).ready(function() {
 	}
 	$('#layerMain').click(function(){		
 		$('li').removeClass('active');
-		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-iu-1.jsonp', 'mainMap');		
+		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-iu-4.jsonp', 'mainMap');		
 		$('.map').removeClass('activeMap');
 		$('#layerMain').toggleClass('active');
 		
@@ -107,11 +107,7 @@ function newMap(layerId){
 }
 	
 </script>
-<style>
 
-
-
-</style>
 <title>Infrastructure Utilization</title>
 
 </head>
@@ -174,7 +170,13 @@ function newMap(layerId){
 			<div id="layerSwitcher" class="row span12 navbar-inner">
 				<ul class="nav nav-pills custom-pills">
 					<li id="layerMain" class="active"><a href="#">Infrastructure Utilization</a></li>
-					<li id="layer0"><a href="#">Deposit accounts at banks (per 1000 adults)</a></li>
+					<li class="dropdown">
+				    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Deposit accounts (per 1000 adults)<b class="caret"></b></a>
+				    	<ul class="dropdown-menu">
+							<li id="layer0"><a href="#">at banks</a></li>
+				      		<li id="layer3"><a href="#">at Other FIs</a></li>
+				    	</ul>
+				  	</li>
 				  	<li class="dropdown">
 				    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Average account value <b class="caret"></b></a>
 				    	<ul class="dropdown-menu">
@@ -182,7 +184,7 @@ function newMap(layerId){
 				      		<li id="layer2"><a href="#">as % of income per capita</a></li>
 				    	</ul>
 				  	</li>
-					<li id="layer3"><a href="#">Deposit accounts at Other FIs (per 1000 adults)</a></li>
+					
 					<li class="dropdown">
 				    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Average account value - Other FIs<b class="caret"></b></a>
 				    	<ul class="dropdown-menu">

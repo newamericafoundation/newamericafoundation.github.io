@@ -634,6 +634,29 @@ a.share:active {
 	color:#333;
 }
 
+.numberAlert-5{
+	background:#B30000;
+}
+
+.numberAlert-4{
+	background:#E34A33;
+}
+
+.numberAlert-3{
+	background:#FC8D59;
+}
+
+.numberAlert-2{
+	background:#FDCC8A;
+	color:#333;
+}
+
+.numberAlert-1{
+	background:#FEF0D9;
+	color:#333;
+}
+
+
 .light{
 	color:#a4a4a4;
 }
