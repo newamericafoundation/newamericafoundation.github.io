@@ -190,9 +190,18 @@ var chart;
 		series: [{
 			type: 'pie',
 			name: 'Percent Home Equity',
+			
 			data: [
-				['Other',   17.0],
-				['Home Equity', 83]
+				{
+					name:'other',
+					y: 17,
+					color:'#464646'
+				},
+				{
+					name:'Home Equity',
+					y: 83,
+					color:'#6E022A'
+				}
 
 			]
 		}]
@@ -234,8 +243,16 @@ var chart;
 			type: 'pie',
 			name: 'Percent Home Equity',
 			data: [
-				['Other',   4],
-				['Home Equity', 96]
+				{
+					name:'other',
+					y: 4,
+					color:'#464646'
+				},
+				{
+					name:'Home Equity',
+					y: 96,
+					color:'#6E022A'
+				}
 
 			]
 		}]
@@ -278,8 +295,16 @@ var chart;
 			type: 'pie',
 			name: 'Percent Home Equity',
 			data: [
-				['Other',   10],
-				['Home Equity', 90]
+				{
+					name:'other',
+					y: 10,
+					color:'#464646'
+				},
+				{
+					name:'Home Equity',
+					y: 90,
+					color:'#6E022A'
+				}
 
 			]
 		}]
