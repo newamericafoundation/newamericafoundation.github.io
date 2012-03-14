@@ -59,7 +59,7 @@ function retirement(){
 			series: [
 	        {
 				type: 'area',
-				data: [80, 73],
+				data: [80, 73]
 			}]
 		 });
   
