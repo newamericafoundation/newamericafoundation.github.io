@@ -34,22 +34,22 @@ var chart;
 		},
 		yAxis: {
 			min: 0,
-			max: 45000,
-			tickInterval: 15000,
+			max: 20000000,
+//			tickInterval: 15000,
 			title: {
 				text: null,
 			},
 			reversed: true,
 			labels: {
 			  formatter: function() {
-				return '$' + Highcharts.numberFormat(this.value, 0) + 'b';
+				return Highcharts.numberFormat(this.value, 0);
 			  }
 			},
 		},
 		tooltip: {
 			formatter: function() {
 				return ''+
-					this.series.name +': $'+ Highcharts.numberFormat(this.y, 0) + 'b';
+					this.series.name +': '+ Highcharts.numberFormat(this.y, 0);
 			}
 		},
 		plotOptions: {
@@ -61,7 +61,7 @@ var chart;
 					y: 5,
 					formatter: function() {
 						return ''+
-							'$' + Highcharts.numberFormat(this.y, 0) + 'm';
+							Highcharts.numberFormat(this.y, 0);
 					}
 				}
 			},
@@ -85,7 +85,7 @@ var chart;
 		},
 		series: [{
 			name: 'Mortgage Interest Deduction',
-			data: [0, 063, 258, 654, 1324, 6855, 8748, 35609, 29142]
+			data: [500, 196000, 481000, 985000, 1797000, 5750000, 5966000, 13932000, 4575000]
 		}]
 	});
 

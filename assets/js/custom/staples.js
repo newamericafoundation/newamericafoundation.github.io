@@ -48,10 +48,11 @@ var chart;
 			},
 			labels: {
 			  formatter: function() {
-				return '$'+this.value +'M';
+				return '$'+this.value +'B';
 			  }
 			},
-			max:485,
+			max:300,
+			tickInterval: 100
 		},
 		xAxis: {
 			labels: {
@@ -195,10 +196,11 @@ var chart;
 			},
 			labels: {
 			  formatter: function() {
-				return '$'+this.value +'M';
+				return '$'+this.value +'B';
 			  }
 			},
-			max:485,
+			max:300,
+			tickInterval: 100
 		},
 		xAxis: {
 			labels: {
@@ -294,10 +296,11 @@ var chart;
 			},
 			labels: {
 			  formatter: function() {
-				return '$'+this.value +'M';
+				return '$'+this.value +'B';
 			  }
 			},
-			max:485,
+			max:300,
+			tickInterval: 100
 		},
 		xAxis: {
 			labels: {
@@ -359,10 +362,11 @@ var chart;
 			},
 			labels: {
 			  formatter: function() {
-				return '$'+this.value +'M';
+				return '$'+this.value +'B';
 			  }
 			},
-			max:485,
+			max:300,
+			tickInterval: 100
 		},
 		xAxis: {
 			labels: {
@@ -457,10 +461,11 @@ var chart;
 			},
 			labels: {
 			  formatter: function() {
-				return '$'+this.value +'M';
+				return '$'+this.value +'B';
 			  }
 			},
-			max:485,
+			max:300,
+			tickInterval: 100
 		},
 		xAxis: {
 			labels: {
@@ -522,10 +527,11 @@ var chart;
 			},
 			labels: {
 			  formatter: function() {
-				return '$'+this.value +'M';
+				return '$'+this.value +'B';
 			  }
 			},
-			max:485,
+			max:300,
+			tickInterval: 100
 		},
 		xAxis: {
 			labels: {
@@ -621,10 +627,11 @@ var chart;
 			},
 			labels: {
 			  formatter: function() {
-				return '$'+this.value +'M';
+				return '$'+this.value +'B';
 			  }
 			},
-			max:485,
+			max:300,
+			tickInterval: 100
 		},
 		xAxis: {
 			labels: {
@@ -686,10 +693,11 @@ var chart;
 			},
 			labels: {
 			  formatter: function() {
-				return '$'+this.value +'M';
+				return '$'+this.value +'B';
 			  }
 			},
-			max:485,
+			max:300,
+			tickInterval: 100
 		},
 		xAxis: {
 			labels: {
@@ -784,10 +792,11 @@ var chart;
 			},
 			labels: {
 			  formatter: function() {
-				return '$'+this.value +'M';
+				return '$'+this.value +'B';
 			  }
 			},
-			max:485,
+			max:300,
+			tickInterval: 100
 		},
 		xAxis: {
 			labels: {
