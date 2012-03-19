@@ -129,7 +129,6 @@ var chart;
 		chart: {
 		   renderTo: 'retirementGraphPie',
 		   plotBorderWidth: null,
-		   spacingRight:100
 		},
 		title: {
 		   text: null
@@ -146,6 +145,19 @@ var chart;
 		tooltip: {
 			enabled: false
 		},
+		labels: {
+			items: [{
+				html: '30%',
+				style: {
+					left: '148px',
+					top: '31px',
+					color: 'black',
+					fontWeight: 'bold',
+					fontSize: '16px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
+				}
+			}]
+		},
 		series: [{
 		   type: 'pie',
 		   name: 'Budget slice',
@@ -158,13 +170,9 @@ var chart;
 			  color: '#696930',
 			  y: 165.430,
 		   }],
-		   center: [20, 28],
-		   // spacingLeft: 100,
 		   size: 50,
+		   innerSize: '50%',
 		   showInLegend: false,
-		   dataLabels: {
-			  enabled: false
-		   },
 		   borderColor: '#000000',
 		},]
 	 });
@@ -276,7 +284,6 @@ var chart;
 		chart: {
 		   renderTo: 'savingsGraphPie',
 		   plotBorderWidth: null,
-		   spacingRight:100
 		},
 		title: {
 		   text: null
@@ -290,27 +297,21 @@ var chart;
 		legend: {
 			enabled: false	
 		},
-		yAxis: {
-			title: {
-				text: null
-			},
-			labels: {
-			  formatter: function() {
-				return '$'+this.value +'B';
-			  }
-			},
-			max:300,
-			tickInterval: 100
-		},
-		xAxis: {
-			labels: {
-				enabled: false	
-			},
-			endOnTick: true,
-			startOnTick: true,
-		},
 		tooltip: {
 			enabled: false
+		},
+		labels: {
+			items: [{
+				html: '21%',
+				style: {
+					left: '148px',
+					top: '31px',
+					color: 'black',
+					fontWeight: 'bold',
+					fontSize: '16px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
+				}
+			}]
 		},
 		series: [{
 		   type: 'pie',
@@ -324,13 +325,9 @@ var chart;
 			  color: '#696930',
 			  y: 115.422,
 		   }],
-		   center: [20, 28],
-		   spacingLeft: 100,
-		   size: 40,
+		   size: 50,
+		   innerSize: '50%',
 		   showInLegend: false,
-		   dataLabels: {
-			  enabled: false
-		   },
 		   borderColor: '#000000',
 		}]
 	 });
@@ -441,7 +438,8 @@ var chart;
 	 chart = new Highcharts.Chart({
 		chart: {
 		   renderTo: 'homeownershipGraphPie',
-		   plotBorderWidth: null
+		   plotBorderWidth: null,
+		   type: 'pie',
 		},
 		title: {
 		   text: null
@@ -455,47 +453,36 @@ var chart;
 		legend: {
 			enabled: false	
 		},
-		yAxis: {
-			title: {
-				text: null
-			},
-			labels: {
-			  formatter: function() {
-				return '$'+this.value +'B';
-			  }
-			},
-			max:300,
-			tickInterval: 100
-		},
-		xAxis: {
-			labels: {
-				enabled: false	
-			},
-			endOnTick: true,
-			startOnTick: true,
-		},
 		tooltip: {
 			enabled: false
 		},
+		labels: {
+			items: [{
+				html: '64%',
+				style: {
+					left: '148px',
+					top: '31px',
+					color: 'black',
+					fontWeight: 'bold',
+					fontSize: '16px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
+				}
+			}]
+		},
 		series: [{
-		   type: 'pie',
 		   name: 'Budget slice',
+		   size: 50,
+		   innerSize: '50%',
 		   data: [{
-			  name: 'Other assets spending',
+			  name: 'Other',
 			  color: '#d0d0c3',
 			  y: 198.941,
 		   }, {
-			  name: 'Homeownership spending',
+			  name: 'Homeownership',
 			  color: '#696930',
 			  y: 355.937,
 		   }],
-		   center: [20, 28],
-		   spacingLeft: 100,
-		   size: 40,
 		   showInLegend: false,
-		   dataLabels: {
-			  enabled: false
-		   },
 		   borderColor: '#000000',
 		}]
 	 });
@@ -607,7 +594,6 @@ var chart;
 		chart: {
 		   renderTo: 'postEdGraphPie',
 		   plotBorderWidth: null,
-		   spacingRight:100
 		},
 		title: {
 		   text: null
@@ -621,27 +607,21 @@ var chart;
 		legend: {
 			enabled: false	
 		},
-		yAxis: {
-			title: {
-				text: null
-			},
-			labels: {
-			  formatter: function() {
-				return '$'+this.value +'B';
-			  }
-			},
-			max:300,
-			tickInterval: 100
-		},
-		xAxis: {
-			labels: {
-				enabled: false	
-			},
-			endOnTick: true,
-			startOnTick: true,
-		},
 		tooltip: {
 			enabled: false
+		},
+		labels: {
+			items: [{
+				html: '13%',
+				style: {
+					left: '148px',
+					top: '31px',
+					color: 'black',
+					fontWeight: 'bold',
+					fontSize: '16px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
+				}
+			}]
 		},
 		series: [{
 		   type: 'pie',
@@ -655,13 +635,9 @@ var chart;
 			  color: '#696930',
 			  y: 74.483,
 		   }],
-		   center: [20, 28],
-		   spacingLeft: 100,
-		   size: 40,
+		   size: 50,
+		   innerSize: '50%',
 		   showInLegend: false,
-		   dataLabels: {
-			  enabled: false
-		   },
 		   borderColor: '#000000',
 		}]
 	 });
@@ -786,27 +762,21 @@ var chart;
 		legend: {
 			enabled: false	
 		},
-		yAxis: {
-			title: {
-				text: null
-			},
-			labels: {
-			  formatter: function() {
-				return '$'+this.value +'B';
-			  }
-			},
-			max:300,
-			tickInterval: 100
-		},
-		xAxis: {
-			labels: {
-				enabled: false	
-			},
-			endOnTick: true,
-			startOnTick: true,
-		},
 		tooltip: {
 			enabled: false
+		},
+		labels: {
+			items: [{
+				html: '<1%',
+				style: {
+					left: '148px',
+					top: '31px',
+					color: 'black',
+					fontWeight: 'bold',
+					fontSize: '16px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
+				}
+			}]
 		},
 		series: [{
 		   type: 'pie',
@@ -820,13 +790,9 @@ var chart;
 			  color: '#696930',
 			  y: .602,
 		   }],
-		   center: [20, 28],
-		   spacingLeft: 100,
-		   size: 40,
+		   size: 50,
+		   innerSize: '50%',
 		   showInLegend: false,
-		   dataLabels: {
-			  enabled: false
-		   },
 		   borderColor: '#000000',
 		}]
 	 });

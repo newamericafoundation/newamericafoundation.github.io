@@ -117,7 +117,6 @@ function retirement(){
 			   borderColor: '#000000',
 			   size: 105,
 			   innerSize: '70%',
-			   innerSize: '70%',
 			}]
 		 });
 
