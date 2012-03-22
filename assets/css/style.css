@@ -240,7 +240,7 @@ h3.header {
 .ed-tabs {
 	margin-bottom: -2px !important;
 	position:relative;
-	border-bottom: 0;	
+	border-bottom: 0;
 }
 
 .ed-tabs a {
@@ -249,16 +249,16 @@ h3.header {
 
 .ed-tabs li a,
 .ed-tabs li a:hover {
-	background-color: #FFF;	
+	background-color: #D0D0C3;	
 }
 
 .ed-tabs li.ed-active a {
-    background-color: #D0D0C3;
+    background-color: #fff;
 }
 
 .ed-tabs li.ed-active a:hover {
-    background-color: #D0D0C3;
-	color: #FFF;
+    background-color: #fff;
+	color: #D0D0C3;
 }
 
 .alert-pies {
