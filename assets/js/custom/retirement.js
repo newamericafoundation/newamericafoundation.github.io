@@ -476,4 +476,68 @@ function retirement(){
 			   borderColor: '#000000',
 			}]
 		 });
+		
+		// bar chart
+		
+		var chart;
+			 chart = new Highcharts.Chart({
+				chart: {
+				   renderTo: 'retirement-bar',
+				   plotBackgroundColor: null,
+				   plotBorderWidth: null,
+				},
+				yAxis: {
+					title: {
+						text: null
+					},
+					labels: {
+					  formatter: function() {
+						return this.value +'%';
+					  }
+					},
+					max:100,
+					min:0,
+					tickInterval: 25,
+					offset: 10,
+					minorGridLineWidth: 0,
+					gridLineWidth: 0.2,
+				},
+				xAxis: {
+					categories: ["Highest", "Second Highest","Middle","Second Lowest","Lowest"],
+				},
+				tooltip: {
+					style: {
+						fontSize: '9px',	
+					},
+					formatter: function() {
+					  var s;
+					  if (this.point.name) { // the pie chart
+						 s = ''+
+							this.point.name +': '+ this.y + '%';
+					  } else {
+						 s = ''+
+							this.y + '%';
+					  }
+					  return s;
+				   }
+				},
+				plotOptions: {
+					bar: {
+						dataLabels: {
+							enabled: true,
+							formatter: function() {
+								return this.y + '%';
+							},
+							style: {
+								fontSize: '14px',
+								fontWeight: 'bold'					
+							},
+						},
+					}
+				},
+				series: [{
+					type: 'bar',
+					data: [80,13,6,2,0],
+				}]
+			 });
 } // end retirement
