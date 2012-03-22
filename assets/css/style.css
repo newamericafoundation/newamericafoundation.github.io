@@ -302,6 +302,7 @@ overflow: hidden;
 	color:#6E022A;
 	top: 15px;
 	position:relative;
+	text-shadow:1px 1px 1px #ccc;
 }
 
 .edu-number-big{
