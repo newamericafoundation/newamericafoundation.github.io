@@ -58,6 +58,35 @@
 			$(this).addClass("ed-active");
 		  }
 		});
+		$(window).scroll(function(){
+			if(isScrolledIntoView('#retirement')){
+				retirement();
+			};
+			if(isScrolledIntoView('#homeowernship')){
+				homeowernship();
+			};
+			
+			if(isScrolledIntoView('#education')){
+				education();
+			};
+		}); //end scroll
+		
+		
+		// credit where credit is due 
+		// http://stackoverflow.com/questions/487073/jquery-check-if-element-is-visible-after-scrolling
+		function isScrolledIntoView(elem)
+		{
+			// console.log(elem)
+		    var docViewTop = $(window).scrollTop();
+		    // var docViewBottom = docViewTop + $(window).height();
+			if($(elem).offset()){
+				var elemTop = $(elem).offset().top;
+			};
+		    
+		    // var elemBottom = elemTop + $(elem).height();
+// ((elemBottom <= docViewBottom) && (elemTop >= docViewTop))
+		    return elemTop >= docViewTop;
+		}
 				
 			
 			
