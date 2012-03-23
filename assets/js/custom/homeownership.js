@@ -309,4 +309,128 @@ var chart;
 			]
 		}]
 	});
+	
+	var chart;
+
+	    $(document).ready(function() {
+
+	        chart = new Highcharts.Chart({
+
+	            chart: {
+
+	                renderTo: 'home-bar',
+
+	                type: 'bar'
+
+	            },
+
+	            title: {
+
+	                text: 'Stacked bar chart'
+
+	            },
+
+	            xAxis: {
+
+	                categories: ['White', 'Hispanic', 'Black']
+
+	            },
+
+	            yAxis: {
+
+	                min: 0,
+
+	                title: {
+
+	                    text: ''
+
+	                }
+
+	            },
+
+	            legend: {
+
+	                backgroundColor: '#FFFFFF',
+
+	                reversed: true
+
+	            },
+
+	            tooltip: {
+
+	                formatter: function() {
+
+	                    return ''+
+
+	                        this.series.name +': '+ this.y +'';
+
+	                }
+
+	            },
+
+	            plotOptions: {
+
+	                series: {
+
+	                    stacking: 'normal'
+
+	                }
+
+	            },
+
+	                series: [{
+						name: 'Net Worth',
+						data: [113992, 6325, 5677],
+						color:'#464646'
+	                // data: [134992, 18359, 12124]
+
+	            }, {
+
+	                name: 'Net Worth Lost',
+					data: [3570, 481, 645],
+					color:'#432D35'
+	                // data: [21000, 12034, 6447]
+
+	            }, {
+
+	                name: 'Home Equity',
+
+	                data: [17430, 11553, 5802],
+					color:'#6E022A'
+	                
+
+	            }]
+
+	        });
+
+	    });
+	
+		$('#netWorth').click(function(){
+			switchGraph('netWorth')
+		});
+		$('#recessionLoss').click(function(){
+			switchGraph('recessionLoss')
+		});
+		$('#equityLoss').click(function(){
+			switchGraph('equityLoss')
+		});
+	
 }//end homeownership
+
+	var titles = {
+		netWorth:{
+		'barWhite':['99','$134,992'],
+		'barHispanic':['25','$18,359'],
+		'barBlack':['20','$12,124']
+	},
+		recessionLoss:{
+		'barWhite':['16','16%'],
+		'barHispanic':['66','66%'],
+		'barBlack':['53','53%']
+	},
+		equityLoss:{
+		'barWhite':['83','83%'],
+		'barHispanic':['96','96%'],
+		'barBlack':['90','90%']
+	}
+}
