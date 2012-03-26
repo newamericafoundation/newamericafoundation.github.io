@@ -184,7 +184,6 @@ h3.header {
 
 .staple h4.pie {
 	margin-top:15px;
-	margin-left:50px;
 	position:absolute;	
 }
 
@@ -412,4 +411,16 @@ footer {
 
 .wax-legend h2{
 	font-size:24px;
+}
+
+/* ======================================== SUP ======================================== */
+
+.sectionTagline sup {
+	font-size: 18px;
+}
+
+h1 sup,
+h2 sup,
+h3 sup {
+	font-size: 18px;	
 }
