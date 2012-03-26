@@ -159,23 +159,33 @@ h3.header {
 }
 
 #savingsGraphBar,
-#savingsGraphPie,
 #homeownershipGraphBar,
-#homeownershipGraphPie,
 #postEdGraphBar,
-#postEdGraphPie,
 #entrepreneurshipGraphBar,
-#entrepreneurshipGraphPie,
-#retirementGraphBar,
-#retirementGraphPie {
+#retirementGraphBar {
 	width: auto;
 	height: 100px;	
+}
+
+#savingsGraphPie,
+#homeownershipGraphPie,
+#postEdGraphPie,
+#entrepreneurshipGraphPie,
+#retirementGraphPie {
+	width: auto;
+	height: 75px;	
 }
 
 .staple h4, 
 .staple h5, 
 .staple h6 {
 	color: #000;
+}
+
+.staple h4.pie {
+	margin-top:15px;
+	margin-left:50px;
+	position:absolute;	
 }
 
 /* ======================================== RETIREMENT ======================================== */

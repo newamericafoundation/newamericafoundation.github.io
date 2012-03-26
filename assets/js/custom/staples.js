@@ -127,61 +127,6 @@ var chart;
   $(document).ready(function() {
 	 chart = new Highcharts.Chart({
 		chart: {
-		   renderTo: 'retirementGraphPie',
-		   plotBorderWidth: null,
-		},
-		title: {
-		   text: null
-		},
-		credits: {
-			enabled: false	
-		},
-		exporting: {
-			enabled: false	
-		},
-		legend: {
-			enabled: false	
-		},
-		tooltip: {
-			enabled: false
-		},
-		labels: {
-			items: [{
-				html: '30%',
-				style: {
-					left: '148px',
-					top: '31px',
-					color: 'black',
-					fontWeight: 'bold',
-					fontSize: '16px',
-					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
-				}
-			}]
-		},
-		series: [{
-		   type: 'pie',
-		   name: 'Budget slice',
-		   data: [{
-			  name: 'Other assets spending',
-			  color: '#d0d0c3',
-			  y: 389.448,
-		   }, {
-			  name: 'Retirement spending',
-			  color: '#696930',
-			  y: 165.430,
-		   }],
-		   size: 50,
-		   innerSize: '50%',
-		   showInLegend: false,
-		   borderColor: '#000000',
-		},]
-	 });
-  });
-
-var chart;
-  $(document).ready(function() {
-	 chart = new Highcharts.Chart({
-		chart: {
 		   renderTo: 'savingsGraphBar',
 		   plotBorderWidth: null,
 		   spacingRight:100
@@ -282,61 +227,6 @@ var chart;
   $(document).ready(function() {
 	 chart = new Highcharts.Chart({
 		chart: {
-		   renderTo: 'savingsGraphPie',
-		   plotBorderWidth: null,
-		},
-		title: {
-		   text: null
-		},
-		credits: {
-			enabled: false	
-		},
-		exporting: {
-			enabled: false	
-		},
-		legend: {
-			enabled: false	
-		},
-		tooltip: {
-			enabled: false
-		},
-		labels: {
-			items: [{
-				html: '21%',
-				style: {
-					left: '148px',
-					top: '31px',
-					color: 'black',
-					fontWeight: 'bold',
-					fontSize: '16px',
-					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
-				}
-			}]
-		},
-		series: [{
-		   type: 'pie',
-		   name: 'Budget slice',
-		   data: [{
-			  name: 'Other assets spending',
-			  color: '#d0d0c3',
-			  y: 439.456,
-		   }, {
-			  name: 'Savings spending',
-			  color: '#696930',
-			  y: 115.422,
-		   }],
-		   size: 50,
-		   innerSize: '50%',
-		   showInLegend: false,
-		   borderColor: '#000000',
-		}]
-	 });
-  });
-
-var chart;
-  $(document).ready(function() {
-	 chart = new Highcharts.Chart({
-		chart: {
 		   renderTo: 'homeownershipGraphBar',
 		   plotBorderWidth: null,
 		   spacingRight:100
@@ -429,61 +319,6 @@ var chart;
 		   color: '#2e1717',
 		   borderColor: '#000000',
 		   data: [1.191],
-		}]
-	 });
-  });
-
-var chart;
-  $(document).ready(function() {
-	 chart = new Highcharts.Chart({
-		chart: {
-		   renderTo: 'homeownershipGraphPie',
-		   plotBorderWidth: null,
-		   type: 'pie',
-		},
-		title: {
-		   text: null
-		},
-		credits: {
-			enabled: false	
-		},
-		exporting: {
-			enabled: false	
-		},
-		legend: {
-			enabled: false	
-		},
-		tooltip: {
-			enabled: false
-		},
-		labels: {
-			items: [{
-				html: '64%',
-				style: {
-					left: '148px',
-					top: '31px',
-					color: 'black',
-					fontWeight: 'bold',
-					fontSize: '16px',
-					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
-				}
-			}]
-		},
-		series: [{
-		   name: 'Budget slice',
-		   size: 50,
-		   innerSize: '50%',
-		   data: [{
-			  name: 'Other',
-			  color: '#d0d0c3',
-			  y: 198.941,
-		   }, {
-			  name: 'Homeownership',
-			  color: '#696930',
-			  y: 355.937,
-		   }],
-		   showInLegend: false,
-		   borderColor: '#000000',
 		}]
 	 });
   });
@@ -592,61 +427,6 @@ var chart;
   $(document).ready(function() {
 	 chart = new Highcharts.Chart({
 		chart: {
-		   renderTo: 'postEdGraphPie',
-		   plotBorderWidth: null,
-		},
-		title: {
-		   text: null
-		},
-		credits: {
-			enabled: false	
-		},
-		exporting: {
-			enabled: false	
-		},
-		legend: {
-			enabled: false	
-		},
-		tooltip: {
-			enabled: false
-		},
-		labels: {
-			items: [{
-				html: '13%',
-				style: {
-					left: '148px',
-					top: '31px',
-					color: 'black',
-					fontWeight: 'bold',
-					fontSize: '16px',
-					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
-				}
-			}]
-		},
-		series: [{
-		   type: 'pie',
-		   name: 'Budget slice',
-		   data: [{
-			  name: 'Other assets spending',
-			  color: '#d0d0c3',
-			  y: 480.395,
-		   }, {
-			  name: 'Post-secondary education spending',
-			  color: '#696930',
-			  y: 74.483,
-		   }],
-		   size: 50,
-		   innerSize: '50%',
-		   showInLegend: false,
-		   borderColor: '#000000',
-		}]
-	 });
-  });
-
-var chart;
-  $(document).ready(function() {
-	 chart = new Highcharts.Chart({
-		chart: {
 		   renderTo: 'entrepreneurshipGraphBar',
 		   plotBorderWidth: null,
 		   spacingRight:100
@@ -747,8 +527,246 @@ var chart;
   $(document).ready(function() {
 	 chart = new Highcharts.Chart({
 		chart: {
+		   renderTo: 'savingsGraphPie',
+		   plotBorderWidth: null,
+		   spacingLeft:160
+		},
+		title: {
+		   text: null
+		},
+		credits: {
+			enabled: false	
+		},
+		exporting: {
+			enabled: false	
+		},
+		legend: {
+			enabled: false	
+		},
+		tooltip: {
+			enabled: false
+		},
+		labels: {
+			items: [{
+				html: '21%',
+				style: {
+					left: '73px',
+					top: '19px',
+					color: 'black',
+					fontWeight: 'bold',
+					fontSize: '16px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
+				}
+			}]
+		},
+		series: [{
+		   type: 'pie',
+		   name: 'Budget slice',
+		   data: [{
+			  name: 'Other assets spending',
+			  color: '#d0d0c3',
+			  y: 439.456,
+		   }, {
+			  name: 'Savings spending',
+			  color: '#696930',
+			  y: 115.422,
+		   }],
+		   size: 50,
+		   innerSize: '72%',
+		   showInLegend: false,
+		   borderColor: '#000000',
+		   dataLabels: {
+			 enabled: false
+		   },
+		}]
+	 });
+  });
+
+var chart;
+  $(document).ready(function() {
+	 chart = new Highcharts.Chart({
+		chart: {
+		   renderTo: 'retirementGraphPie',
+		   plotBorderWidth: null,
+		   spacingLeft:160
+		},
+		title: {
+		   text: null
+		},
+		credits: {
+			enabled: false	
+		},
+		exporting: {
+			enabled: false	
+		},
+		legend: {
+			enabled: false	
+		},
+		tooltip: {
+			enabled: false
+		},
+		labels: {
+			items: [{
+				html: '30%',
+				style: {
+					left: '73px',
+					top: '19px',
+					color: 'black',
+					fontWeight: 'bold',
+					fontSize: '16px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
+				}
+			}]
+		},
+		series: [{
+		   type: 'pie',
+		   name: 'Budget slice',
+		   data: [{
+			  name: 'Other assets spending',
+			  color: '#d0d0c3',
+			  y: 389.448,
+		   }, {
+			  name: 'Retirement spending',
+			  color: '#696930',
+			  y: 165.430,
+		   }],
+		   size: 50,
+		   innerSize: '72%',
+		   showInLegend: false,
+		   borderColor: '#000000',
+		   dataLabels: {
+			 enabled: false
+		   },
+		},]
+	 });
+  });
+
+var chart;
+  $(document).ready(function() {
+	 chart = new Highcharts.Chart({
+		chart: {
+		   renderTo: 'homeownershipGraphPie',
+		   plotBorderWidth: null,
+		   type: 'pie',
+		   spacingLeft:160
+		},
+		title: {
+		   text: null
+		},
+		credits: {
+			enabled: false	
+		},
+		exporting: {
+			enabled: false	
+		},
+		legend: {
+			enabled: false	
+		},
+		tooltip: {
+			enabled: false
+		},
+		labels: {
+			items: [{
+				html: '64%',
+				style: {
+					left: '73px',
+					top: '19px',
+					color: 'black',
+					fontWeight: 'bold',
+					fontSize: '16px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
+				}
+			}]
+		},
+		series: [{
+		   name: 'Budget slice',
+		   size: 50,
+		   innerSize: '72%',
+		   data: [{
+			  name: 'Other',
+			  color: '#d0d0c3',
+			  y: 198.941,
+		   }, {
+			  name: 'Homeownership',
+			  color: '#696930',
+			  y: 355.937,
+		   }],
+		   showInLegend: false,
+		   borderColor: '#000000',
+		   dataLabels: {
+			 enabled: false
+		   },
+		}]
+	 });
+  });
+
+
+var chart;
+  $(document).ready(function() {
+	 chart = new Highcharts.Chart({
+		chart: {
+		   renderTo: 'postEdGraphPie',
+		   plotBorderWidth: null,
+		   spacingLeft:160
+		},
+		title: {
+		   text: null
+		},
+		credits: {
+			enabled: false	
+		},
+		exporting: {
+			enabled: false	
+		},
+		legend: {
+			enabled: false	
+		},
+		tooltip: {
+			enabled: false
+		},
+		labels: {
+			items: [{
+				html: '13%',
+				style: {
+					left: '73px',
+					top: '19px',
+					color: 'black',
+					fontWeight: 'bold',
+					fontSize: '16px',
+					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
+				    }
+			}]
+		},
+		series: [{
+		   type: 'pie',
+		   name: 'Budget slice',
+		   data: [{
+			  name: 'Other assets spending',
+			  color: '#d0d0c3',
+			  y: 480.395,
+		   }, {
+			  name: 'Post-secondary education spending',
+			  color: '#696930',
+			  y: 74.483,
+		   }],
+		   size: 50,
+		   innerSize: '72%',
+		   showInLegend: false,
+		   borderColor: '#000000',
+		   dataLabels: {
+			 enabled: false
+		   },
+		}]
+	 });
+  });
+
+var chart;
+  $(document).ready(function() {
+	 chart = new Highcharts.Chart({
+		chart: {
 		   renderTo: 'entrepreneurshipGraphPie',
-		   plotBorderWidth: null
+		   plotBorderWidth: null,
+		   spacingLeft:160
 		},
 		title: {
 		   text: null
@@ -769,8 +787,8 @@ var chart;
 			items: [{
 				html: '<1%',
 				style: {
-					left: '148px',
-					top: '31px',
+					left: '73px',
+					top: '19px',
 					color: 'black',
 					fontWeight: 'bold',
 					fontSize: '16px',
@@ -791,10 +809,12 @@ var chart;
 			  y: .602,
 		   }],
 		   size: 50,
-		   innerSize: '50%',
+		   innerSize: '72%',
 		   showInLegend: false,
 		   borderColor: '#000000',
+		   dataLabels: {
+			 enabled: false
+		   },
 		}]
 	 });
   });
-
