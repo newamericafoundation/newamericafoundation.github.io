@@ -9,7 +9,7 @@
   background-color: @warningBackground;
   border: 1px solid @warningBorder;
   .border-radius(4px);
-	box-shadow: -1px 6px 10px #ddd;
+	box-shadow: -1px 6px 6px #e4e4e4;
 }
 .alert,
 .alert-heading {
@@ -28,7 +28,8 @@
 // ----------------
 
 .alert-success {
-  background-color: @successBackground;
+	.buttonBackground(#fff, #f0f0f0);
+/*  background-color: @successBackground;*/
   border-color: @successBorder;  
 }
 .alert-success,
