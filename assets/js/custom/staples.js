@@ -571,8 +571,8 @@ var chart;
 			  color: '#696930',
 			  y: 115.422,
 		   }],
-		   size: 50,
-		   innerSize: '72%',
+		   size: 60,
+		   innerSize: '76%',
 		   showInLegend: false,
 		   borderColor: '#000000',
 		   dataLabels: {
@@ -630,8 +630,8 @@ var chart;
 			  color: '#696930',
 			  y: 165.430,
 		   }],
-		   size: 50,
-		   innerSize: '72%',
+		   size: 60,
+		   innerSize: '76%',
 		   showInLegend: false,
 		   borderColor: '#000000',
 		   dataLabels: {
@@ -680,8 +680,8 @@ var chart;
 		},
 		series: [{
 		   name: 'Budget slice',
-		   size: 50,
-		   innerSize: '72%',
+		   size: 60,
+		   innerSize: '76%',
 		   data: [{
 			  name: 'Other',
 			  color: '#d0d0c3',
@@ -749,8 +749,8 @@ var chart;
 			  color: '#696930',
 			  y: 74.483,
 		   }],
-		   size: 50,
-		   innerSize: '72%',
+		   size: 60,
+		   innerSize: '76%',
 		   showInLegend: false,
 		   borderColor: '#000000',
 		   dataLabels: {
@@ -808,8 +808,8 @@ var chart;
 			  color: '#696930',
 			  y: .602,
 		   }],
-		   size: 50,
-		   innerSize: '72%',
+		   size: 60,
+		   innerSize: '76%',
 		   showInLegend: false,
 		   borderColor: '#000000',
 		   dataLabels: {
