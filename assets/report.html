@@ -32,6 +32,7 @@
     <script src="js/custom/homeownership.js"></script>
     <script src="js/custom/education.js"></script>
 	<script src="js/custom/savings.js"></script>
+	<script src="js/custom/overview.js"></script>
 	<script >
 	  $(function() {
 		$('#li08').addClass('ed-active');
@@ -41,6 +42,7 @@
 		homeowernship();
 		education();
 		retirement();
+		overview();
 		switchGraph('netWorth');
 		$('#netWorth').addClass('disabled');
 		$("#li00").click(function() {
@@ -60,40 +62,8 @@
 			$(this).addClass("ed-active");
 		  }
 		
-		
-		
+
 		});
-		// $(window).scroll(function(){
-		// 			if(isScrolledIntoView('#retirement')){
-		// 				retirement();
-		// 			};
-		// 			if(isScrolledIntoView('#homeowernship')){
-		// 				homeowernship();
-		// 			};
-		// 			
-		// 			if(isScrolledIntoView('#education')){
-		// 				education();
-		// 			};
-		// 		}); //end scroll
-		
-		
-		// credit where credit is due 
-		// http://stackoverflow.com/questions/487073/jquery-check-if-element-is-visible-after-scrolling
-		function isScrolledIntoView(elem)
-		{
-			// console.log(elem)
-		    var docViewTop = $(window).scrollTop();
-		    // var docViewBottom = docViewTop + $(window).height();
-			if($(elem).offset()){
-				var elemTop = $(elem).offset().top;
-			};
-		    
-		    // var elemBottom = elemTop + $(elem).height();
-// ((elemBottom <= docViewBottom) && (elemTop >= docViewTop))
-		    return elemTop >= docViewTop;
-		}
-				
-			
 			
 		$('div.navbar-fixed-top ul.nav').click(function () { 
 			homeowernship();
@@ -135,6 +105,11 @@
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
         <h1>The Assets Report 2012</h1>
+<div style="left: 60px;position: relative;top:-225px;float:right;">
+			<div id="mainPieChart"></div>
+			<p style="position:relative;top:-115px;float:right;">Assets Spending Breakdown</p>
+			
+		</div>
         <p>Savings and assets are the building blocks for economic mobility and security. They provide a buffer against unexpected events and emergencies as well as a move up the economic ladder with productive investments, such as by <em>buying a home, starting a business, saving for retirement, saving for emergencies, or going to college.</em> </p>
 <p>Currently, the federal budget allocates a substantial amount of resources to support these priorities. Yet most of the benefits are delivered through tax breaks and subsidies that favor higher-income households. Families with lower incomes and fewer resources receive much less support.</p>
 		<p>TThis site describes how people are faring across 5 key policy areas, identifies the current spending to support these objectives, and suggests how we could do better. Click on any of the links above to jump to a specific chapter.</p>
