@@ -15,7 +15,7 @@ function overview(){
 					shadow:false,
 	                formatter: function() {
 						$('#graphTooltip').empty();
-						$('#graphTooltip').append('<div><b>'+ this.point.name +'</b>: $'+ Highcharts.numberFormat(this.y, 0) + '<br/> ('+ Highcharts.numberFormat(this.percentage,1) +'%)</div>');
+						$('#graphTooltip').append('<div><small>Numbers in millions</small><br/><b>'+ this.point.name +'</b>: $'+ Highcharts.numberFormat(this.y, 0) + '<br/> ('+ Highcharts.numberFormat(this.percentage,1) +'%)</div>');
 	                    // return '<b>'+ this.point.name +'</b>: '+ this.y + '%';
 	                }
 	            },
