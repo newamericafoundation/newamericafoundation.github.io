@@ -9,6 +9,10 @@ function overview(){
 	                plotShadow: false
 	            },
 	            tooltip: {
+					// can't just disable the tooltips you need to actually hide the style
+					borderWidth: 0,
+					backgroundColor:'transparent',
+					shadow:false,
 	                formatter: function() {
 						$('#graphTooltip').empty();
 						$('#graphTooltip').append('<div><b>'+ this.point.name +'</b>: $'+ Highcharts.numberFormat(this.y, 0) + '<br/> ('+ Highcharts.numberFormat(this.percentage,1) +'%)</div>');
@@ -19,6 +23,7 @@ function overview(){
 	                pie: {
 	                    allowPointSelect: true,
 	                    cursor: 'pointer',
+						borderWidth: 2,
 	                    dataLabels: {
 	                        enabled: false,
 							distance: 10,
