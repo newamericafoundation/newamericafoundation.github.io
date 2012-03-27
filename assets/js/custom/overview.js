@@ -33,7 +33,7 @@ function overview(){
 	                type: 'pie',
 	                name: '',
 	                data: [
-	                    ['Homeownership', 64],
+	                    ['Homeownership', 36],
 	                    ['Retirement', 30],
 						['Savings and Investment', 21],
 	                    // {
