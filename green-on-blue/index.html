@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Green-on-Blue</title>
+<link charset="utf-8" href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/highcharts.js"></script>
+<script type="text/javascript" src="js/themes/naf.js"></script>
+<script type="text/javascript" src="js/modules/exporting.js"></script>
+<script>
+var chart;
+$(document).ready(function() {
+	
+   chart = new Highcharts.Chart({
+      chart: {
+         renderTo: 'container',
+         zoomType: 'x',
+		 ignoreHiddenSeries: true,
+		 type: 'column'
+      },
+       title: {
+         text: "'Green-on-Blue' Attacks in Afghanistan"
+      },
+	   subtitle: {
+		 text: "Incidents from 2003 to March 2012",
+	   },
+	   credits: {
+        text: 'NewAmerica.net',
+        href: 'http://newamerica.net'
+      },
+     xAxis: {
+         categories: ['2003','2004','2005','2006','2007','2008','2009','2010','2011','2012'],
+	     tickmarkPlacement: 'on',
+      },
+      yAxis: {
+         title: {
+            text: 'Incidents'
+         },
+		 min: 0,
+		 labels: {
+		   formatter: function() {
+				  return this.value;
+			  }
+		 }
+      },
+//      tooltip: {
+//        formatter: function() {
+//            var s = '<b>'+ this.x +'</b>';
+//			$('#graphCaption').empty();
+//			$('#graphCaption').append('<p>'+caption[this.x]+'</p>');
+//            $.each(this.points, function(i, point) {
+//                s += '<br/>'+ point.series.name +': '+point.y +'%';
+//            });
+//            return s;
+//        },
+//        shared: true
+//    },
+      legend: {
+         enabled: true
+      },
+	exporting: {
+		buttons: {
+			exportButton: {
+				symbolFill: '#FFF',
+				hoverSymbolFill: '#efefef',
+				symbolStroke: '#444449',
+			},
+			printButton: {
+				enabled: false,
+			}
+		}
+	},
+      plotOptions: {
+         column: {
+            fillColor: {
+               linearGradient: [0, 0, 0, 300],
+               stops: [
+                  [0, Highcharts.getOptions().colors[0]],
+                  [1, 'rgba(2,0,0,0)']
+               ]
+            },
+            lineWidth: 1,
+            marker: {
+               enabled: false,
+               states: {
+                  hover: {
+                     enabled: true,
+                     radius: 5
+                  }
+               }
+            },
+            shadow: false,
+            states: {
+               hover: {
+                  lineWidth: 1                  
+               }
+            }
+         }
+      },
+      legend: {
+		enabled: false  
+	  },
+      series: [{
+         name: 'Incidents',
+         data: [1,0,0,0,2,0,4,6,12,9]
+      }]
+   });
+   
+   
+});
+</script>
+</head>
+<body>
+<div id="container" style="width: 568px; height: 250px; margin: 0 auto"></div>
+</body>
+</html>
