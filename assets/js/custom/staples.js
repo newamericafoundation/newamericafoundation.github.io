@@ -565,11 +565,11 @@ var chart;
 		   data: [{
 			  name: 'Other assets spending',
 			  color: '#d0d0c3',
-			  y: 439.456,
+			  y: 432580,
 		   }, {
 			  name: 'Savings spending',
 			  color: '#696930',
-			  y: 115.422,
+			  y: 115422,
 		   }],
 		   size: 60,
 		   innerSize: '76%',
@@ -624,11 +624,11 @@ var chart;
 		   data: [{
 			  name: 'Other assets spending',
 			  color: '#d0d0c3',
-			  y: 389.448,
+			  y: 382572,
 		   }, {
 			  name: 'Retirement spending',
 			  color: '#696930',
-			  y: 165.430,
+			  y: 165430,
 		   }],
 		   size: 60,
 		   innerSize: '76%',
@@ -647,7 +647,6 @@ var chart;
 		chart: {
 		   renderTo: 'homeownershipGraphPie',
 		   plotBorderWidth: null,
-		   type: 'pie',
 		   spacingLeft:160
 		},
 		title: {
@@ -667,7 +666,7 @@ var chart;
 		},
 		labels: {
 			items: [{
-				html: '64%',
+				html: '36%',
 				style: {
 					left: '73px',
 					top: '19px',
@@ -679,24 +678,25 @@ var chart;
 			}]
 		},
 		series: [{
+		   type: 'pie',
 		   name: 'Budget slice',
+		   data: [{
+			  name: 'Other assets spending',
+			  color: '#d0d0c3',
+			  y: 349061,
+		   }, {
+			  name: 'Homeownership spending',
+			  color: '#696930',
+			  y: 198941,
+		   }],
 		   size: 60,
 		   innerSize: '76%',
-		   data: [{
-			  name: 'Other',
-			  color: '#d0d0c3',
-			  y: 198.941,
-		   }, {
-			  name: 'Homeownership',
-			  color: '#696930',
-			  y: 355.937,
-		   }],
 		   showInLegend: false,
 		   borderColor: '#000000',
 		   dataLabels: {
 			 enabled: false
 		   },
-		}]
+		},]
 	 });
   });
 
@@ -726,7 +726,7 @@ var chart;
 		},
 		labels: {
 			items: [{
-				html: '13%',
+				html: '12%',
 				style: {
 					left: '73px',
 					top: '19px',
@@ -743,11 +743,11 @@ var chart;
 		   data: [{
 			  name: 'Other assets spending',
 			  color: '#d0d0c3',
-			  y: 480.395,
+			  y: 480395,
 		   }, {
 			  name: 'Post-secondary education spending',
 			  color: '#696930',
-			  y: 74.483,
+			  y: 67607,
 		   }],
 		   size: 60,
 		   innerSize: '76%',
@@ -802,11 +802,11 @@ var chart;
 		   data: [{
 			  name: 'Other assets spending',
 			  color: '#d0d0c3',
-			  y: 554.276,
+			  y: 547400,
 		   }, {
 			  name: 'Entrepreneurship spending',
 			  color: '#696930',
-			  y: .602,
+			  y: 602,
 		   }],
 		   size: 60,
 		   innerSize: '76%',
