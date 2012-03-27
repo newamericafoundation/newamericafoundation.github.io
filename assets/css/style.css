@@ -6,6 +6,15 @@ body {
 	background: url(../img/bg-noise2.jpg) repeat;	
 }
 
+img.star {
+	vertical-align: -25%;
+	margin-right: 8px;
+}
+
+.brand {
+	height: 20px;
+}
+
 header {
 	padding-top: 70px;
 }
