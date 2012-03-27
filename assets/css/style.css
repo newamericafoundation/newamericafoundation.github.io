@@ -69,32 +69,14 @@ h3.header {
 	margin-top: 70px;
 }
 
-/*.section-header .header-body h4 {
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-family: Arial, sans-serif;
-	padding: 0 40px;
-	color: #D0D0C3;
-	font-size: 16px;
-	line-height: 24px;
-	text-align: center;
-	font-weight:normal;
-	font-style: italic;
-}*/
-
 .header-body {
 }
 
 .section-body {
-/*	margin: 60px 0;	*/
 		margin: 20px 0;	
 }
 
-/*.section-body h2 {
-	line-height: 32px;
-}*/
-
 .section-body h2.head {
-/*	margin-bottom: 60px;*/
 	line-height: 40px;
 	font-size: 37px;
 	letter-spacing:-1px;
@@ -103,9 +85,7 @@ h3.header {
 
 .graphText h6{
 	margin:20px 0px;
-/*	text-align:right;*/
 	font-size:16px;
-/*	border-top:1px dotted #464646;*/
 	padding-top:5px;
 	line-height:21px;
 }
@@ -187,6 +167,7 @@ h3.header {
 #postEdGraphPie,
 #entrepreneurshipGraphPie,
 #retirementGraphPie {
+	margin-top: 10px;
 	width: auto;
 	height: 75px;	
 }
@@ -198,7 +179,7 @@ h3.header {
 }
 
 .staple h4.pie {
-	margin-top:15px;
+	margin-top:25px;
 	position:absolute;	
 }
 
