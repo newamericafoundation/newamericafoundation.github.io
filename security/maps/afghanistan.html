@@ -8,8 +8,8 @@
   <script src='js/wax.mm.js' type='text/javascript'></script>
   <script src='js/easey.js' type='text/javascript'></script>
   <script src='js/mapInit.js' type='text/javascript'></script>
-  <!--<script type="text/javascript" src="scripts/highcharts/highcharts.js"></script>
-  <script type="text/javascript" src="scripts/highcharts/themes/transparent.js"></script>-->
+  <script type="text/javascript" src="js/highcharts/highcharts.js"></script>
+  <script type="text/javascript" src="js/highcharts/themes/transparent.js"></script>
   <script src='js/jquery.flot.min.js' type='text/javascript'></script>
 
 
@@ -35,6 +35,90 @@
 
 $(document).ready(function() {
 	buildMap('http://a.tiles.mapbox.com/v3/mapbox.afghanistan-summer,newamerica.afghanistan_green_blue.jsonp', 'mainMap');
+	
+	  chart = new Highcharts.Chart({
+	      chart: {
+	         renderTo: 'container',
+	         zoomType: 'x',
+			 ignoreHiddenSeries: true,
+			 type: 'column'
+	      },
+	       title: {
+	         text: "'Green-on-Blue' Attacks in Afghanistan"
+	      },
+		   subtitle: {
+			 text: "Incidents from 2003 to March 2012",
+		   },
+		   credits: {
+	        text: 'NewAmerica.net',
+	        href: 'http://newamerica.net'
+	      },
+	     xAxis: {
+	         categories: ['2003','2004','2005','2006','2007','2008','2009','2010','2011','2012'],
+		     tickmarkPlacement: 'on',
+	      },
+	      yAxis: {
+	         title: {
+	            text: 'Incidents'
+	         },
+			 min: 0,
+			 labels: {
+			   formatter: function() {
+					  return this.value;
+				  }
+			 }
+	      },
+	      legend: {
+	         enabled: true
+	      },
+		exporting: {
+			buttons: {
+				exportButton: {
+					symbolFill: '#FFF',
+					hoverSymbolFill: '#efefef',
+					symbolStroke: '#444449',
+				},
+				printButton: {
+					enabled: false,
+				}
+			}
+		},
+	      plotOptions: {
+	         column: {
+	            fillColor: {
+	               linearGradient: [0, 0, 0, 300],
+	               stops: [
+	                  [0, Highcharts.getOptions().colors[0]],
+	                  [1, 'rgba(2,0,0,0)']
+	               ]
+	            },
+	            lineWidth: 1,
+	            marker: {
+	               enabled: false,
+	               states: {
+	                  hover: {
+	                     enabled: true,
+	                     radius: 5
+	                  }
+	               }
+	            },
+	            shadow: false,
+	            states: {
+	               hover: {
+	                  lineWidth: 1                  
+	               }
+	            }
+	         }
+	      },
+	      legend: {
+			enabled: false  
+		  },
+	      series: [{
+	         name: 'Incidents',
+	         data: [1,0,0,0,2,0,4,6,12,9]
+	      }]
+	   });
+	
 });
 	
 </script>
@@ -85,7 +169,7 @@ $(document).ready(function() {
 		<div id="mapContainer" class="row-fluid">
 			<div id="mainMap" class="map span7 activeMap"><span id="mapTitle"><!-- <h3>Payment Infrastructure</h3> --></span></div>
 			<div id="mainSideBar" class="span5 sidebar">
-				<h2>Graphs in here</h2>
+				<div id="container" style="height: 250px; margin: 0 auto"></div>
 			</div><!-- end #sideBar .span5-->
 		</div><!-- end #mapContainer .row-fluid-->
 		<!-- Where all the tooltip stuff is built -->
