@@ -141,6 +141,21 @@ h3.header {
 .modal h3 {
 	font-size: 24px;	
 }
+.overview-graph{
+	border-left:2px dotted #F4F4F4;
+	left:60px;
+	position:relative;
+	top:10px;
+	float:right !important;
+	padding: 30px;
+}
+
+.intro-number{
+	color:#fff;
+	font-weight:200;
+	font-size:30px;
+	line-height:30px;
+}
 
 /* ======================================== STAPLE ======================================== */
 

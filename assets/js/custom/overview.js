@@ -10,7 +10,9 @@ function overview(){
 	            },
 	            tooltip: {
 	                formatter: function() {
-	                    return '<b>'+ this.point.name +'</b>: '+ this.y + '%';
+						$('#graphTooltip').empty();
+						$('#graphTooltip').append('<div><b>'+ this.point.name +'</b>: $'+ Highcharts.numberFormat(this.y, 0) + '<br/> ('+ Highcharts.numberFormat(this.percentage,1) +'%)</div>');
+	                    // return '<b>'+ this.point.name +'</b>: '+ this.y + '%';
 	                }
 	            },
 	            plotOptions: {
@@ -33,17 +35,11 @@ function overview(){
 	                type: 'pie',
 	                name: '',
 	                data: [
-	                    ['Homeownership', 36],
-	                    ['Retirement', 30],
-						['Savings and Investment', 21],
-	                    // {
-	                    // 	                        name: 'Savings and Investment',
-	                    // 	                        y: 21,
-	                    // 	                        sliced: true,
-	                    // 	                        selected: true
-	                    // 	                    },
-	                    ['Post-secondary education', 13],
-	                    ['Entrepreneurship', 1]
+	                    ['Homeownership', 198941],
+	                    ['Retirement', 165430],
+						['Savings and Investment', 115422],
+	                    ['Post-secondary education', 67607],
+	                    ['Entrepreneurship', 602]
 	                ]
 	            }]
 	        });
