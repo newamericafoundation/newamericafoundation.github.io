@@ -1,0 +1,210 @@
+<html>
+<head>
+	 
+  <link rel="stylesheet" href="css/bootstrap.css" media="all" />
+ <link href='css/style.css' rel='stylesheet' type='text/css' />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src='js/modestmaps.min.js' type='text/javascript'></script>
+  <script src='js/wax.mm.js' type='text/javascript'></script>
+  <script src='js/easey.js' type='text/javascript'></script>
+  <script src='js/mapInit.js' type='text/javascript'></script>
+  <!--<script type="text/javascript" src="scripts/highcharts/highcharts.js"></script>
+  <script type="text/javascript" src="scripts/highcharts/themes/transparent.js"></script>-->
+  <script src='js/jquery.flot.min.js' type='text/javascript'></script>
+
+
+	<!--<script src="js/bootstrap.js"></script>-->
+	<script src="js/bootstrap-tooltip.js"></script>
+	<script src="js/bootstrap-alert.js"></script>
+	<script src="js/bootstrap-button.js"></script>
+	<script src="js/bootstrap-carousel.js"></script>
+	<script src="js/bootstrap-collapse.js"></script>
+	<script src="js/bootstrap-dropdown.js"></script>
+	<script src="js/bootstrap-modal.js"></script>
+	<script src="js/bootstrap-popover.js"></script>
+	<script src="js/bootstrap-scrollspy.js"></script>
+	<script src="js/bootstrap-tab.js"></script>
+	
+	<script src="js/bootstrap-transition.js"></script>
+	<script src="js/bootstrap-typeahead.js"></script>
+  <!-- <script type="text/javascript" src="scripts/default-tooltip.js"></script>-->
+
+  <!-- <link href='styles/controls.css' rel='stylesheet' type='text/css' /> -->
+<script>
+buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp.jsonp', 'mainMap');
+	
+			//Main fake data object. Use this to build the individual graphs
+			var countryLabels = [[0,'Argentina'],[1,'Bangladesh'],[2,'Bolivia'],[3,'Botswana'],[4,'Brazil'],[5,'Brunei'],[6,'Burkina Faso'],[7,'Cambodia'],[8,'Chile'],[9,'China'],[10,'Colombia'],[11,'Costa Rica'],[12,'Dominican Republic'],[13,'Ecuador'],[14,'Egypt'],[15,'El Salvador'],[16,'Ethiopia'],[17,'Ghana'],[18,'Guatemala'],[19,'Honduras'],[20,'India'],[21,'Indonesia'],[22,'Jamaica'],[23,'Kenya'],[24,'Lesotho'],[25,'Liberia'],[26,'Malawi'],[27,'Maldives'],[28,'Mali'],[29,'Maurituis'],[30,'Mexico'],[31,'Mongolia'],[32,'Mozambique'],[33,'Namibia'],[34,'Nepal'],[35,'Nicaragua'],[36,'Pakistan'],[37,'Panama'],[38,'Paraguay'],[39,'Peru'],[40,'Phillipines'],[41,'Rwanda'],[42,'Sierra Leone'],[43,'South Africa'],[44,'Swaziland'],[45,'Tanzania'],[46,'Thailand'],[47,'Trinidad and Tobago'],[48,'Uganda'],[49,'Urugauy'],[50,'Zambia']]
+			
+			
+			var dataLabels = [[0,'Commercial Banks per 100,000 adults','http://a.tiles.mapbox.com/v3/newamerica.gssp-com-adults.jsonp',"Although there are a proliferation of new technologies enabling branchless banking, commercial banks are the most traditional method for providing formal financial services. At the same time, countries looking to develop access to formal financial services where few have existed in the past, such as Liberia. Lesotho, Malawi, and Burkina Faso, can often more cheaply and effectively pursue financial inclusion through other means such as mobile banking and point of service terminals, especially if the target population is the poorest of the poor.",'comAdult'],[1,'Commercial Banks per 1,000 km<sup>2</sup>','http://a.tiles.mapbox.com/v3/newamerica.gssp-com-sqkm.jsonp',"In many countries, the different scores for Commercial Banks per 100,000 adults and Commercial Banks per 1000 km<sup>2</sup> illustrates that bank branches, because of the overhead and staff involved, are generally located in city centers and other high population densities. This is especially true in large and sparsely populated countries such as Mongolia.",'comSqkm'],[2,'Alternative Financial Institutions per 100,000 adults','http://a.tiles.mapbox.com/v3/newamerica.gssp-alt-adults.jsonp',"Where commercial banks are not accessible or convenient, many people access financial services through alternative financial institutions such as cooperatives and microfinance institutions. Burkina Faso is an excellent example of a country in which, although access to formal financial services through commercial banks is low, the use of Alternative Financial Institutions is quite high. In general, it is likely more efficient and cost effective to pursue financial inclusion for the poorest of the poor via these types of alternative methods - in addition to potentially through mobile banking - than through brick and mortar commercial banks.",'altAdult'],[3,'Alternative Financial Institutions per 1,000 km<sup>2</sup>','http://a.tiles.mapbox.com/v3/newamerica.gssp-alt-sqkm.jsonp',"As is the case with commercial banks, many alternative financial institutions such as cooperatives are primarily located in city centers, and this is reflected in the difference between the relative scores for countries such as Bolivia and Brazil. On the other hand, in smaller countries such as El Salvador, and countries in which microfinance institutions have a strong presence such as India, we see the opposite relation between the two.",'altSqkm'],[4,'ATMs per 100,000 adults','http://a.tiles.mapbox.com/v3/newamerica.gssp-atm-adults.jsonp',"Banks that have been tapped by national governments to partner on the dissemination of payments to beneficiaries of social safety nets have often tried to enable these payments via the wider dissemination of ATM machines. One great example of this is the Philippines.",'atmAdult'],[5,'ATMs per 1,000 km<sup>2</sup>','http://a.tiles.mapbox.com/v3/newamerica.gssp-atm-sqkm.jsonp',"Similar to commercial banks, ATMs are most commonly located in densely populated urban centers. Also worth noting is that India's extensive network of ATMs, even more impressive than its ATMs per 100,000 adults, which is another example of its aggressive efforts to promote financial inclusion.",'atmSqkm'],[6,'POS per 100,000 adults','http://a.tiles.mapbox.com/v3/newamerica.gssp-pos-adults.jsonp',"Point of Sale terminals can take the form of card readers, personal computers, barcode scanners or any hardware that can identify customers and receive instructions for the transfer of value. Around the year 2000, Brazil decided to pursue the spread of financial inclusion in its population via POS terminals, and the fruits of these efforts are evident in the country's top rating both in terms of POS per 100K and POS per 1000 km<sup>2</sup>.",'posAdult'],[7,'POS per 1,000 km<sup>2</sup>','http://a.tiles.mapbox.com/v3/newamerica.gssp-pos-sqkm.jsonp',"Countries with lower commercial bank presence can cost effectively seek to increase financial inclusion, especially for those in remote populations, via point of service terminals - which can take the form of card readers, personal computers, barcode scanners or any hardware that can identify customers and receive instructions for the transfer of value. For instance, Jamaica, which is in the middle of the pack with respect to commercial bank presence, is at the top with respect to POS terminals. In addition, Tanzania has few commercial banks but a greater relative number of POS terminals.",'posSqkm'],[8,'Mobile Penetration','http://a.tiles.mapbox.com/v3/newamerica.gssp-mobile.jsonp',"Though arguably the most hyped tool for financial inclusion in international development circles, it is hard to deny that mobile banking has not achieved scale in any market other than Kenya. As the map makes clear, there certainly exists the necessary infrastructure in a variety of countries with cash transfer social protection programs, which is certainly ground for hope, but until mobile banking starts to bring real benefits to aspiring families all around the world, there is also ground for much skepticism.",'mobilePen'],[9,'Financial Literacy','http://a.tiles.mapbox.com/v3/newamerica.gssp-fl.jsonp',"Just as important as physical financial infrastructure to a country's ability to enable savings is the human infrastructure in place to utilize it. In other words, it doesn't matter if there are ample banks and ATMs around if people do not have the requisite knowledge to take advantage of them. Notable examples of countries with high financial literacy are India, which has been aggressively pushing for financial inclusion for almost a decade, and China, which has a stronger culture of savings.",'finLit'],[10,'Composite Access to Financial Services', 'http://a.tiles.mapbox.com/v3/newamerica.gssp-com-access.jsonp','In order to form a holistic analysis, we have included this composite variable that was compiled by Patrick Honohan, professor of International Development and Economics and Development at Trinity College Dublin, for an the Access to Finance Conference in Washington, D.C.','']]
+			
+			var data = {
+	//Commerical Banks per (100,000 adults) 
+	0:[[0,13.19966],[1,5.164976],[2,6.936719],[3,7.996997],[4,12.70611],[5,0],[6,1.8197],[7,3.924215],[8,14.91534],[9,0],[10,14.30221],[11,23.30158],[12,9.975554],[13,1.613173],[14,0],[15,9.298369],[16,1.392583],[17,5.114913],[18,35.75176],[19,1.469866],[20,10.10775],[21,7.741735],[22,6.637127],[23,4.384016],[24,2.119042],[25,1.84793],[26,2.156942],[27,0],[28,3.48481],[29,20.10816],[30,14.66588],[31,53.98829],[32,2.888864],[33,7.250611],[34,4.189821],[35,0],[36,8.682724],[37,18.52384],[38,6.784743],[39,7.30865],[40,11.81343],[41,1.868745],[42,2.313988],[43,8.003472],[44,2.85203],[45,1.841811],[46,11.0404],[47,0],[48,2.254612],[49,12.62473],[50,3.641129]],
+				
+	//Commerical banks per thousand sq m
+	1:[[0,1.434945],[1,43.14358],[2,0.391929],[3,0.1782154],[4,2.123313],[5,0],[6,0.5445907],[7,2.15273],[8,2.564103],[9,0],[10,4.044164],[11,15.19781],[12,13.82803],[13,0.538217],[14,0],[15,18.43629],[16,0.631],[17,3.217017],[18,26.04445],[19,0.589865],[20,26.46114],[21,7.086119],[22,11.54201],[23,1.699055],[24,0.8566722],[25,0.4152824],[26,1.753826],[27,0],[28,0.2024275],[29,96.55173],[30,5.692533],[31,0.6664539],[32,0.4476207],[33,0.1166053],[34,5.258741],[35,0],[36,11.72816],[37,5.951901],[38,0.6972061],[39,1.140625],[40,23.52349],[41,4.256182],[42,1.019268],[43,2.221545],[44,1.162791],[45,0.4888237],[46,11.36448],[47,0],[48,1.846778],[49,1.851217],[50,0.3322617]],
+				
+	//Alternative Financial Institutions (coops + SSFIs + MFI)
+	2:[[0,0.0100838],[1,3.61162],[2,7.197866],[3,2.296168],[4,4.5803419],[5,0],[6,4.75076],[7,0],[8,4.132792],[9,0],[10,0.7873068],[11,8.4978708],[12,2.8480283],[13,1.3858129],[14,0],[15,0.8032623],[16,1.0262298],[17,3.172364],[18,0],[19,1.3139711],[20,2.78267],[21,0.5771473],[22,2.49556],[23,0.0226681],[24,0.9780195],[25,0],[26,0],[27,0],[28,14.75753],[29,0],[30,3.3795388],[31,0],[32,1.0012541],[33,0],[34,3.337371],[35,0],[36,1.9380312],[37,5.1850041],[38,0],[39,7.498875],[40,1.3827816],[41,0],[42,0.1267939],[43,0],[44,1.283414],[45,0],[46,0],[47,0],[48,0.4707431],[49,0.3506869],[50,1.9753495]],
+				
+	//Alternative Financial Institutions (per 1000 sq m)
+	3:[[0,0.0010962],[1,30.16824],[2,0.406684],[3,0.0511707],[4,0.7654189],[5,0],[6,1.421784],[7,0],[8,0.7104701],[9,0],[10,0.2226228],[11,5.5424988],[12,3.9479124],[13,0.4623609],[14,0],[15,1.592664],[16,0.465],[17,1.995254],[18,0],[19,0.5273036],[20,7.284768],[21,0.5282711],[22,4.339797],[23,0.0087852],[24,0.3953871],[25,0],[26,0],[27,0],[28,0.8572435],[29,0],[30,1.3117622],[31,0],[32,0.1551413],[33,0],[34,4.188810999999999],[35,0],[36,2.6177877],[37,1.6659948],[38,0],[39,1.1703125],[40,2.7534626],[41,0],[42,0.0558503],[43,0],[44,0.5232558],[45,0],[46,0],[47,0],[48,0.3855911],[49,0.0514227],[50,0.1802553]],
+
+	//ATM per 100,000 adults
+	4:[[0,36.85283],[1,0],[2,17.5295],[3,21.45729],[4,112.0603],[5,0],[6,0],[7,4.192714],[8,58.74468],[9,0],[10,29.56066],[11,181.5181],[12,27.10845],[13,12.79711],[14,0],[15,27.21355],[16,0.1412445],[17,4.772521],[18,21.85111],[19,23.38423],[20,7.288207],[21,14.44014],[22,22.24765],[23,8.282934],[24,6.683134],[25,1.432145],[26,2.653692],[27,0],[28,0],[29,39.0878],[30,44.79679],[31,15.10017],[32,5.088341],[33,30.51299],[34,1.805189],[35,0],[36,4.061414],[37,40.56011],[38,0],[39,22.25634],[40,14.24551],[41,0.4627369],[42,1.141145],[43,52.40524],[44,18.6808],[45,3.436913],[46,71.32337],[47,0],[48,3.289008],[49,30.58769],[50,6.353549]],
+	
+	//ATM per 100,000 adults
+	5:[[0,36.85283],[1,0],[2,17.5295],[3,21.45729],[4,112.0603],[5,0],[6,0],[7,4.192714],[8,58.74468],[9,0],[10,29.56066],[11,181.5181],[12,27.10845],[13,12.79711],[14,0],[15,27.21355],[16,0.1412445],[17,4.772521],[18,21.85111],[19,23.38423],[20,7.288207],[21,14.44014],[22,22.24765],[23,8.282934],[24,6.683134],[25,1.432145],[26,2.653692],[27,0],[28,0],[29,39.0878],[30,44.79679],[31,15.10017],[32,5.088341],[33,30.51299],[34,1.805189],[35,0],[36,4.061414],[37,40.56011],[38,0],[39,22.25634],[40,14.24551],[41,0.4627369],[42,1.141145],[43,52.40524],[44,18.6808],[45,3.436913],[46,71.32337],[47,0],[48,3.289008],[49,30.58769],[50,6.353549]],
+	
+	//POS penetration (per 100,000 adults)
+	6:[[0,0],[1,0],[2,0],[3,288.6837],[4,2247.41],[5,0],[6,0],[7,34.13034],[8,486.0691],[9,0],[10,441.0639],[11,1695.31],[12,0],[13,0],[14,0],[15,520.8304],[16,0],[17,0],[18,414.69],[19,0],[20,67.05605],[21,117.8912],[22,708.4204],[23,0],[24,0],[25,1.432145],[26,4.444607],[27,0],[28,0],[29,763.8023],[30,592.1377],[31,194.1303],[32,38.31028],[33,337.6066],[34,0],[35,0],[36,48.97994],[37,0],[38,0],[39,53.96387],[40,0],[41,1.672972],[42,1.521526],[43,89086.84],[44,80.99767],[45,16.13818],[46,0],[47,0],[48,4.527806],[49,272.7565],[50,13.10512]],
+	
+	//POS per thousand sq km
+	7:[[0,0],[1,0],[2,0],[3,6.433399],[4,375.5638],[5,0],[6,0],[7,18.72309],[8,83.56036],[9,0],[10,124.7174],[11,1105.719],[12,0],[13,0],[14,0],[15,1032.674],[16,0],[17,0],[18,302.0935],[19,0],[20,175.5465],[21,107.9075],[22,1231.948],[23,0],[24,0],[25,0.3218439],[26,3.613945],[27,0],[28,0],[29,3667.488],[30,229.8372],[31,2.396425],[32,5.936061],[33,5.429436],[34,0],[35,0],[36,66.15945],[37,0],[38,0],[39,8.421875],[40,0],[41,3.810296],[42,0.6702039],[43,24728.07],[44,33.02325],[45,4.283134],[46,0],[47,0],[48,3.708777],[49,39.99543],[50,1.195873]],
+	
+	//Mobile penetration
+	8:[[0,0.90772241104646],[1,0.53894878538604],[2,0.53522406641517],[3,0.8054244212954],[4,0.87147933528388],[5,1.13820638820639],[6,0.2460148121262],[7,0.37983915981518],[8,0.90457226502425],[9,0.59582694773584],[10,0.77249684150056],[11,0.37569191546617],[12,0.67609537546243],[13,0.92751947150742],[14,0.65434376745282],[15,0.94337984861204],[16,0.041671533980582],[17,0.61759616126783],[18,0.82312542561917],[19,0.77368777394604],[20,0.58131141610509],[21,0.82677658946552],[22,0.74838691411002],[23,0.41526860485035],[24,0.43427767804118],[25,0.49004339488326],[26,0.20215040808056],[27,0.83101371791212],[28,0.29212495805743],[29,0.75120422752544],[30,0.71101494317968],[31,0.60485446536452],[32,0.19004310851964],[33,0.83760344829661],[34,0.12751371240788],[35,0.55562512268295],[36,0.57153672586765],[37,0.96930343153218],[38,0.79249019750421],[39,0.70662819557294],[40,0.86588140016943],[41,0.35593264848774],[42,0.42339816896909],[43,0.6740851939987],[44,0.58324939792983],[45,0.44948886202179],[46,0.82109623450018],[47,1.219609375],[48,0.45756148656646],[49,0.89914325276192],[50,0.42283952382647]],
+	
+	//Financial Literacy
+	9:[[0,0.28],[1,0.32],[2,0.3],[3,0.47],[4,0.43],[5,0],[6,0.26],[7,0.2],[8,0.6],[9,0.42],[10,0.41],[11,0.29],[12,0.29],[13,0.35],[14,0.41],[15,0.26],[16,0.14],[17,0.16],[18,0.32],[19,0.25],[20,0.48],[21,0.4],[22,0.59],[23,0.1],[24,0.17],[25,0.11],[26,0.21],[27,0],[28,0.22],[29,0.6],[30,0.25],[31,0.25],[32,0.12],[33,0.28],[34,0.2],[35,0.05],[36,0.12],[37,0.46],[38,0.3],[39,0.26],[40,0.26],[41,0.23],[42,0.13],[43,0.46],[44,0.35],[45,0.05],[46,0.59],[47,0.53],[48,0.2],[49,0.42],[50,0.15]],
+				
+	//Composite Access to Financial Services
+	10:[[0,0.28],[1,0.32],[2,0.3],[3,0.47],[4,0.43],[5,0],[6,0.26],[7,0.2],[8,0.6],[9,0.42],[10,0.41],[11,0.29],[12,0.29],[13,0.35],[14,0.41],[15,0.26],[16,0.14],[17,0.16],[18,0.32],[19,0.25],[20,0.48],[21,0.4],[22,0.59],[23,0.1],[24,0.17],[25,0.11],[26,0.21],[27,0],[28,0.22],[29,0.6],[30,0.25],[31,0.25],[32,0.12],[33,0.28],[34,0.2],[35,0.05],[36,0.12],[37,0.46],[38,0.3],[39,0.26],[40,0.26],[41,0.23],[42,0.13],[43,0.46],[44,0.35],[45,0.05],[46,0.59],[47,0.53],[48,0.2],[49,0.42],[50,0.15]]
+			};
+	
+
+$(document).ready(function() {
+	$('.dropdown-toggle').dropdown()
+	$('#popupComAdults').popover('show');
+	//Make the graphs with labels from dataLabels	
+	for(i=0;i<11;i++){
+		$('#definitions').append("<a id='"+dataLabels[i][4]+"' name='"+dataLabels[i][4]+"'><h3>"+dataLabels[i][1]+"</h3></a><p>"+dataLabels[i][3]+"<a rel='home' class='scroll pull-right btn'>Top</a></p>")
+	var divId = '#layer'+i;
+	$('#mapContainer').append('<div id="map'+i+'"class="map"></div>');
+	var layerUrl = dataLabels[i][2];
+	var mapId = '#map'+i
+	// buildMap(layerUrl, 'map'+i);
+	
+		$(divId).click(function(e){
+			newId = $(this).attr('id').replace('layer','');
+			newMap(newId);		
+		});
+		$(".scroll").click(function(event){
+			var scrollId = $(this).attr('rel');
+			event.preventDefault();
+			if(scrollId == 'home'){
+				$('html,body').animate({scrollTop:0}, 500);
+			}else{
+				$('html,body').animate({scrollTop:$('#'+scrollId).offset().top-50}, 500);
+			}
+
+		});
+		
+	}
+	$('#layerMain').click(function(){		
+		$('li').removeClass('active');
+		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp.jsonp', 'mainMap');		
+		$('.map').removeClass('activeMap');
+		$('#layerMain').toggleClass('active');
+		
+		$('#mainMap').show();
+		$('.map').css('display','none');
+		$('#mainMap').addClass('activeMap');
+		$('#mainMap').css('display','block')
+		$('#mapTitle').empty();
+		$('#mapTitle').append("<h3>Payment Infrastructure</h3>");	
+	})
+	
+	function showTooltip(x, y, contents) {
+	        $('<div id="tooltip">' + contents + '</div>').css( {
+	            position: 'absolute',
+	            display: 'none',
+	            top: y +10,
+	            left: x + 20,
+	            border: '1px solid #ccc',
+	            padding: '2px',
+	            'background-color': '#eee',
+	            opacity: 0.80
+	        }).appendTo("body").fadeIn(200);
+	    }
+});
+
+function newMap(layerId){
+	$('li').removeClass('active');
+	buildMap(dataLabels[layerId][2], 'map'+layerId);
+	$('.map').removeClass('activeMap');
+	$('#layer'+layerId).toggleClass('active');
+	
+	$('#map'+layerId).show();
+	$('.map').css('display','none');
+	$('#map'+layerId).css('display','block');	
+	$('#map'+layerId).addClass('activeMap');	
+	$('#mapTitle').empty();
+	$('#map'+layerId).append("<span id='mapTitle'><h3>"+dataLabels[layerId][1]+"</h3></span>");
+}
+	
+</script>
+<style>
+
+
+
+</style>
+<title>Afghanistan Green on Blue</title>
+<!-- Place this render call where appropriate -->
+
+</head>
+<body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<script type="text/javascript">
+	  (function() {
+	    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	    po.src = 'https://apis.google.com/js/plusone.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	  })();
+	</script>
+	
+	<div class="navbar">
+    	<div class="navbar-inner">
+        	<div class="container-fluid">
+				<h1 class="light">Afghanistan Green on Blue<div class="pull-right">
+					<div class="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-text="Mapping the potential for wealth creation" data-via="NewAmerica">Tweet</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					</div><!-- end twitter-->
+					<!-- Place this tag where you want the +1 button to render -->
+					<div class="google"><g:plusone></g:plusone></div><!-- end google-->
+
+					<div class="facebook-like">
+						<div class="fb-like" data-href="http://newamericafoundation.github.com/gssp/maps/payment.html" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false"></div>
+					</div><!-- end facebook-->
+				</h1>
+	  		</div><!-- end .container-fluid-->
+		</div><!-- end .navbar-inner-->
+	</div><!-- end .navbar-fixed-top-->
+	<div class="container-fluid">
+		<div id="mapContainer" class="row-fluid">
+			<div id="mainMap" class="map span7 activeMap"><span id="mapTitle"><!-- <h3>Payment Infrastructure</h3> --></span></div>
+			<div id="mainSideBar" class="span5 sidebar">
+				<h2>Graphs in here</h2>
+			</div><!-- end #sideBar .span5-->
+		</div><!-- end #mapContainer .row-fluid-->
+		<!-- Where all the tooltip stuff is built -->
+		<div class="row-fluid">
+			<div id="toolTipContainer" class="row span7">
+				<h3>About the Map</h3>
+				<p>The Global Savings and Social Protection initiative has 'heat-mapped' the composite variables that influence a country's potential to implement savings-linked social protection models. This initial map shows 11 different variables relating to a country's payment infrastructure, and a country's score of 1-5 on a variable corresponds to its relative quintile; that is to say, India's score on ATM's per 100,000 adults is a '2' because its data falls in the second quintile (between the 20th and 40th percentile). Each variable is used to compute a composite Payment Infrastructure score. <strong>Roll over or click a country to view individual indicators. Use the buttons above to switch between map layers for each indicator.</strong></p>
+				 <p>Easy and convenient access to a variety of financial services is necessary in order to truly enable asset building among participants in social safety net programs. To glean a better idea of the state of the financial infrastructure in countries with cash-transfer social protection programs, we have analyzed and mapped their physical payment infrastructures - including Commercial Banks, Microfinance Institutions, ATMs and Point of Service terminals - in addition to the human infrastructure and potential for banking via new mediums such as mobiles.</p>
+			</div>
+		</div>
+	</div><!-- end .container-fluid-->
+
+</body>
+</html>
