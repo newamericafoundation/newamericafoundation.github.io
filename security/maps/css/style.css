@@ -389,7 +389,7 @@ a.zoomout {
 .wax-tooltip .close {
     display:block;
   position:relative;
-  top:-150px;
+  top:-200px;
   right:0px;
 	background:transparent url(../images/close.png) no-repeat;
 	z-index:1000;
