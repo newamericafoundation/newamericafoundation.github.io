@@ -99,8 +99,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  color: #333333;
-  background-color: #ffffff;
+  color: #666666;
 }
 a {
   color: #0088cc;
@@ -297,7 +296,7 @@ h5,
 h6 {
   margin: 0;
   font-weight: bold;
-  color: #333333;
+  color: #666666;
   text-rendering: optimizelegibility;
 }
 h1 small,

@@ -33,8 +33,49 @@
 <script>
 
 $(document).ready(function() {
+<<<<<<< HEAD
 	buildMap('http://a.tiles.mapbox.com/v3/mapbox.afghanistan-summer,newamerica.afghanistan-green-on-blue5.jsonp', 'mainMap');
 	
+=======
+	buildMap('http://a.tiles.mapbox.com/v3/mapbox.afghanistan-summer,newamerica.afghanistan-green-on-blue2.jsonp', 'mainMap');
+	  
+  Highcharts.theme = {
+	colors: ['#CB713B', '#93DA6B', '#9DBA5C', '#A69560',  '#666666', '#999999'],
+	title: {
+		style: {
+			color: '#000',
+			font: '22px Arial, Helvetica, sans-serif',
+		}
+	},
+	subtitle: {
+		style: {
+			color: '#666',
+			font: '14px Arial, Helvetica, sans-serif'
+		}
+	},
+	yAxis: {
+		gridLineColor: '#666666',
+		labels: {
+			style: {
+				color: '#666666'
+			}
+		},
+		lineColor: '#666666',
+		minorTickInterval: null,
+		tickColor: '#666666',
+		tickWidth: 1,
+		title: {
+			style: {
+				color: '#666666',
+				fontSize: '12px',
+				fontFamily: 'Helvetica,Arial,"Nimbus Sans L",sans-serif;'
+			}
+		}
+	},
+  }
+	  var highchartsOptions = Highcharts.setOptions(Highcharts.theme);
+	  
+>>>>>>> Nick's ongoing work
 	  chart = new Highcharts.Chart({
 	      chart: {
 	         renderTo: 'container',
@@ -42,7 +83,8 @@ $(document).ready(function() {
 			 ignoreHiddenSeries: true,
 			 type: 'column',
 			 backgroundColor: '#eee',
-			 spacingRight: 10
+			 spacingRight: 80,
+			 spacingLeft: 50
 	      },
 	       title: {
 	         text: "'Green-on-Blue' Attacks in Afghanistan"
@@ -51,8 +93,7 @@ $(document).ready(function() {
 			 text: "Incidents from 2003 to March 2012",
 		   },
 		   credits: {
-	        text: 'NewAmerica.net',
-	        href: 'http://newamerica.net'
+	        text: null
 	      },
 	     xAxis: {
 	         categories: ['2003','2004','2005','2006','2007','2008','2009','2010','2011','2012'],
@@ -155,25 +196,29 @@ $(document).ready(function() {
           </div>
           <div class="span5">
 			<div id="mainSideBar" class="sidebar">
-				<h3 id="intro-text" class="light">Incidents of "green-on-blue" violence were rare in the first few years of the Afghan War, averaging no more than one a year through 2008. With the "surge" of 33,000 U.S. troops in 2009, though, the number of attacks jumped to four. This upward trend continued to a peak of 12 incidents in 2011 -- and there have already been nine such attacks in 2012.<br />
-				</h3>
+				<p id="intro-text" class="light">Incidents of "green-on-blue" violence were rare in the first few years of the Afghan War, averaging no more than one a year through 2008. With the "surge" of 33,000 U.S. troops in 2009, though, the number of attacks jumped to four. This upward trend continued to a peak of 12 incidents in 2011 -- and there have already been nine such attacks in 2012.
+				</p>
 			
 				<div id="container" style="height: 250px; margin: 0 auto"></div>
 				
 				<div id="nato-table">
-				<table class="light" width="95%">
-					<tr><td><strong>NATO Member State</strong></td><td align="right"><strong>Number Killed</strong></td><td align="right"><strong>Number Wounded</strong></td></tr>
-					<tr><td>Albania</td><td align="right">1</td><td align="right">0</td></tr>
-					<tr><td>Australia </td><td align="right">5</td><td align="right">9</td></tr>
-					<tr><td>France</td><td align="right">9</td><td align="right">16</td></tr>
-					<tr><td>Germany</td><td align="right">3</td><td align="right">6</td></tr>
-					<tr><td>Italy</td><td align="right">0</td><td align="right">2</td></tr>
-					<tr><td>Norway </td><td align="right">0</td><td align="right">2</td></tr>
-					<tr><td>Spain</td><td align="right">2</td><td align="right">0</td></tr>
-					<tr><td>United Kingdom</td><td align="right">16</td><td align="right">10</td></tr>
-					<tr><td>United States </td><td align="right">39</td><td align="right">10</td></tr>
-					<tr><td>Unknown</td><td align="right">6</td><td align="right">0</td></tr>
-					<tr><td><strong>Total</strong></td><td align="right"><strong>81</strong></td><td align="right"><strong>55</strong></td></tr>
+				<table class="table table-bordered table-striped">
+                  <thead>
+                    <tr><td><strong>NATO Member State</strong></td><td align="right"><strong>Number Killed</strong></td><td align="right"><strong>Number Wounded</strong></td></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Albania</td><td align="right">1</td><td align="right">0</td></tr>
+                    <tr><td>Australia </td><td align="right">5</td><td align="right">9</td></tr>
+                    <tr><td>France</td><td align="right">9</td><td align="right">16</td></tr>
+                    <tr><td>Germany</td><td align="right">3</td><td align="right">6</td></tr>
+                    <tr><td>Italy</td><td align="right">0</td><td align="right">2</td></tr>
+                    <tr><td>Norway </td><td align="right">0</td><td align="right">2</td></tr>
+                    <tr><td>Spain</td><td align="right">2</td><td align="right">0</td></tr>
+                    <tr><td>United Kingdom</td><td align="right">16</td><td align="right">10</td></tr>
+                    <tr><td>United States </td><td align="right">39</td><td align="right">10</td></tr>
+                    <tr><td>Unknown</td><td align="right">6</td><td align="right">0</td></tr>
+                    <tr><td><strong>Total</strong></td><td align="right"><strong>81</strong></td><td align="right"><strong>55</strong></td></tr>
+                  </tbody>
 				</table>
 				</div>
 			</div><!-- end #sideBar -->
@@ -186,8 +231,7 @@ $(document).ready(function() {
         
 <footer id="footer">
   <div class="container">
-    <p align="center">The New America Foundation</p>
-	<p align="center"><a href="http://www.newamerica.net/about/copyright"><img src="img/cc.png" /></a></p>
+    <p align="center"><a href="http://www.newamerica.net/" class="footer-logo"><img src="img/logo.png" /></a><a href="http://www.newamerica.net/about/copyright"><img src="img/cc.png" /></a></p>
   </div>
 </footer>
         
