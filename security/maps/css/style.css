@@ -202,10 +202,15 @@ a.close:active {
 	font-style:italic;	
 }
 
-.table {
-	width: 80%;
+.sidebar .table {
+	width: 90%;
 	font-size: 12px;
-	line-height: 13px;	
+	line-height: 13px;
+	margin: 0 15px;
+}
+
+.sidebar .table td {
+	padding: 2px;
 }
 
 
