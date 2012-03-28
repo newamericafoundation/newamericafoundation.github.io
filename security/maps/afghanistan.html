@@ -34,7 +34,7 @@
 
 $(document).ready(function() {
 	buildMap('http://a.tiles.mapbox.com/v3/mapbox.afghanistan-summer,newamerica.afghanistan-green-on-blue5.jsonp', 'mainMap');
-	  
+   var fatalities = {'2003':'1','2004':'1','2005':'1','2006':'1','2007':'1','2008':'1','2009':'1','2010':'1','2011':'1','2012':'1'};
   Highcharts.theme = {
 	colors: ['#CB713B', '#93DA6B', '#9DBA5C', '#A69560',  '#666666', '#999999'],
 	title: {
@@ -98,10 +98,14 @@ $(document).ready(function() {
 			 backgroundColor: '#eee',
 	      },
 	       title: {
-	         text: null
+	         text: null,
+			 floating: true,
+			 y: 30
 	      },
 		   subtitle: {
 			 text: "Incidents from 2003 through March 2012",
+			 floating: true,
+			 y: 15
 		   },
 		   credits: {
 	        text: null
@@ -124,7 +128,12 @@ $(document).ready(function() {
 	      legend: {
 	         enabled: true
 	      },
-		exporting: {
+		  tooltip: {
+			formatter: function() {
+				return ''+
+					'<strong>'+this.x +'</strong><br />Incidents: '+ this.y;
+			}
+		},		exporting: {
 			buttons: {
 				exportButton: {
 					symbolFill: '#FFF',
@@ -183,7 +192,19 @@ $(document).ready(function() {
 
 </style>
 <title>Attacks on U.S and NATO Soldiers by Afghan Security Forces | New America Foundation</title>
-<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-368921-26']);
+  _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script>
 
 </head>
 <body>
@@ -216,7 +237,7 @@ The Global Savings and Social Protection initiative has 'heat-mapped' the compos
           <div class="span5">
 			<div id="mainSideBar" class="sidebar">
               <a class="btn btn-danger more-data" href="#incidentModal" data-toggle="modal">Incident Details</a>
-				<h3 id="intro-text" class="light">Incidents of "green-on-blue" violence were rare in the first few years of the Afghan War, averaging no more than one a year through 2008. With the "surge" of 33,000 U.S. troops in 2009, though, the number of attacks jumped to four. This upward trend continued to a peak of 12 incidents in 2011 -- and there have already been nine such attacks in 2012.</h3>
+				<p id="intro-text" class="light">Incidents of "green-on-blue" violence were rare in the first few years of the Afghan War, averaging no more than one a year through 2008. With the "surge" of 33,000 U.S. troops in 2009, though, the number of attacks jumped to four. This upward trend continued to a peak of 12 incidents in 2011 -- and there have already been nine such attacks in 2012.</p>
 			
 				<div id="container" style="height: 150px; margin: 0 auto"></div>
 				
@@ -268,14 +289,14 @@ The Global Savings and Social Protection initiative has 'heat-mapped' the compos
               <table id="incidentTable" class="table table-bordered table-striped">
               <thead>
               <tr>
-                 <td valign="bottom">Date</td>
-                 <td valign="bottom">Province</td>
-                 <td valign="bottom">Village</td>
-                 <td valign="bottom">NATO Member State</td>
-                 <td valign="bottom"># of NATO Troops Killed </td>
-                 <td valign="bottom"># of NATO Troops Wounded</td>
-                 <td valign="bottom">Militant Affiliation</td>
-                 <td valign="bottom">Method</td>
+                 <td valign="bottom"><strong>Date</strong></td>
+                 <td valign="bottom"><strong>Province</strong></td>
+                 <td valign="bottom"><strong>Village</strong></td>
+                 <td valign="bottom"><strong>NATO Member State</strong></td>
+                 <td valign="bottom"><strong># of NATO Troops Killed</strong></td>
+                 <td valign="bottom"><strong># of NATO Troops Wounded</strong></td>
+                 <td valign="bottom"><strong>Militant Affiliation</strong></td>
+                 <td valign="bottom"><strong>Method</strong></td>
             </tr>
               </thead>
               <tbody>
