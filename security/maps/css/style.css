@@ -39,7 +39,7 @@ img.star {
 	margin-right: 8px;
 }
 #footer {
-  position:absolute;
+  position:fixed;
   bottom: 0;
   margin-top: 40px;
   background: #333;
