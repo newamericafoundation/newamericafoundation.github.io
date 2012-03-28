@@ -30,6 +30,14 @@
   <!-- <script type="text/javascript" src="scripts/default-tooltip.js"></script>-->
 
   <!-- <link href='styles/controls.css' rel='stylesheet' type='text/css' /> -->
+  <script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+  </script>
+
 <script>
 
 $(document).ready(function() {
@@ -210,6 +218,7 @@ var fatalities = {'2003':'1','2004':'1','2005':'1','2006':'1','2007':'1','2008':
 
 </head>
 <body>
+<div id="fb-root"></div>
 	<div class="navbar">
     	<div class="navbar-inner">
         	<div class="container-fluid">
@@ -217,6 +226,16 @@ var fatalities = {'2003':'1','2004':'1','2005':'1','2006':'1','2007':'1','2008':
                   <h1 class="light"><img class="star" src="img/star.png" />Attacks on U.S and NATO Soldiers by Afghan Security Forces</h1>
                 </div>
                 <div class="pull-right">
+                  <div class="social-media">
+                    <!-- Place this render call where appropriate -->
+                    <div class="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://newamericafoundation.github.com/security/maps/afghanistan.html" data-related="newamerica">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+                    <div class="facebook"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fnewamericafoundation.github.com%2Fsecurity%2Fmaps%2Fafghanistan.html&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe></div>
+                    <div class="google">
+                      <!-- Place this tag where you want the +1 button to render -->
+                      <g:plusone size="medium" href="http://newamericafoundation.github.com/security/maps/afghanistan.html"></g:plusone>
+                    </div>
+                  </div>
                 </div>					
 	  		</div><!-- end .container-fluid-->
 		</div><!-- end .navbar-inner-->
