@@ -287,7 +287,7 @@ a.zoomout {
   }
 
 .wax-tooltip h2{
-	  color:#fff;
+	  color:#333;
 }
 
 .wax-tooltip.hide { opacity:0; }
@@ -325,7 +325,7 @@ a.zoomout {
 
 .mainToolTip{
 	float:left;
-	color:#f4f4f4;
+	color:#333;
 	width:100%;
 }
 
