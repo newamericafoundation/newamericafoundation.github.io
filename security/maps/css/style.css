@@ -213,6 +213,18 @@ a.close:active {
 	padding: 2px;
 }
 
+/* --------------------------
+  Modal
+----------------------------- */
+
+.modal .table {
+	font-size: 12px;
+	line-height: 13px;
+}
+
+.modal .table td {
+	padding: 2px;
+}
 
 /* --------------------------
   Map
@@ -273,9 +285,9 @@ a.zoomout {
 	right:30px;
 	bottom:20px;
 	z-index:999999;
-	box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
+	/*box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
 	-moz-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
-	-webkit-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
+	-webkit-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;*/
 }
 
 .wax-legends .wax-legend {
@@ -308,7 +320,7 @@ a.zoomout {
 	opacity: 1;
 	-webkit-transition: opacity .5s;
 	-moz-transition: opacity .5s;
-	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+	/*box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);*/
 	min-height: 210px;
   }
 
