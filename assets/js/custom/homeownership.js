@@ -53,7 +53,7 @@ var chart;
 		tooltip: {
 			formatter: function() {
 				return ''+
-					this.series.name +': '+ Highcharts.numberFormat(this.y, 0);
+					'Mortgage Interest Deduction Claimants: '+ Highcharts.numberFormat(this.y, 0);
 			}
 		},
 		plotOptions: {
@@ -120,6 +120,12 @@ var chart;
 				return '$' + Highcharts.numberFormat(this.value, 0);
 			  }
 			},
+		},
+		tooltip: {
+			formatter: function() {
+				return ''+
+					'Mortgage Interest Deduction Value: $'+ Highcharts.numberFormat(this.y, 0);
+			}
 		},
 		plotOptions: {
 			bar: {
