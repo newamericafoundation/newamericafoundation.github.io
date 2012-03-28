@@ -40,7 +40,9 @@ $(document).ready(function() {
 	         renderTo: 'container',
 	         zoomType: 'x',
 			 ignoreHiddenSeries: true,
-			 type: 'column'
+			 type: 'column',
+			 backgroundColor: '#eee',
+			 spacingRight: 10
 	      },
 	       title: {
 	         text: "'Green-on-Blue' Attacks in Afghanistan"
@@ -131,25 +133,10 @@ $(document).ready(function() {
 
 </head>
 <body>
-	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
-	<script type="text/javascript">
-	  (function() {
-	    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-	    po.src = 'https://apis.google.com/js/plusone.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-	  })();
-	</script>
-	
 	<div class="navbar">
     	<div class="navbar-inner">
         	<div class="container-fluid">
+<<<<<<< HEAD
 				<h1 class="light">Attacks on U.S. and NATO Soldiers by Afghan Security Forces <div class="pull-right">
 					<div class="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-text="Mapping the potential for wealth creation" data-via="NewAmerica">Tweet</a>
 					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -161,10 +148,17 @@ $(document).ready(function() {
 						<div class="fb-like" data-href="http://newamericafoundation.github.com/gssp/maps/payment.html" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false"></div>
 					</div><!-- end facebook-->
 				</h1>
+=======
+				<div class="pull-left">
+                  <h1 class="light"><img class="star" src="img/star.png" />Afghanistan Green on Blue</h1>
+                </div>
+                <div class="pull-right">
+					
+>>>>>>> Nick's changes
 	  		</div><!-- end .container-fluid-->
 		</div><!-- end .navbar-inner-->
 	</div><!-- end .navbar-fixed-top-->
-	<div class="container-fluid">
+	<div>
 		<div id="mapContainer" class="row-fluid">
 			<div id="mainMap" class="map span7 activeMap"><span id="mapTitle"><!-- <h3>Payment Infrastructure</h3> --></span></div>
 			<div id="mainSideBar" class="span5 sidebar">
@@ -199,6 +193,16 @@ $(document).ready(function() {
 				 <p>Easy and convenient access to a variety of financial services is necessary in order to truly enable asset building among participants in social safety net programs. To glean a better idea of the state of the financial infrastructure in countries with cash-transfer social protection programs, we have analyzed and mapped their physical payment infrastructures - including Commercial Banks, Microfinance Institutions, ATMs and Point of Service terminals - in addition to the human infrastructure and potential for banking via new mediums such as mobiles.</p>
 			</div>
 		</div>
+        
+<footer id="footer">
+  <div class="container">
+    <p align="center">The New America Foundation<br />
+1899 L Street, N.W., Suite 400, Washington, DC 20036<br />
+921 11th Street, Suite 901, Sacramento, CA 95814</p>
+	<p align="center"><a href="http://www.newamerica.net/about/copyright"><img src="img/cc.png" /></a></p>
+  </div>
+</footer>
+        
 	</div><!-- end .container-fluid-->
 
 </body>
