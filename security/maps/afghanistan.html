@@ -184,14 +184,20 @@ $(document).ready(function() {
 		<div id="mapContainer" class="row-fluid">
           <div class="span7">
 			<div id="mainMap" class="map activeMap"></div>
-            <div id="toolTipContainer">
+            <div id="toolTipContainer">            
               <h3>About the Map</h3>
-              <p>The Global Savings and Social Protection initiative has 'heat-mapped' the composite variables that influence a country's potential to implement savings-linked social protection models. This initial map shows 11 different variables relating to a country's payment infrastructure, and a country's score of 1-5 on a variable corresponds to its relative quintile; that is to say, India's score on ATM's per 100,000 adults is a '2' because its data falls in the second quintile (between the 20th and 40th percentile). Each variable is used to compute a composite Payment Infrastructure score. <strong>Roll over or click a country to view individual indicators. Use the buttons above to switch between map layers for each indicator.</strong></p>
+                            
+              <p>                            <a class="btn btn-danger more-data" href="#indidentModal" data-toggle="modal">Incident Details</a>
+                            
+                            
+The Global Savings and Social Protection initiative has 'heat-mapped' the composite variables that influence a country's potential to implement savings-linked social protection models. This initial map shows 11 different variables relating to a country's payment infrastructure, and a country's score of 1-5 on a variable corresponds to its relative quintile; that is to say, India's score on ATM's per 100,000 adults is a '2' because its data falls in the second quintile (between the 20th and 40th percentile). Each variable is used to compute a composite Payment Infrastructure score. <strong>Roll over or click a country to view individual indicators. Use the buttons above to switch between map layers for each indicator.</strong></p>
+              
+
 			</div>
           </div>
           <div class="span5">
 			<div id="mainSideBar" class="sidebar">
-				<p id="intro-text" class="light">Incidents of "green-on-blue" violence were rare in the first few years of the Afghan War, averaging no more than one a year through 2008. With the "surge" of 33,000 U.S. troops in 2009, though, the number of attacks jumped to four. This upward trend continued to a peak of 12 incidents in 2011 -- and there have already been nine such attacks in 2012.
+				<p id="intro-text" class="light">Incidents of "green-on-blue" violence were rare in the first few years of the Afghan War, averaging no more than one a year through 2008. With the "surge" of 33,000 U.S. troops in 2009, though, the number of attacks jumped to four. This upward trend continued to a peak of 12 incidents in 2011 -- and there have already been nine such attacks in 2012.  
 				</p>
 			
 				<div id="container" style="height: 250px; margin: 0 auto"></div>
@@ -231,6 +237,370 @@ $(document).ready(function() {
 </footer>
         
 	</div><!-- end .container-fluid-->
+
+
+
+            <div id="incidentModal" class="modal hide fade">
+            <div class="modal-header">
+              <a class="close" data-dismiss="modal">&times;</a>
+              <h3>'Green-on-Blue' Incident Details</h3>
+            </div>
+            <div class="modal-body">
+              <h4>All incident details are drawn from published media reports.  Last updated March 27, 2012.</h4>
+              <table id="programTable" class="table table-striped table-condensed">
+              <thead>
+              <tr>
+                 <td valign="bottom">Date</td>
+                 <td valign="bottom">Province</td>
+                 <td valign="bottom">Village</td>
+                 <td valign="bottom">NATO Member State</td>
+                 <td valign="bottom"># of NATO Troops Killed </td>
+                 <td valign="bottom"># of NATO Troops Wounded</td>
+                 <td valign="bottom">Militant Affiliation</td>
+                 <td valign="bottom">Method</td>
+            </tr>
+              </thead>
+              <tbody>
+              <tr>
+                 <td valign="top">3/26/12</td>
+                 <td valign="top">Paktika</td>
+                 <td valign="top">unknown</td>
+                 <td valign="top">USA</td>
+                 <td valign="top">1</td>
+                 <td valign="top">0</td>
+                 <td valign="top">ALP</td>
+                 <td valign="top">Shooting as ISAF forces approached police checkpoint</td>
+            </tr>
+              <tr>
+                 <td valign="top">3/26/12</td>
+                 <td valign="top">Helmand</td>
+                 <td valign="top">Lashkar Gah</td>
+                 <td valign="top">UK</td>
+                 <td valign="top">2</td>
+                 <td valign="top">0</td>
+                 <td valign="top">ANA</td>
+                 <td valign="top">shooting at NATO base</td>
+            </tr>
+              <tr>
+                 <td valign="top">3/1/12</td>
+                 <td valign="top">Kandahar</td>
+                 <td valign="top">Zhari</td>
+                 <td valign="top">USA</td>
+                 <td valign="top">2</td>
+                 <td valign="top">0</td>
+                 <td valign="top">ANA</td>
+                 <td valign="top">Shooting from sentry tower</td>
+            </tr>
+              <tr>
+                 <td valign="top">2/25/12</td>
+                 <td valign="top">Kabul</td>
+                 <td valign="top">Kabul</td>
+                 <td valign="top">USA</td>
+                 <td valign="top">2</td>
+                 <td valign="top">0</td>
+                 <td valign="top">Afghan Intelligence Police</td>
+                 <td valign="top">Shooting in Interior Ministry office -- execution</td>
+            </tr>
+              <tr>
+                 <td valign="top">2/23/12</td>
+                 <td valign="top">Nangarhar</td>
+                 <td valign="top">Khogyani</td>
+                 <td valign="top">USA</td>
+                 <td valign="top">2</td>
+                 <td valign="top">4</td>
+                 <td valign="top">ANA</td>
+                 <td valign="top">Shooting at demonstration over Quran burnings</td>
+            </tr>
+              <tr>
+                 <td valign="top">2/20/12</td>
+                 <td valign="top">Kandahar</td>
+                 <td valign="top">Spin Boldak</td>
+                 <td valign="top">Albania</td>
+                 <td valign="top">1</td>
+                 <td valign="top">0</td>
+                 <td valign="top">ANP</td>
+                 <td valign="top">unknown</td>
+            </tr>
+              <tr>
+                 <td valign="top">2/1/12</td>
+                 <td valign="top">Helmand</td>
+                 <td valign="top">Marjah</td>
+                 <td valign="top">USA</td>
+                 <td valign="top">1</td>
+                 <td valign="top">0</td>
+                 <td valign="top">ANA</td>
+                 <td valign="top">Shooting while both were guarding joint operating base</td>
+            </tr>
+              <tr>
+                 <td valign="top">1/20/12</td>
+                 <td valign="top">Kapisa</td>
+                 <td valign="top">Tagab </td>
+                 <td valign="top">French</td>
+                 <td valign="top">4</td>
+                 <td valign="top">16</td>
+                 <td valign="top">ANP</td>
+                 <td valign="top">Shooting during fitness exercise</td>
+            </tr>
+              <tr>
+                 <td valign="top">1/8/12</td>
+                 <td valign="top">Zabul</td>
+                 <td valign="top">Qalat</td>
+                 <td valign="top">USA</td>
+                 <td valign="top">1</td>
+                 <td valign="top">0</td>
+                 <td valign="top">ANA</td>
+                 <td valign="top">On a base</td>
+            </tr>
+              <tr>
+                 <td valign="top">12/29/11</td>
+                 <td valign="top">Farah</td>
+                 <td valign="top">Tagab valley</td>
+                 <td valign="top">French</td>
+                 <td valign="top">2</td>
+                 <td valign="top">0</td>
+                 <td valign="top">ANA</td>
+                 <td valign="top">Shooting during joint operation</td>
+            </tr>
+              <tr>
+                 <td valign="top">11/9/11</td>
+                 <td valign="top">Uruzgan</td>
+                 <td valign="top">Nasir</td>
+                 <td valign="top">Australia</td>
+                 <td valign="top">0</td>
+                 <td valign="top">3</td>
+                 <td valign="top">ANA</td>
+                 <td valign="top">Shooting at base</td>
+            </tr>
+              <tr>
+                 <td valign="top">10/29/11</td>
+                 <td valign="top">Kandahar</td>
+                 <td valign="top">Shah Wali Kot</td>
+                 <td valign="top">Australia</td>
+                 <td valign="top">4</td>
+                 <td valign="top">6</td>
+                 <td valign="top">ANA</td>
+                 <td valign="top">Shooting during joint excercise </td>
+            </tr>
+              <tr>
+                 <td valign="top">8/4/11</td>
+                 <td valign="top">unknown</td>
+                 <td valign="top">unknown</td>
+                 <td valign="top">unknown</td>
+                 <td valign="top">1</td>
+                 <td valign="top">0</td>
+                 <td valign="top">ANP</td>
+                 <td valign="top">unknown</td>
+            </tr>
+              <tr>
+                 <td valign="top">7/16/11</td>
+                 <td valign="top">Helmand</td>
+                 <td valign="top">Loya Manda</td>
+                 <td valign="top">UK</td>
+                 <td valign="top">1</td>
+                 <td valign="top">0</td>
+                 <td valign="top">ANA</td>
+                 <td valign="top">Shooting during joint patrol</td>
+            </tr>
+              <tr>
+                 <td valign="top">5/31/11</td>
+                 <td valign="top">Uruzgan</td>
+                 <td valign="top">Chora Valley</td>
+                 <td valign="top">Australia</td>
+                 <td valign="top">1</td>
+                 <td valign="top">0</td>
+                 <td valign="top">ANA</td>
+                 <td valign="top">Shooting during Afghan's guard shift from sentry</td>
+            </tr>
+              <tr>
+                 <td valign="top">5/13/11</td>
+                 <td valign="top">Helmand</td>
+                 <td valign="top">unknown</td>
+                 <td valign="top">USA</td>
+                 <td valign="top">2</td>
+                 <td valign="top">0</td>
+                 <td valign="top">ANP</td>
+                 <td valign="top">Shooting in police compound</td>
+            </tr>
+              <tr>
+                 <td valign="top">4/27/11</td>
+                 <td valign="top">Kabul</td>
+                 <td valign="top">Kabul</td>
+                 <td valign="top">USA</td>
+                 <td valign="top">9</td>
+                 <td valign="top">1</td>
+                 <td valign="top">ANA: Afghan Air Force</td>
+                 <td valign="top">Shooting after argument</td>
+            </tr>
+              <tr>
+                 <td valign="top">4/15/11</td>
+                 <td valign="top">Laghman</td>
+                 <td valign="top">FOB Gamberi</td>
+                 <td valign="top">unknown</td>
+                 <td valign="top">5</td>
+                 <td valign="top">0</td>
+                 <td valign="top">ANA (new recruit)</td>
+                 <td valign="top">Blew himself up before meeting between NATO and local leaders</td>
+            </tr>
+              <tr>
+                 <td valign="top">4/4/11</td>
+                 <td valign="top">Faryab</td>
+                 <td valign="top">Maymana</td>
+                 <td valign="top">USA</td>
+                 <td valign="top">2</td>
+                 <td valign="top">0</td>
+                 <td valign="top">ANP</td>
+                 <td valign="top">Shooting after argument during joint duty at checkpoint </td>
+            </tr>
+              <tr>
+                 <td valign="top">2/18/11</td>
+                 <td valign="top">Baghlan</td>
+                 <td valign="top">unknown</td>
+                 <td valign="top">German</td>
+                 <td valign="top">3</td>
+                 <td valign="top">6</td>
+                 <td valign="top">ANA</td>
+                 <td valign="top">Shooting after German troops returned from patrol</td>
+            </tr>
+              <tr>
+                 <td valign="top">1/22/11</td>
+                 <td valign="top">Kabul</td>
+                 <td valign="top">unknown</td>
+                 <td valign="top">French</td>
+                 <td valign="top">3</td>
+                 <td valign="top">0</td>
+                 <td valign="top">ANA</td>
+                 <td valign="top">unknown</td>
+            </tr>
+              <tr>
+                 <td valign="top">11/29/10</td>
+                 <td valign="top">Nangarhar</td>
+                 <td valign="top">unknown</td>
+                 <td valign="top">USA</td>
+                 <td valign="top">6</td>
+                 <td valign="top">0</td>
+                 <td valign="top">Afghan Border Police (ABP)</td>
+                 <td valign="top">Shooting during training exercise</td>
+            </tr>
+              <tr>
+                 <td valign="top">11/6/10</td>
+                 <td valign="top">Helmand</td>
+                 <td valign="top">Sagin</td>
+                 <td valign="top">USA</td>
+                 <td valign="top">2</td>
+                 <td valign="top">0</td>
+                 <td valign="top">ANA</td>
+                 <td valign="top">unknown</td>
+            </tr>
+              <tr>
+                 <td valign="top">11/4/10</td>
+                 <td valign="top">Helmand</td>
+                 <td valign="top">unknown</td>
+                 <td valign="top">UK</td>
+                 <td valign="top">5</td>
+                 <td valign="top">0</td>
+                 <td valign="top">unknown</td>
+                 <td valign="top">unknown</td>
+            </tr>
+              <tr>
+                 <td valign="top">8/25/10</td>
+                 <td valign="top">Badghis</td>
+                 <td valign="top">Qalay-e Naw</td>
+                 <td valign="top">Spain</td>
+                 <td valign="top">2</td>
+                 <td valign="top">0</td>
+                 <td valign="top">ANP (trainee)</td>
+                 <td valign="top">Shooting after argument between Spanish soldiers and offender -- he refused to hand over weapon upon entering the military base</td>
+            </tr>
+              <tr>
+                 <td valign="top">7/20/10</td>
+                 <td valign="top">Balkh</td>
+                 <td valign="top">Mazar-e-Sharif</td>
+                 <td valign="top">USA</td>
+                 <td valign="top">2</td>
+                 <td valign="top">0</td>
+                 <td valign="top">ANA</td>
+                 <td valign="top">Shooting during rifle training</td>
+            </tr>
+              <tr>
+                 <td valign="top">11/2/09</td>
+                 <td valign="top">Helmand</td>
+                 <td valign="top">Nad-e'Ali</td>
+                 <td valign="top">UK</td>
+                 <td valign="top">5</td>
+                 <td valign="top">6</td>
+                 <td valign="top">ANP</td>
+                 <td valign="top">Shooting on resting troops by joint hospital</td>
+            </tr>
+              <tr>
+                 <td valign="top">10/24/09</td>
+                 <td valign="top">Wardak</td>
+                 <td valign="top">unknown</td>
+                 <td valign="top">USA</td>
+                 <td valign="top">2</td>
+                 <td valign="top">0</td>
+                 <td valign="top">ANP</td>
+                 <td valign="top">Shooting during joint patrol</td>
+            </tr>
+              <tr>
+                 <td valign="top">9/28/09</td>
+                 <td valign="top">Kabul</td>
+                 <td valign="top">Kabul</td>
+                 <td valign="top">USA</td>
+                 <td valign="top">2</td>
+                 <td valign="top">2</td>
+                 <td valign="top">ANP</td>
+                 <td valign="top">Shooting during joint patrol</td>
+            </tr>
+              <tr>
+                 <td valign="top">7/9/07</td>
+                 <td valign="top">Herat</td>
+                 <td valign="top">Herat</td>
+                 <td valign="top">USA</td>
+                 <td valign="top">0</td>
+                 <td valign="top">1</td>
+                 <td valign="top">ANA</td>
+                 <td valign="top">unknown</td>
+            </tr>
+              <tr>
+                 <td valign="top">5/7/07</td>
+                 <td valign="top">Kabul</td>
+                 <td valign="top">Pul-i-Charkhi Jail</td>
+                 <td valign="top">USA</td>
+                 <td valign="top">2</td>
+                 <td valign="top">2</td>
+                 <td valign="top">ANA</td>
+                 <td valign="top">Shooting as troops drove away from prison</td>
+            </tr>
+              <tr>
+                 <td valign="top">5/15/03</td>
+                 <td valign="top">Kabul</td>
+                 <td valign="top">unknown</td>
+                 <td valign="top">Norwegian</td>
+                 <td valign="top">0</td>
+                 <td valign="top">2</td>
+                 <td valign="top">ANA</td>
+                 <td valign="top">unknown</td>
+            </tr>
+              <tr>
+                 <td valign="top"></td>
+                 <td valign="top"></td>
+                 <td valign="top"></td>
+                 <td valign="top">Totals:</td>
+                 <td valign="top">77</td>
+                 <td valign="top">49</td>
+                 <td valign="top"></td>
+                 <td valign="top"></td>
+            </tr>
+
+              </tbody>
+              </table>
+              </div>
+              <div class="modal-footer">
+              <a href="#" class="btn" data-dismiss="modal">Close</a>
+              </div>
+            </div>
+
+
 
 </body>
 </html>
