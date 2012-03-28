@@ -49,6 +49,24 @@ $(document).ready(function() {
 			font: '14px Arial, Helvetica, sans-serif'
 		}
 	},
+	xAxis: {
+		gridLineColor: '#666666',
+		labels: {
+			style: {
+				color: '#666666'
+			}
+		},
+		lineColor: '#666666',
+		tickColor: '#666666',
+		title: {
+			style: {
+				color: '#000',
+				fontSize: '12px',
+				fontFamily: 'Helvetica,Arial,"Nimbus Sans L",sans-serif;'
+
+			}
+		}
+	},
 	yAxis: {
 		gridLineColor: '#666666',
 		labels: {
@@ -78,11 +96,9 @@ $(document).ready(function() {
 			 ignoreHiddenSeries: true,
 			 type: 'column',
 			 backgroundColor: '#eee',
-			 spacingRight: 80,
-			 spacingLeft: 80
 	      },
 	       title: {
-	         text: "'Green-on-Blue' Attacks in Afghanistan"
+	         text: null
 	      },
 		   subtitle: {
 			 text: "Incidents from 2003 to March 2012",
@@ -121,6 +137,9 @@ $(document).ready(function() {
 			}
 		},
 	      plotOptions: {
+				series: {
+					pointWidth: 20
+				},
 	         column: {
 	            fillColor: {
 	               linearGradient: [0, 0, 0, 300],
@@ -129,7 +148,6 @@ $(document).ready(function() {
 	                  [1, 'rgba(2,0,0,0)']
 	               ]
 	            },
-	            lineWidth: 1,
 	            marker: {
 	               enabled: false,
 	               states: {
@@ -180,7 +198,7 @@ $(document).ready(function() {
 	  		</div><!-- end .container-fluid-->
 		</div><!-- end .navbar-inner-->
 	</div><!-- end .navbar-fixed-top-->
-	<div>
+	<div style="padding: 0 5px;">
 		<div id="mapContainer" class="row-fluid">
           <div class="span7">
 			<div id="mainMap" class="map activeMap"></div>
@@ -197,12 +215,10 @@ The Global Savings and Social Protection initiative has 'heat-mapped' the compos
           </div>
           <div class="span5">
 			<div id="mainSideBar" class="sidebar">
-				<p id="intro-text" class="light">Incidents of "green-on-blue" violence were rare in the first few years of the Afghan War, averaging no more than one a year through 2008. With the "surge" of 33,000 U.S. troops in 2009, though, the number of attacks jumped to four. This upward trend continued to a peak of 12 incidents in 2011 -- and there have already been nine such attacks in 2012.<br />
-				<a class="btn btn-danger more-data" href="#incidentModal" data-toggle="modal">Incident Details</a>
-
-				</p>
+              <a class="btn btn-danger more-data" href="#incidentModal" data-toggle="modal">Incident Details</a>
+				<h3 id="intro-text" class="light">Incidents of "green-on-blue" violence were rare in the first few years of the Afghan War, averaging no more than one a year through 2008. With the "surge" of 33,000 U.S. troops in 2009, though, the number of attacks jumped to four. This upward trend continued to a peak of 12 incidents in 2011 -- and there have already been nine such attacks in 2012.</h3>
 			
-				<div id="container" style="height: 250px; margin: 0 auto"></div>
+				<div id="container" style="height: 150px; margin: 0 auto"></div>
 				
 				<div id="nato-table">
 				<table class="table table-bordered table-striped">
@@ -234,7 +250,7 @@ The Global Savings and Social Protection initiative has 'heat-mapped' the compos
         
 <footer id="footer">
   <div class="container">
-    <p align="center"><a href="http://www.newamerica.net/" class="footer-logo"><img src="img/logo.png" /></a><a href="http://www.newamerica.net/about/copyright"><img src="img/cc.png" /></a></p>
+    <p align="center"><a href="http://www.newamerica.net/about/copyright"><img src="img/cc.png" /></a></p>
   </div>
 </footer>
         
