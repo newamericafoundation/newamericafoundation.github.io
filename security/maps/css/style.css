@@ -6,6 +6,16 @@ body {
 	overflow: hidden;*/
 	background:#EEE;
   }
+  
+.social-media {
+    float: right;
+    margin: 20px 5px 5px 5px;
+    position: relative;
+}
+.social-media .twitter, .social-media .facebook, .social-media .google {
+    display: inline;
+    width: 100px;
+}
 
 /* --------------------------
   Layout
