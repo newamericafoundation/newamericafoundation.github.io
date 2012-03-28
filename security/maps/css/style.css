@@ -11,6 +11,7 @@ body {
     float: right;
     margin: 20px 5px 5px 5px;
     position: relative;
+	width: 320px;
 }
 .social-media .twitter, .social-media .facebook, .social-media .google {
     display: inline;
