@@ -116,7 +116,7 @@
 		if(userCenter && userZoom){
 			m.setCenterZoom(userCenter, userZoom);
 		}else{
-			m.setCenterZoom(new mm.Location(38.457303314891604, -93.99900468749993), 2);
+			m.setCenterZoom(new mm.Location(36.1, -97.5), 2);
 			// easey.slow(m,{location:new mm.Location(50, 20),time: 2000,zoom:4 });
 		}
 			m.addCallback('drawn', function(m) {
