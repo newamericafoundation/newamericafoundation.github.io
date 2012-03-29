@@ -15,6 +15,10 @@ img.star {
 	height: 20px;
 }
 
+.hero-unit h1 {
+	margin-bottom: 15px !important;	
+}
+
 header {
 	padding-top: 70px;
 }
