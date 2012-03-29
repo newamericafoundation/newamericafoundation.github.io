@@ -6,13 +6,14 @@ body {
 	background: url(../img/bg-noise2.jpg) repeat;	
 }
 
-#overview .hero-unit {
+#overview .hero-unit,
+h3.header {
 	position:relative;	
 }
 
 .social-media {
     float: right;
-    margin: 20px 5px 5px 5px;
+    margin: 5px;
     position: absolute;
 	width: 320px;
 	top: 5px;
