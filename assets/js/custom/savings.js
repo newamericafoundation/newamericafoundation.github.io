@@ -129,7 +129,7 @@
 	// Share
 	$('a.share').click(function(e){
 		e.preventDefault();
-		$('#embed-code-field textarea').attr('value',"<iframe width='650' height='500' frameBorder='0' src='http://a.tiles.mapbox.com/v3/newamerica.map-6erg384i.html#4/55/20'></iframe>");
+		$('#embed-code-field textarea').attr('value',"<iframe width='650' height='500' frameBorder='0' src='http://a.tiles.mapbox.com/v3/newamerica.assets_scorecard.html#4/40.38/-96.15'></iframe>");
 		$('.wax-share').css('display', 'block');
 		$('#embed-code')[0].tabindex = 0;
 		$('#embed-code')[0].select();
