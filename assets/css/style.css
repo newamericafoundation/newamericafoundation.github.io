@@ -6,6 +6,23 @@ body {
 	background: url(../img/bg-noise2.jpg) repeat;	
 }
 
+#overview .hero-unit {
+	position:relative;	
+}
+
+.social-media {
+    float: right;
+    margin: 20px 5px 5px 5px;
+    position: absolute;
+	width: 320px;
+	top: 5px;
+	right:5px;
+}
+.social-media .twitter, .social-media .facebook, .social-media .google {
+    display: inline;
+    width: 100px;
+}
+
 img.star {
 	vertical-align: -25%;
 	margin-right: 8px;
