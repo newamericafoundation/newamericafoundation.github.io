@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Assets Budget Report</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta property="og:image" content="http://newamericafoundation.github.com/assets/img/social.png"/>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link rel="stylesheet/less" href="lib/bootstrap.less" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/controls.css" />
+	<script src="js/less-1.1.5.min.js"></script>
+	<script src="js/bootstrap-alert.js"></script>
+	<script src="js/bootstrap-button.js"></script>
+	<script src="js/bootstrap-carousel.js"></script>
+	<script src="js/bootstrap-collapse.js"></script>
+	<script src="js/bootstrap-dropdown.js"></script>
+	<script src="js/bootstrap-modal.js"></script>
+	<script src="js/bootstrap-popover.js"></script>
+	<script src="js/bootstrap-scrollspy.js"></script>
+	<script src="js/bootstrap-tab.js"></script>
+	<script src="js/bootstrap-tooltip.js"></script>
+	<script src="js/bootstrap-transition.js"></script>
+	<script src="js/bootstrap-typeahead.js"></script>
+	<script src="js/highcharts/highcharts.js"></script>
+	<script src='js/wax/modestmaps.min.js' type='text/javascript'></script>
+	<script src='js/wax/wax.mm.js' type='text/javascript'></script>
+    <script src="js/custom/staples.js"></script>
+    <script src="js/custom/retirement.js"></script>
+    <!--<script src="js/custom/entrepreneurship.js"></script>-->
+    <script src="js/custom/homeownership.js"></script>
+    <script src="js/custom/education.js"></script>
+	<script src="js/custom/savings.js"></script>
+	<script src="js/custom/overview.js"></script>
+	<script >
+	  $(function() {
+		$('#li08').addClass('ed-active');
+	    // $("table#programTable").tablesorter({ sortList: [[1,0]] });
+	    $(".nav").scrollspy();
+		buildMap('http://a.tiles.mapbox.com/v3/newamerica.assets_scorecard.jsonp');
+		homeowernship();
+		education();
+		retirement();
+		overview();
+		switchGraph('netWorth');
+		$('#netWorth').addClass('disabled');
+		$("#li00").click(function() {
+		  $('#pie2000').fadeIn('slow');
+		  $('#pie2008').fadeOut('slow');
+		});
+		$("#li08").click(function() {
+		  $('#pie2008').fadeIn('slow');
+		  $('#pie2000').fadeOut('slow');
+		});
+		$("ul.ed-tabs li").click(function(){
+		  // If this isn't already active
+		  if (!$(this).hasClass("ed-active")) {
+			// Remove the class from anything that is active
+			$("ul.ed-tabs li").removeClass("ed-active");
+			// And make this active
+			$(this).addClass("ed-active");
+		  }
+		
+
+		});
+			
+		$('div.navbar-fixed-top ul.nav').click(function () { 
+			homeowernship();
+			education();
+			retirement();
+			});
+	  });
+	
+	function switchGraph(buttonId){
+		for(bar in titles[buttonId]){
+			$('div#'+bar+'>span').animate({
+				width:titles[buttonId][bar][0]+'%'
+			}, 1000);
+			$('div#'+bar+'>span').text(titles[buttonId][bar][1]);
+		}
+	}
+	</script>
+  <script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+  </script>
+  </head>
+
+  <body data-spy="scroll">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          	<a class="brand" href="report.html"><img class="star" src="img/star.png" />Assets Report 2012</a>
+	           <ul class="nav">
+				<li><a href="#overview">Overview</a></li>
+				<li><a href="#homeownership">Homeownership</a></li>
+				<li><a href="#entrepreneurship">Entrepreneurship</a></li>
+	            <li><a href="#retirement">Retirement</a></li>
+				<li><a href="#savings">Savings</a></li>
+	            <li><a href="#education">Education</a></li>
+	          </ul> 
+        </div>
+      </div>
+    </div>
+
+<header id="overview">
+  <div class="container">
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+      <div class="social-media">
+        <!-- Place this render call where appropriate -->
+        <div class="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://newamericafoundation.github.com/assets/report.html" data-related="newamerica">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+        <div class="facebook"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fnewamericafoundation.github.com%2Fassets%2Freport.html&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe></div>
+        <div class="google">
+          <!-- Place this tag where you want the +1 button to render -->
+          <g:plusone size="medium" href="http://newamericafoundation.github.com/assets/report.html"></g:plusone>
+        </div>
+      </div>
+        <h1>The Assets Report 2012</h1>
+<div class="overview-graph span4">
+		<div class="ent-anecdote"><span class="intro-number" style="color:#fff;font-weight:200;">$548 Billion Allocated for Wealth Building in the Federal Budget</span></div>
+			<div id="mainPieChart" style="width:300px;height:250px"></div>
+			<p id="graphTooltip" style="position:relative;top:-30px;right:10px;float:right;text-align:center;width:100%;">2012 Assets Spending <br/><em>(rollover to see the breakdown)</em></p>
+			
+		</div>
+        <p>Savings and assets are the building blocks for economic mobility and security. They provide a buffer against unexpected events and emergencies as well as a means to move up the economic ladder with productive investments, such as by <em>buying a home, starting a business, saving for retirement, saving for emergencies, or going to college.</em> </p>
+<p>Currently, the federal budget allocates a substantial amount of resources to support these priorities. Yet most of the benefits are delivered through tax breaks and subsidies that favor higher-income households. Families with lower incomes and fewer resources receive much less support.</p>
+		<p>This site describes how families are faring across 5 key policy areas that typically help people accumulate wealth and build assets, identifies the current spending to support these objectives, and suggests how we could do better. Scroll down or click on the links above to jump to a specific chapter.</p>
+      </div>
+  </div> <!-- /.container -->
+</header>
+
+<section class="main-content">
+
+  <div class="container">
+
+    <div id="homeownership" class="row row-homeownership" >
+    
+      <div class="span12">
+      
+        <h3 class="header">Homeownership
+          <div class="social-media">
+            <div class="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://newamericafoundation.github.com/assets/report.html#homeownership" data-related="newamerica">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+            <div class="facebook"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fnewamericafoundation.github.com%2Fassets%2Freport.html%23homeownership&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe></div>
+            <div class="google">
+              <!-- Place this tag where you want the +1 button to render -->
+              <g:plusone size="medium" href="http://newamericafoundation.github.com/assets/report.html#homeownership"></g:plusone>
+            </div>
+          </div>
+        </h3>
+        <h1 class="header">When the housing bubble burst, the people who had the least were hit the hardest.</h1>
+        
+        
+        <div class="row">
+          <h1 class="span10 offset1 sectionTagline">Who lost more during the recession? (2005 to 2009) <sup><a href="#source1">[1]</a></sup></h1>
+        </div><!-- / .row -->
+                
+        <div class="row alert alert-success">	
+			<div class="btn-group offset2">
+			  <button id="netWorth" class="btn btn-default btn-large btn-home">2005 median net worth</button>
+			  <button id="recessionLoss" class="btn btn-default btn-large btn-home">% lost during recession</button>
+			  <button id="equityLoss" class="btn btn-default btn-large btn-home">% of recession loss in home equity</button>
+			</div><!-- end .btn-group -->
+			<div class="row">
+				<div class="span12">
+					<h3>White:</h3>
+					<div id="barWhite"><span class="ent-number-home btn-danger" >$134,992</span></div>
+				</div><!-- end .span12 -->
+			</div><!-- / .row -->
+			<div class="row">
+				<div class="span12">
+					<h3>Hispanic:</h3>
+					<div id="barHispanic"><span class="ent-number-home btn-danger" >$18,359</span></div>
+				</div><!-- end .span12 -->
+			</div><!-- / .row -->
+			<div class="row">
+				<div class="span12">
+					<h3>Black:</h3>
+					<div id="barBlack"><span class="ent-number-home btn-danger" >$12,124</span></div>
+				</div><!-- end .span12 -->
+			</div><!-- / .row -->
+        </div><!-- / .row -->
+                
+        <div class="row homeownership-number-row" style="margin: 40px 0;">
+        <h3 class="span10 offset1 sectionTagline">
+        The Home Mortgage Interest Deduction is the largest investment in homeownership in the budget, but the families for whom a home is their greatest asset receive the least support.
+        </h3>
+        </div>
+        
+        <div class="row">
+        <div class="span6">
+        <h3 align="center">Which income group claims the Mortgage Interest Deduction the most?</h3>
+        </div>
+        <div class="span6">
+        <h3 align="center">Average value of the Mortgage Interest Deduction claimed by income group</h3>
+        </div>
+        </div>
+        
+        <div class="row">
+        <div class="span6">
+        <div id="homeownership-graph" style="height: 300px;"></div>
+        </div>
+        <div class="span6">
+        <div id="homeownership-graph2" style="height: 300px;"></div>
+        </div>
+        </div>
+
+        <div class="row">
+        <div class="span6">
+        <h5 align="center">Number of returns claiming the mortgage income tax deduction by income group<sup><a href="#source2">[2]</a></sup></h5>
+        </div>
+        <div class="span6">
+        <h5 align="center">Average deduction claimed by income group<sup><a href="#source2">[2]</a></sup></h5>
+        </div>
+        </div>
+        
+        <div class="row" style="margin-top:40px;margin-bottom:30px;">
+          <div class="staple span5">
+            <div id="homeownershipModal" class="modal hide fade">
+            <div class="modal-header">
+              <a class="close" data-dismiss="modal">&times;</a>
+              <h3>Homeownership Spending Programs</h3>
+            </div>
+            <div class="modal-body">
+              <h4>Tax Spending (in millions)</h4>
+              <table id="programTable" class="table table-striped table-condensed">
+              <thead>
+                <tr>
+                    <th>Program Name</th>
+                    <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Deductibility of Mortgage Interest on   Owner-Occupied Housing</td>
+                <td width="100">$100,910</td>
+              </tr>
+              <tr>
+                <td>Deductibility of Property Tax</td>
+                <td width="100">$22,320</td>
+              </tr>
+              <tr>
+                <td>Capital Gains Exclusion on Home Sales</td>
+                <td width="100">$23,440</td>
+              </tr>
+              <tr>
+                <td>Exclusion of Imputed Rent for   Owner-Occupied Housing</td>
+                <td width="100">$51,080</td>
+              </tr>
+              <tr>
+                <td><strong>Subtotal Tax Spending</strong></td>
+                <td width="100"><strong>$197,750</strong></td>
+              </tr>
+              </tbody>
+              </table>
+              <h4>Direct Spending (in millions)</h4>
+              <table id="programTable" class="table table-striped table-condensed">
+              <thead>
+                <tr>
+                    <th>Program Name</th>
+                    <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>HOME Investment Partnerships Program (HOME)</td>
+                <td width="100">$1,000</td>
+              </tr>
+              <tr>
+                <td>Housing Counseling Assistance</td>
+                <td width="100">$45</td>
+              </tr>
+              <tr>
+                <td>Family Self-Sufficiency - Consolidated   Program</td>
+                <td width="100">$60</td>
+              </tr>
+              <tr>
+                <td>NeighborWorks   - Foreclosure Mitigation Counseling</td>
+                <td width="100">$86</td>
+              </tr>
+              <tr>
+                <td><strong>Subtotal Direct Spending</strong></td>
+                <td width="100"><strong>$1,191</strong></td>
+              </tr>
+              </tbody>
+              </table>
+              <table id="programTable" class="table table-striped table-condensed">
+              <tbody>
+              <tr>
+                <td><h4><strong>Total Homeownership</strong></h4></td>
+                <td width="100"><h4><strong>$198,941</strong></h4></td>
+              </tr>
+              </tbody>
+              </table>
+              </div>
+              <div class="modal-footer">
+              <a href="#" class="btn" data-dismiss="modal">Close</a>
+              </div>
+            </div>
+          <div class="alert alert-success">
+          <h4>2013 budget request spending levels — Homeownership</h4>
+		<div id="homeownershipGraphBar"></div>
+        <h4 class="pie">Percentage of<br />Total Asset Spending</h4>
+        <div id="homeownershipGraphPie"></div>
+		<div class="span2">
+      		<a class="btn btn-danger more-data" href="#homeownershipModal" data-toggle="modal">Data</a>
+		</div>
+          </div>
+          </div> <!-- end .staple -->
+          <div class="span6 offset1">
+          <h3>In the FY 2013 budget, almost $200 billion is spent to support homeownership, little of which goes to families with low or modest incomes.</h3> 	
+          </div><!-- /.span6 -->
+        </div><!-- /.row -->
+          
+          <div class="row">
+          <div class="span12">
+          <div class="alert alert-info">
+          <img src="img/policy-alert.png" style="float:right;margin: 0 0 5px 5px;" />
+          <h2>What can we do?</h2>
+          <p><a href="http://www.newamerica.net/publications/policy/rental_assistance_asset_accounts_0" target="_blank">Rental Assistance Asset Accounts</a> would allow families receiving housing assistance to divert a portion of their rent into a savings account that could be used for multiple purposes once they leave the program, including a down payment on a home.</p>
+<p><a href="http://newamerica.net/publications/policy/the_asset_building_potential_of_shared_equity_homeownership" target="_blank">Shared Equity Homeownership</a> projects are a promising alternative ownership model. In exchange for a public subsidy to lower the purchase price, families give up a portion of the home appreciation. This makes buying the home easier for the family and preserves affordability for the community over the long term.</p>
+          </div>
+        </div>      
+</div>    
+</div>
+</div>
+
+
+    <div id="entrepreneurship" class="row row-entrepreneurship">
+    
+      <div class="span12">
+      
+        <h3 class="header">Entrepreneurship
+          <div class="social-media">
+            <div class="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://newamericafoundation.github.com/assets/report.html#entrepreneurship" data-related="newamerica">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+            <div class="facebook"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fnewamericafoundation.github.com%2Fassets%2Freport.html%23entrepreneurship&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe></div>
+            <div class="google">
+              <!-- Place this tag where you want the +1 button to render -->
+              <g:plusone size="medium" href="http://newamericafoundation.github.com/assets/report.html#entrepreneurship"></g:plusone>
+            </div>
+          </div>
+        </h3>
+        <h1 class="header">Small businesses are the engines of job creation and vibrant local economies, but the fuel is running low.</h1>
+        
+        <div class="row">
+        <h1 class="span10 offset1 sectionTagline">Many small business can't get the money the need to open their doors and keep them open.<sup><a href="#source3">[3]</a></sup></h1>
+        </div><!-- / .row -->
+		<div class="row">
+			<span class="span4 offset2"><h3 class="sectionTagline">How many?</h3></span>
+			<span class="span4 offset1"><h3 class="sectionTagline">How much?</h3></span>
+		</div><!-- / .row -->
+        
+        <div class="row" style="min-height:150px;">
+			<div class="span1">
+				<div class="ent-anecdote" style="padding:20px 5px;"><h4>2008</h4></div>
+				<div class="ent-anecdote" style="padding:20px 5px;"><h4>2010</h4></div>
+			</div>
+        <div class="span4 offset1">
+        <div><h3><span class="ent-number">27 </span>Million Loans</h3></div>
+		<div><h3><span class="ent-number">22 </span>Million Loans</h3></div>
+        </div><!-- end .span3 -->
+        <div class="span5 offset1">
+        <div><h3><span class="ent-number">$711 </span>Billion</h3></div>
+        <div><h3><span class="ent-number">$652 </span>Billion</h3></div>
+
+        </div><!-- end .span3 -->
+        </div><!-- / .row -->
+        
+        <div class="row" style="margin-top:20px;">
+			<div class="span1">
+				<h3>&nbsp;</h3>
+				<div class="ent-anecdote" style="padding:20px 5px;"><h4>2007</h4></div>
+				<div class="ent-anecdote" style="padding:20px 5px;"><h4>2009</h4></div>
+			</div>
+        <div class="span3">
+        <div class="ent-anecdote"><h3>Bankruptcies</h3><span class="ent-number">28,332</span></div>
+        <div class="ent-anecdote"><span class="ent-number ent-number-big">60,837</span></div>
+        </div> 
+        
+        <div class="span3 offset1">
+        <div class="ent-anecdote"><h3>Closures</h3><span class="ent-number">592,410</span></div>
+        <div class="ent-anecdote"><span class="ent-number ent-number-big">660,900</span></div>
+        </div>
+        
+        <div class="span3 offset1">
+        <div class="ent-anecdote"><h3>Openings</h3><span class="ent-number">668,395</span></div>
+        <div class="ent-anecdote"><span class="ent-number  ent-number-big-red">552,600</span></div>
+        </div>
+        </div>             
+
+        <div class="row" style="margin-top:40px;margin-bottom:30px;">
+        <div class="staple span5">
+        <div id="entrepreneurshipModal" class="modal hide fade">
+        <div class="modal-header">
+        <a class="close" data-dismiss="modal">&times;</a>
+        <h3>Entrepreneurship Spending Programs</h3>
+        </div>
+        <div class="modal-body">
+        <h4>Direct Spending (in millions)</h4>
+        <table id="programTable" class="table table-striped table-condensed">
+        <thead>
+        <tr>
+        <th>Program Name</th>
+        <th>Amount</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>CDFI Fund</td>
+        <td width="100" align="char" char=".">$221</td>
+        </tr>
+        <tr>
+        <td>Microloan Program</td>
+        <td width="100" align="char" char=".">$3</td>
+        </tr>
+        <tr>
+        <td>Small Business Lending – 7(a) and 504 guaranteed loans</td>
+        <td width="100" align="char" char=".">$332</td>
+        </tr>
+        <tr>
+        <td>Small Business Lending</td>
+        <td width="100" align="char" char=".">$26</td>
+        </tr>
+        <tr>
+        <td>Subtotal Entrepreneurship </td>
+        <td width="100">$602</td>
+        </tr>
+        </tbody>
+        </table>
+        <table id="programTable" class="table table-striped table-condensed">
+        <tbody>
+        <tr>
+          <td><h4><strong>Total Entrepreneurship</strong></h4></td>
+          <td width="100"><h4><strong>$602</strong></h4></td>
+        </tr>
+        </tbody>
+        </table>
+        </div>
+        <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal">Close</a>
+        </div>
+        </div>
+        <div class="alert alert-success">
+        <h4>2013 budget request spending levels — Entrepreneurship</h4>
+		<div id="entrepreneurshipGraphBar"></div>
+        <h4 class="pie">Percentage of<br />Total Asset Spending</h4>
+        <div id="entrepreneurshipGraphPie"></div>
+		<div class="span2">
+      		<a class="btn btn-danger more-data" href="#entrepreneurshipModal" data-toggle="modal">Data</a>
+		</div>
+        </div>
+        </div> <!-- end .staple -->
+          <div class="span6 offset1">
+			<h3>Since the Great Recession, credit has seized up, leaving even responsible borrowers with good credit and promising ideas without access to the capital needed to move those ideas to market.</h3> 	
+          </div><!-- /.span6 -->
+        </div><!-- end .row -->
+        <div class="row">
+        <div class="span12">
+        <div class="alert alert-info">
+        <img src="img/policy-alert.png" style="float:right;margin: 0 0 5px 5px;" />
+        <h2>What can we do?</h2>
+        <p>Expand the availability of credit for small business through greater support for community banking and <a href="http://assets.newamerica.net/blogposts/2012/community_banking_districts_can_create_a_lending_pool_for_local_businesses-65189">community banking districts</a> that hold public funds in exchange for commitments to increase their local lending.</p>
+        </div>
+        
+</div>    
+</div>
+</div>
+</div>    
+          
+          
+          
+          
+          
+          
+  <div id="retirement" class="row row-retirement">
+    <div class="span12">
+    
+      <h3 class="header">Retirement
+          <div class="social-media">
+            <div class="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://newamericafoundation.github.com/assets/report.html#retirement" data-related="newamerica">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+            <div class="facebook"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fnewamericafoundation.github.com%2Fassets%2Freport.html%23retirement&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe></div>
+            <div class="google">
+              <!-- Place this tag where you want the +1 button to render -->
+              <g:plusone size="medium" href="http://newamericafoundation.github.com/assets/report.html#retirement"></g:plusone>
+            </div>
+          </div>
+        </h3>
+      <h1 class="header">Too few people are saving for retirement and they're not saving enough.</h1>
+      
+      <div class="row">
+      <h1 class="span10 offset1 sectionTagline">The lower your income, the less likely you are to:</h1>
+      </div><!-- / .row -->
+      
+      <div class="row">
+        <div class="span8">
+          <div class="row">
+          <div class="span8">
+          <h4>Employer Sponsorship of Retirement Plans by Income Quartiles<sup><a href="#source4">[4]</a></sup></h4>
+          </div> <!-- /.span8 -->
+          </div> <!-- /.row -->
+          <div class="row">
+          <div class="span4">
+          <h6>Top quartile</h6>
+          <div id="top-quartile" style="height: 130px;"></div>
+          </div>
+          <div class="span4">
+          <h6>Second quartile</h6>
+          <div id="second-quartile" style="height: 130px;"></div>
+          </div>
+          </div>
+          <div class="row">
+          <div class="span4">
+          <h6>Third quartile</h6>
+          <div id="third-quartile" style="height: 130px;"></div>
+          </div>
+          <div class="span4">
+          <h6>Bottom quartile</h6>
+          <div id="bottom-quartile" style="height: 130px;"></div>
+          </div>
+          </div>
+        </div> <!-- /.span8 -->
+        
+        <div class="span3 offset1">
+          <h2 class="head">...have a job that offers a retirement plan...</h2>
+        </div> <!-- /.span3 -->
+      </div> <!-- /.row -->
+      
+      <div class="row" style="margin-top:30px;">
+        <div class="span3">
+        <h2 class="head">...participate in a retirement plan...</h2>
+        </div> <!-- /.span3 -->
+        
+        <div class="span8 offset1">
+          <div class="row">
+          <div class="span8">
+          <h4 class="pull-right">Employee Participation in Retirement Plans by Income Quartile (2008)<sup><a href="#source4">[4]</a></sup></h4>
+          </div> <!-- /.span8 -->
+          </div> <!-- /.row -->
+          
+          <div class="row">
+          <div class="span2">
+          <div id="top-quartile-pie" style="height: 130px;"></div>
+          <h6 align="center">Top quartile</h6>
+          </div> <!-- /.span2 -->
+          <div class="span2">
+          <div id="second-quartile-pie" style="height: 130px;"></div>
+          <h6 align="center">Second quartile</h6>
+          </div> <!-- /.span2 -->
+          <div class="span2">
+          <div id="third-quartile-pie" style="height: 130px;"></div>
+          <h6 align="center">Third quartile</h6>
+          </div> <!-- /.span2 -->
+          <div class="span2">
+          <div id="bottom-quartile-pie" style="height: 130px;"></div>
+          <h6 align="center">Bottom quartile</h6>
+          </div> <!-- /.span2 -->                     
+          </div> <!-- /.row -->
+          </div> <!-- /.span8 -->
+      </div> <!-- /.row -->
+
+	<div class="row" style="margin-top:60px;">
+        <div class="span9">
+          <h4>Who benefits most from tax breaks for pension plans?</h4>
+          <div id="retirement-bar"></div>
+          <h5>Distribution of Tax Benefits from Qualified Pension Plans among Households, by Income Quintile<sup><a href="#source5">[5]</a></sup></h5>
+        </div> <!-- /.span8 -->
+
+        <div class="span3">
+          <h2 class="head">...benefit from federal spending to support retirement savings.</h2>
+        </div> <!-- /.span3 -->
+      </div> <!-- /.row -->
+      
+      <div class="row">
+      <div class="span8 offset4 graphText">
+      <!-- <h6 style="text-align:right;">In 2008, less than half of workers in the second lowest income quartile participated in retirement plans.This drops to <strong>less than 30%</strong> of workers in the <strong>lowest income quartile.</strong></h6> -->
+      </div>
+      </div>
+
+      
+      <div class="row" style="margin-top:40px;margin-bottom:30px;">
+      <div class="staple span5">
+      <div id="retirementModal" class="modal hide fade">
+      <div class="modal-header">
+      <a class="close" data-dismiss="modal">&times;</a>
+      <h3>Retirement Spending Programs</h3>
+      </div>
+      <div class="modal-body">
+      <h4>Tax Spending Proposals (in millions)</h4>
+      <table id="programTable" class="table table-striped table-condensed">
+          <thead>
+              <tr>
+                  <th>Program Name</th>
+                  <th>Amount</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Auto IRA</td>
+              <td width="100">$0</td>
+            </tr>
+            <tr>
+              <td><strong>Tax Spending Proposals Subtotal</strong></td>
+              <td width="100"><strong>$0</strong></td>
+            </tr>
+          </tbody>
+      </table>
+      <h4>Tax Spending (in millions)</h4>
+      <table id="programTable" class="table table-striped table-condensed">
+      <thead>
+        <tr>
+            <th>Program Name</th>
+            <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Net Exclusion of Pension Contributions:   Employer Plans</td>
+        <td width="100">$52,330</td>
+      </tr>
+      <tr>
+        <td>Net Exclusion of Pension Contributions:   401(k) Plans</td>
+        <td width="100">$72,740</td>
+      </tr>
+      <tr>
+        <td>Net Exclusion of Pension Contributions:   IRAs</td>
+        <td width="100">$19,650</td>
+      </tr>
+      <tr>
+        <td>Net Exclusion of Pension Contributions:   Saver's Credit</td>
+        <td width="100">$1,130</td>
+      </tr>
+      <tr>
+        <td>Net Exclusion of Pension Contributions:   Self-employed Plans</td>
+        <td width="100">$19,580</td>
+      </tr>
+      <tr>
+        <td><strong>Subtotal Tax Spending</strong></td>
+        <td width="100"><strong>$165,430</strong></td>
+      </tr>
+      </tbody>
+      </table>
+      <table id="programTable" class="table table-striped table-condensed">
+      <tbody>
+      <tr>
+        <td><h4><strong>Total Retirement</strong></h4></td>
+        <td width="100"><h4><strong>$165,430</strong></h4></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="modal-footer">
+      <a href="#" class="btn" data-dismiss="modal">Close</a>
+      </div>
+      </div>
+      
+      <div class="alert alert-success">
+      <h4>2013 budget request spending levels — Retirement</h4>
+		<div id="retirementGraphBar"></div>
+        <h4 class="pie">Percentage of<br />Total Asset Spending</h4>
+		<div id="retirementGraphPie"></div>
+		<div class="span2">
+      		<a class="btn btn-danger more-data" href="#retirementModal" data-toggle="modal">Data</a>
+		</div>
+      </div>
+      </div> <!-- end .staple -->
+      <div class="span6 offset1">
+      <h3 class="head"><strong>Over 99%</strong> of federal spending to support retirement savings is in the form of regressive tax subsidies.</h3> 	
+      </div><!-- /.span6 -->
+      </div><!-- /.row -->
+      
+      <div class="row">
+      <div class="span12">
+      <div class="alert alert-info">
+      <img src="img/policy-alert.png" style="float:right;margin: 0 0 5px 5px;" />
+      <h2>What can we do?</h2>
+      <p><a href="http://newamerica.net/publications/policy/facing_up_to_the_retirement_savings_deficit" target="_blank">A Universal 401(k)</a> system would establish a retirement account for all workers and offer matching incentives targeting lower- and middle-income earners.</p>
+      </div>
+      
+      </div>    
+    </div>
+  </div>
+</div>   
+        
+        
+        
+        
+        
+        
+        
+        
+        
+<div id="savings" class="row row-savings">
+  <div class="span12">
+  
+    <h3 class="header">Savings and Investment
+          <div class="social-media">
+            <div class="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://newamericafoundation.github.com/assets/report.html#savings" data-related="newamerica">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+            <div class="facebook"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fnewamericafoundation.github.com%2Fassets%2Freport.html%23savings&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe></div>
+            <div class="google">
+              <!-- Place this tag where you want the +1 button to render -->
+              <g:plusone size="medium" href="http://newamericafoundation.github.com/assets/report.html#savings"></g:plusone>
+            </div>
+          </div>
+        </h3>
+    <h1 class="header">Savings keep an unexpected expense from becoming a financial emergency, but many families are falling short.</h1>
+    
+    <div class="row">
+    <div class="span4 offset1">
+    <h1 class="sectionTagline">How many?</h1>
+    </div> <!-- /.span5 -->
+    <div class="span4 offset2">
+    <h1 class="sectionTagline">How much?</h1>
+    </div> <!-- /.span5 -->
+    </div>
+    
+    <div class="row" style="min-height:70px;">
+    <div class="span4 offset1">
+    <h1 style="margin-bottom:10px;font-size:600%;font-weight:500;text-align:center;">43%</h1>
+    </div> <!-- /.span5 -->
+    <div class="span4 offset2">
+    <h1 style="margin-bottom:10px;font-size:600%;font-weight:500;text-align:center;">$4,632</h1>
+    </div> <!-- /.span5 -->
+    </div> <!-- /.row -->
+    
+    <div class="row" style="min-height:90px;">
+    <div class="span6" style="text-align:center;">
+    <h2 class="head">of U.S. households lack sufficient savings<sup><a href="#source6">[6]</a></sup></h2>
+    </div> <!-- / .span3 -->
+    <div class="span6" style="text-align:center;">
+    <h2 class="head">amount of savings a family of three needs<sup><a href="#source6">[6]</a></sup></h2>
+    </div> <!-- /.span5 -->
+    </div><!-- /.row -->
+    
+    <div class="row">
+    <div class="span10 offset1" style="margin-top:30px;text-align:center;">
+    <h2 class="sectionTagline">to live at the U.S. poverty line for three months.</h2>
+    </div> 
+    </div> <!-- /.row -->
+    
+    <div class="row">
+    <div class="span9">
+    <div id="mainMap" style="min-height:400px;"></div>
+	<div class="pull-right">
+		<h6><strong>Liquid asset poverty rate</strong> is the percentage of households without sufficient liquid assets to subsist at the poverty level for three months in the absence of income. Data from <a href="http://scorecard.assetsandopportunity.org/2012/measure/liquid-asset-poverty-rate" target="_blank">CFED, 2012</a></h6>
+		<h6><strong>Income poverty rate</strong> is the Percentage of households with income below the federal poverty threshold.<a href="http://scorecard.assetsandopportunity.org/2012/measure/income-poverty-rate" target="_blank">CFED, 2012</a></h6>
+	</div>
+    </div>
+    <div class="span3 pull-right">
+    <div id="toolTipContainer"><h5>Roll over the map to see poverty numbers for each state.</h5></div>
+    </div>
+    </div>
+    
+    <div class="row">
+    <div class="staple span5">
+    <div id="savingsModal" class="modal hide fade">
+      <div class="modal-header">
+        <a class="close" data-dismiss="modal">&times;</a>
+        <h3>Savings Spending Programs</h3>
+      </div>
+      <div class="modal-body">
+      <h4>Tax Spending (in millions)</h4>
+      <table id="programTable" class="table table-striped table-condensed">
+          <thead>
+              <tr>
+                  <th>Program Name</th>
+                  <th>Amount</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Capital Gains</td>
+                  <td width="100">$63,040</td>
+              </tr>
+              <tr>
+                  <td>Step-Up Basis of Capital Gains at Death</td>
+                  <td width="100">$23,860</td>
+              </tr>
+              <tr>
+                  <td>Carryover Basis of Capital Gains on Gifts</td>
+                  <td width="100">$2,070</td>
+              </tr>
+              <tr>
+                  <td>Exclusion of Interest on Life Insurance Savings</td>
+                  <td width="100">$25,150</td>
+              </tr>
+              <tr>
+                  <td>Deferral of Interest on U.S. Savings Bonds</td>
+                  <td width="100">$1,250</td>
+              </tr>
+              <tr>
+                  <td><strong>Subtotal Tax Spending</strong></td>
+                  <td width="100"><strong>$115,370</strong></td>
+              </tr>	
+          </tbody>
+      </table>
+                      <h4>Direct Spending (in millions)</h4>
+      <table id="programTable" class="table table-striped table-condensed">
+          <thead>
+              <tr>
+                  <th>Program Name</th>
+                  <th>Amount</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Assets for Independence Act</td>
+                  <td width="100">$20</td>
+              </tr>
+              <tr>
+                  <td>Volunteer Income Tax Assistance (VITA)</td>
+                  <td width="100">$12</td>
+              </tr>
+              <tr>
+                  <td>Bank On USA Initiative</td>
+                  <td width="100">$20</td>
+              </tr>
+              <tr>
+                  <td><strong>Subtotal Direct Spending</strong></td>
+                  <td width="100"><strong>$52</strong></td>
+              </tr>
+          </tbody>
+      </table>
+      <table id="programTable" class="table table-striped table-condensed">
+      <tbody>
+      <tr>
+        <td><h4><strong>Total Savings and Investment</strong></h4></td>
+        <td width="100"><h4><strong>$115,422</strong></h4></td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal">Close</a>
+      </div>
+    </div>
+   
+    <div class="alert alert-success">
+      <h4>2013 budget request spending levels — Savings and Investment</h4>
+		<div id="savingsGraphBar"></div>
+        <h4 class="pie">Percentage of<br />Total Asset Spending</h4>
+		<div id="savingsGraphPie"></div>
+		<div class="span2">
+    		<a class="btn btn-danger more-data" href="#savingsModal" data-toggle="modal">Data</a>
+		</div>
+    </div>
+    </div> <!-- end .staple -->
+	<div class="span6 offset1">
+      <h3>No portion of the federal budget supports families saving for emergencies.</h3> 	
+    </div><!-- /.span6 -->
+    </div><!-- end .row -->
+    <div class="row">
+    <div class="span12">
+    <div class="alert alert-info">
+    <img src="img/policy-alert.png" style="float:right;margin: 0 0 5px 5px;" />
+    <h2>What can we do?</h2>
+    <p><a href="http://newamerica.net/publications/policy/incentivizing_savings_at_tax_time" target="_blank">The Saver's Bonus</a> is a policy that would leverage the infrastructure and resources of the tax time moment to create an easy way for families to save for a range of purposes, including emergencies.</p>
+    </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+      <div id="education" class="row row-education">
+        <div class="span12">
+
+              <h3 class="header">Post-secondary Education
+          <div class="social-media">
+            <div class="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://newamericafoundation.github.com/assets/report.html#education" data-related="newamerica">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+            <div class="facebook"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fnewamericafoundation.github.com%2Fassets%2Freport.html%23education&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe></div>
+            <div class="google">
+              <!-- Place this tag where you want the +1 button to render -->
+              <g:plusone size="medium" href="http://newamericafoundation.github.com/assets/report.html#education"></g:plusone>
+            </div>
+          </div>
+        </h3>
+              <h1 class="header">Many poor families can’t afford the college education that could move their children out of poverty.</h1>
+
+             <div class="row">
+				<div class="span10 offset1">
+	                <h1 class="sectionTagline" align="center">Tuition is rising. Low-income families are least able to absorb these costs.<sup><a href="#source7">[7]</a></sup></h1>
+                 </div>
+             </div>
+             
+             <div class="row">
+               <div class="span10 offset1">
+	                  <ul class="nav nav-tabs ed-tabs">
+	                    <li id="li00"><a href="javascript:;">2000</a></li>
+	                    <li id="li08" class="ed-active"><a href="javascript:;">2008</a></li>
+	                  </ul>
+	                <div class="alert alert-error alert-pies" style="position:relative;">
+
+	                  <div id="edPies">
+	                    <div id="pie2008">
+                          <div style="width:20%;float:left;">
+                            <h4>Top quintile</h4>
+                            <div id="pie10" style="width:100%;height:120px;"></div>
+                          </div>
+                          <div style="width:20%;float:left;">
+                            <h4>Second quintile</h4>
+                            <div id="pie9" style="width:100%;height:120px;"></div>
+                          </div>
+                          <div style="width:20%;float:left;">
+                            <h4>Third quintile</h4>
+                            <div id="pie8" style="width:100%;height:120px;"></div>
+                          </div>
+                          <div style="width:20%;float:left;">
+                            <h4>Fourth quintile</h4>
+                            <div id="pie7" style="width:100%;height:120px;"></div>
+                          </div>
+                          <div style="width:20%;float:left;">
+                            <h4>Lowest quintile</h4>
+                            <div id="pie6" style="width:100%;height:120px;"></div>
+                          </div>
+							<div><p>To attend college, it costs between a <strong>third to over half of the yearly income of lower income families</strong>, earners in the bottom two quintiles in the United States</p></div>
+	                    </div>
+	                    <div id="pie2000">
+                          <div style="width:20%;float:left;">
+                            <h4>Top quintile</h4>
+                            <div id="pie5" style="width:100%;height:120px;"></div>
+                          </div>
+                          <div style="width:20%;float:left;">
+                            <h4>Second quintile</h4>
+                            <div id="pie4" style="width:100%;height:120px;"></div>
+                          </div>
+                          <div style="width:20%;float:left;">
+                            <h4>Third quintile</h4>
+                            <div id="pie3" style="width:100%;height:120px;"></div>
+                          </div>
+                          <div style="width:20%;float:left;">
+                            <h4>Fourth quintile</h4>
+                            <div id="pie2" style="width:100%;height:120px;"></div>
+                          </div>
+                          <div style="width:20%;float:left;">
+                            <h4>Lowest quintile</h4>
+                            <div id="pie1" style="width:100%;height:120px;"></div>
+                          </div>
+<div><p>The burden has grown across the board since 2000, but especially for the bottom quintiles.</p></div>
+						
+	                    </div>
+	                  </div>
+	                  
+	                </div>
+	              </div>
+			</div> 
+            
+			<div class="row anecdote">
+				<div class="span10 offset1"><h3>As a result, far fewer low-income students enroll in college than high-income students.<sup><a href="#source7">[7]</a></sup></h3>
+					<div class="row">
+						<div class="span3 offset2"><div class="edu-anecdote"><span class="edu-number edu-number-big">84%</span></div><br /><h4>High Income Students</h4></div>
+						<div class="span3"><div class="edu-anecdote"><span class="edu-number">54%</span></div><br /><h4>Low Income Students</h4></div>
+						</div>
+					</div> 
+             </div>             
+              
+              
+		<div class="row" style="margin-top:40px;margin-bottom:30px;">
+              <div class="staple span5">
+                <div id="postEdModal" class="modal hide fade">
+                  <div class="modal-header">
+                    <a class="close" data-dismiss="modal">&times;</a>
+                    <h3>Post-Secondary Education Spending Programs</h3>
+                  </div>
+                  <div class="modal-body">
+                  <h4>Tax Spending (in millions)</h4>
+                  <table id="programTable" class="table table-striped table-condensed">
+                      <thead>
+                          <tr>
+                              <th>Program Name</th>
+                              <th>Amount</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>HOPE Tax Credit</td>
+                          <td width="100">$580</td>
+                        </tr>
+                        <tr>
+                          <td>Lifetime Learning Credit</td>
+                          <td width="100">$3,920</td>
+                        </tr>
+                        <tr>
+                          <td>American Opportunity Tax Credit*</td>
+                          <td width="100">$21,560</td>
+                        </tr>
+                        <tr>
+                          <td>Education IRA</td>
+                          <td width="100">$80</td>
+                        </tr>
+                        <tr>
+                          <td>Deductibility of Student Loan Interest</td>
+                          <td width="100">$900</td>
+                        </tr>
+                        <tr>
+                          <td>Deductibility of Higher Education Expenses</td>
+                          <td width="100">$0</td>
+                        </tr>
+                        <tr>
+                          <td>Qualified Tuition Plans (529 College   Savings Plans)</td>
+                          <td width="100">$1,890</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Subtotal Tax Spending</strong></td>
+                          <td width="100"><strong>$28,930</strong></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                  <h4>Tax Spending Proposals (in millions)</h4>
+                  <table id="programTable" class="table table-striped table-condensed">
+                      <thead>
+                          <tr>
+                              <th>Program Name</th>
+                              <th>Amount</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>American Opportunity Tax Credit</td>
+                          <td width="100">$672</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Tax Spending Proposals Subtotal</strong></td>
+                          <td width="100"><strong>$672</strong></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                  <h4>Direct Spending (in millions)</h4>
+                  <table id="programTable" class="table table-striped table-condensed">
+                      <thead>
+                          <tr>
+                              <th>Program Name</th>
+                              <th>Amount</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Pell   Grants </td>
+                          <td width="100">$36,118</td>
+                        </tr>
+                        <tr>
+                          <td>TRIO   Program </td>
+                          <td width="100">$840</td>
+                        </tr>
+                        <tr>
+                          <td>GEAR UP   Program </td>
+                          <td width="100">$302</td>
+                        </tr>
+                        <tr>
+                          <td>Adult   Basic Literacy Education State Grants </td>
+                          <td width="100">$595</td>
+                        </tr>
+                        <tr>
+                          <td>College   Access Challenge Grant Program </td>
+                          <td width="100">$150</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Subtotal Direct Spending</strong></td>
+                          <td width="100"><strong>$38,005</strong></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                  <table id="programTable" class="table table-striped table-condensed">
+                  <tbody>
+                  <tr>
+                    <td><h4><strong>Total Education</strong></h4></td>
+                    <td width="100"><h4><strong>$74,483</strong></h4></td>
+                  </tr>
+                  </tbody>
+                  </table>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#" class="btn" data-dismiss="modal">Close</a>
+                  </div>
+                </div>
+                
+                <div class="alert alert-success">
+                <h4>2013 budget request spending levels — Post-secondary education</h4>
+				<div id="postEdGraphBar"></div>
+                <h4 class="pie">Percentage of<br />Total Asset Spending</h4>
+				<div id="postEdGraphPie"></div>
+				<div class="span2">
+		      		<a class="btn btn-danger more-data" href="#postEdModal" data-toggle="modal">Data</a>
+				</div>
+                </div>
+              </div> <!-- end .staple -->
+              <div class="span6 offset1">
+			<h3>Savings build both the resources and the expectations needed to get more low-income students to college, but most federal spending that supports saving for college benefits higher income families through tax subsidies.</h3> 	
+			<!-- <h6><strong>100%</strong> of federal spending for retirement are in the form of regressive tax subsidies.</h6> -->
+                <!-- <h6>Over quarter of all asset-building government spending — <strong>all of it in the form of tax expenditures</strong> — is spent to promote retirement savings. However, <strong>the poorest in the U.S. benefit least from this approach.</strong></h> -->
+          </div><!-- /.span6 -->
+		</div><!-- /.row -->
+  
+			<div class="row">
+              <div class="span12">
+                <div class="alert alert-info">
+                  <img src="img/policy-alert.png" style="float:right;margin: 0 0 5px 5px;" />
+                  <h2>What can we do?</h2>
+                  <p>We need to make sure students and their families have <a href="http://assets.newamerica.net/sites/newamerica.net/files/policydocs/Black_Huelsman_collegesavingsFinal.pdf" target="_blank">access to accounts</a> where they can save for post-secondary educational opportunities. These could be delivered by offering every child a savings account at birth, such as is proposed by <a href="http://assets.newamerica.net/sites/newamerica.net/files/policydocs/CSAPolicyRationale_0.pdf">The ASPIRE Act</a>, or making existing <a href="http://newamerica.net/publications/policy/the_potential_of_inclusive_529_college_savings_plans" target="_blank">529 college savings plans</a> better savings vehicles for low- and moderate-income families.</p>
+                </div>
+              </div>
+              
+              
+              </div>
+          </div><!-- end .section-body -->
+        </div><!-- end .span12 -->
+        
+      <div class="row">
+        <div class="span12">
+          <h3 class="header">Sources</h3>
+          <ul>
+            <li><sup><a id="source1">[1]</a></sup> Wealth Gaps Rise To Record Highs Between Whites, Blacks and Hispanics (Pew Research Center, 2011)</li>
+            <li><sup><a id="source2">[2]</a></sup> Estimates of Federal Tax Expenditures for Fiscal Years 2011-2015 (Joint Committee on Taxation, 2012)</li>
+            <li><sup><a id="source3">[3]</a></sup> Small Business Lending in the United States, 2009-2010 (SBA, Office of Advocacy, 2011)</li>
+            <li><sup><a id="source4">[4]</a></sup> Pension Sponsorship and Participation: Summary of Recent Trends (CRS, 2009)</li>
+			<li><sup><a id="source5">[5]</a></sup> Do Low-Income Workers Benefit from 401(k) Plans?  (Center for Retirement Research at Boston College, 2011)</li>
+            <li><sup><a id="source6">[6]</a></sup> Assets and Opportunity Scorecard (CFED, 2012)</li>
+            <li><sup><a id="source7">[7]</a></sup> The Condition of Education 2011 (Department of Education, National Center for Education Statistics, 2011)</li>
+          </ul>
+        </div>
+      </div>
+        
+        
+      </div><!-- end .row -->
+      
+      
+      
+      
+      
+      
+        </div><!-- end .span12 -->
+      </div><!-- end .row -->
+  </div><!-- /.container -->      
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="container">
+    <p align="center">The New America Foundation<br />
+1899 L Street, N.W., Suite 400, Washington, DC 20036<br />
+921 11th Street, Suite 901, Sacramento, CA 95814</p>
+	<p align="center"><a href="http://www.newamerica.net/about/copyright"><img src="img/cc.png" /></a></p>
+  </div>
+</footer>
+
+
+  </body>
+</html>
