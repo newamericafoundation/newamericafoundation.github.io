@@ -412,13 +412,13 @@ var chart;
 		   name: 'Tax spending',
 		   color: '#a3a3a3',
 		   borderColor: '#000000',
-		   data: [28.930]
+		   data: [29.602]
 		}, {
 		   type: 'column',
 		   name: 'Direct spending',
 		   color: '#2e1717',
 		   borderColor: '#000000',
-		   data: [45.553]
+		   data: [38.005]
 		},]
 	 });
   });
