@@ -15,7 +15,7 @@ function overview(){
 					shadow:false,
 	                formatter: function() {
 						$('#graphTooltip').empty();
-						$('#graphTooltip').append('<div><small>Numbers in millions</small><br/><b>'+ this.point.name +'</b>: $'+ Highcharts.numberFormat(this.y, 0) + '<br/> ('+ Highcharts.numberFormat(this.percentage,1) +'%)</div>');
+						$('#graphTooltip').append('<div><small>Numbers in billions</small><br/><b>'+ this.point.name +'</b>: $'+ Highcharts.numberFormat(this.y, 1) + '<br/> ('+ Highcharts.numberFormat(this.percentage,1) +'%)</div>');
 	                    // return '<b>'+ this.point.name +'</b>: '+ this.y + '%';
 	                }
 	            },
@@ -39,13 +39,23 @@ function overview(){
 	            series: [{
 	                type: 'pie',
 	                name: '',
-	                data: [
-	                    ['Homeownership', 198941],
-	                    ['Retirement', 165430],
-						['Savings and Investment', 115422],
-	                    ['Post-secondary education', 67607],
-	                    ['Entrepreneurship', 602]
-	                ]
+	                data: [{
+	                    name: 'Homeownership',
+						y: 198.9
+						},{
+						name: 'Retirement',
+						y: 165.4,
+						color: '#2E1717'
+						},{
+						name: 'Savings and Investment',
+						y: 115.4
+						},{
+	                    name:'Post-secondary education',
+						y: 67.6
+						},{
+	                    name:'Entrepreneurship',
+						y: 0.6
+					}]
 	            }]
 	        });
 }

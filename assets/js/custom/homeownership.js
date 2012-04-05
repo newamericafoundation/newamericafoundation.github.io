@@ -1,18 +1,17 @@
 // JavaScript Document
 function homeowernship(){
-	$('#netWorth').click(function(){
+	$('#netWorth').stop(true, true).click(function(){
 		$('.btn-home').removeClass('disabled');
 		$(this).addClass('disabled');
 		switchGraph('netWorth')
 		
 	});
-	$('#recessionLoss').click(function(){
+	$('#recessionLoss').stop(true, true).click(function(){
 		switchGraph('recessionLoss')
 		$('.btn-home').removeClass('disabled');
-		
 		$(this).addClass('disabled');
 	});
-	$('#equityLoss').click(function(){
+	$('#equityLoss').stop(true, true).click(function(){
 		switchGraph('equityLoss')
 		$('.btn-home').removeClass('disabled');
 		$(this).addClass('disabled');
@@ -30,7 +29,7 @@ var chart;
 			text: null
 		},
 		xAxis: {
-			categories: ['Below $10K', '$10-20K', '$20-30K', '$30-40K', '$40-50K', '$50-75K', '$75-100K', '$100-200K', '$200 and over'],
+			categories: ['Below $10K', '$10-20K', '$20-30K', '$30-40K', '$40-50K', '$50-75K', '$75-100K', '$100-200K', '$200K and over'],
 			title: {
 				text: null
 			},
@@ -104,7 +103,7 @@ var chart;
 			text: null
 		},
 		xAxis: {
-			categories: ['Below $10K', '$10-20K', '$20-30K', '$30-40K', '$40-50K', '$50-75K', '$75-100K', '$100-200K', '$200 and over'],
+			categories: ['Below $10K', '$10-20K', '$20-30K', '$30-40K', '$40-50K', '$50-75K', '$75-100K', '$100-200K', '$200K and over'],
 			title: {
 				text: null
 			},
