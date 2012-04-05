@@ -113,7 +113,7 @@ var fatalities = {'2003':'1','2004':'1','2005':'1','2006':'1','2007':'1','2008':
 			 y: 30
 	      },
 		   subtitle: {
-			 text: "Incidents from 2003 through March 2012",
+			 text: "Deaths from 2003 through March 2012",
 			 floating: true,
 			 y: 15
 		   },
@@ -126,7 +126,7 @@ var fatalities = {'2003':'1','2004':'1','2005':'1','2006':'1','2007':'1','2008':
 	      },
 	      yAxis: {
 	         title: {
-	            text: 'Incidents'
+	            text: 'Deaths'
 	         },
 			 min: 0,
 			 labels: {
@@ -141,7 +141,7 @@ var fatalities = {'2003':'1','2004':'1','2005':'1','2006':'1','2007':'1','2008':
 		  tooltip: {
 			formatter: function() {
 				return ''+
-					'<strong>'+this.x +'</strong><br />Incidents: '+ this.y;
+					'<strong>'+this.x +'</strong><br />Deaths: '+ this.y;
 			}
 		},		exporting: {
 			buttons: {
@@ -189,7 +189,7 @@ var fatalities = {'2003':'1','2004':'1','2005':'1','2006':'1','2007':'1','2008':
 		  },
 	      series: [{
 	         name: 'Incidents',
-	         data: [1,0,0,0,2,0,4,6,12,9]
+	         data: [0,0,0,0,2,0,10,20,33,16]
 	      }]
 	   });
 	
