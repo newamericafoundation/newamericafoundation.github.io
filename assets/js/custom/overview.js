@@ -41,20 +41,24 @@ function overview(){
 	                name: '',
 	                data: [{
 	                    name: 'Homeownership',
-						y: 198.9
+						y: 198.9,
+						color: '#FCFAD0'
 						},{
 						name: 'Retirement',
 						y: 165.4,
-						color: '#2E1717'
+						color: '#696930'
 						},{
 						name: 'Savings and Investment',
-						y: 115.4
+						y: 115.4,
+						color: '#A90641'
 						},{
 	                    name:'Post-secondary education',
-						y: 67.6
+						y: 67.6,
+						color: '#6E022A'
 						},{
 	                    name:'Entrepreneurship',
-						y: 0.6
+						y: 0.6,
+						color: '#2E1717'
 					}]
 	            }]
 	        });
