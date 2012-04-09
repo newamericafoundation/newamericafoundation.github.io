@@ -11,6 +11,11 @@ h3.header {
 	position:relative;	
 }
 
+#overview .btn a,
+#overview .btn a:hover {
+	text-decoration: none;	
+}
+
 .social-media {
     float: right;
     margin: 5px;
