@@ -23,7 +23,6 @@ h3.header {
 	width: 320px;
 	top: 5px;
 	right:5px;
-	display:none;
 }
 .social-media .twitter, .social-media .facebook, .social-media .google {
     display: inline;
