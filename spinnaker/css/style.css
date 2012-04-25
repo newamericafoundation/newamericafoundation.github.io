@@ -241,6 +241,9 @@ input.submit:hover {
 #logo {
   float: left;
   }
+ul{
+	list-style-type:none;
+}
 ul#navigation {
   position: absolute;
   right: 0;
