@@ -1,0 +1,130 @@
+// Variables.less
+// Variables to customize the look and feel of Bootstrap
+// -----------------------------------------------------
+
+
+
+// GLOBAL VALUES
+// --------------------------------------------------
+
+// Links
+@linkColor:             @assetLightGray;
+@linkColorHover:        darken(@linkColor, 15%);
+
+// Grays
+@black:                 #000;
+@grayDarker:            #222;
+@grayDark:              #333;
+@gray:                  #555;
+@grayLight:             #999;
+@grayLighter:           #eee;
+@white:                 #fff;
+
+// Accent colors
+@blue:                  #049cdb;
+@blueDark:              #0064cd;
+@green:                 #46a546;
+@red:                   #9d261d;
+@yellow:                #ffc40d;
+@orange:                #f89406;
+@pink:                  #c3325f;
+@purple:                #7a43b6;
+
+// Asset colors
+@assetYellow:			#FCFAD0;
+@assetGrayGreen:		#A1A194;
+@assetLightGray:		#5B605F;
+@assetDarkGray:			#464646;
+@assetRed:				#A90641;
+
+@assetGrayGreenDarker:	#797971;
+@assetLightGrayDarker:	#454847;
+@assetDarkGrayDarker:	#353535;
+@assetRedDarker:		#7F2345;
+
+@assetGrayGreener:		#696930;
+@assetLightGrayDark:	#1E3E38;
+@assetDarkGrayDark:		#2E1717;
+@assetRedDark:			#6E022A;
+
+@assetGrayLight:		#D0D0C3;
+@assetLightGrayLight:	#A9B0AE;
+@assetDarkGrayLight:	#A3A3A3;
+@assetRedLight:			#D43B73;
+@assetRedLighter:		#D4648D;
+
+// Typography
+@baseFontSize:          13px;
+@baseFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@baseLineHeight:        18px;
+@textColor:             @assetDarkGrayDark;
+
+// Buttons
+@primaryButtonBackground:    @assetRedDark;
+
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+// Z-index master list
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+@zindexDropdown:          1000;
+@zindexPopover:           1010;
+@zindexTooltip:           1020;
+@zindexFixedNavbar:       1030;
+@zindexModalBackdrop:     1040;
+@zindexModal:             1050;
+
+// Sprite icons path
+@iconSpritePath:          "img/glyphicons-halflings.png";
+@iconWhiteSpritePath:     "img/glyphicons-halflings-white.png";
+
+// Input placeholder text color
+@placeholderText:         @grayLight;
+
+// Hr border color
+@hrBorder:                @grayLighter;
+
+// Navbar
+@navbarHeight:                    40px;
+@navbarBackground:                @grayDarker;
+@navbarBackgroundHighlight:       @grayDark;
+@navbarLinkBackgroundHover:       transparent;
+
+@navbarText:                      @grayLight;
+@navbarLinkColor:                 @grayLight;
+@navbarLinkColorHover:            @white;
+
+// Form states and alerts
+@warningText:             @assetRedDark;
+@warningBackground:       @assetGrayLight;
+@warningBorder:           darken(spin(@warningBackground, -10), 3%);
+
+@errorText:               @assetRedDark;
+@errorBackground:         @white;
+@errorBorder:             darken(spin(@errorBackground, -10), 3%);
+
+@successText:             @assetRedDark;
+@successBackground:       #FEFEFE;
+@successBorder:           @grayLighter;
+
+@infoText:                @assetGrayLight;
+@infoBackground:          @assetDarkGrayDarker;
+@infoBorder:              darken(spin(@infoBackground, -10), 7%);
+
+
+
+// GRID
+// --------------------------------------------------
+
+// Default 940px grid
+@gridColumns:             12;
+@gridColumnWidth:         60px;
+@gridGutterWidth:         20px;
+@gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+
+// Fluid grid
+@fluidGridColumnWidth:    6.382978723%;
+@fluidGridGutterWidth:    2.127659574%;
