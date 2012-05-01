@@ -29,5 +29,21 @@ new wax.mm.connector(tilejson));
 wax.mm.legend(m, tilejson).appendTo(m.parent);
 wax.mm.zoomer(m, tilejson).appendTo(m.parent);
 m.setCenterZoom(new mm.Location(startLat, startLng), minZoom);
+//			if(userCenter && userZoom){
+//				m.setCenterZoom(userCenter, userZoom);			
+//			}else{
+//				m.setCenterZoom(new mm.Location(startLat, startLng), minZoom);
+//			}
+//			m.addCallback('panned', function(m) {
+//			    // respond to new center: set vars so map will stay put as the layers change
+//				userCenter = m.getCenter();
+//				userZoom = m.getZoom();	
+//			});
+//			
+//			m.addCallback('zoomed', function(m) {
+//			    // respond to new center: set vars so map will stay put as the layers change
+//				userCenter = m.getCenter();
+//				userZoom = m.getZoom();	
+//			});
 });
 }; //end newWaxMap
