@@ -18,20 +18,18 @@
 
 <script>
 	$(document).ready(function(){
-			var userCenter=0;
-			var userZoom = 4;
 			var embedSrc;
-			newWaxMap('http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.motw_poverty.jsonp','mainMap',36.807, -89.761, 4, 9);
+			var theMap = new  newWaxMap('http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.motw_poverty.jsonp','mainMap',36.807, -89.761, 4, 9);
 			embedSrc = 'http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.motw_poverty.jsonp';
 			embedSrc = embedSrc.replace(/jsonp/gi, 'html');
 			$('a.share').click(function(e){
 			  e.preventDefault();
-			  var latitude = userCenter.lat ||38;
-			  var longitude = userCenter.lon ||-93;
-			  $('#embed-code-field textarea').attr('value',"<iframe width='500' height='300' frameBorder='0' src='"+embedSrc+"#"+userZoom+"/"+latitude+"/"+longitude+"'></iframe>");
-			  $('.wax-share').css('display', 'block');
-			  $('#embed-code')[0].tabindex = 0;
-			  $('#embed-code')[0].select();
+			  var latitude = theMap.userCenter.lat ||38;
+			    var longitude = theMap.userCenter.lon ||-93;
+  			  $('#embed-code-field textarea').attr('value',"<iframe width='500' height='300' frameBorder='0' src='"+embedSrc+"#"+theMap.userZoom+"/"+latitude+"/"+longitude+"'></iframe>");
+  			  $('.wax-share').css('display', 'block');
+  			  $('#embed-code')[0].tabindex = 0;
+  			  $('#embed-code')[0].select();
   
 			  $('a.close').click(function(e) {closer(e)});
 			});
