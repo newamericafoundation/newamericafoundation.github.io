@@ -35,7 +35,7 @@
 <script src="js/bootstrap-typehead.js"></script>
 <script src="js/highcharts/highcharts.js"></script>
 <script src="js/highcharts/modules/exporting.js"></script>
-<link rel='stylesheet' href='css/style.css' media='screen' />  
+<script src="js/charts.js"></script>
 <script>
 //$(document).ready(function() {	
 //	buildMap('http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.kenya-savings-usage.jsonp');
@@ -99,26 +99,18 @@
 </script>
 </head> 
 <body> 
-<div id="wrapper"> 
-	<div id="masthead">
-		
-		
-		<div class="layout-inner"></div>
-	</div>
-	<div id="main">
-		<div id="header">
-			<a style="background:transparent url('images/sprite3.png') no-repeat -25px -5px;display:block;width:80px;height:100px;position:fixed;top:250px;left:0px;overflow:hidden;text-indent:-9999px;" href="https://spreadsheets.google.com/spreadsheet/viewform?formkey=dHRFOTA1OXhFaTliNGttUWZsUktUcVE6MQ" target="_blank">Feedback</a>
-		    <div id="logo">
-		      <h1><a href="http://spinnakernetwork.org/">SPINNAKER Network - Alpha Site</a></h1>
-		    </div>
-		    <ul id="navigation">
-		      <li><a href="http://spinnakernetwork.org/about.html">About</a></li>
-		      <li><a href="http://community.spinnakernetwork.org/">Community</a></li>
-		      <li><a href="http://data.spinnakernetwork.org/">Data</a></li>
-			  <li><a href="http://community.spinnakernetwork.org/research/">Resources</a></li>
-		    </ul>
-  		</div>
-	</div><!--end main -->
+
+    <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+    <div class="container">
+    <a class="brand" href="#">Kenya Data Site</a>
+    <ul class="nav">
+    <li><a class="active" href="#">Home</a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+
 		<div id="mapTitle" style="background:#969696;color:#f4f4f4;height:30px;"><h3>Kenya Maps</h3>
 		</div>
 		<div id="mapSwitcher" style="float:right;width:15%;min-height:480px;background:#f4f4f4;">
@@ -147,324 +139,36 @@
 				<iframe width='450' height='600' frameBorder='0' src='http://a.tiles.mapbox.com/v2/mapbox.world-light,newamerica.kenya-wealth-change/mm/zoompan,tooltips,legend,share,zoomwheel,zoombox,attribution.html#6/-1.8085668203542538/37.334984374999976'></iframe>
 				
 			</div>
-			<h2>Volume of Deposits 2006-2011</h2>
-			
-			<script src="https://docs.google.com/spreadsheet/gpub?url=http%3A%2F%2Foj0ijfii34kccq3ioto7mdspc7r2s7o9-ss-opensocial.googleusercontent.com%2Fgadgets%2Fifr%3Fup_title%3DKenya%2520Volume%2520of%2520Deposits%25202006-2011%26up_initialstate%3D%257B%2522sizeOption%2522%253A%25222%2522%252C%2522yZoomedIn%2522%253Afalse%252C%2522dimensions%2522%253A%257B%2522iconDimensions%2522%253A%255B%2522dim0%2522%255D%257D%252C%2522duration%2522%253A%257B%2522timeUnit%2522%253A%2522D%2522%252C%2522multiplier%2522%253A1%257D%252C%2522yZoomedDataMax%2522%253A163189%252C%2522orderedByX%2522%253Afalse%252C%2522iconType%2522%253A%2522BUBBLE%2522%252C%2522orderedByY%2522%253Afalse%252C%2522yAxisOption%2522%253A%25223%2522%252C%2522iconKeySettings%2522%253A%255B%255D%252C%2522uniColorForNonSelected%2522%253Afalse%252C%2522yLambda%2522%253A1%252C%2522xZoomedIn%2522%253Afalse%252C%2522nonSelectedAlpha%2522%253A0.4%252C%2522xAxisOption%2522%253A%2522_ALPHABETICAL%2522%252C%2522yZoomedDataMin%2522%253A0%252C%2522xZoomedDataMax%2522%253A69%252C%2522xLambda%2522%253A1%252C%2522colorOption%2522%253A%25222%2522%252C%2522xZoomedDataMin%2522%253A0%252C%2522time%2522%253A%25222006%2522%252C%2522playDuration%2522%253A15000%252C%2522showTrails%2522%253Afalse%257D%26up__table_query_url%3Dhttps%253A%252F%252Fdocs.google.com%252Fspreadsheet%252Ftq%253Frange%253DA%25253AD%2526gid%253D1%2526key%253D0AhvLKgHKLMFudFFVSmZ5TnVJRWFzS0dVMzVTRnZEWWc%2526pub%253D1%26url%3Dhttp%253A%252F%252Fwww.google.com%252Fig%252Fmodules%252Fmotionchart.xml%26spreadsheets%3Dspreadsheets&height=491&width=1246"></script>
-
-<script>
-var chart;
-$(document).ready(function() {
-	chart = new Highcharts.Chart({
-		chart: {
-			renderTo: 'container',
-			type: 'line',
-			marginRight: 130,
-			marginBottom: 25
-		},
-		title: {
-			text: null,
-			x: -20 //center
-		},
-		subtitle: {
-			text: null,
-			x: -20
-		},
-		xAxis: {
-			categories: ['2005','2006','2007','2008','2009','2010']
-		},
-		yAxis: {
-			title: {
-				text: null
-			},
-			plotLines: [{
-				value: 0,
-				width: 1,
-				color: '#808080'
-			}]
-		},
-		tooltip: {
-			formatter: function() {
-					return '<b>'+ this.series.name +'</b><br/>'+
-					this.x +': '+ this.y;
-			}
-		},
-		legend: {
-			layout: 'vertical',
-			align: 'right',
-			verticalAlign: 'top',
-			x: -10,
-			y: 100,
-			borderWidth: 0
-		},
-		series: [{
-			name: 'Balance Below KSh. 100,000',
-			data: [1961996, 2525061, 4076465, 5747079, 7774007, 11066643]
-		}, {
-			name: 'Balance Above KSh. 100,000',
-			data: [390233, 409812, 591448, 621869, 643629, 764457]
-		}]
-	});
-});    
-</script>        
-            <div id="container" style="height:400px;width:900px;"></div>
             
-<script>
-var chart;
-$(document).ready(function() {
-	chart = new Highcharts.Chart({
-		chart: {
-			renderTo: 'container2',
-			plotBackgroundColor: null,
-			plotBorderWidth: null,
-			plotShadow: false
-		},
-		title: {
-			text: null
-		},
-		tooltip: {
-			formatter: function() {
-				return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %';
-			}
-		},
-		plotOptions: {
-			pie: {
-				allowPointSelect: true,
-				cursor: 'pointer',
-				dataLabels: {
-					enabled: true,
-					color: '#000000',
-					connectorColor: '#000000',
-					formatter: function() {
-						return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %';
-					}
-				}
-			}
-		},
-		series: [{
-			type: 'pie',
-			name: 'Browser share',
-			data: [
-				['Commercial Bank',   12],
-				['Postal Bank',       1],
-				['Microfinance Institution',    4],
-				['Credit Union/Cooperative',     1],
-				['Insurance Provider',   2]
-				['State Owned Bank',   1]
-			]
-		}]
-	});
-});
-</script>
+            
+<div class="row">
+	<div class="span12">
+		<h2>Volume of Deposits 2006-2011</h2>
+		<script src="https://docs.google.com/spreadsheet/gpub?url=http%3A%2F%2Foj0ijfii34kccq3ioto7mdspc7r2s7o9-ss-opensocial.googleusercontent.com%2Fgadgets%2Fifr%3Fup_title%3DKenya%2520Volume%2520of%2520Deposits%25202006-2011%26up_initialstate%3D%257B%2522sizeOption%2522%253A%25222%2522%252C%2522yZoomedIn%2522%253Afalse%252C%2522dimensions%2522%253A%257B%2522iconDimensions%2522%253A%255B%2522dim0%2522%255D%257D%252C%2522duration%2522%253A%257B%2522timeUnit%2522%253A%2522D%2522%252C%2522multiplier%2522%253A1%257D%252C%2522yZoomedDataMax%2522%253A163189%252C%2522orderedByX%2522%253Afalse%252C%2522iconType%2522%253A%2522BUBBLE%2522%252C%2522orderedByY%2522%253Afalse%252C%2522yAxisOption%2522%253A%25223%2522%252C%2522iconKeySettings%2522%253A%255B%255D%252C%2522uniColorForNonSelected%2522%253Afalse%252C%2522yLambda%2522%253A1%252C%2522xZoomedIn%2522%253Afalse%252C%2522nonSelectedAlpha%2522%253A0.4%252C%2522xAxisOption%2522%253A%2522_ALPHABETICAL%2522%252C%2522yZoomedDataMin%2522%253A0%252C%2522xZoomedDataMax%2522%253A69%252C%2522xLambda%2522%253A1%252C%2522colorOption%2522%253A%25222%2522%252C%2522xZoomedDataMin%2522%253A0%252C%2522time%2522%253A%25222006%2522%252C%2522playDuration%2522%253A15000%252C%2522showTrails%2522%253Afalse%257D%26up__table_query_url%3Dhttps%253A%252F%252Fdocs.google.com%252Fspreadsheet%252Ftq%253Frange%253DA%25253AD%2526gid%253D1%2526key%253D0AhvLKgHKLMFudFFVSmZ5TnVJRWFzS0dVMzVTRnZEWWc%2526pub%253D1%26url%3Dhttp%253A%252F%252Fwww.google.com%252Fig%252Fmodules%252Fmotionchart.xml%26spreadsheets%3Dspreadsheets&height=491&width=1246"></script>
+    </div>        
+</div>
 
-            <div id="container2" style="height:400px;width:900px;"></div>
-			
-<script>
-var chart;
-$(document).ready(function() {
-	chart = new Highcharts.Chart({
-		chart: {
-			renderTo: 'container3',
-			plotBackgroundColor: null,
-			plotBorderWidth: null,
-			plotShadow: false
-		},
-		title: {
-			text: null
-		},
-		tooltip: {
-			formatter: function() {
-				return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %';
-			}
-		},
-		plotOptions: {
-			pie: {
-				allowPointSelect: true,
-				cursor: 'pointer',
-				dataLabels: {
-					enabled: true,
-					color: '#000000',
-					connectorColor: '#000000',
-					formatter: function() {
-						return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %';
-					}
-				}
-			}
-		},
-		series: [{
-			type: 'pie',
-			name: 'Browser share',
-			data: [
-				['Current Account',   75],
-				['Commitment Savings Account',       26],
-				['Recurring Standard Deposit Account',    3],
-			]
-		}]
-	});
-});
-</script>
-
-            <div id="container3" style="height:400px;width:900px;"></div>
-			
-<script>
-var chart;
-$(document).ready(function() {
-	chart = new Highcharts.Chart({
-		chart: {
-			renderTo: 'container4',
-			type: 'line',
-			marginRight: 130,
-			marginBottom: 25
-		},
-		title: {
-			text: null,
-			x: -20 //center
-		},
-		subtitle: {
-			text: null,
-			x: -20
-		},
-		xAxis: {
-			categories: ['2007','2008','2009','2010']
-		},
-		yAxis: {
-			title: {
-				text: null
-			},
-			plotLines: [{
-				value: 0,
-				width: 1,
-				color: '#808080'
-			}]
-		},
-		tooltip: {
-			formatter: function() {
-					return '<b>'+ this.series.name +'</b><br/>'+
-					this.x +': '+ this.y;
-			}
-		},
-		legend: {
-			layout: 'vertical',
-			align: 'right',
-			verticalAlign: 'top',
-			x: -10,
-			y: 100,
-			borderWidth: 0
-		},
-		series: [{
-			name: 'Commercial Bank Branches',
-			data: [740, 887, 990, 1016]
-		},{
-			name: 'MFI Branches',
-			data: [0, 0, 6, 47]
-		},{
-			name: '# ATMs',
-			data: [1012, 1325, 1717, 1979]
-		},{
-			name: 'Bank Agents',
-			data: [0, 0, 0, 8809]
-		},{
-			name: 'M-PESA Agents',
-			data: [355, 2606, 9521, 18103]
-		}]
-	});
-});    
-</script>        
-            <div id="container4" style="height:400px;width:900px;"></div>
-
-<script>
-var chart;
-$(document).ready(function() {
-	chart = new Highcharts.Chart({
-		chart: {
-			renderTo: 'container5',
-			type: 'line',
-			marginRight: 130,
-			marginBottom: 25
-		},
-		title: {
-			text: null,
-			x: -20 //center
-		},
-		subtitle: {
-			text: null,
-			x: -20
-		},
-		xAxis: {
-			categories: ['Mar 2007', 'Jun 2007', 'Sept 2007', 'Dec 2007', 'Mar 2008', 'Jun 2008','Sept 2008', 'Dec 2008', 'Mar 2009', 'Jun 2009', 'Sept 2009', 'Dec 2009', 'Mar 2010', 'Jun 2010', 'Sept 2010', 'Dec 2010', 'Mar 2011', 'Jun 2011', 'Sept 2011', 'Dec 2011']
-		},
-		yAxis: {
-			title: {
-				text: null
-			},
-			plotLines: [{
-				value: 0,
-				width: 1,
-				color: '#808080'
-			}]
-		},
-		tooltip: {
-			formatter: function() {
-					return '<b>'+ this.series.name +'</b><br/>'+
-					this.x +': '+ this.y;
-			}
-		},
-		legend: {
-			layout: 'vertical',
-			align: 'right',
-			verticalAlign: 'top',
-			x: -10,
-			y: 100,
-			borderWidth: 0
-		},
-		series: [{
-			name: 'All Mobile Money Agents',
-			data: [307, 527, 960, 1582, 2329, 3011, 4230, 6104, 13358, 16641, 19803, 23012, 27622, 31902, 35373, 39449, 36198, 42840, 46234, 50471]
-		},{
-			name: 'M-PESA Agents',
-			data: [355, 513, 960, 1582, 2329, 3011, 4230, 6104, 8650, 10735, 13326, 15216, 17652, 18977, 20563, 23397, 26948, null, null, null]
-		},{
-			name: 'Bank Agents',
-			data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1500, 1500, 3647, 6513, 7999, null]
-		}]
-	});
-});    
-</script>        
-            <div id="container5" style="height:400px;width:900px;"></div>
-
-
-			<!-- <img src="images/atmmficomm.png"/>
-						<img src="images/atmmficomm2.png"/> -->
-		</div><!--end content -->
+<div class="row">
+	<div class="span12">
+        <div id="container" style="height:400px;width:900px;"></div>
+    </div>
+	<div class="span12">
+        <div id="container2" style="height:400px;width:900px;"></div>
+    </div>
+	<div class="span12">
+        <div id="container3" style="height:400px;width:900px;"></div>
+    </div>
+	<div class="span12">
+        <div id="container4" style="height:400px;width:900px;"></div>
+    </div>
+	<div class="span12">
+        <div id="container5" style="height:400px;width:900px;"></div>
+    </div>
+</div>
 		
 
-	<div id="footer">
-	  <div class="layout-inner">
-	    <div class="contact">
-			<h5>Follow Us</h5>
-			<div><a href="http://www.twitter.com/Spinnetwork"><img src="http://twitter-badges.s3.amazonaws.com/twitter-a.png" alt="Follow Spinnetwork on Twitter"/></a>
-				<a href="https://www.facebook.com/pages/Savings-for-the-Poor-Innovation-and-Knowledge-Network-SPINNAKER/190253954365315" target="_blank">
-			<img src="images/facebook.png"/></a>
-			<a href="http://www.linkedin.com/groups/Savings-Poor-Innovation-Knowledge-Network-4099582" target="_blank">
-				<img src="images/linkedin.png" style="width:24px;" alt="linkedin"/></a>
-			</div>
-	      <h5>Contact:</h5>
-	      <p>1899 L Street, N.W., Suite 400<br />
-	      Washington, DC 20036</p><br/>
-	    </div>
-	    <div class="partners">
-	      <a id="gates" class="icon" href="http://www.gatesfoundation.org/Pages/home.aspx">Bill and Melinda Gates Foundation</a>
-	      <a id="newamerica" class="icon" href="http://newamerica.net">New America Foundation</a>
-			<p>Help us make this site better. <a href="http://community.spinnakernetwork.org/contact">Contact us</a> with questions, suggestions or comments.</p>
-	    </div>
-	    <div class="download">
-	      <h5>Download Savings Product Data:</h5>
-	      <div class="downloadblock">
-	        <a href="/public_downloads/data.csv">Data.csv</a>
-	      </div>
-	      <span>Additional data provided by <a href="http://www.worldbank.org">The World Bank</a>, <a href="http://www.mixmarket.org">MIX Market</a> &amp; <a href="http://www.cgap.org/">CGAP</a></span>
-	    </div>
-	  </div>
-	</div> 
+	<footer>
+	</footer> 
 </div> <!-- end wrapper -->
 </body> 
 </html>
