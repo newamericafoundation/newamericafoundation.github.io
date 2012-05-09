@@ -37,65 +37,65 @@
 <script src="js/highcharts/modules/exporting.js"></script>
 <script src="js/charts.js"></script>
 <script>
-//$(document).ready(function() {	
-//	buildMap('http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.kenya-savings-usage.jsonp');
-//	$('#switcherMkesho').click(function(){
-//		buildMap('http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.kenya-savings-mkesho.jsonp');
-//		$('button').removeClass('active1');
-//		$(this).addClass('active1');
-//	});
-//	$('#switcherWealth').click(function(){
-//		buildMap('http://tiles.mapbox.com/newamerica/api/Tileset/map-42uu1wue');
-//		$('button').removeClass('active1');
-//		$(this).addClass('active1');
-//	});
-//	$('#switcherBranches').click(function(){
-//		buildMap('http://tiles.mapbox.com/newamerica/api/Tileset/map-c9i30pol');
-//		$('button').removeClass('active1');
-//		$(this).addClass('active1');
-//	});
-//	$('#switcherMobile').click(function(){
-//		buildMap('http://tiles.mapbox.com/newamerica/api/Tileset/map-kx9cxj3i');
-//		$('button').removeClass('active1');
-//		$(this).addClass('active1');
-//	});
-//	$('#switcherSavings').click(function(){
-//		buildMap('http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.kenya-savings-usage.jsonp');
-//		$('button').removeClass('active1');
-//		$(this).addClass('active1');
-//	});
-//	$('#switcherEver').click(function(){
-//		buildMap('http://tiles.mapbox.com/newamerica/api/Tileset/map-t85r99fj');
-//		$('button').removeClass('active1');
-//		$(this).addClass('active1');
-//	});
-//	$('#switcherNever').click(function(){
-//		buildMap('http://tiles.mapbox.com/newamerica/api/Tileset/map-egcvzxhf');
-//		$('button').removeClass('active1');
-//		$(this).addClass('active1');
-//	});
-//	
-//	$('#mapSeries').hide();
-//	
-//	$('#switcherSeries').click(function(){
-//		$('#mapSeries').toggle();
-//	});
-//
-//	function buildMap(url){
-//		$('#modestmaps-setup').empty();
-//		wax.tilejson(url, function(tilejson) {
-//			var mm = com.modestmaps;
-//			var m = new mm.Map('modestmaps-setup',
-//				new wax.mm.connector(tilejson));
-//				// new mm.Point(1000,450));
-//		wax.mm.interaction(m, tilejson).remove();
-//		wax.mm.interaction(m, tilejson)
-//		wax.mm.legend(m, tilejson).appendTo(m.parent);
-//		wax.mm.zoomer(m, tilejson).appendTo(m.parent);
-//		m.setCenterZoom(new mm.Location(0.1733792609737724, 39.17724609375), 6);
-//		});
-//	}
-//});
+$(document).ready(function() {	
+	buildMap('http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.kenya-savings-usage.jsonp');
+	$('#switcherMkesho').click(function(){
+		buildMap('http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.kenya-savings-mkesho.jsonp');
+		$('button').removeClass('active1');
+		$(this).addClass('active1');
+	});
+	$('#switcherWealth').click(function(){
+		buildMap('http://tiles.mapbox.com/newamerica/api/Tileset/map-42uu1wue');
+		$('button').removeClass('active1');
+		$(this).addClass('active1');
+	});
+	$('#switcherBranches').click(function(){
+		buildMap('http://tiles.mapbox.com/newamerica/api/Tileset/map-c9i30pol');
+		$('button').removeClass('active1');
+		$(this).addClass('active1');
+	});
+	$('#switcherMobile').click(function(){
+		buildMap('http://tiles.mapbox.com/newamerica/api/Tileset/map-kx9cxj3i');
+		$('button').removeClass('active1');
+		$(this).addClass('active1');
+	});
+	$('#switcherSavings').click(function(){
+		buildMap('http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.kenya-savings-usage.jsonp');
+		$('button').removeClass('active1');
+		$(this).addClass('active1');
+	});
+	$('#switcherEver').click(function(){
+		buildMap('http://tiles.mapbox.com/newamerica/api/Tileset/map-t85r99fj');
+		$('button').removeClass('active1');
+		$(this).addClass('active1');
+	});
+	$('#switcherNever').click(function(){
+		buildMap('http://tiles.mapbox.com/newamerica/api/Tileset/map-egcvzxhf');
+		$('button').removeClass('active1');
+		$(this).addClass('active1');
+	});
+	
+	$('#mapSeries').hide();
+	
+	$('#switcherSeries').click(function(){
+		$('#mapSeries').toggle();
+	});
+
+	function buildMap(url){
+		$('#modestmaps-setup').empty();
+		wax.tilejson(url, function(tilejson) {
+			var mm = com.modestmaps;
+			var m = new mm.Map('modestmaps-setup',
+				new wax.mm.connector(tilejson));
+				// new mm.Point(1000,450));
+		wax.mm.interaction(m, tilejson).remove();
+		wax.mm.interaction(m, tilejson)
+		wax.mm.legend(m, tilejson).appendTo(m.parent);
+		wax.mm.zoomer(m, tilejson).appendTo(m.parent);
+		m.setCenterZoom(new mm.Location(0.1733792609737724, 39.17724609375), 6);
+		});
+	}
+});
 </script>
 </head> 
 <body> 
