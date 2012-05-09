@@ -16,6 +16,7 @@
 <script src="js/wax/wax.mm.js"></script>
 
 <link href='css/controls.css' rel='stylesheet' type='text/css' />
+<link href='css/style.css' rel='stylesheet' type='text/css' />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <link rel="stylesheet/less" href="lib/bootstrap.less" media="all" />
 <script src="js/less-1.1.5.min.js"></script>
@@ -112,41 +113,36 @@ $(document).ready(function() {
     </div>
     
 <div class="container">
+<header>
+<div class="row">
+		<h1 class="span12">Kenya Maps</h1>
+</div>
+<div class="row">
+		<div class="span10">
+        <div class="well">
+		<div id="modestmaps-setup" style="width:100%;height:400px;"></div>
+        </div>
+        </div>
 
-		<div id="mapTitle" style="background:#969696;color:#f4f4f4;height:30px;"><h3>Kenya Maps</h3>
-		</div>
-		<div id="mapSwitcher" style="float:right;width:15%;min-height:480px;background:#f4f4f4;">
-			<ul>
-				<li><button id="switcherMkesho" class="button active1">M-Kesho Accounts</button></li>
-				<li><button id="switcherSavings" class="button active1">Current Savings</button></li>
-				<li><button id="switcherEver" class="button">Ever Savings</button></li>
-				<li><button id="switcherNever" class="button">never Savings</button></li>
-				<li><button id="switcherBranches" class="button">Branches</button></li>
-				<li><button id="switcherWealth" class="button">Wealth</button></li>
-				<li><button id="switcherMobile" class="button">Mobile</button></li>
-				<li><button id="switcherSeries" class="button">Show all</button></li>
+		<div id="mapSwitcher" class="span2">
+			<ul class="nav nav-tabs nav-stacked">
+				<li><a href="#" id="switcherMkesho">M-Kesho Accounts</a></li>
+				<li><a href="#" id="switcherSavings">Current Savings</a></li>
+				<li><a href="#" id="switcherEver">Ever Savings</a></li>
+				<li><a href="#" id="switcherNever">never Savings</a></li>
+				<li><a href="#" id="switcherBranches">Branches</a></li>
+				<li><a href="#" id="switcherWealth">Wealth</a></li>
+				<li><a href="#" id="switcherMobile">Mobile</a></li>
+				<li><a href="#" id="switcherSeries">Show all</a></li>
 			</ul>
 		</div>
 		
-		<div id="modestmaps-setup" style="width:700px;height:400px;"></div>
-		
-		<div id="content" class="clearfix">	
-			<div id="mapSeries" style="margin-top:20px;display:none;">
-				<iframe width='450' height='600' frameBorder='0' src='http://a.tiles.mapbox.com/v2/mapbox.world-light,newamerica.kenya-savings-mkesho/mm/zoompan,tooltips,legend,share,zoomwheel,zoombox,attribution.html#6/-1.8085668203542538/37.334984374999976'></iframe>
-				<iframe width='450' height='600' frameBorder='0' src='http://a.tiles.mapbox.com/v2/mapbox.world-light,newamerica.kenya-savings-usage/mm/zoompan,tooltips,legend,share,zoomwheel,zoombox,attribution.html#6/-1.8085668203542538/37.334984374999976'></iframe>
-				<iframe width='450' height='600' frameBorder='0' src='http://a.tiles.mapbox.com/v2/mapbox.world-light,newamerica.kenya-save-never/mm/zoompan,tooltips,legend,share,zoomwheel,zoombox,attribution.html#6/-1.8085668203542538/37.334984374999976'></iframe>
-				<iframe width='450' height='600' frameBorder='0' src='http://a.tiles.mapbox.com/v2/mapbox.world-light,newamerica.kenya-save-ever/mm/zoompan,tooltips,legend,share,zoomwheel,zoombox,attribution.html#6/-1.8085668203542538/37.334984374999976'></iframe>
-				<iframe width='450' height='600' frameBorder='0' src='http://a.tiles.mapbox.com/v2/mapbox.world-light,newamerica.kenya-mobile-access/mm/zoompan,tooltips,legend,share,zoomwheel,zoombox,attribution.html#6/-1.874450741609832/37.67556054687492'></iframe>
-				<iframe width='450' height='600' frameBorder='0' src='http://a.tiles.mapbox.com/v2/mapbox.world-light,newamerica.kenya-branches-change/mm/zoompan,tooltips,legend,share,zoomwheel,zoombox,attribution.html#6/-1.8085668203542538/37.334984374999976'></iframe>
-				<iframe width='450' height='600' frameBorder='0' src='http://a.tiles.mapbox.com/v2/mapbox.world-light,newamerica.kenya-wealth-change/mm/zoompan,tooltips,legend,share,zoomwheel,zoombox,attribution.html#6/-1.8085668203542538/37.334984374999976'></iframe>
-				
-			</div>
-            
+</header>
             
 <div class="row">
 	<div class="span12">
 		<h2>Volume of Deposits 2006-2011</h2>
-		<script src="https://docs.google.com/spreadsheet/gpub?url=http%3A%2F%2Foj0ijfii34kccq3ioto7mdspc7r2s7o9-ss-opensocial.googleusercontent.com%2Fgadgets%2Fifr%3Fup_title%3DKenya%2520Volume%2520of%2520Deposits%25202006-2011%26up_initialstate%3D%257B%2522sizeOption%2522%253A%25222%2522%252C%2522yZoomedIn%2522%253Afalse%252C%2522dimensions%2522%253A%257B%2522iconDimensions%2522%253A%255B%2522dim0%2522%255D%257D%252C%2522duration%2522%253A%257B%2522timeUnit%2522%253A%2522D%2522%252C%2522multiplier%2522%253A1%257D%252C%2522yZoomedDataMax%2522%253A163189%252C%2522orderedByX%2522%253Afalse%252C%2522iconType%2522%253A%2522BUBBLE%2522%252C%2522orderedByY%2522%253Afalse%252C%2522yAxisOption%2522%253A%25223%2522%252C%2522iconKeySettings%2522%253A%255B%255D%252C%2522uniColorForNonSelected%2522%253Afalse%252C%2522yLambda%2522%253A1%252C%2522xZoomedIn%2522%253Afalse%252C%2522nonSelectedAlpha%2522%253A0.4%252C%2522xAxisOption%2522%253A%2522_ALPHABETICAL%2522%252C%2522yZoomedDataMin%2522%253A0%252C%2522xZoomedDataMax%2522%253A69%252C%2522xLambda%2522%253A1%252C%2522colorOption%2522%253A%25222%2522%252C%2522xZoomedDataMin%2522%253A0%252C%2522time%2522%253A%25222006%2522%252C%2522playDuration%2522%253A15000%252C%2522showTrails%2522%253Afalse%257D%26up__table_query_url%3Dhttps%253A%252F%252Fdocs.google.com%252Fspreadsheet%252Ftq%253Frange%253DA%25253AD%2526gid%253D1%2526key%253D0AhvLKgHKLMFudFFVSmZ5TnVJRWFzS0dVMzVTRnZEWWc%2526pub%253D1%26url%3Dhttp%253A%252F%252Fwww.google.com%252Fig%252Fmodules%252Fmotionchart.xml%26spreadsheets%3Dspreadsheets&height=491&width=1246"></script>
+		<script src="https://docs.google.com/spreadsheet/gpub?url=http%3A%2F%2Foj0ijfii34kccq3ioto7mdspc7r2s7o9-ss-opensocial.googleusercontent.com%2Fgadgets%2Fifr%3Fup_title%3DKenya%2520Volume%2520of%2520Deposits%25202006-2011%26up_initialstate%3D%257B%2522sizeOption%2522%253A%25222%2522%252C%2522yZoomedIn%2522%253Afalse%252C%2522dimensions%2522%253A%257B%2522iconDimensions%2522%253A%255B%2522dim0%2522%255D%257D%252C%2522duration%2522%253A%257B%2522timeUnit%2522%253A%2522D%2522%252C%2522multiplier%2522%253A1%257D%252C%2522yZoomedDataMax%2522%253A163189%252C%2522orderedByX%2522%253Afalse%252C%2522iconType%2522%253A%2522BUBBLE%2522%252C%2522orderedByY%2522%253Afalse%252C%2522yAxisOption%2522%253A%25223%2522%252C%2522iconKeySettings%2522%253A%255B%255D%252C%2522uniColorForNonSelected%2522%253Afalse%252C%2522yLambda%2522%253A1%252C%2522xZoomedIn%2522%253Afalse%252C%2522nonSelectedAlpha%2522%253A0.4%252C%2522xAxisOption%2522%253A%2522_ALPHABETICAL%2522%252C%2522yZoomedDataMin%2522%253A0%252C%2522xZoomedDataMax%2522%253A69%252C%2522xLambda%2522%253A1%252C%2522colorOption%2522%253A%25222%2522%252C%2522xZoomedDataMin%2522%253A0%252C%2522time%2522%253A%25222006%2522%252C%2522playDuration%2522%253A15000%252C%2522showTrails%2522%253Afalse%257D%26up__table_query_url%3Dhttps%253A%252F%252Fdocs.google.com%252Fspreadsheet%252Ftq%253Frange%253DA%25253AD%2526gid%253D1%2526key%253D0AhvLKgHKLMFudFFVSmZ5TnVJRWFzS0dVMzVTRnZEWWc%2526pub%253D1%26url%3Dhttp%253A%252F%252Fwww.google.com%252Fig%252Fmodules%252Fmotionchart.xml%26spreadsheets%3Dspreadsheets&height=491&width=960"></script>
     </div>        
 </div>
 
@@ -172,6 +168,9 @@ $(document).ready(function() {
 		
 
 	<footer>
+    <div class="container">
+    <p>Here is a footer</p>
+    </div>
 	</footer> 
 </div> <!-- end wrapper -->
 </body> 
