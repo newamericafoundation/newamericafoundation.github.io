@@ -1,3 +1,38 @@
 header {
 	margin-top: 50px;	
 }
+
+.well .wax-legend {
+	color: #000;	
+}
+
+/* ======================================== FOOTER ======================================== */
+
+.credits {
+	margin: 70px 0 40px 0;
+}
+
+.credits .btn a,
+.credits .btn a:hover {
+	color: #FFF;
+	text-decoration:none;
+}
+
+
+.credits h3 {
+	font-size: 24px;
+	line-height:normal;
+	margin-bottom: 1em;
+}
+
+footer {
+	color: #FFF;
+	padding: 33px;	
+	background-color: #464646;
+	margin-top: 70px;
+}
+
+footer a,
+footer a:hover {
+	color: #FFF;	
+}

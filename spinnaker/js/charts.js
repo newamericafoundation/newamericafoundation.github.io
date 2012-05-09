@@ -4,16 +4,12 @@ $(document).ready(function() {
 		chart: {
 			renderTo: 'container',
 			type: 'line',
-			marginRight: 130,
-			marginBottom: 25
 		},
 		title: {
 			text: null,
-			x: -20 //center
 		},
 		subtitle: {
 			text: null,
-			x: -20
 		},
 		xAxis: {
 			categories: ['2005','2006','2007','2008','2009','2010']
@@ -141,16 +137,12 @@ var chart;
 		chart: {
 			renderTo: 'container4',
 			type: 'line',
-			marginRight: 130,
-			marginBottom: 25
 		},
 		title: {
 			text: null,
-			x: -20 //center
 		},
 		subtitle: {
 			text: null,
-			x: -20
 		},
 		xAxis: {
 			categories: ['2007','2008','2009','2010']
@@ -202,16 +194,12 @@ var chart;
 		chart: {
 			renderTo: 'container5',
 			type: 'line',
-			marginRight: 130,
-			marginBottom: 25
 		},
 		title: {
 			text: null,
-			x: -20 //center
 		},
 		subtitle: {
 			text: null,
-			x: -20
 		},
 		xAxis: {
 			categories: ['Mar 2007', 'Jun 2007', 'Sept 2007', 'Dec 2007', 'Mar 2008', 'Jun 2008','Sept 2008', 'Dec 2008', 'Mar 2009', 'Jun 2009', 'Sept 2009', 'Dec 2009', 'Mar 2010', 'Jun 2010', 'Sept 2010', 'Dec 2010', 'Mar 2011', 'Jun 2011', 'Sept 2011', 'Dec 2011']
