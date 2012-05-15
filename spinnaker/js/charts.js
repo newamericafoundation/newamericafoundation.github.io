@@ -1,12 +1,31 @@
+Highcharts.theme = {
+  colors: ['#002929', '#00908F', '#00B2B1', '#EF4444', '#F69680', '#B3B3B3', '#969696', '#333333'],
+  chart: {
+	 plotBackgroundColor: null,
+	 backgroundColor: null
+  },
+  title: {
+	 text: null
+  },
+  credits: {
+	  enabled: false	
+  },
+  exporting: {
+	  enabled: false	
+  },
+  legend: {
+	  enabled: false	
+  },
+};
+
+var highchartsOptions = Highcharts.setOptions(Highcharts.theme);
+
 var chart;
 $(document).ready(function() {
 	chart = new Highcharts.Chart({
 		chart: {
 			renderTo: 'container',
 			type: 'line',
-		},
-		title: {
-			text: null,
 		},
 		subtitle: {
 			text: null,
@@ -55,9 +74,6 @@ var chart;
 			plotBorderWidth: null,
 			plotShadow: false
 		},
-		title: {
-			text: null
-		},
 		tooltip: {
 			formatter: function() {
 				return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %';
@@ -85,7 +101,7 @@ var chart;
 				['Postal Bank',       1],
 				['Microfinance Institution',    4],
 				['Credit Union/Cooperative',     1],
-				['Insurance Provider',   2]
+				['Insurance Provider',   2],
 				['State Owned Bank',   1]
 			]
 		}]
@@ -98,9 +114,6 @@ var chart;
 			plotBackgroundColor: null,
 			plotBorderWidth: null,
 			plotShadow: false
-		},
-		title: {
-			text: null
 		},
 		tooltip: {
 			formatter: function() {
@@ -137,9 +150,6 @@ var chart;
 		chart: {
 			renderTo: 'container4',
 			type: 'line',
-		},
-		title: {
-			text: null,
 		},
 		subtitle: {
 			text: null,
@@ -194,9 +204,6 @@ var chart;
 		chart: {
 			renderTo: 'container5',
 			type: 'line',
-		},
-		title: {
-			text: null,
 		},
 		subtitle: {
 			text: null,

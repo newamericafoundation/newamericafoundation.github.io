@@ -5,15 +5,14 @@
 .alert {
   padding: 8px 35px 8px 14px;
   margin-bottom: @baseLineHeight;
-/*  text-shadow: 0 1px 0 rgba(208,208,195,.5);*/
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
   background-color: @warningBackground;
   border: 1px solid @warningBorder;
   .border-radius(4px);
-	box-shadow: -1px 6px 6px #e4e4e4;
-}
-.alert,
-.alert-heading {
   color: @warningText;
+}
+.alert-heading {
+  color: inherit;
 }
 
 // Adjust close link position
@@ -28,34 +27,21 @@
 // ----------------
 
 .alert-success {
-	.buttonBackground(#fff, #f0f0f0);
-/*  background-color: @successBackground;*/
+  background-color: @successBackground;
   border-color: @successBorder;  
-}
-.alert-success,
-.alert-success .alert-heading {
   color: @successText;
 }
 .alert-danger,
 .alert-error {
   background-color: @errorBackground;
   border-color: @errorBorder;
-}
-.alert-danger,
-.alert-error,
-.alert-danger .alert-heading,
-.alert-error .alert-heading {
   color: @errorText;
 }
 .alert-info {
   background-color: @infoBackground;
   border-color: @infoBorder;
-}
-.alert-info,
-.alert-info .alert-heading {
   color: @infoText;
 }
-
 
 // Block alerts
 // ------------------------

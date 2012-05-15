@@ -2,11 +2,10 @@
 // -----
 
 .well {
-  color: @assetGrayLight !important;
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: @assetDarkGrayLight;
+  background-color: #f5f5f5;
   border: 1px solid #eee;
   border: 1px solid rgba(0,0,0,.05);
   .border-radius(4px);
@@ -15,4 +14,14 @@
     border-color: #ddd;
     border-color: rgba(0,0,0,.15);
   }
+}
+
+// Sizes
+.well-large {
+  padding: 24px;
+  .border-radius(6px);
+}
+.well-small {
+  padding: 9px;
+  .border-radius(3px);
 }
