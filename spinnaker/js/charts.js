@@ -315,5 +315,105 @@ $(document).ready(function() {
 			name: '# Institutions',
 			data: [6,14,17,3,15,7,7]
 		}]
+	});	
+});
+
+var chart;
+$(document).ready(function() {
+	chart = new Highcharts.Chart({
+		chart: {
+			renderTo: 'commercial1',
+			type: 'line',
+		},
+		title: {
+			text: 'Kenya Commercial Bank',
+		},
+		subtitle: {
+			text: null,
+		},
+		xAxis: {
+			categories: ['2006','2007','2008','2009','2010']
+		},
+		yAxis: {
+			title: {
+				text: null
+			},
+			plotLines: [{
+				value: 0,
+				width: 1,
+				color: '#808080'
+			}]
+		},
+		tooltip: {
+			formatter: function() {
+					return '<b>'+ this.series.name +'</b><br/>'+
+					this.x +': '+ this.y;
+			}
+		},
+		legend: {
+			layout: 'vertical',
+			align: 'right',
+			verticalAlign: 'top',
+			x: -10,
+			y: 100,
+			borderWidth: 0
+		},
+		series: [{
+			name: 'Balance Below KSh. 100,000',
+			data: [274840,402311,418942,654808,1214231]
+		}, {
+			name: 'Balance Above KSh. 100,000',
+			data: [69424,85356,87040,97044,126733]
+		}]
+	});
+});
+
+var chart;
+$(document).ready(function() {
+	chart = new Highcharts.Chart({
+		chart: {
+			renderTo: 'commercial2',
+			type: 'line',
+		},
+		title: {
+			text: 'Equity Bank',
+		},
+		subtitle: {
+			text: null,
+		},
+		xAxis: {
+			categories: ['2006','2007','2008','2009','2010']
+		},
+		yAxis: {
+			title: {
+				text: null
+			},
+			plotLines: [{
+				value: 0,
+				width: 1,
+				color: '#808080'
+			}]
+		},
+		tooltip: {
+			formatter: function() {
+					return '<b>'+ this.series.name +'</b><br/>'+
+					this.x +': '+ this.y;
+			}
+		},
+		legend: {
+			layout: 'vertical',
+			align: 'right',
+			verticalAlign: 'top',
+			x: -10,
+			y: 100,
+			borderWidth: 0
+		},
+		series: [{
+			name: 'Balance Below KSh. 100,000',
+			data: [987435,1710684,2873920,3930363,5264244]
+		}, {
+			name: 'Balance Above KSh. 100,000',
+			data: [27039,129648,144436,107141,141488]
+		}]
 	});
 });
