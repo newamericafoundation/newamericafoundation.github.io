@@ -30,16 +30,22 @@
 @pink:                  #c3325f;
 @purple:                #7a43b6;
 
+@darkestGreen:			#002929;
+@green:					#00908F;
+@lightGreen:			#00B2B1;
+@lightestGreen:			#E5FFFF;
+@mellowOrange:			#F69680;
+
 
 // Scaffolding
 // -------------------------
-@bodyBackground:        @white;
+@bodyBackground:        @lightestGreen;
 @textColor:             @grayDark;
 
 
 // Links
 // -------------------------
-@linkColor:             #08c;
+@linkColor:             @grayLighter;
 @linkColorHover:        darken(@linkColor, 15%);
 
 
@@ -73,20 +79,20 @@
 @btnBackgroundHighlight:            darken(@white, 10%);
 @btnBorder:                         #ccc;
 
-@btnPrimaryBackground:              @linkColor;
+@btnPrimaryBackground:              @darkestGreen;
 @btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 15%);
 
-@btnInfoBackground:                 #5bc0de;
+@btnInfoBackground:                 @green;
 @btnInfoBackgroundHighlight:        #2f96b4;
 
-@btnSuccessBackground:              #62c462;
+@btnSuccessBackground:              @lightGreen;
 @btnSuccessBackgroundHighlight:     #51a351;
 
-@btnWarningBackground:              lighten(@orange, 15%);
+@btnWarningBackground:              @lightestGreen;
 @btnWarningBackgroundHighlight:     @orange;
 
-@btnDangerBackground:               #ee5f5b;
-@btnDangerBackgroundHighlight:      #bd362f;
+@btnDangerBackground:               @mellowOrange;
+@btnDangerBackgroundHighlight:      #EA725E;
 
 @btnInverseBackground:              @gray;
 @btnInverseBackgroundHighlight:     @grayDarker;
@@ -164,9 +170,9 @@
 
 // Hero unit
 // -------------------------
-@heroUnitBackground:              @grayLighter;
-@heroUnitHeadingColor:            inherit;
-@heroUnitLeadColor:               inherit;
+@heroUnitBackground:              @darkestGreen;
+@heroUnitHeadingColor:            @grayLighter;
+@heroUnitLeadColor:               @white;
 
 
 // Form states and alerts

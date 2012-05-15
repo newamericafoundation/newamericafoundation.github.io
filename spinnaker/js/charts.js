@@ -5,15 +5,25 @@ Highcharts.theme = {
 	 backgroundColor: null
   },
   title: {
-	 text: null
+	 text: null,
+      style: {
+         color: '#000',
+         font: '24px Helvetica, Arial, sans-serif',
+		 fontWeight: '100'
+      }	 
+  },
+  subtitle: {
+	 text: null,
+      style: {
+         color: '#666',
+         font: '16px Helvetica, Arial, sans-serif',
+		 fontWeight: '100'
+      }	 
   },
   credits: {
 	  enabled: false	
   },
   exporting: {
-	  enabled: false	
-  },
-  legend: {
 	  enabled: false	
   },
 };
@@ -148,8 +158,11 @@ var chart;
 var chart;
 	chart = new Highcharts.Chart({
 		chart: {
-			renderTo: 'container4',
+			renderTo: 'technology1',
 			type: 'line',
+		},
+		title: {
+		   text: 'Needs title'
 		},
 		subtitle: {
 			text: null,
@@ -228,6 +241,7 @@ var chart;
 			}
 		},
 		legend: {
+			enabled: true,
 			layout: 'vertical',
 			align: 'right',
 			verticalAlign: 'top',
@@ -247,3 +261,59 @@ var chart;
 		}]
 	});
 });    
+
+var chart;
+$(document).ready(function() {
+	chart = new Highcharts.Chart({
+		chart: {
+			renderTo: 'technology2',
+			type: 'bar'
+		},
+		xAxis: {
+			categories: ['Agents', 'ATMs/kiosks', 'Branches', 'Passbook', 'Mobile phone', 'Debit card', 'Web'],
+			title: {
+				text: null
+			}
+		},
+		yAxis: {
+			min: 0,
+			title: {
+				text: 'Number of products',
+			}
+		},
+		tooltip: {
+			formatter: function() {
+				return ''+
+					this.y;
+			}
+		},
+		plotOptions: {
+			bar: {
+				dataLabels: {
+					enabled: true
+				}
+			}
+		},
+		legend: {
+			layout: 'vertical',
+			align: 'right',
+			verticalAlign: 'top',
+			x: -60,
+			y: 50,
+			floating: true,
+			borderWidth: 1,
+			backgroundColor: '#FFFFFF',
+			shadow: true
+		},
+		credits: {
+			enabled: false
+		},
+			series: [{
+			name: '# Products',
+			data: [15,24,52,10,31,20,14]
+		}, {
+			name: '# Institutions',
+			data: [6,14,17,3,15,7,7]
+		}]
+	});
+});
