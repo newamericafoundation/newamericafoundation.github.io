@@ -79,7 +79,7 @@ $(document).ready(function() {
 var chart;
 	chart = new Highcharts.Chart({
 		chart: {
-			renderTo: 'container2',
+			renderTo: 'savings1',
 			plotBackgroundColor: null,
 			plotBorderWidth: null,
 			plotShadow: false
@@ -120,7 +120,7 @@ var chart;
 var chart;
 	chart = new Highcharts.Chart({
 		chart: {
-			renderTo: 'container3',
+			renderTo: 'savings2',
 			plotBackgroundColor: null,
 			plotBorderWidth: null,
 			plotShadow: false
