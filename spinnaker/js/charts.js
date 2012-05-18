@@ -60,6 +60,13 @@ var highchartsOptions = Highcharts.setOptions(Highcharts.theme);
 
 var chart;
 $(document).ready(function() {
+    var savings1annot = {
+		'Commercial Bank':'Barclays Bank Kenya, Chase Bank, Co-operative Bank of Kenya, Equity Bank, Family Bank, Fina Bank, I&M Bank, Imperial Bank, Jamii Bora Bank, K-Rep Bank, Kenya Commercial Bank',
+		'Postal Bank':'Kenya Post Office Savings Bank',
+		'Microfinance Institution':'Faulu Kenya, Kenya Women Finance Trust, SMEP, Uwezo',
+		'Credit Union/Cooperative':'Universal Traders SACCO',
+		'Insurance Provider':'Changamka Microhealth, CIC Insurance Group',
+		'State Owned Bank':'National Bank'};
 	chart = new Highcharts.Chart({
 		chart: {
 			renderTo: 'savings1',
@@ -72,7 +79,10 @@ $(document).ready(function() {
 		},
 		tooltip: {
 			formatter: function() {
-				return this.point.name;
+				return '<strong>' + this.point.name + '</strong>: ' + savings1annot[this.point.name];
+			},
+			style: {
+				width: '200px'
 			}
 		},
 		plotOptions: {
@@ -99,11 +109,19 @@ $(document).ready(function() {
 				['Credit Union/Cooperative',     1],
 				['Insurance Provider',   2],
 				['State Owned Bank',   1]
-			]
+			],
+		   dataLabels: {
+			 enabled: false
+		   },
 		}]
 	});
 
 var chart;
+//    var savings2annot = {
+//		'Current Account':'75 products',
+//		'Commitment Savings Account':'26 products',
+//		'Recurring Standard Deposit Account':'3 products',
+//	};
 	chart = new Highcharts.Chart({
 		chart: {
 			renderTo: 'savings2',
@@ -116,7 +134,10 @@ var chart;
 		},
 		tooltip: {
 			formatter: function() {
-				return this.point.name;
+				return '<strong>' + this.point.name + '</strong>: ' + this.y + ' products';
+			},
+			style: {
+				width: '200px'
 			}
 		},
 		plotOptions: {
@@ -140,7 +161,10 @@ var chart;
 				['Current Account',   75],
 				['Commitment Savings Account',       26],
 				['Recurring Standard Deposit Account',    3],
-			]
+			],
+		   dataLabels: {
+			 enabled: false
+		   },
 		}]
 	});
 
@@ -157,7 +181,7 @@ var chart;
 			text: null,
 		},
 		xAxis: {
-			categories: ['2007','2008','2009','2010']
+			categories: ['2007','2008','2009','2010','2011']
 		},
 		yAxis: {
 			title: {
@@ -177,19 +201,19 @@ var chart;
 		},
 		series: [{
 			name: 'Commercial Bank Branches',
-			data: [740, 887, 990, 1016]
+			data: [740, 887, 990, 1016, null]
 		},{
 			name: 'MFI Branches',
-			data: [0, 0, 6, 47]
+			data: [0, 0, 6, 47,null]
 		},{
 			name: '# ATMs',
-			data: [1012, 1325, 1717, 1979]
+			data: [1012, 1325, 1717, 1979, 2183]
 		},{
 			name: 'Bank Agents',
-			data: [0, 0, 0, 8809]
+			data: [0, 0, 0, 0, 8809 ]
 		},{
-			name: 'M-PESA Agents',
-			data: [355, 2606, 9521, 18103]
+			name: 'Mobile Money Agents',
+			data: [307,2329,13358,27622,36198]
 		}]
 	});
 
@@ -258,8 +282,6 @@ var chart;
 			title: {
 				text: null
 			},
-			max: 6000000,
-			min: 0,
 			plotLines: [{
 				value: 0,
 				width: 1,
@@ -302,8 +324,6 @@ var chart;
 			title: {
 				text: null
 			},
-			max: 6000000,
-			min: 0,
 			plotLines: [{
 				value: 0,
 				width: 1,

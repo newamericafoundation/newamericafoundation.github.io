@@ -1,14 +1,38 @@
+/* ======================================== HEADER ======================================== */
+
 header {
-	margin-top: 50px;	
+	margin-top: 50px;
 }
 
-.well .wax-legend {
+/* ======================================== SECTION ======================================== */
+
+header, .section {
+	margin-bottom: 200px;	
+}
+
+.section h1 {
+	font-size: 45px;
+	line-height: auto;
+	margin-bottom: 30px;
+	padding-bottom: 10px;
+	border-bottom: 1px dotted #CCC;
+}
+
+.section .row,
+.section p {
+	margin-bottom: 30px;	
+}
+
+.section p {
+	font-size: 20px;
+	line-height: 24px;
+	letter-spacing: 1px;
+	font-weight: 200;
+}
+
+/*.well .wax-legend {
 	color: #000;	
-}
-
-a.feedback {
-	display:none;	
-}
+}*/
 
 /* ======================================== FOOTER ======================================== */
 
