@@ -110,9 +110,6 @@ $(document).ready(function() {
 				['Insurance Provider',   2],
 				['State Owned Bank',   1]
 			],
-		   dataLabels: {
-			 enabled: false
-		   },
 		}]
 	});
 

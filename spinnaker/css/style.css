@@ -5,23 +5,37 @@ header {
 	margin-bottom: 50px;
 }
 
+header .btn a {
+	color: #FFF;	
+}
+
+header .btn a:hover {
+	text-decoration: none;	
+}
+
 /* ======================================== SECTION ======================================== */
 
 .section {
-	margin-bottom: 200px;	
+	padding-top: 45px;
+	margin-bottom: 155px;	
 }
 
 .section h1 {
 	font-size: 45px;
-	line-height: auto;
-	margin-bottom: 30px;
+	line-height: 45px;
+	margin-bottom: 20px;
 	padding-bottom: 10px;
-	border-bottom: 1px dotted #CCC;
+	padding-left: 20px;
+	font-weight: 200;
 }
 
 .section .row,
 .section p {
 	margin-bottom: 30px;	
+}
+
+#commercial {
+	margin-bottom: 15px;	
 }
 
 .section p,
@@ -35,6 +49,10 @@ header {
 /*.well .wax-legend {
 	color: #000;	
 }*/
+
+.coda {
+	margin: 150px 0;	
+}
 
 /* ======================================== FOOTER ======================================== */
 
