@@ -2,11 +2,12 @@
 
 header {
 	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
 /* ======================================== SECTION ======================================== */
 
-header, .section {
+.section {
 	margin-bottom: 200px;	
 }
 
@@ -23,7 +24,8 @@ header, .section {
 	margin-bottom: 30px;	
 }
 
-.section p {
+.section p,
+.alert {
 	font-size: 20px;
 	line-height: 24px;
 	letter-spacing: 1px;
