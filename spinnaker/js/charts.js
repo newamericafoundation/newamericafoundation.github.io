@@ -82,7 +82,7 @@ $(document).ready(function() {
 				return '<strong>' + this.point.name + '</strong>: ' + savings1annot[this.point.name];
 			},
 			style: {
-				width: '200px'
+				width: '400px'
 			}
 		},
 		plotOptions: {
@@ -116,57 +116,57 @@ $(document).ready(function() {
 		}]
 	});
 
-var chart;
+//var chart;
 //    var savings2annot = {
 //		'Current Account':'75 products',
 //		'Commitment Savings Account':'26 products',
 //		'Recurring Standard Deposit Account':'3 products',
 //	};
-	chart = new Highcharts.Chart({
-		chart: {
-			renderTo: 'savings2',
-			plotBackgroundColor: null,
-			plotBorderWidth: null,
-			plotShadow: false
-		},
-		title: {
-			text: 'Types of Savings Products'
-		},
-		tooltip: {
-			formatter: function() {
-				return '<strong>' + this.point.name + '</strong>: ' + this.y + ' products';
-			},
-			style: {
-				width: '200px'
-			}
-		},
-		plotOptions: {
-			pie: {
-				allowPointSelect: true,
-				cursor: 'pointer',
-				dataLabels: {
-					enabled: true,
-					color: '#000000',
-					connectorColor: '#000000',
-					formatter: function() {
-						return this.point.name;
-					}
-				}
-			}
-		},
-		series: [{
-			type: 'pie',
-			name: 'Browser share',
-			data: [
-				['Current Account',   75],
-				['Commitment Savings Account',       26],
-				['Recurring Standard Deposit Account',    3],
-			],
-		   dataLabels: {
-			 enabled: false
-		   },
-		}]
-	});
+//	chart = new Highcharts.Chart({
+//		chart: {
+//			renderTo: 'savings2',
+//			plotBackgroundColor: null,
+//			plotBorderWidth: null,
+//			plotShadow: false
+//		},
+//		title: {
+//			text: 'Types of Savings Products'
+//		},
+//		tooltip: {
+//			formatter: function() {
+//				return '<strong>' + this.point.name + '</strong>: ' + this.y + ' products';
+//			},
+//			style: {
+//				width: '200px'
+//			}
+//		},
+//		plotOptions: {
+//			pie: {
+//				allowPointSelect: true,
+//				cursor: 'pointer',
+//				dataLabels: {
+//					enabled: true,
+//					color: '#000000',
+//					connectorColor: '#000000',
+//					formatter: function() {
+//						return this.point.name;
+//					}
+//				}
+//			}
+//		},
+//		series: [{
+//			type: 'pie',
+//			name: 'Browser share',
+//			data: [
+//				['Current Account',   75],
+//				['Commitment Savings Account',       26],
+//				['Recurring Standard Deposit Account',    3],
+//			],
+//		   dataLabels: {
+//			 enabled: false
+//		   },
+//		}]
+//	});
 
 var chart;
 	chart = new Highcharts.Chart({
@@ -187,6 +187,7 @@ var chart;
 			title: {
 				text: null
 			},
+			min:0,
 			plotLines: [{
 				value: 0,
 				width: 1,
@@ -196,24 +197,29 @@ var chart;
 		tooltip: {
 			formatter: function() {
 					return '<b>'+ this.series.name +'</b><br/>'+
-					this.x +': '+ this.y;
+					this.x +': '+ Highcharts.numberFormat(this.y, 0);
 			}
 		},
 		series: [{
-			name: 'Commercial Bank Branches',
-			data: [740, 887, 990, 1016, null]
-		},{
 			name: 'MFI Branches',
-			data: [0, 0, 6, 47,null]
+			data: [0, 0, 6, 47,null],
+			visible: false
+		},{
+			name: 'Commercial Bank Branches',
+			data: [740, 887, 990, 1016, null],
+			visible: false
 		},{
 			name: '# ATMs',
-			data: [1012, 1325, 1717, 1979, 2183]
+			data: [1012, 1325, 1717, 1979, 2183],
+			visible: false
 		},{
 			name: 'Bank Agents',
-			data: [0, 0, 0, 0, 8809 ]
+			data: [0, 0, 0, 0, 8809 ],
+			visible: false
 		},{
 			name: 'Mobile Money Agents',
-			data: [307,2329,13358,27622,36198]
+			data: [307,2329,13358,27622,36198],
+			visible: false
 		}]
 	});
 
@@ -227,7 +233,7 @@ var chart;
 		   text: 'Delivery Methods of Surveyed Products'
 		},
 		xAxis: {
-			categories: ['Agents', 'ATMs/kiosks', 'Branches', 'Passbook', 'Mobile phone', 'Debit card', 'Web'],
+			categories: ['Agents', 'ATMs/kiosks', 'Passbook', 'Mobile phone', 'Debit card', 'Web'],
 			title: {
 				text: null
 			}
@@ -256,10 +262,10 @@ var chart;
 		},
 			series: [{
 			name: '# Products',
-			data: [15,24,52,10,31,20,14]
+			data: [15,24,10,31,20,14]
 		}, {
 			name: '# Institutions',
-			data: [6,14,17,3,15,7,7]
+			data: [6,14,3,15,7,7]
 		}]
 	});	
 
@@ -291,7 +297,7 @@ var chart;
 		tooltip: {
 			formatter: function() {
 					return '<b>'+ this.series.name +'</b><br/>'+
-					this.x +': '+ this.y;
+					this.x +': $'+ Highcharts.numberFormat(this.y, 0);
 			}
 		},
 		legend: {
@@ -333,7 +339,7 @@ var chart;
 		tooltip: {
 			formatter: function() {
 					return '<b>'+ this.series.name +'</b><br/>'+
-					this.x +': '+ this.y;
+					this.x +': $'+ Highcharts.numberFormat(this.y, 0);
 			}
 		},
 		legend: {
