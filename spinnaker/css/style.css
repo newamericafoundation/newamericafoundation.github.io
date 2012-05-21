@@ -2,7 +2,6 @@
 
 header {
 	margin-top: 50px;
-	margin-bottom: 50px;
 }
 
 header .btn a {
@@ -13,11 +12,15 @@ header .btn a:hover {
 	text-decoration: none;	
 }
 
+header .hero-unit {
+	margin-bottom: 0;	
+}
+
 /* ======================================== SECTION ======================================== */
 
 .section {
 	padding-top: 45px;
-	margin-bottom: 155px;	
+	margin-bottom: 10px;	
 }
 
 .section h1 {
@@ -31,7 +34,7 @@ header .btn a:hover {
 
 .section .row,
 .section p {
-	margin-bottom: 30px;	
+	margin-bottom: 10px;	
 }
 
 #commercial {
@@ -51,7 +54,7 @@ header .btn a:hover {
 }*/
 
 .coda {
-	margin: 150px 0;	
+	margin: 75px 0;	
 }
 
 /* ======================================== FOOTER ======================================== */

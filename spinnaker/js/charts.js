@@ -184,7 +184,6 @@ var chart;
 			title: {
 				text: null
 			},
-			min:0,
 			plotLines: [{
 				value: 0,
 				width: 1,
@@ -294,7 +293,7 @@ var chart;
 		tooltip: {
 			formatter: function() {
 					return '<b>'+ this.series.name +'</b><br/>'+
-					this.x +': $'+ Highcharts.numberFormat(this.y, 0);
+					this.x +': '+ Highcharts.numberFormat(this.y, 0);
 			}
 		},
 		legend: {
@@ -336,7 +335,7 @@ var chart;
 		tooltip: {
 			formatter: function() {
 					return '<b>'+ this.series.name +'</b><br/>'+
-					this.x +': $'+ Highcharts.numberFormat(this.y, 0);
+					this.x +': '+ Highcharts.numberFormat(this.y, 0);
 			}
 		},
 		legend: {
@@ -347,110 +346,6 @@ var chart;
 		}, {
 			name: 'Balance Above KSh. 100,000',
 			data: [27039,129648,144436,107141,141488]
-		}]
-	});
-
-
-
-
-
-
-
-
-
-
-
-var chart;
-	chart = new Highcharts.Chart({
-		chart: {
-			renderTo: 'container',
-			type: 'line',
-		},
-		subtitle: {
-			text: null,
-		},
-		xAxis: {
-			categories: ['2005','2006','2007','2008','2009','2010']
-		},
-		yAxis: {
-			title: {
-				text: null
-			},
-			plotLines: [{
-				value: 0,
-				width: 1,
-				color: '#808080'
-			}]
-		},
-		tooltip: {
-			formatter: function() {
-					return '<b>'+ this.series.name +'</b><br/>'+
-					this.x +': '+ this.y;
-			}
-		},
-		legend: {
-			layout: 'vertical',
-			align: 'right',
-			verticalAlign: 'top',
-			x: -10,
-			y: 100,
-			borderWidth: 0
-		},
-		series: [{
-			name: 'Balance Below KSh. 100,000',
-			data: [1961996, 2525061, 4076465, 5747079, 7774007, 11066643]
-		}, {
-			name: 'Balance Above KSh. 100,000',
-			data: [390233, 409812, 591448, 621869, 643629, 764457]
-		}]
-	});
-
-var chart;
-	chart = new Highcharts.Chart({
-		chart: {
-			renderTo: 'container5',
-			type: 'line',
-		},
-		subtitle: {
-			text: null,
-		},
-		xAxis: {
-			categories: ['Mar 2007', 'Jun 2007', 'Sept 2007', 'Dec 2007', 'Mar 2008', 'Jun 2008','Sept 2008', 'Dec 2008', 'Mar 2009', 'Jun 2009', 'Sept 2009', 'Dec 2009', 'Mar 2010', 'Jun 2010', 'Sept 2010', 'Dec 2010', 'Mar 2011', 'Jun 2011', 'Sept 2011', 'Dec 2011']
-		},
-		yAxis: {
-			title: {
-				text: null
-			},
-			plotLines: [{
-				value: 0,
-				width: 1,
-				color: '#808080'
-			}]
-		},
-		tooltip: {
-			formatter: function() {
-					return '<b>'+ this.series.name +'</b><br/>'+
-					this.x +': '+ this.y;
-			}
-		},
-		legend: {
-			enabled: true,
-			layout: 'vertical',
-			align: 'right',
-			verticalAlign: 'top',
-			x: -10,
-			y: 100,
-			borderWidth: 0
-		},
-		series: [{
-			name: 'All Mobile Money Agents',
-			data: [307, 527, 960, 1582, 2329, 3011, 4230, 6104, 13358, 16641, 19803, 23012, 27622, 31902, 35373, 39449, 36198, 42840, 46234, 50471]
-		},{
-			name: 'M-PESA Agents',
-			data: [355, 513, 960, 1582, 2329, 3011, 4230, 6104, 8650, 10735, 13326, 15216, 17652, 18977, 20563, 23397, 26948, null, null, null]
-		},{
-			name: 'Bank Agents',
-			data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1500, 1500, 3647, 6513, 7999, null]
 		}]
 	});
 });
