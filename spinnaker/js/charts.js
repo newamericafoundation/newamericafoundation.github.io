@@ -199,15 +199,15 @@ var chart;
 		series: [{
 			name: 'MFI Branches',
 			data: [0, 0, 6, 47,null],
-			visible: false
+			visible: true
 		},{
 			name: 'Commercial Bank Branches',
 			data: [740, 887, 990, 1016, null],
-			visible: false
+			visible: true
 		},{
 			name: '# ATMs',
 			data: [1012, 1325, 1717, 1979, 2183],
-			visible: false
+			visible: true
 		},{
 			name: 'Bank Agents',
 			data: [0, 0, 0, 0, 8809 ],
