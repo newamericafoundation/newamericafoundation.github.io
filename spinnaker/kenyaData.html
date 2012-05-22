@@ -2,25 +2,18 @@
 <html> 
 <head> 
 <meta charset=utf-8 /> 
-<title>KenyaData</title> 
+<title>Kenya Financial Inclusion Data | New America Foundation</title> 
 <link rel="icon" type="image/png" href="images/favicon.ico" /> 
-
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <!--[if IE]><script type="text/javascript" src="scripts/excanvas.compiled.js"></script><![endif]-->
 <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
 <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>  
-<script src="js/wax/modestmaps.min.js"></script> 
-<script src="js/wax/wax.mm.js"></script>
-
-<link href='css/controls.css' rel='stylesheet' type='text/css' />
 <link href='css/style.css' rel='stylesheet' type='text/css' />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <link rel="stylesheet/less" href="lib/bootstrap.less" media="all" />
 <script src="js/less-1.3.0.min.js"></script>
-<script src="js/jquery/jquery.tablesorter.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/bootstrap-alert.js"></script>
 <script src="js/bootstrap-button.js"></script>
@@ -37,67 +30,6 @@
 <script src="js/highcharts/highcharts.js"></script>
 <script src="js/highcharts/modules/exporting.js"></script>
 <script src="js/charts.js"></script>
-<script>
-$(document).ready(function() {	
-	buildMap('http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.kenya-savings-usage.jsonp');
-	$('#switcherMkesho').click(function(){
-		buildMap('http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.kenya-savings-mkesho.jsonp');
-		$('button').removeClass('active1');
-		$(this).addClass('active1');
-	});
-	$('#switcherWealth').click(function(){
-		buildMap('http://tiles.mapbox.com/newamerica/api/Tileset/map-42uu1wue');
-		$('button').removeClass('active1');
-		$(this).addClass('active1');
-	});
-	$('#switcherBranches').click(function(){
-		buildMap('http://tiles.mapbox.com/newamerica/api/Tileset/map-c9i30pol');
-		$('button').removeClass('active1');
-		$(this).addClass('active1');
-	});
-	$('#switcherMobile').click(function(){
-		buildMap('http://tiles.mapbox.com/newamerica/api/Tileset/map-kx9cxj3i');
-		$('button').removeClass('active1');
-		$(this).addClass('active1');
-	});
-	$('#switcherSavings').click(function(){
-		buildMap('http://a.tiles.mapbox.com/v3/mapbox.world-light,newamerica.kenya-savings-usage.jsonp');
-		$('button').removeClass('active1');
-		$(this).addClass('active1');
-	});
-	$('#switcherEver').click(function(){
-		buildMap('http://tiles.mapbox.com/newamerica/api/Tileset/map-t85r99fj');
-		$('button').removeClass('active1');
-		$(this).addClass('active1');
-	});
-	$('#switcherNever').click(function(){
-		buildMap('http://tiles.mapbox.com/newamerica/api/Tileset/map-egcvzxhf');
-		$('button').removeClass('active1');
-		$(this).addClass('active1');
-	});
-	
-	$('#mapSeries').hide();
-	
-	$('#switcherSeries').click(function(){
-		$('#mapSeries').toggle();
-	});
-
-	function buildMap(url){
-		$('#modestmaps-setup').empty();
-		wax.tilejson(url, function(tilejson) {
-			var mm = com.modestmaps;
-			var m = new mm.Map('modestmaps-setup',
-				new wax.mm.connector(tilejson));
-				// new mm.Point(1000,450));
-		wax.mm.interaction(m, tilejson).remove();
-		wax.mm.interaction(m, tilejson)
-		wax.mm.legend(m, tilejson).appendTo(m.parent);
-		wax.mm.zoomer(m, tilejson).appendTo(m.parent);
-		m.setCenterZoom(new mm.Location(0.1733792609737724, 39.17724609375), 6);
-		});
-	}
-});
-</script>
 </head> 
 <body data-spy="scroll"> 
 
@@ -106,7 +38,7 @@ $(document).ready(function() {
     <div class="container">
       <a class="brand" href="#">Kenya Financial Inclusion Data</a>
       <ul class="nav">
-        <li><a href="#overview">Overview</a></li>
+        <li style="display:none;"><a href="#overview">Overview</a></li>
         <li><a href="#savings">Savings Product Development</a></li>
         <li><a href="#technology">Technology Utilization</a></li>
         <li><a href="#commercial">Commercial Banks</a></li>
@@ -186,7 +118,7 @@ $(document).ready(function() {
         <h1 class="badge badge-info">Commercial Banks</h1>
         <p>In the past 5 years, commercial banks have proven to be leaders in the financial access space, and this can been seen in their focus on and growth of smaller-volume accounts.</p>
         <h2>Growth of Savings Accounts</h2>
-        <script src="https://docs.google.com/spreadsheet/gpub?url=http%3A%2F%2Foj0ijfii34kccq3ioto7mdspc7r2s7o9-ss-opensocial.googleusercontent.com%2Fgadgets%2Fifr%3Fup_title%3DKenya%2520Volume%2520of%2520Deposits%25202006-2011%26up_initialstate%3D%257B%2522sizeOption%2522%253A%25222%2522%252C%2522yZoomedIn%2522%253Afalse%252C%2522dimensions%2522%253A%257B%2522iconDimensions%2522%253A%255B%2522dim0%2522%255D%257D%252C%2522duration%2522%253A%257B%2522timeUnit%2522%253A%2522D%2522%252C%2522multiplier%2522%253A1%257D%252C%2522yZoomedDataMax%2522%253A163189%252C%2522orderedByX%2522%253Afalse%252C%2522iconType%2522%253A%2522BUBBLE%2522%252C%2522orderedByY%2522%253Afalse%252C%2522yAxisOption%2522%253A%25223%2522%252C%2522iconKeySettings%2522%253A%255B%255D%252C%2522uniColorForNonSelected%2522%253Afalse%252C%2522yLambda%2522%253A1%252C%2522xZoomedIn%2522%253Afalse%252C%2522nonSelectedAlpha%2522%253A0.4%252C%2522xAxisOption%2522%253A%2522_ALPHABETICAL%2522%252C%2522yZoomedDataMin%2522%253A0%252C%2522xZoomedDataMax%2522%253A69%252C%2522xLambda%2522%253A1%252C%2522colorOption%2522%253A%25222%2522%252C%2522xZoomedDataMin%2522%253A0%252C%2522time%2522%253A%25222006%2522%252C%2522playDuration%2522%253A15000%252C%2522showTrails%2522%253Afalse%257D%26up__table_query_url%3Dhttps%253A%252F%252Fdocs.google.com%252Fspreadsheet%252Ftq%253Frange%253DA%25253AD%2526gid%253D1%2526key%253D0AhvLKgHKLMFudFFVSmZ5TnVJRWFzS0dVMzVTRnZEWWc%2526pub%253D1%26url%3Dhttp%253A%252F%252Fwww.google.com%252Fig%252Fmodules%252Fmotionchart.xml%26spreadsheets%3Dspreadsheets&height=491&width=940"></script>
+        <script src="https://docs.google.com/spreadsheet/gpub?url=http%3A%2F%2Foj0ijfii34kccq3ioto7mdspc7r2s7o9-ss-opensocial.googleusercontent.com%2Fgadgets%2Fifr%3Fup_title%3DKenya%2520Volume%2520of%2520Deposits%25202006-2011%26up_initialstate%3D%257B%2522sizeOption%2522%253A%25222%2522%252C%2522yZoomedIn%2522%253Afalse%252C%2522dimensions%2522%253A%257B%2522iconDimensions%2522%253A%255B%2522dim0%2522%255D%257D%252C%2522duration%2522%253A%257B%2522timeUnit%2522%253A%2522D%2522%252C%2522multiplier%2522%253A1%257D%252C%2522yZoomedDataMax%2522%253A163189%252C%2522orderedByX%2522%253Afalse%252C%2522iconType%2522%253A%2522BUBBLE%2522%252C%2522orderedByY%2522%253Afalse%252C%2522yAxisOption%2522%253A%25223%2522%252C%2522iconKeySettings%2522%253A%255B%255D%252C%2522uniColorForNonSelected%2522%253Afalse%252C%2522yLambda%2522%253A1%252C%2522xZoomedIn%2522%253Afalse%252C%2522nonSelectedAlpha%2522%253A0.4%252C%2522xAxisOption%2522%253A%2522_ALPHABETICAL%2522%252C%2522yZoomedDataMin%2522%253A0%252C%2522xZoomedDataMax%2522%253A69%252C%2522xLambda%2522%253A1%252C%2522colorOption%2522%253A%25222%2522%252C%2522xZoomedDataMin%2522%253A0%252C%2522time%2522%253A%25222006%2522%252C%2522playDuration%2522%253A15000%252C%2522showTrails%2522%253Afalse%257D%26up__table_query_url%3Dhttps%253A%252F%252Fdocs.google.com%252Fspreadsheet%252Ftq%253Frange%253DA%25253AD%2526gid%253D1%2526key%253D0AhvLKgHKLMFudFFVSmZ5TnVJRWFzS0dVMzVTRnZEWWc%2526pub%253D1%26url%3Dhttp%253A%252F%252Fwww.google.com%252Fig%252Fmodules%252Fmotionchart.xml%26spreadsheets%3Dspreadsheets&height=491&width=1060"></script>
       </div>        
     </div>
     <div class="row">
