@@ -49,17 +49,17 @@ function newWaxMapGraph(url, mapContainer, startLat, startLng, minZoom, maxZoom,
 							for(country in graphLabels){
 								if($(jFeature).text() == graphLabels[country][1]){
 									graph.highlight(0, graphLabels[country][0]);
-									// $("#tooltip").remove();
-									// 									graph.toolTips("<h2>"+graphLabels[country][1]+" <span style='float:right;'>"+ graphData[country][1] + "</span></h2><p> mobile subscriptions per 100 residents.</p>");
-									// 									break;
+									$("#tooltip").remove();
+									graph.toolTips("<h2>"+graphLabels[country][1]+"</h2><p>There are " + graphData[country][1] + " mobile phone subscribers per 100 residents.</p>");
+									break;
 									}
 								}
 							}
 						},
 						out: function(context) {
 							graph.unhighlight();
-							// $("#tooltip").remove();
-							// 							$("#graphTooltip").append("<div id='tooltip'><h2>Mobile Phone Penetration</h2><p>Rolling over any country on the map will also reveal the number of mobile phone subscribers per 100 residents on the chart below.</p></div>");
+							$("#tooltip").remove();
+							$("#graphTooltip").append("<div id='tooltip'><h2>Mobile Phone Penetration</h2><p>Rollover the countries above or the bars beneath the map to reveal the number of mobile phone subscribers per 100 residents.</p></div>");
 						}
 					}
 				});
