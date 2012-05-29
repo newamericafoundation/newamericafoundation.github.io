@@ -36,32 +36,40 @@
 	font-weight: 500;	
 }
 
-.wax-tooltip .change {
-	font-size: 18px;
-	padding-top: 5px;
-	font-weight: bold;
-	margin: 5px 0;
-	clear:both;
-}
-
 .wax-tooltip .indicator {
 	float:right;
 	width: 51px;
 	height: 51px;
 }
 
-.wax-tooltip .years {
-	margin-top: 10px;
+.wax-tooltip .numbers {
+	padding-top: 10px;
+	clear:both;
+}
+
+.wax-tooltip .numbers span {
+	font-size: 18px;
+	font-weight:bold;	
+}
+
+.wax-tooltip .numbers .twelve,
+.wax-tooltip .numbers .change {
+	width:95px;	
+}
+
+.wax-tooltip .numbers .twelve {
+	float:left;	
+}
+
+.wax-tooltip .numbers .change {
+	float:right;	
+}
+
+.wax-tooltip .chart {
+	clear:both;
+	padding-top: 10px;
 }
 
 .wax-tooltip .chart img {
 	margin-top: 10px;
-}
-
-.wax-tooltip .years .eleven {
-	float:left;
-}
-
-.wax-tooltip .years .twelve {
-	float:right;
 }
