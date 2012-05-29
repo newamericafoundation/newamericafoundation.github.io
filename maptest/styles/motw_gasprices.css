@@ -22,29 +22,46 @@
 
 .wax-tooltip h1 {
 	font-size: 20px;
+	float:left;
+	width: 139px;
+}
+
+.wax-tooltip .indicator h2 {
+	font-size: 16px;
+	font-weight: 300;
+	text-align: center;
+}
+
+.wax-tooltip h2 {
+	font-weight: 500;	
 }
 
 .wax-tooltip .change {
 	font-size: 18px;
+	padding-top: 5px;
 	font-weight: bold;
 	margin: 5px 0;
-	float:left;
+	clear:both;
 }
 
 .wax-tooltip .indicator {
 	float:right;
-}
-
-.wax-tooltip .indicator img {
-	position:absolute;
-	top: 10px;
-	right: 10px;	
+	width: 51px;
+	height: 51px;
 }
 
 .wax-tooltip .years {
-	clear:both;
+	margin-top: 10px;
+}
+
+.wax-tooltip .chart img {
+	margin-top: 10px;
 }
 
 .wax-tooltip .years .eleven {
-	
+	float:left;
+}
+
+.wax-tooltip .years .twelve {
+	float:right;
 }
