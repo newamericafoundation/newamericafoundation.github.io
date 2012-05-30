@@ -1,6 +1,3 @@
-@charset "UTF-8";
-/* CSS Document */
-
 .wax-legends {
 	width: 320px;
 	left: 15px;
@@ -31,12 +28,13 @@
 }
 
 .wax-tooltip .indicator h2 {
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 300;
 	text-align: center;
 }
 
 .wax-tooltip h2 {
+	font-size: 14px;
 	font-weight: 500;	
 }
 
