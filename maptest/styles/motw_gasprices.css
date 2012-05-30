@@ -22,9 +22,11 @@
 }
 
 .wax-tooltip h1 {
-	font-size: 20px;
+	font-size: 16px;
 	float:left;
 	width: 139px;
+	word-wrap:break-word;
+	font-weight:300;
 }
 
 .wax-tooltip .indicator h2 {
