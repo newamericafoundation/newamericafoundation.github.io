@@ -63,7 +63,7 @@ $(document).ready(function() {
 	}
 	$('#layerMain').click(function(){		
 		$('li').removeClass('active');
-		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-iu.jsonp', 'mainMap');		
+		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-epe.jsonp', 'mainMap');		
 		$('.map').removeClass('activeMap');
 		$('#layerMain').toggleClass('active');
 		
@@ -72,7 +72,7 @@ $(document).ready(function() {
 		$('#mainMap').addClass('activeMap');
 		$('#mainMap').css('display','block')
 		$('#mapTitle').empty();
-		$('#mapTitle').append("<h3>Payment Infrastructure</h3>");	
+		$('#mapTitle').append("<h3>Enabling Political Environment</h3>");	
 	})
 	
 	function showTooltip(x, y, contents) {
@@ -105,7 +105,7 @@ function newMap(layerId){
 	
 </script>
 
-<title>Infrastructure Utilization</title>
+<title>Enabling Political Environment</title>
 
 <script type="text/javascript">
  
