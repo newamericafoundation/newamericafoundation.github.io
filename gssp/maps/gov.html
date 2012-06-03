@@ -1,0 +1,203 @@
+<html>
+<head>
+	 
+  <link rel="stylesheet" href="css/bootstrap.css" media="all" />
+ <link href='css/style.css' rel='stylesheet' type='text/css' />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src='js/modestmaps.min.js' type='text/javascript'></script>
+  <script src='js/wax.mm.js' type='text/javascript'></script>
+  <script src='js/easey.js' type='text/javascript'></script>
+  <script src='js/epeInit.js' type='text/javascript'></script>
+  <script src='js/jquery.flot.min.js' type='text/javascript'></script>
+
+
+	<!--<script src="js/bootstrap.js"></script>-->
+	<script src="js/bootstrap-tooltip.js"></script>
+	<script src="js/bootstrap-alert.js"></script>
+	<script src="js/bootstrap-button.js"></script>
+	<script src="js/bootstrap-carousel.js"></script>
+	<script src="js/bootstrap-collapse.js"></script>
+	<script src="js/bootstrap-dropdown.js"></script>
+	<script src="js/bootstrap-modal.js"></script>
+	<script src="js/bootstrap-popover.js"></script>
+	<script src="js/bootstrap-scrollspy.js"></script>
+	<script src="js/bootstrap-tab.js"></script>
+	
+	<script src="js/bootstrap-transition.js"></script>
+	<script src="js/bootstrap-typeahead.js"></script>
+
+<script>
+buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-gov.jsonp', 'mainMap');
+			
+			var dataLabels = [[0,'Government Effectiveness','http://a.tiles.mapbox.com/v3/newamerica.gssp-effective.jsonp',"Reflects perceptions of the quality of public services, the quality of the civil service and the degree of its independence from political pressures, the quality of policy formulation and implementation, and the credibility of the government's commitment to such policies.",'effective'],[1,'ACitizen Voice and Gov Accountability','http://a.tiles.mapbox.com/v3/newamerica.gssp-account.jsonp',"Reflects perceptions of the extent to which a country's citizens are able to participate in selecting their government, as well as freedom of expression, freedom of association, and a free media.",'account'],[2,'Regulatory Quality','http://a.tiles.mapbox.com/v3/newamerica.gssp-quality.jsonp',"Reflects perceptions of the ability of the government to formulate and implement sound policies and regulations that permit and promote private sector development.",'quality'],[3,"Political Stability",'http://a.tiles.mapbox.com/v3/newamerica.gssp-stable.jsonp',"Reflects perceptions of the likelihood that the government will be destabilized or overthrown by unconstitutional or violent means, including politically-motivated violence and terrorism.",'stable'],[4,'Control of Corruption','http://a.tiles.mapbox.com/v3/newamerica.gssp-control.jsonp',"Reflects perceptions of the extent to which public power is exercised for private gain, including both petty and grand forms of corruption, as well as 'capture' of the state by elites and private interests.",'control'],[5,'Corruption (TI)','http://a.tiles.mapbox.com/v3/newamerica.gssp-corrupt.jsonp',"Reflects perceptions of the extent to which public power is exercised for private gain, including both petty and grand forms of corruption, as well as 'capture' of the state by elites and private interests.",'corrupt'],[6,'Availability of Regulatory Decisions','http://a.tiles.mapbox.com/v3/newamerica.gssp-decisions.jsonp',"Reflects perceptions of the ability of the government to formulate and implement sound policies and regulations that permit and promote private sector development.",'decisions']]
+	
+
+$(document).ready(function() {
+	$('.dropdown-toggle').dropdown()
+	//Make the graphs with labels from dataLabels	
+	for(i=0;i<7;i++){
+		$('#definitions').append("<a id='"+dataLabels[i][4]+"' name='"+dataLabels[i][4]+"'><h3>"+dataLabels[i][1]+"</h3></a><p>"+dataLabels[i][3]+"<a rel='home' class='scroll pull-right btn'>Top</a></p>")
+	var divId = '#layer'+i;
+	$('#mapContainer').append('<div id="map'+i+'"class="map"></div>');
+	var layerUrl = dataLabels[i][2];
+	var mapId = '#map'+i
+	
+		$(divId).click(function(e){
+			newId = $(this).attr('id').replace('layer','');
+			newMap(newId);		
+		});
+		$(".scroll").click(function(event){
+			var scrollId = $(this).attr('rel');
+			event.preventDefault();
+			if(scrollId == 'home'){
+				$('html,body').animate({scrollTop:0}, 500);
+			}else{
+				$('html,body').animate({scrollTop:$('#'+scrollId).offset().top-50}, 500);
+			}
+
+		});
+		
+	}
+	$('#layerMain').click(function(){		
+		$('li').removeClass('active');
+		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-gov.jsonp', 'mainMap');		
+		$('.map').removeClass('activeMap');
+		$('#layerMain').toggleClass('active');
+		
+		$('#mainMap').show();
+		$('.map').css('display','none');
+		$('#mainMap').addClass('activeMap');
+		$('#mainMap').css('display','block')
+		$('#mapTitle').empty();
+		$('#mapTitle').append("<h3>Governance</h3>");	
+	})
+	
+	function showTooltip(x, y, contents) {
+	        $('<div id="tooltip">' + contents + '</div>').css( {
+	            position: 'absolute',
+	            display: 'none',
+	            top: y +10,
+	            left: x + 20,
+	            border: '1px solid #ccc',
+	            padding: '2px',
+	            'background-color': '#eee',
+	            opacity: 0.80
+	        }).appendTo("body").fadeIn(200);
+	    }
+});
+
+function newMap(layerId){
+	$('li').removeClass('active');
+	buildMap(dataLabels[layerId][2], 'map'+layerId);
+	$('.map').removeClass('activeMap');
+	$('#layer'+layerId).toggleClass('active');
+	
+	$('#map'+layerId).show();
+	$('.map').css('display','none');
+	$('#map'+layerId).css('display','block');	
+	$('#map'+layerId).addClass('activeMap');	
+	$('#mapTitle').empty();
+	$('#map'+layerId).append("<span id='mapTitle'><h3>"+dataLabels[layerId][1]+"</h3></span>");
+}
+	
+</script>
+
+<title>Governance</title>
+
+<script type="text/javascript">
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-368921-26']);
+  _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script>
+
+</head>
+<body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<script type="text/javascript">
+	  (function() {
+	    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	    po.src = 'https://apis.google.com/js/plusone.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	  })();
+	</script>
+	
+	<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+			<h1 class="light">Mapping the Potential for Wealth Creation Through Cash Transfers Part 4<div class="pull-right">
+			<div class="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-text="Mapping the potential for wealth creation" data-via="NewAmerica">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			</div>
+			<!-- Place this tag where you want the +1 button to render -->
+			<div class="google"><g:plusone></g:plusone></div>
+
+			<div class="facebook-like"><div class="fb-like" data-href="http://newamericafoundation.github.com/gssp/maps/payment.html" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false"></div>
+			</div>
+
+			</div></h1>
+			<h3 class="light">Governance and Financial Inclusion<a class="btn pull-right" data-toggle="modal" href="#aboutModal">About</a></h3>
+			
+			<div class="modal hide fade" id="aboutModal">
+			  <div class="modal-header">
+			    <a class="close" data-dismiss="modal">&times;</a>
+			    <h3>About the Project</h3>
+			  </div>
+			  <div class="modal-body"> 
+			    <p>The New America Foundation's Global Savings and Social Protection initiative - with the generous support of CGAP (Consultative Group to Assist the Poor), the Citi Foundation, the Ford Foundation, and the Nike Foundation - is developing a multi-faceted, multi-stakeholder body of work to enable the global creation and advancement of sound, effective and efficient savings-linked social protection models. To that end, we are gathering and analyzing information about global cash transfer programs to identify and facilitate opportunities for recipients to build their asset base and increase their resiliency.</p>
+			  </div>
+			  <div class="modal-footer">
+			  </div>
+			</div>
+		</div>
+	  </div>
+	</div>
+	<div id="mapContainer" class="row-fluid">
+		<div id="mainMap" class="map span12 activeMap"><span id="mapTitle"><h3>Governance</h3></span></div>
+	</div>
+	<div class="container-fluid" style="padding-left:0px;padding-right:25px;">
+		<div id="infoBox" class="infoBar row-fluid">
+			<div id="layerSwitcher" class="row span12 navbar-inner">
+				<ul class="nav nav-pills custom-pills">
+					<li id="layerMain" class="active"><a href="#">Governance</a></li>
+					<li id="layer0"><a href="#">Government Effectiveness</a></li>
+		      		<li id="layer1"><a href="#">Citizen Voice</a></li>
+					<li id="layer2"><a href="#">Regulatory Quality</a></li>
+					<li id="layer3"><a href="#">Political Stability</a></li>
+		      		<li id="layer4"><a href="#">Control of Corruption</a></li>
+					<li id="layer5"><a href="#">Corruption</a></li>
+					<li id="layer6"><a href="#">Regulatory Decisions</a></li>
+				</ul>
+				<!-- Where all the tooltip stuff is built -->
+				<div class="container-fluid light">
+					<div id="toolTipContainer" class="row span12">
+						<h3>About the Map</h3>
+						<p>This map shows 6 different variables mapped at the country level. Each variable is used to compute a composite 'Governance' score. <strong>Roll over or click a country to view individual indicators. Use the buttons above to switch between map layers for each indicator.</strong></p>
+						<p>Easy and convenient access to a variety of financial services is necessary in order to truly enable asset building among participants in social safety net programs. Over the past month, we have looked at the financial infrastructure and its utilization in countries with cash-transfer social protection programs - including Commercial Banks, Microfinance Institutions, ATMs and Point of Service terminals - as well as the extent to which national governments are committed to promoting financial inclusion. Altogether, these maps form a holistic picture of these countries' potential to successfully implement savings-linked social protection programs.</p>
+						<p>This fourth 'heat-mapping' looks at the ability of national governments to formulate and implement policies, as well as the level of stability and accountability within its borders. These variables and definitions are taken from the World Bank's "Worldwide Governance Indicators." Countries that are shaded more darkly have stronger governance scores, and the composite of these individual factors led to a country's overall score.</p>
+					</div>
+				</div>
+				
+			<div id="definitions" class="container light">
+				<h3>Definitions</h3>
+			</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>
