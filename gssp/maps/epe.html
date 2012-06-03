@@ -37,7 +37,7 @@ buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-epe.jsonp', 'mainMap');
 $(document).ready(function() {
 	$('.dropdown-toggle').dropdown()
 	//Make the graphs with labels from dataLabels	
-	for(i=0;i<9;i++){
+	for(i=0;i<10;i++){
 		$('#definitions').append("<a id='"+dataLabels[i][4]+"' name='"+dataLabels[i][4]+"'><h3>"+dataLabels[i][1]+"</h3></a><p>"+dataLabels[i][3]+"<a rel='home' class='scroll pull-right btn'>Top</a></p>")
 	var divId = '#layer'+i;
 	$('#mapContainer').append('<div id="map'+i+'"class="map"></div>');
