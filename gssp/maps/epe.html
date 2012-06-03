@@ -1,0 +1,232 @@
+<html>
+<head>
+	 
+  <link rel="stylesheet" href="css/bootstrap.css" media="all" />
+ <link href='css/style.css' rel='stylesheet' type='text/css' />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src='js/modestmaps.min.js' type='text/javascript'></script>
+  <script src='js/wax.mm.js' type='text/javascript'></script>
+  <script src='js/easey.js' type='text/javascript'></script>
+  <script src='js/epeInit.js' type='text/javascript'></script>
+  <!--<script type="text/javascript" src="scripts/highcharts/highcharts.js"></script>
+  <script type="text/javascript" src="scripts/highcharts/themes/transparent.js"></script>-->
+  <script src='js/jquery.flot.min.js' type='text/javascript'></script>
+
+
+	<!--<script src="js/bootstrap.js"></script>-->
+	<script src="js/bootstrap-tooltip.js"></script>
+	<script src="js/bootstrap-alert.js"></script>
+	<script src="js/bootstrap-button.js"></script>
+	<script src="js/bootstrap-carousel.js"></script>
+	<script src="js/bootstrap-collapse.js"></script>
+	<script src="js/bootstrap-dropdown.js"></script>
+	<script src="js/bootstrap-modal.js"></script>
+	<script src="js/bootstrap-popover.js"></script>
+	<script src="js/bootstrap-scrollspy.js"></script>
+	<script src="js/bootstrap-tab.js"></script>
+	
+	<script src="js/bootstrap-transition.js"></script>
+	<script src="js/bootstrap-typeahead.js"></script>
+
+<script>
+buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-epe.jsonp', 'mainMap');
+			
+			var dataLabels = [[0,'Agency Responsible for Promoting Rural Access','http://a.tiles.mapbox.com/v3/newamerica.gssp-ag_rural.jsonp',"Although simply having an agency responsible for these important policies is no guarantee that many resources or facilities are deployed in support, most countries who take these matters seriously find it at least worthwhile to make sure that someone in their administration has this as part of their portfolio.",'ag_rural'],[1,'Agency Dedicated to Promoting Savings','http://a.tiles.mapbox.com/v3/newamerica.gssp-ag_save.jsonp',"Although simply having an agency responsible for these important policies is no guarantee that many resources or facilities are deployed in support, most countries who take these matters seriously find it at least worthwhile to make sure that someone in their administration has this as part of their portfolio.",'ag_save'],[2,'Agency Dedicated to Improving Financial Capability','http://a.tiles.mapbox.com/v3/newamerica.gssp-ag_cap.jsonp',"Although simply having an agency responsible for these important policies is no guarantee that many resources or facilities are deployed in support, most countries who take these matters seriously find it at least worthwhile to make sure that someone in their administration has this as part of their portfolio.",'ag_cap'],[3,"Facilitating Access to Financing in Rural Areas",'http://a.tiles.mapbox.com/v3/newamerica.gssp-fac_rural.jsonp',"Passing reforms in only the first step to achieving meaningful financial inclusion on the national level; however, getting a bill through the competing interests of parliaments is a clear illustration of political will in this regard.",'fac_rural'],[4,'Promoting Government Transfers','http://a.tiles.mapbox.com/v3/newamerica.gssp-gov_trans.jsonp',"Passing reforms in only the first step to achieving meaningful financial inclusion on the national level; however, getting a bill through the competing interests of parliaments is a clear illustration of political will in this regard. ",'gov_trans'],[5,'Financial Reforms for Branchless Banking','http://a.tiles.mapbox.com/v3/newamerica.gssp-fr_bb.jsonp',"Passing reforms in only the first step to achieving meaningful financial inclusion on the national level; however, getting a bill through the competing interests of parliaments is a clear illustration of political will in this regard.",'fr_bb'],[6,'Financial Sector Liberalization (2-1, low to high)','http://a.tiles.mapbox.com/v3/newamerica.gssp-liberal.jsonp',"",'liberal'],[7,'Publically-defined financial inclusion strategy','http://a.tiles.mapbox.com/v3/newamerica.gssp-fin_inclu.jsonp',"Certainly not the strongest indication among the ones mapped, but at the most basic level, a published financial inclusion strategy illustrates that at least some thought has been put in on the national level with respect to encouraging access to finance for all." ,'fin_inclu'],[8,'Recipient of gov transfers encouraged to open accounts','http://a.tiles.mapbox.com/v3/newamerica.gssp-open_acc.jsonp',"This variable is of particular interest to us as the Global Savings and Social Protection Initiative, as we are exploring the unique potential of cash transfers from the government to enable and facilitate financial inclusion.",'open_acc'],[9,'Mobile Branches Permitted','http://a.tiles.mapbox.com/v3/newamerica.gssp-mb_permit.jsonp',"Although it has its limitations, it is impossible to deny that mobile banking will play an integral part in any effort to bank poorest households. If one number can tell a story: of the 2.5 billion individuals in the world who are currently unbanked, approximately 2 billion of them own a mobile phone.",'mb_permit']]
+	
+
+$(document).ready(function() {
+	$('.dropdown-toggle').dropdown()
+	//Make the graphs with labels from dataLabels	
+	for(i=0;i<9;i++){
+		$('#definitions').append("<a id='"+dataLabels[i][4]+"' name='"+dataLabels[i][4]+"'><h3>"+dataLabels[i][1]+"</h3></a><p>"+dataLabels[i][3]+"<a rel='home' class='scroll pull-right btn'>Top</a></p>")
+	var divId = '#layer'+i;
+	$('#mapContainer').append('<div id="map'+i+'"class="map"></div>');
+	var layerUrl = dataLabels[i][2];
+	var mapId = '#map'+i
+	// buildMap(layerUrl, 'map'+i);
+	
+		$(divId).click(function(e){
+			newId = $(this).attr('id').replace('layer','');
+			newMap(newId);		
+		});
+		$(".scroll").click(function(event){
+			var scrollId = $(this).attr('rel');
+			event.preventDefault();
+			if(scrollId == 'home'){
+				$('html,body').animate({scrollTop:0}, 500);
+			}else{
+				$('html,body').animate({scrollTop:$('#'+scrollId).offset().top-50}, 500);
+			}
+
+		});
+		
+	}
+	$('#layerMain').click(function(){		
+		$('li').removeClass('active');
+		buildMap('http://a.tiles.mapbox.com/v3/newamerica.gssp-iu.jsonp', 'mainMap');		
+		$('.map').removeClass('activeMap');
+		$('#layerMain').toggleClass('active');
+		
+		$('#mainMap').show();
+		$('.map').css('display','none');
+		$('#mainMap').addClass('activeMap');
+		$('#mainMap').css('display','block')
+		$('#mapTitle').empty();
+		$('#mapTitle').append("<h3>Payment Infrastructure</h3>");	
+	})
+	
+	function showTooltip(x, y, contents) {
+	        $('<div id="tooltip">' + contents + '</div>').css( {
+	            position: 'absolute',
+	            display: 'none',
+	            top: y +10,
+	            left: x + 20,
+	            border: '1px solid #ccc',
+	            padding: '2px',
+	            'background-color': '#eee',
+	            opacity: 0.80
+	        }).appendTo("body").fadeIn(200);
+	    }
+});
+
+function newMap(layerId){
+	$('li').removeClass('active');
+	buildMap(dataLabels[layerId][2], 'map'+layerId);
+	$('.map').removeClass('activeMap');
+	$('#layer'+layerId).toggleClass('active');
+	
+	$('#map'+layerId).show();
+	$('.map').css('display','none');
+	$('#map'+layerId).css('display','block');	
+	$('#map'+layerId).addClass('activeMap');	
+	$('#mapTitle').empty();
+	$('#map'+layerId).append("<span id='mapTitle'><h3>"+dataLabels[layerId][1]+"</h3></span>");
+}
+	
+</script>
+
+<title>Infrastructure Utilization</title>
+
+<script type="text/javascript">
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-368921-26']);
+  _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script>
+
+</head>
+<body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<script type="text/javascript">
+	  (function() {
+	    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	    po.src = 'https://apis.google.com/js/plusone.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	  })();
+	</script>
+	
+	<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+			<h1 class="light">Mapping the Potential for Wealth Creation Through Cash Transfers Part II<div class="pull-right">
+			<div class="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-text="Mapping the potential for wealth creation" data-via="NewAmerica">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			</div>
+			<!-- Place this tag where you want the +1 button to render -->
+			<div class="google"><g:plusone></g:plusone></div>
+
+			<div class="facebook-like"><div class="fb-like" data-href="http://newamericafoundation.github.com/gssp/maps/payment.html" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false"></div>
+			</div>
+
+			</div></h1>
+			<h3 class="light">Describing the Infrastructure Utilization<a class="btn pull-right" data-toggle="modal" href="#aboutModal">About</a></h3>
+			
+			<div class="modal hide fade" id="aboutModal">
+			  <div class="modal-header">
+			    <a class="close" data-dismiss="modal">&times;</a>
+			    <h3>About the Project</h3>
+			  </div>
+			  <div class="modal-body"> 
+			    <p>The New America Foundation's Global Savings and Social Protection initiative - with the generous support of CGAP (Consultative Group to Assist the Poor), the Citi Foundation, the Ford Foundation, and the Nike Foundation - is developing a multi-faceted, multi-stakeholder body of work to enable the global creation and advancement of sound, effective and efficient savings-linked social protection models. To that end, we are gathering and analyzing information about global cash transfer programs to identify and facilitate opportunities for recipients to build their asset base and increase their resiliency.</p>
+			  </div>
+			  <div class="modal-footer">
+			  </div>
+			</div>
+		</div>
+	  </div>
+	</div>
+	<div id="mapContainer" class="row-fluid">
+		<div id="mainMap" class="map span12 activeMap"><span id="mapTitle"><h3>Infrastructure Utilization</h3></span></div>
+	</div>
+	<div class="container-fluid" style="padding-left:0px;padding-right:25px;">
+		<div id="infoBox" class="infoBar row-fluid">
+			<div id="layerSwitcher" class="row span12 navbar-inner">
+				<ul class="nav nav-pills custom-pills">
+					<li id="layerMain" class="active"><a href="#">Infrastructure Utilization</a></li>
+					<li class="dropdown">
+				    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Deposit Accounts<b class="caret"></b></a>
+				    	<ul class="dropdown-menu">
+							<li id="layer0"><a href="#">at banks (per 1000 adults)</a></li>
+				      		<li id="layer3"><a href="#">at Other FIs (per 1000 adults)</a></li>
+				    	</ul>
+				  	</li>
+				  	<li class="dropdown">
+				    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Avg. account value <b class="caret"></b></a>
+				    	<ul class="dropdown-menu">
+							<li id="layer1"><a href="#">as % of GDP</a></li>
+				      		<li id="layer2"><a href="#">as % of income per capita</a></li>
+				    	</ul>
+				  	</li>
+					
+					<li class="dropdown">
+				    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Avg. account value - Other FIs<b class="caret"></b></a>
+				    	<ul class="dropdown-menu">
+							<li id="layer4"><a href="#">as % of GDP</a></li>
+				      		<li id="layer5"><a href="#">as % of income per capita</a></li>	
+				    	</ul>
+				  	</li>
+					<li class="dropdown">
+				    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Inbound Remittances<b class="caret"></b></a>
+				    	<ul class="dropdown-menu">
+							<li id="layer7"><a href="#">as millions USD</a></li>
+				      		<li id="layer8"><a href="#">as % of GDP</a></li>	
+				    	</ul>
+				  	</li>
+					<li id="layer6"><a href="#">Basic Account Provision</a></li>
+					<li id="layer9"><a href="#">Mobile Services Adoption</a></li>
+				</ul>
+				<!-- Where all the tooltip stuff is built -->
+				<div class="container-fluid light">
+					<div id="toolTipContainer" class="row span12">
+						<h3>About the Map</h3>
+						<p>This map shows 11 different variables mapped at the country level. Each variable is used to compute a composite payment infrastructure utilization score. <strong>Roll over or click a country to view individual indicators. Use the buttons above to switch between map layers for each indicator.</strong></p>
+
+						<p>Easy and convenient access to a variety of financial services is necessary in order to truly enable asset building among participants in social safety net programs. <a href="http://newamericafoundation.github.com/gssp/maps/payment.html" target="_blank">Last week</a> we looked at the financial infrastructure in countries with cash-transfer social protection programs - including Commercial Banks, Microfinance Institutions, ATMs and Point of Service terminals - in order to get a first glimpse of these countries' potential to implement savings-linked social protection programs.</p>
+
+						<p>This second 'heat-mapping' looks at the utilization of a country's payment infrastructure through means such as deposit accounts at banks and other financial institutions, inbound remittances and mobile financial services adoption. A country's score of 1-5 on a variable corresponds to its relative quintile; that is to say, Mozambique's score on Inbound Remittances (millions USD) is a '2' because its data falls in the second quintile (between the 20th and 40th percentile).</p>
+					</div>
+				</div>
+				
+			<div id="definitions" class="container light">
+				<h3>Definitions</h3>
+			</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>
