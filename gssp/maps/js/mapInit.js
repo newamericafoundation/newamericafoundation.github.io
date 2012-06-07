@@ -33,14 +33,20 @@ function buildMap(url, container){
 								var newWidth=100;
 								var piText =$('#piCat', this._currentTooltip).html()
 								switch(piText){
-									case 'High': 
-										$('#piCat', this._currentTooltip).addClass('numberAlert numberAlert-high');
+									case '5': 
+										$('#piCat', this._currentTooltip).addClass('numberAlert numberAlert-5');
 										break;
-									case 'Medium': 
-										$('#piCat', this._currentTooltip).addClass('numberAlert numberAlert-medium');
+									case '4': 
+										$('#piCat', this._currentTooltip).addClass('numberAlert numberAlert-4');
 										break;
-									case 'Low': 
-										$('#piCat', this._currentTooltip).addClass('numberAlert numberAlert-low');
+									case '3': 
+										$('#piCat', this._currentTooltip).addClass('numberAlert numberAlert-3');
+										break;
+									case '2': 
+										$('#piCat', this._currentTooltip).addClass('numberAlert numberAlert-2');
+										break;
+									case '1': 
+										$('#piCat', this._currentTooltip).addClass('numberAlert numberAlert-1');
 										break;
 								}
 								
