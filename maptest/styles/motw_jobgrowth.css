@@ -18,44 +18,47 @@
 }
 
 .wax-tooltip h2 {
-	font-size: 18px;
-	font-weight: 500;	
+	font-size: 18px !important;
+	font-weight: 500 !important;	
 }
 
-.wax-tooltip .indicator {
-	float:right;
-	width: 51px;
-	height: 51px;
+.wax-tooltip h2 .y11_12,
+.wax-tooltip .numbers .left .y10_12,
+.wax-tooltip .numbers .right .y08_12 {
+	font-size:18px;
+	font-weight: 700;
 }
 
 .wax-tooltip .numbers {
-	padding-top: 10px;
-	clear:both;
+	margin-top: 10px;
 }
 
-.wax-tooltip .numbers span {
-	font-size: 18px;
-	font-weight:bold;	
+.wax-tooltip .numbers div {
+	width: 95px;
 }
 
-.wax-tooltip .numbers .twelve,
-.wax-tooltip .numbers .change {
-	width:95px;	
+.wax-tooltip .numbers .left {
+	float:left;
 }
 
-.wax-tooltip .numbers .twelve {
-	float:left;	
+.wax-tooltip .numbers .left .y10_12 {
+	width:100%;
+	display:block;
 }
 
-.wax-tooltip .numbers .change {
-	float:right;	
+.wax-tooltip .numbers .right {
+	float:right;
 }
 
-.wax-tooltip .chart {
-	clear:both;
-	padding-top: 10px;
+.wax-tooltip .numbers .right .y08_12 {
+	width:100%;
+	display:block;	
 }
 
-.wax-tooltip .chart img {
+.wax-tooltip h3 {
+	margin-top: 10px;
+}
+
+.wax-tooltip img {
 	margin-top: 10px;
 }
