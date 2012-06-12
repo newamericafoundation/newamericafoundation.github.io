@@ -1,0 +1,61 @@
+.wax-legends {
+	width: 350px;
+	left: 15px;
+	right: 0;
+	overflow: hidden;
+}
+
+.wax-legend {
+	width: 253px !important;
+}
+
+#for-embed {
+	display:none;	
+}
+
+#for-wax {
+	display:block !important;
+}
+
+.wax-tooltip h2 {
+	font-size: 18px;
+	font-weight: 500;	
+}
+
+.wax-tooltip .indicator {
+	float:right;
+	width: 51px;
+	height: 51px;
+}
+
+.wax-tooltip .numbers {
+	padding-top: 10px;
+	clear:both;
+}
+
+.wax-tooltip .numbers span {
+	font-size: 18px;
+	font-weight:bold;	
+}
+
+.wax-tooltip .numbers .twelve,
+.wax-tooltip .numbers .change {
+	width:95px;	
+}
+
+.wax-tooltip .numbers .twelve {
+	float:left;	
+}
+
+.wax-tooltip .numbers .change {
+	float:right;	
+}
+
+.wax-tooltip .chart {
+	clear:both;
+	padding-top: 10px;
+}
+
+.wax-tooltip .chart img {
+	margin-top: 10px;
+}
