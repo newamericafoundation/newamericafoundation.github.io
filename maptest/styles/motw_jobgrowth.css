@@ -1,12 +1,12 @@
 .wax-legends {
-	width: 350px;
+	width: 300px;
 	left: 15px;
 	right: 0;
 	overflow: hidden;
 }
 
 .wax-legend {
-	width: 253px !important;
+	width: 203px !important;
 }
 
 #for-embed {
