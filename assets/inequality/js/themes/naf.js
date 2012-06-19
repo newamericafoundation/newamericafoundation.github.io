@@ -46,25 +46,25 @@ Highcharts.theme = {
 //			}
 //		}
 //	},
-	yAxis: {
-		gridLineColor: '#000000',
-		labels: {
-			style: {
-				color: '#000000'
-			}
-		},
-		lineColor: '#000000',
-		minorTickInterval: null,
-		tickColor: '#000000',
-		tickWidth: 1,
-		title: {
-			style: {
-				color: '#000000',
-				fontSize: '12px',
-				fontFamily: 'Helvetica,Arial,"Nimbus Sans L",sans-serif;'
-			}
-		}
-	},
+//	yAxis: {
+//		gridLineColor: '#000000',
+//		labels: {
+//			style: {
+//				color: '#000000'
+//			}
+//		},
+//		lineColor: '#000000',
+//		minorTickInterval: null,
+//		tickColor: '#000000',
+//		tickWidth: 1,
+//		title: {
+//			style: {
+//				color: '#000000',
+//				fontSize: '12px',
+//				fontFamily: 'Helvetica,Arial,"Nimbus Sans L",sans-serif;'
+//			}
+//		}
+//	},
 	tooltip: {
 		backgroundColor: 'rgba(255, 255, 255, 1)',
 		style: {

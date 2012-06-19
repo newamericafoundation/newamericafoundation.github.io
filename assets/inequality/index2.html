@@ -12,12 +12,11 @@
 var chart;
 $(document).ready(function() {
 	var tooltip = {
-		'less than 20%':'2007 median income: <strong>$8,500</strong><br />2010 median income: <strong>$6,200</strong>',
-		'20-39.9%':'2007 median income: <strong>$39,600</strong><br />2010 median income: <strong>$25,600</strong>',
-		'40-59.9%':'2007 median income: <strong>$92,300</strong><br />2010 median income: <strong>$65,900</strong>',
-		'60-79.9%':'2007 median income: <strong>$215,700</strong><br />2010 median income: <strong>$128,600</strong>',
-		'80-89.9%':'2007 median income: <strong>$373,200</strong><br />2010 median income: <strong>$286,600</strong>',
-		'90-100%':'2007 median income: <strong>$1,172,300</strong><br />2010 median income: <strong>$1,194,300</strong>'};
+		'less than 25%':'2007 net worth: <strong>$1,300</strong><br />2010 net worth: <strong>≈$0</strong>',
+		'25-49.9%':'2007 net worth: <strong>$56,800</strong><br />2010 net worth: <strong>$32,200</strong>',
+		'50-74.9%':'2007 net worth: <strong>$230,800</strong><br />2010 net worth: <strong>$157,200</strong>',
+		'75-89.9%':'2007 net worth: <strong>$601,200</strong><br />2010 net worth: <strong>$482,700</strong>',
+		'90-100%':'2007 net worth: <strong>$1,991,900</strong><br />2010 net worth: <strong>$1,864,100</strong>',};
 	chart = new Highcharts.Chart({
 		chart: {
 			renderTo: 'container',
@@ -27,14 +26,14 @@ $(document).ready(function() {
 			text: 'The Impact of the Great Recession'
 		},
 	    subtitle: {
-		  text: "Change in median income from '07 to '10",  
+		  text: "Change in net worth from '07 to '10",  
 	    },
 	    credits: {
 		  text: 'NewAmerica.net',
 		  href: 'http://newamerica.net'
         },
 		xAxis: {
-			categories: ['less than 20%','20-39.9%','40-59.9%','60-79.9%','80-89.9%','90-100%']
+			categories: ['less than 25%','25-49.9%','50-74.9%','75-89.9%','90-100%']
 		},
         yAxis: {
           title: {
@@ -47,14 +46,14 @@ $(document).ready(function() {
 		  },
 		  plotBands: [{ 
 				from: 0,
-				to: -60,
+				to: -125,
 				color: 'rgba(68, 95, 158, 0.1)',
 			}]
         },
         tooltip: {
 	      formatter: function() {
 			return ''+
-			  '<strong>Income group: ' + this.x + '</strong><br />' + '<p>'+tooltip[this.x]+'</p>';
+			  '<strong>Net worth percentile: ' + this.x + '</strong><br />' + '<p>'+tooltip[this.x]+'</p>';
 		  }
 		},
 		exporting: {
@@ -86,8 +85,8 @@ $(document).ready(function() {
 			}
 		},
 		series: [{
-            name: 'Income percentage groups',
-			data: [-27.1,-35.4,-28.6,-40.4,-23.2,1.9]
+            name: 'Percentiles of net worth',
+			data: [-100.0,-43.3,-31.9,-19.7,-6.4]
 		}]
 	});
 });   
