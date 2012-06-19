@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Student loan interest rates</title>
+<link charset="utf-8" href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/highcharts.js"></script>
+<script type="text/javascript" src="js/themes/naf.js"></script>
+<script type="text/javascript" src="js/modules/exporting.js"></script>
+<script>
+var chart;
+$(document).ready(function() {
+	chart = new Highcharts.Chart({
+		chart: {
+			renderTo: 'container',
+			type: 'column'
+		},
+		title: {
+			text: 'The Impact of the Great Recession'
+		},
+	    subtitle: {
+		  text: "Change in median income from '07 to '10",  
+	    },
+	    credits: {
+		  text: 'NewAmerica.net',
+		  href: 'http://newamerica.net'
+        },
+		xAxis: {
+			categories: ['Less than 20%','20-39.9%','40-59.9%','60-79.9%','80-89.9%','90-100%']
+		},
+        yAxis: {
+          title: {
+            text: 'Interest rate'
+          },
+		  labels: {
+		    formatter: function() {
+				  return this.value +' %';
+		    }
+		  },
+		  plotBands: [{ 
+				from: 0,
+				to: -60,
+				color: 'rgba(68, 95, 158, 0.1)',
+			}]
+        },
+        tooltip: {
+		  enabled: false,
+//	      formatter: function() {
+//			return ''+
+//			  this.series.name +': '+ this.y +'';
+//		  }
+		},
+		exporting: {
+		  buttons: {
+			exportButton: {
+			  symbolFill: '#FFF',
+			  hoverSymbolFill: '#efefef',
+			  symbolStroke: '#444449',
+			},
+			printButton: {
+			  enabled: false,
+			}
+		  }
+		},
+		plotOptions: {
+			column: {
+				cursor: 'pointer',
+				dataLabels: {
+					enabled: true,
+					color: '#000000',
+					style: {
+						fontWeight: 'bold',
+						fontSize: '14px'
+					},
+					formatter: function() {
+						return this.y +'%';
+					}
+				}
+			}
+		},
+		series: [{
+            name: 'Income percentage groups',
+			data: [-27.1,-35.4,-28.6,-40.4,-23.2,1.9]
+		}]
+	});
+});   
+</script>
+</head>
+<body>
+<div id="container" style="width: 568px; height: 325px; margin: 0 auto"></div>
+<!--<div id="graphCaption" style="width: 558px; margin: 0 auto"><p>Over the past 20 years, Congress has changed how interest rates for federal student loans are calculated a number of times. This year, the temporary rate cut enacted in 2007 is set to expire. In 2011-12, students who qualified for Subsidized Stafford loans will be charged 3.4 percent interest, while students who took out Unsubsidized Stafford loans (the largest federal student loan category) will be charged a fixed rate 6.8 percent. Starting in the 2012-13 school year, the rate on both Subsidized and Unsubsidized Stafford loans will be fixed at 6.8 percent. Roll over the points in the graph above for more information on the history of these changes.</p></div>
+--></body>
+</html>
