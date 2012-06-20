@@ -23,21 +23,21 @@ $(document).ready(function() {
 			type: 'column'
 		},
 		title: {
-			text: 'The Impact of the Great Recession'
+			text: 'The Impact of the Great Recession on Wealth'
 		},
 	    subtitle: {
-		  text: "Change in net worth from '07 to '10",  
+		  text: "Change in median net worth from '07 to '10",  
 	    },
 	    credits: {
-		  text: 'NewAmerica.net',
-		  href: 'http://newamerica.net'
+		  text: 'Source: Federal Reserve (2012), Survey of Consumer Finances',
+		  href: 'http://www.federalreserve.gov/econresdata/scf/scfindex.htm'
         },
 		xAxis: {
 			categories: ['less than 25%','25-49.9%','50-74.9%','75-89.9%','90-100%']
 		},
         yAxis: {
           title: {
-            text: 'Interest rate'
+            text: '% change in net worth'
           },
 		  labels: {
 		    formatter: function() {
@@ -85,7 +85,7 @@ $(document).ready(function() {
 			}
 		},
 		series: [{
-            name: 'Percentiles of net worth',
+            name: 'Grouped by percentile of net worth',
 			data: [-100.0,-43.3,-31.9,-19.7,-6.4]
 		}]
 	});
