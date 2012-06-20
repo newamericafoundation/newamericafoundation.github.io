@@ -39,6 +39,7 @@ $(document).ready(function() {
           title: {
             text: '% change in net worth'
           },
+		  min: -125,
 		  labels: {
 		    formatter: function() {
 				  return this.value +' %';
@@ -46,8 +47,8 @@ $(document).ready(function() {
 		  },
 		  plotBands: [{ 
 				from: 0,
-				to: -125,
-				color: 'rgba(68, 95, 158, 0.1)',
+				to: -150,
+				color: 'rgba(68, 95, 158, 0.2)',
 			}]
         },
         tooltip: {
@@ -55,6 +56,9 @@ $(document).ready(function() {
 			return ''+
 			  '<strong>Net worth percentile: ' + this.x + '</strong><br />' + '<p>'+tooltip[this.x]+'</p>';
 		  }
+		},
+		legend: {
+			y: -10,
 		},
 		exporting: {
 		  buttons: {

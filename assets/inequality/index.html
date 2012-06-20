@@ -48,7 +48,7 @@ $(document).ready(function() {
 		  plotBands: [{ 
 				from: 0,
 				to: -60,
-				color: 'rgba(68, 95, 158, 0.1)',
+				color: 'rgba(68, 95, 158, 0.2)',
 			}]
         },
         tooltip: {
@@ -56,6 +56,9 @@ $(document).ready(function() {
 			return ''+
 			  '<strong>Income group: ' + this.x + '</strong><br />' + '<p>'+tooltip[this.x]+'</p>';
 		  }
+		},
+		legend: {
+			y: -10,
 		},
 		exporting: {
 		  buttons: {
@@ -86,7 +89,7 @@ $(document).ready(function() {
 			}
 		},
 		series: [{
-            name: 'Grouped by incom percentile',
+            name: 'Grouped by income percentile',
 			data: [-27.1,-35.4,-28.6,-40.4,-23.2,1.9]
 		}]
 	});
