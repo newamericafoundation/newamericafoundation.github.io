@@ -1,0 +1,50 @@
+.wax-legends {
+	width: 300px;
+	left: 15px;
+	right: 0;
+	overflow: hidden;
+}
+
+.wax-legend {
+	width: 203px !important;
+}
+
+#for-embed {
+	display:none;	
+}
+
+#for-wax {
+	display:block !important;
+}
+
+.wax-tooltip h2 {
+	margin-bottom: 10px;
+	font-size: 24px;	
+}
+
+.wax-tooltip .number {
+	font-size: 22px;
+	font-weight: bold;	
+}
+
+.wax-tooltip h3 {
+	margin-top: 10px;	
+}
+
+.wax-tooltip img {
+	margin: 15px 0 5px 0;	
+}
+
+.wax-tooltip table {
+	margin-bottom: 10px;	
+}
+
+.wax-tooltip table,
+.wax-tooltip table td {
+	border: 1px solid #FFF !important;	
+}
+
+.wax-tooltip table td {
+	font-size: 12px;
+	padding: 5px;
+}
