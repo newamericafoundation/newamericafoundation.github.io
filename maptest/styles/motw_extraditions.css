@@ -36,15 +36,9 @@
 }
 
 .wax-tooltip table {
-	margin-bottom: 10px;	
-}
-
-.wax-tooltip table,
-.wax-tooltip table td {
-	border: 1px solid #FFF !important;	
+	margin: 10px 0;	
 }
 
 .wax-tooltip table td {
 	font-size: 12px;
-	padding: 5px;
 }
