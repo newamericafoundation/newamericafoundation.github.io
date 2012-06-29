@@ -1,5 +1,5 @@
 .wax-legends {
-	width: 300px;
+	width: 235px;
 	left: 15px;
 	right: 0;
 	overflow: hidden;
@@ -7,6 +7,16 @@
 
 .wax-legend {
 	width: 203px !important;
+}
+
+.wax-legend h2 {
+	font-size: 18px;
+	margin-bottom: 5px;	
+}
+
+.wax-legend h3 {
+	font-size: 14px;
+	margin-bottom:5px;	
 }
 
 #for-embed {
