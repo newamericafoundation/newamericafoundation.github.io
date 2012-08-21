@@ -1,0 +1,134 @@
+.wax-legends {
+	width: 235px;
+	left: 15px;
+	right: 0;
+	overflow: hidden;
+}
+
+.wax-legend {
+	width: 203px !important;
+}
+
+.wax-legend h2 {
+	font-size: 18px;
+	margin-bottom: 5px;	
+}
+
+.wax-legend h3 {
+	font-size: 14px;
+	margin-bottom:5px;	
+}
+
+#for-embed {
+	display:none;	
+}
+
+#for-wax {
+	display:block !important;
+}
+
+.wax-tooltip .governor,
+.wax-tooltip #senate {
+	width: 95px;
+	float: left;
+}
+
+.wax-tooltip .legislature,
+.wax-tooltip .house {
+	width: 95px;
+	float: right;
+}
+
+/* Senators */
+
+.wax-tooltip .junior {
+	float:left;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	border: 2px solid #000;
+}
+
+.wax-tooltip .senior {
+	float:right;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	border: 2px solid #000;
+}
+
+/* No senator */
+
+.wax-tooltip .senate-none .junior,
+.wax-tooltip .senate-none .senior {
+	background: #e0e0e0;
+}
+
+/* Junior senator */
+
+.wax-tooltip .senate-junior .junior {
+	background: #e0e0e0;
+}
+
+.wax-tooltip .senate-junior .senior {
+	background: #e0e0e0;
+}
+
+/* Senior senator */
+
+.wax-tooltip .senate-senior .junior {
+	background: #e0e0e0;
+}
+
+.wax-tooltip .senate-senior .senior {
+	background: #ff0000;
+}
+
+/* Both senators */
+
+.wax-tooltip .senate-both .junior,
+.wax-tooltip .senate-both .senior {
+	background: #ff0000;
+}
+
+/* House members */
+
+.wax-tooltip .house img {
+	float:left;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #000;
+	background: #FF0000;
+}
+
+.wax-tooltip .house img.no {
+	background: #e0e0e0;
+}
+
+
+/*.wax-tooltip h2 {
+	margin-bottom: 10px;
+	font-size: 24px;	
+}
+
+.wax-tooltip .number {
+	font-size: 22px;
+	font-weight: bold;	
+}
+
+.wax-tooltip h3 {
+	margin-top: 10px;	
+}
+
+.wax-tooltip img {
+	margin: 15px 0 5px 0;	
+}
+
+.wax-tooltip table {
+	margin: 10px 0;	
+}
+
+.wax-tooltip table td {
+	font-size: 12px;
+}*/
