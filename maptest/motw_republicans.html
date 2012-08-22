@@ -17,7 +17,7 @@
 <script>
 	$(document).ready(function(){
 			var embedSrc;
-			var theMap = new  newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.motw_republicans.jsonp','mainMap',38, -102, 4, 9);
+			var theMap = new  newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.motw_republicans.jsonp','mainMap',38, -88, 4, 9);
 			embedSrc = 'http://a.tiles.mapbox.com/v3/newamerica.motw_republicans.jsonp';
 			embedSrc = embedSrc.replace(/jsonp/gi, 'html');
 			$('a.share').click(function(e){
@@ -34,7 +34,7 @@
 			function closer(e) {
 			  if (e) {e.preventDefault();}
 			  $('.wax-share').css('display', 'none');
-			}
+			};
 	}); // end ready
 </script>
 
@@ -86,75 +86,14 @@
 <div class="wax-tooltip wax-tooltip-0 wax-popup">
 <h2>Nevada</h2>
 <h3>Republican identification</h3>
-<script>
-var chart;
-  $(document).ready(function() {
-	 chart = new Highcharts.Chart({
-		chart: {
-		   renderTo: 'NevadaGraphPie',
-		   backgroundColor: null,
-		},
-		title: {
-		   text: null
-		},
-		credits: {
-			enabled: false	
-		},
-		exporting: {
-			enabled: false	
-		},
-		legend: {
-			enabled: false	
-		},
-		tooltip: {
-			enabled: false
-		},
-		labels: {
-			items: [{
-				html: '43.4%',
-				style: {
-					left: '68px',
-					top: '18px',
-					color: 'white',
-					fontWeight: 'bold',
-					fontSize: '15px',
-					fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif"
-				}
-			}]
-		},
-		plotOptions: {
-			pie: {
-				animation: false
-			}
-		},
-		series: [{
-		   type: 'pie',
-		   data: [{
-			  name: 'Republicans',
-			  color: '#FF0000',
-			  selected: true,
-			  y: 43.4,
-		   }, {
-			  name: 'Democrats',
-			  color: '#9eabcb',
-			  y: 39.2,
-		   }, {
-			  name: 'Other/not identified',
-			  color: '#E0E0E0',
-			  y: 17.4,
-		   }],
-		   size: 70,
-		   innerSize: '92%',
-		   showInLegend: false,
-		   borderColor: '#000000',
-		   dataLabels: {
-			 enabled: false
-		   },
-		},]
-	 });
-  });
-</script>
-<div id="NevadaGraphPie" style="width:200px;height:75px;margin-top:10px;"></div>
+<div class="indentification">
+<div class="number">43.4%</div>
+<img src="http://chart.googleapis.com/chart?cht=p&chco=FF0000|9eabcb|666666&chd=t:43.4,39.2,17.4&chl=Republican|Democrat|Other&chs=200x75&chf=bg,s,ffffff00" />
+</div>
+<small>
+<div style="text-align:right;">Source: <a href="http://www.gallup.com/poll/156437/Heavily-Democratic-States-Concentrated-East.aspx">Gallup</a></div>
+</small>
+<div style="clear:none;"></div>
 <div class="governor">
 <h3>Governor</h3>
 <img src="http://www.newamerica.net/files/icons/republicans/rgov.png" />
@@ -171,20 +110,9 @@ var chart;
 </div>
 <div class="house">
 <h3>U.S. House</h3>
-<script>
-String.prototype.repeat = function(n) {
-    return new Array(1 + n).join(this);
-}
- 
-document.write("<img />".repeat(2));
-</script>
-<script>
-String.prototype.repeat = function(n) {
-    return new Array(1 + n).join(this);
-}
- 
-document.write("<img class='no' />".repeat(1));
-</script>
+<div class="count">
+<span class="rnumber">2</span>/<span class="total">3</span>
+</div>
 </div>
 <div style="clear:both;"></div>
 <a class="close" href="#close">Close</a>

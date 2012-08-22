@@ -27,6 +27,20 @@
 	display:block !important;
 }
 
+.wax-tooltip {
+	color: #000000;
+	background: #FFFFFF;
+	border: 1px solid #000000;	
+}
+
+.wax-tooltip .indentification .number {
+	text-align:center;
+	font-size: 24px;
+	font-weight:bold;
+	color: #FF0000;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
 .wax-tooltip .governor,
 .wax-tooltip #senate {
 	width: 95px;
@@ -44,40 +58,42 @@
 .wax-tooltip .junior {
 	float:left;
 	border-radius: 50%;
-	width: 40px;
-	height: 40px;
-	border: 2px solid #000;
+	width: 30px;
+	height: 30px;
+	margin: 0 0 0 10px;
+	border: 1px solid #000;
 }
 
 .wax-tooltip .senior {
 	float:right;
 	border-radius: 50%;
-	width: 40px;
-	height: 40px;
-	border: 2px solid #000;
+	width: 30px;
+	height: 30px;
+	margin: 0 10px 0 0;
+	border: 1px solid #000;
 }
 
 /* No senator */
 
 .wax-tooltip .senate-none .junior,
 .wax-tooltip .senate-none .senior {
-	background: #e0e0e0;
+	background: #666;
 }
 
 /* Junior senator */
 
 .wax-tooltip .senate-junior .junior {
-	background: #e0e0e0;
+	background: #666;
 }
 
 .wax-tooltip .senate-junior .senior {
-	background: #e0e0e0;
+	background: #666;
 }
 
 /* Senior senator */
 
 .wax-tooltip .senate-senior .junior {
-	background: #e0e0e0;
+	background: #666;
 }
 
 .wax-tooltip .senate-senior .senior {
@@ -93,42 +109,21 @@
 
 /* House members */
 
-.wax-tooltip .house img {
-	float:left;
-	border-radius: 50%;
-	width: 20px;
-	height: 20px;
-	border: 1px solid #000;
-	background: #FF0000;
+.wax-tooltip .house .count {
+	text-align: center;
+	margin-top: 5px;
 }
 
-.wax-tooltip .house img.no {
-	background: #e0e0e0;
+.wax-tooltip .house .count .rnumber {
+	color: #FF0000;
+	font-size: 24px;
+	font-weight: bold;
+	margin: 0 3px;
 }
 
-
-/*.wax-tooltip h2 {
-	margin-bottom: 10px;
-	font-size: 24px;	
-}
-
-.wax-tooltip .number {
+.wax-tooltip .house .count .total {
+	color: #666;
 	font-size: 22px;
-	font-weight: bold;	
+	font-weight: bold;
+	margin: 0 3px;
 }
-
-.wax-tooltip h3 {
-	margin-top: 10px;	
-}
-
-.wax-tooltip img {
-	margin: 15px 0 5px 0;	
-}
-
-.wax-tooltip table {
-	margin: 10px 0;	
-}
-
-.wax-tooltip table td {
-	font-size: 12px;
-}*/
