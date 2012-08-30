@@ -6,7 +6,9 @@
 <link rel="stylesheet" type="text/css" href="slate_files/lib.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
 <link rel="stylesheet" type="text/css" href="styles/controls.css">
-<link rel="stylesheet" type="text/css" href="styles/motw_republicans.css">
+<link rel="stylesheet" type="text/css" href="styles/motw_democrats.css">
+<link rel="stylesheet" type="text/css" href="styles/campaignEvents.css">
+<link rel="stylesheet" type="text/css" href="styles/campaignSlider.css">
 <script src='scripts/modestmaps.min.js' type='text/javascript'></script>
 <script src='scripts/wax.mm.js' type='text/javascript'></script>
 <script src='scripts/easey.js' type='text/javascript'></script>
@@ -16,9 +18,26 @@
 
 <script>
 	$(document).ready(function(){
+
+  var demLayer = "http://a.tiles.mapbox.com/v3/newamerica.motw_democrats.jsonp";
+  var repLayer = "http://a.tiles.mapbox.com/v3/newamerica.motw_republicans.jsonp";
+
+    var the = {
+        btns:{
+            democrat:$('#btn_democrat'),
+            republican:$('#btn_republican'),
+            }
+        }
+		
+        $('#btn_democrat,#btn_republican').click(function(){
+            the.btns.democrat.removeClass('active')
+            the.btns.republican.removeClass('active')
+           $(this).addClass('active')
+        })
+								
 			var embedSrc;
-			var theMap = new  newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.motw_republicans.jsonp','mainMap',38, -88, 4, 9);
-			embedSrc = 'http://a.tiles.mapbox.com/v3/newamerica.motw_republicans.jsonp';
+			var theMap = new newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.motw_democrats.jsonp','mainMap',38, -88, 4, 9);
+			embedSrc = 'http://a.tiles.mapbox.com/v3/newamerica.motw_democrats.jsonp';
 			embedSrc = embedSrc.replace(/jsonp/gi, 'html');
 			$('a.share').click(function(e){
 			  e.preventDefault();
@@ -101,6 +120,12 @@
 		
 		  </div>
         </div>
+        
+                <div id="top">
+            <div id="btns">
+                <div id="btn_democrat" class="active">Show Democrats</div>
+                <div id="btn_republican">Show Republicans</div>
+            </div><!--end btns-->
 
 
             <div class="clearing"></div>

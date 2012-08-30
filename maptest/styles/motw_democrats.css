@@ -60,7 +60,7 @@
 	text-align:center;
 	font-size: 24px;
 	font-weight:bold;
-	color: #993334;
+	color: #6882c1;
 	font-family:Arial, Helvetica, sans-serif;
 }
 
@@ -140,8 +140,8 @@
 	margin-top: 15px;
 }
 
-.wax-tooltip .house .count .rnumber {
-	color: #993334;
+.wax-tooltip .house .count .dnumber {
+	color: #6882c1;
 	font-size: 24px;
 	font-weight: bold;
 	margin: 0 3px;
