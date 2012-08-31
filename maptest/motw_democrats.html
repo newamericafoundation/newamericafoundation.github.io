@@ -18,24 +18,6 @@
 
 <script>
 	$(document).ready(function(){
-
-//  var demLayer = "http://a.tiles.mapbox.com/v3/newamerica.motw_democrats.jsonp";
-//  var repLayer = "http://a.tiles.mapbox.com/v3/newamerica.motw_republicans.jsonp";
-//
-//    var the = {
-//        btns:{
-//            democrat:$('#btn_democrat'),
-//            republican:$('#btn_republican'),
-//            }
-//        }
-//		
-//        $('#btn_democrat,#btn_republican').click(function(){
-//            the.btns.democrat.removeClass('active')
-//            the.btns.republican.removeClass('active')
-//           $(this).addClass('active')
-//        })
-		
-
 			var embedSrc;
 			var theMap = new newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.motw_democrats.jsonp','mainMap',38, -88, 4, 9);
 			embedSrc = 'http://a.tiles.mapbox.com/v3/newamerica.motw_democrats.jsonp';
@@ -55,21 +37,18 @@
 			  if (e) {e.preventDefault();}
 			  $('.wax-share').css('display', 'none');
 			};
-			
-$('#btn_democrat').click(function(){
-	newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.motw_democrats.jsonp','mainMap',38, -88, 4, 9);
-	$('#mainMap').empty()
-	$('#btn_republican').removeClass('active');
-	$(this).addClass('active');
-});								
-
-$('#btn_republican').click(function(){
-	newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.motw_republicans.jsonp','mainMap',38, -88, 4, 9);
-	$('#mainMap').empty()
-	$('#btn_democrat').removeClass('active');
-	$(this).addClass('active');
-});								
-			
+			$('#btn_democrat').click(function(){
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.motw_democrats.jsonp','mainMap',38, -88, 4, 9);
+				$('#mainMap').empty()
+				$('#btn_republican').removeClass('active');
+				$(this).addClass('active');
+			});								
+			$('#btn_republican').click(function(){
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.motw_republicans.jsonp','mainMap',38, -88, 4, 9);
+				$('#mainMap').empty()
+				$('#btn_democrat').removeClass('active');
+				$(this).addClass('active');
+			});								
 	}); // end ready
 </script>
 
