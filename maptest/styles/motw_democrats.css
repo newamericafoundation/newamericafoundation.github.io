@@ -56,11 +56,18 @@
 	margin-top: 11px;	
 }
 
+.wax-tooltip .democrat .identification .number {
+	color: #6882c1;	
+}
+
+.wax-tooltip .repubican .identification .number {
+	color: #993334;	
+}
+
 .wax-tooltip .indentification .number {
 	text-align:center;
 	font-size: 24px;
 	font-weight:bold;
-	color: #6882c1;
 	font-family:Arial, Helvetica, sans-serif;
 }
 
