@@ -56,11 +56,11 @@
 	margin-top: 11px;	
 }
 
-.wax-tooltip .democrat .identification .number {
+.wax-tooltip .democrat .indentification .number {
 	color: #6882c1;	
 }
 
-.wax-tooltip .repubican .identification .number {
+.wax-tooltip .republican .indentification .number {
 	color: #993334;	
 }
 
@@ -145,6 +145,13 @@
 .wax-tooltip .house .count {
 	text-align: center;
 	margin-top: 15px;
+}
+
+.wax-tooltip .house .count .rnumber {
+	color: #993334;
+	font-size: 24px;
+	font-weight: bold;
+	margin: 0 3px;
 }
 
 .wax-tooltip .house .count .dnumber {
