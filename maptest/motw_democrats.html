@@ -7,8 +7,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
 <link rel="stylesheet" type="text/css" href="styles/controls.css">
 <link rel="stylesheet" type="text/css" href="styles/motw_democrats.css">
-<link rel="stylesheet" type="text/css" href="styles/campaignEvents.css">
-<link rel="stylesheet" type="text/css" href="styles/campaignSlider.css">
 <script src='scripts/modestmaps.min.js' type='text/javascript'></script>
 <script src='scripts/wax.mm.js' type='text/javascript'></script>
 <script src='scripts/easey.js' type='text/javascript'></script>
@@ -40,13 +38,19 @@
 			$('#btn_democrat').click(function(){
 				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.motw_democrats.jsonp','mainMap',38, -88, 4, 9);
 				$('#mainMap').empty()
-				$('#btn_republican').removeClass('active');
+				$('#btn_republican,#btn_purple').removeClass('active');
 				$(this).addClass('active');
 			});								
 			$('#btn_republican').click(function(){
 				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.motw_republicans.jsonp','mainMap',38, -88, 4, 9);
 				$('#mainMap').empty()
-				$('#btn_democrat').removeClass('active');
+				$('#btn_democrat,#btn_purple').removeClass('active');
+				$(this).addClass('active');
+			});								
+			$('#btn_purple').click(function(){
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.motw_purple.jsonp','mainMap',38, -88, 4, 9);
+				$('#mainMap').empty()
+				$('#btn_democrat,#btn_republican').removeClass('active');
 				$(this).addClass('active');
 			});								
 	}); // end ready
@@ -120,6 +124,7 @@
             <div id="btns">
                 <div id="btn_democrat" class="active">Show Democrats</div>
                 <div id="btn_republican">Show Republicans</div>
+                <div id="btn_purple">Show Both</div>
             </div><!--end btns-->
 
 

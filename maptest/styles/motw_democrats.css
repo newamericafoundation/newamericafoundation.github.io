@@ -1,3 +1,24 @@
+#top{
+    width:920px;
+    height:50px;
+    border-top:2px solid #3d3d3d;
+}
+
+#btn_democrat,#btn_republican,#btn_purple{
+    color:#cfcfcf;
+    cursor:pointer;
+    float:left;
+    margin-right:3px;
+    font-size:10px;
+    padding:3px;
+    background-color:gray;
+}
+
+#btn_democrat.active,#btn_republican.active,#btn_purple.active{
+    color:white;
+    background-color:#3d3d3d;
+}
+
 .wax-legends {
 	width: 235px;
 	left: 15px;
