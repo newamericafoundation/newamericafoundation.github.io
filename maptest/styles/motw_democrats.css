@@ -52,7 +52,8 @@
     margin-right: auto;
 }
 
-#for-embed {
+#for-embed,
+.wax-tooltip .dc {
 	display:none;	
 }
 
@@ -85,6 +86,19 @@
 	color: #993334;	
 }
 
+.wax-tooltip .number .rnumber,
+.wax-tooltip .identification .rnumber {
+	color: #993334;
+	margin: 0 3px;
+}
+
+.wax-tooltip .number .dnumber,
+.wax-tooltip .identification .dnumber {
+	color: #6882c1;
+	margin: 0 3px;
+}
+
+.wax-tooltip .number,
 .wax-tooltip .indentification .number {
 	text-align:center;
 	font-size: 24px;

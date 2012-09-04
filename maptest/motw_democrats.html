@@ -17,7 +17,7 @@
 <script>
 	$(document).ready(function(){
 			var embedSrc;
-			var theMap = new newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.motw_democrats.jsonp','mainMap',38, -88, 4, 9);
+			var theMap = new newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.motw_democrats.jsonp','mainMap',38, -88, 4, 7);
 			embedSrc = 'http://a.tiles.mapbox.com/v3/newamerica.motw_democrats.jsonp';
 			embedSrc = embedSrc.replace(/jsonp/gi, 'html');
 			$('a.share').click(function(e){
@@ -36,19 +36,19 @@
 			  $('.wax-share').css('display', 'none');
 			};
 			$('#btn_democrat').click(function(){
-				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.motw_democrats.jsonp','mainMap',38, -88, 4, 9);
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.motw_democrats.jsonp','mainMap',38, -88, 4, 7);
 				$('#mainMap').empty()
 				$('#btn_republican,#btn_purple').removeClass('active');
 				$(this).addClass('active');
 			});								
 			$('#btn_republican').click(function(){
-				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.motw_republicans.jsonp','mainMap',38, -88, 4, 9);
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.motw_republicans.jsonp','mainMap',38, -88, 4, 7);
 				$('#mainMap').empty()
 				$('#btn_democrat,#btn_purple').removeClass('active');
 				$(this).addClass('active');
 			});								
 			$('#btn_purple').click(function(){
-				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.motw_purple.jsonp','mainMap',38, -88, 4, 9);
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.motw_purple.jsonp','mainMap',38, -88, 4, 7);
 				$('#mainMap').empty()
 				$('#btn_democrat,#btn_republican').removeClass('active');
 				$(this).addClass('active');
