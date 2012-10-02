@@ -40,6 +40,12 @@
 	font-weight: 500;	
 }
 
+.wax-tooltip .state,
+.wax-tooltip .ratio {
+	float:left;
+	width: 139px;	
+}
+
 .wax-tooltip .indicator {
 	float:right;
 	width: 51px;
@@ -51,8 +57,12 @@
 	clear:both;
 }
 
+.wax-tooltip .ratio {
+	font-size: 22px;
+	font-weight:bold;
+}
+
 .wax-tooltip .ratio div {
-	text-align: center;	
 	font-size: 22px;
 	font-weight:bold;	
 }
