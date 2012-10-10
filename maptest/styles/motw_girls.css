@@ -14,7 +14,7 @@
 }
 
 .wax-legend .shortDescription {
-	margin: 10px 0;	
+	margin: 0 0 10px 0;	
 	font-size: 12px !important;
 	line-height: 14px !important;
 }
@@ -38,7 +38,6 @@
 	width: 139px;
 	word-wrap:break-word;
 	font-weight:300;
-	padding-bottom: 15px;
 }
 
 .wax-tooltip .indicator h2 {
@@ -85,6 +84,10 @@
 	padding-bottom: 5px;
 	margin-bottom: 5px;
 	width: 200px;	
+}
+
+.wax-tooltip .clickFor {
+	font-size: 10px;	
 }
 
 .wax-tooltip .girlprog_no {
