@@ -9,6 +9,14 @@
 	width: 223px !important;
 }
 
+.wax-legend h3 {
+	font-size: 16px;	
+}
+
+.wax-legend .shortDescription {
+	margin: 10px 0;	
+}
+
 #for-embed {
 	display:none;	
 }
