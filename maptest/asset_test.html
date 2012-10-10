@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+<title>Slate map test</title>
+<link rel="stylesheet" type="text/css" href="slate_files/blogs.css">
+<link rel="stylesheet" type="text/css" href="slate_files/lib.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+<link rel="stylesheet" type="text/css" href="styles/controls.css">
+<link rel="stylesheet" type="text/css" href="styles/motw_campaignfinance.css">
+<script src='scripts/modestmaps.min.js' type='text/javascript'></script>
+<script src='scripts/wax.mm.js' type='text/javascript'></script>
+<script src='scripts/easey.js' type='text/javascript'></script>
+<script src='scripts/mapInit.js' type='text/javascript'></script>
+<script type="text/javascript" src="scripts/jquery.flot.min.js"></script>
+<style>
+#top{
+    width:920px;
+    height:50px;
+    border-top:2px solid #3d3d3d;
+}
+
+#btn_00,#btn_01,#btn_02,#btn_03,#btn_04,#btn_05,#btn_06,#btn_07,#btn_08,#btn_09,#btn_10,#btn_11,#btn_12{
+    color:#cfcfcf;
+    cursor:pointer;
+    float:left;
+    margin-right:3px;
+    font-size:10px;
+    padding:3px;
+    background-color:gray;
+}
+
+#btn_00.active,#btn_01.active,#btn_02.active,#btn_03.active,#btn_04.active,#btn_05.active,#btn_06.active,#btn_07.active,#btn_08.active,#btn_09.active,#btn_10.active,#btn_11.active,#btn_12.active{
+    color:white;
+    background-color:#3d3d3d;
+}
+</style>
+<script>
+$(document).ready(function() {
+			var embedSrc;
+			var theMap = new newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.asset-limit-y00.jsonp','assetsMap',38, -88, 4, 7);
+			embedSrc = 'http://a.tiles.mapbox.com/v3/newamerica.motw_democrats.jsonp';
+			embedSrc = embedSrc.replace(/jsonp/gi, 'html');
+			$('a.share').click(function(e){
+			  e.preventDefault();
+			  var latitude = theMap.userCenter.lat ||38;
+			    var longitude = theMap.userCenter.lon ||-93;
+  			  $('#embed-code-field textarea').attr('value',"<iframe width='500' height='300' frameBorder='0' src='"+embedSrc+"#"+theMap.userZoom+"/"+latitude+"/"+longitude+"'></iframe>");
+  			  $('.wax-share').css('display', 'block');
+  			  $('#embed-code')[0].tabindex = 0;
+  			  $('#embed-code')[0].select();
+  
+			  $('a.close').click(function(e) {closer(e)});
+			});
+			function closer(e) {
+			  if (e) {e.preventDefault();}
+			  $('.wax-share').css('display', 'none');
+			};
+			$('#btn_00').click(function(){
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.asset-limit-y00.jsonp','assetsMap',38, -88, 4, 7);
+				$('#assetsMap').empty()
+				$('#btn_01,#btn_02,#btn_03,#btn_04,#btn_05,#btn_06,#btn_07,#btn_08,#btn_09,#btn_10,#btn_11,#btn_12').removeClass('active');
+				$(this).addClass('active');
+			});
+			$('#btn_01').click(function(){
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.asset-limit-y01.jsonp','assetsMap',38, -88, 4, 7);
+				$('#assetsMap').empty()
+				$('#btn_00,#btn_02,#btn_03,#btn_04,#btn_05,#btn_06,#btn_07,#btn_08,#btn_09,#btn_10,#btn_11,#btn_12').removeClass('active');
+				$(this).addClass('active');
+			});
+			$('#btn_02').click(function(){
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.asset-limit-y02.jsonp','assetsMap',38, -88, 4, 7);
+				$('#assetsMap').empty()
+				$('#btn_00,#btn_01,#btn_03,#btn_04,#btn_05,#btn_06,#btn_07,#btn_08,#btn_09,#btn_10,#btn_11,#btn_12').removeClass('active');
+				$(this).addClass('active');
+			});
+			$('#btn_03').click(function(){
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.asset-limit-y03.jsonp','assetsMap',38, -88, 4, 7);
+				$('#assetsMap').empty()
+				$('#btn_00,#btn_01,#btn_02,#btn_04,#btn_05,#btn_06,#btn_07,#btn_08,#btn_09,#btn_10,#btn_11,#btn_12').removeClass('active');
+				$(this).addClass('active');
+			});
+			$('#btn_04').click(function(){
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.asset-limit-y04.jsonp','assetsMap',38, -88, 4, 7);
+				$('#assetsMap').empty()
+				$('#btn_00,#btn_01,#btn_02,#btn_03,#btn_05,#btn_06,#btn_07,#btn_08,#btn_09,#btn_10,#btn_11,#btn_12').removeClass('active');
+				$(this).addClass('active');
+			});
+			$('#btn_05').click(function(){
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.asset-limit-y05.jsonp','assetsMap',38, -88, 4, 7);
+				$('#assetsMap').empty()
+				$('#btn_00,#btn_01,#btn_02,#btn_03,#btn_04,#btn_06,#btn_07,#btn_08,#btn_09,#btn_10,#btn_11,#btn_12').removeClass('active');
+				$(this).addClass('active');
+			});
+			$('#btn_06').click(function(){
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.asset-limit-y06.jsonp','assetsMap',38, -88, 4, 7);
+				$('#assetsMap').empty()
+				$('#btn_00,#btn_01,#btn_02,#btn_03,#btn_04,#btn_05,#btn_07,#btn_08,#btn_09,#btn_10,#btn_11,#btn_12').removeClass('active');
+				$(this).addClass('active');
+			});
+			$('#btn_07').click(function(){
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.asset-limit-y07.jsonp','assetsMap',38, -88, 4, 7);
+				$('#assetsMap').empty()
+				$('#btn_00,#btn_01,#btn_02,#btn_03,#btn_04,#btn_05,#btn_06,#btn_08,#btn_09,#btn_10,#btn_11,#btn_12').removeClass('active');
+				$(this).addClass('active');
+			});
+			$('#btn_08').click(function(){
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.asset-limit-y08.jsonp','assetsMap',38, -88, 4, 7);
+				$('#assetsMap').empty()
+				$('#btn_00,#btn_01,#btn_02,#btn_03,#btn_04,#btn_05,#btn_06,#btn_07,#btn_09,#btn_10,#btn_11,#btn_12').removeClass('active');
+				$(this).addClass('active');
+			});
+			$('#btn_09').click(function(){
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.asset-limit-y09.jsonp','assetsMap',38, -88, 4, 7);
+				$('#assetsMap').empty()
+				$('#btn_00,#btn_01,#btn_02,#btn_03,#btn_04,#btn_05,#btn_06,#btn_07,#btn_08,#btn_10,#btn_11,#btn_12').removeClass('active');
+				$(this).addClass('active');
+			});
+			$('#btn_10').click(function(){
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.asset-limit-y10.jsonp','assetsMap',38, -88, 4, 7);
+				$('#assetsMap').empty()
+				$('#btn_00,#btn_01,#btn_02,#btn_03,#btn_04,#btn_05,#btn_06,#btn_07,#btn_08,#btn_09,#btn_11,#btn_12').removeClass('active');
+				$(this).addClass('active');
+			});
+			$('#btn_11').click(function(){
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.asset-limit-y11.jsonp','assetsMap',38, -88, 4, 7);
+				$('#assetsMap').empty()
+				$('#btn_00,#btn_01,#btn_02,#btn_03,#btn_04,#btn_05,#btn_06,#btn_07,#btn_08,#btn_09,#btn_10,#btn_12').removeClass('active');
+				$(this).addClass('active');
+			});
+			$('#btn_12').click(function(){
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.asset-limit-y12.jsonp','assetsMap',38, -88, 4, 7);
+				$('#assetsMap').empty()
+				$('#btn_00,#btn_01,#btn_02,#btn_03,#btn_04,#btn_05,#btn_06,#btn_07,#btn_08,#btn_09,#btn_10,#btn_11').removeClass('active');
+				$(this).addClass('active');
+			});						
+});
+</script>
+
+        
+</head>
+<body data-rendering="true">
+
+		<div id="wrapper">
+			<div class="sl-content-wrapper">
+                
+    
+
+
+
+
+<div class="clearing"></div>
+
+<header>
+<div class="ht5-header">
+  <div class="clearing"></div>
+	<div class="sl-header-branding">
+	  <a href="http://www.slate.com/" class="sl-header-logo sl-sprite-hp sl-block-item"><img src="http://www.slate.com/etc/designs/slate/images/sl-logo.gif" /></a>
+	</div>
+<div class="clearing"></div>
+			<!-- SITE NAVIGATION -->
+			<div class="sl-nav-cntr">
+				<dl class="sl-nav">
+				</dl>
+				<div class="clearing"></div>
+			</div>
+	<div class="clearing"></div>
+	<div class="sl-header-wedge"></div>
+</div>
+</header>
+
+        <div class="sl-body-wrapper">
+        <div class="sl-crumbs">
+<div class="sl-crumbs-cntr" style="padding: 0 43px 0 36px;">
+<a class="sl-crumbs-link" href="http://www.slate.com/">HOME</a>
+&nbsp;/&nbsp;
+<a class="sl-crumbs-link" href="#">MAP OF THE WEEK</a>
+&nbsp;:&nbsp; SLATE/NEW AMERICA FOUNDATION
+</div>
+<div class="clearing"></div>
+</div>
+
+<p>Even before the candidates hit the campaign trail, pundits have predicted the 2012 election will blow away fundraising and spending records. Now just over a month from the election, where have Obama and Romney invested their money on the ground and where are the campaigns outspending each other? We took a look at expenditure data from the Federal Election Commission to reveal the states where the ratio of spending for each candidate is highest. Both Obama and Romney lead in the states where they headquarter their campaigns, Illinois and Massachusetts respectively. Obama's darling state -- after the District of Columbia -- is the swing state of Wisconsin, where he has over a 50:1 spending advantage over Romney. The state is also host to a direct mail firm Obama relies on to send campaign and fundraising appeals across the country. Romney also lavishes money on key swing states like Virginia, Pennsylvania, and surprisingly New Hampshire, which is host to a GOP-focused direct mail firm responsible for Romney's correspondence nationwide.</p>
+<br />
+<p>The ways big money have affected this election will be up for discussion Tuesday at the New America Foundation for a special campaign event, "<a href="http://newamerica.net/events/2012/beyond_sticker_shock">Beyond Sticker Shock: How Is Big Money Changing Politics in 2012?</a>" Trevor Potter, the election lawyer who famously enabled Stephen Colbert to start his own Super PAC, will join a discussion on the state of campaign spending in the wake of the Citizens United.
+</p>
+
+<div id="assetsMap" class="map" style="height:550px;width:100%;margin-top:36px;"></div>
+        
+<div id="top">
+  <div id="btns">
+                <div id="btn_00" class="active">2000</div>
+                <div id="btn_01">2001</div>
+                <div id="btn_02">2002</div>
+                <div id="btn_03">2003</div>
+                <div id="btn_04">2004</div>
+                <div id="btn_05">2005</div>
+                <div id="btn_06">2006</div>
+                <div id="btn_07">2007</div>
+                <div id="btn_08">2008</div>
+                <div id="btn_09">2009</div>
+                <div id="btn_10">2010</div>
+                <div id="btn_11">2011</div>
+                <div id="btn_12">2012</div>
+  </div><!--end btns-->
+</div>
+
+
+            <div class="clearing"></div>
+        </div>
+               
+                
+
+
+
+
+<footer>
+<div class="sl-footer ht5-footer">
+  <div class="sl-footer-tsgnav">
+  </div>
+	<div class="sl-footer-links-cntr">
+	
+	
+		<a href="http://fray.slate.com/discuss/">the fray</a> | 
+		<a href="http://www.slate.com/id/2147070/">about us</a> | 
+		<a href="http://www.slate.com/id/2147071/">contact us</a> | 
+		<a target="_blank" href="http://www.facebook.com/pages/Slatecom/21516776437"><em>Slate</em> on Facebook</a> | 
+	
+		<a class="sl-footer-ad-choices" href="http://www.slate.com/id/2111949#privacy">ad choices</a><br><a target="_blank" href="http://help.slate.com/">feedback</a> | 
+		<a target="_blank" href="http://help.slate.com/">help</a> | 
+		<a href="http://www.slate.com/id/2078020/">advertise</a> | 
+		<a target="_blank" href="http://synd.slategrouptech.com/signup/">newsletters</a> | 
+		<a href="http://www.slate.com/id/2223104/">mobile</a> | 
+		<a href="http://www.slate.com/id/2143116/">make <em>Slate</em> your homepage</a>			 
+		<div class="sl-footer-copyright">
+			Slate is published by The Slate Group, a Division of the Washington Post Company<br>
+			All contents © 2012 The Slate Group, LLC. All rights reserved. <a href="http://www.slate.com/id/2111949/">User Agreement and Privacy Policy</a>
+		</div><div class=" fb_reset" id="fb-root"><script async src="slate_files/all.js"></script><div style="position: absolute; top: -10000px; height: 0pt; width: 0pt;"></div></div>
+	</div>
+</div>
+</footer>
+
+                
+                
+
+
+
+
+                
+			</div>
+		</div>

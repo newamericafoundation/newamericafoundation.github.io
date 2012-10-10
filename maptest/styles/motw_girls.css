@@ -1,0 +1,85 @@
+.wax-legends {
+	width: 320px;
+	left: 15px;
+	right: 0;
+	overflow: hidden;
+}
+
+.wax-legend {
+	width: 223px !important;
+}
+
+#for-embed {
+	display:none;	
+}
+
+#for-wax {
+	display:block !important;
+}
+
+.wax-tooltip .top {
+	min-height: 70px;
+	clear:both;
+}
+
+.wax-tooltip h1 {
+	font-size: 18px;
+	float:left;
+	width: 139px;
+	word-wrap:break-word;
+	font-weight:300;
+	padding-bottom: 15px;
+}
+
+.wax-tooltip .indicator h2 {
+	font-size: 12px;
+	font-weight: 300;
+	text-align: center;
+}
+
+.wax-tooltip h2 {
+	font-size: 18px;
+	font-weight: 500;	
+}
+
+.wax-tooltip .country,
+.wax-tooltip .gii {
+	float:left;
+	width: 139px;	
+}
+
+.wax-tooltip .indicator {
+	float:right;
+	width: 51px;
+	height: 51px;
+}
+
+.wax-tooltip .indicator div.rank {
+	text-align:center;
+	font-size: 20px;
+}
+
+.wax-tooltip .field {
+	font-size:12px;
+}
+
+.wax-tooltip .subfield {
+	font-size: 11px;	
+}
+
+.wax-tooltip .number {
+	clear:both;
+	font-size: 14px;
+	border-bottom: 1px dashed gray;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	width: 200px;	
+}
+
+.wax-tooltip .girlprog_no {
+	display:none;	
+}
+
+.wax-tooltip .girlprog_yes {
+	color:#9bb8de;	
+}
