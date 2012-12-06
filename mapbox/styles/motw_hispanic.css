@@ -1,0 +1,100 @@
+.wax-legends {
+	width: 300px;
+	left: 15px;
+	right: 0;
+	overflow: hidden;
+}
+
+.wax-legend {
+	width: 203px !important;
+}
+
+#for-embed {
+	display:none;	
+}
+
+#for-wax {
+	display:block !important;
+}
+
+.wax-tooltip h2 {
+	font-size: 18px !important;
+	font-weight: 500 !important;	
+}
+
+.wax-tooltip .hispanic {
+	margin-top: 10px;
+	font-size: 15px;
+}
+
+.wax-tooltip .hispanic .hispnumber {
+	margin-top: 5px;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+.wax-tooltip .population {
+	margin-top: 5px;
+	font-size: 12px;
+}
+
+.wax-tooltip .hispop,
+.wax-tooltip .totpop {
+	font-weight: bold;
+	font-size: 14px;	
+}
+
+.wax-tooltip .numbers .left {
+	color:#4040ff;
+}
+
+.wax-tooltip .numbers .right {
+	color: red;
+}
+
+.wax-tooltip .numbers .left .obama,
+.wax-tooltip .numbers .right .mccain {
+	font-size:18px;
+	font-weight: 700;
+}
+
+.wax-tooltip .numbers .left,
+.wax-tooltip .numbers .right {
+	text-align: center;
+}
+
+.wax-tooltip .numbers {
+	margin-top: 10px;
+}
+
+.wax-tooltip .numbers div {
+	width: 95px;
+}
+
+.wax-tooltip .numbers .left {
+	float:left;
+}
+
+.wax-tooltip .numbers .left .obama {
+	width:100%;
+	display:block;
+}
+
+.wax-tooltip .numbers .right {
+	float:right;
+}
+
+.wax-tooltip .numbers .right .mccain {
+	width:100%;
+	display:block;	
+}
+
+.wax-tooltip h3 {
+	font-size: 15px;
+	font-weight: 300;
+	margin-top: 10px;
+}
+
+.wax-tooltip img {
+	margin-top: 10px;
+}

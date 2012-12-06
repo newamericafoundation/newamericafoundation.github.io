@@ -17,8 +17,8 @@
 <script>
 	$(document).ready(function(){
 			var embedSrc;
-			var theMap = new newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.201212-internetgov.jsonp','mainMap',20, -10, 2, 5);
-			embedSrc = 'http://a.tiles.mapbox.com/v3/newamerica.201212-internetgov.jsonp';
+			var theMap = new newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.201212-internetgov2.jsonp','mainMap',20, -10, 2, 5);
+			embedSrc = 'http://a.tiles.mapbox.com/v3/newamerica.201212-internetgov2.jsonp';
 			embedSrc = embedSrc.replace(/jsonp/gi, 'html');
 			$('a.share').click(function(e){
 			  e.preventDefault();
@@ -36,13 +36,13 @@
 			  $('.wax-share').css('display', 'none');
 			};
 			$('#btn_internetgov').click(function(){
-				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.201212-internetgov.jsonp','mainMap',20, -10, 2, 5);
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.201212-internetgov2.jsonp','mainMap',20, -10, 2, 5);
 				$('#mainMap').empty()
 				$('#btn_internetgov_com').removeClass('active');
 				$(this).addClass('active');
 			});								
 			$('#btn_internetgov_com').click(function(){
-				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.201212-internetgov_com.jsonp','mainMap',20, -10, 2, 5);
+				newWaxMap('http://a.tiles.mapbox.com/v3/newamerica.201212-internetgov_com2.jsonp','mainMap',20, -10, 2, 5);
 				$('#mainMap').empty()
 				$('#btn_internetgov').removeClass('active');
 				$(this).addClass('active');

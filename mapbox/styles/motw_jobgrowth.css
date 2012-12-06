@@ -1,0 +1,64 @@
+.wax-legends {
+	width: 300px;
+	left: 15px;
+	right: 0;
+	overflow: hidden;
+}
+
+.wax-legend {
+	width: 203px !important;
+}
+
+#for-embed {
+	display:none;	
+}
+
+#for-wax {
+	display:block !important;
+}
+
+.wax-tooltip h2 {
+	font-size: 18px !important;
+	font-weight: 500 !important;	
+}
+
+.wax-tooltip h2 .y11_12,
+.wax-tooltip .numbers .left .y10_12,
+.wax-tooltip .numbers .right .y08_12 {
+	font-size:18px;
+	font-weight: 700;
+}
+
+.wax-tooltip .numbers {
+	margin-top: 10px;
+}
+
+.wax-tooltip .numbers div {
+	width: 95px;
+}
+
+.wax-tooltip .numbers .left {
+	float:left;
+}
+
+.wax-tooltip .numbers .left .y10_12 {
+	width:100%;
+	display:block;
+}
+
+.wax-tooltip .numbers .right {
+	float:right;
+}
+
+.wax-tooltip .numbers .right .y08_12 {
+	width:100%;
+	display:block;	
+}
+
+.wax-tooltip h3 {
+	margin-top: 10px;
+}
+
+.wax-tooltip img {
+	margin-top: 10px;
+}

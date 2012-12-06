@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.js'></script>
+  <link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.css' rel='stylesheet' />
+  <style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
+</head>
+<body>
+
+<div id='map'>
+<a class="map-fullscreen" href="#fullscreen">fullscreen</a>
+</div>
+<script>
+  // Create map
+  mapbox.auto('map', 'newamerica.201206-extraditions', function(map, tiledata) {
+
+    // Replace marker factory function with our version
+    tiledata.markers.factory(function(m) {
+
+        // Create a marker using the simplestyle factory
+        var elem = mapbox.markers.simplestyle_factory(m);
+
+        // Add function that centers marker on click
+        MM.addEvent(elem, 'click', function(e) {
+            map.ease.location({
+              lat: m.geometry.coordinates[1],
+              lon: m.geometry.coordinates[0]
+            }).zoom(map.zoom()).optimal();
+        });
+
+        return elem;
+    });
+  });
+</script>
+
+</body>
+</html>

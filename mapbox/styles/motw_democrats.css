@@ -1,0 +1,204 @@
+#top{
+    width:920px;
+    height:50px;
+    border-top:2px solid #3d3d3d;
+}
+
+#btn_democrat,#btn_republican,#btn_purple{
+    color:#cfcfcf;
+    cursor:pointer;
+    float:left;
+    margin-right:3px;
+    font-size:10px;
+    padding:3px;
+    background-color:gray;
+}
+
+#btn_democrat.active,#btn_republican.active,#btn_purple.active{
+    color:white;
+    background-color:#3d3d3d;
+}
+
+.wax-legends {
+	width: 235px;
+	left: 15px;
+	right: 0;
+	overflow: hidden;
+}
+
+.wax-legend {
+	width: 203px !important;
+}
+
+.wax-legend h2 {
+	font-size: 18px;
+	margin-bottom: 5px;	
+}
+
+.wax-legend h3 {
+	font-size: 14px;
+	margin-bottom:5px;	
+}
+
+.wax-legend h4 {
+	font-size: 10px;
+	line-height:10px;
+	margin-bottom:5px;	
+}
+
+.wax-legend .key img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#for-embed,
+.wax-tooltip .dc {
+	display:none;	
+}
+
+#for-wax {
+	display:block !important;
+}
+
+.wax-tooltip {
+	color: #000000;
+	background: #FFFFFF;
+	border: 1px solid #000000;	
+}
+
+.wax-tooltip .governor img,
+.wax-tooltip .legislature img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wax-tooltip .governor img {
+	margin-top: 11px;	
+}
+
+.wax-tooltip .democrat .indentification .number {
+	color: #6882c1;	
+}
+
+.wax-tooltip .republican .indentification .number {
+	color: #993334;	
+}
+
+.wax-tooltip .number .rnumber,
+.wax-tooltip .identification .rnumber {
+	color: #993334;
+	margin: 0 3px;
+}
+
+.wax-tooltip .number .dnumber,
+.wax-tooltip .identification .dnumber {
+	color: #6882c1;
+	margin: 0 3px;
+}
+
+.wax-tooltip .number,
+.wax-tooltip .indentification .number {
+	text-align:center;
+	font-size: 24px;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+.wax-tooltip .governor,
+.wax-tooltip #senate {
+	width: 95px;
+	float: left;
+}
+
+.wax-tooltip .legislature,
+.wax-tooltip .house {
+	width: 95px;
+	float: right;
+}
+
+.wax-tooltip #senate,
+.wax-tooltip .legislature,
+.wax-tooltip .governor,
+.wax-tooltip .house {
+	margin-top: 10px;
+}
+
+/* Senators */
+
+.wax-tooltip .junior {
+	float:left;
+	width: 20px;
+	height: 53px;
+	margin: 0 0 0 10px;
+}
+
+.wax-tooltip .senior {
+	float:right;
+	width: 20px;
+	height: 53px;
+	margin: 0 10px 0 0;
+}
+
+/* No senator */
+
+.wax-tooltip .senate-none .junior,
+.wax-tooltip .senate-none .senior {
+	background-image: url(http://www.newamerica.net/files/icons/republicans/senator_dem.png);
+}
+
+/* Junior senator */
+
+.wax-tooltip .senate-junior .junior {
+	background-image: url(http://www.newamerica.net/files/icons/republicans/senator_rep.png);
+}
+
+.wax-tooltip .senate-junior .senior {
+	background-image: url(http://www.newamerica.net/files/icons/republicans/senator_dem.png);
+}
+
+/* Senior senator */
+
+.wax-tooltip .senate-senior .junior {
+	background-image: url(http://www.newamerica.net/files/icons/republicans/senator_dem.png);
+}
+
+.wax-tooltip .senate-senior .senior {
+	background-image: url(http://www.newamerica.net/files/icons/republicans/senator_rep.png);
+}
+
+/* Both senators */
+
+.wax-tooltip .senate-both .junior,
+.wax-tooltip .senate-both .senior {
+	background-image: url(http://www.newamerica.net/files/icons/republicans/senator_rep.png);
+}
+
+/* House members */
+
+.wax-tooltip .house .count {
+	text-align: center;
+	margin-top: 15px;
+}
+
+.wax-tooltip .house .count .rnumber {
+	color: #993334;
+	font-size: 24px;
+	font-weight: bold;
+	margin: 0 3px;
+}
+
+.wax-tooltip .house .count .dnumber {
+	color: #6882c1;
+	font-size: 24px;
+	font-weight: bold;
+	margin: 0 3px;
+}
+
+.wax-tooltip .house .count .total {
+	color: #666;
+	font-size: 22px;
+	font-weight: bold;
+	margin: 0 3px;
+}

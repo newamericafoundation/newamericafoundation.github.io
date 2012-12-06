@@ -1,0 +1,47 @@
+#top{
+    width:920px;
+    height:50px;
+    border-top:2px solid #3d3d3d;
+}
+
+#btn_internetgov_com,#btn_internetgov{
+    color:#cfcfcf;
+    cursor:pointer;
+    float:left;
+    margin-right:3px;
+    font-size:10px;
+    padding:3px;
+    background-color:gray;
+}
+
+#btn_internetgov_com.active,#btn_internetgov.active{
+    color:white;
+    background-color:#3d3d3d;
+}
+
+.wax-legends {
+	width: 235px;
+	left: 15px;
+	right: 0;
+	overflow: hidden;
+}
+
+.wax-legend {
+	width: 203px !important;
+}
+
+.wax-legend h2 {
+	font-size: 18px;
+	margin-bottom: 5px;	
+}
+
+.wax-legend h3 {
+	font-size: 14px;
+	margin-bottom:5px;	
+}
+
+.wax-tooltip {
+	color: #000000;
+	background: #FFFFFF;
+	border: 1px solid #000000;	
+}

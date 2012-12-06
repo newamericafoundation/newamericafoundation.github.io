@@ -1,0 +1,111 @@
+#interactiveWrapper{
+    font-family:'verdana',sans-serif;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#interactive{
+    font-family:'verdana',sans-serif;
+    position:relative;
+    height:550px;
+}
+#mapContainer{
+    width:920px;
+    height:550px;
+    background-color:gray;
+}
+#btn_maximize,#btn_minimize{
+    z-index:9999;
+    position:absolute;
+    top:0px;
+    left:0px;
+    background-color:rgba(255,255,255,.7);
+    font-size:12px;
+    color:black;
+    padding:5px;
+    text-align:center;
+    margin-bottom:10px;
+    cursor:pointer;
+}
+#btn_minimize{
+    display:none;
+}
+#mapContainer h2{
+    font-size:13px;
+    margin:0px;
+    max-width:200px;
+}
+#mapContainer a.red{
+    color:#660033;
+    text-decoration:none;
+}
+#mapContainer a.blue{
+    color:#2D2965;
+    text-decoration:none;
+}
+
+#mapContainer p{
+    margin:0px;
+    max-width:200px;
+    font-size:11px;
+}
+
+#maximizedBox{
+    position:absolute;
+    z-index:9998;
+}
+#leg{
+    z-index:9999;
+    width:220px;
+    position:absolute;
+    padding:5px;
+    bottom:0px;
+    left:0px;
+    background-color:rgba(255,255,255,.7)
+}
+#leg h2{
+    margin:0px;
+    line-height:normal;
+    font-size:12px;
+}
+#leg p{
+    margin-top:5px;
+    margin-bottom:5px;
+    line-height:normal;
+    font-size:11px;
+}
+#source{
+    text-align:right;
+    font-size:9px;
+    height:10px;
+    width:500px;
+    margin-top:0px;
+    float:right;
+}
+.leaflet-popup-content-wrapper{
+    border-radius:15px;
+}
+.leaflet-popup-content{
+    margin:10px;
+}
+#top{
+    width:920px;
+    height:50px;
+    border-top:2px solid #3d3d3d;
+}
+#btn_democrat,#btn_republican{
+    color:#cfcfcf;
+    cursor:pointer;
+    float:left;
+    margin-right:3px;
+    font-size:10px;
+    padding:3px;
+    background-color:gray;
+}
+#btn_democrat.active,#btn_republican.active{
+    color:white;
+    background-color:#3d3d3d;
+}

@@ -1,0 +1,69 @@
+#cpf-overlay {
+    background-image: url(../images/overlay.png);
+    background-color: transparent;
+    position: fixed;
+    top: 0; left: 0; 
+	width: 100%; height:100%;
+	z-index: 2147483644; /* just less than cpf-root */
+}
+
+#cpf-root {
+    position: fixed;
+	z-index: 2147483645; /* just less than cpf-viewbox */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	margin: 15px 0px 15px 0px;
+}
+
+#cpf-root iframe { 
+	margin: 0px; 
+	padding: 0px; 
+	border: 0px;
+}
+
+#cpf-closeButton{
+	background-repeat: no-repeat;
+    background-image: url(../images/viewBoxClose.png);
+    cursor: pointer;
+    height: 27px;
+    width: 27px;
+    z-index: 2147483647; /* max */
+    position: absolute;
+}
+
+#cpf-tickerTree{
+	background-repeat: no-repeat;
+    background-image: url(../images/tree.png);
+    height: 56px;
+    width: 29px;
+    position: absolute;
+    z-index: 2147483647; /* max */
+}
+
+#cpf-busy-spinner {
+    width: 200px;
+    height: 208px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -104px;  /* Back it up half its height */
+    margin-left: -100px; /* Back it up half its width */
+    z-index: 2147483647; /* max */    
+}
+
+#cpf-viewbox {
+    margin: 0px auto;
+    /* width: 1085px; */
+    width: 1105px;
+    height: 728px;
+    background-color: transparent;
+    position: relative;
+    z-index: 2147483646;   /* just less than closeButton */
+}
+
+.cpf-noAds {
+   display: none;
+}

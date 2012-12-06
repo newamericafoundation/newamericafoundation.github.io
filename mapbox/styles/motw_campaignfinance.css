@@ -1,0 +1,95 @@
+.wax-legends {
+	width: 320px;
+	left: 15px;
+	right: 0;
+	overflow: hidden;
+}
+
+.wax-legend {
+	width: 223px !important;
+}
+
+#for-embed {
+	display:none;	
+}
+
+#for-wax {
+	display:block !important;
+}
+
+.wax-tooltip .top {
+	min-height: 70px;	
+}
+
+.wax-tooltip h1 {
+	font-size: 16px;
+	float:left;
+	width: 139px;
+	word-wrap:break-word;
+	font-weight:300;
+}
+
+.wax-tooltip .indicator h2 {
+	font-size: 12px;
+	font-weight: 300;
+	text-align: center;
+}
+
+.wax-tooltip h2 {
+	font-size: 14px;
+	font-weight: 500;	
+}
+
+.wax-tooltip .state,
+.wax-tooltip .ratio {
+	float:left;
+	width: 139px;	
+}
+
+.wax-tooltip .indicator {
+	float:right;
+	width: 51px;
+	height: 51px;
+}
+
+.wax-tooltip .numbers {
+	padding-top: 10px;
+	clear:both;
+}
+
+.wax-tooltip .ratio {
+	font-size: 22px;
+	font-weight:bold;
+}
+
+.wax-tooltip .ratio div {
+	font-size: 22px;
+	font-weight:bold;	
+}
+
+.wax-tooltip .numbers span {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.wax-tooltip .numbers .twelve,
+.wax-tooltip .numbers .change {
+	width:95px;	
+}
+
+.wax-tooltip .numbers .twelve {
+	float:left;	
+}
+
+.wax-tooltip .numbers .change {
+	float:right;	
+}
+
+.wax-tooltip .chart {
+	clear:both;
+	padding-top: 10px;
+}
+
+.wax-tooltip .chart img {
+	margin-top: 10px;
+}

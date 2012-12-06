@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.wax-legends {
+	width: 320px;
+	left: 15px;
+	right: 0;
+	overflow: hidden;
+}
+
+.wax-legend {
+	width: 298px !important;
+}
+
+.mainToolTip h2 {
+	font-size: 1.15em;
+}
+
+.mainToolTip p {
+	margin: 0.5em 0 1em;
+	line-height: 1.5;
+}
+
+.mainToolTip span.number {
+	font-weight:bold;	
+}
+
+.mainToolTip span.change {
+	color: #CCC;
+	font-size: 1.75em;
+	padding-left: 5px;
+}
