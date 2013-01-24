@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+<title>Slate map test</title>
+<link rel="stylesheet" type="text/css" href="slate_files/blogs.css">
+<link rel="stylesheet" type="text/css" href="slate_files/lib.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.js'></script>
+<!--<link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.css' rel='stylesheet' />-->
+<link rel="stylesheet" type="text/css" href="styles/controls.css">
+<link rel="stylesheet" type="text/css" href="styles/motw_democrats.css">
+<script type="text/javascript" src="scripts/jquery.flot.min.js"></script>
+<script type="text/javascript" src="scripts/highcharts/highcharts.js"></script>
+<style>
+#geolocate {
+  background:#fff;
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:158px;
+  margin-left:-80px;
+  z-index:1000;
+  font:13px/18px;
+  text-align:center;
+  padding:10px 0;
+  background:#FFF;
+  color:#3C4E5A;
+  display:block;
+  border:1px solid #BBB;
+  -webkit-border-radius:3px;
+          border-radius:3px;
+  }
+  #geolocate:hover { background:#ECF5FA; }
+
+</style>
+</head>
+<body data-rendering="true">
+<div id="wrapper">
+  <div class="sl-content-wrapper">
+    <div class="clearing"></div>
+    <header>
+      <div class="ht5-header">
+        <div class="clearing"></div>
+        <div class="sl-header-branding"> <a href="http://www.slate.com/" class="sl-header-logo sl-sprite-hp sl-block-item"><img src="http://www.slate.com/etc/designs/slate/images/sl-logo.gif" /></a> </div>
+        <div class="clearing"></div>
+        <!-- SITE NAVIGATION -->
+        <div class="sl-nav-cntr">
+          <dl class="sl-nav">
+          </dl>
+          <div class="clearing"></div>
+        </div>
+        <div class="clearing"></div>
+        <div class="sl-header-wedge"></div>
+      </div>
+    </header>
+    <div class="sl-body-wrapper">
+      <div class="sl-crumbs">
+        <div class="sl-crumbs-cntr" style="padding: 0 43px 0 36px;"> <a class="sl-crumbs-link" href="http://www.slate.com/">HOME</a> &nbsp;/&nbsp; <a class="sl-crumbs-link" href="#">MAP OF THE WEEK</a> &nbsp;:&nbsp; SLATE/NEW AMERICA FOUNDATION </div>
+        <div class="clearing"></div>
+      </div>
+      <p>Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. </p>
+      <div id="map" style="height:550px;margin-top:36px;"></div>
+      <a href='#' id='geolocate'>Find me</a>
+      </div>
+      
+<script>
+    mapbox.load('slate.201301-NRAcontributions', function(o) {
+        var m = mapbox.map('map');
+        m.addLayer(o.layer).zoom(4).center({ lat: 40.2795, lon: -96.1084 });
+		m.setZoomRange(4, 9);
+		m.ui.legend.add();
+		m.ui.zoomer.add();
+		m.setPanLimits(new MM.Extent(2.8114,-180,71.9654,-63.6328));
+        m.interaction.auto();
+		m.ui.refresh();
+    });	
+    // Create an empty markers layer
+  var markerLayer = mapbox.markers.layer();
+  m.addLayer(markerLayer);
+  var geolocate = document.getElementById('geolocate');
+
+  // This uses the HTML5 geolocation API, which is available on
+  // most mobile browsers and modern browsers, but not in Internet Explorer
+  //
+  // See this chart of compatibility for details:
+  // http://caniuse.com/#feat=geolocation
+  if (!navigator.geolocation) {
+      geolocate.innerHTML = 'geolocation is not available';
+  } else {
+      geolocate.onclick = function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          navigator.geolocation.getCurrentPosition(
+          function(position) {
+              // Once we've got a position, zoom and center the map
+              // on it, add ad a single feature
+              m.zoom(9).center({
+                  lat: position.coords.latitude,
+                  lon: position.coords.longitude
+              });
+              markerLayer.add_feature({
+                  geometry: {
+                      coordinates: [
+                          position.coords.longitude,
+                          position.coords.latitude]
+                  },
+                  properties: {
+                      'marker-color': '#000',
+                      'marker-symbol': 'star-stroked',
+                  }
+              });
+              // And hide the geolocation button
+              geolocate.parentNode.removeChild(geolocate);
+          },
+          function(err) {
+              // If the user chooses not to allow their location
+              // to be shared, display an error message.
+              geolocate.innerHTML = 'position could not be found';
+          });
+      };
+  }
+</script>      
+<script>
+//	  
+//    mapbox.load('slate.201301-NRAcontributions', function(o) {
+//        var map = mapbox.map('map');
+//        map.addLayer(o.layer).zoom(4).center({ lat: 40.2795, lon: -96.1084 });
+//		map.setZoomRange(4, 9);
+//		map.ui.legend.add();
+//		map.ui.zoomer.add();
+//		map.setPanLimits(new MM.Extent(2.8114,-180,71.9654,-63.6328));
+//        map.interaction.auto();
+//		map.ui.refresh();
+//    });	
+//		var geolocate = document.getElementById('geolocate');
+//
+//  // This uses the HTML5 geolocation API, which is available on
+//  // most mobile browsers and modern browsers, but not in Internet Explorer
+//  //
+//  // See this chart of compatibility for details:
+//  // http://caniuse.com/#feat=geolocation
+//  if (!navigator.geolocation) {
+//      geolocate.innerHTML = 'geolocation is not available';
+//  } else {
+//      geolocate.onclick = function(e) {
+//          e.preventDefault();
+//          e.stopPropagation();
+//          navigator.geolocation.getCurrentPosition(
+//          function(position) {
+//              // Once we've got a position, zoom and center the map
+//              // on it, add ad a single feature
+//              m.zoom(9).center({
+//                  lat: position.coords.latitude,
+//                  lon: position.coords.longitude
+//              });
+//              markerLayer.add_feature({
+//                  geometry: {
+//                      coordinates: [
+//                          position.coords.longitude,
+//                          position.coords.latitude]
+//                  },
+//                  properties: {
+//                      'marker-color': '#000',
+//                      'marker-symbol': 'star-stroked',
+//                  }
+//              });
+//              // And hide the geolocation button
+//              geolocate.parentNode.removeChild(geolocate);
+//          },
+//          function(err) {
+//              // If the user chooses not to allow their location
+//              // to be shared, display an error message.
+//              geolocate.innerHTML = 'position could not be found';
+//          });
+//      };
+//  }
+</script>
+      <div class="clearing"></div>
+    </div>
+    <footer>
+      <div class="sl-footer ht5-footer">
+        <div class="sl-footer-tsgnav"> </div>
+        <div class="sl-footer-links-cntr"> <a href="http://fray.slate.com/discuss/">the fray</a> | <a href="http://www.slate.com/id/2147070/">about us</a> | <a href="http://www.slate.com/id/2147071/">contact us</a> | <a target="_blank" href="http://www.facebook.com/pages/Slatecom/21516776437"><em>Slate</em> on Facebook</a> | <a class="sl-footer-ad-choices" href="http://www.slate.com/id/2111949#privacy">ad choices</a><br>
+          <a target="_blank" href="http://help.slate.com/">feedback</a> | <a target="_blank" href="http://help.slate.com/">help</a> | <a href="http://www.slate.com/id/2078020/">advertise</a> | <a target="_blank" href="http://synd.slategrouptech.com/signup/">newsletters</a> | <a href="http://www.slate.com/id/2223104/">mobile</a> | <a href="http://www.slate.com/id/2143116/">make <em>Slate</em> your homepage</a>
+          <div class="sl-footer-copyright"> Slate is published by The Slate Group, a Division of the Washington Post Company<br>
+            All contents © 2012 The Slate Group, LLC. All rights reserved. <a href="http://www.slate.com/id/2111949/">User Agreement and Privacy Policy</a> </div>
+          <div class=" fb_reset" id="fb-root"><script async src="slate_files/all.js"></script>
+            <div style="position: absolute; top: -10000px; height: 0pt; width: 0pt;"></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
