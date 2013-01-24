@@ -66,10 +66,7 @@
 <script>
   var m = mapbox.map('map').zoom(4).center({ lat: 40.2795, lon: -96.1084 }).setZoomRange(4, 9).setPanLimits(new MM.Extent(2.8114,-180,71.9654,-63.6328));
   m.addLayer(mapbox.layer().id('slate.201301-NRAcontributions'));
-		m.ui.zoomer.add();
-        m.interaction.auto();
-		m.ui.legend.add();
-		m.ui.refresh();
+  m.ui.zoomer.add();
 
   // Create an empty markers layer
   var markerLayer = mapbox.markers.layer();
@@ -84,6 +81,9 @@
   // http://caniuse.com/#feat=geolocation
   if (!navigator.geolocation) {
       geolocate.innerHTML = 'geolocation is not available';
+	  m.interaction.auto();
+	  m.ui.legend.add();
+	  m.ui.refresh();
   } else {
       geolocate.onclick = function(e) {
           e.preventDefault();
@@ -107,6 +107,9 @@
                       'marker-symbol': 'star-stroked',
                   }
               });
+			  m.interaction.auto();
+			  m.ui.legend.add();
+			  m.ui.refresh();
               // And hide the geolocation button
               geolocate.parentNode.removeChild(geolocate);
           },
