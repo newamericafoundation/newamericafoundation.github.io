@@ -31,7 +31,6 @@
           border-radius:3px;
   }
   #geolocate:hover { background:#ECF5FA; }
-
 </style>
 </head>
 <body data-rendering="true">
@@ -60,82 +59,17 @@
       </div>
       <p>Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. </p>
       <div id="map" style="height:550px;margin-top:36px;"></div>
-      <a href='#' id='geolocate'>Find me</a>
       </div>
 
 <script>
-  var m = mapbox.map('map').zoom(4).center({ lat: 40.2795, lon: -96.1084 }).setZoomRange(4, 9).setPanLimits(new MM.Extent(2.8114,-180,71.9654,-63.6328));
-  m.addLayer(mapbox.layer().id('slate.201301-NRAcontributions'));
-  m.ui.zoomer.add();
-
-  // Create an empty markers layer
-  var markerLayer = mapbox.markers.layer();
-  m.addLayer(markerLayer);
-
-  var geolocate = document.getElementById('geolocate');
-
-  // This uses the HTML5 geolocation API, which is available on
-  // most mobile browsers and modern browsers, but not in Internet Explorer
-  //
-  // See this chart of compatibility for details:
-  // http://caniuse.com/#feat=geolocation
-  if (!navigator.geolocation) {
-      geolocate.innerHTML = 'geolocation is not available';
-	  m.interaction.auto();
-	  m.ui.legend.add();
-	  m.ui.refresh();
-  } else {
-      geolocate.onclick = function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          navigator.geolocation.getCurrentPosition(
-          function(position) {
-              // Once we've got a position, zoom and center the map
-              // on it, add ad a single feature
-              m.zoom(9).center({
-                  lat: position.coords.latitude,
-                  lon: position.coords.longitude
-              });
-              markerLayer.add_feature({
-                  geometry: {
-                      coordinates: [
-                          position.coords.longitude,
-                          position.coords.latitude]
-                  },
-                  properties: {
-                      'marker-color': '#000',
-                      'marker-symbol': 'star-stroked',
-                  }
-              });
-			  m.interaction.auto();
-			  m.ui.legend.add();
-			  m.ui.refresh();
-              // And hide the geolocation button
-              geolocate.parentNode.removeChild(geolocate);
-          },
-          function(err) {
-              // If the user chooses not to allow their location
-              // to be shared, display an error message.
-              geolocate.innerHTML = 'position could not be found';
-          });
-      };
-  }
-</script>
-      
-<script>
-//    mapbox.load('slate.201301-NRAcontributions', function(o) {
-//        var m = mapbox.map('map');
-//        m.addLayer(o.layer).zoom(4).center({ lat: 40.2795, lon: -96.1084 });
-//		m.setZoomRange(4, 9);
-//		m.ui.legend.add();
-//		m.ui.zoomer.add();
-//		m.setPanLimits(new MM.Extent(2.8114,-180,71.9654,-63.6328));
-//        m.interaction.auto();
-//		m.ui.refresh();
-//    });	
-//    // Create an empty markers layer
+//  var m = mapbox.map('map').zoom(4).center({ lat: 40.2795, lon: -96.1084 }).setZoomRange(4, 9).setPanLimits(new MM.Extent(2.8114,-180,71.9654,-63.6328));
+//  m.addLayer(mapbox.layer().id('slate.201301-NRAcontributions'));
+//  m.ui.zoomer.add();
+//
+//  // Create an empty markers layer
 //  var markerLayer = mapbox.markers.layer();
 //  m.addLayer(markerLayer);
+//
 //  var geolocate = document.getElementById('geolocate');
 //
 //  // This uses the HTML5 geolocation API, which is available on
@@ -145,7 +79,13 @@
 //  // http://caniuse.com/#feat=geolocation
 //  if (!navigator.geolocation) {
 //      geolocate.innerHTML = 'geolocation is not available';
+//	  m.interaction.auto();
+//	  m.ui.legend.add();
+//	  m.ui.refresh();
 //  } else {
+//	  m.interaction.auto();
+//	  m.ui.legend.add();
+//	  m.ui.refresh();
 //      geolocate.onclick = function(e) {
 //          e.preventDefault();
 //          e.stopPropagation();
@@ -168,6 +108,9 @@
 //                      'marker-symbol': 'star-stroked',
 //                  }
 //              });
+//			  m.interaction.auto();
+//			  m.ui.legend.add();
+//			  m.ui.refresh();
 //              // And hide the geolocation button
 //              geolocate.parentNode.removeChild(geolocate);
 //          },
@@ -175,9 +118,25 @@
 //              // If the user chooses not to allow their location
 //              // to be shared, display an error message.
 //              geolocate.innerHTML = 'position could not be found';
+//			  m.interaction.auto();
+//	          m.ui.legend.add();
+//	          m.ui.refresh();
 //          });
 //      };
 //  }
+</script>
+      
+<script>
+    mapbox.load('slate.201301-NRAcontributions', function(o) {
+        var m = mapbox.map('map');
+        m.addLayer(o.layer).zoom(4).center({ lat: 40.2795, lon: -96.1084 });
+		m.setZoomRange(4, 9);
+		m.ui.legend.add();
+		m.ui.zoomer.add();
+		m.setPanLimits(new MM.Extent(2.8114,-180,71.9654,-63.6328));
+        m.interaction.auto();
+		m.ui.refresh();
+    });	
 </script>      
       <div class="clearing"></div>
     </div>
