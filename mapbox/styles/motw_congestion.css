@@ -17,6 +17,24 @@
 	display:block !important;
 }
 
+#geolocate:hover {
+    background: none repeat scroll 0 0 #ECF5FA;
+}
+#geolocate {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #BBBBBB;
+    color: #3C4E5A;
+    display: block;
+    font-family: verdana;
+    margin-top: 5px;
+    padding: 10px 0;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    width: 918px;
+    z-index: 1000;
+}
+
 /*.wax-tooltip .top {
 	min-height: 70px;	
 }*/

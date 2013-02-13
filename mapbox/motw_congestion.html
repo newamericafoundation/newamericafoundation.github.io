@@ -38,21 +38,74 @@
       </div>
       <p>Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. </p>
       <div id="map" style="height:550px;margin-top:36px;"> </div>
+      <a id="geolocate" href="#">Find my location</a>
       <script>
-		$(document).ready(function(){
-		  mapbox.load('newamerica.201302-congestion', function(o) {
-			  var map = mapbox.map('map');
-			  map.addLayer(o.layer).zoom(4).center({ lat: 40.2795, lon: -96.1084 });
-			  map.setZoomRange(4, 9);
-			  map.ui.legend.add();
-			  map.ui.zoomer.add();
-			  map.setPanLimits(new MM.Extent(17.1828,-180,71.7602,-38.3203));
-			  map.ui.attribution.add()
-				.content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
-			  map.interaction.auto();
-			  map.ui.refresh();
-		  });	  
-		});	  
+mapbox.load('newamerica.201302-congestion', function (o) {
+//initialize map
+var m =
+mapbox
+.map('map')
+.setZoomRange(4, 9)
+.addLayer(o.layer).zoom(4).center({
+lat: 40.2795,
+lon: -90.1084
+})
+.zoom(4).center({
+lat: 40.2795,
+lon: -90.1084
+})
+.setPanLimits(new MM.Extent(17.1828,-180,71.7602,-38.3203));
+m.ui.legend.add();
+m.ui.zoomer.add();
+m.ui.refresh();
+m.interaction.auto();
+// Create an empty markers layer
+var markerLayer = mapbox.markers.layer();
+m.addLayer(markerLayer);
+var geolocate = document.getElementById('geolocate');
+if(!navigator.geolocation) {
+geolocate.innerHTML = 'geolocation is not available';
+m.interaction.auto();
+m.ui.legend.add();
+m.ui.refresh();
+}
+else {
+geolocate.onclick = function (e) {
+e.preventDefault();
+e.stopPropagation();
+navigator.geolocation.getCurrentPosition(
+function (position) {
+// Once we've got a position, zoom and center the map
+// on it, add ad a single feature
+m.zoom(9).center({
+lat: position.coords.latitude,
+lon: position.coords.longitude
+});
+markerLayer.add_feature({
+geometry: {
+coordinates: [
+position.coords.longitude,
+position.coords.latitude]
+},
+properties: {
+'marker-color': '#000',
+'marker-symbol': 'star-stroked',
+}
+});
+m.interaction.auto();
+m.ui.legend.add();
+m.ui.refresh();
+// And hide the geolocation button
+geolocate.parentNode.removeChild(geolocate);
+},
+function (err) {
+// If the user chooses not to allow their location
+// to be shared, display an error message.
+geolocate.innerHTML = 'Your location could not be found';
+});
+};
+}
+})  
       </script>
       <div class="clearing"></div>
     </div>
