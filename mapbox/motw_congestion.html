@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+<title>Slate map test</title>
+<link rel="stylesheet" type="text/css" href="slate_files/blogs.css">
+<link rel="stylesheet" type="text/css" href="slate_files/lib.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.js'></script>
+<!--<link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.css' rel='stylesheet' />-->
+<link rel="stylesheet" type="text/css" href="styles/controls.css">
+<link rel="stylesheet" type="text/css" href="styles/motw_congestion.css">
+<script type="text/javascript" src="scripts/jquery.flot.min.js"></script>
+<script type="text/javascript" src="scripts/highcharts/highcharts.js"></script>
+</head>
+<body data-rendering="true">
+<div id="wrapper">
+  <div class="sl-content-wrapper">
+    <div class="clearing"></div>
+    <header>
+      <div class="ht5-header">
+        <div class="clearing"></div>
+        <div class="sl-header-branding"> <a href="http://www.slate.com/" class="sl-header-logo sl-sprite-hp sl-block-item"><img src="http://www.slate.com/etc/designs/slate/images/sl-logo.gif" /></a> </div>
+        <div class="clearing"></div>
+        <!-- SITE NAVIGATION -->
+        <div class="sl-nav-cntr">
+          <dl class="sl-nav">
+          </dl>
+          <div class="clearing"></div>
+        </div>
+        <div class="clearing"></div>
+        <div class="sl-header-wedge"></div>
+      </div>
+    </header>
+    <div class="sl-body-wrapper">
+      <div class="sl-crumbs">
+        <div class="sl-crumbs-cntr" style="padding: 0 43px 0 36px;"> <a class="sl-crumbs-link" href="http://www.slate.com/">HOME</a> &nbsp;/&nbsp; <a class="sl-crumbs-link" href="#">MAP OF THE WEEK</a> &nbsp;:&nbsp; SLATE/NEW AMERICA FOUNDATION </div>
+        <div class="clearing"></div>
+      </div>
+      <p>Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. Here is some intro text. </p>
+      <div id="map" style="height:550px;margin-top:36px;"> </div>
+      <script>
+		$(document).ready(function(){
+		  mapbox.load('newamerica.201302-congestion', function(o) {
+			  var map = mapbox.map('map');
+			  map.addLayer(o.layer).zoom(4).center({ lat: 40.2795, lon: -96.1084 });
+			  map.setZoomRange(4, 9);
+			  map.ui.legend.add();
+			  map.ui.zoomer.add();
+			  map.setPanLimits(new MM.Extent(17.1828,-180,71.7602,-38.3203));
+			  map.ui.attribution.add()
+				.content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
+			  map.interaction.auto();
+			  map.ui.refresh();
+		  });	  
+		});	  
+      </script>
+      <div class="clearing"></div>
+    </div>
+    <div class="map-tooltip map-tooltip-0 wax-tooltip">
+      <div id="for-mapbox">
+        <div class="top">
+          <h2>Washingtion DC-VA-MD</h2>
+          <div class="indicator">
+            <div class="rank"><span>#</span>100</div>  
+          </div>
+        </div>
+        <div class="numbers">
+          <div class="number">67</div>
+          <h2 class="label">hours spent delayed in traffic</h2>
+        </div>
+        <div class="numbers">
+          <h2 class="header">Consumption</h2>
+          <div class="left">
+            <div class="number">32</div>
+            <h2 class="label">gallons of excess fuel</h2>
+          </div>
+          <div class="right">
+            <div class="number"><span>$</span>1,398</div>
+            <h2 class="label">cost of delay</h2>
+          </div>
+          <div style="clear:both;"></div>
+        </div>
+        <div class="numbers">
+          <h2 class="header">Global warming impact</h2>
+          <div class="left">
+            <div class="number">631<span>lbs</span></div>
+            <h2 class="label">CO<sub>2</sub> produced per vehicle</h2>
+          </div>
+          <div class="right">
+            <div class="number">1,703<span>lbs</span></div>
+            <h2 class="label">C0<sub>2</sub> produced total</h2>
+          </div>
+          <div style="clear:both;"></div>
+        </div>
+        <h2 class="header">Congestion delay trend</h2>
+        <img src="http://chart.googleapis.com/chart?cht=lxy&chd=t:0,44,56,68,70|18,65,74,66,67&chds=0,70&chs=280x100&chxt=y,x&chxr=0,0,70&chxl=0:|0|35|70|1:|'82||||||||||||||||||'00|||||'05||||||'11&chco=333333&chm=B,1E5793,0,0,0&chf=bg,s,ffffff"/>
+      </div>
+    </div>
+    <footer>
+      <div class="sl-footer ht5-footer">
+        <div class="sl-footer-tsgnav"> </div>
+        <div class="sl-footer-links-cntr"> <a href="http://fray.slate.com/discuss/">the fray</a> | <a href="http://www.slate.com/id/2147070/">about us</a> | <a href="http://www.slate.com/id/2147071/">contact us</a> | <a target="_blank" href="http://www.facebook.com/pages/Slatecom/21516776437"><em>Slate</em> on Facebook</a> | <a class="sl-footer-ad-choices" href="http://www.slate.com/id/2111949#privacy">ad choices</a><br>
+          <a target="_blank" href="http://help.slate.com/">feedback</a> | <a target="_blank" href="http://help.slate.com/">help</a> | <a href="http://www.slate.com/id/2078020/">advertise</a> | <a target="_blank" href="http://synd.slategrouptech.com/signup/">newsletters</a> | <a href="http://www.slate.com/id/2223104/">mobile</a> | <a href="http://www.slate.com/id/2143116/">make <em>Slate</em> your homepage</a>
+          <div class="sl-footer-copyright"> Slate is published by The Slate Group, a Division of the Washington Post Company<br>
+            All contents © 2012 The Slate Group, LLC. All rights reserved. <a href="http://www.slate.com/id/2111949/">User Agreement and Privacy Policy</a> </div>
+          <div class=" fb_reset" id="fb-root"><script async src="slate_files/all.js"></script>
+            <div style="position: absolute; top: -10000px; height: 0pt; width: 0pt;"></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>

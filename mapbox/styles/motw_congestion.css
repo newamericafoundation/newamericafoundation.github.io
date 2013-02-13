@@ -1,0 +1,113 @@
+.wax-legends {
+	width: 320px;
+	left: 15px;
+	right: 0;
+	overflow: hidden;
+}
+
+.wax-legend {
+	width: 223px !important;
+}
+
+#for-embed {
+	display:none;	
+}
+
+#for-wax {
+	display:block !important;
+}
+
+/*.wax-tooltip .top {
+	min-height: 70px;	
+}*/
+
+.wax-tooltip h2 {
+	font-weight: 500;	
+}
+
+.wax-tooltip .top h2 {
+	font-size: 26px;
+	float:left;
+	width: 200px;
+	word-wrap:break-word;
+	font-weight: 500;	
+}
+
+.wax-tooltip .indicator {
+	float:right;
+	width: 80px;
+}
+
+/*.wax-tooltip .indicator div.label {
+	font-size: 14px;
+	font-weight: 300;
+	text-align: center;
+}*/
+
+.wax-tooltip .indicator div.rank {
+	font-size:30px;
+	text-align:right;	
+}
+
+.wax-tooltip .indicator div.rank span {
+	font-size: 20px;
+	position:relative;
+	bottom:10px;	
+}
+
+.wax-tooltip .numbers {
+	clear:both;
+	margin-bottom: 10px;
+}
+
+.wax-tooltip h2.header {
+	font-size: 14px;
+	text-transform:uppercase;
+	color:#999;
+	margin-bottom: 5px;
+}
+
+.wax-tooltip .numbers h2.label {
+	font-size: 14px;
+	text-align:center;
+}
+
+.wax-tooltip .numbers .left,
+.wax-tooltip .numbers .right {
+	width:135px;
+}
+
+.wax-tooltip .numbers .left {
+	float:left;	
+}
+
+.wax-tooltip .numbers .right {
+	float:right;	
+}
+
+.wax-tooltip .numbers .left h2,
+.wax-tooltip .numbers .right h2 {
+	width:135px;
+	font-size: 14px;
+	word-wrap:break-word;
+	text-align:center;
+}
+
+.wax-tooltip .numbers div.number {
+	font-size: 22px;
+	text-align: center;
+}
+
+.wax-tooltip .numbers div.number span {
+	font-size: 16px;
+}
+
+
+.wax-tooltip .chart {
+	clear:both;
+	padding-top: 10px;
+}
+
+.wax-tooltip .chart img {
+	margin-top: 10px;
+}
