@@ -45,7 +45,7 @@ mapbox.load('newamerica.201302-congestion', function (o) {
 var m =
 mapbox
 .map('map')
-.setZoomRange(4, 9)
+.setZoomRange(4, 7)
 .addLayer(o.layer).zoom(4).center({
 lat: 40.2795,
 lon: -90.1084
@@ -77,7 +77,7 @@ navigator.geolocation.getCurrentPosition(
 function (position) {
 // Once we've got a position, zoom and center the map
 // on it, add ad a single feature
-m.zoom(9).center({
+m.zoom(7).center({
 lat: position.coords.latitude,
 lon: position.coords.longitude
 });
@@ -140,13 +140,13 @@ geolocate.innerHTML = 'Your location could not be found';
     <h2 class="label">CO<sub>2</sub> produced per vehicle</h2>
   </div>
   <div class="right">
-    <div class="number">1,703<span>lbs</span></div>
+    <div class="number">1,703<span>K lbs</span></div>
     <h2 class="label">C0<sub>2</sub> produced total</h2>
   </div>
   <div style="clear:both;"></div>
 </div>
 <h2 class="header">Congestion delay trend</h2>
-<img src="http://chart.googleapis.com/chart?cht=lxy&chd=t:0,44,56,68,70|18,65,74,66,67&chds=0,70&chs=280x100&chxt=y,x&chxr=0,0,70&chxl=0:|0|35|70|1:|'82||||||||||||||||||'00|||||'05||||||'11&chco=333333&chm=B,DA0433,0,0,0&chf=bg,s,ffffff"/>
+<img src="http://chart.googleapis.com/chart?cht=lxy&chd=t:0,44,56,68,70|18,65,74,66,67&chds=0,70&chs=210x100&chxt=y,x&chxr=0,0,70&chxl=0:|0|35|70|1:|'82||||||||||||||||||'00|||||'05||||||'11&chco=333333&chm=B,663000,0,0,0&chf=bg,s,ffffff"/>
       </div>
     </div>
     <footer>

@@ -37,7 +37,7 @@
 
 .map-tooltip {
     max-height: 600px;
-	max-width: 320px;
+	width:230px;
 }
 
 .wax-tooltip h2 {
@@ -45,9 +45,9 @@
 }
 
 .wax-tooltip .top h2 {
-	font-size: 26px;
+	font-size: 24px;
 	float:left;
-	width: 200px;
+	width: 150px;
 	word-wrap:break-word;
 	font-weight: 500;	
 }
@@ -58,14 +58,14 @@
 }
 
 .wax-tooltip .indicator div.rank {
-	font-size:30px;
+	font-size:28px;
     z-index: 10000;
 	position:relative;
 	text-align:right;	
 }
 
 .wax-tooltip .indicator div.rank span {
-	font-size: 20px;
+	font-size: 18px;
 	position:relative;
 	bottom:10px;	
 }
@@ -76,21 +76,21 @@
 }
 
 .wax-tooltip h2.header {
-	font-size: 14px;
+	font-size: 12px;
 	text-transform:uppercase;
 	color:#999;
 	margin-bottom: 5px;
 }
 
 .wax-tooltip .numbers h2.label {
-	font-size: 14px;
+	font-size: 12px;
 	text-align:center;
 	word-wrap:break-word;
 }
 
 .wax-tooltip .numbers .left,
 .wax-tooltip .numbers .right {
-	width:115px;
+	width:100px;
 }
 
 .wax-tooltip .numbers .left {
@@ -103,18 +103,18 @@
 
 .wax-tooltip .numbers .left h2,
 .wax-tooltip .numbers .right h2 {
-	font-size: 14px;
+	font-size: 12px;
 	word-wrap:break-word;
 	text-align:center;
 }
 
 .wax-tooltip .numbers div.number {
-	font-size: 22px;
+	font-size: 20px;
 	text-align: center;
 }
 
 .wax-tooltip .numbers div.number span {
-	font-size: 16px;
+	font-size: 14px;
 }
 
 
