@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>GSSP</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/highcharts/highcharts.js"></script>
+</head>
+
+<body>
+ <script>
+(function ($) { 
+    $(document).ready(function() {
+        var chart;
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'container',
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            title: {
+                text: 'Browser market shares at a specific website, 2010'
+            },
+            tooltip: {
+        	    pointFormat: '{series.name}: <b>{point.percentage}%</b>',
+            	percentageDecimals: 1
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        color: '#000000',
+                        connectorColor: '#000000',
+                        formatter: function() {
+                            return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %';
+                        }
+                    }
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: 'Browser share',
+                data: [
+        
+  
+  
+                
+        ['Non-Bank Storage',   1],
+        ['Bank Account (no details available)',   21],
+        ['Mobile Phone (store of value only)',   1],
+        ['Cash Card (store of value only)',   11],
+        ['Limited Functionality Bank Account',   14],
+        ['Fully Functional Bank Account',   4],
+        ['Cash Card (ability to make deposits)',   1],
+        ['Mobile Phone (ability to make deposits)',   1],
+  
+  
+  
+  
+  
+  
+]
+            }]
+        });
+    });
+}(jQuery));
+</script>
+<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>  
+</body>
+</html>
