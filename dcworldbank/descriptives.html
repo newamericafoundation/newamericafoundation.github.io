@@ -14,7 +14,9 @@
 <div id="map" style="height:1000px;width:920px;margin:0 auto;"></div>
 <div id="top">
   <div id="btns">
-    <div id="btn_first" class="active">Poverty 2001</div>
+    <div id="btn_add1" class="active">Change in poverty</div>
+    <div id="btn_add2">Number of poor 2001</div>
+    <div id="btn_first">Poverty 2001</div>
     <div id="btn_second">Poverty 2005</div>
     <div id="btn_third">% access to electricity</div>
     <div id="btn_fourth">Literacy</div>
@@ -23,36 +25,48 @@
   <!--end btns--> 
 </div>
 <script>
-  mapbox.auto('map', 'dcworldbank.descriptive_pov2001');
+  mapbox.auto('map', 'dcworldbank.descriptive_change');
   $(document).ready(function(){
+	$('#btn_add1').click(function(){
+	    mapbox.auto('map', 'dcworldbank.descriptive_change');	  
+		$('#map').empty()
+		$('#btn_add2,#btn_second,#btn_third,#btn_fourth,#btn_fifth').removeClass('active');
+		$(this).addClass('active');
+	});								
+	$('#btn_add2').click(function(){
+	    mapbox.auto('map', 'dcworldbank.descriptive_poor');	  
+		$('#map').empty()
+		$('#btn_add1,#btn_second,#btn_third,#btn_fourth,#btn_fifth').removeClass('active');
+		$(this).addClass('active');
+	});								
 	$('#btn_first').click(function(){
 	    mapbox.auto('map', 'dcworldbank.descriptive_pov2001');	  
 		$('#map').empty()
-		$('#btn_second,#btn_third,#btn_fourth,#btn_fifth').removeClass('active');
+		$('#btn_add1,#btn_add2,#btn_second,#btn_third,#btn_fourth,#btn_fifth').removeClass('active');
 		$(this).addClass('active');
 	});								
 	$('#btn_second').click(function(){
 	    mapbox.auto('map', 'dcworldbank.descriptive_pov2005');	  
 		$('#map').empty()
-		$('#btn_first,#btn_third,#btn_fourth,#btn_fifth').removeClass('active');
+		$('#btn_add1,#btn_add2,#btn_first,#btn_third,#btn_fourth,#btn_fifth').removeClass('active');
 		$(this).addClass('active');
 	});								
 	$('#btn_third').click(function(){
 	    mapbox.auto('map', 'dcworldbank.descriptive_elec2001');	  
 		$('#map').empty()
-		$('#btn_first,#btn_second,#btn_fourth,#btn_fifth').removeClass('active');
+		$('#btn_add1,#btn_add2,#btn_first,#btn_second,#btn_fourth,#btn_fifth').removeClass('active');
 		$(this).addClass('active');
 	});	
 	$('#btn_fourth').click(function(){
 	    mapbox.auto('map', 'dcworldbank.descriptive_lit2001');	  
 		$('#map').empty()
-		$('#btn_first,#btn_second,#btn_third,#btn_fifth').removeClass('active');
+		$('#btn_add1,#btn_add2,#btn_first,#btn_second,#btn_third,#btn_fifth').removeClass('active');
 		$(this).addClass('active');
 	});	
 	$('#btn_fifth').click(function(){
 	    mapbox.auto('map', 'dcworldbank.descriptive_pop2001');	  
 		$('#map').empty()
-		$('#btn_first,#btn_second,#btn_third,#btn_fourth').removeClass('active');
+		$('#btn_add1,#btn_add2,#btn_first,#btn_second,#btn_third,#btn_fourth').removeClass('active');
 		$(this).addClass('active');
 	});	
   }); // end ready
