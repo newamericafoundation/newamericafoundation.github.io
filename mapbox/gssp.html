@@ -15,6 +15,56 @@
         chart = new Highcharts.Chart({
             chart: {
                 renderTo: 'container',
+	                plotBackgroundColor: null,
+	                plotBorderWidth: null,
+	                plotShadow: false
+	            },
+	            tooltip: {
+					// can't just disable the tooltips you need to actually hide the style
+					borderWidth: 0,
+					backgroundColor:'transparent',
+					shadow:false,
+	                formatter: function() {
+						$('#graphTooltip').empty();
+						$('#graphTooltip').append('<div><b>'+ this.point.name +'</b>: '+ Highcharts.numberFormat(this.y, 0) + ' programs<br/> ('+ Highcharts.numberFormat(this.percentage,1) +'%)</div>');
+	                }
+	            },
+	            plotOptions: {
+	                pie: {
+	                    allowPointSelect: true,
+	                    cursor: 'pointer',
+						borderWidth: 2,
+	                    dataLabels: {
+	                        enabled: false,
+							distance: 10,
+	                        color: '#000000',
+							softConnector:false,
+	                        connectorColor: '#000000',
+	                        formatter: function() {
+	                            return '<b>'+ this.point.name +'</b>: '+ this.y + '%';
+	                        }
+	                    }
+	                }
+	            },
+            title: {
+                text: 'Portion of Programs by Savings-Enabling Methods'
+            },
+            series: [{
+                type: 'pie',
+                name: 'Browser share',
+                data: [<?php print views_embed_view(savings_enabling_methods, 'block'); ?>]
+            }]
+        });
+    });
+}(jQuery));
+</script>
+<script>
+(function ($) { 
+    $(document).ready(function() {
+        var chart;
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'container',
                 plotBackgroundColor: null,
                 plotBorderWidth: null,
                 plotShadow: false
@@ -43,31 +93,13 @@
             series: [{
                 type: 'pie',
                 name: 'Browser share',
-                data: [
-        
-  
-  
-                
-        ['Non-Bank Storage',   1],
-        ['Bank Account (no details available)',   21],
-        ['Mobile Phone (store of value only)',   1],
-        ['Cash Card (store of value only)',   11],
-        ['Limited Functionality Bank Account',   14],
-        ['Fully Functional Bank Account',   4],
-        ['Cash Card (ability to make deposits)',   1],
-        ['Mobile Phone (ability to make deposits)',   1],
-  
-  
-  
-  
-  
-  
-]
+                data: [<?php print views_embed_view(savings_enabling_methods, 'block'); ?>]
             }]
         });
     });
 }(jQuery));
 </script>
 <div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>  
+        <p id="graphTooltip" style="position:relative;top:-30px;right:10px;float:right;text-align:center;width:100%;"><em>(rollover to see the breakdown)</em></p>
 </body>
 </html>
