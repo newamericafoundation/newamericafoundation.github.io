@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+#interactive{
+    width:570px;
+    font-family:verdana;
+    float:left;
+	margin-bottom:30px;
+}
+#interactive h3{
+    margin:0px;
+    font-weight:bold;
+    font-size:18px;
+    line-height:normal;
+    margin-bottom:5px;
+}
+#top{
+    float:left;
+}
+#loan{
+    width:300px;
+    font-size:24px;
+    float:left;
+}
+#formWrapper{
+    margin-left:auto;
+    margin-right:auto;
+    width:570px;
+    height:50px;
+}
+#calc{
+    height:13px;
+    margin-top:2px;
+    background-color:#660033;
+    float:left;
+    color:white;
+    margin-left:5px;
+    padding:10px;
+    line-height:13px;
+    cursor:pointer;
+}
+#calc:hover{
+    background-color:#FFDDB0;
+    color:black;
+}
+#btn_tweet{
+    cursor:pointer;
+    color:blue;
+}
+#bottom {
+	display: none;
+	clear:both;
+}
+.column{
+    float:left;
+    padding:10px 10px 0 10px;
+    border-top:1px solid #c2c2c2;
+    border-bottom:1px solid #c2c2c2;
+    border-left:1px solid #c2c2c2;
+	height: 100px
+}
+.interest,
+.impact {
+	width: 88px;	
+}
+
+.payment,
+.totals {
+	width: 153px;
+}
+
+.interest p,
+.impact p,
+.payment p {
+	top: 20px;
+	position:relative;
+}
+
+.totals p {
+	top: 5px;
+	position:relative;	
+}
+
+.impact {
+    border-right:1px solid #c2c2c2;
+}
+.columnHead{
+    font-weight:bold;
+    font-size:13px;
+    margin:0 0 10px 0;
+}
+.label{
+    font-size:10px;
+    text-align:center;
+    padding-bottom:5px;
+    margin:0px;
+}
+.numlabel.light{
+    color:#d1d1d1;
+}
+.numb{
+    line-height:100%;
+	font-size: 22px;
+    margin:0 0 5px 0;
+    text-align:center;
+}
+
+.interest .numb,
+.payment .numb,
+.impact .numb {
+	font-size: 28px;	
+}
+
+.interest .numb {
+	color: #1E5793;
+}
+
+.impact .numb {
+	color: #da0433;	
+}
