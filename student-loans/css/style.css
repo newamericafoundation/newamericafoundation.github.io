@@ -50,9 +50,12 @@
 	display: none;
 	clear:both;
 }
+.row {
+	margin-bottom: 10px;	
+}
 .column{
     float:left;
-    padding:10px 10px 0 10px;
+    padding:3px 10px 0 10px;
     border-top:1px solid #c2c2c2;
     border-bottom:1px solid #c2c2c2;
     border-left:1px solid #c2c2c2;
@@ -60,18 +63,18 @@
 }
 .interest,
 .impact {
-	width: 88px;	
+	width: 98px;	
 }
 
 .payment,
 .totals {
-	width: 153px;
+	width: 143px;
 }
 
 .interest p,
 .impact p,
 .payment p {
-	top: 20px;
+	top: 23px;
 	position:relative;
 }
 
@@ -110,10 +113,14 @@
 	font-size: 28px;	
 }
 
-.interest .numb {
-	color: #1E5793;
+.impact .minus {
+	color: #da0433;	
 }
 
-.impact .numb {
-	color: #da0433;	
+.impact .plus {
+	color: #4C4C40;	
+}
+
+.interest .numb {
+	color: #1E5793;
 }
