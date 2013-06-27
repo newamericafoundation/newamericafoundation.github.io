@@ -33,10 +33,6 @@ $(function(){
         var unsub_loan = $("#loan-unsub").attr("value");
         sub_loan = sub_loan.replace(/[^0-9\.]/g, '');
         unsub_loan = unsub_loan.replace(/[^0-9\.]/g, '');
-		 if ($('#loan_sub').attr("value") > 5000) {
-			 var sub_loan = 5000;
-			 $("loan_sub").text('$5,000'); 
-		 };
         if (!sub_loan) {
 		  $("#output").html("<span style='text-color:red'>Couldn't understand your loan total.</span>");
         } else {
