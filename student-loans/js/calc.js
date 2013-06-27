@@ -64,9 +64,9 @@ $(function(){
 			$("#bill .payment .numb").text('$' + bill_payment.toFixed(2));
 			$("#obama .payment .numb").text('$' + obama_payment.toFixed(2));
 			$("#extension .payment .numb").text('$' + extension_payment.toFixed(2));
-			var bill_total = ((bill_pmt_sub + bill_pmt_unsub) * months) - sub_loan;
-			var obama_total = ((obama_pmt_sub + obama_pmt_unsub) * months) - sub_loan;
-			var extension_total = ((extension_pmt_sub + extension_pmt_unsub) * months) - sub_loan;
+			var bill_total = ((bill_pmt_sub + bill_pmt_unsub) * months) - sub_loan - unsub_loan;
+			var obama_total = ((obama_pmt_sub + obama_pmt_unsub) * months) - sub_loan - unsub_loan;
+			var extension_total = ((extension_pmt_sub + extension_pmt_unsub) * months) - sub_loan - unsub_loan;
 			var bill_total_clean = Math.floor(bill_total);
 			var obama_total_clean = Math.floor(obama_total);
 			var extension_total_clean = Math.floor(extension_total);
