@@ -13,12 +13,29 @@
     line-height:normal;
     margin-bottom:5px;
 }
+#interactive h4{
+    margin:0px;
+    font-weight:bold;
+    font-size:14px;
+    line-height:normal;
+    margin-bottom:5px;
+}
 #top{
     float:left;
 }
-#loan{
-    width:300px;
-    font-size:24px;
+#sub,
+#unsub {
+	width: 275px;
+	float:left;	
+}
+#loan-sub{
+    width:250px;
+    font-size:20px;
+    float:left;
+}
+#loan-unsub{
+    width:150px;
+    font-size:20px;
     float:left;
 }
 #formWrapper{
@@ -42,10 +59,6 @@
     background-color:#FFDDB0;
     color:black;
 }
-#btn_tweet{
-    cursor:pointer;
-    color:blue;
-}
 #bottom {
 	display: none;
 	clear:both;
@@ -63,21 +76,21 @@
 }
 .interest,
 .impact {
-	width: 98px;	
+	width: 68px;	
 }
 
 .payment,
 .totals {
-	width: 143px;
+	width: 173px;
 }
 
-.interest p,
 .impact p,
 .payment p {
 	top: 23px;
 	position:relative;
 }
 
+.interest p,
 .totals p {
 	top: 5px;
 	position:relative;	
@@ -110,7 +123,7 @@
 .interest .numb,
 .payment .numb,
 .impact .numb {
-	font-size: 28px;	
+	font-size: 22px;	
 }
 
 .impact .minus {

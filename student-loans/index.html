@@ -13,8 +13,17 @@
   <div id="top">
     <h3>Enter the loan amount* you intend to borrow this year:</h3>
     <div id="formWrapper">
-      <input id="loan" size="20" maxlength="15"/>
-      <div id="calc"> Calculate </div>
+      <div id="sub">
+        <h4>Subsidized loan</h4>
+        <input id="loan-sub" size="20" maxlength="15"/>
+        <div style="clear:both;"></div>
+      </div>
+      <div id="unsub">
+        <h4>Unsubsidized loan</h4>
+        <input id="loan-unsub" size="20" maxlength="15"/>
+        <div id="calc"> Calculate </div>
+        <div style="clear:both;"></div>
+      </div>
     </div>
     <!-- end former wrapper --> 
   </div>
@@ -25,8 +34,10 @@
     <p>A brief description about this proposal. A brief description about this proposal. A brief description about this proposal. A brief description about this proposal. </p>
     <div id="bill" class="row">
       <div class="interest column">
-        <p class="numb"> </p>
-        <p class="label">Interest rate</p>
+        <p class="numb subsidized"> </p>
+        <p class="label">Subsidized</p>
+        <p class="numb unsubsidized"> </p>
+        <p class="label">Unsubsidized</p>
       </div>
       <div class="payment column">
         <p class="numb"> </p>
@@ -53,8 +64,10 @@
     <p>A brief description about this proposal. A brief description about this proposal. A brief description about this proposal. A brief description about this proposal. </p>
     <div id="obama" class="row">
       <div class="interest column">
-        <p class="numb"> </p>
-        <p class="label">Interest rate</p>
+        <p class="numb subsidized"> </p>
+        <p class="label">Subsidized</p>
+        <p class="numb unsubsidized"> </p>
+        <p class="label">Unsubsidized</p>
       </div>
       <div class="payment column">
         <p class="numb"> </p>
@@ -81,8 +94,10 @@
     <p>A brief description about this proposal. A brief description about this proposal. A brief description about this proposal. A brief description about this proposal. </p>
     <div id="extension" class="row">
       <div class="interest column">
-        <p class="numb"> </p>
-        <p class="label">Interest rate</p>
+        <p class="numb subsidized"> </p>
+        <p class="label">Subsidized</p>
+        <p class="numb unsubsidized"> </p>
+        <p class="label">Unsubsidized</p>
       </div>
       <div class="payment column">
         <p class="numb"> </p>
@@ -110,7 +125,7 @@
     <div id="naf" class="row">
       <div class="interest column">
         <p class="numb"> </p>
-        <p class="label">Interest rate</p>
+        <p class="label">Subsidized interest rate</p>
       </div>
       <div class="payment column">
         <p class="numb"> </p>
