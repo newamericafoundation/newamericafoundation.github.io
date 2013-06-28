@@ -59,10 +59,11 @@
     background-color:#FFDDB0;
     color:black;
 }
-/*#bottom {
-	display: none;
+#bottom {
+	margin-top:10px;
+	/*display: none;*/
 	clear:both;
-}*/
+}
 .row {
 	margin-bottom: 10px;	
 }
