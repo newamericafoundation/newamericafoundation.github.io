@@ -3,15 +3,254 @@
 <head>
 <meta charset="UTF-8">
 <title>Draft Slate student loan calculator</title>
-<script src="js/jquery.min.js"></script>
-<link charset="utf-8" href="css/style.css" rel="stylesheet" type="text/css" />
-<script src="js/calc.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 </head>
 
 <body>
-<p>The clock is ticking on federal student loans. As of July 1, 2013, interest rates on newly issued subsidized Stafford loans are scheduled to double from 3.4 to 6.8 percent. And a <a href="http://edmoney.newamerica.net/blogposts/2013/student_loan_interest_rate_debate_a_distraction_from_real_problems-84192">clear divide</a> has emerged in the debate: Fixed rates versus market-based rates. The rates are currently set arbitrarily as fixed numbers, but a market-based rate could cost students substantially less than a fixed rate in the current economy.</p>
-<p>Most analyses of the interest rate proposals have focused on subsidized Stafford loans, the ones on which rates are set to rise. However, several of the solutions on the table also address unsubsidized Stafford loans, which make up the majority of undergraduate loans distributed by the government and are available regardless of financial need. Lower rates on those loans could mean lower monthly payments for all borrowers next year.</p>
-<p>House Republicans last month passed a bill to create variable interest rates – market-based rates that vary each year for the borrower until the loan is paid off – while most of the other proposals outlined set the interest rate over the entire life of the loan. Members of the Senate have released multiple proposals and voted on (but have not yet passed) several fixes. Below, we&rsquo;ve outlined several of the most prominent proposals currently being debated:</p>
+<style>
+@charset "UTF-8";
+
+#interactive{
+    width:570px;
+    font-family:verdana;
+    float:left;
+	margin-bottom:30px;
+}
+#interactive h3{
+    margin:0px;
+    font-weight:bold;
+    font-size:18px;
+    line-height:normal;
+    margin-bottom:5px;
+}
+#interactive h4{
+    margin:0px;
+    font-weight:bold;
+    font-size:14px;
+    line-height:normal;
+    margin-bottom:5px;
+}
+#top{
+    float:left;
+}
+#sub,
+#unsub {
+	width: 275px;
+	float:left;	
+}
+#loan-sub{
+    width:250px;
+    font-size:20px;
+    float:left;
+}
+#loan-unsub{
+    width:150px;
+    font-size:20px;
+    float:left;
+}
+#formWrapper{
+    margin-left:auto;
+    margin-right:auto;
+    width:570px;
+    height:50px;
+}
+#calc{
+    height:13px;
+    margin-top:2px;
+    background-color:#660033;
+    float:left;
+    color:white;
+    margin-left:5px;
+    padding:10px;
+    line-height:13px;
+    cursor:pointer;
+}
+#calc:hover{
+    background-color:#FFDDB0;
+    color:black;
+}
+#bottom {
+	margin-top:10px;
+	display: none;
+	clear:both;
+}
+.row {
+	margin-bottom: 10px;	
+}
+.column{
+    float:left;
+    padding:3px 10px 0 10px;
+    border-top:1px solid #c2c2c2;
+    border-bottom:1px solid #c2c2c2;
+    border-left:1px solid #c2c2c2;
+	height: 100px
+}
+.interest,
+.impact {
+	width: 80px;	
+}
+
+.payment,
+.totals {
+	width: 210px;
+}
+
+.impact p,
+.payment p {
+	top: 23px;
+	position:relative;
+}
+
+.interest p,
+.totals p {
+	top: 5px;
+	position:relative;	
+}
+
+.totals {
+    border-right:1px solid #c2c2c2;
+}
+.columnHead{
+    font-weight:bold;
+    font-size:13px;
+    margin:0 0 10px 0;
+}
+.label{
+    font-size:10px;
+    text-align:center;
+    padding-bottom:5px;
+    margin:0px;
+}
+.numlabel.light{
+    color:#d1d1d1;
+}
+.numb{
+    line-height:100%;
+	font-size: 22px;
+    margin:0 0 5px 0;
+    text-align:center;
+}
+
+.payment .numb {
+	font-size: 28px;	
+}
+
+.impact .minus {
+	color: #da0433;	
+}
+
+.impact .plus {
+	color: #4C4C40;	
+}
+
+.interest .numb {
+	color: #1E5793;
+}
+</style>
+<script>
+function commasNumber(n){
+    s = ''+n;
+    out = '';
+    for(var i=s.length-1;i>=0;i--){
+        out=s.substring(i,i+1)+out;
+        if((s.length-i)%3==0 && i!=0){
+            out=','+out;
+        }
+    }
+    return out
+}
+var bill_interest_sub = 3.66;
+var obama_interest_sub = 2.74;
+var extension_interest_sub = 3.4;
+var sq_interest_sub = 6.8;
+var bill_interest_unsub = 3.66;
+var obama_interest_unsub = 4.74;
+var extension_interest_unsub = 6.8;
+var sq_interest_unsub = 6.8;
+var months = 120;
+
+function PMT(i, n, p) {
+ return i * p * Math.pow((1 + i), n) / (1 - Math.pow((1 + i), n));
+}
+
+$(function(){
+    $('#loan-sub').change(function(){
+        $(this).val('$'+commasNumber($(this).val().replace(/[^0-9\.]/g, '')));        
+    })
+    $('#loan-unsub').change(function(){
+        $(this).val('$'+commasNumber($(this).val().replace(/[^0-9\.]/g, '')));        
+    })
+    $("#calc").click(function() {
+        var sub_loan = $("#loan-sub").attr("value");
+        var unsub_loan = $("#loan-unsub").attr("value");
+        sub_loan = sub_loan.replace(/[^0-9\.]/g, '');
+        unsub_loan = unsub_loan.replace(/[^0-9\.]/g, '');
+        if (!sub_loan) {
+		  $("#output").html("<span style='text-color:red'>Couldn't understand your loan total.</span>");
+        } else {
+			$('#bottom').show();
+			$("#bill .interest .subsidized").text(bill_interest_sub + '%');
+			$("#obama .interest .subsidized").text(obama_interest_sub + '%');
+			$("#extension .interest .subsidized").text(extension_interest_sub + '%');
+			$("#sq .interest .subsidized").text(sq_interest_sub + '%');
+			$("#bill .interest .unsubsidized").text(bill_interest_unsub + '%');
+			$("#obama .interest .unsubsidized").text(obama_interest_unsub + '%');
+			$("#extension .interest .unsubsidized").text(extension_interest_unsub + '%');
+			$("#sq .interest .unsubsidized").text(sq_interest_unsub + '%');
+			var bill_i_sub = bill_interest_sub / 1200;
+			var obama_i_sub = obama_interest_sub / 1200;
+			var extension_i_sub = extension_interest_sub / 1200;
+			var sq_i_sub = sq_interest_sub / 1200;
+			var bill_i_unsub = bill_interest_unsub / 1200;
+			var obama_i_unsub = obama_interest_unsub / 1200;
+			var extension_i_unsub = extension_interest_unsub / 1200;
+			var sq_i_unsub = sq_interest_unsub / 1200;
+			var n = months;
+			var p_sub = sub_loan;
+			var p_unsub = unsub_loan;
+			var bill_pmt_sub = PMT(bill_i_sub, n, -p_sub);
+			var obama_pmt_sub = PMT(obama_i_sub, n, -p_sub);
+			var extension_pmt_sub = PMT(extension_i_sub, n, -p_sub);
+			var sq_pmt_sub = PMT(sq_i_sub, n, -p_sub);
+			var bill_pmt_unsub = PMT(bill_i_unsub, n, -p_unsub);
+			var obama_pmt_unsub = PMT(obama_i_unsub, n, -p_unsub);
+			var extension_pmt_unsub = PMT(extension_i_unsub, n, -p_unsub);
+			var sq_pmt_unsub = PMT(sq_i_unsub, n, -p_unsub);
+			var bill_payment = bill_pmt_sub + bill_pmt_unsub;
+			var obama_payment = obama_pmt_sub + obama_pmt_unsub;
+			var extension_payment = extension_pmt_sub + extension_pmt_unsub;
+			var sq_payment = sq_pmt_sub + sq_pmt_unsub;
+			$("#bill .payment .numb").text('$' + bill_payment.toFixed(2));
+			$("#obama .payment .numb").text('$' + obama_payment.toFixed(2));
+			$("#extension .payment .numb").text('$' + extension_payment.toFixed(2));
+			$("#sq .payment .numb").text('$' + sq_payment.toFixed(2));
+			var bill_total = (bill_payment * months) - sub_loan - unsub_loan;
+			var obama_total = (obama_payment * months) - sub_loan - unsub_loan;
+			var extension_total = (extension_payment * months) - sub_loan - unsub_loan;
+			var sq_total = (sq_payment * months) - sub_loan - unsub_loan;
+			var bill_total_clean = Math.floor(bill_total);
+			var obama_total_clean = Math.floor(obama_total);
+			var extension_total_clean = Math.floor(extension_total);
+			var sq_total_clean = Math.floor(sq_total);
+			$("#bill .totals .monthly .numb").text('$' +commasNumber(Math.floor(bill_total_clean)));
+			$("#obama .totals .monthly .numb").text('$' +commasNumber(Math.floor(obama_total_clean)));
+			$("#extension .totals .monthly .numb").text('$' +commasNumber(Math.floor(extension_total_clean)));
+			$("#sq .totals .monthly .numb").text('$' +commasNumber(Math.floor(sq_total_clean)));
+			var bill_loan = bill_payment * months;
+			var obama_loan = obama_payment * months;
+			var extension_loan = extension_payment * months;
+			var sq_loan = sq_payment * months;
+			$("#bill .totals .total .numb").text('$' +commasNumber(Math.floor(bill_loan)));
+			$("#obama .totals .total .numb").text('$' +commasNumber(Math.floor(obama_loan)));
+			$("#extension .totals .total .numb").text('$' +commasNumber(Math.floor(extension_loan)));
+			$("#sq .totals .total .numb").text('$' +commasNumber(Math.floor(sq_loan)));
+        }
+	});
+});
+</script>
+<p>The clock has run out on federal student loans. The interest rates on newly issued subsidized Stafford loans doubled on Monday from 3.4 percent to 6.8 percent as Congress continues to argue over new legislation to rein them back in. A <a href="http://edmoney.newamerica.net/blogposts/2013/student_loan_interest_rate_debate_a_distraction_from_real_problems-84192">clear divide</a> has emerged in the debate: fixed rates versus market-based rates. The rates are currently set arbitrarily as fixed numbers, but a market-based rate could cost students substantially less than a fixed rate in the current economy.</p>
+<p>Most analyses of the interest rate proposals have focused on subsidized Stafford loans, the ones on which rates have just risen. However, several of the solutions on the table also address unsubsidized Stafford loans, which make up the majority of undergraduate loans distributed by the government and are available regardless of financial need. Lower rates on those loans could mean lower monthly payments for all borrowers next year.</p>
+<p>House Republicans last month passed a bill to create variable interest rates—market-based rates that vary each year for the borrower until the loan is paid off—while most of the other proposals outlined set the interest rate over the entire life of the loan. Members of the Senate have released multiple proposals and voted on (but have not yet passed) several fixes. Below, we&rsquo;ve outlined several of the most prominent proposals currently being debated:</p>
 <div id="interactive">
   <div id="top">
     <h3>Enter the loan amount* you intend to borrow this year:</h3>
@@ -35,7 +274,7 @@
   
   <div id="bottom">
     <h2>Bipartisan Senate proposal</h2>
-    <p>This proposal emerged as a last-minute solution just days before the scheduled increase in rates. Introduced by Sens. Manchin (D-WV), King (I-ME), Coburn (R-OK), Burr (R-NC), and Alexander (R-TN), it would <a href="http://edmoney.newamerica.net/blogposts/2013/bipartisan_student_loan_interest_rate_reform_bill_released_in_the_senate-86804">tie rates</a> to the rate on the 10-year Treasury note plus 1.85 percent for all undergraduate Stafford loans. Graduate Stafford loans would be set at the 10-year Treasury rate plus 3.4 percent. This calculator uses the undergraduate rate. </p>
+    <p>This proposal emerged as a last-minute solution just days before the scheduled increase in rates. Introduced by Sens. Manchin (D-W.V.), King (I-Maine), Coburn (R-Okla.), Burr (R-N.C.), and Alexander (R-Tenn.), it would <a href="http://edmoney.newamerica.net/blogposts/2013/bipartisan_student_loan_interest_rate_reform_bill_released_in_the_senate-86804">tie rates</a> to the rate on the 10-year Treasury note plus 1.85 percent for all undergraduate Stafford loans. Graduate Stafford loans would be set at the 10-year Treasury rate plus 3.4 percent. This calculator uses the undergraduate rate.</p>
     <div id="bill" class="row">
       <div class="interest column">
         <p class="numb subsidized"> </p>
@@ -62,7 +301,7 @@
 
     <h2>Obama's 2014 budget proposal</h2>
     <p>President Obama released an interest rate reform proposal in his fiscal year 2014 budget that institutes a market-based rate. The rate would be based on the rate on the 10-year Treasury note plus 0.93 percent for subsidized Stafford loans or plus 2.93 percent for unsubsidized Stafford loans.</p>
-    <div id="obama" class="row">
+<div id="obama" class="row">
       <div class="interest column">
         <p class="numb subsidized"> </p>
         <p class="label">Subsidized</p>
@@ -88,7 +327,7 @@
 
     <h2>Temporary extension of 3.4% rate</h2>
     <p>Currently, rates are set at 3.4 percent on subsidized Stafford loans and 6.8 percent on unsubsidized Stafford loans. Some Democratic senators have proposed extending the 3.4 percent rate for another two years, without altering rates on unsubsidized Stafford loans.</p>
-    <div id="extension" class="row">
+<div id="extension" class="row">
       <div class="interest column">
         <p class="numb subsidized"> </p>
         <p class="label">Subsidized</p>
@@ -113,8 +352,8 @@
     </div>
 
     <h2>Rates double on subsidized Stafford loans</h2>
-    <p>Current law says that on July 1, 2013, rates on subsidized Stafford loans reset to 6.8 percent, the same as the rate on unsubsidized Stafford loans. If Congress fails to act before the start of the 2013-14 school year, rates will remain at 6.8 percent for both loan types indefinitely. </p>
-    <div id="sq" class="row">
+    <p>Currently, rates are set at 3.4 percent on subsidized Stafford loans and 6.8 percent on unsubsidized Stafford loans. Some Democratic senators have proposed extending the 3.4 percent rate for another two years, without altering rates on unsubsidized Stafford loans.</p>
+<div id="sq" class="row">
       <div class="interest column">
         <p class="numb subsidized"> </p>
         <p class="label">Subsidized</p>
@@ -140,7 +379,7 @@
 
   </div>
   <!-- end bottom -->
-  
-<small><em>*Stafford loans are the federal student loans provided to undergraduates. Subsidized Stafford loans are available primarily to low-income students and are limited to $3,500 in the first year of school, $4,500 in the second year, and $5,500 thereafter. Unsubsidized Stafford loans are available regardless of financial need and are limited to $9,500 in the first year, $10,500 in the second, and $12,500 thereafter. Total loans may not exceed $57,500, including the $23,000 maximum in subsidized Stafford loans. For dependent students, total loans may not exceed $31,000. NOTE: This calculator does not account for the minimum monthly payment on federal loans; a minimum amount could make accrued interest and monthly payments lower.</em></small></div>
+  <p><em>*Stafford loans are the federal student loans provided to undergraduates. Subsidized Stafford loans are available primarily to low-income students and are limited to $3,500 in the first year of school, $4,500 in the second year, and $5,500 thereafter. Unsubsidized Stafford loans are available regardless of financial need and are limited to $9,500 in the first year, $10,500 in the second, and $12,500 thereafter. Total loans may not exceed $57,500, including the $23,000 maximum in subsidized Stafford loans. For dependent students, total loans may not exceed $31,000. NOTE: This calculator does not account for the minimum monthly payment on federal loans; a minimum amount could make accrued interest and monthly payments lower.</em></p>
+</div>
 </body>
 </html>
