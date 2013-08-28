@@ -3,10 +3,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Student loan interest rates</title>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="jquery.tablesorter/jquery.tablesorter.min.js"></script>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
 <link charset="utf-8" href="style.css" rel="stylesheet" type="text/css" />
+<script>
+$(document).ready(function(){
+  $(".span3 div").hover(function(){
+    $(this).addClass('hovered');
+  }, function(){
+    $(this).removeClass('hovered');
+ });
+});
+</script>
 </head>
 <body>
 <div class="container-fluid">
