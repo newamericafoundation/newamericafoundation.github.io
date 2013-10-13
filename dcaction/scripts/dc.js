@@ -1,6 +1,6 @@
 $(document).ready(function() {
 //			
-//			var packer = sm.packer();
+			var packer = sm.packer();
 //			
 //var projection = d3.geo.albersUsa()
 //
@@ -68,17 +68,17 @@ $.get('data/schools.json', function(point){
 	var scale = d3.scale.linear().domain([0,200]).range([1,5])
 	point.schools.forEach(function(point){
 	  svg.append("circle").attr("r",scale(point.enrollment)).attr("fill-opacity", 0.5).attr("fill", "#FF0000").attr("transform", function() {return "translate(" + projection([point.long, point.lat]) + ")";});
-//	  packMetros();
+	  packMetros();
 	})
 })
 
-//			function packMetros() {
-//			
-//				var elements = d3.selectAll('#content circle')[0];
-//				
-//				packer.elements(elements).start();
-//			
-//			}
+			function packMetros() {
+			
+				var elements = d3.selectAll('#content circle')[0];
+				
+				packer.elements(elements).start();
+			
+			}
 
 //	  svg.append("circle").attr("r",5).attr("transform", function() {return "translate(" + projection([-77.01, 38.91]) + ")";});
 
