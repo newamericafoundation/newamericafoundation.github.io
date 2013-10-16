@@ -10,7 +10,7 @@ $(document).ready(function() {
   var layer13 = new L.LayerGroup();
   
   var map = L.map('map', {
-	center: [15.5,47],
+	center: [15,47],
 	zoom: 7,
 	minZoom: 7,
 	maxZoom: 10,
