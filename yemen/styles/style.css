@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#map { height: 800px; }
+
+.map-nav {
+  left: 10px;
+  top: 10px;
+  position: absolute;
+  z-index: 200;
+}
