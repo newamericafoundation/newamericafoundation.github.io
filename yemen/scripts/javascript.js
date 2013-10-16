@@ -11,8 +11,8 @@ $(document).ready(function() {
   
   var map = L.map('map', {
 	center: [13.5,47],
-	zoom: 7,
-	minZoom: 7,
+	zoom: 6,
+	minZoom: 6,
 	maxZoom: 10,
 	zoomControl: false,
 	layers: [airLayer, droneLayer],
