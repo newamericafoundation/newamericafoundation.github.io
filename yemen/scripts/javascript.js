@@ -13,7 +13,7 @@ $(document).ready(function() {
 	center: [13.5,47],
 	zoom: 6,
 	minZoom: 6,
-	maxZoom: 10,
+	maxZoom: 13,
 	zoomControl: false,
 	layers: [airLayer, droneLayer],
   });
