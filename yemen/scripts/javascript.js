@@ -36,7 +36,7 @@ $(document).ready(function() {
 		  })
 		  droneMarker.addTo(droneLayer)
 		  droneMarker.setRadius(scale(strike.total_avg));
-		  droneMarker.bindPopup('<h2><a href="http://natsec.newamerica.net/drones/yemen/' + strike.guid + '"> ' + strike.date + ' </a></h2><ul><li><strong>Target</strong>: ' + strike.target_org + '</li><li><strong>Location</strong>: ' + strike.village + ' in ' + strike.province + '</li><li>Between ' + strike.total_low + ' and ' + strike.total_high + ' killed.</li></ul>')
+		  droneMarker.bindPopup('<h2><a target="_parent" href="http://natsec.newamerica.net/drones/yemen/' + strike.guid + '"> ' + strike.date + ' </a></h2><ul><li><strong>Target</strong>: ' + strike.target_org + '</li><li><strong>Location</strong>: ' + strike.village + ' in ' + strike.province + '</li><li>Between ' + strike.total_low + ' and ' + strike.total_high + ' killed.</li></ul>')
 		  if (date == 2002) {
 			droneMarker.addTo(layer02)  
 		  }
