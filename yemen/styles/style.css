@@ -9,3 +9,47 @@
   position: absolute;
   z-index: 200;
 }
+
+.drone-tooltip p {
+	font-size: 10px;
+	line-height: 10px;	
+}
+
+.drone-tooltip {
+  width: 150px;
+  padding: 10px;
+  background-color: #FFF;
+  border: 1px #000 solid;
+  right: 10px;
+  bottom: 10px;
+  position: absolute;
+  color: #000;
+}
+
+.circle-obama,
+.circle-drone,
+.circle-bush,
+.circle-air {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px; 
+  border: 1px #422413 solid;
+  float: left;
+  margin: 0 0 0 10px;
+}
+
+.circle-obama {
+  background-color: #0000FF;	
+}
+
+.circle-bush {
+  background-color: #FF0000;
+}
+
+.circle-drone {
+  background-color: #4C4C40;
+}
+
+.circle-air {
+  background-color: #FFFF00;
+}
