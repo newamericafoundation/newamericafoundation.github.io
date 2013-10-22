@@ -2,18 +2,49 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>D3 testing</title>
+<title>Speed leaders</title>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="http://d3js.org/d3.geo.projection.v0.min.js"></script>
 <script src="http://d3js.org/topojson.v1.min.js"></script>
 <script src="scripts/underscore.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css" />
 <link rel="stylesheet" href="styles/style.css" />
 <script src="scripts/circle_packer_movers.js"></script>
 <script src="scripts/javascript.js"></script>
 </head>
 
 <body>
-<div id="content"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10">
+      <div class="btn-group btn-group-horizontal pull-left map-nav">
+        <button id="speed" class="btn btn-primary">Download speed</button>
+        <button id="cost" class="btn btn-primary">Cost</button>
+      </div>
+      <div id="content"></div>
+    </div> <!-- d3 viz written in here -->
+    <div class="col-lg-2" id="details">
+      <h3 id="sidebar-header" class="field"></h3>
+      <h2 id="selection-title" class="field"></h2>
+      <div class="panel panel-primary hidden">
+        <div class="panel-heading">
+          <h3 class="panel-title">#attributes</h3>
+        </div>
+        <table class="table table-hover">
+          <tr>
+          <td>Download speed</td>
+          <td id="download-num" class="field">#download-num</td>
+          </tr>
+          <tr>
+          <td>Cost</td>
+          <td id="cost-num" class="field">#cost-num</td>
+          </tr>
+          </tr>
+        </table>
+      </div>
+    </div> <!-- selected detail cards here -->
+  </div> <!-- row -->
 </body>
 </html>
