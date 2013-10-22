@@ -66,12 +66,20 @@ d3.csv('data/speed.csv', function(data){
     g.select("#plans").selectAll("circle")
       .transition().duration(600)
       .attr("r", function(d) {return scale(d[new_data_column])})
+    g.select("#plans").selectAll("g.plan")
+      .transition().duration(600)
+      .attr("r", function(d) {return scale(d[new_data_column])})
+	packPlans();
   }
   function changePriceData(new_data_column) {
     matchScaleToData(scale, function(d){return +d[new_data_column];})
     g.select("#plans").selectAll("circle")
       .transition().duration(600)
       .attr("r", function(d) {return scale_cost(d[new_data_column])})
+    g.select("#plans").selectAll("g.plan")
+      .transition().duration(600)
+      .attr("r", function(d) {return scale_cost(d[new_data_column])})
+	packPlans();
   }
   function matchScaleToData(scale, fieldFunction) {
     var minimum = d3.min(data, fieldFunction),

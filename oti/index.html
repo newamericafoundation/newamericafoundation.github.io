@@ -19,11 +19,19 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-10">
-      <div class="btn-group btn-group-horizontal pull-left map-nav">
-        <button id="speed" class="btn btn-primary">Download speed</button>
-        <button id="cost" class="btn btn-primary">Cost</button>
+      <div class="row" style="margin-bottom:10px;">
+        <div class="col-lg-10">
+          <div class="nav nav-pills">
+            <li id="speed" class="btn btn-primary">Download speed</li>
+            <li id="cost" class="btn btn-primary">Cost</li>
+          </div>
+        </div>
       </div>
-      <div id="content"></div>
+      <div class="row">
+        <div class="col-lg-10">
+          <div id="content"></div>
+        </div>
+      </div>
     </div> <!-- d3 viz written in here -->
     <div class="col-lg-2" id="details">
       <h3 id="sidebar-header" class="field"></h3>
