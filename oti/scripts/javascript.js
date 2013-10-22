@@ -25,7 +25,6 @@ g.append("g").attr("id", "plans");
       .data(json.features)
     .enter().append("path")
       .attr("d", path)
-      .on("click", clicked);
   g.append("path")
       .datum(topojson.mesh(json, json.features, function(a, b) { return a !== b; }))
       .attr("id", "borders")
@@ -33,12 +32,12 @@ g.append("g").attr("id", "plans");
   });	
   
 d3.csv('data/speed.csv', function(data){
-  var scale = d3.scale.linear().domain([0,1000]).range([1,50])
-  var scale_cost = d3.scale.linear().domain([0,500]).range([1,50])
+  var scale = d3.scale.linear().domain([0,1000]).range([1,25])
+  var scale_cost = d3.scale.linear().domain([0,500]).range([1,25])
   matchScaleToData(scale, function(d){return +d.download;})
   var plan = g.select("#plans").selectAll("circle").data(data).enter().append("g").attr("class", "plan").attr("r", function(d) {return scale(d.download)}).attr("transform", function(d) {return "translate(" + projection([d.lon, d.lat]) + ")";})
   plan.append("circle")
-      .attr("fill-opacity", 0.7)
+      .attr("fill-opacity", 0.5)
       .attr("fill", "#000099")
       .on("mouseover", function(d) {
 		 $(".field").empty();
@@ -48,6 +47,7 @@ d3.csv('data/speed.csv', function(data){
         $("#download-num").append(d.download);
         $("#cost-num").append(d.price);
       })
+      .on("click", clicked)
 	  .attr("r", function(d) {return scale(d.download)})
   plan.append("text").text(function(d){return d.isp;}).attr('y', 3)
     g.select("#schools").selectAll("circle")
@@ -91,15 +91,12 @@ d3.csv('data/speed.csv', function(data){
 	packer.elements(elements).start();
   }
 
-});
-
 function clicked(d) {
   var x, y, k;
 
   if (d && centered !== d) {
-    var centroid = path.centroid(d);
-    x = centroid[0];
-    y = centroid[1];
+    x = d.lat;
+    y = d.lon;
     k = 4;
     centered = d;
   } else {
@@ -109,7 +106,7 @@ function clicked(d) {
     centered = null;
   }
 
-  g.selectAll("path")
+  g.selectAll("circle")
       .classed("active", centered && function(d) { return d === centered; });
 
   g.transition()
@@ -117,5 +114,8 @@ function clicked(d) {
       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
       .style("stroke-width", 1.5 / k + "px");
 }
+
+
+});
 
 });		
