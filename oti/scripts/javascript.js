@@ -25,17 +25,13 @@ g.append("g").attr("id", "plans");
       .data(json.features)
     .enter().append("path")
       .attr("d", path)
-  g.append("path")
-      .datum(topojson.mesh(json, json.features, function(a, b) { return a !== b; }))
-      .attr("id", "borders")
-      .attr("d", path);
   });	
   
 d3.csv('data/speed.csv', function(data){
   var scale = d3.scale.linear().domain([0,1000]).range([1,25])
   var scale_cost = d3.scale.linear().domain([0,500]).range([1,25])
   matchScaleToData(scale, function(d){return +d.download;})
-  var plan = g.select("#plans").selectAll("circle").data(data).enter().append("g").attr("class", "plan").attr("r", function(d) {return scale(d.download)}).attr("transform", function(d) {return "translate(" + projection([d.lon, d.lat]) + ")";})
+  var plan = g.select("#plans").selectAll("circle").data(data).enter().append("g").attr("class", "plan").attr("r", function(d) {return scale(d.download)}).attr("transform", function(d) {return "translate(" + projection([d.lon, d.lat]) + ")";}).on("click", clicked)
   plan.append("circle")
       .attr("fill-opacity", 0.5)
       .attr("fill", "#000099")
@@ -47,7 +43,6 @@ d3.csv('data/speed.csv', function(data){
         $("#download-num").append(d.download);
         $("#cost-num").append(d.price);
       })
-      .on("click", clicked)
 	  .attr("r", function(d) {return scale(d.download)})
   plan.append("text").text(function(d){return d.isp;}).attr('y', 3)
     g.select("#schools").selectAll("circle")
@@ -95,9 +90,12 @@ function clicked(d) {
   var x, y, k;
 
   if (d && centered !== d) {
+//    var centroid = path.centroid(d);
+//    x = centroid[0];
+//    y = centroid[1];
     x = d.lat;
     y = d.lon;
-    k = 4;
+    k = 2;
     centered = d;
   } else {
     x = width / 2;
