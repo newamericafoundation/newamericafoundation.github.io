@@ -1,0 +1,128 @@
+<html>
+<head>
+<style>
+	@import url("bootstrap/css/bootstrap.css");
+	@import url("bootstrap/css/bootstrap-responsive.css");
+	@import url("style.css");
+</style>
+</head>
+<body>
+	<div style="position:relative;">
+	    <div id="tallies" class="well terrorists clearfix pull-right" style="width:350px;">
+		    <h2 class="block-title">Investigated Individuals</h2>
+		    	<div class="views-field views-field-title"><div class="total-number">225</div><div class="total-label label">Individuals charged with jihadist terrorism</div></div>
+		        <div class="views-field views-field-title"><div class="total-number">59.6%</div><div class="total-label label">Traditional investigative methods</div></div>
+		        <div class="views-field views-field-title"><div class="total-number">5.3%</div><div class="total-label label">Plots not prevented</div></div>
+		        <div class="views-field views-field-title"><div class="total-number">27%</div><div class="total-label label">Unclear what method initiated investigation</div></div>
+		    <h2 class="block-title" style="clear:both;margin:5px 0;">NSA Investigations</h2>
+		        <div class="views-field views-field-title"><div class="total-number">1.8%</div><div class="total-label label">NSA bulk collection under section 215</div></div>
+				<div class="views-field views-field-title"><div class="total-number">4.4%</div><div class="total-label label">NSA surveillance under section 702</div></div>
+				<div class="views-field views-field-title"><div class="total-number">1.3%</div><div class="total-label label">NSA surveillance under an unknown authority</div></div>
+	    </div>
+		<div id="nsa" style="width:100%; height: 600px; margin: 0 auto"></div>
+	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="highcharts/js/highcharts.js"></script>
+	<script src="highcharts/js/themes/naf.js"></script>
+	<script type="text/javascript">
+	    (function ($) { 
+	        $(document).ready(function() {
+	        var chart;
+	        chart = new Highcharts.Chart({
+	        chart: {
+	            renderTo: 'nsa',
+	            plotBackgroundColor: null,
+	            plotBorderWidth: null,
+	            plotShadow: false,
+	            marginRight: 200,
+	            backgroundColor: null
+	        },
+	        colors: [
+	        	'#558ed7',
+	        	'#6397da',
+	        	'#70a0dd',
+	        	'#c56424',
+	        	'#b75d21',
+	        	'#a8551f',
+	        	'#9a4e1c',
+	        	'#8c471a',
+	        	'#7d4017',
+	        	'#6f3814',
+	        	'#000'
+	        ],
+	        tooltip: {
+	            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+	            pointFormat: '<tr><td style="color:{series.color};padding:0"><b>{point.y} individuals<\/b><\/td><\/tr>',
+	            footerFormat: '</table>',
+	            shared: true,
+	            useHTML: true
+	        },
+			exporting: {
+				enabled: false
+			},
+	        plotOptions: {
+	            pie: {
+	                dataLabels: {
+	                    formatter: function() {
+	                        return '<b>'+ this.point.name +'<\/b>: '+ this.y;
+	                    }
+	                },
+	                startAngle: 270,
+	                slicedOffset: 40,
+			        point: {
+					    events: {
+					        legendItemClick: function () {
+					            return false; // <== returning false will cancel the default action
+					        }
+					    }
+					},
+	            },    
+	        },
+	        title: {
+	        	text: 'Investigative Methods Used To Detect Terror Suspects',
+	        	align: 'left',
+	        	style: { fontFamily: "Arial,Helvetica,sans-serif", fontSize: "22px", color: '#FFF'}
+	        },
+	        legend: {
+				backgroundColor: '#D8D098',
+				width: 350,
+				align: 'right',
+	        },
+	        series: [{
+	        	type: 'pie',
+	        	name: 'Plot prevention methods',
+	        	data: [
+	        		{
+	                    name: 'NSA Bulk Collection Under Section 215',
+	                    y: 4,
+	                    sliced: true,
+	                    selected: true
+	                },
+	        		{
+	                    name: 'NSA Surveillance Under Section 702',
+	                    y: 10,
+	                    sliced: true,
+	                    selected: true
+	                },
+	        		{
+	                    name: 'NSA Surveillance Under an Unknown Authority',
+	                    y: 3,
+	                    sliced: true,
+	                    selected: true
+	                },
+					['Community/Family Tip', 40],  		        		
+					['Informant', 36],  		        		
+					['Other Non-NSA Intelligence provided by CIA, FBI, etc.', 18],  		        		
+					['Routine Law Enforcement', 12],  		        		
+					['Militant Self Disclosed by Publicizing His Extremist Activity', 9],  		        		
+					['Suspicious Activity Report', 19],  		        		
+					['Unclear', 62],  		        		
+					['Plot Not Prevented Prior to Incident', 12]
+	        	]
+	    	}]
+	      });
+	    });
+	  }(jQuery));
+	</script>
+</body>
+</html>
