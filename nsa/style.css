@@ -24,7 +24,7 @@ body {
 }
 
 h2.title {
-	font-family: "platformbold","futura-pt-n7",helvetica,arial,sans-serif;
+	font-family: "platformbold","futura-pt-n7",helvetica,arial,sans-serif !important;
     font-size: 30px;
     width: 50%;
     font-weight: normal;
@@ -47,16 +47,18 @@ h2.title {
 	line-height: normal;
 	text-align:center;
 	font-weight: 100 !important;
+	letter-spacing: 1px;
 }
 
 #tallies .views-field {
 	clear:both;	
+	margin: 5px 0;
 }
 
 #tallies .total-number,
 #tallies .number {
 	float: left;
-	font-size: 18px;
+	font-size: 22px;
 	text-align:center;
 	width: 80px;
 }
@@ -64,6 +66,8 @@ h2.title {
 #tallies .total-label,
 #tallies .label {
 	float:right;
+	font-size: 14px;
+	line-height: 16px;
 }
 
 #tallies .label {
