@@ -31,6 +31,10 @@ h2.title {
     margin-left: 10px;
 }
 
+h2.title a {
+	color: #3B3633;
+}
+
 #tallies {
 	z-index: 1029;
 	padding: 5px;
