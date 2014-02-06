@@ -28,39 +28,9 @@ function setUpChoropleth(error, json) {
   .selectAll("path")
     .data(topojson.feature(json, json.objects.countries).features)
   .enter().append("svg:path")
-    // .attr("class", function(d) { 
-    //   console.log(all_data)
-    //   // return "tier1-" + all_data[d.tier_i] + " tier2-" + all_data[d.tier_ii]
-    //   // console.log(d["id"])
-    //   // if(choropleth_data[d.id] = all_data)
-    //   // return "tier" + choropleth_data[d.id] 
-    // })
     .attr("d", path);
 
-} // setUpChoropleth function
-
-// function drawTierI() {
-
-//   // console.log(all_data[840])
-
-//   function resetChoropleth(choropleth) {
-//     choropleth_data = choropleth;
-//     choropleth_data.forEach(function(d) {
-//       all_data[d.id] = d;
-//       choropleth_data[d.id] = +d.tier_ii;
-//     });
-
-//     svg.select("g.countries").selectAll("path")
-//       .transition().duration(600)
-//       .style("class", function(d) {
-//         console.log(choropleth_data[d.id])
-//     });
-
-//   } // setUpChoropleth function
-
-//   resetChoropleth();
-
-// }
+} 
 
 function drawTierI() {
   queue()
