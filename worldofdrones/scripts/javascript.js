@@ -21,8 +21,10 @@ queue()
   .defer(d3.csv, "data/wod.csv")
   .await(setUpChoropleth);
 
-function setUpChoropleth(error, json) {
+var csv;
 
+function setUpChoropleth(error, json, _csv) {
+  csv = _csv;
   svg.append("g")
      .attr("class", "countries")
   .selectAll("path")
@@ -33,70 +35,49 @@ function setUpChoropleth(error, json) {
 } 
 
 function drawTierI() {
-  queue()
-      .defer(d3.json, "data/world.json")
-      .defer(d3.csv, "data/wod.csv", function(d) { tierById.set(d.id, +d.tier_i); })
-      .await(ready);
+  csv.forEach(function(d) { tierById.set(d.id, +d.tier_i); });
 
   function ready(error, json) {
-    svg.append("g")
-        .attr("class", "countries")
-      .selectAll("path")
-        .data(topojson.feature(json, json.objects.countries).features)
-      .enter().append("path")
+    svg.selectAll("path")
         .attr("class", function(d) { return quantize(tierById.get(d.id)); })
         .attr("d", path);
 
   }
+  ready();
 }
 
 function drawTierII() {
-  queue()
-      .defer(d3.json, "data/world.json")
-      .defer(d3.csv, "data/wod.csv", function(d) { tierById.set(d.id, +d.tier_ii); })
-      .await(ready);
+  csv.forEach(function(d) { tierById.set(d.id, +d.tier_ii); });
 
   function ready(error, json) {
-    svg.append("g")
-        .attr("class", "countries")
-      .selectAll("path")
-        .data(topojson.feature(json, json.objects.countries).features)
-      .enter().append("path")
+    svg.selectAll("path")
         .attr("class", function(d) { return quantize(tierById.get(d.id)); })
         .attr("d", path);
 
   }
+  ready();
 }
 
 function drawTierIIPlus() {
-  queue()
-      .defer(d3.json, "data/world.json")
-      .defer(d3.csv, "data/wod.csv", function(d) { tierById.set(d.id, +d.tier_ii_plus); })
-      .await(ready);
+  csv.forEach(function(d) { tierById.set(d.id, +d.tier_ii_plus); });
 
   function ready(error, json) {
-    svg.append("g")
-        .attr("class", "countries")
-      .selectAll("path")
-        .data(topojson.feature(json, json.objects.countries).features)
-      .enter().append("path")
+    svg.selectAll("path")
         .attr("class", function(d) { return quantize(tierById.get(d.id)); })
         .attr("d", path);
 
   }
+  ready();
 }
 
 $('button#tier_i').click(function (e) {
-  $( "svg" ).empty();
   drawTierI();
 });
 
 $('button#tier_ii').click(function (e) {
-  $( "svg" ).empty();
   drawTierII();
 });
 
 $('button#tier_ii_plus').click(function (e) {
-  $( "svg" ).empty();
   drawTierIIPlus();
 });

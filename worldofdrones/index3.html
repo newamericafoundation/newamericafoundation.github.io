@@ -11,7 +11,7 @@
 <script src="http://d3js.org/queue.v1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="css/bootstrap.min.css" />
-<link rel="stylesheet" href="styles/style2.css" />
+<link rel="stylesheet" href="styles/style3.css" />
 <style type="text/css">
 
 #countries path {
@@ -61,7 +61,7 @@ circle {
 var w = 945,
     h = 550;
 
-var projection = d3.geo.mercator().scale(175);
+var projection = d3.geo.conicEquidistant();
 
 var path = d3.geo.path()
     .projection(projection);
@@ -90,7 +90,7 @@ d3.json("data/world.json", function(json) {
       .attr("d", path);
 });
 
-d3.csv("data/wod_export.csv", function(flights) {
+d3.csv("data/wod_import.csv", function(flights) {
   var linksByOrigin = {},
       countByAirport = {},
       locationByAirport = {},
