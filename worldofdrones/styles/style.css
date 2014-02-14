@@ -1,6 +1,10 @@
-#content {
+/*#content {
   width: 100%;
   height: 500px;
+}*/
+
+g#cells g path.cell {
+  stroke: none;
 }
 
 svg {
@@ -15,3 +19,35 @@ path {
 }
 
 path.tier1 { fill: #FF0000; fill-opacity: .4; }
+
+#countries path {
+  stroke: #fff;
+  fill: #000;
+  fill-opacity: .2;
+}
+
+path.arc {
+  pointer-events: none;
+  fill: none;
+  stroke: #000;
+  display: none;
+}
+
+path.cell {
+  fill: none;
+  pointer-events: all;
+}
+
+circle {
+  fill: steelblue;
+  fill-opacity: .8;
+  stroke: #fff;
+}
+
+#cells.voronoi path.cell {
+  stroke: brown;
+}
+
+#cells g:hover path.arc {
+  display: inherit;
+}

@@ -15,17 +15,95 @@
 </head>
 
 <body>
-<div class="container">
+<div class="container" style="margin-top:10px;">
+  <div id="keyFindings" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Key findings</h4>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>China has become one of the leading producers of UAVs and their arsenal is believed to be comparable in size to that of the United States.  Most of the advancements in China’s drone capabilities are believed to have been stolen from leading United States defense contractors in hacking attacks.</li>
+            <li>Israel is the largest exporter of drones in the world.  Between 2001 and 2011, they were responsible for 41 percent of drone exports, and exported $4.6 billion worth of drones between 2005 and 2012.</li>
+            <li>France, Germany, Greece, Italy, the Netherlands, Poland, and Spain are in a “drone users club”  that was formed to create a European generation of drones that would rival the capabilities of the United States and Israel within 10 years.</li>
+          </ul>     
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <div class="row" style="margin-bottom:30px;">
+    <div class="col-lg-12">
+      <p class="lead">At the beginning of the “War on Terror,” launched by then-President George W. Bush after the attacks of 9/11, the United States had a virtual monopoly on drones. Today, drone technology is proliferating rapidly. According to data compiled by the New America Foundation, as of February 2014, 77 countries own some type of drone, although only a small number of those nations possess armed drone aircraft. The United States, United Kingdom, and Israel are the only nations that are confirmed to have used armed drones against their adversaries, although other members of NATO’s International Security Assistance Force in Afghanistan, such as Germany and Canada, have used drones there by "borrowing" them from Israel.</p>
+      <p>Building drones, particularly armed drones, takes sophisticated technology and access to the specific weaponry that can be launched from an unmanned vehicle, but governments are increasingly willing to invest the necessary time and money to either buy or develop them, as armed drones are increasingly seen as an integral part of modern warfare. The Teal Group, a defense consulting firm in Virginia, estimated in 2012 that the global market for the research, development, and procurement of armed drones will nearly double in the next decade, from $6.6 billion to $11.4 billion, and that the United States will account for 62 percent of drone research and development, and 55 percent of drone procurement.</p>
+      <p>Israel is the world's largest exporter of drones and drone technology, and the state-owned Israeli Aerospace Industries (IAI) has sold drones to countries as varied as Nigeria, Russia, and Mexico. IAI has also reportedly sold a “loitering weapon” called the Harop to India, Turkey, France, and Germany. The Harop can circle over a target for hours before it is activated and sent to the ground as a single-use missile. Israel itself has used armed drones in the Palestinian territories.</p>
+      <p>In September 2012, China announced that it would use surveillance drones to monitor a group of uninhabited islands in the South China Sea that are controlled by Japan, but claimed by China and Taiwan. Two years earlier, China took the United States by surprise when it unveiled 25 drone models, some of which were outfitted with the capability to fire missiles, at the Zhuhai Air Show. Since then, China has developed full-sized armed drones. Meanwhile, Taiwan has also been building indigenous drone capabilities, and Taiwanese authorities announced in December 2013 that they are developing an armed drone.</p>
+      <p>But states are not alone in their quest for drones. Insurgent groups, too, are moving to acquire this technology. Libyan opposition forces trying to overthrow dictator Muammar Gaddhafi in 2011 bought a sophisticated surveillance drone from a Canadian company for a low six figures. As drone technology becomes more widely accessible, it is only a matter of time before well-financed drug cartels acquire them.</p>
+      <p>So far, there has been virtually no substantive public discussion about drone attacks among policymakers at the international level. Just as the U.S. government justifies its drone strikes in Pakistan and Yemen with the argument that it is at war with al Qaeda and its affiliates, one could imagine that India, in the not too distant future, might launch similar attacks against suspected terrorists in Kashmir; China might strike Uighur separatists in its western provinces; or Iran might attack Baluchi nationalists along its border with Pakistan.</p>
+       
+      This database is designed to help facilitate that discussion by tracking the imports and exports of drone technology around the world.
+    </div>
+  </div>
+  <div class="row" style="margin-bottom:30px;">
+    <div class="col-lg-12">
+      <ul id="myTab" class="nav nav-pills nav-justified">
+        <li class="active"><a href="#map1" data-toggle="tab">Tiers</a></li>
+        <li><a href="#map2" data-toggle="tab">Exports</a></li>
+        <li><a href="#map3" data-toggle="tab">Imports</a></li>
+      </ul>
+    </div>
+  </div>
   <div class="row">
-    <div class="col-lg-10 col-lg-offset-1" style="position:relative;">
-      <div id="content"></div>
-      <div class="btn-group btn-group-xs pull-right" style="position:absolute;top:10px;right:25px;">
-        <button id="tier_i" type="button" class="btn btn-danger">Tier I</button>
-        <button id="tier_ii" type="button" class="btn btn-danger">Tier II</button>
-        <button id="tier_ii_plus" type="button" class="btn btn-danger">Tier II+</button>
+    <div id="myTabContent" class="tab-content">
+      <div id="map1" class="tab-pane fade in active">
+        <div class="col-lg-12">
+          <p>The maps on this site summarize which countries currently possess drones and how they have come to acquire the platforms, based on an analysis of thousands of news reports and government documents.</p>
+          <p>A country’s drone capabilities are classified according to the U.S. Air Force tier system. Tier I includes low altitude, long endurance drones like the Hermes 450; Tier II is comprised of medium altitude, long endurance drones like the Predator; and Tier II+ applies to high altitude, long endurance drones like the Global Hawk. Mini and micro drones are not classified in the tier system.</p>
+        </div>
+        <div class="col-lg-10">
+          <div id="content"></div>
+          <div class="btn-group btn-group-xs pull-right" style="position:absolute;top:10px;right:25px;">
+            <button id="tier_i" type="button" class="btn btn-danger">Tier I</button>
+            <button id="tier_ii" type="button" class="btn btn-danger">Tier II</button>
+            <button id="tier_ii_plus" type="button" class="btn btn-danger">Tier II+</button>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Click button to change tiers</h3>
+            </div>
+            <div class="panel-body">And learn more about each tier</div>
+          </div>
+        </div>
+      </div>
+      <div id="map2" class="tab-pane fade">
+        <div class="col-lg-10">
+          <div id="content2"></div>
+        </div>
+        <div class="col-lg-2">
+          <h2><span>Rollover countries to reveal where</span></h2>
+          <h3><span>Drones exported to</span></h3>
+          <h4><span></span></h4>
+        </div>
+      </div>
+      <div id="map3" class="tab-pane fade">
+        <div class="col-lg-10">
+          <div id="content3"></div>
+        </div>
+        <div class="col-lg-2">
+          <h2><span>Rollover countries to reveal where</span></h2>
+          <h3><span>Drones imported from</span></h3>
+          <h4><span></span></h4>
+        </div>
       </div>
     </div>
-  </div> <!-- row -->
+  </div>
+
 <script src="scripts/javascript.js"></script>
 </body>
 </html>
