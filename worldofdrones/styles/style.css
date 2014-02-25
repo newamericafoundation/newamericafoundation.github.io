@@ -43,8 +43,14 @@ path.cell {
   pointer-events: all;
 }
 
-circle {
+#map2 circle {
   fill: steelblue;
+  fill-opacity: .8;
+  stroke: #fff;
+}
+
+#map3 circle {
+  fill: #12bb00;
   fill-opacity: .8;
   stroke: #fff;
 }
@@ -68,8 +74,8 @@ circle {
 #map2 #countries .country710,
 #map2 #countries .country752,
 #map2 #countries .country840 {
-  fill: #FF0000 !important;
-  fill-opacity: .5;
+  fill: #0000FF !important;
+  fill-opacity: .2;
 }
 
 #map2 #circles circle {
@@ -161,7 +167,7 @@ circle {
 #map3 #countries .country704,
 #map3 #countries .country156,
 #map3 #countries .country250 {
-  fill: #FF0000 !important;
+  fill: #00FF00 !important;
   fill-opacity: .5;
 }
 
