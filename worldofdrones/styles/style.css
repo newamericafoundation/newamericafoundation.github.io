@@ -21,6 +21,7 @@ path.tier1 { fill: #FF0000; fill-opacity: .4; }
 
 #content, #content2, #content3 {
   background: #C6ECFF;
+  overflow: hidden;
 }
 
 #countries path {
