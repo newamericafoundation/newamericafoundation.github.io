@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="styles/style.css" />
+		<style type="text/css">
+			.flip3D > .front img {
+				max-width: 1000px;
+			}
+			.flip3D { 
+				width:1000px;
+				height:100%;
+				position:relative;
+			}
+
+			.flip3D > .front { 
+				position:absolute;
+				transform: perspective( 600px ) rotateY( 0deg );
+				width:1000px;
+				height:100%;
+				transition: transform .5s linear 0s;
+			}
+
+			.flip3D > .back {
+				transform: perspective( 600px ) rotateY( 180deg );
+				background-color: rgba(0, 0, 0, 0.75);
+				width:1000px;
+				height:100%;
+				backface-visibility: hidden;
+				transition: transform .5s linear 0s;
+				padding: 15px;
+				color: #FFF;
+			}
+
+			.close {
+				width: 31px;
+				height: 31px;
+				background: url("close.png");
+				position: absolute;
+				top: 15px;
+				right: 15px;
+				opacity: 1;
+			}
+
+			audio {
+				width:1000px;
+				margin-top:10px;
+			}
+
+			@media (max-width: 767px) {
+
+				.flip3D > .front img {
+					max-width: 400px;
+				}
+
+				.flip3D { 
+					width:400px;
+					height:100%;
+					position:relative;
+				}
+
+				.flip3D > .front { 
+					position:relative;
+					transform: none;
+					width:400px;
+					height:100%;
+					transition: none;
+				}
+
+				.flip3D > .back {
+					position:relative;
+					transform: none;
+					background-color: rgba(0, 0, 0, 1);
+					width:400px;
+					height:100%;
+					transition: none;
+					padding: 15px;
+					color: #FFF;
+				}
+
+				.close {
+					display:none;
+				}
+
+				audio {
+					max-width:400px;
+					margin-top:10px;
+				}
+
+			}
+			@media (min-width: 768px) and (max-width: 979px) {
+
+				.flip3D > .front img {
+					max-width: 800px;
+				}
+
+				.flip3D { 
+					width:800px;
+					height:100%;
+					position:relative;
+				}
+
+				.flip3D > .front { 
+					position:relative;
+					transform: none;
+					width:800px;
+					height:100%;
+					transition: none;
+				}
+
+				.flip3D > .back {
+					position:relative;
+					transform: none;
+					background-color: rgba(0, 0, 0, 1);
+					width:800px;
+					height:100%;
+					transition: none;
+					padding: 15px;
+					color: #FFF;
+				}
+
+				.close {
+					display:none;
+				}
+
+				audio {
+					max-width:800px;
+					margin-top:10px;
+				}
+
+			}
+			@media (min-width: 980px) and (max-width:1199px) {
+
+				.flip3D > .front img {
+					max-width: 1000px;
+				}
+
+				.flip3D { 
+					width:1000px;
+					height:100%;
+					position:relative;
+				}
+
+				.flip3D > .front { 
+					position:relative;
+					transform: none;
+					width:1000px;
+					height:100%;
+					transition: none;
+				}
+
+				.flip3D > .back {
+					position:relative;
+					transform: none;
+					background-color: rgba(0, 0, 0, 1);
+					width:1000px;
+					height:100%;
+					transition: none;
+					padding: 15px;
+					color: #FFF;
+				}
+
+				.close {
+					display:none;
+				}
+
+				audio {
+					max-width:1000px;
+					margin-top:10px;
+				}
+
+			}
+			@media (min-width: 1200px) {
+/*				img {
+					max-width: 700px;
+				}
+				.flip3D { 
+					width:100%;
+					height:100%;
+				}
+
+				.flip3D > .front { 
+					width:100%;
+					height:100%;
+				}
+
+				.flip3D > .back {
+					width:100%;
+					height:100%;
+				}*/
+			}
+			/*.flip3D:hover > .front { 
+				transform: perspective( 600px ) rotateY( -180deg );
+			}
+
+			.flip3D:hover > .back {
+				transform: perspective( 600px ) rotateY( 0deg );
+			}*/
+		</style>
+		<title></title>
+	</head>
+	<body>
+		<div class="flip3D">
+			<div class="front">
+				<img src="RTR3FRV4.jpg" />
+			</div>
+			<div class="back">
+				<h3><img src="shot.gif" style="float:left;margin-right:10px;margin-bottom:10px;" />This Ukrainian protestor is channeling her ancestors. As we approach International Women's Day on March 8, New America president Anne-Marie Slaughter reminds us of how Soviet-era women used the holiday to advocate for their rights and protest the government: They launched a successful protest against the government on March 8, 1917 (according to the Gregorian calendar, although on Russia's Julian calendar, the day was Feb. 23, 1917). Listen to hear more about the legacy of feminism in the former Soviet Union.</h3>
+				<div class="close"></div>
+				<div style="clear:both;"></div>
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+		<audio controls>
+			<source src="shot.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+		<script>
+			var photoHeight = $(".flip3D > .front img").height();
+			console.log(photoHeight);
+			$(".flip3D > .back").css("height",photoHeight + "px");
+			$( ".front" ).click(function() {
+				$(".flip3D > .front").css("transform", "perspective( 600px ) rotateY( -180deg )");
+				$(".flip3D > .back").css("transform", "perspective( 600px ) rotateY( 0deg )");
+			});
+			$( ".close" ).click(function() {
+				$(".flip3D > .front").css("transform", "perspective( 600px ) rotateY( 0 )");
+				$(".flip3D > .back").css("transform", "perspective( 600px ) rotateY( 180deg )");
+			});
+		</script>
+	</body>
+</html>

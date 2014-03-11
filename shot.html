@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="styles/style.css" />
+		<style type="text/css">
+			.flip3D { 
+				width:1200px;
+				height:800px;
+			}
+
+			.flip3D > .front { 
+				position:absolute;
+				transform: perspective( 600px ) rotateY( 0deg );
+				width:1200px;
+				height:800px;
+				border-radius: 7px;
+				/*backface-visibility: hidden;*/
+				transition: transform .5s linear 0s;
+			}
+
+			.flip3D > .back {
+				position:absolute;
+				transform: perspective( 600px ) rotateY( 180deg );
+				background-color: rgba(0, 0, 0, 0.75);
+				width:1170px;
+				height:770px;
+				backface-visibility: hidden;
+				transition: transform .5s linear 0s;
+				padding: 15px;
+				color: #FFF;
+			}
+
+			/*.flip3D:hover > .front { 
+				transform: perspective( 600px ) rotateY( -180deg );
+			}
+
+			.flip3D:hover > .back {
+				transform: perspective( 600px ) rotateY( 0deg );
+			}*/
+		</style>
+		<title></title>
+	</head>
+	<body>
+		<div class="flip3D">
+			<div class="front">
+				<img src="RTR3FRV4.jpg" />
+			</div>
+			<div class="back">
+				<h3>This Ukrainian protestor is channeling her ancestors. As we approach International Women's Day on March 8, New America president Anne-Marie Slaughter reminds us of how Soviet-era women used the holiday to advocate for their rights and protest the government: They launched a successful protest against the government on March 8, 1917 (according to the Gregorian calendar, although on Russias Julian calendar, the day was Feb. 23, 1917). Listen to hear more about the legacy of feminism in the former Soviet Union.</h3>
+				<div class="close"></div>
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+		<audio controls style="width:1200px;margin-top:10px;">
+			<source src="shot.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+		<script>
+			$( ".front" ).click(function() {
+				$(".flip3D > .front").css("transform", "perspective( 600px ) rotateY( -180deg )");
+				$(".flip3D > .back").css("transform", "perspective( 600px ) rotateY( 0deg )");
+			});
+			$( ".close" ).click(function() {
+				$(".flip3D > .front").css("transform", "perspective( 600px ) rotateY( 0 )");
+				$(".flip3D > .back").css("transform", "perspective( 600px ) rotateY( 180deg )");
+			});
+		</script>
+	</body>
+</html>
