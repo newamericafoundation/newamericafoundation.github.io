@@ -152,7 +152,6 @@ path.cell {
 #map3 #countries .country554,
 #map3 #countries .country562,
 #map3 #countries .country566,
-#map3 #countries .country578,
 #map3 #countries .country586,
 #map3 #countries .country604,
 #map3 #countries .country608,
@@ -180,7 +179,8 @@ path.cell {
 #map3 #countries .country704,
 #map3 #countries .country156,
 #map3 #countries .country250,
-#map3 #countries .country840 {
+#map3 #countries .country840,
+#map3 #countries .country643 {
   fill: #00FF00 !important;
   fill-opacity: .5;
 }
@@ -232,7 +232,6 @@ path.cell {
 #map3 #circles .circle554,
 #map3 #circles .circle562,
 #map3 #circles .circle566,
-#map3 #circles .circle578,
 #map3 #circles .circle586,
 #map3 #circles .circle604,
 #map3 #circles .circle608,
@@ -260,6 +259,7 @@ path.cell {
 #map3 #circles .circle704,
 #map3 #circles .circle156,
 #map3 #circles .circle250,
-#map3 #circles .circle840 {
+#map3 #circles .circle840,
+#map3 #circles .circle643 {
   visibility: visible;
 }
