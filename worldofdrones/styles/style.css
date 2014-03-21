@@ -179,7 +179,8 @@ path.cell {
 #map3 #countries .country862,
 #map3 #countries .country704,
 #map3 #countries .country156,
-#map3 #countries .country250 {
+#map3 #countries .country250,
+#map3 #countries .country840 {
   fill: #00FF00 !important;
   fill-opacity: .5;
 }
@@ -258,6 +259,7 @@ path.cell {
 #map3 #circles .circle862,
 #map3 #circles .circle704,
 #map3 #circles .circle156,
-#map3 #circles .circle250 {
+#map3 #circles .circle250,
+#map3 #circles .circle840 {
   visibility: visible;
 }
