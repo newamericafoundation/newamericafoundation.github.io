@@ -138,13 +138,13 @@ $('button#tier_i').click(function (e) {
 $('button#tier_ii').click(function (e) {
   drawTierII();
   d3.select("#map1 .panel-title").text("Countries with armed drones")
-  d3.select("#map1 .panel-body").text("<strong>France</strong>, <strong>Iran</strong> and <strong>China</strong> are equipped with armed drones.")
+  d3.select("#map1 .panel-body").text("France, Iran, and China are equipped with armed drones.")
 });
 
 $('button#tier_ii_plus').click(function (e) {
   drawTierIIPlus();
   d3.select("#map1 .panel-title").text("Countries using drones in combat")
-  d3.select("#map1 .panel-body").text("The <strong>United States</strong>, <strong>United Kingdom</strong>, and <strong>Israel</strong> have used armed drones in combat.")
+  d3.select("#map1 .panel-body").text("The United States, United Kingdom, and Israel have used armed drones in combat.")
 });
 
 d3.select("input[type=checkbox]").on("change", function() {
