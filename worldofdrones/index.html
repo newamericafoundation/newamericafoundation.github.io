@@ -58,7 +58,7 @@
     <div class="col-lg-12">
       <h2>Click on the tabs below to toggle our data</h2>
       <ul id="myTab" class="nav nav-pills nav-justified">
-        <li class="active"><a href="#map1" data-toggle="tab">Tiers</a></li>
+        <li class="active"><a href="#map1" data-toggle="tab">Drone-equipped countries</a></li>
         <li><a href="#map2" data-toggle="tab">Exports</a></li>
         <li><a href="#map3" data-toggle="tab">Imports</a></li>
       </ul>
@@ -66,25 +66,31 @@
   </div>
   <div class="row">
     <div id="myTabContent" class="tab-content">
-      <div id="map1" class="tab-pane fade in active">
+      <div id="map1" class="tab-pane fade in active" style="position:relative;">
         <div class="col-lg-12">
-          <p>The maps on this site summarize which countries currently possess drones and how they have come to acquire the platforms, based on an analysis of thousands of news reports and government documents.</p>
-          <p>A country’s drone capabilities are classified according to the U.S. Air Force tier system. Tier I includes low altitude, long endurance drones like the Hermes 450; Tier II is comprised of medium altitude, long endurance drones like the Predator; and Tier II+ applies to high altitude, long endurance drones like the Global Hawk. Mini and micro drones are not classified in the tier system.</p>
+          <p>The maps on this site summarize which countries currently possess drones and how they have come to acquire the platforms, based on an analysis of thousands of news reports and government documents. Countries below are sorted into three groups: those who possess unmanned drones, those who possess armed unmanned drones, and those who use these drones in combat.</p>
+          <!-- <p>A country’s drone capabilities are classified according to the U.S. Air Force tier system. Tier I includes low altitude, long endurance drones like the Hermes 450; Tier II is comprised of medium altitude, long endurance drones like the Predator; and Tier II+ applies to high altitude, long endurance drones like the Global Hawk. Mini and micro drones are not classified in the tier system.</p> -->
         </div>
         <div class="col-lg-10">
           <div id="content"></div>
           <div class="btn-group btn-group-xs pull-right" style="position:absolute;top:10px;right:25px;">
-            <button id="tier_i" type="button" class="btn btn-danger">Tier I</button>
-            <button id="tier_ii" type="button" class="btn btn-danger">Tier II</button>
-            <button id="tier_ii_plus" type="button" class="btn btn-danger">Tier II+</button>
+            <button id="tier_i" type="button" class="btn btn-danger">Drone equipped</button>
+            <button id="tier_ii" type="button" class="btn btn-danger">Armed drones</button>
+            <button id="tier_ii_plus" type="button" class="btn btn-danger">Used in combat</button>
           </div>
         </div>
-        <div class="col-lg-2">
+        <div class="col-lg-2" style="position:relative;height:550px">
           <div class="panel panel-default">
             <div class="panel-heading">
               <h3 class="panel-title">Click button to change tiers</h3>
             </div>
             <div class="panel-body">And learn more about each tier</div>
+          </div>
+          <div class="panel panel-default" style="position:absolute;bottom:0;margin-bottom:0;width:163px;">
+            <div class="panel-heading">
+              <h3 class="panel-title">Source information</h3>
+            </div>
+            <div class="panel-body"><a href="source.pdf">Click here</a> for our source information</div>
           </div>
         </div>
       </div>

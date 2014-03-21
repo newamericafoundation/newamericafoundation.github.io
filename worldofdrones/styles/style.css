@@ -74,7 +74,13 @@ path.cell {
 #map2 #countries .country643,
 #map2 #countries .country710,
 #map2 #countries .country752,
-#map2 #countries .country840 {
+#map2 #countries .country840,
+#map2 #countries .country51,
+#map2 #countries .country124,
+#map2 #countries .country233,
+#map2 #countries .country364,
+#map2 #countries .country752,
+#map2 #countries .country276 {
   fill: #0000FF !important;
   fill-opacity: .2;
 }
@@ -91,7 +97,13 @@ path.cell {
 #map2 #circles .circle643,
 #map2 #circles .circle710,
 #map2 #circles .circle752,
-#map2 #circles .circle840 {
+#map2 #circles .circle840,
+#map2 #circles .circle51,
+#map2 #circles .circle124,
+#map2 #circles .circle233,
+#map2 #circles .circle364,
+#map2 #circles .circle752,
+#map2 #circles .circle276 {
   visibility: visible;
 }
 

@@ -131,20 +131,20 @@ function drawTierIIPlus() {
 
 $('button#tier_i').click(function (e) {
   drawTierI();
-  d3.select("#map1 .panel-title").text("Tier I")
-  d3.select("#map1 .panel-body").text("Includes low altitude, long endurance drones like the Hermes 450;")
+  d3.select("#map1 .panel-title").text("Drone equipted")
+  d3.select("#map1 .panel-body").text("These countries are equipped with unmanned drones.")
 });
 
 $('button#tier_ii').click(function (e) {
   drawTierII();
-  d3.select("#map1 .panel-title").text("Tier II")
-  d3.select("#map1 .panel-body").text("Comprised of medium altitude, long endurance drones like the Predator")
+  d3.select("#map1 .panel-title").text("Armed drones")
+  d3.select("#map1 .panel-body").text("These countries are equipped with armed unmanned drones.")
 });
 
 $('button#tier_ii_plus').click(function (e) {
   drawTierIIPlus();
-  d3.select("#map1 .panel-title").text("Tier II+")
-  d3.select("#map1 .panel-body").text("High altitude, long endurance drones like the Global Hawk")
+  d3.select("#map1 .panel-title").text("Drones in combat")
+  d3.select("#map1 .panel-body").text("These countries have used armed unmanned drones in combat.")
 });
 
 d3.select("input[type=checkbox]").on("change", function() {
@@ -208,7 +208,6 @@ d3.csv("data/wod_export.csv", function(flights) {
       .enter().append("svg:circle")
         .attr("cx", function(d, i) { return positions[i][0]; })
         .attr("cy", function(d, i) { return positions[i][1]; })
-        // .attr("r", "6")
         .attr("r", "10")
         .attr("class", function(d,i) { return "circle" + d.id; })
         .sort(function(a, b) { return countByAirport[b.name] - countByAirport[a.name]; });

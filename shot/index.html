@@ -219,9 +219,13 @@
 		</audio>
 		<script>
 			var photoHeight = $(".flip3D > .front img").height();
-			console.log(photoHeight);
-			$(".flip3D > .back").css("height",photoHeight + "px");
+			if ( $("body").width() > 980) {     
+				console.log(photoHeight);
+				$(".flip3D > .back").css("height",photoHeight + "px");
+			};
 			$( ".front" ).click(function() {
+				$(".flip3D > .front").css("transform", "perspective( 600px ) rotateY( -180deg )");
+				$(".flip3D > .back").css("transform", "perspective( 600px ) rotateY( 0deg )");
 				$(".flip3D > .front").css("transform", "perspective( 600px ) rotateY( -180deg )");
 				$(".flip3D > .back").css("transform", "perspective( 600px ) rotateY( 0deg )");
 			});
