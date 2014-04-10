@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>World of Drones</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="http://d3js.org/d3.geo.projection.v0.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="js/underscore.js"></script>
+<script src="http://d3js.org/queue.v1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+<div class="container" style="margin-top:10px;">
+  <div class="row">
+    <div id="myTabContent" class="tab-content">
+      <div id="map1" class="tab-pane fade in active" style="position:relative;">
+        <div class="col-lg-10">
+          <div id="content"></div>
+          <div class="btn-group btn-group-xs pull-right" style="position:absolute;top:10px;right:25px;">
+            <button id="tier_i" type="button" class="btn btn-danger">Has drones</button>
+            <button id="tier_ii" type="button" class="btn btn-danger">Has armed drones</button>
+            <button id="tier_ii_plus" type="button" class="btn btn-danger">Used drones in combat</button>
+          </div>
+        </div>
+        <div class="col-lg-2" style="position:relative;height:550px">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Click button to highlight countries</h3>
+            </div>
+            <div class="panel-body">And learn more about their drone arsenal.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/javascript.js"></script>
+</body>
+</html>

@@ -73,7 +73,6 @@ function setUpChoropleth(error, json, _csv) {
       .on("mouseover", function(d,i) {
         var mouse = d3.mouse(svg.node()).map( function(d) { return parseInt(d); } );
         d3.select("#map1 h2 span").text(d);
-        console.log(d.id);
       });
 
   states2.selectAll("path")
@@ -97,9 +96,7 @@ function drawTierI() {
         .attr("class", function(d) { return quantize(tierById.get(d.id)); })
         .attr("d", path)
         .on("mouseover", function(d) {
-          d3.select("#map1 h2 span").text(tierById.get(d.id));
-          console.log(tierById.get(d))
-          // d3.select("#map3 h4 span").text(d.imports_from);
+          d3.select("#map1 .panel h3").text(d.id);
         });
   }
   ready();
