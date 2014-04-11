@@ -96,7 +96,11 @@ function drawTierI() {
         .attr("class", function(d) { return quantize(tierById.get(d.id)); })
         .attr("d", path)
         .on("mouseover", function(d) {
-          d3.select("#map1 .panel h3").text(d.id);
+          for (var i=0;i<csv.length;i++) {
+            if (csv[i]['id'] === d.id) {
+              // Not sure what to do here
+            }
+          }
         });
   }
   ready();
