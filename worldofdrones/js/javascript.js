@@ -1,27 +1,121 @@
-// $(window).load(function(){
-//     $('#keyFindings').modal('show');
-// });
+var w = 945
 
-var width = 945
+var h = 550
 
-var height = 550
+var svg = d3.select('#content').append('svg').attr('width', w).attr('height', h);
 
-var svg = d3.select('#content').append('svg').attr('width', width).attr('height', height);
-
-var projection = d3.geo.mercator().scale(150).translate([width/2, height/2]);
+var projection = d3.geo.mercator().scale(150).translate([w/2, h/2]);
 
 var path = d3.geo.path().projection(projection);
-
-var all_data = {};
-
-var tierById = d3.map();
-
-var tooltip = d3.select("#map").append("div")
-    .attr("class", "tooltip");
 
 var quantize = d3.scale.quantize()
     .domain([0, 1])
     .range(d3.range(2).map(function(i) { return "tier" + i; }));
+
+var tierById = d3.map();
+
+var csv;
+
+d3.json("data/countries.geo.json", function(error, json) {
+
+    d3.csv("data/wod.csv", function(error, _csv) {
+
+        csv = _csv
+
+        var world = json.features;
+
+        // var world = topojson.feature(json, json.objects.countries).features;
+
+        _csv.forEach(function(d, i) {
+            world.forEach(function(e, j) {
+                if (d.name === e['properties']['name']) {
+                    e['properties']['desc'] = d.desc;
+                    e['properties']['num'] = d.old_id;
+                }
+            })
+        })
+
+        svg.append("g").selectAll("path")
+            .data(world)
+            .enter()
+            .append("svg:path")
+            .attr("d", path)
+            .attr("class", function(d,i) { return "country" + d['properties']['num']; })
+            .on("mouseover", function(d, i) {
+                reporter(d);
+            });
+
+        states2.selectAll("path")
+            .data(world)
+          .enter().append("svg:path")
+            .attr("d", path)
+            .attr("class", function(d,i) { return "country" + d['properties']['num']; });
+
+        states3.selectAll("path")
+            .data(world)
+          .enter().append("svg:path")
+            .attr("d", path)
+            .attr("class", function(d,i) { return "country" + d['properties']['num'] });
+
+    })
+
+    function reporter(x) {
+        d3.select("#map1 .panel-title").text(function() {
+            return x['properties']['name'];
+        });
+        d3.select("#map1 .panel-body").text(function() {
+            return x['properties']['desc'];
+        });
+    }
+
+})
+
+function drawTierI() {
+  csv.forEach(function(d) { console.log(d.tier_i); tierById.set(d.id, +d.tier_i); });
+
+  function ready(error, json, _csv) {
+    svg.selectAll("path")
+        .attr("class", function(d) { return quantize(tierById.get(d.id)); })
+        .attr("d", path)
+  }
+  ready();
+}
+
+function drawTierII() {
+  csv.forEach(function(d) { tierById.set(d.id, +d.tier_ii); });
+
+  function ready(error, json) {
+    svg.selectAll("path")
+        .attr("class", function(d) { return quantize(tierById.get(d.id)); })
+        .attr("d", path);
+
+  }
+  ready();
+}
+
+function drawTierIIPlus() {
+  csv.forEach(function(d) { tierById.set(d.id, +d.tier_ii_plus); });
+
+  function ready(error, json) {
+    svg.selectAll("path")
+        .attr("class", function(d) { return quantize(tierById.get(d.id)); })
+        .attr("d", path);
+
+  }
+  ready();
+}
+
+$('button#tier_i').click(function (e) {
+  drawTierI();
+});
+
+$('button#tier_ii').click(function (e) {
+  drawTierII();
+});
+
+$('button#tier_ii_plus').click(function (e) {
+  drawTierIIPlus();
+});
 
 var w2 = 945,
     h2 = 550;
@@ -54,99 +148,6 @@ var circles3 = svg3.append("svg:g")
 
 var cells3 = svg3.append("svg:g")
     .attr("id", "cells");
-
-queue()
-  .defer(d3.json, "data/world.json")
-  .defer(d3.csv, "data/wod.csv")
-  .await(setUpChoropleth);
-
-var csv;
-
-function setUpChoropleth(error, json, _csv) {
-  csv = _csv;
-
-  svg.append("g")
-  .selectAll("path")
-    .data(topojson.feature(json, json.objects.countries).features)
-  .enter().append("svg:path")
-    .attr("d", path)
-      .on("mouseover", function(d,i) {
-        var mouse = d3.mouse(svg.node()).map( function(d) { return parseInt(d); } );
-        d3.select("#map1 h2 span").text(d);
-      });
-
-  states2.selectAll("path")
-      .data(topojson.feature(json, json.objects.countries).features)
-    .enter().append("svg:path")
-      .attr("d", path)
-      .attr("class", function(d,i) { return "country" + d.id; });
-  states3.selectAll("path")
-      .data(topojson.feature(json, json.objects.countries).features)
-    .enter().append("svg:path")
-      .attr("d", path)
-      .attr("class", function(d,i) { return "country" + d.id; });
-
-} 
-
-function drawTierI() {
-  csv.forEach(function(d) { tierById.set(d.id, +d.tier_i); });
-
-  function ready(error, json, _csv) {
-    svg.selectAll("path")
-        .attr("class", function(d) { return quantize(tierById.get(d.id)); })
-        .attr("d", path)
-        .on("mouseover", function(d) {
-          for (var i=0;i<csv.length;i++) {
-            if (csv[i]['id'] === d.id) {
-              // Not sure what to do here
-            }
-          }
-        });
-  }
-  ready();
-}
-
-function drawTierII() {
-  csv.forEach(function(d) { tierById.set(d.id, +d.tier_ii); });
-
-  function ready(error, json) {
-    svg.selectAll("path")
-        .attr("class", function(d) { return quantize(tierById.get(d.id)); })
-        .attr("d", path);
-
-  }
-  ready();
-}
-
-function drawTierIIPlus() {
-  csv.forEach(function(d) { tierById.set(d.id, +d.tier_ii_plus); });
-
-  function ready(error, json) {
-    svg.selectAll("path")
-        .attr("class", function(d) { return quantize(tierById.get(d.id)); })
-        .attr("d", path);
-
-  }
-  ready();
-}
-
-$('button#tier_i').click(function (e) {
-  drawTierI();
-  d3.select("#map1 .panel-title").text("Countries equipped with drones")
-  d3.select("#map1 .panel-body").text("These countries are equipped with drones.")
-});
-
-$('button#tier_ii').click(function (e) {
-  drawTierII();
-  d3.select("#map1 .panel-title").text("Countries with armed drones")
-  d3.select("#map1 .panel-body").text("France, Iran, and China are equipped with armed drones.")
-});
-
-$('button#tier_ii_plus').click(function (e) {
-  drawTierIIPlus();
-  d3.select("#map1 .panel-title").text("Countries using drones in combat")
-  d3.select("#map1 .panel-body").text("The United States, United Kingdom, and Israel have used armed drones in combat.")
-});
 
 d3.select("input[type=checkbox]").on("change", function() {
   cells2.classed("voronoi", this.checked);
@@ -210,7 +211,7 @@ d3.csv("data/wod_export.csv", function(flights) {
         .attr("cx", function(d, i) { return positions[i][0]; })
         .attr("cy", function(d, i) { return positions[i][1]; })
         .attr("r", "10")
-        .attr("class", function(d,i) { return "circle" + d.id; })
+        .attr("class", function(d,i) { return "circle" + d.old_id; })
         .sort(function(a, b) { return countByAirport[b.name] - countByAirport[a.name]; });
   });
 });
@@ -274,7 +275,7 @@ d3.csv("data/wod_import.csv", function(flights) {
         .attr("cy", function(d, i) { return positions[i][1]; })
         // .attr("r", "6")
         .attr("r", "6")
-        .attr("class", function(d,i) { return "circle" + d.id; })
+        .attr("class", function(d,i) { return "circle" + d.old_id; })
         .sort(function(a, b) { return countByAirport[b.name] - countByAirport[a.name]; });
   });
 });
