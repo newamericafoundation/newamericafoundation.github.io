@@ -1,6 +1,6 @@
-var w = 945
+var w = 845
 
-var h = 550
+var h = 555
 
 var svg = d3.select('#content').append('svg').attr('width', w).attr('height', h);
 
@@ -117,8 +117,8 @@ $('button#tier_ii_plus').click(function (e) {
   drawTierIIPlus();
 });
 
-var w2 = 945,
-    h2 = 550;
+var w2 = 970,
+    h2 = 555;
 
 var svg2 = d3.select("#content2").insert("svg:svg", "h2")
     .attr("width", w2)
@@ -133,8 +133,8 @@ var circles2 = svg2.append("svg:g")
 var cells2 = svg2.append("svg:g")
     .attr("id", "cells");
 
-var w3 = 945,
-    h3 = 550;
+var w3 = 970,
+    h3 = 555;
 
 var svg3 = d3.select("#content3").insert("svg:svg", "h2")
     .attr("width", w3)

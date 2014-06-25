@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "platformbold";
+  src: url("/fonts/platformbold.eot");
+  src: url("/fonts/platformbold.eot?#iefix") format("eot"), url("/fonts/platformbold.woff") format("woff"), url("/fonts/platformbold.ttf") format("truetype"), url("/fonts/platformbold.svg") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: "platformmedium";
+  src: url("/fonts/platformmedium.eot");
+  src: url("/fonts/platformmedium.eot?#iefix") format("eot"), url("/fonts/platformmedium.woff") format("woff"), url("/fonts/platformmedium.ttf") format("truetype"), url("/fonts/platformmedium.svg") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: "simplonmedium";
+  src: url("/fonts/simplonmedium.eot");
+  src: url("/fonts/simplonmedium.eot?#iefix") format("eot"), url("/fonts/simplonmedium.woff") format("woff"), url("/fonts/simplonmedium.ttf") format("truetype"), url("/fonts/simplonmedium.svg") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: "simplonbold";
+  src: url("/fonts/simplonbold.eot");
+  src: url("/fonts/simplonbold.eot?#iefix") format("eot"), url("/fonts/simplonbold.woff") format("woff"), url("/fonts/simplonbold.ttf") format("truetype"), url("/fonts/simplonbold.svg") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: "icomoon";
+  src: url("/fonts/icomoon.eot");
+  src: url("/fonts/icomoon.eot?#iefix") format("eot"), url("/fonts/icomoon.woff") format("woff"), url("/fonts/icomoon.ttf") format("truetype"), url("/fonts/icomoon.svg") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+
+h2 {
+	font-family: "platformmedium";
+}
+
+#map {
+  width: 960px;
+  height: 500px;
+}
+
+svg {
+/*border: 1px #000 solid;*/	
+fill: #FFF;
+}
+
+path {
+  fill: #000;
+  fill-opacity: .2;
+  stroke: #FFF;
+  stroke-width: 1px;
+}
+
+text {
+	text-align: center;
+	color: #000;
+}

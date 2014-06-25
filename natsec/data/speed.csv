@@ -1,0 +1,25 @@
+name,lat,lon,isp,tech,download,upload,price,datacap,bundle,notes
+Seoul,37.566535,126.977969,HelloVision,Fiber,1000,1000,31.47,N/A,No,"Cell 693: as in Tokyo, there are multiple 1000/1000 for HelloVision that are probably linked to number of units (does not specify), picked cheapest option"
+Tokyo,35.689487,139.691706,KDDI,Fiber,1000,1000,33.69,N/A,No,"Cell 401, KDDI offers many different 1000/1000 plans with pricing based on number of units that are available to take the plan, etc. Chose the cheapest plan."
+Hong Kong,22.396428,114.109497,Hong Kong Broadband Network Limited,Fiber,1000,1000,64.42,N/A,No,"Cell 120, was the cheapest 1000 Mbps plan but not the only one"
+"Kansas City, MO",39.099727,-94.578567,Google Fiber,Fiber,1000,1000,70,N/A,No,Cell 1014
+"Kansas City, KS",39.114053,-94.627464,Google Fiber,Fiber,1000,1000,70,N/A,No,Cell 1026
+"Lafayette, LA",30.22409,-92.019843,LUS,Fiber,1000,1000,999.95,10000,No,"Cell 1051, this seems kind of ridiculous."
+"Chattanooga, TN",35.04563,-85.30968,EPB,Fiber,1000,50,69.99,N/A,No,Cell 1008
+"Bristol, VA",36.595141,-82.188809,BVU,Fiber,1000,50,319.95,N/A,No,Cell 987
+Riga,56.949649,24.105186,Baltcom,Fiber,500,500,9.22,N/A,No,Cell 439
+Amsterdam,52.370216,4.895168,KPN,Fiber,500,500,106.02,.,Yes,Cell 565
+"New York, NY",40.714353,-74.005973,Verizon,Fiber,500,100,299.99,N/A,No,"Cell 1139: 299.99/mo price is for a 24 month contract, it's 304.99/mo if no contract"
+Paris,48.856614,2.352222,SFR,Fiber,300,,26.73,N/A,Yes,"Cell 229, includes Phone and TV"
+"Washington, DC",38.907231,-77.036464,Verizon,Fiber,300,65,209.99,N/A,No,"Cell 1235: 209.99/mo is for a 24 month contract, no contract is 214.99/mo"
+"Los Angeles, CA",34.052234,-118.243685,Verizon,Fiber,300,65,214.99,N/A,No,Cell 1081
+Toronto,43.653226,-79.383184,Rogers,Fiber,250,250,183.73,500,No,Cell 78
+Mexico City,19.432608,-99.133208,Totalplay (lusacell),Fiber,200,66,254.11,.,No,Cell 530: 200 offered by other providers but only as part of a bundle
+Berlin,52.519171,13.406091,Deutsche Telekom,Fiber,200,,69.56,Throttle,Yes,"Cell 241, includes phone service"
+Copenhagen,55.676097,12.568337,Stofa,Cable,150,15,77.99,2500,Yes,"Cell 197â€”bundled with Broadband and TV. Bundled Broadband, TV and Phone at the same speed was 90.78/mo"
+Zurich,47.36865,8.539183,UPC,Cable,150,10,77.27,N/A,No,Cell 931
+Bucharest,44.4325,26.103889,UPC,Fiber,150,6,29.94,.,No,Cell 655
+Prague,50.075538,14.4378,UPC,Cable,120,10,45.62,N/A,No,Cell 150
+"San Francisco, CA",37.774929,-122.419416,Comcast,Cable,105,20,114.95,.,No,Cell 1177
+London,51.511214,-0.119824,Virgin,Fiber,100,,47.35,N/A,No,Cell 972
+Dublin,53.349805,-6.26031,Magnet,Fiber,100,,60.98,N/A,Yes,"Cell 292, includes broadband AND phone, if you wanted all three with that speed it was 104.87/month"

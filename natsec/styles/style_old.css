@@ -1,0 +1,26 @@
+#content {
+  width: 945px;
+  height: 500px;
+}
+
+svg {
+border: 1px #000 solid;	
+}
+
+path {
+  fill: #000;
+  fill-opacity: .2;
+  stroke: #000;
+  stroke-width: 0.25px;
+}
+
+g.plan text {
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  display: block;
+  fill: #FFF;
+  text-shadow: 1px 1px 1px #000000;
+  pointer-events: none;
+  text-anchor: middle;
+  font-size: 10px;
+}
